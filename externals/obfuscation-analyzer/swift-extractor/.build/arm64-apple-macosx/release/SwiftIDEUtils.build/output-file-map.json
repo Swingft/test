@@ -1,0 +1,31 @@
+{
+  "": {
+    "dependencies": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SwiftIDEUtils.d",
+    "object": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SwiftIDEUtils.o",
+    "swift-dependencies": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/master.swiftdeps"
+  },
+  "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-syntax/Sources/SwiftIDEUtils/SwiftIDEUtilsCompatibility.swift": {
+    "object": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SwiftIDEUtilsCompatibility.swift.o",
+    "swiftmodule": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SwiftIDEUtilsCompatibility~partial.swiftmodule",
+    "swift-dependencies": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SwiftIDEUtilsCompatibility.swiftdeps",
+    "diagnostics": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SwiftIDEUtilsCompatibility.dia"
+  },
+  "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-syntax/Sources/SwiftIDEUtils/Syntax+Classifications.swift": {
+    "object": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/Syntax+Classifications.swift.o",
+    "swiftmodule": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/Syntax+Classifications~partial.swiftmodule",
+    "swift-dependencies": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/Syntax+Classifications.swiftdeps",
+    "diagnostics": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/Syntax+Classifications.dia"
+  },
+  "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-syntax/Sources/SwiftIDEUtils/SyntaxClassification.swift": {
+    "object": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SyntaxClassification.swift.o",
+    "swiftmodule": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SyntaxClassification~partial.swiftmodule",
+    "swift-dependencies": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SyntaxClassification.swiftdeps",
+    "diagnostics": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SyntaxClassification.dia"
+  },
+  "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-syntax/Sources/SwiftIDEUtils/SyntaxClassifier.swift": {
+    "object": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SyntaxClassifier.swift.o",
+    "swiftmodule": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SyntaxClassifier~partial.swiftmodule",
+    "swift-dependencies": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SyntaxClassifier.swiftdeps",
+    "diagnostics": "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftIDEUtils.build/SyntaxClassifier.dia"
+  }
+}

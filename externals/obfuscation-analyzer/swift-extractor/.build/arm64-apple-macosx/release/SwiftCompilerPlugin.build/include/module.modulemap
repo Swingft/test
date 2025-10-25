@@ -1,0 +1,3 @@
+module SwiftCompilerPlugin {
+    header "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftCompilerPlugin.build/include/SwiftCompilerPlugin-Swift.h"
+}

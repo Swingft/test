@@ -1,0 +1,3 @@
+module SwiftSyntaxMacrosTestSupport {
+    header "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftSyntaxMacrosTestSupport.build/include/SwiftSyntaxMacrosTestSupport-Swift.h"
+}
