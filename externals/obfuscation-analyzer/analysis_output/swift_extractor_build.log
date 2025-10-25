@@ -1,0 +1,11 @@
+== Swift build start ==
+cwd: /Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor
+cmd: swift build -c release
+
+[1/1] Compiling plugin GenerateManual
+[2/2] Compiling plugin GenerateDoccReference
+Building for production...
+[2/4] Write swift-version--40065785366E8A4F.txt
+Build complete! (0.09s)
+
+== Build command finished ==
