@@ -1,7 +1,7 @@
 import Foundation
 import SwiftSyntax
 
-final class InterpolatedStringExtractor: SyntaxVisitor {
+internal final class InterpolatedStringExtractor: SyntaxVisitor {
     private let filePath: String
     private(set) var interpolatedStrings: [(String, String)] = []
 

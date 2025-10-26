@@ -2,7 +2,7 @@ import Foundation
 import SwiftSyntax
 
 
-final class LocalizedStringExtractor: SyntaxVisitor {
+internal final class LocalizedStringExtractor: SyntaxVisitor {
     private(set) var localizedStrings: [(String, String)] = []  
     private let filePath: String
 
@@ -17,26 +17,21 @@ final class LocalizedStringExtractor: SyntaxVisitor {
             collectStrings(from: arg.expression)
         }
         return .visitChildren
-    }
-    if node.arguments.contains(where: { $0.label?.text == "localized" }) {
-        for arg in node.arguments {
-            if arg.label?.text == "localized" {
-                collectStrings(from: arg.expression)
-            }
+    } else if node.arguments.contains(where: { $0.label?.text == "localized" }) {
+        for arg in node.arguments where arg.label?.text == "localized" {
+            collectStrings(from: arg.expression)
         }
         return .visitChildren
-    }
-    if node.arguments.contains(where: { $0.label?.text == "key" }) {
-        for arg in node.arguments {
-            if arg.label?.text == "key" {
-                collectStrings(from: arg.expression)
-            }
+    } else if node.arguments.contains(where: { $0.label?.text == "key" }) {
+        for arg in node.arguments where arg.label?.text == "key" {
+            collectStrings(from: arg.expression)
         }
         return .visitChildren
+    } else {
+        return .visitChildren
     }
-
-    return .visitChildren
 }
+
 
 
    

@@ -1,7 +1,7 @@
 import Foundation
 import SwiftSyntax
 
-final class ViewContainerStringExcluder: SyntaxVisitor {
+internal final class ViewContainerStringExcluder: SyntaxVisitor {
     private let filePath: String
     private(set) var locations: Set<String> = []
 

@@ -1,13 +1,13 @@
 import sys, re, json, hashlib, random, os
 from pathlib import Path
 from typing import Optional, List, Set, Tuple
+import secrets
 
 def hval(s: str) -> int:
-    return int(hashlib.sha1(s.encode("utf-8")).hexdigest(), 16)
+    return int(hashlib.sha256(s.encode("utf-8")).hexdigest(), 16)
 
 def is_ident_char(c: str) -> bool:
     return c.isalnum() or c == '_'
-
 OPQ_PREFIX = "opq"
 
 OPQ_TOKEN_RE = re.compile(r'\b(OPQ[A-Za-z]+)\b')
@@ -38,7 +38,8 @@ def scan_used_opq_names(project_root: Path) -> Set[str]:
     for p in project_root.rglob("*.swift"):
         try:
             text = p.read_text(encoding="utf-8", errors="ignore")
-        except Exception:
+        except (OSError, UnicodeError) as e:
+            print(f"[WARN] Failed to read {p}: {e}", file=sys.stderr)
             continue
         for m in OPQ_TOKEN_RE.finditer(text):
             used.add(m.group(1))
@@ -62,16 +63,16 @@ class NameAllocator:
 
 def top_insertion_index(text: str) -> int:
     def skip_ws_comments(t, i):
-        n=len(t)
-        while i<n:
-            if t.startswith("//", i):
-                j=t.find("\n", i); i=n if j==-1 else j+1
-            elif t.startswith("/*", i):
-                j=t.find("*/", i+2); i=n if j==-1 else j+2
+        n=len(t); guard=0
+        while i<n and guard<n:
+            guard+=1
+            if t.startswith("//",i):
+                j=t.find("\n",i); i=n if j==-1 else j+1
+            elif t.startswith("/*",i):
+                j=t.find("*/",i+2); i=n if j==-1 else j+2
             elif i<n and t[i] in " \t\r\n":
                 i+=1
-            else:
-                break
+            else: break
         return i
     def find_endif(t,i):
         m=re.match(r'#if\b', t[i:])
@@ -569,7 +570,7 @@ class FileCtx:
     def __init__(self, allocator: NameAllocator, file_key: str):
         self.allocator = allocator
         self.top_names: List[str] = []
-        self.rng = random.Random(hval(file_key))
+        self.rng = secrets.SystemRandom()
         self.first_flag = True
         self.need_foundation = False
 
@@ -594,8 +595,13 @@ class FileCtx:
 def process_file(p: Path, allocator: NameAllocator) -> dict:
     try:
         text = p.read_text(encoding='utf-8')
-    except Exception:
-        text = p.read_text(encoding='latin-1', errors='ignore')
+    except (OSError, UnicodeError):
+        try:
+            text = p.read_text(encoding='latin-1', errors='ignore')
+        except Exception as e:
+            print(f"[ERR] Cannot read {p}: {e}", file=sys.stderr)
+            return {"file": str(p), "case_where_edits": 0, "if_edits": 0,
+                    "top_funcs_declared": 0, "foundation_imported": False}
 
     ctx = FileCtx(allocator, file_key=str(p.resolve()))
 
@@ -637,28 +643,30 @@ def process_file(p: Path, allocator: NameAllocator) -> dict:
 
 def run_opaque(root):
     root = Path(root)
-    names_path = "./Opaquepredicate/opaque_predicate_names.json"
-    if not os.path.exists(names_path):
-        print(f"[ERR] names JSON not found: {names_path}", file=sys.stderr); sys.exit(2)
+    names_path = Path("Opaquepredicate") / "opaque_predicate_names.json"
+    if not names_path.exists():
+        print(f"[ERR] names JSON not found: {names_path}", file=sys.stderr)
+        sys.exit(2)
 
     try:
         with open(names_path, "r", encoding="utf-8") as f:
             pool = json.load(f)
-        # pool = json.loads(names_path.read_text(encoding="utf-8"))
         if not isinstance(pool, list) or not all(isinstance(x, str) for x in pool):
             raise ValueError("names JSON must be a JSON array of strings")
-    except Exception as e:
-        print(f"[ERR] failed to load names JSON: {e}", file=sys.stderr); sys.exit(2)
+    except (OSError, json.JSONDecodeError, ValueError) as e:
+        print(f"[ERR] failed to load names JSON: {e}", file=sys.stderr)
+        sys.exit(2)
 
     already_used = scan_used_opq_names(root)
     allocator = NameAllocator(pool, already_used)
 
     swift_files = [p for p in root.rglob("*.swift")
-                   if all(seg not in p.as_posix() for seg in ["/.build/","/DerivedData/","/Pods/","/pods/"])]
+                   if not any(seg in p.parts for seg in (".build", "DerivedData", "Pods", "pods"))]
 
     mod = 0
     for p in swift_files:
-        r = process_file(p, allocator)
-        if r["case_where_edits"] + r["if_edits"] > 0:
+        result = process_file(p, allocator)
+        if result["case_where_edits"] + result["if_edits"] > 0:
             mod += 1
+
 
