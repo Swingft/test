@@ -3,8 +3,8 @@ from datetime import datetime
 import json
 
 def make_dump_file_id(original_project_dir, obf_project_dir):
-    type_file_path = "./type_info.json"
-    mapping_file_path = "./mapping_result.json"
+    type_file_path = os.path.join(".", "type_info.json")
+    mapping_file_path = os.path.join(".", "mapping_result.json")
     if not os.path.exists(type_file_path) or not os.path.exists(mapping_file_path):
         return
     

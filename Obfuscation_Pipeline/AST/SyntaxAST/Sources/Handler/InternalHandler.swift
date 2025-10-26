@@ -7,7 +7,7 @@
 
 import Foundation
 
-class InternalHandler {
+internal class InternalHandler {
     let sourceListPath: String
     let outputDir = "../output/source_json"
     let typealias_outputDir = "../output/typealias_json"
@@ -44,8 +44,12 @@ class InternalHandler {
                     .appendingPathExtension("json")
                 
                 try jsonData.write(to: outputURL)
+            } catch let encodingError as EncodingError {
+                print("Encoding Error: \(encodingError)")
+            } catch let cocoaError as CocoaError {
+                print("Cocoa Error: \(cocoaError)")
             } catch {
-                print("Error: \(error)")
+                print("Other Error: \(error)")
             }
         }
         

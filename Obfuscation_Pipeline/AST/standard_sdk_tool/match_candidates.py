@@ -63,6 +63,9 @@ def repeat_match_member(in_node, sdk_sig):
     if in_node is None: 
         return
     node = in_node.get("node", in_node)
+    if not isinstance(node, dict):
+        return
+    
     extensions = in_node.get("extension", [])
     children = in_node.get("children", [])
 
@@ -74,9 +77,10 @@ def repeat_match_member(in_node, sdk_sig):
 
 # extension 이름 확인
 def repeat_extension(in_node, name):
-    node = in_node.get("node")
-    if not node:
-        node = in_node
+    node = in_node.get("node") or in_node
+    if not isinstance(node, dict):
+        return
+    
     c_name = node.get("A_name")
     c_name = c_name.split(".")[-1]
     if c_name == name:
@@ -99,7 +103,6 @@ def match_sdk_name(data):
             node = data
             extensions = []
             children = []
-        
         name = node.get("A_name")
         name = name.split(".")[-1]
        
@@ -159,17 +162,17 @@ def match_and_save(candidate_path, sdk_file_path):
                     if name not in SDK_SIGNATURE:
                         SDK_SIGNATURE[name] = []
                     SDK_SIGNATURE[name].append(info)
-            except Exception as e:
-                print(e)
+            except json.JSONDecodeError:
+                print("SDK 읽기 실패")
 
         match_sdk_name(candidates)
-        matched_output_path = "./AST/output/standard_list.json"
+        matched_output_path = os.path.join(".", "AST", "output", "standard_list.json")
         with open(matched_output_path, "w", encoding="utf-8") as f:
             json.dump(MATCHED_LIST, f, indent=2, ensure_ascii=False)
 
 
 def match_candidates_sdk():
-    candidate_path = "./AST/output/external_candidates.json"
-    sdk_file_path = "./AST/output/sdk-json/"
+    candidate_path = os.path.join(".", "AST", "output", "external_candidates.json")
+    sdk_file_path = os.path.join(".", "AST", "output", "sdk-json")
 
     match_and_save(candidate_path, sdk_file_path)

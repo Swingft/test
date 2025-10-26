@@ -11,9 +11,9 @@ def run_command(cmd):
 # import_list.txt 읽고 중복 제거
 def read_import_list():
     import_list = set()
-    path = "./AST/output/import_list.txt"
+    path = os.path.join(".", "AST", "output", "import_list.txt")
     with open(path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+        data = json.load(f) or []
         import_list.update(data)
     import_list.add("Swift")
     import_list.add("Foundation")
@@ -66,6 +66,9 @@ def get_type_name(node):
 def get_members(children):
     members = {}
     for child in children:
+        if not isinstance(child, dict):
+            continue
+        
         kind = child.get("kind")
         decl_kind = child.get("declKind", kind)
         name = child.get("name")
@@ -94,6 +97,9 @@ def get_members(children):
     return members
 
 def parse_type(child, sdk_info):
+    if not isinstance(child, dict):
+        return 
+    
     kind = child.get("kind")
     decl_kind = child.get("declKind", kind) 
 
@@ -112,7 +118,7 @@ def parse_type(child, sdk_info):
     }
     sdk_info[name] = info
 
-    for c in child.get("children", []):
+    for c in child.get("children") or []:
         parse_type(c, sdk_info)
 
 # sdk api의 타입 및 멤버 정보 추출
@@ -122,6 +128,8 @@ def sdk_dump_parser(path):
 
     sdk_info = {}
 
+    if not isinstance(data, dict):
+        return {}
     abi_root = data.get("ABIRoot", {})
     children = abi_root.get("children", [])
 
@@ -153,7 +161,7 @@ def find_standard_sdk():
     digester_path, sdk_path = find_path()
     import_list = read_import_list()
 
-    output_dir = "./AST/output/sdk-json/"
+    output_dir = os.path.join('.', "AST", "output", "sdk-json")
     dump_to_json(digester_path, sdk_path, import_list)
     
     re_import_list = set()

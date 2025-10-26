@@ -1,4 +1,4 @@
-import random
+import secrets
 from .generate_deadcode import generate_deadcode
 
 def insert_deadcode(swift_file_path):
@@ -19,6 +19,7 @@ def insert_deadcode(swift_file_path):
         count = {"top": 0, "protocol": 0, "extension": 0}
 
         lines = source_code.splitlines()
+        tmp_lines = source_code.splitlines()
         for idx, line in enumerate(lines):
             for i, char in enumerate(line):
                 if char == '"' and (i == 0 or line[i-1] != '\\'):
@@ -73,7 +74,7 @@ def insert_deadcode(swift_file_path):
 
             if not in_comment and not in_string and level == 1:
                 if "func " in line and "static " not in line and "->" not in line and "{" in line and "}" not in line:
-                    prev_line = source_code.splitlines()[idx - 1].strip() if idx > 0 else ""
+                    prev_line = tmp_lines[idx - 1].strip() if idx > 0 else ""
                     if not prev_line.startswith("@") and not prev_line.startswith("//") and not prev_line.startswith("/*") and not prev_line.endswith("*/"):
                         func_line.append(idx - 1)
                     call_line.append(idx + 1)
@@ -86,6 +87,9 @@ def insert_deadcode(swift_file_path):
 
         if global_idx != -1 and call_line and func_line:
             decl, call, global_var, global_call = generate_deadcode()
+            if not all(isinstance(x, str) for x in (decl, call, global_var, global_call)):
+                continue
+
             if decl == "-1":
                 break
 
@@ -94,7 +98,7 @@ def insert_deadcode(swift_file_path):
                 if idx != global_idx:
                     candidates.append(idx)
             if candidates:  
-                call_idx = random.choice(candidates)
+                call_idx = secrets.choice(candidates)
             else:
                 continue
 
@@ -103,7 +107,7 @@ def insert_deadcode(swift_file_path):
                 if idx != global_idx and idx != call_idx:
                     candidates.append(idx)
             if candidates:
-                func_idx = random.choice(candidates)
+                func_idx = secrets.choice(candidates)
             else:
                 continue
             

@@ -9,7 +9,7 @@
 
 import SwiftSyntax
 
-class Visitor: SyntaxVisitor {
+internal class Visitor: SyntaxVisitor {
     private let store: ResultStore
     private let location: LocationHandler
     

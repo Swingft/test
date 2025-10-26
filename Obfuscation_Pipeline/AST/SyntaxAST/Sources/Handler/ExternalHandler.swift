@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ExternalHandler {
+internal class ExternalHandler {
     let sourceListPath: String
     let outputDir = "../output/external_to_ast"
     
@@ -39,8 +39,12 @@ class ExternalHandler {
                     .appendingPathExtension("json")
  
                 try jsonData.write(to: outputURL)
+            } catch let encodingError as EncodingError {
+                print("Encoding Error: \(encodingError)")
+            } catch let cocoaError as CocoaError {
+                print("Cocoa Error: \(cocoaError)")
             } catch {
-                print("Error: \(error)")
+                print("Other Error: \(error)")
             }
         }
     }

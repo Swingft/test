@@ -1,13 +1,20 @@
 import json
 import os
 
+VISITED_NODE = set()
 NODE = []
 EXCEPTION_NODE = []
 
 def add_tagging(node):
+    if not isinstance(node, dict):
+        return
+    
     location = node.get("F_location")
     is_exception_node = 0
     for exception_node in EXCEPTION_NODE:
+        if not isinstance(exception_node, dict):
+            continue
+
         ex_location = exception_node.get("F_location")
         if location == ex_location:
             is_exception_node = 1
@@ -15,14 +22,28 @@ def add_tagging(node):
     
 def repeat_match_member(data):
     def repeat_member(node):
+        node_id = id(node)
+        if node_id in VISITED_NODE:
+            return
+        VISITED_NODE.add(node_id)
+
         members = node.get("G_members", [])
         for member in members:
             repeat_member(member)
             add_tagging(member)
+
     def repeat(item):
         if item is None: 
             return
         node = item.get("node", item)
+        if not isinstance(node, dict):
+            return
+
+        node_id = id(node)
+        if node_id in VISITED_NODE:
+            return
+        VISITED_NODE.add(node_id)
+        
         extensions = item.get("extension", [])
         children = item.get("children", [])
 
@@ -44,6 +65,9 @@ def re_make_tree(data):
     if data is None: 
         return
     node = data.get("node", data)
+    if not isinstance(node, dict):
+        return
+    
     extensions = data.get("extension", [])
     children = data.get("children", [])
 
@@ -74,10 +98,10 @@ def find_node(data):
             re_make_tree(node)
             
 def exception_tagging():
-    input_file_1 = "./AST/output/inheritance_node.json"
-    input_file_2 = "./AST/output/no_inheritance_node.json"
-    exception_file = "./AST/output/exception_list.json"
-    output_file = "./AST/output/ast_node.json"
+    input_file_1 = os.path.join(".", "AST", "output", "inheritance_node.json")
+    input_file_2 = os.path.join(".", "AST", "output", "no_inheritance_node.json")
+    exception_file = os.path.join(".", "AST", "output", "exception_list.json")
+    output_file = os.path.join(".", "AST", "output", "ast_node.json")
 
     if os.path.exists(input_file_1):
         with open(input_file_1, "r", encoding="utf-8") as f:

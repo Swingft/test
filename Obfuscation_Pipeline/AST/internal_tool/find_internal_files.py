@@ -35,18 +35,18 @@ def find_internal_files(directory):
         for line in result.stdout.splitlines():
             class_name.add(line.split('customClass="')[1].rstrip('"'))
 
-    output_path = "./AST/output/xc_list.txt"
+    output_path = os.path.join(".", "AST", "output", "xc_list.txt")
     with open(output_path, "w", encoding="utf-8") as f:
         for xc in xc_files:
             f.write(f"{xc}\n")
             f.write(f"{xc.lower()}\n")
 
-    output_path = "./AST/output/storyboard_list.txt"
+    output_path = os.path.join(".", "AST", "output", "storyboard_list.txt")
     with open(output_path, "w", encoding="utf-8") as f:
         for cls in sorted(class_name):
             f.write(f"{cls}\n")
 
-    output_path ="./swift_file_list.txt"
+    output_path = os.path.join(".", "swift_file_list.txt")
     with open(output_path, "w", encoding="utf-8") as f:
         for swift_file in swift_files:
             f.write(f"{swift_file}\n")

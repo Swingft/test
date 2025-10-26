@@ -24,9 +24,11 @@ def get_members(node):
         
 # 자식 노드가 자식 노드를 가지는 경우
 def repeat_match_node(item):
-    node = item.get("node")
-    if not node:
-        node = item
+    if not isinstance(item, dict):
+        return
+    node = item.get("node") or item
+    if not isinstance(node, dict):
+        return
     extensions = item.get("extension", [])
     children = item.get("children", [])
     get_members(node)
@@ -36,7 +38,7 @@ def repeat_match_node(item):
         repeat_match_node(child)
 
 def get_external_name():
-    file_paths = ["./AST/output/external_to_ast"]
+    file_paths = [os.path.join(".", "AST", "output", "external_to_ast")]
     for file_path in file_paths:
         for filename in os.listdir(file_path):
             path = os.path.join(file_path, filename)

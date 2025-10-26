@@ -10,7 +10,7 @@
 import SwiftSyntax
 import Foundation
 
-class LocationHandler {
+internal class LocationHandler {
     private let converter: SourceLocationConverter
     private let fileName: String
     

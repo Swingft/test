@@ -20,14 +20,14 @@ def find_external_library(project_root):
 
     # 프로젝트 파일 내부 경로
     for dirpath, dirnames, _ in os.walk(project_root):
-        for dir in [".build/checkouts", "Pods"]:
+        for dir in [os.path.join(".build", "checkouts"), "Pods"]:
             candidate = os.path.join(dirpath, dir)
             if os.path.isdir(candidate):
                 dir_paths.add(candidate)
     
     # 프로젝트 파일 외부 경로
     is_find = False
-    derived_data = os.path.expanduser("~/Library/Developer/Xcode/DerivedData/")
+    derived_data = os.path.join(os.path.expanduser("~"), "Library", "Developer", "Xcode", "DerivedData")
     project_names = get_project_name(project_root)
     if os.path.isdir(derived_data):
         for item in os.listdir(derived_data):
@@ -49,7 +49,7 @@ def find_external_library(project_root):
                         "Intermediates.noindex"
                     )
                     for root, _, files in os.walk(intermediates_path):
-                        if "DerivedSources/IntentDefinitionGenerated" in root or "DerivedSources/CoreDataGenerated" in root:
+                        if os.path.join("DerivedSources", "IntentDefinitionGenerated") in root or os.path.join("DerivedSources", "CoreDataGenerated") in root:
                             dir_paths.add(root)
 
                     is_find = True
@@ -84,7 +84,7 @@ def find_external_files(project_dir):
     find_external_library(project_dir)
     find_external_framework(project_dir)
     
-    output_dir = "./AST/output/external_file_list.txt"
+    output_dir = os.path.join(".", "AST", "output", "external_file_list.txt")
     with open(output_dir, "w", encoding="utf-8") as f:
         for swift_file in SWIFT_FILES:
             f.write(f"{swift_file}\n")
