@@ -3,7 +3,7 @@ import os
 import re
 import sys
 import base64
-import random
+import secrets
 import shutil
 import json
 from collections import defaultdict
@@ -51,7 +51,7 @@ def load_build_target_from_config(cfg_path: Optional[str]) -> Optional[str]:
         data = json.loads(p.read_text(encoding='utf-8'))
         bt = (((data or {}).get("project") or {}).get("build_target") or "").strip()
         return bt or None
-    except Exception:
+    except (OSError, json.JSONDecodeError, UnicodeDecodeError):
         return None
 
 def load_targets_map(targets_json_path: Optional[str]) -> Dict[str, List[str]]:
@@ -68,7 +68,7 @@ def load_targets_map(targets_json_path: Optional[str]) -> Dict[str, List[str]]:
             if isinstance(v, list):
                 out[str(k)] = [str(x) for x in v]
         return out
-    except Exception:
+    except (OSError, json.JSONDecodeError, UnicodeDecodeError):
         return {}
 
 def choose_target_name(cands: List[str], want: str) -> Optional[str]:
@@ -110,7 +110,7 @@ def ensure_import(swift_file: str) -> bool:
     p = Path(swift_file)
     try:
         s = p.read_text(encoding='utf-8')
-    except Exception:
+    except (OSError, UnicodeDecodeError):
         return False
     if 'import StringSecurity' in s:
         return False
@@ -121,7 +121,8 @@ def ensure_import(swift_file: str) -> bool:
     try:
         p.write_text(''.join(lines), encoding='utf-8')
         return True
-    except Exception:
+    except Exception as e:
+        print(f"[Warning] {e}")
         return False
 
 def swift_unescape(s: str) -> str:
@@ -133,8 +134,8 @@ def swift_unescape(s: str) -> str:
     return s
 
 def load_included_from_json(path: str):
-    in_strings = defaultdict(set)   
-    in_lines   = defaultdict(set)   
+    in_strings = defaultdict(set)
+    in_lines   = defaultdict(set)
 
     with open(path, encoding='utf-8') as f:
         items = json.load(f)
@@ -206,7 +207,7 @@ def detect_main_entry(files: List[str]):
                 return path, 'swiftui'
             if re.search(r'class\s+\w+\s*:\s*UIResponder\s*,\s*UIApplicationDelegate', content):
                 return path, 'uikit'
-        except Exception:
+        except (OSError, UnicodeDecodeError):
             continue
     return None, None
 
@@ -259,7 +260,7 @@ def patch_uikit_delegate(path):
         for j in range(start, end + 1):
             brace_index = lines[j].find('{')
             if brace_index != -1:
-                indent = re.match(r'\s*', lines[j]).group(0) + '    '
+                m = re.match(r'\s*', lines[j]); indent = (m.group(0) if m else '') + '    '
                 insert_at = j + 1
                 insert_lines = [
                     f'{indent}let key = SwingftKey.combinedKey()\n',
@@ -285,7 +286,7 @@ def patch_uikit_delegate(path):
                     f.writelines(lines)
         return
 
-    class_indent = re.match(r'\s*', lines[class_start]).group(0)
+    m_cls = re.match(r'\s*', lines[class_start]); class_indent = (m_cls.group(0) if m_cls else '')
     method_indent = class_indent + '    '
     new_func = [
         '\n',
@@ -306,7 +307,7 @@ def patch_swiftui_struct(path):
     inserted = False
     INIT_DECL_RE = re.compile(r'^\s*(?:public|internal|private|fileprivate)?\s*(?:override\s+)?(?:convenience\s+)?init\s*\([^)]*\)\s*(?:\{|$)')
     for i, line in enumerate(lines):
-        if INIT_DECL_RE.search(line):   
+        if INIT_DECL_RE.search(line):
             for j in range(i, len(lines)):
                 if '{' in lines[j]:
                     lines.insert(j + 1, '        let key = SwingftKey.combinedKey()\n')
@@ -359,6 +360,14 @@ def copy_StringSecurity_folder(source_root):
 
 def line_no_of(text: str, pos: int) -> int:
     return text.count('\n', 0, pos) + 1
+
+
+def _secure_shuffle(seq):
+    seq = list(seq)
+    for i in range(len(seq) - 1, 0, -1):
+        j = secrets.randbelow(i + 1)
+        seq[i], seq[j] = seq[j], seq[i]
+    return seq
 
 
 
@@ -433,7 +442,7 @@ def encrypt_and_insert(source_root: str, included_json_path: str,
                     return raw
                 inner = raw[3:-3] if raw.startswith('"""') else raw[1:-1]
                 inner_runtime = swift_unescape(inner)
-                nonce = os.urandom(12)
+                nonce = secrets.token_bytes(12)
                 ct = cipher.encrypt(nonce, inner_runtime.encode(), None)
                 b64 = base64.b64encode(nonce + ct).decode()
                 return f'SwingftEncryption.resolve("{b64}")'
@@ -443,8 +452,8 @@ def encrypt_and_insert(source_root: str, included_json_path: str,
                 with open(file_path, "w", encoding="utf-8") as f:
                     f.write(new_content)
                 modified_files.add(file_path)
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"[Warning] {e}")
 
     if not modified_files:
         print("[WARNING] No resolve() usages found - skipping imports/entry/vendoring.")
@@ -463,7 +472,7 @@ def encrypt_and_insert(source_root: str, included_json_path: str,
     chunk_size = KEY_BYTE_LEN // count
     
     chunks = [key[i*chunk_size:(i+1)*chunk_size] for i in range(count-1)] + [key[(count-1)*chunk_size:KEY_BYTE_LEN]]
-    masks = [os.urandom(len(ch)) for ch in chunks]
+    masks = [secrets.token_bytes(len(ch)) for ch in chunks]
     encoded_chunks = [bytes(c ^ m for c, m in zip(chunk, mask)) for chunk, mask in zip(chunks, masks)]
 
     entry_path, entry_type = patch_entry(pool, count)
@@ -478,7 +487,7 @@ def encrypt_and_insert(source_root: str, included_json_path: str,
 
    
     preferred = [p for p in pool if (entry_path is None or p != entry_path)] or pool
-    random.shuffle(preferred)
+    preferred = _secure_shuffle(preferred)
 
     used: Set[str] = set()
     for i in range(count):
@@ -503,3 +512,4 @@ if __name__ == "__main__":
     targets_json = sys.argv[4] if len(sys.argv) >= 5 else ("targets_swift_paths.json" if Path("targets_swift_paths.json").exists() else None)
 
     encrypt_and_insert(source_root, strings_json, cfg_path, targets_json)
+
