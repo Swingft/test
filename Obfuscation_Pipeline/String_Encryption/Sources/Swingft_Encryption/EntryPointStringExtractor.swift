@@ -1,7 +1,7 @@
 import Foundation
 import SwiftSyntax
 
-final class EntryPointStringExtractor: SyntaxVisitor {
+internal final class EntryPointStringExtractor: SyntaxVisitor {
     private(set) var entryPointStrings: [(String, String)] = []
     private let filePath: String
     private var insideMainType = false

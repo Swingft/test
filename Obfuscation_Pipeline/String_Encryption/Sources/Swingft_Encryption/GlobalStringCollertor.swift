@@ -1,6 +1,6 @@
 import SwiftSyntax
 
-final class GlobalStringCollector: SyntaxVisitor {
+internal final class GlobalStringCollector: SyntaxVisitor {
     private(set) var globalStrings: [(String, String)] = []
     private var scopeDepth = 0
     private let filePath: String

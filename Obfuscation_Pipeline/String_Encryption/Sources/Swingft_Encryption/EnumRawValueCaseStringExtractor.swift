@@ -2,7 +2,7 @@ import Foundation
 import SwiftSyntax
 
 
-final class EnumRawValueCaseStringExtractor: SyntaxVisitor {
+internal final class EnumRawValueCaseStringExtractor: SyntaxVisitor {
     private enum RawKind { case none, string, int }
 
     private let filePath: String

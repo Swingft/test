@@ -108,7 +108,7 @@ private func adaptRepeatWhile(_ syn: Syntax) -> RepeatWhileAdapted? {
 }
 
 
-final class IfCollector: SyntaxVisitor {
+private final class IfCollector: SyntaxVisitor {
     private let filePath: String
     private(set) var chains: [IfChain] = []
 
@@ -278,7 +278,7 @@ final class IfCollector: SyntaxVisitor {
 }
 
 
-final class LoopCollector: SyntaxVisitor {
+private final class LoopCollector: SyntaxVisitor {
     private let filePath: String
     private(set) var loops: [LoopNode] = []
 
@@ -433,14 +433,23 @@ private func runAndCapture(_ exe: String, _ args: [String]) -> (Int32, String) {
     let pipe = Pipe()
     p.standardOutput = pipe
     p.standardError = pipe
-    do { try p.run() } catch { return (126, "LAUNCH ERROR: \(error)") }
+
+    do {
+        try p.run()
+    } catch let error as CocoaError {
+        return (126, "LAUNCH ERROR (CocoaError): \(error.localizedDescription)")
+    } catch let error as NSError {
+        return (126, "LAUNCH ERROR (NSError): \(error.domain) (\(error.code)) - \(error.localizedDescription)")
+    } catch {
+        return (126, "LAUNCH ERROR (Unknown): \(error.localizedDescription)")
+    }
+
     p.waitUntilExit()
     let out = String(data: pipe.fileHandleForReading.readDataToEndOfFile(), encoding: .utf8) ?? ""
     return (p.terminationStatus, out)
 }
 
 private func resolvePython3Command() -> [String]? {
-
     let candidates: [[String]] = [
         ["python3"], ["py","-3"]
     ]
@@ -452,7 +461,6 @@ private func resolvePython3Command() -> [String]? {
 }
 
 func runSwiftCFF(pyEnvAST: String, diffOutDir: String?) -> Int32 {
-
     let cwd = URL(fileURLWithPath: FileManager.default.currentDirectoryPath, isDirectory: true)
     let script = cwd.appendingPathComponent("run_swiftCFF.py")
     guard FileManager.default.fileExists(atPath: script.path) else {
@@ -468,7 +476,6 @@ func runSwiftCFF(pyEnvAST: String, diffOutDir: String?) -> Int32 {
     proc.executableURL = URL(fileURLWithPath: "/usr/bin/env")
     proc.arguments = py + [script.path]
 
-
     var env = ProcessInfo.processInfo.environment
     env["CFF_AST"] = pyEnvAST
     if let d = diffOutDir {
@@ -477,14 +484,23 @@ func runSwiftCFF(pyEnvAST: String, diffOutDir: String?) -> Int32 {
     }
     proc.environment = env
 
-
     let pipe = Pipe()
     proc.standardOutput = pipe
     proc.standardError  = pipe
-    do { try proc.run() } catch {
-        fputs("ERROR: python 실행 실패: \(error)\n", stderr)
+
+    do {
+        try proc.run()
+    } catch let error as CocoaError {
+        fputs("ERROR: python 실행 실패 (CocoaError): \(error.localizedDescription)\n", stderr)
+        return 126
+    } catch let error as NSError {
+        fputs("ERROR: python 실행 실패 (NSError): \(error.domain) (\(error.code)) - \(error.localizedDescription)\n", stderr)
+        return 126
+    } catch {
+        fputs("ERROR: python 실행 실패 (Unknown): \(error.localizedDescription)\n", stderr)
         return 126
     }
+
     let fh = pipe.fileHandleForReading
     fh.readabilityHandler = { h in
         if let s = String(data: h.availableData, encoding: .utf8), !s.isEmpty {
@@ -495,7 +511,6 @@ func runSwiftCFF(pyEnvAST: String, diffOutDir: String?) -> Int32 {
     fh.readabilityHandler = nil
     return proc.terminationStatus
 }
-
 
 let inputPath = CommandLine.arguments.dropFirst().first ?? FileManager.default.currentDirectoryPath
 let rootURL = URL(fileURLWithPath: inputPath, isDirectory: true)

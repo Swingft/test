@@ -1,7 +1,7 @@
 import Foundation
 import SwiftSyntax
 
-final class DebugStringExtractor: SyntaxVisitor {
+internal final class DebugStringExtractor: SyntaxVisitor {
     private(set) var debugStrings: [(String, String)] = []
     private let filePath: String
 

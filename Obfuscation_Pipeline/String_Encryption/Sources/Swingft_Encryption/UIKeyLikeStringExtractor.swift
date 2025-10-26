@@ -2,7 +2,7 @@ import Foundation
 import SwiftSyntax
 
 
-final class UIKeyLikeStringExtractor: SyntaxVisitor {
+internal final class UIKeyLikeStringExtractor: SyntaxVisitor {
     private let filePath: String
     private(set) var uiKeyStrings: [(String, String)] = [] 
 

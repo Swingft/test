@@ -1,5 +1,5 @@
-
 import sys
+import os
 import re
 import json
 from pathlib import Path
@@ -9,11 +9,12 @@ from typing import Optional, List, Dict, Set, Union
 
 HEX_ID_RE = re.compile(r'\b[0-9A-Fa-f]{24}\b')
 
+
 def read_text(p: Path) -> str:
     return p.read_text(encoding='utf-8', errors='ignore')
 
+
 def find_section(text: str, isa_name: str) -> str:
-    
     pat = re.compile(
         r'/\*\s*Begin\s+' + re.escape(isa_name) + r'\s+section\s*\*/(.*?)/\*\s*End\s+' + re.escape(isa_name) + r'\s+section\s*\*/',
         re.DOTALL
@@ -21,8 +22,8 @@ def find_section(text: str, isa_name: str) -> str:
     m = pat.search(text)
     return m.group(1) if m else ''
 
+
 def parse_blocks(section_text: str) -> List[str]:
-   
     i, n = 0, len(section_text)
     blocks: List[str] = []
     while i < n:
@@ -47,9 +48,11 @@ def parse_blocks(section_text: str) -> List[str]:
         i = j
     return blocks
 
+
 def kv(block_text: str, key: str) -> Optional[str]:
     m = re.search(r'\b' + re.escape(key) + r'\s*=\s*(.*?);', block_text, re.DOTALL)
     return m.group(1).strip() if m else None
+
 
 def parse_list(field_text: Optional[str]) -> List[str]:
     if not field_text:
@@ -59,6 +62,7 @@ def parse_list(field_text: Optional[str]) -> List[str]:
         return []
     return HEX_ID_RE.findall(m.group(1))
 
+
 def sstr(v: Optional[str]) -> Optional[str]:
     if v is None:
         return None
@@ -67,30 +71,27 @@ def sstr(v: Optional[str]) -> Optional[str]:
         return v[1:-1]
     return v
 
+
 class PBXProj:
     def __init__(self, proj_dir: Path):
-      
         self.proj_dir = proj_dir
         self.source_root = proj_dir.parent.resolve()
         self.pbxproj_path = proj_dir / "project.pbxproj"
         text = read_text(self.pbxproj_path)
 
-        
         self.sec_native_target = find_section(text, "PBXNativeTarget")
         self.sec_sources_phase = find_section(text, "PBXSourcesBuildPhase")
-        self.sec_build_file    = find_section(text, "PBXBuildFile")
-        self.sec_file_ref      = find_section(text, "PBXFileReference")
-        self.sec_group         = find_section(text, "PBXGroup")
-        self.sec_proj          = find_section(text, "PBXProject")
+        self.sec_build_file = find_section(text, "PBXBuildFile")
+        self.sec_file_ref = find_section(text, "PBXFileReference")
+        self.sec_group = find_section(text, "PBXGroup")
+        self.sec_proj = find_section(text, "PBXProject")
 
-       
         self.native_targets = self._parse_native_targets()
         self.sources_phases = self._parse_sources_phases()
-        self.build_files    = self._parse_build_files()
-        self.file_refs      = self._parse_file_refs()
+        self.build_files = self._parse_build_files()
+        self.file_refs = self._parse_file_refs()
         self.groups, self.main_group = self._parse_groups_and_main()
 
-       
         self.parent_of: Dict[str, str] = {}
         for gid, g in self.groups.items():
             for cid in g.get("children", []):
@@ -138,7 +139,7 @@ class PBXProj:
                 continue
             oid = ids[0]
             out[oid] = {
-                "id": oid, 
+                "id": oid,
                 "name": sstr(kv(blk, 'name')),
                 "path": sstr(kv(blk, 'path')),
                 "sourceTree": sstr(kv(blk, 'sourceTree')),
@@ -168,7 +169,6 @@ class PBXProj:
             }
         return groups, main_group
 
-   
     def _group_chain_to_root(self, start_id: str) -> List[str]:
         parts: List[str] = []
         gid = self.parent_of.get(start_id)
@@ -180,7 +180,7 @@ class PBXProj:
                 break
             gp = g.get("path")
             if gp:
-                parts.append(gp)  
+                parts.append(gp)
             gid = self.parent_of.get(gid)
         parts.reverse()
         return parts
@@ -194,28 +194,26 @@ class PBXProj:
             return None
         p = Path(path)
         if p.is_absolute():
-            return p.resolve()
+            return Path(os.path.abspath(p))
 
         st = (fr.get("sourceTree") or "").strip()
         if st in ("<group>", "GROUP", ""):
             chain = self._group_chain_to_root(file_ref_id)
             rel = (Path(*chain) / p) if chain else p
-            return (self.source_root / rel).resolve()
+            return Path(os.path.abspath(self.source_root / rel))
         elif st in ("SOURCE_ROOT",):
-            return (self.source_root / p).resolve()
+            return Path(os.path.abspath(self.source_root / p))
         else:
-            
             return None
 
- 
     def list_target_to_swift_paths(self) -> Dict[str, List[str]]:
         result: Dict[str, Set[str]] = {}
         for _, tgt in self.native_targets.items():
-            tname = (tgt.get("name") or "").strip()  
+            tname = (tgt.get("name") or "").strip()
             if not tname:
                 continue
             acc = result.setdefault(tname, set())
-            for phase_id in (tgt.get("buildPhases") or []):  
+            for phase_id in (tgt.get("buildPhases") or []):
                 sp = self.sources_phases.get(phase_id)
                 if not sp:
                     continue
@@ -223,21 +221,22 @@ class PBXProj:
                     bf = self.build_files.get(bfid)
                     if not bf or not bf.get("fileRef"):
                         continue
-                    fr_id = bf["fileRef"]  
+                    fr_id = bf["fileRef"]
                     fr = self.file_refs.get(fr_id)
                     if not fr:
                         continue
-                    
+
                     ftype = (fr.get("lastKnownFileType") or fr.get("explicitFileType") or "")
                     fname = (fr.get("name") or fr.get("path") or "")
                     if not fname:
                         continue
                     if not (fname.endswith(".swift") or ftype == "sourcecode.swift"):
                         continue
-                    resolved = self.resolve_file_path(fr_id)  
+                    resolved = self.resolve_file_path(fr_id)
                     if resolved:
                         acc.add(str(resolved))
         return {k: sorted(v) for k, v in result.items()}
+
 
 def find_projects_in_workspace(xcworkspace: Path) -> List[Path]:
     wsdata = xcworkspace / "contents.xcworkspacedata"
@@ -245,7 +244,8 @@ def find_projects_in_workspace(xcworkspace: Path) -> List[Path]:
         return []
     try:
         root = ET.fromstring(read_text(wsdata))
-    except Exception:
+    except (ET.ParseError, OSError) as e:
+        print(f"[warn] workspace XML parse failed: {e}")
         return []
     projects: List[Path] = []
     for fr in root.findall(".//FileRef"):
@@ -253,11 +253,10 @@ def find_projects_in_workspace(xcworkspace: Path) -> List[Path]:
         p = loc.split(":", 1)[1] if ":" in loc else loc
         p = p.strip()
         if p.endswith(".xcodeproj"):
-            proj_path = (xcworkspace.parent / p).resolve()
+            proj_path = Path(os.path.abspath(xcworkspace.parent / p))
             if proj_path.exists():
                 projects.append(proj_path)
     return projects
-
 
 
 def _expand_and_dedupe(candidates: List[Path]) -> List[Path]:
@@ -268,25 +267,27 @@ def _expand_and_dedupe(candidates: List[Path]) -> List[Path]:
         if c.suffix == ".xcworkspace":
             try:
                 for pj in find_projects_in_workspace(c):
-                    pj = Path(pj).resolve()
+                    pj = Path(os.path.abspath(pj))
                     if pj not in seen:
                         seen.add(pj)
                         out.append(pj)
-            except Exception:
-               
+            except Exception as e:
+                print(f"[warn] workspace scan failed: {e}")
                 continue
         elif c.suffix == ".xcodeproj":
-            pj = c.resolve()
+            pj = Path(os.path.abspath(c))
             if pj not in seen:
                 seen.add(pj)
                 out.append(pj)
     return out
 
+
 def _recursive_project_search(root: Path) -> List[Path]:
     workspaces = list(root.rglob("*.xcworkspace"))
-    projects   = list(root.rglob("*.xcodeproj"))
+    projects = list(root.rglob("*.xcodeproj"))
     return _expand_and_dedupe([*(Path(p) for p in workspaces),
                                *(Path(p) for p in projects)])
+
 
 def find_projects(input_path: Union[str, Path]) -> List[Path]:
     p = Path(input_path).resolve()
@@ -307,6 +308,7 @@ def find_projects(input_path: Union[str, Path]) -> List[Path]:
 
     raise FileNotFoundError(f"No .xcworkspace or .xcodeproj found under: {p}")
 
+
 def main():
     root = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path.cwd()
     projects = find_projects(root)
@@ -322,8 +324,7 @@ def main():
     Path("targets_swift_paths.json").write_text(
         json.dumps(out, indent=2, ensure_ascii=False), encoding='utf-8'
     )
-    #print("[ok] targets_swift_paths.json 작성 완료")
+
 
 if __name__ == "__main__":
     main()
-
