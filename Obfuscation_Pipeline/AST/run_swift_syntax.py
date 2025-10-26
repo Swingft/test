@@ -17,7 +17,7 @@ def run_swift_syntax():
     external_list_dir = os.path.join(original_dir, external_list_dir)
 
     os.chdir(target_project_dir)
-    build_marker_file = os.path.join(".build", "build_path.txt")
+    build_marker_file = ".build/build_path.txt"
     previous_build_path = ""
     if os.path.exists(build_marker_file):
         with open(build_marker_file, "r") as f:
