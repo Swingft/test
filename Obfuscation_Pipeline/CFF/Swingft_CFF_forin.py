@@ -367,8 +367,8 @@ def main():
             uid = uid_per_file.get(path, 0); uid_per_file[path] = uid+1
             try:
                 if chain_safe_to_single_while(headers_chain):
-                replacement = build_chain_switch_flat(headers_chain, inner_body, outer_indent, uid)
-                tag = "CHAIN_SWITCH"
+                    replacement = build_chain_switch_flat(headers_chain, inner_body, outer_indent, uid)
+                    tag = "CHAIN_SWITCH"
                 else:
                     replacement = build_while_chain(headers_chain, inner_body, outer_indent, uid)
                     tag = "CHAIN_WHILE"
