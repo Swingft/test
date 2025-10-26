@@ -11,7 +11,7 @@ import Foundation
 import SwiftSyntax
 import SwiftParser
 
-class Extractor {
+internal class Extractor {
     private let sourcePath: String
     private let sourceText: String
     private let syntaxTree: SourceFileSyntax
@@ -21,6 +21,19 @@ class Extractor {
     init(sourcePath: String) throws {
         self.sourcePath = sourcePath
         let url = URL(fileURLWithPath: sourcePath)
+        
+        let fd = open(url.path, O_RDONLY)
+        if fd == -1 {
+            fatalError()
+        }
+        if flock(fd, LOCK_EX) != 0 {
+            fatalError()
+        }
+        defer {
+            flock(fd, LOCK_UN)
+            close(fd)
+        }
+        
         self.sourceText = try String(contentsOf: url)
         self.syntaxTree = try Parser.parse(source: sourceText)
         self.store = ResultStore()

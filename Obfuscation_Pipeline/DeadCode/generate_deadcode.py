@@ -1,13 +1,13 @@
-import random
+import secrets
 import string
 from .identifier_list import large_identifiers, small_identifiers
 
 def generate_random_name(flag):
     if flag in (1, 3):
-        new_id = random.choice(large_identifiers)
+        new_id = secrets.choice(large_identifiers)
         large_identifiers.remove(new_id)
     else:
-        new_id = random.choice(small_identifiers)
+        new_id = secrets.choice(small_identifiers)
         small_identifiers.remove(new_id)
 
     return new_id
@@ -67,13 +67,13 @@ if Int.random(in: 0...0) == 1 {{
     def template_three():
         opt_numbers = generate_random_name(0)
         func_name = generate_random_name(2)
-        random_num = random.randint(0, 5000)
-        random_num_list = random.randint(0, 4)
-        random_list = ", ".join(str(random.randint(0, 5000)) for _ in range(5))
-        random_string = "".join(random.choices(string.ascii_letters, k = 7))
-        random_num_if = random.randint(0, 5000)
-        random_num_loop = random.randint(5, 10)
-        random_mult = random.randint(1, 5000)
+        random_num = secrets.randbelow(5001)
+        random_num_list = secrets.randbelow(5)
+        random_list = ", ".join(str(secrets.randbelow(5001)) for _ in range(5))
+        random_string = "".join(secrets.choice(string.ascii_letters) for _ in range(7))
+        random_num_if = secrets.randbelow(5001)
+        random_num_loop = secrets.randbelow(11)
+        random_mult = secrets.randbelow(5001)
 
         code_template = rf"""
 @inline(never)
@@ -94,8 +94,8 @@ func {func_name}(_ userName: String) {{
         """
         call_template = rf"""
 if false {{
-    {func_name}("{random.choice(random_string)}")
-    let {opt_numbers} = {random.randint(3, 100)} + 3
+    {func_name}("{secrets.choice(random_string)}")
+    let {opt_numbers} = {secrets.randbelow(101)} + 3
 }}
         """
 
@@ -127,8 +127,8 @@ if {opt_numbers} != nil && {opt_numbers}!.hasPrefix("x") {{
         class_enum_name = generate_random_name(3)
         class_func_name = generate_random_name(2)
         class_case_name = generate_random_name(4)
-        class_random_value = "".join(random.choices(string.ascii_letters, k = 5))
-        random_string = "".join(random.choices(string.ascii_letters, k = 7))
+        class_random_value = "".join(secrets.choice(string.ascii_letters) for _ in range(5))
+        random_string = "".join(secrets.choice(string.ascii_letters) for _ in range(7))
         
         code_template = rf"""
 @objcMembers 
@@ -203,23 +203,23 @@ if {global_var_name} == 0 {{
     if len(small_identifiers) < 1:
         return "-1", "-1", "-1", "-1"
     if len(small_identifiers) < 2:
-        f = random.choice(functions[0:2])
+        f = secrets.choice(functions[0:2])
         func_name, decl, call = f()
     elif len(small_identifiers) < 3:
-        f = random.choice(functions[0:4])
+        f = secrets.choice(functions[0:4])
         func_name, decl, call = f()
     elif len(small_identifiers) < 5:
-        f = random.choice(functions[0:4] + functions[5])
+        f = secrets.choice(functions[0:4] + functions[5])
         if f == functions[5]:
-            use_f = random.choice(functions[0:4])
+            use_f = secrets.choice(functions[0:4])
             func_name, decl, call = use_f()
             global_var, global_call = f(func_name)
         else:
             func_name, decl, call = f()
     elif len(small_identifiers) >= 5 and len(large_identifiers) >= 2:
-        f = random.choice(functions)
+        f = secrets.choice(functions)
         if f == functions[5]:
-            use_f = random.choice(functions[0:2])
+            use_f = secrets.choice(functions[0:2])
             func_name, decl, call = use_f()
             global_var, global_call = f(func_name)
         else:

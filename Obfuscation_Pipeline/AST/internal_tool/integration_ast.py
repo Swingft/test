@@ -9,8 +9,8 @@ ALIAS_INFO = {}
 
 # swift 파일 단위의 ast.json을 읽고, 노드 저장
 def load_ast_files():
-    dir_path = "./AST/output/source_json/"
-    alias_dir_path = "./AST/output/typealias_json/typealias.json"
+    dir_path = os.path.join(".", "AST", "output", "source_json")
+    alias_dir_path = os.path.join(".", "AST", "output", "typealias_json", "typealias.json")
 
     nodes = []
     for file in os.listdir(dir_path):
@@ -170,8 +170,8 @@ def make_inheritance_tree():
     return root
 
 def integration_ast():
-    output_path = "./AST/output/inheritance_node.json"
-    no_output_path = "./AST/output/no_inheritance_node.json"
+    output_path = os.path.join(".", "AST", "output", "inheritance_node.json")
+    no_output_path = os.path.join(".", "AST", "output", "no_inheritance_node.json")
 
     nodes = load_ast_files()
     check_inheritance(nodes)
