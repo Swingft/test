@@ -2,7 +2,7 @@ import SwiftSyntax
 import SwiftParser
 import Foundation
 
-final class ResourceLikeExcluder: SyntaxVisitor {
+internal final class ResourceLikeExcluder: SyntaxVisitor {
     private let filePath: String
     private(set) var locations: Set<String> = []
 
@@ -19,18 +19,20 @@ final class ResourceLikeExcluder: SyntaxVisitor {
     }
 
     override func visit(_ node: StringLiteralExprSyntax) -> SyntaxVisitorContinueKind {
-        if isUnderTypedBinding(node)
-            || isArgOfTargetInitializer(node)
-            || isImplicitReturnForTypedProperty(node)
-            || isInTargetDictValue(node)
-            || isInTargetDictValueViaAsCast(node)      
-        {
-            let ln = SourceLoc.line(of: node, filePath: filePath)
-            locations.insert("\(filePath):\(ln)")
-            return .skipChildren
-        }
+    if isUnderTypedBinding(node)
+        || isArgOfTargetInitializer(node)
+        || isImplicitReturnForTypedProperty(node)
+        || isInTargetDictValue(node)
+        || isInTargetDictValueViaAsCast(node)
+    {
+        let ln = SourceLoc.line(of: node, filePath: filePath)
+        locations.insert("\(filePath):\(ln)")
+        return .skipChildren
+    } else {
         return .visitChildren
     }
+}
+
 
     private func matchesTarget(_ typeOrName: String) -> Bool {
         let trimmed = typeOrName.replacingOccurrences(of: " ", with: "")

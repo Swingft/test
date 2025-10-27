@@ -2,7 +2,7 @@ import Foundation
 import SwiftSyntax
 
 
-final class DataSourceConformanceExcluder: SyntaxVisitor {
+internal final class DataSourceConformanceExcluder: SyntaxVisitor {
     private let filePath: String
     private(set) var locations: Set<String> = []
 

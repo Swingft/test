@@ -8,7 +8,18 @@ from pathlib import Path
 
 
 def run_streamed(cmd, tag):
-    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1)
+    try:
+        p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1)
+    except FileNotFoundError as e:
+        print(f"[ERROR] Failed to start process ({tag}): command not found: {cmd[0]}", flush=True)
+        return 127
+    except OSError as e:
+        print(f"[ERROR] OS error while launching ({tag}): {e}", flush=True)
+        return 126
+    except Exception as e:
+        print(f"[ERROR] Unexpected error while starting ({tag}): {e}", flush=True)
+        return 126
+
     assert p.stdout is not None
     for line in p.stdout:
         print(f"[{tag}] {line.rstrip()}")
@@ -32,7 +43,7 @@ def gather_paths(ast_json):
 def safe_relpath(p: Path) -> Path:
     try:
         return p.resolve().relative_to(Path.cwd().resolve())
-    except Exception:
+    except (ValueError, OSError) as e:
         parts = [seg for seg in p.as_posix().lstrip("/").split("/") if seg]
         return Path("Swingft_CFF_Dump") / Path(*parts)
 
@@ -54,6 +65,7 @@ def flat_name_for_diff(rel: Path) -> str:
         base = "root"
     return f"{base}.diff"
 
+
 def main():
     here = Path(__file__).resolve().parent
 
@@ -66,7 +78,6 @@ def main():
     if not ast_path.exists():
         print(f"[ERROR] CFF_AST not found: {ast_path}", flush=True)
         sys.exit(2)
-    #print(f"Using AST: {ast_path}", flush=True)
 
     env_out = os.environ.get("CFF_DIFF_DIR")
     if not env_out:
@@ -75,31 +86,34 @@ def main():
     out_raw = Path(env_out).expanduser()
     out_root = (out_raw if out_raw.is_absolute() else (Path.cwd() / out_raw)).resolve()
 
-
     try:
         ast = json.loads(ast_path.read_text(encoding="utf-8"))
-    except Exception as e:
-        #print(f"[ERROR] Failed to read AST json: {e}", flush=True)
+    except json.JSONDecodeError as e:
+        print(f"[ERROR] Failed to parse AST JSON: {e}", flush=True)
+        sys.exit(2)
+    except OSError as e:
+        print(f"[ERROR] Failed to read AST file: {e}", flush=True)
         sys.exit(2)
 
-    
     target_files = [p for p in gather_paths(ast) if p.exists()]
-    #print(f"Collected target files: {len(target_files)}", flush=True)
 
-   
     before_map = {}
     for f in target_files:
         try:
             before_map[f] = f.read_text(encoding="utf-8")
-        except Exception:
-            pass
+        except OSError as e:
+            print(f"[WARN] Failed to read source file {f}: {e}", flush=True)
+            continue
+        except Exception as e:
+            print(f"[WARN] Unexpected error reading {f}: {e}", flush=True)
+            continue
 
     while_py = here / "Swingft_CFF_while.py"
     forin_py = here / "Swingft_CFF_forin.py"
-    if_py    = here / "Swingft_CFF_if.py"
+    if_py = here / "Swingft_CFF_if.py"
     for s in (while_py, forin_py, if_py):
         if not s.exists():
-            print(f"ERROR: Required script not found: {s.name}", flush=True)
+            print(f"[ERROR] Required script not found: {s.name}", flush=True)
             sys.exit(2)
 
     rc1 = run_streamed([sys.executable, str(while_py), str(ast_path)], tag="WHILE")
@@ -117,13 +131,20 @@ def main():
     for f, before in before_map.items():
         try:
             after = f.read_text(encoding="utf-8")
-        except Exception:
+        except OSError as e:
+            print(f"[WARN] Failed to reread {f}: {e}", flush=True)
+            continue
+        except Exception as e:
+            print(f"[WARN] Unexpected error rereading {f}: {e}", flush=True)
             continue
 
         if after != before:
             if not created:
-                out_root.mkdir(parents=True, exist_ok=True)
-                #print(f"[OUT] Writing diffs to: {out_root}", flush=True)
+                try:
+                    out_root.mkdir(parents=True, exist_ok=True)
+                except OSError as e:
+                    print(f"[ERROR] Failed to create output directory: {e}", flush=True)
+                    sys.exit(2)
                 created = True
 
             rel = safe_relpath(f)
@@ -132,16 +153,23 @@ def main():
             diff_text = unified_diff_text(rel, before, after)
             try:
                 diff_path.write_text(diff_text, encoding="utf-8")
-                #print(f"[DIFF] {f} -> {diff_name}", flush=True)
                 changed += 1
-            except Exception as e:
+            except OSError as e:
                 print(f"[WARN] Failed to write diff for {f}: {e}", flush=True)
+            except Exception as e:
+                print(f"[WARN] Unexpected error writing diff for {f}: {e}", flush=True)
 
     print(f"Swingft_CFF completed. Changed files: {changed}", flush=True)
 
-    ast_path = "ast.json"
-    if os.path.exists(ast_path):
-        os.remove(ast_path)
+    try:
+        ast_json_path = Path("ast.json")
+        if ast_json_path.exists():
+            ast_json_path.unlink()
+    except OSError as e:
+        print(f"[WARN] Failed to delete ast.json: {e}", flush=True)
+    except Exception as e:
+        print(f"[WARN] Unexpected error deleting ast.json: {e}", flush=True)
+
 
 if __name__ == "__main__":
     main()
