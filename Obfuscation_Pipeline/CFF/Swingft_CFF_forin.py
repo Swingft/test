@@ -349,8 +349,9 @@ def main():
 
         try:
             rx = build_header_rx(header)
-        except Exception:
+        except ValueError:
             continue
+
         m = rx.search(src)
         if not m:
             continue
@@ -371,9 +372,9 @@ def main():
                 else:
                     replacement = build_while_chain(headers_chain, inner_body, outer_indent, uid)
                     tag = "CHAIN_WHILE"
-            except Exception as e:
-                
+            except (ValueError, AssertionError):
                 continue
+
 
             new_src = src[:m.start()] + replacement + src[rpos+1:]
             path.write_text(new_src, encoding="utf-8")
@@ -385,9 +386,9 @@ def main():
         uid = uid_per_file.get(path, 0); uid_per_file[path] = uid+1
         try:
             replacement = build_switch_flat_single(header, body, outer_indent, uid)
-        except Exception as e:
-           
+        except ValueError:
             continue
+
 
         new_src = src[:m.start()] + replacement + src[rpos+1:]
         path.write_text(new_src, encoding="utf-8")

@@ -138,18 +138,22 @@ def build_flattened_for_let_var(loop_text: str, kw: str, name: str, expr: str, i
 def replace_once(file_path: Path, original: str, replacement: str) -> bool:
     try:
         src = file_path.read_text(encoding="utf-8")
-    except Exception as e:
+    except (OSError, UnicodeError) as e:
         print(f"[ERROR] read failed: {file_path} ({e})")
         return False
+
     if original not in src:
         return False
+
     new_src = src.replace(original, replacement, 1)
     try:
         file_path.write_text(new_src, encoding="utf-8")
-    except Exception as e:
+    except (OSError, UnicodeError) as e:
         print(f"[ERROR] write failed: {file_path} ({e})")
         return False
+
     return True
+
 
 def main():
     if len(sys.argv) != 2:

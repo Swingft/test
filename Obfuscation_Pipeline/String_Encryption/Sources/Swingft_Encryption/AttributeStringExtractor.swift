@@ -1,7 +1,7 @@
 import SwiftSyntax
 import SwiftParser
 
-final class AttributeStringLineCollector: SyntaxVisitor {
+internal final class AttributeStringLineCollector: SyntaxVisitor {
     private let filePath: String
     private let source: String
     private lazy var converter = SourceLocationConverter(fileName: filePath,

@@ -1,7 +1,7 @@
 import Foundation
 import SwiftSyntax
 
-final class IdentifierStringExtractor: SyntaxVisitor {
+internal final class IdentifierStringExtractor: SyntaxVisitor {
     private(set) var identifierStrings: [(String, String)] = []
     private let filePath: String
 
