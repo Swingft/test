@@ -46,10 +46,8 @@ def repeat_match_member(in_node, ex_node):
 
 # extension 이름 확인
 def repeat_extension(in_node, name):
-    node = in_node.get("node")
-    if not node:
-        node = in_node
-    
+    node = in_node.get("node") or in_node
+
     c_name = node.get("A_name")
     c_name = c_name.split(".")[-1]
     if c_name == name:
@@ -65,9 +63,7 @@ def compare_node(in_node, ex_node):
             compare_node(in_node, n)
 
     elif isinstance(ex_node, dict):
-        node = in_node.get("node")
-        if not node:
-            node = in_node
+        node = in_node.get("node") or in_node
         
         name = node.get("A_name")
         name = name.split(".")[-1]
@@ -88,12 +84,8 @@ def match_ast_name(data, external_ast_dir):
         for item in data:
             match_ast_name(item, external_ast_dir)
     elif isinstance(data, dict):
-        node = data.get("node")
-        if not node:
-            node = data
-        
+        node = data.get("node") or data 
         candidate_files = []
-        # extension -> 이름이 같은지
         name = node.get("A_name")
         name = name.split(".")[-1]
         if name in EXTERNAL_NAME_TO_FILE.keys() and node.get("B_kind") == "extension":
@@ -132,8 +124,10 @@ def match_and_save(candidate_path, external_ast_path):
                 with open(file_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
                     extract_ast_name(data, file)
-            except Exception as e:
-                print(e)
+            except FileNotFoundError:
+                print("외부 라이브러리 파일을 찾을 수 없음")
+            except json.JSONDecodeError:
+                print("외부 라이브러리 파일을 찾을 수 없음")
         for file_name, names in EXTERNAL_NAME.items():
             for name in names:
                 if file_name not in EXTERNAL_NAME_TO_FILE[name]:
@@ -141,13 +135,13 @@ def match_and_save(candidate_path, external_ast_path):
 
         match_ast_name(candidates, external_ast_path)
 
-        matched_output_path = "./AST/output/external_list.json"
+        matched_output_path = os.path.join(".", "AST", "output", "external_list.json")
         with open(matched_output_path, "w", encoding="utf-8") as f:
             json.dump(MATCHED_LIST, f, indent=2, ensure_ascii=False)
     
 
 def match_candidates_external():
-    candidate_path = "./AST/output/external_candidates.json"
-    external_ast_path = "./AST/output/external_to_ast/"
+    candidate_path = os.path.join(".", "AST", "output", "external_candidates.json")
+    external_ast_path = os.path.join(".", "AST", "output", "external_to_ast")
 
     match_and_save(candidate_path, external_ast_path)

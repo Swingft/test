@@ -7,7 +7,7 @@
 
 import SwiftSyntax
 
-class IDRewriter: SyntaxRewriter {
+internal class IDRewriter: SyntaxRewriter {
     let mapping: [String: String]
     
     init(mapping: [String: String]) {

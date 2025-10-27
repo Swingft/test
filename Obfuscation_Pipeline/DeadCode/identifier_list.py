@@ -6,7 +6,7 @@ small_identifiers = []
 
 def read_identifier_list():
     global large_identifiers, small_identifiers
-    id_path = "./DeadCode/identifiers.txt"
+    id_path = os.path.join(".", "DeadCode", "identifiers.txt")
     mapping_path = "mapping_result.json"
     used_id = []
 
@@ -15,16 +15,23 @@ def read_identifier_list():
             data = json.load(f)
         for _, items in data.items():
             for item in items:
+                if item is None:
+                    continue
+
                 before = item.get("target")
                 after = item.get("replacement")
-                used_id.append(before)
-                used_id.append(after)
+                if before:
+                    used_id.append(before)
+                if after:
+                    used_id.append(after)
 
     if os.path.exists(id_path):
         with open(id_path, "r", encoding="utf-8") as f:
             for line in f:
                 item = line.strip()
                 if len(item) < 5 or "_" in item or item in used_id:
+                    continue
+                if not item:
                     continue
                 if item[0].isupper():
                     large_identifiers.append(item)
