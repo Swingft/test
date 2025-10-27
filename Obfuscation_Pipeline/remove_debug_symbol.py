@@ -228,7 +228,6 @@ def generate_debug_report(project_path: str) -> None:
     """디버깅 심볼 리포트 생성"""
     root = Path(project_path).resolve()
     if not root.exists():
-        print(f"오류: 경로를 찾을 수 없습니다: {root}")
         sys.exit(1)
     
     layout, anchor = detect_layout(root)
@@ -289,7 +288,6 @@ def remove_debug_symbols(module_entries: Dict[str, Dict[Path, List[Tuple[int, in
                     # watchdog / heartbeat
                     iter_guard += 1
                     if iter_guard > max_iter:
-                        print(f"[경고] 반복 한도를 초과했습니다. 파일을 중단합니다: {fp} (i={i}, lines={len(lines)})")
                         break
                     line = lines[i]
                     # 고차함수 trailing-closure 내부의 디버깅 호출은 예외로 스킵
@@ -333,8 +331,8 @@ def remove_debug_symbols(module_entries: Dict[str, Dict[Path, List[Tuple[int, in
                 with open(fp, 'w', encoding='utf-8') as f:
                     f.write('\n'.join(new_lines))
 
-            except Exception as e:
-                print(f"[오류] {fp}: {e}")
+            except Exception:
+                pass
 
 
 # ===== 부분 제거(인라인/멀티라인) 유틸 =====

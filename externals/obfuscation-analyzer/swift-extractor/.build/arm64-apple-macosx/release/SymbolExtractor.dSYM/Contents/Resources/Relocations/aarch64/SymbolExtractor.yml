@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SymbolExtractor'
+binary-path:     '/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SymbolExtractor'
 relocations:
   - { offset: 0x168FD4, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser0A0VMa', symObjAddr: 0xC4, symBinAddr: 0x100001F80, symSize: 0xC }
   - { offset: 0x168FE8, size: 0x8, addend: 0x0, symName: '_$ss7Decoder_pWOc', symObjAddr: 0xD0, symBinAddr: 0x100001F8C, symSize: 0x44 }
@@ -628,9 +628,9 @@ relocations:
   - { offset: 0x17E70C, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser07LenientB0V21parsePositionalValues4from4intoyAA14SplitArgumentsV_AA06ParsedF0VztKF4nextL_13unconditionalAH7ElementVSgSb_tFTf0ns_n', symObjAddr: 0x4F6C, symBinAddr: 0x100018D54, symSize: 0x12C }
   - { offset: 0x17E8D7, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser07LenientB0V5parseAA12ParsedValuesVyKF', symObjAddr: 0x5098, symBinAddr: 0x100018E80, symSize: 0xD14 }
   - { offset: 0x17FB63, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser07LenientB0V20errorForMissingValueyAA0B5ErrorOAA11InputOriginV7ElementO_AA06ParsedA0OtFTf4nnx_n', symObjAddr: 0x6A50, symBinAddr: 0x10001A838, symSize: 0x190 }
-  - { offset: 0x17FE31, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser0A10VisibilityV7defaultACvpZ', symObjAddr: 0x3C0, symBinAddr: 0x100452490, symSize: 0x0 }
-  - { offset: 0x17FF77, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser0A10VisibilityV6hiddenACvpZ', symObjAddr: 0x3C1, symBinAddr: 0x100452491, symSize: 0x0 }
-  - { offset: 0x17FF91, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser0A10VisibilityV7privateACvpZ', symObjAddr: 0x3C2, symBinAddr: 0x100452492, symSize: 0x0 }
+  - { offset: 0x17FE31, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser0A10VisibilityV7defaultACvpZ', symObjAddr: 0x3C0, symBinAddr: 0x1004523A0, symSize: 0x0 }
+  - { offset: 0x17FF77, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser0A10VisibilityV6hiddenACvpZ', symObjAddr: 0x3C1, symBinAddr: 0x1004523A1, symSize: 0x0 }
+  - { offset: 0x17FF91, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser0A10VisibilityV7privateACvpZ', symObjAddr: 0x3C2, symBinAddr: 0x1004523A2, symSize: 0x0 }
   - { offset: 0x17FF9F, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser0A10VisibilityV7defaultACvau', symObjAddr: 0x0, symBinAddr: 0x10001B0FC, symSize: 0xC }
   - { offset: 0x17FFBD, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser0A10VisibilityV6hiddenACvau', symObjAddr: 0xC, symBinAddr: 0x10001B108, symSize: 0xC }
   - { offset: 0x17FFDB, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser0A10VisibilityV7privateACvau', symObjAddr: 0x18, symBinAddr: 0x10001B114, symSize: 0xC }
@@ -947,8 +947,8 @@ relocations:
   - { offset: 0x18EF9A, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser14CompletionKindV6customyACSaySSGAE_SiSStcFZ', symObjAddr: 0x8C, symBinAddr: 0x10002904C, symSize: 0x34 }
   - { offset: 0x18EFD8, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser14CompletionKindV6customyACSaySSGAE_SiSStYaYbcFZ', symObjAddr: 0xC0, symBinAddr: 0x100029080, symSize: 0x34 }
   - { offset: 0x18F016, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser14CompletionKindV6customyACSaySSGAEcFZ', symObjAddr: 0xF4, symBinAddr: 0x1000290B4, symSize: 0x34 }
-  - { offset: 0x18F135, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser15CompletionShellV11_requestingAA5MutexCyACSgGvpZ', symObjAddr: 0xC148, symBinAddr: 0x10060E730, symSize: 0x0 }
-  - { offset: 0x18F1CA, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser15CompletionShellV18_requestingVersionAA5MutexCySSSgGvpZ', symObjAddr: 0xC150, symBinAddr: 0x10060E738, symSize: 0x0 }
+  - { offset: 0x18F135, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser15CompletionShellV11_requestingAA5MutexCyACSgGvpZ', symObjAddr: 0xC120, symBinAddr: 0x10060E730, symSize: 0x0 }
+  - { offset: 0x18F1CA, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser15CompletionShellV18_requestingVersionAA5MutexCySSSgGvpZ', symObjAddr: 0xC128, symBinAddr: 0x10060E738, symSize: 0x0 }
   - { offset: 0x18F221, size: 0x8, addend: 0x0, symName: '_$s22ArgumentParserToolInfo07CommandD2V0V0aB0E22completionFunctionNameSSvg', symObjAddr: 0x0, symBinAddr: 0x100029414, symSize: 0x118 }
   - { offset: 0x18F2E9, size: 0x8, addend: 0x0, symName: '_$s22ArgumentParserToolInfo07CommandD2V0V0aB0E19positionalArgumentsSayAA0adF0VGvg', symObjAddr: 0x118, symBinAddr: 0x10002952C, symSize: 0x240 }
   - { offset: 0x18F516, size: 0x8, addend: 0x0, symName: '_$sSS14ArgumentParserE32shellEscapeForSingleQuotedString14iterationCountSSs6UInt64V_tF', symObjAddr: 0x358, symBinAddr: 0x10002976C, symSize: 0xCC }
@@ -1022,9 +1022,9 @@ relocations:
   - { offset: 0x193E62, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser14EnumerableFlagPAAE4name3forAA17NameSpecificationVx_tFZ', symObjAddr: 0x0, symBinAddr: 0x10002CFF0, symSize: 0x74 }
   - { offset: 0x193F81, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser14EnumerableFlagPAAE4name3forAA17NameSpecificationVx_tFZ', symObjAddr: 0x0, symBinAddr: 0x10002CFF0, symSize: 0x74 }
   - { offset: 0x194093, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser14EnumerableFlagPAAE4help3forAA0A4HelpVSgx_tFZ', symObjAddr: 0xB8, symBinAddr: 0x10002D064, symSize: 0x14 }
-  - { offset: 0x194232, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser8ExitCodeV7successACvpZ', symObjAddr: 0x8C4, symBinAddr: 0x100452B74, symSize: 0x0 }
-  - { offset: 0x194363, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser8ExitCodeV7failureACvpZ', symObjAddr: 0x8C8, symBinAddr: 0x100452B78, symSize: 0x0 }
-  - { offset: 0x19437D, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser8ExitCodeV17validationFailureACvpZ', symObjAddr: 0x8CC, symBinAddr: 0x100452B7C, symSize: 0x0 }
+  - { offset: 0x194232, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser8ExitCodeV7successACvpZ', symObjAddr: 0x8C4, symBinAddr: 0x100452A84, symSize: 0x0 }
+  - { offset: 0x194363, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser8ExitCodeV7failureACvpZ', symObjAddr: 0x8C8, symBinAddr: 0x100452A88, symSize: 0x0 }
+  - { offset: 0x19437D, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser8ExitCodeV17validationFailureACvpZ', symObjAddr: 0x8CC, symBinAddr: 0x100452A8C, symSize: 0x0 }
   - { offset: 0x1943DD, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser8ExitCodeV7successACvau', symObjAddr: 0x98, symBinAddr: 0x10002D110, symSize: 0xC }
   - { offset: 0x1943FB, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser8ExitCodeV7failureACvau', symObjAddr: 0xAC, symBinAddr: 0x10002D124, symSize: 0xC }
   - { offset: 0x194419, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser8ExitCodeV17validationFailureACvau', symObjAddr: 0xC0, symBinAddr: 0x10002D138, symSize: 0xC }
@@ -1294,7 +1294,7 @@ relocations:
   - { offset: 0x19E702, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser15FlagExclusivityV23__derived_struct_equalsySbAC_ACtFZ', symObjAddr: 0x8C8, symBinAddr: 0x100038240, symSize: 0x10 }
   - { offset: 0x19E76F, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser15FlagExclusivityV4hash4intoys6HasherVz_tF', symObjAddr: 0x8D8, symBinAddr: 0x100038250, symSize: 0x24 }
   - { offset: 0x19E839, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser15FlagExclusivityV9hashValueSivg', symObjAddr: 0x8FC, symBinAddr: 0x100038274, symSize: 0x44 }
-  - { offset: 0x19ED01, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser11HelpCommandV13configurationAA0D13ConfigurationVvpZ', symObjAddr: 0x17E68, symBinAddr: 0x10060E740, symSize: 0x0 }
+  - { offset: 0x19ED01, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser11HelpCommandV13configurationAA0D13ConfigurationVvpZ', symObjAddr: 0x17E38, symBinAddr: 0x10060E740, symSize: 0x0 }
   - { offset: 0x19ED0F, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser11HelpCommandVwCP', symObjAddr: 0x0, symBinAddr: 0x10003D420, symSize: 0x2C }
   - { offset: 0x19ED23, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser11HelpCommandVwxx', symObjAddr: 0x4C, symBinAddr: 0x10003D44C, symSize: 0x3C }
   - { offset: 0x19ED37, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser11HelpCommandVwcp', symObjAddr: 0xA8, symBinAddr: 0x10003D488, symSize: 0x88 }
@@ -1915,7 +1915,7 @@ relocations:
   - { offset: 0x1BBCA7, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser18InternalParseErrorOs0E0AAsADP9_userInfoyXlSgvgTW', symObjAddr: 0xA08, symBinAddr: 0x10005C738, symSize: 0x4 }
   - { offset: 0x1BBCC3, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser18InternalParseErrorOs0E0AAsADP19_getEmbeddedNSErroryXlSgyFTW', symObjAddr: 0xA0C, symBinAddr: 0x10005C73C, symSize: 0x4 }
   - { offset: 0x1BBD96, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser8PlatformO13StandardErrorVMa', symObjAddr: 0x0, symBinAddr: 0x10005C748, symSize: 0x10 }
-  - { offset: 0x1BBDBA, size: 0x8, addend: 0x0, symName: '_$ss11CommandLineO14ArgumentParserE16_staticArgumentsSaySSGvpZ', symObjAddr: 0x4408, symBinAddr: 0x10060E7D8, symSize: 0x0 }
+  - { offset: 0x1BBDBA, size: 0x8, addend: 0x0, symName: '_$ss11CommandLineO14ArgumentParserE16_staticArgumentsSaySSGvpZ', symObjAddr: 0x43E0, symBinAddr: 0x10060E7D8, symSize: 0x0 }
   - { offset: 0x1BBDC8, size: 0x8, addend: 0x0, symName: '_$s14ArgumentParser8PlatformO13StandardErrorVMa', symObjAddr: 0x0, symBinAddr: 0x10005C748, symSize: 0x10 }
   - { offset: 0x1BBE08, size: 0x8, addend: 0x0, symName: '_$ss11CommandLineO14ArgumentParserE16_staticArguments_WZ', symObjAddr: 0x210, symBinAddr: 0x10005C958, symSize: 0x1C }
   - { offset: 0x1BBE8F, size: 0x8, addend: 0x0, symName: '_$ss11_StringGutsV27_slowEnsureMatchingEncodingySS5IndexVAEF', symObjAddr: 0x3DC, symBinAddr: 0x10005CB24, symSize: 0x78 }
@@ -3146,7 +3146,7 @@ relocations:
   - { offset: 0x241D8F, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax04TypeB0V0A6Parser0B9ParseableA2dEP5parse4fromxAD0D0Vz_tFZTW', symObjAddr: 0x1258, symBinAddr: 0x1000C46A8, symSize: 0xB4 }
   - { offset: 0x241E2A, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax04TypeB0V0A6Parser0B9ParseableADWI', symObjAddr: 0x130C, symBinAddr: 0x1000C475C, symSize: 0x24 }
   - { offset: 0x241E3E, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax04TypeB0VAcA0B8ProtocolAAWl', symObjAddr: 0x1330, symBinAddr: 0x1000C4780, symSize: 0x40 }
-  - { offset: 0x242089, size: 0x8, addend: 0x0, symName: '_$s11SwiftParser5LexerO6LexemeV5FlagsV15isAtStartOfLineAGvpZ', symObjAddr: 0x1478, symBinAddr: 0x100456D28, symSize: 0x0 }
+  - { offset: 0x242089, size: 0x8, addend: 0x0, symName: '_$s11SwiftParser5LexerO6LexemeV5FlagsV15isAtStartOfLineAGvpZ', symObjAddr: 0x1478, symBinAddr: 0x100456C38, symSize: 0x0 }
   - { offset: 0x2423F1, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF11SwiftSyntax03RawP0V_Tg5', symObjAddr: 0x584, symBinAddr: 0x1000C4C70, symSize: 0xF8 }
   - { offset: 0x2424B8, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF11SwiftParser0P0V9LookaheadV13SkippingState33_8B04AB4096AC45820073D65E009E045BLLO_Tg5', symObjAddr: 0x67C, symBinAddr: 0x1000C4D68, symSize: 0x110 }
   - { offset: 0x24257F, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF11SwiftSyntax14RawTriviaPieceO_Tg5', symObjAddr: 0x8AC, symBinAddr: 0x1000C4F98, symSize: 0x104 }
@@ -10040,7 +10040,7 @@ relocations:
   - { offset: 0x3CD742, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B4KindO20yieldExprListElementACvgZ', symObjAddr: 0x200, symBinAddr: 0x1001E46B8, symSize: 0x8 }
   - { offset: 0x3CD770, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B4KindO9yieldListACvgZ', symObjAddr: 0x208, symBinAddr: 0x1001E46C0, symSize: 0x8 }
   - { offset: 0x3CD815, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax12SourceLengthV04utf8D0ACSi_tcfC', symObjAddr: 0x0, symBinAddr: 0x1001E46C8, symSize: 0x4 }
-  - { offset: 0x3CD839, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax12SourceLengthV4zeroACvpZ', symObjAddr: 0x1A8, symBinAddr: 0x100483CD8, symSize: 0x0 }
+  - { offset: 0x3CD839, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax12SourceLengthV4zeroACvpZ', symObjAddr: 0x1A8, symBinAddr: 0x100483BE8, symSize: 0x0 }
   - { offset: 0x3CD9B5, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax12SourceLengthV4zeroACvau', symObjAddr: 0x64, symBinAddr: 0x1001E472C, symSize: 0xC }
   - { offset: 0x3CD9D3, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax12SourceLengthVSLAASQWb', symObjAddr: 0x144, symBinAddr: 0x1001E480C, symSize: 0x4 }
   - { offset: 0x3CD9E7, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax12SourceLengthVACSQAAWl', symObjAddr: 0x148, symBinAddr: 0x1001E4810, symSize: 0x40 }
@@ -11258,55 +11258,55 @@ relocations:
   - { offset: 0x41EA7E, size: 0x8, addend: 0x0, symName: '_$sSa15replaceSubrange_4withySnySiG_qd__nt7ElementQyd__RszSlRd__lF11SwiftSyntax03RawF0VSg_SayAIGTg5Tf4ngn_n', symObjAddr: 0x36F0, symBinAddr: 0x1002123A8, symSize: 0x124 }
   - { offset: 0x41EF74, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B18CollectionIteratorV4nextxSgyF', symObjAddr: 0x1584, symBinAddr: 0x100210294, symSize: 0x198 }
   - { offset: 0x41F116, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B18CollectionIteratorVyxGStAASt4next7ElementQzSgyFTW', symObjAddr: 0x171C, symBinAddr: 0x10021042C, symSize: 0x4 }
-  - { offset: 0x41F8B1, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax016AccessorDeclListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20ACC, symBinAddr: 0x100487AFC, symSize: 0x0 }
-  - { offset: 0x41F8CB, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax016ArrayElementListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20ACE, symBinAddr: 0x100487AFE, symSize: 0x0 }
-  - { offset: 0x41F8E5, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax013AttributeListB0V10syntaxKindAA0bF0OvpZ', symObjAddr: 0x20AD0, symBinAddr: 0x100487B00, symSize: 0x0 }
-  - { offset: 0x41F8FF, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax024AvailabilityArgumentListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AD2, symBinAddr: 0x100487B02, symSize: 0x0 }
-  - { offset: 0x41F919, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax015CatchClauseListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AD4, symBinAddr: 0x100487B04, symSize: 0x0 }
-  - { offset: 0x41F933, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax013CatchItemListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AD6, symBinAddr: 0x100487B06, symSize: 0x0 }
-  - { offset: 0x41F94D, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax018ClosureCaptureListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AD8, symBinAddr: 0x100487B08, symSize: 0x0 }
-  - { offset: 0x41F968, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020ClosureParameterListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20ADA, symBinAddr: 0x100487B0A, symSize: 0x0 }
-  - { offset: 0x41F983, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax029ClosureShorthandParameterListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20ADC, symBinAddr: 0x100487B0C, symSize: 0x0 }
-  - { offset: 0x41F99E, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax017CodeBlockItemListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20ADE, symBinAddr: 0x100487B0E, symSize: 0x0 }
-  - { offset: 0x41F9B9, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax026CompositionTypeElementListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AE0, symBinAddr: 0x100487B10, symSize: 0x0 }
-  - { offset: 0x41F9D4, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020ConditionElementListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AE2, symBinAddr: 0x100487B12, symSize: 0x0 }
-  - { offset: 0x41F9EF, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax016DeclModifierListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AE4, symBinAddr: 0x100487B14, symSize: 0x0 }
-  - { offset: 0x41FA0A, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020DeclNameArgumentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AE6, symBinAddr: 0x100487B16, symSize: 0x0 }
-  - { offset: 0x41FA25, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax018DesignatedTypeListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AE8, symBinAddr: 0x100487B18, symSize: 0x0 }
-  - { offset: 0x41FA40, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax021DictionaryElementListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AEA, symBinAddr: 0x100487B1A, symSize: 0x0 }
-  - { offset: 0x41FA5B, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax029DifferentiabilityArgumentListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AEC, symBinAddr: 0x100487B1C, symSize: 0x0 }
-  - { offset: 0x41FA76, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax034DocumentationAttributeArgumentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AEE, symBinAddr: 0x100487B1E, symSize: 0x0 }
-  - { offset: 0x41FA91, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax028EffectsAttributeArgumentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AF0, symBinAddr: 0x100487B20, symSize: 0x0 }
-  - { offset: 0x41FAAC, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax019EnumCaseElementListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AF2, symBinAddr: 0x100487B22, symSize: 0x0 }
-  - { offset: 0x41FAC7, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax021EnumCaseParameterListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AF4, symBinAddr: 0x100487B24, symSize: 0x0 }
-  - { offset: 0x41FAE2, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax08ExprListB0V10syntaxKindAA0bF0OvpZ', symObjAddr: 0x20AF6, symBinAddr: 0x100487B26, symSize: 0x0 }
-  - { offset: 0x41FAFD, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax021FunctionParameterListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AF8, symBinAddr: 0x100487B28, symSize: 0x0 }
-  - { offset: 0x41FB18, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax019GenericArgumentListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AFA, symBinAddr: 0x100487B2A, symSize: 0x0 }
-  - { offset: 0x41FB33, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020GenericParameterListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AFC, symBinAddr: 0x100487B2C, symSize: 0x0 }
-  - { offset: 0x41FB4E, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax022GenericRequirementListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AFE, symBinAddr: 0x100487B2E, symSize: 0x0 }
-  - { offset: 0x41FB69, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax018IfConfigClauseListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B00, symBinAddr: 0x100487B30, symSize: 0x0 }
-  - { offset: 0x41FB84, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax023ImportPathComponentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B02, symBinAddr: 0x100487B32, symSize: 0x0 }
-  - { offset: 0x41FB9F, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax017InheritedTypeListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B04, symBinAddr: 0x100487B34, symSize: 0x0 }
-  - { offset: 0x41FBBA, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020KeyPathComponentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B06, symBinAddr: 0x100487B36, symSize: 0x0 }
-  - { offset: 0x41FBD5, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax015LabeledExprListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B08, symBinAddr: 0x100487B38, symSize: 0x0 }
-  - { offset: 0x41FBF0, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax019MemberBlockItemListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B0A, symBinAddr: 0x100487B3A, symSize: 0x0 }
-  - { offset: 0x41FC0B, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax034MultipleTrailingClosureElementListB0V10syntaxKindAA0bI0OvpZ', symObjAddr: 0x20B0C, symBinAddr: 0x100487B3C, symSize: 0x0 }
-  - { offset: 0x41FC26, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax021ObjCSelectorPieceListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B0E, symBinAddr: 0x100487B3E, symSize: 0x0 }
-  - { offset: 0x41FC41, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax018PatternBindingListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B10, symBinAddr: 0x100487B40, symSize: 0x0 }
-  - { offset: 0x41FC5C, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax023PlatformVersionItemListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B12, symBinAddr: 0x100487B42, symSize: 0x0 }
-  - { offset: 0x41FC77, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax028PrecedenceGroupAttributeListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B14, symBinAddr: 0x100487B44, symSize: 0x0 }
-  - { offset: 0x41FC92, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax023PrecedenceGroupNameListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B16, symBinAddr: 0x100487B46, symSize: 0x0 }
-  - { offset: 0x41FCAD, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax025PrimaryAssociatedTypeListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B18, symBinAddr: 0x100487B48, symSize: 0x0 }
-  - { offset: 0x41FCC8, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax030SimpleStringLiteralSegmentListB0V10syntaxKindAA0bI0OvpZ', symObjAddr: 0x20B1A, symBinAddr: 0x100487B4A, symSize: 0x0 }
-  - { offset: 0x41FCE3, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax031SpecializeAttributeArgumentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B1C, symBinAddr: 0x100487B4C, symSize: 0x0 }
-  - { offset: 0x41FCFE, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax024StringLiteralSegmentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B1E, symBinAddr: 0x100487B4E, symSize: 0x0 }
-  - { offset: 0x41FD19, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax018SwitchCaseItemListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B20, symBinAddr: 0x100487B50, symSize: 0x0 }
-  - { offset: 0x41FD34, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax014SwitchCaseListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B22, symBinAddr: 0x100487B52, symSize: 0x0 }
-  - { offset: 0x41FD4F, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax023TuplePatternElementListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B24, symBinAddr: 0x100487B54, symSize: 0x0 }
-  - { offset: 0x41FD6A, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020TupleTypeElementListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B26, symBinAddr: 0x100487B56, symSize: 0x0 }
-  - { offset: 0x41FD85, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax015UnexpectedNodesB0V10syntaxKindAA0bF0OvpZ', symObjAddr: 0x20B28, symBinAddr: 0x100487B58, symSize: 0x0 }
-  - { offset: 0x41FDA0, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020VersionComponentListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B2A, symBinAddr: 0x100487B5A, symSize: 0x0 }
-  - { offset: 0x41FDBB, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax021YieldedExpressionListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B2C, symBinAddr: 0x100487B5C, symSize: 0x0 }
+  - { offset: 0x41F8B1, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax016AccessorDeclListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20ACC, symBinAddr: 0x100487A0C, symSize: 0x0 }
+  - { offset: 0x41F8CB, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax016ArrayElementListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20ACE, symBinAddr: 0x100487A0E, symSize: 0x0 }
+  - { offset: 0x41F8E5, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax013AttributeListB0V10syntaxKindAA0bF0OvpZ', symObjAddr: 0x20AD0, symBinAddr: 0x100487A10, symSize: 0x0 }
+  - { offset: 0x41F8FF, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax024AvailabilityArgumentListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AD2, symBinAddr: 0x100487A12, symSize: 0x0 }
+  - { offset: 0x41F919, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax015CatchClauseListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AD4, symBinAddr: 0x100487A14, symSize: 0x0 }
+  - { offset: 0x41F933, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax013CatchItemListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AD6, symBinAddr: 0x100487A16, symSize: 0x0 }
+  - { offset: 0x41F94D, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax018ClosureCaptureListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AD8, symBinAddr: 0x100487A18, symSize: 0x0 }
+  - { offset: 0x41F968, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020ClosureParameterListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20ADA, symBinAddr: 0x100487A1A, symSize: 0x0 }
+  - { offset: 0x41F983, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax029ClosureShorthandParameterListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20ADC, symBinAddr: 0x100487A1C, symSize: 0x0 }
+  - { offset: 0x41F99E, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax017CodeBlockItemListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20ADE, symBinAddr: 0x100487A1E, symSize: 0x0 }
+  - { offset: 0x41F9B9, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax026CompositionTypeElementListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AE0, symBinAddr: 0x100487A20, symSize: 0x0 }
+  - { offset: 0x41F9D4, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020ConditionElementListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AE2, symBinAddr: 0x100487A22, symSize: 0x0 }
+  - { offset: 0x41F9EF, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax016DeclModifierListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AE4, symBinAddr: 0x100487A24, symSize: 0x0 }
+  - { offset: 0x41FA0A, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020DeclNameArgumentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AE6, symBinAddr: 0x100487A26, symSize: 0x0 }
+  - { offset: 0x41FA25, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax018DesignatedTypeListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AE8, symBinAddr: 0x100487A28, symSize: 0x0 }
+  - { offset: 0x41FA40, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax021DictionaryElementListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AEA, symBinAddr: 0x100487A2A, symSize: 0x0 }
+  - { offset: 0x41FA5B, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax029DifferentiabilityArgumentListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AEC, symBinAddr: 0x100487A2C, symSize: 0x0 }
+  - { offset: 0x41FA76, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax034DocumentationAttributeArgumentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AEE, symBinAddr: 0x100487A2E, symSize: 0x0 }
+  - { offset: 0x41FA91, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax028EffectsAttributeArgumentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AF0, symBinAddr: 0x100487A30, symSize: 0x0 }
+  - { offset: 0x41FAAC, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax019EnumCaseElementListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AF2, symBinAddr: 0x100487A32, symSize: 0x0 }
+  - { offset: 0x41FAC7, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax021EnumCaseParameterListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20AF4, symBinAddr: 0x100487A34, symSize: 0x0 }
+  - { offset: 0x41FAE2, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax08ExprListB0V10syntaxKindAA0bF0OvpZ', symObjAddr: 0x20AF6, symBinAddr: 0x100487A36, symSize: 0x0 }
+  - { offset: 0x41FAFD, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax021FunctionParameterListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AF8, symBinAddr: 0x100487A38, symSize: 0x0 }
+  - { offset: 0x41FB18, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax019GenericArgumentListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AFA, symBinAddr: 0x100487A3A, symSize: 0x0 }
+  - { offset: 0x41FB33, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020GenericParameterListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AFC, symBinAddr: 0x100487A3C, symSize: 0x0 }
+  - { offset: 0x41FB4E, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax022GenericRequirementListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20AFE, symBinAddr: 0x100487A3E, symSize: 0x0 }
+  - { offset: 0x41FB69, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax018IfConfigClauseListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B00, symBinAddr: 0x100487A40, symSize: 0x0 }
+  - { offset: 0x41FB84, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax023ImportPathComponentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B02, symBinAddr: 0x100487A42, symSize: 0x0 }
+  - { offset: 0x41FB9F, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax017InheritedTypeListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B04, symBinAddr: 0x100487A44, symSize: 0x0 }
+  - { offset: 0x41FBBA, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020KeyPathComponentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B06, symBinAddr: 0x100487A46, symSize: 0x0 }
+  - { offset: 0x41FBD5, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax015LabeledExprListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B08, symBinAddr: 0x100487A48, symSize: 0x0 }
+  - { offset: 0x41FBF0, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax019MemberBlockItemListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B0A, symBinAddr: 0x100487A4A, symSize: 0x0 }
+  - { offset: 0x41FC0B, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax034MultipleTrailingClosureElementListB0V10syntaxKindAA0bI0OvpZ', symObjAddr: 0x20B0C, symBinAddr: 0x100487A4C, symSize: 0x0 }
+  - { offset: 0x41FC26, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax021ObjCSelectorPieceListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B0E, symBinAddr: 0x100487A4E, symSize: 0x0 }
+  - { offset: 0x41FC41, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax018PatternBindingListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B10, symBinAddr: 0x100487A50, symSize: 0x0 }
+  - { offset: 0x41FC5C, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax023PlatformVersionItemListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B12, symBinAddr: 0x100487A52, symSize: 0x0 }
+  - { offset: 0x41FC77, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax028PrecedenceGroupAttributeListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B14, symBinAddr: 0x100487A54, symSize: 0x0 }
+  - { offset: 0x41FC92, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax023PrecedenceGroupNameListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B16, symBinAddr: 0x100487A56, symSize: 0x0 }
+  - { offset: 0x41FCAD, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax025PrimaryAssociatedTypeListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B18, symBinAddr: 0x100487A58, symSize: 0x0 }
+  - { offset: 0x41FCC8, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax030SimpleStringLiteralSegmentListB0V10syntaxKindAA0bI0OvpZ', symObjAddr: 0x20B1A, symBinAddr: 0x100487A5A, symSize: 0x0 }
+  - { offset: 0x41FCE3, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax031SpecializeAttributeArgumentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B1C, symBinAddr: 0x100487A5C, symSize: 0x0 }
+  - { offset: 0x41FCFE, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax024StringLiteralSegmentListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B1E, symBinAddr: 0x100487A5E, symSize: 0x0 }
+  - { offset: 0x41FD19, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax018SwitchCaseItemListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B20, symBinAddr: 0x100487A60, symSize: 0x0 }
+  - { offset: 0x41FD34, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax014SwitchCaseListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B22, symBinAddr: 0x100487A62, symSize: 0x0 }
+  - { offset: 0x41FD4F, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax023TuplePatternElementListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B24, symBinAddr: 0x100487A64, symSize: 0x0 }
+  - { offset: 0x41FD6A, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020TupleTypeElementListB0V10syntaxKindAA0bH0OvpZ', symObjAddr: 0x20B26, symBinAddr: 0x100487A66, symSize: 0x0 }
+  - { offset: 0x41FD85, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax015UnexpectedNodesB0V10syntaxKindAA0bF0OvpZ', symObjAddr: 0x20B28, symBinAddr: 0x100487A68, symSize: 0x0 }
+  - { offset: 0x41FDA0, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax020VersionComponentListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B2A, symBinAddr: 0x100487A6A, symSize: 0x0 }
+  - { offset: 0x41FDBB, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax021YieldedExpressionListB0V10syntaxKindAA0bG0OvpZ', symObjAddr: 0x20B2C, symBinAddr: 0x100487A6C, symSize: 0x0 }
   - { offset: 0x41FF47, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B10CollectionPAAE10startIndexAA0b8ChildrenE0VvgAA030SimpleStringLiteralSegmentListB0V_Tg5', symObjAddr: 0x398, symBinAddr: 0x100212E8C, symSize: 0x74 }
   - { offset: 0x4200F1, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B10CollectionPAAE8endIndexAA0b8ChildrenE0VvgAA030SimpleStringLiteralSegmentListB0V_Tg5', symObjAddr: 0x40C, symBinAddr: 0x100212F00, symSize: 0x20 }
   - { offset: 0x420AD8, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B10CollectionPAAEy7ElementQzAA0B13ChildrenIndexVcigAA030SimpleStringLiteralSegmentListB0V_Tg5', symObjAddr: 0x42C, symBinAddr: 0x100212F20, symSize: 0xDC }
@@ -13048,7 +13048,7 @@ relocations:
   - { offset: 0x44545D, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax028PrecedenceGroupAttributeListB0V7ElementO9structureAA0B13NodeStructureOvgZTf4d_n', symObjAddr: 0xC1C0, symBinAddr: 0x10021EB30, symSize: 0x84 }
   - { offset: 0x44549D, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax031SpecializeAttributeArgumentListB0V7ElementO9structureAA0B13NodeStructureOvgZTf4d_n', symObjAddr: 0xC35C, symBinAddr: 0x10021EBCC, symSize: 0x98 }
   - { offset: 0x4462FD, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B11IndexInTreeV1loiySbAC_ACtFZ', symObjAddr: 0x0, symBinAddr: 0x1002315A8, symSize: 0xC }
-  - { offset: 0x446321, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B11IndexInTreeV4zeroACvpZ', symObjAddr: 0xB330, symBinAddr: 0x10060E7E0, symSize: 0x0 }
+  - { offset: 0x446321, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B11IndexInTreeV4zeroACvpZ', symObjAddr: 0xB310, symBinAddr: 0x10060E7E0, symSize: 0x0 }
   - { offset: 0x44676F, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B11IndexInTreeVACSQAAWl', symObjAddr: 0x4B0, symBinAddr: 0x100231A58, symSize: 0x40 }
   - { offset: 0x446783, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B10IdentifierVSHAASQWb', symObjAddr: 0x4F4, symBinAddr: 0x100231A9C, symSize: 0x4 }
   - { offset: 0x446797, size: 0x8, addend: 0x0, symName: '_$s11SwiftSyntax0B10IdentifierVACSQAAWl', symObjAddr: 0x4F8, symBinAddr: 0x100231AA0, symSize: 0x40 }
@@ -23969,7 +23969,7 @@ relocations:
   - { offset: 0x72502B, size: 0x8, addend: 0x0, symName: '_$s15SymbolExtractor18StoryboardAnalyzerCACycfcTo', symObjAddr: 0x428, symBinAddr: 0x10042D064, symSize: 0x50 }
   - { offset: 0x725060, size: 0x8, addend: 0x0, symName: '_$s15SymbolExtractor18StoryboardAnalyzerCfD', symObjAddr: 0x478, symBinAddr: 0x10042D0B4, symSize: 0x30 }
   - { offset: 0x72508A, size: 0x8, addend: 0x0, symName: '_$s15SymbolExtractor18StoryboardAnalyzerC6parser_15didStartElement12namespaceURI13qualifiedName10attributesySo11NSXMLParserC_S2SSgAKSDyS2SGtFTf4ddddnn_n', symObjAddr: 0x574, symBinAddr: 0x10042D16C, symSize: 0xB4 }
-  - { offset: 0x7251BB, size: 0x8, addend: 0x0, symName: '_$s15SymbolExtractorAAV13configuration14ArgumentParser20CommandConfigurationVvpZ', symObjAddr: 0xC748, symBinAddr: 0x10060E7E8, symSize: 0x0 }
+  - { offset: 0x7251BB, size: 0x8, addend: 0x0, symName: '_$s15SymbolExtractorAAV13configuration14ArgumentParser20CommandConfigurationVvpZ', symObjAddr: 0xC718, symBinAddr: 0x10060E7E8, symSize: 0x0 }
   - { offset: 0x7251D4, size: 0x8, addend: 0x0, symName: _SymbolExtractor_main, symObjAddr: 0x0, symBinAddr: 0x10042D220, symSize: 0xAC }
   - { offset: 0x72520D, size: 0x8, addend: 0x0, symName: '_$s15SymbolExtractorAAVAB14ArgumentParser15ParsableCommandAAWl', symObjAddr: 0xAC, symBinAddr: 0x10042D2CC, symSize: 0x40 }
   - { offset: 0x725221, size: 0x8, addend: 0x0, symName: '_$s15SymbolExtractorAAVAB14ArgumentParser17ParsableArgumentsAAWl', symObjAddr: 0xEC, symBinAddr: 0x10042D30C, symSize: 0x40 }

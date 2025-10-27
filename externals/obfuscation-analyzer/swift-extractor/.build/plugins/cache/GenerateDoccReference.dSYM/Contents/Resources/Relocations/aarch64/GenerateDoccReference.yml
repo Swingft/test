@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/plugins/cache/GenerateDoccReference'
+binary-path:     '/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/plugins/cache/GenerateDoccReference'
 relocations:
   - { offset: 0x89F40, size: 0x8, addend: 0x0, symName: '_$s21GenerateDoccReference0abC6PluginV14performCommand7context9argumentsy07PackageD00D7ContextV_SaySSGtYaKF', symObjAddr: 0x0, symBinAddr: 0x100000F28, symSize: 0x364 }
   - { offset: 0x8A0C7, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledName, symObjAddr: 0x201C, symBinAddr: 0x100002F44, symSize: 0x68 }

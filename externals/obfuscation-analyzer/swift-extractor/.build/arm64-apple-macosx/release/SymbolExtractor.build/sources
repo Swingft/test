@@ -1,6 +1,6 @@
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/Sources/Analyzers/PlistAnalyzer.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/Sources/Analyzers/StoryboardAnalyzer.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/Sources/Extractor/GraphExtractor.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/Sources/Extractor/SymbolVisitor.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/Sources/Models/SymbolGraph.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/Sources/SymbolExtractor/main.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/Sources/Analyzers/PlistAnalyzer.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/Sources/Analyzers/StoryboardAnalyzer.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/Sources/Extractor/GraphExtractor.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/Sources/Extractor/SymbolVisitor.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/Sources/Models/SymbolGraph.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/Sources/SymbolExtractor/main.swift

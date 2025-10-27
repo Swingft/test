@@ -17,7 +17,7 @@ def mapping():
     with open(identifier_path, "w", encoding="utf-8") as f:
         json.dump(identifier_info, f, indent=2, ensure_ascii=False, default=list)
     
-    external_name_path = "/AST/output/external_name.txt"
+    external_name_path = "./AST/output/external_name.txt"
     if os.path.exists(external_name_path):
         with open(external_name_path, "r", encoding="utf-8") as f:
             for line in f:
