@@ -1,0 +1,903 @@
+[
+  {
+    "A_name" : "EditingExampleViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIViewController"
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "addButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "IBOutlet",
+          "weak"
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "IBOutlet",
+          "weak"
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 19, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "disposeBag",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 20, Column: 5",
+        "H_initialValue" : "DisposeBag()"
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 22, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dataSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Example3_TableViewEditing.swift - Line: 25, Column: 9",
+            "H_initialValue" : "EditingExampleViewController.dataSource()"
+          },
+          {
+            "A_name" : "sections",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Example3_TableViewEditing.swift - Line: 27, Column: 9",
+            "H_initialValue" : "[NumberSection(header: \"Section 1\", numbers: [], updated: Date()),\n                                         NumberSection(header: \"Section 2\", numbers: [], updated: Date()),\n                                         NumberSection(header: \"Section 3\", numbers: [], updated: Date())]"
+          },
+          {
+            "A_name" : "initialState",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Example3_TableViewEditing.swift - Line: 31, Column: 9",
+            "H_initialValue" : "SectionedTableViewState(sections: sections)"
+          },
+          {
+            "A_name" : "add3ItemsAddStart",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Example3_TableViewEditing.swift - Line: 32, Column: 9",
+            "H_initialValue" : "Observable.of((), (), ())"
+          },
+          {
+            "A_name" : "addCommand",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Example3_TableViewEditing.swift - Line: 33, Column: 9",
+            "H_initialValue" : "Observable.of(addButton.rx.tap.asObservable(), add3ItemsAddStart)\n            .merge()\n            .map(TableViewEditingCommand.addRandomItem)"
+          },
+          {
+            "A_name" : "deleteCommand",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Example3_TableViewEditing.swift - Line: 37, Column: 9",
+            "H_initialValue" : "tableView.rx.itemDeleted.asObservable()\n            .map(TableViewEditingCommand.DeleteItem)"
+          },
+          {
+            "A_name" : "movedCommand",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Example3_TableViewEditing.swift - Line: 40, Column: 9",
+            "H_initialValue" : "tableView.rx.itemMoved\n            .map(TableViewEditingCommand.MoveItem)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "viewDidAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 57, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "addButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "IBOutlet",
+      "weak"
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "IBOutlet",
+      "weak"
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 19, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "disposeBag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 20, Column: 5",
+    "H_initialValue" : "DisposeBag()"
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 22, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 25, Column: 9",
+        "H_initialValue" : "EditingExampleViewController.dataSource()"
+      },
+      {
+        "A_name" : "sections",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 27, Column: 9",
+        "H_initialValue" : "[NumberSection(header: \"Section 1\", numbers: [], updated: Date()),\n                                         NumberSection(header: \"Section 2\", numbers: [], updated: Date()),\n                                         NumberSection(header: \"Section 3\", numbers: [], updated: Date())]"
+      },
+      {
+        "A_name" : "initialState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 31, Column: 9",
+        "H_initialValue" : "SectionedTableViewState(sections: sections)"
+      },
+      {
+        "A_name" : "add3ItemsAddStart",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 32, Column: 9",
+        "H_initialValue" : "Observable.of((), (), ())"
+      },
+      {
+        "A_name" : "addCommand",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 33, Column: 9",
+        "H_initialValue" : "Observable.of(addButton.rx.tap.asObservable(), add3ItemsAddStart)\n            .merge()\n            .map(TableViewEditingCommand.addRandomItem)"
+      },
+      {
+        "A_name" : "deleteCommand",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 37, Column: 9",
+        "H_initialValue" : "tableView.rx.itemDeleted.asObservable()\n            .map(TableViewEditingCommand.DeleteItem)"
+      },
+      {
+        "A_name" : "movedCommand",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 40, Column: 9",
+        "H_initialValue" : "tableView.rx.itemMoved\n            .map(TableViewEditingCommand.MoveItem)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 25, Column: 9",
+    "H_initialValue" : "EditingExampleViewController.dataSource()"
+  },
+  {
+    "A_name" : "sections",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 27, Column: 9",
+    "H_initialValue" : "[NumberSection(header: \"Section 1\", numbers: [], updated: Date()),\n                                         NumberSection(header: \"Section 2\", numbers: [], updated: Date()),\n                                         NumberSection(header: \"Section 3\", numbers: [], updated: Date())]"
+  },
+  {
+    "A_name" : "initialState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 31, Column: 9",
+    "H_initialValue" : "SectionedTableViewState(sections: sections)"
+  },
+  {
+    "A_name" : "add3ItemsAddStart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 32, Column: 9",
+    "H_initialValue" : "Observable.of((), (), ())"
+  },
+  {
+    "A_name" : "addCommand",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 33, Column: 9",
+    "H_initialValue" : "Observable.of(addButton.rx.tap.asObservable(), add3ItemsAddStart)\n            .merge()\n            .map(TableViewEditingCommand.addRandomItem)"
+  },
+  {
+    "A_name" : "deleteCommand",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 37, Column: 9",
+    "H_initialValue" : "tableView.rx.itemDeleted.asObservable()\n            .map(TableViewEditingCommand.DeleteItem)"
+  },
+  {
+    "A_name" : "movedCommand",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 40, Column: 9",
+    "H_initialValue" : "tableView.rx.itemMoved\n            .map(TableViewEditingCommand.MoveItem)"
+  },
+  {
+    "A_name" : "viewDidAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 57, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "EditingExampleViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 63, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dataSource",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 64, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> RxTableViewSectionedAnimatedDataSource<NumberSection>"
+      }
+    ]
+  },
+  {
+    "A_name" : "dataSource",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 64, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> RxTableViewSectionedAnimatedDataSource<NumberSection>"
+  },
+  {
+    "A_name" : "cell",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 70, Column: 17",
+    "H_initialValue" : "table.dequeueReusableCell(withIdentifier: \"Cell\", for: idxPath)"
+  },
+  {
+    "A_name" : "TableViewEditingCommand",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 87, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "AppendItem",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 88, Column: 10",
+        "I_parameterType" : [
+          "IntItem",
+          "Int"
+        ],
+        "I_parameters" : [
+          "item",
+          "section"
+        ]
+      },
+      {
+        "A_name" : "MoveItem",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 89, Column: 10",
+        "I_parameterType" : [
+          "IndexPath",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "sourceIndex",
+          "destinationIndex"
+        ]
+      },
+      {
+        "A_name" : "DeleteItem",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 90, Column: 10",
+        "I_parameterType" : [
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "SectionedTableViewState",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 95, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sections",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 96, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 98, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[NumberSection]"
+        ],
+        "I_parameters" : [
+          "sections"
+        ]
+      },
+      {
+        "A_name" : "execute",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 102, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TableViewEditingCommand"
+        ],
+        "I_parameters" : [
+          "command"
+        ],
+        "J_returnType" : "-> SectionedTableViewState"
+      }
+    ]
+  },
+  {
+    "A_name" : "sections",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 96, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 98, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[NumberSection]"
+    ],
+    "I_parameters" : [
+      "sections"
+    ]
+  },
+  {
+    "A_name" : "execute",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 102, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TableViewEditingCommand"
+    ],
+    "I_parameters" : [
+      "command"
+    ],
+    "J_returnType" : "-> SectionedTableViewState"
+  },
+  {
+    "A_name" : "sections",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 105, Column: 13",
+    "H_initialValue" : "self.sections"
+  },
+  {
+    "A_name" : "items",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 106, Column: 13",
+    "H_initialValue" : "sections[appendEvent.section].items + appendEvent.item"
+  },
+  {
+    "A_name" : "sections",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 110, Column: 13",
+    "H_initialValue" : "self.sections"
+  },
+  {
+    "A_name" : "items",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 111, Column: 13",
+    "H_initialValue" : "sections[indexPath.section].items"
+  },
+  {
+    "A_name" : "sections",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 116, Column: 13",
+    "H_initialValue" : "self.sections"
+  },
+  {
+    "A_name" : "sourceItems",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 117, Column: 13",
+    "H_initialValue" : "sections[moveEvent.sourceIndex.section].items"
+  },
+  {
+    "A_name" : "destinationItems",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 118, Column: 13",
+    "H_initialValue" : "sections[moveEvent.destinationIndex.section].items"
+  },
+  {
+    "A_name" : "destinationSection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 123, Column: 17",
+    "H_initialValue" : "NumberSection(original: sections[moveEvent.destinationIndex.section], items: destinationItems)"
+  },
+  {
+    "A_name" : "item",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 128, Column: 17",
+    "H_initialValue" : "sourceItems.remove(at: moveEvent.sourceIndex.row)"
+  },
+  {
+    "A_name" : "sourceSection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 130, Column: 17",
+    "H_initialValue" : "NumberSection(original: sections[moveEvent.sourceIndex.section], items: sourceItems)"
+  },
+  {
+    "A_name" : "destinationSection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 131, Column: 17",
+    "H_initialValue" : "NumberSection(original: sections[moveEvent.destinationIndex.section], items: destinationItems)"
+  },
+  {
+    "A_name" : "TableViewEditingCommand",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 141, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "nextNumber",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 142, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "addRandomItem",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 143, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "randSection",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Example3_TableViewEditing.swift - Line: 144, Column: 9",
+            "H_initialValue" : "Int.random(in: 0...2)"
+          },
+          {
+            "A_name" : "number",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Example3_TableViewEditing.swift - Line: 145, Column: 9",
+            "H_initialValue" : "nextNumber"
+          },
+          {
+            "A_name" : "item",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Example3_TableViewEditing.swift - Line: 147, Column: 9",
+            "H_initialValue" : "IntItem(number: number, date: Date())"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> TableViewEditingCommand"
+      }
+    ]
+  },
+  {
+    "A_name" : "nextNumber",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 142, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "addRandomItem",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 143, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "randSection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 144, Column: 9",
+        "H_initialValue" : "Int.random(in: 0...2)"
+      },
+      {
+        "A_name" : "number",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 145, Column: 9",
+        "H_initialValue" : "nextNumber"
+      },
+      {
+        "A_name" : "item",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 147, Column: 9",
+        "H_initialValue" : "IntItem(number: number, date: Date())"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> TableViewEditingCommand"
+  },
+  {
+    "A_name" : "randSection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 144, Column: 9",
+    "H_initialValue" : "Int.random(in: 0...2)"
+  },
+  {
+    "A_name" : "number",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 145, Column: 9",
+    "H_initialValue" : "nextNumber"
+  },
+  {
+    "A_name" : "item",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 147, Column: 9",
+    "H_initialValue" : "IntItem(number: number, date: Date())"
+  },
+  {
+    "A_name" : "+",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 152, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example3_TableViewEditing.swift - Line: 153, Column: 5",
+        "H_initialValue" : "lhs"
+      }
+    ],
+    "I_parameterType" : [
+      "[T]",
+      "T"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> [T]"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example3_TableViewEditing.swift - Line: 153, Column: 5",
+    "H_initialValue" : "lhs"
+  }
+]

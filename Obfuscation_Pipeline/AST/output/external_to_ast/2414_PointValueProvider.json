@@ -1,0 +1,302 @@
+[
+  {
+    "A_name" : "PointValueProvider",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ValueProvider"
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PointValueProvider.swift - Line: 19, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping PointValueBlock"
+        ],
+        "I_parameters" : [
+          "block"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PointValueProvider.swift - Line: 26, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGPoint"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "point",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PointValueProvider.swift - Line: 38, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "valueType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PointValueProvider.swift - Line: 46, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "storage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PointValueProvider.swift - Line: 50, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "hasUpdate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PointValueProvider.swift - Line: 62, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "frame"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "hasUpdate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PointValueProvider.swift - Line: 71, Column: 3",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "block",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PointValueProvider.swift - Line: 73, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "identity",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PointValueProvider.swift - Line: 74, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 19, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping PointValueBlock"
+    ],
+    "I_parameters" : [
+      "block"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 26, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGPoint"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "point",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 38, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "valueType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 46, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "storage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 50, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hasUpdate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 62, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "frame"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "hasUpdate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 71, Column: 3",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "block",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 73, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "identity",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 74, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "PointValueProvider",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Equatable"
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 79, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "PointValueProvider.swift - Line: 80, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "PointValueProvider",
+          "PointValueProvider"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "PointValueProvider.swift - Line: 80, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "PointValueProvider",
+      "PointValueProvider"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  }
+]

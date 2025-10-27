@@ -1,0 +1,136 @@
+[
+  {
+    "A_name" : "DataUtil",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DataUtil.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "charsetPattern",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DataUtil.swift - Line: 17, Column: 5",
+        "H_initialValue" : "\"(?i)\\\\bcharset=\\\\s*(?:\\\"|')?([^\\\\s,;\\\"']*)\""
+      },
+      {
+        "A_name" : "defaultCharset",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DataUtil.swift - Line: 18, Column: 5",
+        "H_initialValue" : "\"UTF-8\" \/\/ used if not found in header or meta charset"
+      },
+      {
+        "A_name" : "bufferSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DataUtil.swift - Line: 19, Column: 5",
+        "H_initialValue" : "0x20000 \/\/ ~130K."
+      },
+      {
+        "A_name" : "UNICODE_BOM",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DataUtil.swift - Line: 20, Column: 5",
+        "H_initialValue" : "0xFEFF"
+      },
+      {
+        "A_name" : "mimeBoundaryChars",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DataUtil.swift - Line: 21, Column: 5",
+        "H_initialValue" : "\"-_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\""
+      },
+      {
+        "A_name" : "boundaryLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DataUtil.swift - Line: 22, Column: 5",
+        "H_initialValue" : "32"
+      }
+    ]
+  },
+  {
+    "A_name" : "charsetPattern",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DataUtil.swift - Line: 17, Column: 5",
+    "H_initialValue" : "\"(?i)\\\\bcharset=\\\\s*(?:\\\"|')?([^\\\\s,;\\\"']*)\""
+  },
+  {
+    "A_name" : "defaultCharset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DataUtil.swift - Line: 18, Column: 5",
+    "H_initialValue" : "\"UTF-8\" \/\/ used if not found in header or meta charset"
+  },
+  {
+    "A_name" : "bufferSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DataUtil.swift - Line: 19, Column: 5",
+    "H_initialValue" : "0x20000 \/\/ ~130K."
+  },
+  {
+    "A_name" : "UNICODE_BOM",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DataUtil.swift - Line: 20, Column: 5",
+    "H_initialValue" : "0xFEFF"
+  },
+  {
+    "A_name" : "mimeBoundaryChars",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DataUtil.swift - Line: 21, Column: 5",
+    "H_initialValue" : "\"-_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\""
+  },
+  {
+    "A_name" : "boundaryLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DataUtil.swift - Line: 22, Column: 5",
+    "H_initialValue" : "32"
+  }
+]

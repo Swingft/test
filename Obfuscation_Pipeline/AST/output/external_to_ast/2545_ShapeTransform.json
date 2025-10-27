@@ -1,0 +1,705 @@
+[
+  {
+    "A_name" : "ShapeTransform",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ShapeItem"
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 14, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 15, Column: 5",
+            "H_initialValue" : "try decoder.container(keyedBy: ShapeTransform.CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 52, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String: Any]"
+        ],
+        "I_parameters" : [
+          "dictionary"
+        ]
+      },
+      {
+        "A_name" : "anchor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 141, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "position",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 144, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "scale",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 147, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rotationX",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 150, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rotationY",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 153, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rotationZ",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 156, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "opacity",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 159, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "skew",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 162, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "skewAxis",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 165, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 167, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 169, Column: 5",
+            "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      },
+      {
+        "A_name" : "CodingKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String",
+          "CodingKey"
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 183, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "anchor",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 184, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "position",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 185, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "scale",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 186, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "rotation",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 187, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "rotationX",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 188, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "rotationY",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 189, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "rotationZ",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 190, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "opacity",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 191, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "skew",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 192, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "skewAxis",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeTransform.swift - Line: 193, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 14, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 15, Column: 5",
+        "H_initialValue" : "try decoder.container(keyedBy: ShapeTransform.CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 15, Column: 5",
+    "H_initialValue" : "try decoder.container(keyedBy: ShapeTransform.CodingKeys.self)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 52, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String: Any]"
+    ],
+    "I_parameters" : [
+      "dictionary"
+    ]
+  },
+  {
+    "A_name" : "anchor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 141, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "position",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 144, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "scale",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 147, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rotationX",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 150, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rotationY",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 153, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rotationZ",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 156, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "opacity",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 159, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "skew",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 162, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "skewAxis",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 165, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 167, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 169, Column: 5",
+        "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 169, Column: 5",
+    "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+  },
+  {
+    "A_name" : "CodingKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String",
+      "CodingKey"
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 183, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "anchor",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 184, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "position",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 185, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "scale",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 186, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "rotation",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 187, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "rotationX",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 188, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "rotationY",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 189, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "rotationZ",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 190, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "opacity",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 191, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "skew",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 192, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "skewAxis",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeTransform.swift - Line: 193, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "ShapeTransform",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "ShapeTransform.swift - Line: 202, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

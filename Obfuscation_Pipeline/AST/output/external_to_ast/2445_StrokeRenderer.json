@@ -1,0 +1,487 @@
+[
+  {
+    "A_name" : "LineJoin",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "cgLineJoin",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 11, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "caLineJoin",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 24, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "cgLineJoin",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 11, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "caLineJoin",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 24, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "LineCap",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 38, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "cgLineCap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 39, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "caLineCap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 52, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "cgLineCap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 39, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "caLineCap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 52, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "StrokeRenderer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "PassThroughOutputNode",
+      "Renderable"
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 69, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "shouldRenderInContext",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 71, Column: 3",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "color",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 73, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "opacity",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 79, Column: 3",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "width",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 85, Column: 3",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "miterLimit",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 91, Column: 3",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "lineCap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 97, Column: 3",
+        "H_initialValue" : "LineCap.none"
+      },
+      {
+        "A_name" : "lineJoin",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 103, Column: 3",
+        "H_initialValue" : "LineJoin.none"
+      },
+      {
+        "A_name" : "dashPhase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 109, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dashLengths",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 115, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setupSublayers",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 121, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CAShapeLayer"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "renderBoundsFor",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 125, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> CGRect"
+      },
+      {
+        "A_name" : "setupForStroke",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 129, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGContext"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "render",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 141, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGContext"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "updateShapeLayer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeRenderer.swift - Line: 153, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CAShapeLayer"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "shouldRenderInContext",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 71, Column: 3",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "color",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 73, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "opacity",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 79, Column: 3",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "width",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 85, Column: 3",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "miterLimit",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 91, Column: 3",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "lineCap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 97, Column: 3",
+    "H_initialValue" : "LineCap.none"
+  },
+  {
+    "A_name" : "lineJoin",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 103, Column: 3",
+    "H_initialValue" : "LineJoin.none"
+  },
+  {
+    "A_name" : "dashPhase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 109, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dashLengths",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 115, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setupSublayers",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 121, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CAShapeLayer"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "renderBoundsFor",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 125, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> CGRect"
+  },
+  {
+    "A_name" : "setupForStroke",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 129, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGContext"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "render",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 141, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGContext"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "updateShapeLayer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeRenderer.swift - Line: 153, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CAShapeLayer"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  }
+]

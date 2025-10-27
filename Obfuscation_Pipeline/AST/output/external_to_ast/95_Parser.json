@@ -1,0 +1,942 @@
+[
+  {
+    "A_name" : "Parser",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "DEFAULT_MAX_ERRORS",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Parser.swift - Line: 16, Column: 2",
+        "H_initialValue" : "0 \/\/ by default, error tracking is disabled."
+      },
+      {
+        "A_name" : "_treeBuilder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 18, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_maxErrors",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 19, Column: 2",
+        "H_initialValue" : "DEFAULT_MAX_ERRORS"
+      },
+      {
+        "A_name" : "_errors",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 20, Column: 2",
+        "H_initialValue" : "ParseErrorList(16, 16)"
+      },
+      {
+        "A_name" : "_settings",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 21, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 27, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TreeBuilder"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "parseInput",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 32, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Document"
+      },
+      {
+        "A_name" : "getTreeBuilder",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 42, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> TreeBuilder"
+      },
+      {
+        "A_name" : "setTreeBuilder",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Parser.swift - Line: 51, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TreeBuilder"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Parser"
+      },
+      {
+        "A_name" : "isTrackErrors",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 61, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "setTrackErrors",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Parser.swift - Line: 70, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Parser"
+      },
+      {
+        "A_name" : "getErrors",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 80, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> ParseErrorList"
+      },
+      {
+        "A_name" : "settings",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Parser.swift - Line: 84, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ParseSettings"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Parser"
+      },
+      {
+        "A_name" : "settings",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 90, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> ParseSettings"
+      },
+      {
+        "A_name" : "parse",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Parser.swift - Line: 103, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "treeBuilder",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Parser.swift - Line: 104, Column: 3",
+            "H_initialValue" : "HtmlTreeBuilder()"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Document"
+      },
+      {
+        "A_name" : "parseFragment",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Parser.swift - Line: 118, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "treeBuilder",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Parser.swift - Line: 119, Column: 3",
+            "H_initialValue" : "HtmlTreeBuilder()"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Element?",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Array<Node>"
+      },
+      {
+        "A_name" : "parseXmlFragment",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Parser.swift - Line: 130, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "treeBuilder",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Parser.swift - Line: 131, Column: 3",
+            "H_initialValue" : "XmlTreeBuilder()"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Array<Node>"
+      },
+      {
+        "A_name" : "parseBodyFragment",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Parser.swift - Line: 143, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Parser.swift - Line: 144, Column: 3",
+            "H_initialValue" : "Document.createShell(baseUri)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Document"
+      },
+      {
+        "A_name" : "unescapeEntities",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Parser.swift - Line: 166, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "tokeniser",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Parser.swift - Line: 167, Column: 3",
+            "H_initialValue" : "Tokeniser(CharacterReader(string), ParseErrorList.noTracking())"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->String"
+      },
+      {
+        "A_name" : "parseBodyFragmentRelaxed",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Parser.swift - Line: 178, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Document"
+      },
+      {
+        "A_name" : "htmlParser",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Parser.swift - Line: 189, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Parser"
+      },
+      {
+        "A_name" : "xmlParser",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Parser.swift - Line: 198, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Parser"
+      }
+    ]
+  },
+  {
+    "A_name" : "DEFAULT_MAX_ERRORS",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Parser.swift - Line: 16, Column: 2",
+    "H_initialValue" : "0 \/\/ by default, error tracking is disabled."
+  },
+  {
+    "A_name" : "_treeBuilder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 18, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_maxErrors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 19, Column: 2",
+    "H_initialValue" : "DEFAULT_MAX_ERRORS"
+  },
+  {
+    "A_name" : "_errors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 20, Column: 2",
+    "H_initialValue" : "ParseErrorList(16, 16)"
+  },
+  {
+    "A_name" : "_settings",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 21, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 27, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TreeBuilder"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "parseInput",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 32, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Document"
+  },
+  {
+    "A_name" : "getTreeBuilder",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 42, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> TreeBuilder"
+  },
+  {
+    "A_name" : "setTreeBuilder",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Parser.swift - Line: 51, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TreeBuilder"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Parser"
+  },
+  {
+    "A_name" : "isTrackErrors",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 61, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "setTrackErrors",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Parser.swift - Line: 70, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Parser"
+  },
+  {
+    "A_name" : "getErrors",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 80, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> ParseErrorList"
+  },
+  {
+    "A_name" : "settings",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Parser.swift - Line: 84, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ParseSettings"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Parser"
+  },
+  {
+    "A_name" : "settings",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 90, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> ParseSettings"
+  },
+  {
+    "A_name" : "parse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Parser.swift - Line: 103, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "treeBuilder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 104, Column: 3",
+        "H_initialValue" : "HtmlTreeBuilder()"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Document"
+  },
+  {
+    "A_name" : "treeBuilder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 104, Column: 3",
+    "H_initialValue" : "HtmlTreeBuilder()"
+  },
+  {
+    "A_name" : "parseFragment",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Parser.swift - Line: 118, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "treeBuilder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 119, Column: 3",
+        "H_initialValue" : "HtmlTreeBuilder()"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Element?",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Array<Node>"
+  },
+  {
+    "A_name" : "treeBuilder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 119, Column: 3",
+    "H_initialValue" : "HtmlTreeBuilder()"
+  },
+  {
+    "A_name" : "parseXmlFragment",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Parser.swift - Line: 130, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "treeBuilder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 131, Column: 3",
+        "H_initialValue" : "XmlTreeBuilder()"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Array<Node>"
+  },
+  {
+    "A_name" : "treeBuilder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 131, Column: 3",
+    "H_initialValue" : "XmlTreeBuilder()"
+  },
+  {
+    "A_name" : "parseBodyFragment",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Parser.swift - Line: 143, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 144, Column: 3",
+        "H_initialValue" : "Document.createShell(baseUri)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Document"
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 144, Column: 3",
+    "H_initialValue" : "Document.createShell(baseUri)"
+  },
+  {
+    "A_name" : "nodeList",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 146, Column: 4",
+    "H_initialValue" : "try parseFragment(bodyHtml, body, baseUri)"
+  },
+  {
+    "A_name" : "unescapeEntities",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Parser.swift - Line: 166, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "tokeniser",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Parser.swift - Line: 167, Column: 3",
+        "H_initialValue" : "Tokeniser(CharacterReader(string), ParseErrorList.noTracking())"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->String"
+  },
+  {
+    "A_name" : "tokeniser",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Parser.swift - Line: 167, Column: 3",
+    "H_initialValue" : "Tokeniser(CharacterReader(string), ParseErrorList.noTracking())"
+  },
+  {
+    "A_name" : "parseBodyFragmentRelaxed",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Parser.swift - Line: 178, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Document"
+  },
+  {
+    "A_name" : "htmlParser",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Parser.swift - Line: 189, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Parser"
+  },
+  {
+    "A_name" : "xmlParser",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Parser.swift - Line: 198, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Parser"
+  }
+]

@@ -1,0 +1,1014 @@
+[
+  {
+    "A_name" : "MainViewModel",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "disposeBag",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 15, Column: 5",
+        "H_initialValue" : "DisposeBag()"
+      },
+      {
+        "A_name" : "mainScrollViewRefreshControl",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 16, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "loadRestaurantUseCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "loadSelectedFeelingsUseCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 19, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "loadRemoteUrlPresetDataUseCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 20, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 22, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LoadRestaurantUseCase",
+          "LoadSelectedFeelingsUseCase",
+          "LoadRemoteUrlPresetDataUseCase"
+        ],
+        "I_parameters" : [
+          "loadRestaurantUseCase",
+          "loadSelectedFeelingsUseCase",
+          "loadRemoteUrlPresetDataUseCase"
+        ]
+      },
+      {
+        "A_name" : "disappearMainScrollLoadingView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 28, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "restaurantCategoryItems",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 30, Column: 5",
+        "H_initialValue" : "BehaviorSubject<[RestaurantCategory]>(value: [])"
+      },
+      {
+        "A_name" : "seletedFeelingsSequence",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 31, Column: 5",
+        "H_initialValue" : "BehaviorRelay<[Feeling]>(value: [])"
+      },
+      {
+        "A_name" : "remoteUrlPresetDataSequence",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 32, Column: 5",
+        "H_initialValue" : "BehaviorRelay<[URL]>(value: [])"
+      },
+      {
+        "A_name" : "restaurantDessertKind",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 34, Column: 5",
+        "H_initialValue" : "[\"카페\", \"디저트\"]"
+      },
+      {
+        "A_name" : "recommendsRestaurnatsDataCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 35, Column: 5",
+        "H_initialValue" : "10"
+      },
+      {
+        "A_name" : "restaurantCategoryArray",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 37, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "restaurantsData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 48, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "suggestRestaurantsData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 50, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "recommendsRestaurantsData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 69, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "suggestDessertRestaurantsData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 109, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "selectedFeelings",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 129, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "remoteUrlPresetData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 130, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "loadRestaurants",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 134, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL?",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "remoteJsonUrl",
+          "needRefresh"
+        ]
+      },
+      {
+        "A_name" : "disposeRestaurantRemoteLoadingViews",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 146, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "mainScrollViewEndRefresh",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 151, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "fetchRestaurantCategoryItems",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 161, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "loadFeelings",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 166, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "fetchSelectedFeelings",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 170, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "loadRemoteUrlPresetData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 174, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "addRemoteUrlPresetData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 178, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "url"
+        ]
+      },
+      {
+        "A_name" : "editRemoteUrlPresetData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 184, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "URL"
+        ],
+        "I_parameters" : [
+          "index",
+          "url"
+        ]
+      },
+      {
+        "A_name" : "deleteRemoteUrlPresetData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 190, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "index"
+        ]
+      },
+      {
+        "A_name" : "removeAllRemoteUrlPresetData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 196, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "saveRemoteUrlPresetData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 202, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "fetchRemoteUrlPresetData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 206, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "getRestaurantCategoryArrayCount",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainViewModel.swift - Line: 210, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Int"
+      }
+    ]
+  },
+  {
+    "A_name" : "disposeBag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 15, Column: 5",
+    "H_initialValue" : "DisposeBag()"
+  },
+  {
+    "A_name" : "mainScrollViewRefreshControl",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 16, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "loadRestaurantUseCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "loadSelectedFeelingsUseCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 19, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "loadRemoteUrlPresetDataUseCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 20, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 22, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LoadRestaurantUseCase",
+      "LoadSelectedFeelingsUseCase",
+      "LoadRemoteUrlPresetDataUseCase"
+    ],
+    "I_parameters" : [
+      "loadRestaurantUseCase",
+      "loadSelectedFeelingsUseCase",
+      "loadRemoteUrlPresetDataUseCase"
+    ]
+  },
+  {
+    "A_name" : "disappearMainScrollLoadingView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 28, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "restaurantCategoryItems",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 30, Column: 5",
+    "H_initialValue" : "BehaviorSubject<[RestaurantCategory]>(value: [])"
+  },
+  {
+    "A_name" : "seletedFeelingsSequence",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 31, Column: 5",
+    "H_initialValue" : "BehaviorRelay<[Feeling]>(value: [])"
+  },
+  {
+    "A_name" : "remoteUrlPresetDataSequence",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 32, Column: 5",
+    "H_initialValue" : "BehaviorRelay<[URL]>(value: [])"
+  },
+  {
+    "A_name" : "restaurantDessertKind",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 34, Column: 5",
+    "H_initialValue" : "[\"카페\", \"디저트\"]"
+  },
+  {
+    "A_name" : "recommendsRestaurnatsDataCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 35, Column: 5",
+    "H_initialValue" : "10"
+  },
+  {
+    "A_name" : "restaurantCategoryArray",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 37, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "restaurantsData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 48, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "suggestRestaurantsData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 50, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "items",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 52, Column: 13",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "restaurantFeelingTags",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 57, Column: 25",
+    "H_initialValue" : "restaurant.feeling_tags ?? []"
+  },
+  {
+    "A_name" : "recommendsRestaurantsData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 69, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "items",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 71, Column: 13",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "needRecommend",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 72, Column: 13",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "dateFormatter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 93, Column: 17",
+    "H_initialValue" : "DateFormatter()"
+  },
+  {
+    "A_name" : "todaySeed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 96, Column: 17",
+    "H_initialValue" : "Int(dateFormatter.string(from: Date()))!"
+  },
+  {
+    "A_name" : "seedGenerator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 97, Column: 17",
+    "H_initialValue" : "RandomNumberGeneratorWithSeed(seed: todaySeed)"
+  },
+  {
+    "A_name" : "suggestDessertRestaurantsData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 109, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "items",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 111, Column: 13",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "selectedFeelings",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 129, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "remoteUrlPresetData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 130, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "loadRestaurants",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 134, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL?",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "remoteJsonUrl",
+      "needRefresh"
+    ]
+  },
+  {
+    "A_name" : "disposeRestaurantRemoteLoadingViews",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 146, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "mainScrollViewEndRefresh",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 151, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fetchRestaurantCategoryItems",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 161, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "loadFeelings",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 166, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fetchSelectedFeelings",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 170, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "loadRemoteUrlPresetData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 174, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "addRemoteUrlPresetData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 178, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL"
+    ],
+    "I_parameters" : [
+      "url"
+    ]
+  },
+  {
+    "A_name" : "editRemoteUrlPresetData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 184, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "URL"
+    ],
+    "I_parameters" : [
+      "index",
+      "url"
+    ]
+  },
+  {
+    "A_name" : "deleteRemoteUrlPresetData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 190, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "index"
+    ]
+  },
+  {
+    "A_name" : "removeAllRemoteUrlPresetData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 196, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "saveRemoteUrlPresetData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 202, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fetchRemoteUrlPresetData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 206, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "getRestaurantCategoryArrayCount",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainViewModel.swift - Line: 210, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Int"
+  }
+]

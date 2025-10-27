@@ -1,0 +1,37 @@
+[
+  {
+    "A_name" : "Data",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DataExtension.swift - Line: 14, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataExtension.swift - Line: 16, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Bundle"
+    ],
+    "I_parameters" : [
+      "assetName",
+      "in"
+    ]
+  }
+]

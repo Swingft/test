@@ -1,0 +1,286 @@
+[
+  {
+    "A_name" : "DotLottieConfiguration",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "id",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 17, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "loopMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 20, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "speed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 23, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "imageProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 26, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dotLottieImageProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 33, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "id",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 17, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "loopMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 20, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "speed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 23, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 26, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dotLottieImageProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 33, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "DotLottieConfigurationComponents",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "OptionSet"
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 41, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 45, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "rawValue"
+        ]
+      },
+      {
+        "A_name" : "imageProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 54, Column: 3",
+        "H_initialValue" : "DotLottieConfigurationComponents(rawValue: 1 << 0)"
+      },
+      {
+        "A_name" : "loopMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 59, Column: 3",
+        "H_initialValue" : "DotLottieConfigurationComponents(rawValue: 1 << 1)"
+      },
+      {
+        "A_name" : "animationSpeed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 64, Column: 3",
+        "H_initialValue" : "DotLottieConfigurationComponents(rawValue: 1 << 2)"
+      },
+      {
+        "A_name" : "all",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 66, Column: 3",
+        "H_initialValue" : "[.imageProvider, .loopMode, .animationSpeed]"
+      },
+      {
+        "A_name" : "none",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 68, Column: 3",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "rawValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieConfiguration.swift - Line: 70, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 45, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "rawValue"
+    ]
+  },
+  {
+    "A_name" : "imageProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 54, Column: 3",
+    "H_initialValue" : "DotLottieConfigurationComponents(rawValue: 1 << 0)"
+  },
+  {
+    "A_name" : "loopMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 59, Column: 3",
+    "H_initialValue" : "DotLottieConfigurationComponents(rawValue: 1 << 1)"
+  },
+  {
+    "A_name" : "animationSpeed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 64, Column: 3",
+    "H_initialValue" : "DotLottieConfigurationComponents(rawValue: 1 << 2)"
+  },
+  {
+    "A_name" : "all",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 66, Column: 3",
+    "H_initialValue" : "[.imageProvider, .loopMode, .animationSpeed]"
+  },
+  {
+    "A_name" : "none",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 68, Column: 3",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "rawValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieConfiguration.swift - Line: 70, Column: 3",
+    "H_initialValue" : ""
+  }
+]

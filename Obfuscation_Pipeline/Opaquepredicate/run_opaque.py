@@ -1,4 +1,4 @@
-import sys, re, json, hashlib, random, os
+import sys, re, json, hashlib, secrets, os
 from pathlib import Path
 from typing import Optional, List, Set, Tuple
 import secrets

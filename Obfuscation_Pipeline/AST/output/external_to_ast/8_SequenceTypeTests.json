@@ -1,0 +1,1376 @@
+[
+  {
+    "A_name" : "SequenceTypeTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 26, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 28, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "testJSONFile",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 30, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testArrayAllNumber",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 54, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 55, Column: 9",
+            "H_initialValue" : "[1, 2.0, 3.3, 123456789, 987654321.123456789]"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 58, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "array",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 59, Column: 9",
+            "H_initialValue" : "[NSNumber]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testArrayAllBool",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 70, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 71, Column: 9",
+            "H_initialValue" : "JSON([true, false, false, true, true])"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 74, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "array",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 75, Column: 9",
+            "H_initialValue" : "[Bool]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testArrayAllString",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 86, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 87, Column: 9",
+            "H_initialValue" : "JSON(rawValue: [\"aoo\", \"bpp\", \"zoo\"] as NSArray)!"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 90, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "array",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 91, Column: 9",
+            "H_initialValue" : "[String]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testArrayWithNull",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 102, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 103, Column: 9",
+            "H_initialValue" : "JSON(rawValue: [\"aoo\", \"bpp\", NSNull(), \"zoo\"] as NSArray)!"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 106, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "array",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 107, Column: 9",
+            "H_initialValue" : "[AnyObject]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testArrayAllDictionary",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 119, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 120, Column: 9",
+            "H_initialValue" : "[[\"1\": 1, \"2\": 2], [\"a\": \"A\", \"b\": \"B\"], [\"null\": NSNull()]]"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 123, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "array",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 124, Column: 9",
+            "H_initialValue" : "[AnyObject]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDictionaryAllNumber",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 139, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 140, Column: 9",
+            "H_initialValue" : "[\"double\": 1.11111, \"int\": 987654321]"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 143, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 144, Column: 9",
+            "H_initialValue" : "[String: NSNumber]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDictionaryAllBool",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 156, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 157, Column: 9",
+            "H_initialValue" : "[\"t\": true, \"f\": false, \"false\": false, \"tr\": true, \"true\": true]"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 160, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 161, Column: 9",
+            "H_initialValue" : "[String: Bool]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDictionaryAllString",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 173, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 174, Column: 9",
+            "H_initialValue" : "JSON(rawValue: [\"a\": \"aoo\", \"bb\": \"bpp\", \"z\": \"zoo\"] as NSDictionary)!"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 177, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 178, Column: 9",
+            "H_initialValue" : "[String: String]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDictionaryWithNull",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 190, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 191, Column: 9",
+            "H_initialValue" : "JSON(rawValue: [\"a\": \"aoo\", \"bb\": \"bpp\", \"null\": NSNull(), \"z\": \"zoo\"] as NSDictionary)!"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 194, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 195, Column: 9",
+            "H_initialValue" : "[String: AnyObject]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDictionaryAllArray",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 208, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 209, Column: 9",
+            "H_initialValue" : "JSON ([\"Number\": [NSNumber(value: 1), NSNumber(value: 2.123456), NSNumber(value: 123456789)], \"String\": [\"aa\", \"bbb\", \"cccc\"], \"Mix\": [true, \"766\", NSNull(), 655231.9823]])"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 213, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 214, Column: 9",
+            "H_initialValue" : "[String: AnyObject]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDictionaryIteratingPerformance",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 231, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SequenceTypeTests.swift - Line: 232, Column: 9",
+            "H_initialValue" : "[:]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 28, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testJSONFile",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 30, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testArrayAllNumber",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 54, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 55, Column: 9",
+        "H_initialValue" : "[1, 2.0, 3.3, 123456789, 987654321.123456789]"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 58, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "array",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 59, Column: 9",
+        "H_initialValue" : "[NSNumber]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 55, Column: 9",
+    "H_initialValue" : "[1, 2.0, 3.3, 123456789, 987654321.123456789]"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 58, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "array",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 59, Column: 9",
+    "H_initialValue" : "[NSNumber]()"
+  },
+  {
+    "A_name" : "testArrayAllBool",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 70, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 71, Column: 9",
+        "H_initialValue" : "JSON([true, false, false, true, true])"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 74, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "array",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 75, Column: 9",
+        "H_initialValue" : "[Bool]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 71, Column: 9",
+    "H_initialValue" : "JSON([true, false, false, true, true])"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 74, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "array",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 75, Column: 9",
+    "H_initialValue" : "[Bool]()"
+  },
+  {
+    "A_name" : "testArrayAllString",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 86, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 87, Column: 9",
+        "H_initialValue" : "JSON(rawValue: [\"aoo\", \"bpp\", \"zoo\"] as NSArray)!"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 90, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "array",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 91, Column: 9",
+        "H_initialValue" : "[String]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 87, Column: 9",
+    "H_initialValue" : "JSON(rawValue: [\"aoo\", \"bpp\", \"zoo\"] as NSArray)!"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 90, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "array",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 91, Column: 9",
+    "H_initialValue" : "[String]()"
+  },
+  {
+    "A_name" : "testArrayWithNull",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 102, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 103, Column: 9",
+        "H_initialValue" : "JSON(rawValue: [\"aoo\", \"bpp\", NSNull(), \"zoo\"] as NSArray)!"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 106, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "array",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 107, Column: 9",
+        "H_initialValue" : "[AnyObject]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 103, Column: 9",
+    "H_initialValue" : "JSON(rawValue: [\"aoo\", \"bpp\", NSNull(), \"zoo\"] as NSArray)!"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 106, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "array",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 107, Column: 9",
+    "H_initialValue" : "[AnyObject]()"
+  },
+  {
+    "A_name" : "testArrayAllDictionary",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 119, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 120, Column: 9",
+        "H_initialValue" : "[[\"1\": 1, \"2\": 2], [\"a\": \"A\", \"b\": \"B\"], [\"null\": NSNull()]]"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 123, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "array",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 124, Column: 9",
+        "H_initialValue" : "[AnyObject]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 120, Column: 9",
+    "H_initialValue" : "[[\"1\": 1, \"2\": 2], [\"a\": \"A\", \"b\": \"B\"], [\"null\": NSNull()]]"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 123, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "array",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 124, Column: 9",
+    "H_initialValue" : "[AnyObject]()"
+  },
+  {
+    "A_name" : "testDictionaryAllNumber",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 139, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 140, Column: 9",
+        "H_initialValue" : "[\"double\": 1.11111, \"int\": 987654321]"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 143, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 144, Column: 9",
+        "H_initialValue" : "[String: NSNumber]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 140, Column: 9",
+    "H_initialValue" : "[\"double\": 1.11111, \"int\": 987654321]"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 143, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 144, Column: 9",
+    "H_initialValue" : "[String: NSNumber]()"
+  },
+  {
+    "A_name" : "testDictionaryAllBool",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 156, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 157, Column: 9",
+        "H_initialValue" : "[\"t\": true, \"f\": false, \"false\": false, \"tr\": true, \"true\": true]"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 160, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 161, Column: 9",
+        "H_initialValue" : "[String: Bool]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 157, Column: 9",
+    "H_initialValue" : "[\"t\": true, \"f\": false, \"false\": false, \"tr\": true, \"true\": true]"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 160, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 161, Column: 9",
+    "H_initialValue" : "[String: Bool]()"
+  },
+  {
+    "A_name" : "testDictionaryAllString",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 173, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 174, Column: 9",
+        "H_initialValue" : "JSON(rawValue: [\"a\": \"aoo\", \"bb\": \"bpp\", \"z\": \"zoo\"] as NSDictionary)!"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 177, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 178, Column: 9",
+        "H_initialValue" : "[String: String]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 174, Column: 9",
+    "H_initialValue" : "JSON(rawValue: [\"a\": \"aoo\", \"bb\": \"bpp\", \"z\": \"zoo\"] as NSDictionary)!"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 177, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 178, Column: 9",
+    "H_initialValue" : "[String: String]()"
+  },
+  {
+    "A_name" : "testDictionaryWithNull",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 190, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 191, Column: 9",
+        "H_initialValue" : "JSON(rawValue: [\"a\": \"aoo\", \"bb\": \"bpp\", \"null\": NSNull(), \"z\": \"zoo\"] as NSDictionary)!"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 194, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 195, Column: 9",
+        "H_initialValue" : "[String: AnyObject]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 191, Column: 9",
+    "H_initialValue" : "JSON(rawValue: [\"a\": \"aoo\", \"bb\": \"bpp\", \"null\": NSNull(), \"z\": \"zoo\"] as NSDictionary)!"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 194, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 195, Column: 9",
+    "H_initialValue" : "[String: AnyObject]()"
+  },
+  {
+    "A_name" : "testDictionaryAllArray",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 208, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 209, Column: 9",
+        "H_initialValue" : "JSON ([\"Number\": [NSNumber(value: 1), NSNumber(value: 2.123456), NSNumber(value: 123456789)], \"String\": [\"aa\", \"bbb\", \"cccc\"], \"Mix\": [true, \"766\", NSNull(), 655231.9823]])"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 213, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 214, Column: 9",
+        "H_initialValue" : "[String: AnyObject]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 209, Column: 9",
+    "H_initialValue" : "JSON ([\"Number\": [NSNumber(value: 1), NSNumber(value: 2.123456), NSNumber(value: 123456789)], \"String\": [\"aa\", \"bbb\", \"cccc\"], \"Mix\": [true, \"766\", NSNull(), 655231.9823]])"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 213, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 214, Column: 9",
+    "H_initialValue" : "[String: AnyObject]()"
+  },
+  {
+    "A_name" : "testDictionaryIteratingPerformance",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 231, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SequenceTypeTests.swift - Line: 232, Column: 9",
+        "H_initialValue" : "[:]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SequenceTypeTests.swift - Line: 232, Column: 9",
+    "H_initialValue" : "[:]"
+  }
+]

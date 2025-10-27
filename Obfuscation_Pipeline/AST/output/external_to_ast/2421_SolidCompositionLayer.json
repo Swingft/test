@@ -1,0 +1,252 @@
+[
+  {
+    "A_name" : "SolidCompositionLayer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CompositionLayer"
+    ],
+    "F_location" : "SolidCompositionLayer.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SolidCompositionLayer.swift - Line: 14, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "components",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SolidCompositionLayer.swift - Line: 15, Column: 5",
+            "H_initialValue" : "solid.colorHex.hexColorComponents()"
+          }
+        ],
+        "I_parameterType" : [
+          "SolidLayerModel"
+        ],
+        "I_parameters" : [
+          "solid"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SolidCompositionLayer.swift - Line: 28, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "SolidCompositionLayer.swift - Line: 37, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "colorProperty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SolidCompositionLayer.swift - Line: 43, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "solidShape",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SolidCompositionLayer.swift - Line: 44, Column: 3",
+        "H_initialValue" : "CAShapeLayer()"
+      },
+      {
+        "A_name" : "keypathProperties",
+        "B_kind" : "variable",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SolidCompositionLayer.swift - Line: 46, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "displayContentsWithFrame",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SolidCompositionLayer.swift - Line: 51, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "frame",
+          "forceUpdates"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SolidCompositionLayer.swift - Line: 14, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "components",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SolidCompositionLayer.swift - Line: 15, Column: 5",
+        "H_initialValue" : "solid.colorHex.hexColorComponents()"
+      }
+    ],
+    "I_parameterType" : [
+      "SolidLayerModel"
+    ],
+    "I_parameters" : [
+      "solid"
+    ]
+  },
+  {
+    "A_name" : "components",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SolidCompositionLayer.swift - Line: 15, Column: 5",
+    "H_initialValue" : "solid.colorHex.hexColorComponents()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SolidCompositionLayer.swift - Line: 28, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "SolidCompositionLayer.swift - Line: 37, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "colorProperty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SolidCompositionLayer.swift - Line: 43, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "solidShape",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SolidCompositionLayer.swift - Line: 44, Column: 3",
+    "H_initialValue" : "CAShapeLayer()"
+  },
+  {
+    "A_name" : "keypathProperties",
+    "B_kind" : "variable",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SolidCompositionLayer.swift - Line: 46, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "displayContentsWithFrame",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SolidCompositionLayer.swift - Line: 51, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "frame",
+      "forceUpdates"
+    ]
+  }
+]

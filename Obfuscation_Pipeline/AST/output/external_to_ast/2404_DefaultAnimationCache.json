@@ -1,0 +1,261 @@
+[
+  {
+    "A_name" : "DefaultAnimationCache",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnimationCacheProvider"
+    ],
+    "F_location" : "DefaultAnimationCache.swift - Line: 18, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultAnimationCache.swift - Line: 22, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "sharedCache",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DefaultAnimationCache.swift - Line: 29, Column: 3",
+        "H_initialValue" : "DefaultAnimationCache()"
+      },
+      {
+        "A_name" : "cacheSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultAnimationCache.swift - Line: 32, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "clearCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultAnimationCache.swift - Line: 38, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "animation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultAnimationCache.swift - Line: 42, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forKey"
+        ],
+        "J_returnType" : "-> LottieAnimation?"
+      },
+      {
+        "A_name" : "setAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultAnimationCache.swift - Line: 46, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieAnimation",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "defaultCacheCountLimit",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DefaultAnimationCache.swift - Line: 52, Column: 3",
+        "H_initialValue" : "100"
+      },
+      {
+        "A_name" : "cache",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultAnimationCache.swift - Line: 58, Column: 3",
+        "H_initialValue" : "LRUCache<String, LottieAnimation>()"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultAnimationCache.swift - Line: 22, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "sharedCache",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DefaultAnimationCache.swift - Line: 29, Column: 3",
+    "H_initialValue" : "DefaultAnimationCache()"
+  },
+  {
+    "A_name" : "cacheSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultAnimationCache.swift - Line: 32, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "clearCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultAnimationCache.swift - Line: 38, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultAnimationCache.swift - Line: 42, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forKey"
+    ],
+    "J_returnType" : "-> LottieAnimation?"
+  },
+  {
+    "A_name" : "setAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultAnimationCache.swift - Line: 46, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieAnimation",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "defaultCacheCountLimit",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DefaultAnimationCache.swift - Line: 52, Column: 3",
+    "H_initialValue" : "100"
+  },
+  {
+    "A_name" : "cache",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultAnimationCache.swift - Line: 58, Column: 3",
+    "H_initialValue" : "LRUCache<String, LottieAnimation>()"
+  },
+  {
+    "A_name" : "DefaultAnimationCache",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "DefaultAnimationCache.swift - Line: 67, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

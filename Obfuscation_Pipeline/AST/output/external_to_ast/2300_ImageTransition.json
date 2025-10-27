@@ -1,0 +1,251 @@
+[
+  {
+    "A_name" : "ImageTransition",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ImageTransition.swift - Line: 46, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "none",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 48, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "fade",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 50, Column: 10",
+        "I_parameterType" : [
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "flipFromLeft",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 52, Column: 10",
+        "I_parameterType" : [
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "flipFromRight",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 54, Column: 10",
+        "I_parameterType" : [
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "flipFromTop",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 56, Column: 10",
+        "I_parameterType" : [
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "flipFromBottom",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 58, Column: 10",
+        "I_parameterType" : [
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "custom",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 64, Column: 10",
+        "I_parameterType" : [
+          "TimeInterval",
+          "UIView.AnimationOptions",
+          "((UIImageView, UIImage) -> Void)?",
+          "((Bool) -> Void)?"
+        ],
+        "I_parameters" : [
+          "duration",
+          "options",
+          "animations",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "duration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 69, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "animationOptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 83, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "animations",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 97, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "completion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 104, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "duration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageTransition.swift - Line: 69, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "animationOptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageTransition.swift - Line: 83, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "animations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageTransition.swift - Line: 97, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageTransition.swift - Line: 104, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ImageTransition",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ImageTransition.swift - Line: 113, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "none",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 114, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "fade",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageTransition.swift - Line: 116, Column: 10",
+        "I_parameterType" : [
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  }
+]

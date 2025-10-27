@@ -1,0 +1,952 @@
+[
+  {
+    "A_name" : "PolygonNodeProperties",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "NodePropertyMap",
+      "KeypathSearchable"
+    ],
+    "F_location" : "PolygonNode.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 17, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Star"
+        ],
+        "I_parameters" : [
+          "star"
+        ]
+      },
+      {
+        "A_name" : "keypathName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 37, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "childKeypaths",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 39, Column: 3",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "keypathProperties",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 41, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "properties",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 42, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "direction",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 44, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "position",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 45, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "outerRadius",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 46, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "outerRoundedness",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 47, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rotation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 48, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "points",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 49, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 17, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Star"
+    ],
+    "I_parameters" : [
+      "star"
+    ]
+  },
+  {
+    "A_name" : "keypathName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 37, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "childKeypaths",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 39, Column: 3",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "keypathProperties",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 41, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "properties",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 42, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "direction",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 44, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "position",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 45, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "outerRadius",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 46, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "outerRoundedness",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 47, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rotation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 48, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "points",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 49, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "PolygonNode",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnimatorNode",
+      "PathNode"
+    ],
+    "F_location" : "PolygonNode.swift - Line: 54, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 58, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimatorNode?",
+          "Star"
+        ],
+        "I_parameters" : [
+          "parentNode",
+          "star"
+        ]
+      },
+      {
+        "A_name" : "PolygonConstant",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "PolygonNode.swift - Line: 67, Column: 3",
+        "H_initialValue" : "0.25"
+      },
+      {
+        "A_name" : "properties",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 69, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "pathOutput",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 71, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "parentNode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 73, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "hasLocalUpdates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 74, Column: 3",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "hasUpstreamUpdates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 75, Column: 3",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "lastUpdateFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 76, Column: 3",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "propertyMap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 80, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isEnabled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 84, Column: 3",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "rebuildOutputs",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 90, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "path",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PolygonNode.swift - Line: 91, Column: 5",
+            "H_initialValue" : "BezierPath.polygon(\n      position: properties.position.value.pointValue,\n      numberOfPoints: properties.points.value.cgFloatValue,\n      outerRadius: properties.outerRadius.value.cgFloatValue,\n      outerRoundedness: properties.outerRoundedness.value.cgFloatValue,\n      rotation: properties.rotation.value.cgFloatValue,\n      direction: properties.direction)"
+          }
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 58, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimatorNode?",
+      "Star"
+    ],
+    "I_parameters" : [
+      "parentNode",
+      "star"
+    ]
+  },
+  {
+    "A_name" : "PolygonConstant",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "PolygonNode.swift - Line: 67, Column: 3",
+    "H_initialValue" : "0.25"
+  },
+  {
+    "A_name" : "properties",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 69, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "pathOutput",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 71, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "parentNode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 73, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hasLocalUpdates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 74, Column: 3",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "hasUpstreamUpdates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 75, Column: 3",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "lastUpdateFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 76, Column: 3",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "propertyMap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 80, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isEnabled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 84, Column: 3",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "rebuildOutputs",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 90, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "path",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 91, Column: 5",
+        "H_initialValue" : "BezierPath.polygon(\n      position: properties.position.value.pointValue,\n      numberOfPoints: properties.points.value.cgFloatValue,\n      outerRadius: properties.outerRadius.value.cgFloatValue,\n      outerRoundedness: properties.outerRoundedness.value.cgFloatValue,\n      rotation: properties.rotation.value.cgFloatValue,\n      direction: properties.direction)"
+      }
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "path",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 91, Column: 5",
+    "H_initialValue" : "BezierPath.polygon(\n      position: properties.position.value.pointValue,\n      numberOfPoints: properties.points.value.cgFloatValue,\n      outerRadius: properties.outerRadius.value.cgFloatValue,\n      outerRoundedness: properties.outerRoundedness.value.cgFloatValue,\n      rotation: properties.rotation.value.cgFloatValue,\n      direction: properties.direction)"
+  },
+  {
+    "A_name" : "BezierPath",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 104, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "polygon",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "PolygonNode.swift - Line: 106, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "currentAngle",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PolygonNode.swift - Line: 115, Column: 5",
+            "H_initialValue" : "(rotation - 90).toRadians()"
+          },
+          {
+            "A_name" : "anglePerPoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PolygonNode.swift - Line: 116, Column: 5",
+            "H_initialValue" : "((2 * CGFloat.pi) \/ numberOfPoints)"
+          },
+          {
+            "A_name" : "outerRoundedness",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PolygonNode.swift - Line: 117, Column: 5",
+            "H_initialValue" : "inputOuterRoundedness * 0.01"
+          },
+          {
+            "A_name" : "point",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PolygonNode.swift - Line: 119, Column: 5",
+            "H_initialValue" : "CGPoint(\n      x: outerRadius * cos(currentAngle),\n      y: outerRadius * sin(currentAngle))"
+          },
+          {
+            "A_name" : "vertices",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PolygonNode.swift - Line: 122, Column: 5",
+            "H_initialValue" : "[CurveVertex(point: point + position, inTangentRelative: .zero, outTangentRelative: .zero)]"
+          },
+          {
+            "A_name" : "previousPoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PolygonNode.swift - Line: 124, Column: 5",
+            "H_initialValue" : "point"
+          },
+          {
+            "A_name" : "reverse",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PolygonNode.swift - Line: 159, Column: 5",
+            "H_initialValue" : "direction == .counterClockwise"
+          },
+          {
+            "A_name" : "path",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PolygonNode.swift - Line: 163, Column: 5",
+            "H_initialValue" : "BezierPath()"
+          }
+        ],
+        "I_parameterType" : [
+          "CGPoint",
+          "CGFloat",
+          "CGFloat",
+          "CGFloat",
+          "CGFloat",
+          "PathDirection"
+        ],
+        "I_parameters" : [
+          "position",
+          "numberOfPoints",
+          "outerRadius",
+          "outerRoundedness",
+          "rotation",
+          "direction"
+        ],
+        "J_returnType" : "-> BezierPath"
+      }
+    ]
+  },
+  {
+    "A_name" : "polygon",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "PolygonNode.swift - Line: 106, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "currentAngle",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 115, Column: 5",
+        "H_initialValue" : "(rotation - 90).toRadians()"
+      },
+      {
+        "A_name" : "anglePerPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 116, Column: 5",
+        "H_initialValue" : "((2 * CGFloat.pi) \/ numberOfPoints)"
+      },
+      {
+        "A_name" : "outerRoundedness",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 117, Column: 5",
+        "H_initialValue" : "inputOuterRoundedness * 0.01"
+      },
+      {
+        "A_name" : "point",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 119, Column: 5",
+        "H_initialValue" : "CGPoint(\n      x: outerRadius * cos(currentAngle),\n      y: outerRadius * sin(currentAngle))"
+      },
+      {
+        "A_name" : "vertices",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 122, Column: 5",
+        "H_initialValue" : "[CurveVertex(point: point + position, inTangentRelative: .zero, outTangentRelative: .zero)]"
+      },
+      {
+        "A_name" : "previousPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 124, Column: 5",
+        "H_initialValue" : "point"
+      },
+      {
+        "A_name" : "reverse",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 159, Column: 5",
+        "H_initialValue" : "direction == .counterClockwise"
+      },
+      {
+        "A_name" : "path",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PolygonNode.swift - Line: 163, Column: 5",
+        "H_initialValue" : "BezierPath()"
+      }
+    ],
+    "I_parameterType" : [
+      "CGPoint",
+      "CGFloat",
+      "CGFloat",
+      "CGFloat",
+      "CGFloat",
+      "PathDirection"
+    ],
+    "I_parameters" : [
+      "position",
+      "numberOfPoints",
+      "outerRadius",
+      "outerRoundedness",
+      "rotation",
+      "direction"
+    ],
+    "J_returnType" : "-> BezierPath"
+  },
+  {
+    "A_name" : "currentAngle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 115, Column: 5",
+    "H_initialValue" : "(rotation - 90).toRadians()"
+  },
+  {
+    "A_name" : "anglePerPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 116, Column: 5",
+    "H_initialValue" : "((2 * CGFloat.pi) \/ numberOfPoints)"
+  },
+  {
+    "A_name" : "outerRoundedness",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 117, Column: 5",
+    "H_initialValue" : "inputOuterRoundedness * 0.01"
+  },
+  {
+    "A_name" : "point",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 119, Column: 5",
+    "H_initialValue" : "CGPoint(\n      x: outerRadius * cos(currentAngle),\n      y: outerRadius * sin(currentAngle))"
+  },
+  {
+    "A_name" : "vertices",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 122, Column: 5",
+    "H_initialValue" : "[CurveVertex(point: point + position, inTangentRelative: .zero, outTangentRelative: .zero)]"
+  },
+  {
+    "A_name" : "previousPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 124, Column: 5",
+    "H_initialValue" : "point"
+  },
+  {
+    "A_name" : "cp1Theta",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 133, Column: 9",
+    "H_initialValue" : "(atan2(previousPoint.y, previousPoint.x) - CGFloat.pi \/ 2)"
+  },
+  {
+    "A_name" : "cp1Dx",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 134, Column: 9",
+    "H_initialValue" : "cos(cp1Theta)"
+  },
+  {
+    "A_name" : "cp1Dy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 135, Column: 9",
+    "H_initialValue" : "sin(cp1Theta)"
+  },
+  {
+    "A_name" : "cp2Theta",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 137, Column: 9",
+    "H_initialValue" : "(atan2(point.y, point.x) - CGFloat.pi \/ 2)"
+  },
+  {
+    "A_name" : "cp2Dx",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 138, Column: 9",
+    "H_initialValue" : "cos(cp2Theta)"
+  },
+  {
+    "A_name" : "cp2Dy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 139, Column: 9",
+    "H_initialValue" : "sin(cp2Theta)"
+  },
+  {
+    "A_name" : "cp1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 141, Column: 9",
+    "H_initialValue" : "CGPoint(\n          x: outerRadius * outerRoundedness * PolygonNode.PolygonConstant * cp1Dx,\n          y: outerRadius * outerRoundedness * PolygonNode.PolygonConstant * cp1Dy)"
+  },
+  {
+    "A_name" : "cp2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 144, Column: 9",
+    "H_initialValue" : "CGPoint(\n          x: outerRadius * outerRoundedness * PolygonNode.PolygonConstant * cp2Dx,\n          y: outerRadius * outerRoundedness * PolygonNode.PolygonConstant * cp2Dy)"
+  },
+  {
+    "A_name" : "previousVertex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 148, Column: 9",
+    "H_initialValue" : "vertices[vertices.endIndex - 1]"
+  },
+  {
+    "A_name" : "reverse",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 159, Column: 5",
+    "H_initialValue" : "direction == .counterClockwise"
+  },
+  {
+    "A_name" : "path",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PolygonNode.swift - Line: 163, Column: 5",
+    "H_initialValue" : "BezierPath()"
+  }
+]

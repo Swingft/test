@@ -1,0 +1,3104 @@
+[
+  {
+    "A_name" : "LottieBackgroundBehavior",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "stop",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 15, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "pause",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 18, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "pauseAndRestore",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 23, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "forceFinish",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 26, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "continuePlaying",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 34, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "`default`",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 43, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "RenderingEngine"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> LottieBackgroundBehavior"
+      }
+    ]
+  },
+  {
+    "A_name" : "`default`",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 43, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "RenderingEngine"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> LottieBackgroundBehavior"
+  },
+  {
+    "A_name" : "LottieLoopMode",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 56, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "playOnce",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 58, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "loop",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 60, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "autoReverse",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 62, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "`repeat`",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 64, Column: 8",
+        "I_parameterType" : [
+          "Float"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "repeatBackwards",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 66, Column: 8",
+        "I_parameterType" : [
+          "Float"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "LottieLoopMode",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Equatable"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 71, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 72, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieLoopMode",
+          "LottieLoopMode"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 72, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieLoopMode",
+      "LottieLoopMode"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "LottieAnimationView",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "IBDesignable"
+    ],
+    "E_adoptedClassProtocols" : [
+      "LottieAnimationViewBase"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 91, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 99, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieAnimation?",
+          "AnimationImageProvider?",
+          "AnimationKeypathTextProvider",
+          "AnimationFontProvider",
+          "LottieConfiguration",
+          "LottieLogger"
+        ],
+        "I_parameters" : [
+          "animation",
+          "imageProvider",
+          "textProvider",
+          "fontProvider",
+          "configuration",
+          "logger"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 123, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DotLottieFile?",
+          "String?",
+          "AnimationKeypathTextProvider",
+          "AnimationFontProvider",
+          "LottieConfiguration",
+          "LottieLogger"
+        ],
+        "I_parameters" : [
+          "dotLottie",
+          "animationId",
+          "textProvider",
+          "fontProvider",
+          "configuration",
+          "logger"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 146, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieConfiguration",
+          "LottieLogger"
+        ],
+        "I_parameters" : [
+          "configuration",
+          "logger"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 156, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 169, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "convenience",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 182, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieAnimationSource?",
+          "AnimationImageProvider?",
+          "AnimationKeypathTextProvider",
+          "AnimationFontProvider",
+          "LottieConfiguration",
+          "LottieLogger"
+        ],
+        "I_parameters" : [
+          "animationSource",
+          "imageProvider",
+          "textProvider",
+          "fontProvider",
+          "configuration",
+          "logger"
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 224, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottiePlaybackMode.PlaybackMode",
+          "LottieCompletionBlock?"
+        ],
+        "I_parameters" : [
+          "_",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 231, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieCompletionBlock?"
+        ],
+        "I_parameters" : [
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 241, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationProgressTime?",
+          "AnimationProgressTime",
+          "LottieLoopMode?",
+          "LottieCompletionBlock?"
+        ],
+        "I_parameters" : [
+          "fromProgress",
+          "toProgress",
+          "loopMode",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 256, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationFrameTime?",
+          "AnimationFrameTime",
+          "LottieLoopMode?",
+          "LottieCompletionBlock?"
+        ],
+        "I_parameters" : [
+          "fromFrame",
+          "toFrame",
+          "loopMode",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 280, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?",
+          "String",
+          "Bool",
+          "LottieLoopMode?",
+          "LottieCompletionBlock?"
+        ],
+        "I_parameters" : [
+          "fromMarker",
+          "toMarker",
+          "playEndMarkerFrame",
+          "loopMode",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 305, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "LottieLoopMode?",
+          "LottieCompletionBlock?"
+        ],
+        "I_parameters" : [
+          "marker",
+          "loopMode",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 329, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String]",
+          "LottieCompletionBlock?"
+        ],
+        "I_parameters" : [
+          "markers",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "stop",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 339, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "pause",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 346, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 350, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottiePlaybackMode",
+          "LottieCompletionBlock?"
+        ],
+        "I_parameters" : [
+          "_",
+          "animationCompletionHandler"
+        ]
+      },
+      {
+        "A_name" : "setPlaybackMode",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 361, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottiePlaybackMode",
+          "LottieCompletionBlock?"
+        ],
+        "I_parameters" : [
+          "_",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "animateLayoutChangesWithCurrentCoreAnimationContext",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 375, Column: 3",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "configuration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 378, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "valueProviders",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 384, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "backgroundBehavior",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 398, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "animation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 406, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "animationLoaded",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 438, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "imageProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 450, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "textProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 457, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "fontProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 464, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "maskAnimationToBounds",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 470, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isAnimationPlaying",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 476, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isAnimationQueued",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 481, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "loopMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 486, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "shouldRasterizeWhenIdle",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 497, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentProgress",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 506, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 515, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 523, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "realtimeAnimationFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 529, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "realtimeAnimationProgress",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 534, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "animationSpeed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 539, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "respectAnimationFrameRate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 549, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "viewportFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 559, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "intrinsicContentSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 576, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentRenderingEngine",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 586, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentPlaybackMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 591, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "mainThreadRenderingEngineShouldForceDisplayUpdateOnEachFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 603, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "loadAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 617, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?",
+          "DotLottieFile"
+        ],
+        "I_parameters" : [
+          "_",
+          "from"
+        ]
+      },
+      {
+        "A_name" : "loadAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 633, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "DotLottieFile"
+        ],
+        "I_parameters" : [
+          "atIndex",
+          "from"
+        ]
+      },
+      {
+        "A_name" : "reloadImages",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 641, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "forceDisplayUpdate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 646, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setValueProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 672, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnyValueProvider",
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "_",
+          "keypath"
+        ]
+      },
+      {
+        "A_name" : "removeValueProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 678, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "for"
+        ]
+      },
+      {
+        "A_name" : "getValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 690, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath",
+          "AnimationFrameTime?"
+        ],
+        "I_parameters" : [
+          "for",
+          "atFrame"
+        ],
+        "J_returnType" : "-> Any?"
+      },
+      {
+        "A_name" : "getOriginalValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 700, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath",
+          "AnimationFrameTime?"
+        ],
+        "I_parameters" : [
+          "for",
+          "atFrame"
+        ],
+        "J_returnType" : "-> Any?"
+      },
+      {
+        "A_name" : "logHierarchyKeypaths",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 706, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "allHierarchyKeypaths",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 712, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> [String]"
+      },
+      {
+        "A_name" : "addSubview",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 737, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationSubview",
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "_",
+          "forLayerAt"
+        ]
+      },
+      {
+        "A_name" : "convert",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 757, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "convertedRect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LottieAnimationView.swift - Line: 758, Column: 5",
+            "H_initialValue" : "lottieAnimationLayer.convert(rect, toLayerAt: keypath)"
+          }
+        ],
+        "I_parameterType" : [
+          "CGRect",
+          "AnimationKeypath?"
+        ],
+        "I_parameters" : [
+          "_",
+          "toLayerAt"
+        ],
+        "J_returnType" : "-> CGRect?"
+      },
+      {
+        "A_name" : "convert",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 771, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "convertedRect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LottieAnimationView.swift - Line: 772, Column: 5",
+            "H_initialValue" : "lottieAnimationLayer.convert(point, toLayerAt: keypath)"
+          }
+        ],
+        "I_parameterType" : [
+          "CGPoint",
+          "AnimationKeypath?"
+        ],
+        "I_parameters" : [
+          "_",
+          "toLayerAt"
+        ],
+        "J_returnType" : "-> CGPoint?"
+      },
+      {
+        "A_name" : "setNodeIsEnabled",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 783, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "isEnabled",
+          "keypath"
+        ]
+      },
+      {
+        "A_name" : "progressTime",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 795, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forMarker"
+        ],
+        "J_returnType" : "-> AnimationProgressTime?"
+      },
+      {
+        "A_name" : "frameTime",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 807, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forMarker"
+        ],
+        "J_returnType" : "-> AnimationFrameTime?"
+      },
+      {
+        "A_name" : "durationFrameTime",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 819, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forMarker"
+        ],
+        "J_returnType" : "-> AnimationFrameTime?"
+      },
+      {
+        "A_name" : "lottieAnimationLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 826, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "animationLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 828, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "animationName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "IBInspectable"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 833, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "commonInit",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 840, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "layoutAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 859, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "position",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LottieAnimationView.swift - Line: 862, Column: 5",
+            "H_initialValue" : "animation.bounds.center"
+          },
+          {
+            "A_name" : "xform",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LottieAnimationView.swift - Line: 863, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "shouldForceUpdates",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LottieAnimationView.swift - Line: 864, Column: 5",
+            "H_initialValue" : "false"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "updateRasterizationState",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1005, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "updateAnimationFrame",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1010, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "animationWillMoveToBackground",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "objc",
+          "override"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1014, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "animationWillEnterForeground",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "objc",
+          "override"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1019, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "animationMovedToWindow",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1024, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "updateInFlightAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1036, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "loadAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1040, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieAnimationSource?"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "waitingToPlayAnimation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1046, Column: 3",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "updateAnimationForBackgroundState",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1048, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "updateAnimationForForegroundState",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1052, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "wasWaitingToPlayAnimation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LottieAnimationView.swift - Line: 1053, Column: 5",
+            "H_initialValue" : "waitingToPlayAnimation"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "logger",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1062, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 99, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieAnimation?",
+      "AnimationImageProvider?",
+      "AnimationKeypathTextProvider",
+      "AnimationFontProvider",
+      "LottieConfiguration",
+      "LottieLogger"
+    ],
+    "I_parameters" : [
+      "animation",
+      "imageProvider",
+      "textProvider",
+      "fontProvider",
+      "configuration",
+      "logger"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 123, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DotLottieFile?",
+      "String?",
+      "AnimationKeypathTextProvider",
+      "AnimationFontProvider",
+      "LottieConfiguration",
+      "LottieLogger"
+    ],
+    "I_parameters" : [
+      "dotLottie",
+      "animationId",
+      "textProvider",
+      "fontProvider",
+      "configuration",
+      "logger"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 146, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieConfiguration",
+      "LottieLogger"
+    ],
+    "I_parameters" : [
+      "configuration",
+      "logger"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 156, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 169, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "convenience",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 182, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieAnimationSource?",
+      "AnimationImageProvider?",
+      "AnimationKeypathTextProvider",
+      "AnimationFontProvider",
+      "LottieConfiguration",
+      "LottieLogger"
+    ],
+    "I_parameters" : [
+      "animationSource",
+      "imageProvider",
+      "textProvider",
+      "fontProvider",
+      "configuration",
+      "logger"
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 224, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottiePlaybackMode.PlaybackMode",
+      "LottieCompletionBlock?"
+    ],
+    "I_parameters" : [
+      "_",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 231, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieCompletionBlock?"
+    ],
+    "I_parameters" : [
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 241, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationProgressTime?",
+      "AnimationProgressTime",
+      "LottieLoopMode?",
+      "LottieCompletionBlock?"
+    ],
+    "I_parameters" : [
+      "fromProgress",
+      "toProgress",
+      "loopMode",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 256, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationFrameTime?",
+      "AnimationFrameTime",
+      "LottieLoopMode?",
+      "LottieCompletionBlock?"
+    ],
+    "I_parameters" : [
+      "fromFrame",
+      "toFrame",
+      "loopMode",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 280, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?",
+      "String",
+      "Bool",
+      "LottieLoopMode?",
+      "LottieCompletionBlock?"
+    ],
+    "I_parameters" : [
+      "fromMarker",
+      "toMarker",
+      "playEndMarkerFrame",
+      "loopMode",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 305, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "LottieLoopMode?",
+      "LottieCompletionBlock?"
+    ],
+    "I_parameters" : [
+      "marker",
+      "loopMode",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 329, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String]",
+      "LottieCompletionBlock?"
+    ],
+    "I_parameters" : [
+      "markers",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "stop",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 339, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "pause",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 346, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 350, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottiePlaybackMode",
+      "LottieCompletionBlock?"
+    ],
+    "I_parameters" : [
+      "_",
+      "animationCompletionHandler"
+    ]
+  },
+  {
+    "A_name" : "setPlaybackMode",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 361, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottiePlaybackMode",
+      "LottieCompletionBlock?"
+    ],
+    "I_parameters" : [
+      "_",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "animateLayoutChangesWithCurrentCoreAnimationContext",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 375, Column: 3",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 378, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "valueProviders",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 384, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "backgroundBehavior",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 398, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 406, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "animationLoaded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 438, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 450, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "textProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 457, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fontProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 464, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "maskAnimationToBounds",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 470, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isAnimationPlaying",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 476, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isAnimationQueued",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 481, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "loopMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 486, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "shouldRasterizeWhenIdle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 497, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentProgress",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 506, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 515, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 523, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "realtimeAnimationFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 529, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "realtimeAnimationProgress",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 534, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "animationSpeed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 539, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "respectAnimationFrameRate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 549, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "viewportFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 559, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 569, Column: 7",
+    "H_initialValue" : "bounds"
+  },
+  {
+    "A_name" : "intrinsicContentSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 576, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentRenderingEngine",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 586, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentPlaybackMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 591, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mainThreadRenderingEngineShouldForceDisplayUpdateOnEachFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 603, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "loadAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 617, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?",
+      "DotLottieFile"
+    ],
+    "I_parameters" : [
+      "_",
+      "from"
+    ]
+  },
+  {
+    "A_name" : "loadAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 633, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "DotLottieFile"
+    ],
+    "I_parameters" : [
+      "atIndex",
+      "from"
+    ]
+  },
+  {
+    "A_name" : "reloadImages",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 641, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "forceDisplayUpdate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 646, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setValueProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 672, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnyValueProvider",
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "_",
+      "keypath"
+    ]
+  },
+  {
+    "A_name" : "removeValueProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 678, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "for"
+    ]
+  },
+  {
+    "A_name" : "getValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 690, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath",
+      "AnimationFrameTime?"
+    ],
+    "I_parameters" : [
+      "for",
+      "atFrame"
+    ],
+    "J_returnType" : "-> Any?"
+  },
+  {
+    "A_name" : "getOriginalValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 700, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath",
+      "AnimationFrameTime?"
+    ],
+    "I_parameters" : [
+      "for",
+      "atFrame"
+    ],
+    "J_returnType" : "-> Any?"
+  },
+  {
+    "A_name" : "logHierarchyKeypaths",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 706, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "allHierarchyKeypaths",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 712, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> [String]"
+  },
+  {
+    "A_name" : "addSubview",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 737, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationSubview",
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "_",
+      "forLayerAt"
+    ]
+  },
+  {
+    "A_name" : "convert",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 757, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "convertedRect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 758, Column: 5",
+        "H_initialValue" : "lottieAnimationLayer.convert(rect, toLayerAt: keypath)"
+      }
+    ],
+    "I_parameterType" : [
+      "CGRect",
+      "AnimationKeypath?"
+    ],
+    "I_parameters" : [
+      "_",
+      "toLayerAt"
+    ],
+    "J_returnType" : "-> CGRect?"
+  },
+  {
+    "A_name" : "convertedRect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 758, Column: 5",
+    "H_initialValue" : "lottieAnimationLayer.convert(rect, toLayerAt: keypath)"
+  },
+  {
+    "A_name" : "convert",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 771, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "convertedRect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 772, Column: 5",
+        "H_initialValue" : "lottieAnimationLayer.convert(point, toLayerAt: keypath)"
+      }
+    ],
+    "I_parameterType" : [
+      "CGPoint",
+      "AnimationKeypath?"
+    ],
+    "I_parameters" : [
+      "_",
+      "toLayerAt"
+    ],
+    "J_returnType" : "-> CGPoint?"
+  },
+  {
+    "A_name" : "convertedRect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 772, Column: 5",
+    "H_initialValue" : "lottieAnimationLayer.convert(point, toLayerAt: keypath)"
+  },
+  {
+    "A_name" : "setNodeIsEnabled",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 783, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "isEnabled",
+      "keypath"
+    ]
+  },
+  {
+    "A_name" : "progressTime",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 795, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forMarker"
+    ],
+    "J_returnType" : "-> AnimationProgressTime?"
+  },
+  {
+    "A_name" : "frameTime",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 807, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forMarker"
+    ],
+    "J_returnType" : "-> AnimationFrameTime?"
+  },
+  {
+    "A_name" : "durationFrameTime",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 819, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forMarker"
+    ],
+    "J_returnType" : "-> AnimationFrameTime?"
+  },
+  {
+    "A_name" : "lottieAnimationLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 826, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "animationLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 828, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "animationName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "IBInspectable"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 833, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "commonInit",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 840, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "layoutAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 859, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "position",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 862, Column: 5",
+        "H_initialValue" : "animation.bounds.center"
+      },
+      {
+        "A_name" : "xform",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 863, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "shouldForceUpdates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 864, Column: 5",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "position",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 862, Column: 5",
+    "H_initialValue" : "animation.bounds.center"
+  },
+  {
+    "A_name" : "xform",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 863, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "shouldForceUpdates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 864, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "compAspect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 869, Column: 7",
+    "H_initialValue" : "viewportFrame.size.width \/ viewportFrame.size.height"
+  },
+  {
+    "A_name" : "viewAspect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 870, Column: 7",
+    "H_initialValue" : "bounds.size.width \/ bounds.size.height"
+  },
+  {
+    "A_name" : "dominantDimension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 871, Column: 7",
+    "H_initialValue" : "compAspect > viewAspect ? bounds.size.width : bounds.size.height"
+  },
+  {
+    "A_name" : "compDimension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 872, Column: 7",
+    "H_initialValue" : "compAspect > viewAspect ? viewportFrame.size.width : viewportFrame.size.height"
+  },
+  {
+    "A_name" : "scale",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 873, Column: 7",
+    "H_initialValue" : "dominantDimension \/ compDimension"
+  },
+  {
+    "A_name" : "viewportOffset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 875, Column: 7",
+    "H_initialValue" : "animation.bounds.center - viewportFrame.center"
+  },
+  {
+    "A_name" : "compAspect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 888, Column: 9",
+    "H_initialValue" : "animation.size.width \/ animation.size.height"
+  },
+  {
+    "A_name" : "viewAspect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 889, Column: 9",
+    "H_initialValue" : "bounds.size.width \/ bounds.size.height"
+  },
+  {
+    "A_name" : "dominantDimension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 890, Column: 9",
+    "H_initialValue" : "compAspect > viewAspect ? bounds.size.width : bounds.size.height"
+  },
+  {
+    "A_name" : "compDimension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 891, Column: 9",
+    "H_initialValue" : "compAspect > viewAspect ? animation.size.width : animation.size.height"
+  },
+  {
+    "A_name" : "scale",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 892, Column: 9",
+    "H_initialValue" : "dominantDimension \/ compDimension"
+  },
+  {
+    "A_name" : "compAspect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 896, Column: 9",
+    "H_initialValue" : "animation.size.width \/ animation.size.height"
+  },
+  {
+    "A_name" : "viewAspect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 897, Column: 9",
+    "H_initialValue" : "bounds.size.width \/ bounds.size.height"
+  },
+  {
+    "A_name" : "scaleWidth",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 898, Column: 9",
+    "H_initialValue" : "compAspect < viewAspect"
+  },
+  {
+    "A_name" : "dominantDimension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 899, Column: 9",
+    "H_initialValue" : "scaleWidth ? bounds.size.width : bounds.size.height"
+  },
+  {
+    "A_name" : "compDimension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 900, Column: 9",
+    "H_initialValue" : "scaleWidth ? animation.size.width : animation.size.height"
+  },
+  {
+    "A_name" : "scale",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 901, Column: 9",
+    "H_initialValue" : "dominantDimension \/ compDimension"
+  },
+  {
+    "A_name" : "positionKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 957, Column: 7",
+    "H_initialValue" : "\"LayoutPositionAnimation\""
+  },
+  {
+    "A_name" : "transformKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 958, Column: 7",
+    "H_initialValue" : "\"LayoutTransformAnimation\""
+  },
+  {
+    "A_name" : "positionAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 962, Column: 7",
+    "H_initialValue" : "animation.copy() as? CABasicAnimation ?? CABasicAnimation(keyPath: \"position\")"
+  },
+  {
+    "A_name" : "xformAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 969, Column: 7",
+    "H_initialValue" : "animation.copy() as? CABasicAnimation ?? CABasicAnimation(keyPath: \"transform\")"
+  },
+  {
+    "A_name" : "updateRasterizationState",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1005, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "updateAnimationFrame",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1010, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "animationWillMoveToBackground",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "objc",
+      "override"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1014, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "animationWillEnterForeground",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "objc",
+      "override"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1019, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "animationMovedToWindow",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1024, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "updateInFlightAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1036, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "loadAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1040, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieAnimationSource?"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "waitingToPlayAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1046, Column: 3",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "updateAnimationForBackgroundState",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1048, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "updateAnimationForForegroundState",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1052, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "wasWaitingToPlayAnimation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationView.swift - Line: 1053, Column: 5",
+        "H_initialValue" : "waitingToPlayAnimation"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "wasWaitingToPlayAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1053, Column: 5",
+    "H_initialValue" : "waitingToPlayAnimation"
+  },
+  {
+    "A_name" : "logger",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationView.swift - Line: 1062, Column: 3",
+    "H_initialValue" : ""
+  }
+]

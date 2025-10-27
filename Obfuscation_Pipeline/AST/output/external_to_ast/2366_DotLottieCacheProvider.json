@@ -1,0 +1,130 @@
+[
+  {
+    "A_name" : "DotLottieCacheProvider",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "DotLottieCacheProvider.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "file",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieCacheProvider.swift - Line: 15, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forKey"
+        ],
+        "J_returnType" : "-> DotLottieFile?"
+      },
+      {
+        "A_name" : "setFile",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieCacheProvider.swift - Line: 17, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DotLottieFile",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "clearCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieCacheProvider.swift - Line: 19, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "file",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieCacheProvider.swift - Line: 15, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forKey"
+    ],
+    "J_returnType" : "-> DotLottieFile?"
+  },
+  {
+    "A_name" : "setFile",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieCacheProvider.swift - Line: 17, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DotLottieFile",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "clearCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieCacheProvider.swift - Line: 19, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

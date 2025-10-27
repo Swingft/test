@@ -1,0 +1,403 @@
+[
+  {
+    "A_name" : "LoggingTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "MainActor",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "LoggingTests.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testAnimationWithNoIssues",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoggingTests.swift - Line: 17, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAutomaticFallbackToMainThreadRenderingEngine",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoggingTests.swift - Line: 23, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCoreAnimationRenderingEngineUnsupportedAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoggingTests.swift - Line: 32, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testExplicitMainThreadRenderingEngine",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoggingTests.swift - Line: 41, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testUnsupportedAfterEffectsExpressionsWarning",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoggingTests.swift - Line: 49, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "snapshotLoggedMessages",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoggingTests.swift - Line: 58, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "loggedMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoggingTests.swift - Line: 65, Column: 5",
+            "H_initialValue" : "await loggedMessages(for: animationName, configuration: configuration)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "LottieConfiguration",
+          "String",
+          "UInt"
+        ],
+        "I_parameters" : [
+          "animationName",
+          "configuration",
+          "function",
+          "line"
+        ]
+      },
+      {
+        "A_name" : "loggedMessages",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoggingTests.swift - Line: 75, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "logMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoggingTests.swift - Line: 76, Column: 5",
+            "H_initialValue" : "[String]()"
+          },
+          {
+            "A_name" : "logger",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoggingTests.swift - Line: 78, Column: 5",
+            "H_initialValue" : "LottieLogger(\n      assert: { condition, message, _, _ in\n        if !condition() {\n          logMessages.append(\"[assertionFailure] \\(message())\")\n        }\n      },\n      assertionFailure: { message, _, _ in\n        logMessages.append(\"[assertionFailure] \\(message())\")\n      },\n      warn: { message, _, _ in\n        logMessages.append(\"[warning] \\(message())\")\n      },\n      info: { message in\n        logMessages.append(\"[info] \\(message())\")\n      })"
+          },
+          {
+            "A_name" : "animationView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoggingTests.swift - Line: 94, Column: 5",
+            "H_initialValue" : "await SnapshotConfiguration.makeAnimationView(\n      for: animationName,\n      configuration: configuration,\n      logger: logger)!"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "LottieConfiguration"
+        ],
+        "I_parameters" : [
+          "for",
+          "configuration"
+        ],
+        "J_returnType" : "-> [String]"
+      }
+    ]
+  },
+  {
+    "A_name" : "testAnimationWithNoIssues",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoggingTests.swift - Line: 17, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testAutomaticFallbackToMainThreadRenderingEngine",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoggingTests.swift - Line: 23, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testCoreAnimationRenderingEngineUnsupportedAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoggingTests.swift - Line: 32, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testExplicitMainThreadRenderingEngine",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoggingTests.swift - Line: 41, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testUnsupportedAfterEffectsExpressionsWarning",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoggingTests.swift - Line: 49, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "snapshotLoggedMessages",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoggingTests.swift - Line: 58, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "loggedMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoggingTests.swift - Line: 65, Column: 5",
+        "H_initialValue" : "await loggedMessages(for: animationName, configuration: configuration)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "LottieConfiguration",
+      "String",
+      "UInt"
+    ],
+    "I_parameters" : [
+      "animationName",
+      "configuration",
+      "function",
+      "line"
+    ]
+  },
+  {
+    "A_name" : "loggedMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoggingTests.swift - Line: 65, Column: 5",
+    "H_initialValue" : "await loggedMessages(for: animationName, configuration: configuration)"
+  },
+  {
+    "A_name" : "loggedMessages",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoggingTests.swift - Line: 75, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "logMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoggingTests.swift - Line: 76, Column: 5",
+        "H_initialValue" : "[String]()"
+      },
+      {
+        "A_name" : "logger",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoggingTests.swift - Line: 78, Column: 5",
+        "H_initialValue" : "LottieLogger(\n      assert: { condition, message, _, _ in\n        if !condition() {\n          logMessages.append(\"[assertionFailure] \\(message())\")\n        }\n      },\n      assertionFailure: { message, _, _ in\n        logMessages.append(\"[assertionFailure] \\(message())\")\n      },\n      warn: { message, _, _ in\n        logMessages.append(\"[warning] \\(message())\")\n      },\n      info: { message in\n        logMessages.append(\"[info] \\(message())\")\n      })"
+      },
+      {
+        "A_name" : "animationView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoggingTests.swift - Line: 94, Column: 5",
+        "H_initialValue" : "await SnapshotConfiguration.makeAnimationView(\n      for: animationName,\n      configuration: configuration,\n      logger: logger)!"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "LottieConfiguration"
+    ],
+    "I_parameters" : [
+      "for",
+      "configuration"
+    ],
+    "J_returnType" : "-> [String]"
+  },
+  {
+    "A_name" : "logMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoggingTests.swift - Line: 76, Column: 5",
+    "H_initialValue" : "[String]()"
+  },
+  {
+    "A_name" : "logger",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoggingTests.swift - Line: 78, Column: 5",
+    "H_initialValue" : "LottieLogger(\n      assert: { condition, message, _, _ in\n        if !condition() {\n          logMessages.append(\"[assertionFailure] \\(message())\")\n        }\n      },\n      assertionFailure: { message, _, _ in\n        logMessages.append(\"[assertionFailure] \\(message())\")\n      },\n      warn: { message, _, _ in\n        logMessages.append(\"[warning] \\(message())\")\n      },\n      info: { message in\n        logMessages.append(\"[info] \\(message())\")\n      })"
+  },
+  {
+    "A_name" : "animationView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoggingTests.swift - Line: 94, Column: 5",
+    "H_initialValue" : "await SnapshotConfiguration.makeAnimationView(\n      for: animationName,\n      configuration: configuration,\n      logger: logger)!"
+  }
+]

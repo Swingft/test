@@ -1,0 +1,262 @@
+[
+  {
+    "A_name" : "Keyframe",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KeyframeExtensions.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeExtensions.swift - Line: 12, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Keyframe<T>",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "progress"
+        ],
+        "J_returnType" : "-> T"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeExtensions.swift - Line: 12, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Keyframe<T>",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "progress"
+    ],
+    "J_returnType" : "-> T"
+  },
+  {
+    "A_name" : "Keyframe",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KeyframeExtensions.swift - Line: 21, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolatedProgress",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeExtensions.swift - Line: 23, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "startTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KeyframeExtensions.swift - Line: 24, Column: 5",
+            "H_initialValue" : "time"
+          },
+          {
+            "A_name" : "endTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KeyframeExtensions.swift - Line: 25, Column: 5",
+            "H_initialValue" : "to.time"
+          },
+          {
+            "A_name" : "outTanPoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KeyframeExtensions.swift - Line: 37, Column: 5",
+            "H_initialValue" : "outTangent?.pointValue ?? .zero"
+          },
+          {
+            "A_name" : "inTanPoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KeyframeExtensions.swift - Line: 38, Column: 5",
+            "H_initialValue" : "to.inTangent?.pointValue ?? CGPoint(x: 1, y: 1)"
+          },
+          {
+            "A_name" : "progress",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KeyframeExtensions.swift - Line: 39, Column: 5",
+            "H_initialValue" : "keyTime.remap(fromLow: startTime, fromHigh: endTime, toLow: 0, toHigh: 1)"
+          }
+        ],
+        "I_parameterType" : [
+          "Keyframe",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_",
+          "keyTime"
+        ],
+        "J_returnType" : "-> CGFloat"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolatedProgress",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeExtensions.swift - Line: 23, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "startTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeExtensions.swift - Line: 24, Column: 5",
+        "H_initialValue" : "time"
+      },
+      {
+        "A_name" : "endTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeExtensions.swift - Line: 25, Column: 5",
+        "H_initialValue" : "to.time"
+      },
+      {
+        "A_name" : "outTanPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeExtensions.swift - Line: 37, Column: 5",
+        "H_initialValue" : "outTangent?.pointValue ?? .zero"
+      },
+      {
+        "A_name" : "inTanPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeExtensions.swift - Line: 38, Column: 5",
+        "H_initialValue" : "to.inTangent?.pointValue ?? CGPoint(x: 1, y: 1)"
+      },
+      {
+        "A_name" : "progress",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeExtensions.swift - Line: 39, Column: 5",
+        "H_initialValue" : "keyTime.remap(fromLow: startTime, fromHigh: endTime, toLow: 0, toHigh: 1)"
+      }
+    ],
+    "I_parameterType" : [
+      "Keyframe",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_",
+      "keyTime"
+    ],
+    "J_returnType" : "-> CGFloat"
+  },
+  {
+    "A_name" : "startTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeExtensions.swift - Line: 24, Column: 5",
+    "H_initialValue" : "time"
+  },
+  {
+    "A_name" : "endTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeExtensions.swift - Line: 25, Column: 5",
+    "H_initialValue" : "to.time"
+  },
+  {
+    "A_name" : "outTanPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeExtensions.swift - Line: 37, Column: 5",
+    "H_initialValue" : "outTangent?.pointValue ?? .zero"
+  },
+  {
+    "A_name" : "inTanPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeExtensions.swift - Line: 38, Column: 5",
+    "H_initialValue" : "to.inTangent?.pointValue ?? CGPoint(x: 1, y: 1)"
+  },
+  {
+    "A_name" : "progress",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeExtensions.swift - Line: 39, Column: 5",
+    "H_initialValue" : "keyTime.remap(fromLow: startTime, fromHigh: endTime, toLow: 0, toHigh: 1)"
+  }
+]

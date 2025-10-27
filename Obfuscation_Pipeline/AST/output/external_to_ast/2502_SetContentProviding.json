@@ -1,0 +1,109 @@
+[
+  {
+    "A_name" : "SetContentProviding",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SetContentProviding.swift - Line: 8, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "CallbackContextEpoxyModeled",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SetContentProviding.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setContent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SetContentProviding.swift - Line: 22, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setContent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SetContentProviding.swift - Line: 29, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SetContent?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "setContentProperty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SetContentProviding.swift - Line: 35, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "setContent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SetContentProviding.swift - Line: 22, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setContent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SetContentProviding.swift - Line: 29, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SetContent?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "setContentProperty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SetContentProviding.swift - Line: 35, Column: 3",
+    "H_initialValue" : ""
+  }
+]

@@ -1,0 +1,244 @@
+[
+  {
+    "A_name" : "FeelingRepositoryImpl",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "FeelingRepository"
+    ],
+    "F_location" : "FeelingRepositoryImpl.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "localDataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeelingRepositoryImpl.swift - Line: 11, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "remoteDataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeelingRepositoryImpl.swift - Line: 12, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeelingRepositoryImpl.swift - Line: 14, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FeelingLocalDataSource",
+          "FeelingRemoteDataSource"
+        ],
+        "I_parameters" : [
+          "localDataSource",
+          "remoteDataSource"
+        ]
+      },
+      {
+        "A_name" : "saveSelectedFeeling",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeelingRepositoryImpl.swift - Line: 19, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Feeling"
+        ],
+        "I_parameters" : [
+          "feeling"
+        ]
+      },
+      {
+        "A_name" : "deleteSelectedFeeling",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeelingRepositoryImpl.swift - Line: 23, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "feelingId"
+        ]
+      },
+      {
+        "A_name" : "getSelectedFeelings",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeelingRepositoryImpl.swift - Line: 27, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> [Feeling]"
+      },
+      {
+        "A_name" : "getFeelings",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeelingRepositoryImpl.swift - Line: 31, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> [Feeling]"
+      }
+    ]
+  },
+  {
+    "A_name" : "localDataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeelingRepositoryImpl.swift - Line: 11, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "remoteDataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeelingRepositoryImpl.swift - Line: 12, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeelingRepositoryImpl.swift - Line: 14, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FeelingLocalDataSource",
+      "FeelingRemoteDataSource"
+    ],
+    "I_parameters" : [
+      "localDataSource",
+      "remoteDataSource"
+    ]
+  },
+  {
+    "A_name" : "saveSelectedFeeling",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeelingRepositoryImpl.swift - Line: 19, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Feeling"
+    ],
+    "I_parameters" : [
+      "feeling"
+    ]
+  },
+  {
+    "A_name" : "deleteSelectedFeeling",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeelingRepositoryImpl.swift - Line: 23, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "feelingId"
+    ]
+  },
+  {
+    "A_name" : "getSelectedFeelings",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeelingRepositoryImpl.swift - Line: 27, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> [Feeling]"
+  },
+  {
+    "A_name" : "getFeelings",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeelingRepositoryImpl.swift - Line: 31, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> [Feeling]"
+  }
+]

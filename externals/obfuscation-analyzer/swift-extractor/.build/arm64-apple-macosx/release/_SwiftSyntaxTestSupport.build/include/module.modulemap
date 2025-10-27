@@ -1,3 +1,0 @@
-module _SwiftSyntaxTestSupport {
-    header "/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/_SwiftSyntaxTestSupport.build/include/_SwiftSyntaxTestSupport-Swift.h"
-}

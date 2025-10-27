@@ -1,0 +1,401 @@
+[
+  {
+    "A_name" : "KFImage",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 31, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ImageBinder",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObservableObject"
+    ],
+    "F_location" : "ImageBinder.swift - Line: 36, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 38, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "downloadTask",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 40, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "loading",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 41, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "loadingOrSucceeded",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 43, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "loaded",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 49, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "animating",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 51, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "loadedImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 53, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "progress",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 54, Column: 9",
+        "H_initialValue" : ".init()"
+      },
+      {
+        "A_name" : "markLoading",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 56, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "markLoaded",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 60, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "sendChangeEvent"
+        ]
+      },
+      {
+        "A_name" : "start",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 67, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Context<HoldingView>"
+        ],
+        "I_parameters" : [
+          "context"
+        ]
+      },
+      {
+        "A_name" : "updateProgress",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 135, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int64",
+          "Int64"
+        ],
+        "I_parameters" : [
+          "downloaded",
+          "total"
+        ]
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageBinder.swift - Line: 142, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 38, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "downloadTask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 40, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "loading",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 41, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "loadingOrSucceeded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 43, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "loaded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 49, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "animating",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 51, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "loadedImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 53, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "progress",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 54, Column: 9",
+    "H_initialValue" : ".init()"
+  },
+  {
+    "A_name" : "markLoading",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 56, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "markLoaded",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 60, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "sendChangeEvent"
+    ]
+  },
+  {
+    "A_name" : "start",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 67, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Context<HoldingView>"
+    ],
+    "I_parameters" : [
+      "context"
+    ]
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 105, Column: 37",
+    "H_initialValue" : "Animation.linear(duration: fadeDuration)"
+  },
+  {
+    "A_name" : "updateProgress",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 135, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int64",
+      "Int64"
+    ],
+    "I_parameters" : [
+      "downloaded",
+      "total"
+    ]
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageBinder.swift - Line: 142, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

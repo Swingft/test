@@ -1,0 +1,182 @@
+[
+  {
+    "A_name" : "ImageDownloadRedirectHandler",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RedirectHandler.swift - Line: 30, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "handleHTTPRedirection",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandler.swift - Line: 47, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SessionDataTask",
+          "HTTPURLResponse",
+          "URLRequest",
+          "@escaping (URLRequest?) -> Void"
+        ],
+        "I_parameters" : [
+          "for",
+          "response",
+          "newRequest",
+          "completionHandler"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "handleHTTPRedirection",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandler.swift - Line: 47, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SessionDataTask",
+      "HTTPURLResponse",
+      "URLRequest",
+      "@escaping (URLRequest?) -> Void"
+    ],
+    "I_parameters" : [
+      "for",
+      "response",
+      "newRequest",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "AnyRedirectHandler",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ImageDownloadRedirectHandler"
+    ],
+    "F_location" : "RedirectHandler.swift - Line: 56, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "block",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandler.swift - Line: 58, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "handleHTTPRedirection",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandler.swift - Line: 60, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SessionDataTask",
+          "HTTPURLResponse",
+          "URLRequest",
+          "@escaping (URLRequest?) -> Void"
+        ],
+        "I_parameters" : [
+          "for",
+          "response",
+          "newRequest",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandler.swift - Line: 73, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (SessionDataTask, HTTPURLResponse, URLRequest, @escaping (URLRequest?) -> Void) -> Void"
+        ],
+        "I_parameters" : [
+          "handle"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "block",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandler.swift - Line: 58, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "handleHTTPRedirection",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandler.swift - Line: 60, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SessionDataTask",
+      "HTTPURLResponse",
+      "URLRequest",
+      "@escaping (URLRequest?) -> Void"
+    ],
+    "I_parameters" : [
+      "for",
+      "response",
+      "newRequest",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandler.swift - Line: 73, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (SessionDataTask, HTTPURLResponse, URLRequest, @escaping (URLRequest?) -> Void) -> Void"
+    ],
+    "I_parameters" : [
+      "handle"
+    ]
+  }
+]

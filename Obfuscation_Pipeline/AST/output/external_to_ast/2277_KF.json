@@ -1,0 +1,1164 @@
+[
+  {
+    "A_name" : "KF",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 49, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "KF.swift - Line: 55, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> KF.Builder"
+      },
+      {
+        "A_name" : "resource",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "KF.swift - Line: 63, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Resource?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> KF.Builder"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "KF.swift - Line: 74, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL?",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "cacheKey"
+        ],
+        "J_returnType" : "-> KF.Builder"
+      },
+      {
+        "A_name" : "dataProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "KF.swift - Line: 82, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageDataProvider?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> KF.Builder"
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "KF.swift - Line: 92, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data?",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "cacheKey"
+        ],
+        "J_returnType" : "-> KF.Builder"
+      }
+    ]
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "KF.swift - Line: 55, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> KF.Builder"
+  },
+  {
+    "A_name" : "resource",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "KF.swift - Line: 63, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Resource?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> KF.Builder"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "KF.swift - Line: 74, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL?",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "cacheKey"
+    ],
+    "J_returnType" : "-> KF.Builder"
+  },
+  {
+    "A_name" : "dataProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "KF.swift - Line: 82, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageDataProvider?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> KF.Builder"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "KF.swift - Line: 92, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data?",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "cacheKey"
+    ],
+    "J_returnType" : "-> KF.Builder"
+  },
+  {
+    "A_name" : "KF",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 102, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Builder",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 105, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 106, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 114, Column: 9",
+        "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions)"
+      },
+      {
+        "A_name" : "onFailureDelegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 116, Column: 9",
+        "H_initialValue" : "Delegate<KingfisherError, Void>()"
+      },
+      {
+        "A_name" : "onSuccessDelegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 117, Column: 9",
+        "H_initialValue" : "Delegate<RetrieveImageResult, Void>()"
+      },
+      {
+        "A_name" : "onProgressDelegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 118, Column: 9",
+        "H_initialValue" : "Delegate<(Int64, Int64), Void>()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 120, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source?"
+        ],
+        "I_parameters" : [
+          "source"
+        ]
+      },
+      {
+        "A_name" : "resultHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 124, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "progressBlock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 135, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 106, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "placeholder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 109, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "placeholder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 111, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 114, Column: 9",
+    "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions)"
+  },
+  {
+    "A_name" : "onFailureDelegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 116, Column: 9",
+    "H_initialValue" : "Delegate<KingfisherError, Void>()"
+  },
+  {
+    "A_name" : "onSuccessDelegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 117, Column: 9",
+    "H_initialValue" : "Delegate<RetrieveImageResult, Void>()"
+  },
+  {
+    "A_name" : "onProgressDelegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 118, Column: 9",
+    "H_initialValue" : "Delegate<(Int64, Int64), Void>()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 120, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source?"
+    ],
+    "I_parameters" : [
+      "source"
+    ]
+  },
+  {
+    "A_name" : "resultHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 124, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "progressBlock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 135, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KF.Builder",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 141, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "set",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "KF.swift - Line: 148, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformImageView"
+    ],
+    "I_parameters" : [
+      "to"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "set",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "KF.swift - Line: 165, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "placeholderImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 167, Column: 9",
+        "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+      }
+    ],
+    "I_parameterType" : [
+      "NSTextAttachment",
+      "@autoclosure @escaping () -> KFCrossPlatformView"
+    ],
+    "I_parameters" : [
+      "to",
+      "attributedView"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "placeholderImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 167, Column: 9",
+    "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+  },
+  {
+    "A_name" : "set",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "KF.swift - Line: 186, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "placeholderImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 188, Column: 9",
+        "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+      }
+    ],
+    "I_parameterType" : [
+      "UIButton",
+      "UIControl.State"
+    ],
+    "I_parameters" : [
+      "to",
+      "for"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "placeholderImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 188, Column: 9",
+    "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+  },
+  {
+    "A_name" : "setBackground",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "KF.swift - Line: 205, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "placeholderImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 207, Column: 9",
+        "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+      }
+    ],
+    "I_parameterType" : [
+      "UIButton",
+      "UIControl.State"
+    ],
+    "I_parameters" : [
+      "to",
+      "for"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "placeholderImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 207, Column: 9",
+    "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+  },
+  {
+    "A_name" : "set",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "discardableResult"
+    ],
+    "F_location" : "KF.swift - Line: 226, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "placeholderImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 229, Column: 9",
+        "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+      }
+    ],
+    "I_parameterType" : [
+      "CPListItem"
+    ],
+    "I_parameters" : [
+      "to"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "placeholderImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 229, Column: 9",
+    "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+  },
+  {
+    "A_name" : "set",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "KF.swift - Line: 247, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "placeholderImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 249, Column: 9",
+        "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+      }
+    ],
+    "I_parameterType" : [
+      "NSButton"
+    ],
+    "I_parameters" : [
+      "to"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "placeholderImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 249, Column: 9",
+    "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+  },
+  {
+    "A_name" : "setAlternative",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "KF.swift - Line: 263, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "placeholderImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 265, Column: 9",
+        "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+      }
+    ],
+    "I_parameterType" : [
+      "NSButton"
+    ],
+    "I_parameters" : [
+      "to"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "placeholderImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 265, Column: 9",
+    "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+  },
+  {
+    "A_name" : "set",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "KF.swift - Line: 282, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "WKInterfaceImage"
+    ],
+    "I_parameters" : [
+      "to"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "set",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "discardableResult"
+    ],
+    "F_location" : "KF.swift - Line: 299, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "placeholderImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 302, Column: 9",
+        "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+      }
+    ],
+    "I_parameterType" : [
+      "TVMonogramView"
+    ],
+    "I_parameters" : [
+      "to"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "placeholderImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 302, Column: 9",
+    "H_initialValue" : "placeholder as? KFCrossPlatformImage ?? nil"
+  },
+  {
+    "A_name" : "KF.Builder",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 315, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "placeholder",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 330, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KFCrossPlatformImage?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "placeholder",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 321, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Placeholder?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "placeholder",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 330, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformImage?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "KF.Builder",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 337, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "keepCurrentImageWhileLoading",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 374, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "onlyLoadFirstFrame",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 388, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "progressiveJPEG",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 397, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageProgressive?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "transition",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 348, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageTransition"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "fade",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 361, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TimeInterval"
+    ],
+    "I_parameters" : [
+      "duration"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "keepCurrentImageWhileLoading",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 374, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "onlyLoadFirstFrame",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 388, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "progressiveJPEG",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 397, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageProgressive?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "KF.Builder",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 404, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "loadImmediately",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "KF.swift - Line: 416, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "loadImmediately",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "KF.swift - Line: 416, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "KF",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 423, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "RedirectPayload",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 427, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 431, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 434, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "newRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 437, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "completionHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KF.swift - Line: 440, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 431, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 434, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "newRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 437, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completionHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KF.swift - Line: 440, Column: 9",
+    "H_initialValue" : ""
+  }
+]

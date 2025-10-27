@@ -1,0 +1,323 @@
+[
+  {
+    "A_name" : "LottieColor",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Codable"
+    ],
+    "F_location" : "ColorExtension.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ColorExtension.swift - Line: 56, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ColorExtension.swift - Line: 57, Column: 5",
+            "H_initialValue" : "encoder.unkeyedContainer()"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 16, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ColorExtension.swift - Line: 17, Column: 5",
+        "H_initialValue" : "try decoder.unkeyedContainer()"
+      },
+      {
+        "A_name" : "r1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ColorExtension.swift - Line: 19, Column: 5",
+        "H_initialValue" : "if !container.isAtEnd {\n        try container.decode(Double.self)\n      } else {\n        0\n      }"
+      },
+      {
+        "A_name" : "g1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ColorExtension.swift - Line: 26, Column: 5",
+        "H_initialValue" : "if !container.isAtEnd {\n        try container.decode(Double.self)\n      } else {\n        0\n      }"
+      },
+      {
+        "A_name" : "b1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ColorExtension.swift - Line: 33, Column: 5",
+        "H_initialValue" : "if !container.isAtEnd {\n        try container.decode(Double.self)\n      } else {\n        0\n      }"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 17, Column: 5",
+    "H_initialValue" : "try decoder.unkeyedContainer()"
+  },
+  {
+    "A_name" : "r1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 19, Column: 5",
+    "H_initialValue" : "if !container.isAtEnd {\n        try container.decode(Double.self)\n      } else {\n        0\n      }"
+  },
+  {
+    "A_name" : "g1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 26, Column: 5",
+    "H_initialValue" : "if !container.isAtEnd {\n        try container.decode(Double.self)\n      } else {\n        0\n      }"
+  },
+  {
+    "A_name" : "b1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 33, Column: 5",
+    "H_initialValue" : "if !container.isAtEnd {\n        try container.decode(Double.self)\n      } else {\n        0\n      }"
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 56, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ColorExtension.swift - Line: 57, Column: 5",
+        "H_initialValue" : "encoder.unkeyedContainer()"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 57, Column: 5",
+    "H_initialValue" : "encoder.unkeyedContainer()"
+  },
+  {
+    "A_name" : "LottieColor",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyInitializable"
+    ],
+    "F_location" : "ColorExtension.swift - Line: 68, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 70, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "r",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ColorExtension.swift - Line: 74, Column: 5",
+        "H_initialValue" : "array.count > 0 ? array.removeFirst() : 0"
+      },
+      {
+        "A_name" : "g",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ColorExtension.swift - Line: 75, Column: 5",
+        "H_initialValue" : "array.count > 0 ? array.removeFirst() : 0"
+      },
+      {
+        "A_name" : "b",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ColorExtension.swift - Line: 76, Column: 5",
+        "H_initialValue" : "array.count > 0 ? array.removeFirst() : 0"
+      }
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "value"
+    ]
+  },
+  {
+    "A_name" : "r",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 74, Column: 5",
+    "H_initialValue" : "array.count > 0 ? array.removeFirst() : 0"
+  },
+  {
+    "A_name" : "g",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 75, Column: 5",
+    "H_initialValue" : "array.count > 0 ? array.removeFirst() : 0"
+  },
+  {
+    "A_name" : "b",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 76, Column: 5",
+    "H_initialValue" : "array.count > 0 ? array.removeFirst() : 0"
+  },
+  {
+    "A_name" : "LottieColor",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 93, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "clearColor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ColorExtension.swift - Line: 94, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cgColorValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ColorExtension.swift - Line: 98, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "clearColor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ColorExtension.swift - Line: 94, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cgColorValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ColorExtension.swift - Line: 98, Column: 3",
+    "H_initialValue" : ""
+  }
+]

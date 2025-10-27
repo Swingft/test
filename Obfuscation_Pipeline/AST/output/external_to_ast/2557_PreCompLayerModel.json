@@ -1,0 +1,425 @@
+[
+  {
+    "A_name" : "PreCompLayerModel",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "LayerModel"
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 15, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompLayerModel.swift - Line: 16, Column: 5",
+            "H_initialValue" : "try decoder.container(keyedBy: PreCompLayerModel.CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 24, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String: Any]"
+        ],
+        "I_parameters" : [
+          "dictionary"
+        ]
+      },
+      {
+        "A_name" : "referenceID",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 39, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "timeRemapping",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 42, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "width",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 45, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "height",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 48, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 50, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompLayerModel.swift - Line: 52, Column: 5",
+            "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      },
+      {
+        "A_name" : "CodingKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String",
+          "CodingKey"
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 61, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "referenceID",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompLayerModel.swift - Line: 62, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "timeRemapping",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompLayerModel.swift - Line: 63, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "width",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompLayerModel.swift - Line: 64, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "height",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompLayerModel.swift - Line: 65, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 15, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 16, Column: 5",
+        "H_initialValue" : "try decoder.container(keyedBy: PreCompLayerModel.CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 16, Column: 5",
+    "H_initialValue" : "try decoder.container(keyedBy: PreCompLayerModel.CodingKeys.self)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 24, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String: Any]"
+    ],
+    "I_parameters" : [
+      "dictionary"
+    ]
+  },
+  {
+    "A_name" : "referenceID",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 39, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "timeRemapping",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 42, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "width",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 45, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "height",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 48, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 50, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 52, Column: 5",
+        "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 52, Column: 5",
+    "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+  },
+  {
+    "A_name" : "CodingKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String",
+      "CodingKey"
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 61, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "referenceID",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 62, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "timeRemapping",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 63, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "width",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 64, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "height",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayerModel.swift - Line: 65, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "PreCompLayerModel",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "PreCompLayerModel.swift - Line: 74, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

@@ -1,0 +1,608 @@
+[
+  {
+    "A_name" : "TrimType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int",
+      "Codable"
+    ],
+    "F_location" : "Trim.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "simultaneously",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 11, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "individually",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 12, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Trim",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ShapeItem"
+    ],
+    "F_location" : "Trim.swift - Line: 17, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "Trim.swift - Line: 21, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Trim.swift - Line: 22, Column: 5",
+            "H_initialValue" : "try decoder.container(keyedBy: Trim.CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "Trim.swift - Line: 30, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "startDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Trim.swift - Line: 31, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.start)"
+          },
+          {
+            "A_name" : "endDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Trim.swift - Line: 33, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.end)"
+          },
+          {
+            "A_name" : "offsetDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Trim.swift - Line: 35, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.offset)"
+          },
+          {
+            "A_name" : "trimTypeRawValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Trim.swift - Line: 37, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.trimType) ?? TrimType.individually.rawValue"
+          }
+        ],
+        "I_parameterType" : [
+          "[String: Any]"
+        ],
+        "I_parameters" : [
+          "dictionary"
+        ]
+      },
+      {
+        "A_name" : "start",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 48, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "end",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 51, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "offset",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 54, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "trimType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 56, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isEmpty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 59, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Trim.swift - Line: 66, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Trim.swift - Line: 68, Column: 5",
+            "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      },
+      {
+        "A_name" : "CodingKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String",
+          "CodingKey"
+        ],
+        "F_location" : "Trim.swift - Line: 77, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "start",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Trim.swift - Line: 78, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "end",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Trim.swift - Line: 79, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "offset",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Trim.swift - Line: 80, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "trimType",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Trim.swift - Line: 81, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "Trim.swift - Line: 21, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 22, Column: 5",
+        "H_initialValue" : "try decoder.container(keyedBy: Trim.CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Trim.swift - Line: 22, Column: 5",
+    "H_initialValue" : "try decoder.container(keyedBy: Trim.CodingKeys.self)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "Trim.swift - Line: 30, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "startDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 31, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.start)"
+      },
+      {
+        "A_name" : "endDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 33, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.end)"
+      },
+      {
+        "A_name" : "offsetDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 35, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.offset)"
+      },
+      {
+        "A_name" : "trimTypeRawValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 37, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.trimType) ?? TrimType.individually.rawValue"
+      }
+    ],
+    "I_parameterType" : [
+      "[String: Any]"
+    ],
+    "I_parameters" : [
+      "dictionary"
+    ]
+  },
+  {
+    "A_name" : "startDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Trim.swift - Line: 31, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.start)"
+  },
+  {
+    "A_name" : "endDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Trim.swift - Line: 33, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.end)"
+  },
+  {
+    "A_name" : "offsetDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Trim.swift - Line: 35, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.offset)"
+  },
+  {
+    "A_name" : "trimTypeRawValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Trim.swift - Line: 37, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.trimType) ?? TrimType.individually.rawValue"
+  },
+  {
+    "A_name" : "start",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Trim.swift - Line: 48, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "end",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Trim.swift - Line: 51, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "offset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Trim.swift - Line: 54, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "trimType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Trim.swift - Line: 56, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isEmpty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Trim.swift - Line: 59, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Trim.swift - Line: 66, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 68, Column: 5",
+        "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Trim.swift - Line: 68, Column: 5",
+    "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+  },
+  {
+    "A_name" : "CodingKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String",
+      "CodingKey"
+    ],
+    "F_location" : "Trim.swift - Line: 77, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "start",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 78, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "end",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 79, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "offset",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 80, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "trimType",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Trim.swift - Line: 81, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Trim",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "Trim.swift - Line: 90, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

@@ -1,0 +1,1271 @@
+[
+  {
+    "A_name" : "MainThreadAnimationLayer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CALayer",
+      "RootAnimationLayer"
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 20, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "layers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MainThreadAnimationLayer.swift - Line: 36, Column: 5",
+            "H_initialValue" : "animation.layers.initializeCompositionLayers(\n      assetLibrary: animation.assetLibrary,\n      layerImageProvider: layerImageProvider,\n      layerTextProvider: layerTextProvider,\n      layerFontProvider: layerFontProvider,\n      textProvider: textProvider,\n      fontProvider: fontProvider,\n      frameRate: CGFloat(animation.framerate),\n      rootAnimationLayer: self)"
+          },
+          {
+            "A_name" : "imageLayers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MainThreadAnimationLayer.swift - Line: 46, Column: 5",
+            "H_initialValue" : "[ImageCompositionLayer]()"
+          },
+          {
+            "A_name" : "textLayers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MainThreadAnimationLayer.swift - Line: 47, Column: 5",
+            "H_initialValue" : "[TextCompositionLayer]()"
+          },
+          {
+            "A_name" : "mattedLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MainThreadAnimationLayer.swift - Line: 49, Column: 5",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+          "LottieAnimation",
+          "AnimationImageProvider",
+          "AnimationKeypathTextProvider",
+          "AnimationFontProvider",
+          "Bool",
+          "LottieLogger"
+        ],
+        "I_parameters" : [
+          "animation",
+          "imageProvider",
+          "textProvider",
+          "fontProvider",
+          "maskAnimationToBounds",
+          "logger"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 87, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 102, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "respectAnimationFrameRate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 108, Column: 3",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "needsDisplay",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override",
+          "class"
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 112, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forKey"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "action",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 119, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forKey"
+        ],
+        "J_returnType" : "-> CAAction?"
+      },
+      {
+        "A_name" : "display",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 129, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "newFrame",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MainThreadAnimationLayer.swift - Line: 131, Column: 5",
+            "H_initialValue" : "if\n        let animationKeys = animationKeys(),\n        !animationKeys.isEmpty\n      {\n        presentation()?.currentFrame ?? currentFrame\n      } else {\n        \/\/ We ignore the presentation's frame if there's no animation in the layer.\n        currentFrame\n      }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "currentFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "NSManaged"
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 152, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lottieAnimationLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "weak",
+        "D_attributes" : [
+          "weak"
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 155, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "forceDisplayUpdateOnEachFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 163, Column: 3",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "animationLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 165, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "primaryAnimationKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 167, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isAnimationPlaying",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 171, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_animationLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 175, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "imageProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 179, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "renderScale",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 188, Column: 3",
+        "H_initialValue" : "1"
+      },
+      {
+        "A_name" : "textProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 196, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "fontProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 201, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "reloadImages",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 206, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "removeAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 210, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "forceDisplayUpdate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 215, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "logHierarchyKeypaths",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 221, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "allHierarchyKeypaths",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 229, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> [String]"
+      },
+      {
+        "A_name" : "setValueProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 233, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnyValueProvider",
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "_",
+          "keypath"
+        ]
+      },
+      {
+        "A_name" : "removeValueProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 244, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "for"
+        ]
+      },
+      {
+        "A_name" : "getValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 255, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath",
+          "CGFloat?"
+        ],
+        "I_parameters" : [
+          "for",
+          "atFrame"
+        ],
+        "J_returnType" : "-> Any?"
+      },
+      {
+        "A_name" : "getOriginalValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 267, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath",
+          "AnimationFrameTime?"
+        ],
+        "I_parameters" : [
+          "for",
+          "atFrame"
+        ],
+        "J_returnType" : "-> Any?"
+      },
+      {
+        "A_name" : "layer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 279, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> CALayer?"
+      },
+      {
+        "A_name" : "keypath",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 288, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CALayer"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> AnimationKeypath?"
+      },
+      {
+        "A_name" : "animatorNodes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 297, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MainThreadAnimationLayer.swift - Line: 298, Column: 5",
+            "H_initialValue" : "[AnimatorNode]()"
+          }
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> [AnimatorNode]?"
+      },
+      {
+        "A_name" : "layerImageProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 312, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "layerTextProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 313, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "layerFontProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 314, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "logger",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 315, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 20, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "layers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 36, Column: 5",
+        "H_initialValue" : "animation.layers.initializeCompositionLayers(\n      assetLibrary: animation.assetLibrary,\n      layerImageProvider: layerImageProvider,\n      layerTextProvider: layerTextProvider,\n      layerFontProvider: layerFontProvider,\n      textProvider: textProvider,\n      fontProvider: fontProvider,\n      frameRate: CGFloat(animation.framerate),\n      rootAnimationLayer: self)"
+      },
+      {
+        "A_name" : "imageLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 46, Column: 5",
+        "H_initialValue" : "[ImageCompositionLayer]()"
+      },
+      {
+        "A_name" : "textLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 47, Column: 5",
+        "H_initialValue" : "[TextCompositionLayer]()"
+      },
+      {
+        "A_name" : "mattedLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 49, Column: 5",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+      "LottieAnimation",
+      "AnimationImageProvider",
+      "AnimationKeypathTextProvider",
+      "AnimationFontProvider",
+      "Bool",
+      "LottieLogger"
+    ],
+    "I_parameters" : [
+      "animation",
+      "imageProvider",
+      "textProvider",
+      "fontProvider",
+      "maskAnimationToBounds",
+      "logger"
+    ]
+  },
+  {
+    "A_name" : "layers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 36, Column: 5",
+    "H_initialValue" : "animation.layers.initializeCompositionLayers(\n      assetLibrary: animation.assetLibrary,\n      layerImageProvider: layerImageProvider,\n      layerTextProvider: layerTextProvider,\n      layerFontProvider: layerFontProvider,\n      textProvider: textProvider,\n      fontProvider: fontProvider,\n      frameRate: CGFloat(animation.framerate),\n      rootAnimationLayer: self)"
+  },
+  {
+    "A_name" : "imageLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 46, Column: 5",
+    "H_initialValue" : "[ImageCompositionLayer]()"
+  },
+  {
+    "A_name" : "textLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 47, Column: 5",
+    "H_initialValue" : "[TextCompositionLayer]()"
+  },
+  {
+    "A_name" : "mattedLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 49, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 87, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 102, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "respectAnimationFrameRate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 108, Column: 3",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "needsDisplay",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override",
+      "class"
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 112, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forKey"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "action",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 119, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forKey"
+    ],
+    "J_returnType" : "-> CAAction?"
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 121, Column: 7",
+    "H_initialValue" : "CABasicAnimation(keyPath: event)"
+  },
+  {
+    "A_name" : "display",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 129, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "newFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 131, Column: 5",
+        "H_initialValue" : "if\n        let animationKeys = animationKeys(),\n        !animationKeys.isEmpty\n      {\n        presentation()?.currentFrame ?? currentFrame\n      } else {\n        \/\/ We ignore the presentation's frame if there's no animation in the layer.\n        currentFrame\n      }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "newFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 131, Column: 5",
+    "H_initialValue" : "if\n        let animationKeys = animationKeys(),\n        !animationKeys.isEmpty\n      {\n        presentation()?.currentFrame ?? currentFrame\n      } else {\n        \/\/ We ignore the presentation's frame if there's no animation in the layer.\n        currentFrame\n      }"
+  },
+  {
+    "A_name" : "currentFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "NSManaged"
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 152, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lottieAnimationLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 155, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "forceDisplayUpdateOnEachFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 163, Column: 3",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "animationLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 165, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "primaryAnimationKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 167, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isAnimationPlaying",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 171, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_animationLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 175, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 179, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "renderScale",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 188, Column: 3",
+    "H_initialValue" : "1"
+  },
+  {
+    "A_name" : "textProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 196, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fontProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 201, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "reloadImages",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 206, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "removeAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 210, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "forceDisplayUpdate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 215, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "logHierarchyKeypaths",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 221, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "allHierarchyKeypaths",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 229, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> [String]"
+  },
+  {
+    "A_name" : "setValueProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 233, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnyValueProvider",
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "_",
+      "keypath"
+    ]
+  },
+  {
+    "A_name" : "removeValueProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 244, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "for"
+    ]
+  },
+  {
+    "A_name" : "getValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 255, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath",
+      "CGFloat?"
+    ],
+    "I_parameters" : [
+      "for",
+      "atFrame"
+    ],
+    "J_returnType" : "-> Any?"
+  },
+  {
+    "A_name" : "getOriginalValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 267, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath",
+      "AnimationFrameTime?"
+    ],
+    "I_parameters" : [
+      "for",
+      "atFrame"
+    ],
+    "J_returnType" : "-> Any?"
+  },
+  {
+    "A_name" : "layer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 279, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> CALayer?"
+  },
+  {
+    "A_name" : "keypath",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 288, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CALayer"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> AnimationKeypath?"
+  },
+  {
+    "A_name" : "animatorNodes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 297, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 298, Column: 5",
+        "H_initialValue" : "[AnimatorNode]()"
+      }
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> [AnimatorNode]?"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 298, Column: 5",
+    "H_initialValue" : "[AnimatorNode]()"
+  },
+  {
+    "A_name" : "layerImageProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 312, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "layerTextProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 313, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "layerFontProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 314, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "logger",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 315, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "BlankImageProvider",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnimationImageProvider"
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 320, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "imageForAsset",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainThreadAnimationLayer.swift - Line: 321, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageAsset"
+        ],
+        "I_parameters" : [
+          "asset"
+        ],
+        "J_returnType" : "-> CGImage?"
+      }
+    ]
+  },
+  {
+    "A_name" : "imageForAsset",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainThreadAnimationLayer.swift - Line: 321, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageAsset"
+    ],
+    "I_parameters" : [
+      "asset"
+    ],
+    "J_returnType" : "-> CGImage?"
+  }
+]

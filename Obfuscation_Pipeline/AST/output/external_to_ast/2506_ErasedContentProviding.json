@@ -1,0 +1,150 @@
+[
+  {
+    "A_name" : "ErasedContentProviding",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ErasedContentProviding.swift - Line: 7, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "erasedContent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ErasedContentProviding.swift - Line: 12, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isErasedContentEqual",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ErasedContentProviding.swift - Line: 17, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "erasedContent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ErasedContentProviding.swift - Line: 12, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isErasedContentEqual",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ErasedContentProviding.swift - Line: 17, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "EpoxyModeled",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ErasedContentProviding.swift - Line: 22, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "erasedContent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ErasedContentProviding.swift - Line: 27, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isErasedContentEqual",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ErasedContentProviding.swift - Line: 35, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "contentProperty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ErasedContentProviding.swift - Line: 42, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isContentEqualProperty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ErasedContentProviding.swift - Line: 46, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "erasedContent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ErasedContentProviding.swift - Line: 27, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isErasedContentEqual",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ErasedContentProviding.swift - Line: 35, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "contentProperty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ErasedContentProviding.swift - Line: 42, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isContentEqualProperty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ErasedContentProviding.swift - Line: 46, Column: 3",
+    "H_initialValue" : ""
+  }
+]

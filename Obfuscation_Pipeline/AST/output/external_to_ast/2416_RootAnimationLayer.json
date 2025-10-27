@@ -1,0 +1,678 @@
+[
+  {
+    "A_name" : "RootAnimationLayer",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CALayer"
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lottieAnimationLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 10, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 12, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "renderScale",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 13, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "respectAnimationFrameRate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 14, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_animationLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 16, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "imageProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 17, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "textProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 18, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "fontProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 19, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "primaryAnimationKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 23, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isAnimationPlaying",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 28, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "removeAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 32, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "reloadImages",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 34, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "forceDisplayUpdate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 35, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "logHierarchyKeypaths",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 36, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "allHierarchyKeypaths",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 37, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> [String]"
+      },
+      {
+        "A_name" : "setValueProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 38, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnyValueProvider",
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "_",
+          "keypath"
+        ]
+      },
+      {
+        "A_name" : "removeValueProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 39, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "for"
+        ]
+      },
+      {
+        "A_name" : "getValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 40, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath",
+          "AnimationFrameTime?"
+        ],
+        "I_parameters" : [
+          "for",
+          "atFrame"
+        ],
+        "J_returnType" : "-> Any?"
+      },
+      {
+        "A_name" : "getOriginalValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 41, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath",
+          "AnimationFrameTime?"
+        ],
+        "I_parameters" : [
+          "for",
+          "atFrame"
+        ],
+        "J_returnType" : "-> Any?"
+      },
+      {
+        "A_name" : "layer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 43, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> CALayer?"
+      },
+      {
+        "A_name" : "animatorNodes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 44, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> [AnimatorNode]?"
+      }
+    ]
+  },
+  {
+    "A_name" : "lottieAnimationLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 10, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 12, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "renderScale",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 13, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "respectAnimationFrameRate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 14, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_animationLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 16, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 17, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "textProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 18, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fontProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 19, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "primaryAnimationKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 23, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isAnimationPlaying",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 28, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "removeAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 32, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "reloadImages",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 34, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "forceDisplayUpdate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 35, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "logHierarchyKeypaths",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 36, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "allHierarchyKeypaths",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 37, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> [String]"
+  },
+  {
+    "A_name" : "setValueProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 38, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnyValueProvider",
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "_",
+      "keypath"
+    ]
+  },
+  {
+    "A_name" : "removeValueProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 39, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "for"
+    ]
+  },
+  {
+    "A_name" : "getValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 40, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath",
+      "AnimationFrameTime?"
+    ],
+    "I_parameters" : [
+      "for",
+      "atFrame"
+    ],
+    "J_returnType" : "-> Any?"
+  },
+  {
+    "A_name" : "getOriginalValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 41, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath",
+      "AnimationFrameTime?"
+    ],
+    "I_parameters" : [
+      "for",
+      "atFrame"
+    ],
+    "J_returnType" : "-> Any?"
+  },
+  {
+    "A_name" : "layer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 43, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> CALayer?"
+  },
+  {
+    "A_name" : "animatorNodes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 44, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> [AnimatorNode]?"
+  },
+  {
+    "A_name" : "AnimationKey",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RootAnimationLayer.swift - Line: 49, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "managed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 51, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "specific",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RootAnimationLayer.swift - Line: 53, Column: 8",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  }
+]

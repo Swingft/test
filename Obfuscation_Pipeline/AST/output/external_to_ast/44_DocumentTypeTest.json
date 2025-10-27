@@ -1,0 +1,448 @@
+[
+  {
+    "A_name" : "DocumentTypeTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testLinuxTestSuiteIncludesAllTests",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 14, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testConstructorValidationOkWithBlankName",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 23, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "fail",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DocumentTypeTest.swift - Line: 24, Column: 3",
+            "H_initialValue" : "DocumentType(\"\", \"\", \"\", \"\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testConstructorValidationThrowsExceptionOnNulls",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 28, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "fail",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DocumentTypeTest.swift - Line: 29, Column: 3",
+            "H_initialValue" : "DocumentType(\"html\", \"\", \"\", \"\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testConstructorValidationOkWithBlankPublicAndSystemIds",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 33, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "fail",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DocumentTypeTest.swift - Line: 34, Column: 3",
+            "H_initialValue" : "DocumentType(\"html\", \"\", \"\", \"\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testOuterHtmlGeneration",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 38, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "html5",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DocumentTypeTest.swift - Line: 39, Column: 3",
+            "H_initialValue" : "DocumentType(\"html\", \"\", \"\", \"\")"
+          },
+          {
+            "A_name" : "publicDocType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DocumentTypeTest.swift - Line: 42, Column: 3",
+            "H_initialValue" : "DocumentType(\"html\", \"-\/\/IETF\/\/DTD HTML\/\/\", \"\", \"\")"
+          },
+          {
+            "A_name" : "systemDocType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DocumentTypeTest.swift - Line: 45, Column: 3",
+            "H_initialValue" : "DocumentType(\"html\", \"\", \"http:\/\/www.ibm.com\/data\/dtd\/v11\/ibmxhtml1-transitional.dtd\", \"\")"
+          },
+          {
+            "A_name" : "combo",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DocumentTypeTest.swift - Line: 48, Column: 3",
+            "H_initialValue" : "DocumentType(\"notHtml\", \"--public\", \"--system\", \"\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "allTests",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 52, Column: 2",
+        "H_initialValue" : "{\n\t\treturn [\n            (\"testLinuxTestSuiteIncludesAllTests\", testLinuxTestSuiteIncludesAllTests),\n            (\"testConstructorValidationOkWithBlankName\", testConstructorValidationOkWithBlankName),\n\t\t\t(\"testConstructorValidationThrowsExceptionOnNulls\", testConstructorValidationThrowsExceptionOnNulls),\n\t\t\t(\"testConstructorValidationOkWithBlankPublicAndSystemIds\", testConstructorValidationOkWithBlankPublicAndSystemIds),\n\t\t\t(\"testOuterHtmlGeneration\", testOuterHtmlGeneration)\n\t\t]\n\t}()"
+      }
+    ]
+  },
+  {
+    "A_name" : "testLinuxTestSuiteIncludesAllTests",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 14, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "thisClass",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 16, Column: 13",
+    "H_initialValue" : "type(of: self)"
+  },
+  {
+    "A_name" : "linuxCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 17, Column: 13",
+    "H_initialValue" : "thisClass.allTests.count"
+  },
+  {
+    "A_name" : "darwinCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 18, Column: 13",
+    "H_initialValue" : "Int(thisClass.defaultTestSuite.testCaseCount)"
+  },
+  {
+    "A_name" : "testConstructorValidationOkWithBlankName",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 23, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "fail",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 24, Column: 3",
+        "H_initialValue" : "DocumentType(\"\", \"\", \"\", \"\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fail",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 24, Column: 3",
+    "H_initialValue" : "DocumentType(\"\", \"\", \"\", \"\")"
+  },
+  {
+    "A_name" : "testConstructorValidationThrowsExceptionOnNulls",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 28, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "fail",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 29, Column: 3",
+        "H_initialValue" : "DocumentType(\"html\", \"\", \"\", \"\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fail",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 29, Column: 3",
+    "H_initialValue" : "DocumentType(\"html\", \"\", \"\", \"\")"
+  },
+  {
+    "A_name" : "testConstructorValidationOkWithBlankPublicAndSystemIds",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 33, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "fail",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 34, Column: 3",
+        "H_initialValue" : "DocumentType(\"html\", \"\", \"\", \"\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fail",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 34, Column: 3",
+    "H_initialValue" : "DocumentType(\"html\", \"\", \"\", \"\")"
+  },
+  {
+    "A_name" : "testOuterHtmlGeneration",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 38, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "html5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 39, Column: 3",
+        "H_initialValue" : "DocumentType(\"html\", \"\", \"\", \"\")"
+      },
+      {
+        "A_name" : "publicDocType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 42, Column: 3",
+        "H_initialValue" : "DocumentType(\"html\", \"-\/\/IETF\/\/DTD HTML\/\/\", \"\", \"\")"
+      },
+      {
+        "A_name" : "systemDocType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 45, Column: 3",
+        "H_initialValue" : "DocumentType(\"html\", \"\", \"http:\/\/www.ibm.com\/data\/dtd\/v11\/ibmxhtml1-transitional.dtd\", \"\")"
+      },
+      {
+        "A_name" : "combo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DocumentTypeTest.swift - Line: 48, Column: 3",
+        "H_initialValue" : "DocumentType(\"notHtml\", \"--public\", \"--system\", \"\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "html5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 39, Column: 3",
+    "H_initialValue" : "DocumentType(\"html\", \"\", \"\", \"\")"
+  },
+  {
+    "A_name" : "publicDocType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 42, Column: 3",
+    "H_initialValue" : "DocumentType(\"html\", \"-\/\/IETF\/\/DTD HTML\/\/\", \"\", \"\")"
+  },
+  {
+    "A_name" : "systemDocType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 45, Column: 3",
+    "H_initialValue" : "DocumentType(\"html\", \"\", \"http:\/\/www.ibm.com\/data\/dtd\/v11\/ibmxhtml1-transitional.dtd\", \"\")"
+  },
+  {
+    "A_name" : "combo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 48, Column: 3",
+    "H_initialValue" : "DocumentType(\"notHtml\", \"--public\", \"--system\", \"\")"
+  },
+  {
+    "A_name" : "allTests",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DocumentTypeTest.swift - Line: 52, Column: 2",
+    "H_initialValue" : "{\n\t\treturn [\n            (\"testLinuxTestSuiteIncludesAllTests\", testLinuxTestSuiteIncludesAllTests),\n            (\"testConstructorValidationOkWithBlankName\", testConstructorValidationOkWithBlankName),\n\t\t\t(\"testConstructorValidationThrowsExceptionOnNulls\", testConstructorValidationThrowsExceptionOnNulls),\n\t\t\t(\"testConstructorValidationOkWithBlankPublicAndSystemIds\", testConstructorValidationOkWithBlankPublicAndSystemIds),\n\t\t\t(\"testOuterHtmlGeneration\", testOuterHtmlGeneration)\n\t\t]\n\t}()"
+  }
+]

@@ -1,0 +1,1290 @@
+[
+  {
+    "A_name" : "MainSettingViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseViewController"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "viewModel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 13, Column: 5",
+        "H_initialValue" : "DependencyInjector.mainViewModel()"
+      },
+      {
+        "A_name" : "dismissCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 15, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setRemoteUrl",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "resetButtonInitialWidth",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "antiCaptureActivateButtonInitialWidth",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "tapGesture",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 19, Column: 5",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: nil)"
+      },
+      {
+        "A_name" : "buttonClickFeedback",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 21, Column: 5",
+        "H_initialValue" : "UIImpactFeedbackGenerator(style: .medium)"
+      },
+      {
+        "A_name" : "sampleTextView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 25, Column: 5",
+        "H_initialValue" : "{\n        let textView = UITextView()\n        textView.backgroundColor = .white\n        textView.textColor = .black\n        textView.textAlignment = .left\n        textView.font = .systemFont(ofSize: 5, weight: .light)\n        textView.isEditable = true\n        \n        return textView\n    }()"
+      },
+      {
+        "A_name" : "remainOfContentView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 36, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        \n        view.backgroundColor = .clear\n        \n        view.addGestureRecognizer(UITapGestureRecognizer(\n            target: self, action: #selector(tapDismiss(_ :)))\n        )\n        \n        return view\n    }()"
+      },
+      {
+        "A_name" : "contentView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 48, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        \n        view.setRounded(50)\n        view.backgroundColor = .white\n        \n        return view\n    }()"
+      },
+      {
+        "A_name" : "mainTitleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 57, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        \n        label.numberOfLines = 0\n        label.font = .boldSystemFont(ofSize: CGFloat(36))\n        label.textColor = .black\n        label.text = StringConstants.setting\n        \n        return label\n    }()"
+      },
+      {
+        "A_name" : "settingScrollViewContent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 68, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        \n        return view\n    }()"
+      },
+      {
+        "A_name" : "setRemoteUrlTitleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 76, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        \n        label.numberOfLines = 0\n        label.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        label.textColor = .black\n        label.text = StringConstants.setRemoteUrlViewTitle\n        \n        return label\n    }()"
+      },
+      {
+        "A_name" : "setRemoteUrlTextField",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 87, Column: 5",
+        "H_initialValue" : "{\n        let textField = UITextField()\n\n        textField.setRounded()\n        textField.setBorder(.black, 8)\n        textField.layer.cornerRadius = 4\n        textField.backgroundColor = .white\n        textField.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        textField.textColor = .black\n        textField.placeholder = StringConstants.setRemoteUrlTextFieldPlaceholder\n        textField.addLeftPadding()\n        \n        textField.delegate = self\n\n        return textField\n    }()"
+      },
+      {
+        "A_name" : "resetButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 104, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton()\n        \n        button.setTitle(StringConstants.reset, for: .normal)\n        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        button.setTitleColor(.white, for: .normal)\n        button.backgroundColor = .black\n        button.layer.cornerRadius = CGFloat(NumberConstants.settingButtonCornerRadius)\n        button.contentEdgeInsets = UIEdgeInsets(\n            top: CGFloat(NumberConstants.settingButtonContentEdgeInsetsTop),\n            left: CGFloat(NumberConstants.settingButtonContentEdgeInsetsLeft),\n            bottom: CGFloat(NumberConstants.settingButtonContentEdgeInsetsBottom),\n            right: CGFloat(NumberConstants.settingButtonContentEdgeInsetsRight)\n        )\n        \n        resetButtonInitialWidth = button.intrinsicContentSize.width\n        \n        button.addTarget(self, action: #selector(tapRemoteUrlResetButton(_:)), for: .touchUpInside)\n        \n        return button\n    }()"
+      },
+      {
+        "A_name" : "loadRemoteUrlPresetTitleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 128, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        \n        label.numberOfLines = 0\n        label.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        label.textColor = .black\n        label.text = StringConstants.setRemoteUrlPresetViewTitle\n        \n        return label\n    }()"
+      },
+      {
+        "A_name" : "remoteUrlPresetStackView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 139, Column: 5",
+        "H_initialValue" : "{\n        let stackView = UIStackView()\n        \n        stackView.axis = .horizontal\n        stackView.alignment = .leading\n        stackView.distribution = .fill\n        stackView.spacing = CGFloat(NumberConstants.settingStackViewSpacing)\n        stackView.translatesAutoresizingMaskIntoConstraints = false\n        \n        return stackView\n    }()"
+      },
+      {
+        "A_name" : "remoteUrlPresetStackScrollView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 151, Column: 5",
+        "H_initialValue" : "{\n        let scrollView = UIScrollView()\n        scrollView.translatesAutoresizingMaskIntoConstraints = false\n        scrollView.showsHorizontalScrollIndicator = false\n        scrollView.showsVerticalScrollIndicator = false\n        \n        return scrollView\n    }()"
+      },
+      {
+        "A_name" : "remoteUrlPresetClearButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 160, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton()\n\n        button.setTitle(StringConstants.clear, for: .normal)\n        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        button.setTitleColor(.white, for: .normal)\n        button.setBackgroundColor(color: .gray, forState: .normal, cornerRadius: CGFloat(NumberConstants.settingButtonCornerRadius))\n        button.setBackgroundColor(color: .black, forState: .highlighted, cornerRadius: CGFloat(NumberConstants.settingButtonCornerRadius))\n        button.contentEdgeInsets = UIEdgeInsets(\n            top: CGFloat(NumberConstants.settingButtonContentEdgeInsetsTop),\n            left: CGFloat(NumberConstants.settingButtonContentEdgeInsetsLeft),\n            bottom: CGFloat(NumberConstants.settingButtonContentEdgeInsetsBottom),\n            right: CGFloat(NumberConstants.settingButtonContentEdgeInsetsRight)\n        )\n\n        button.addTarget(self, action: #selector(tapRemoteUrlPresetClearButton), for: .touchUpInside)\n\n        return button\n    }()"
+      },
+      {
+        "A_name" : "remoteUrlPresetAddButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 180, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton()\n        \n        button.setTitle(StringConstants.plusSymbol, for: .normal)\n        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        button.setTitleColor(.white, for: .normal)\n        button.setBackgroundColor(color: .gray, forState: .normal, cornerRadius: CGFloat(NumberConstants.settingButtonCornerRadius))\n        button.setBackgroundColor(color: .black, forState: .highlighted, cornerRadius: CGFloat(NumberConstants.settingButtonCornerRadius))\n        button.contentEdgeInsets = UIEdgeInsets(\n            top: CGFloat(NumberConstants.settingButtonContentEdgeInsetsTop),\n            left: CGFloat(NumberConstants.settingButtonContentEdgeInsetsLeft),\n            bottom: CGFloat(NumberConstants.settingButtonContentEdgeInsetsBottom),\n            right: CGFloat(NumberConstants.settingButtonContentEdgeInsetsRight)\n        )\n\n        button.addTarget(self, action: #selector(tapRemoteUrlPresetAddButton), for: .touchUpInside)\n\n        return button\n    }()"
+      },
+      {
+        "A_name" : "stealienImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 200, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.contentMode = .scaleAspectFit\n        \n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 208, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "viewDidDisappear",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 232, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "setupVC",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 236, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupVM",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 344, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupBind",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 348, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "touchesBegan",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 395, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Set<UITouch>",
+          "UIEvent?"
+        ],
+        "I_parameters" : [
+          "_",
+          "with"
+        ]
+      },
+      {
+        "A_name" : "tapDismiss",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 401, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITapGestureRecognizer"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "tapRemoteUrlResetButton",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 408, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UIButton"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "tapRemoteUrlPresetClearButton",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 416, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "alertController",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MainSettingViewController.swift - Line: 420, Column: 9",
+            "H_initialValue" : "UIAlertController(title: StringConstants.removeAllPresetAlertTitle, message: StringConstants.removeAllPresetAlertMessage, preferredStyle: .alert)"
+          },
+          {
+            "A_name" : "deleteAction",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MainSettingViewController.swift - Line: 422, Column: 9",
+            "H_initialValue" : "UIAlertAction(title: StringConstants.alertRemove, style: .destructive) { [weak self] _ in\n            self?.viewModel.removeAllRemoteUrlPresetData()\n        }"
+          },
+          {
+            "A_name" : "cancelAction",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MainSettingViewController.swift - Line: 427, Column: 9",
+            "H_initialValue" : "UIAlertAction(title: StringConstants.alertCancle, style: .cancel, handler: nil)"
+          }
+        ],
+        "I_parameterType" : [
+          "UIButton"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "tapRemoteUrlPresetAddButton",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 433, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UIButton"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "clearRemoteUrl",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 440, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "savePresetUrl",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 446, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "index"
+        ]
+      },
+      {
+        "A_name" : "activateSecretSettings",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 454, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "antiCaptureSettingView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MainSettingViewController.swift - Line: 459, Column: 9",
+            "H_initialValue" : "activateAntiCaptureSettingView(topView: remoteUrlPresetStackView)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "activateAntiCaptureSettingView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 463, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "antiCaptureSettingView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MainSettingViewController.swift - Line: 466, Column: 9",
+            "H_initialValue" : "AntiCaptureSettingView()"
+          }
+        ],
+        "I_parameterType" : [
+          "UIView"
+        ],
+        "I_parameters" : [
+          "topView"
+        ],
+        "J_returnType" : "-> UIView"
+      }
+    ]
+  },
+  {
+    "A_name" : "viewModel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 13, Column: 5",
+    "H_initialValue" : "DependencyInjector.mainViewModel()"
+  },
+  {
+    "A_name" : "dismissCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 15, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setRemoteUrl",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "resetButtonInitialWidth",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "antiCaptureActivateButtonInitialWidth",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "tapGesture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 19, Column: 5",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: nil)"
+  },
+  {
+    "A_name" : "buttonClickFeedback",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 21, Column: 5",
+    "H_initialValue" : "UIImpactFeedbackGenerator(style: .medium)"
+  },
+  {
+    "A_name" : "sampleTextView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 25, Column: 5",
+    "H_initialValue" : "{\n        let textView = UITextView()\n        textView.backgroundColor = .white\n        textView.textColor = .black\n        textView.textAlignment = .left\n        textView.font = .systemFont(ofSize: 5, weight: .light)\n        textView.isEditable = true\n        \n        return textView\n    }()"
+  },
+  {
+    "A_name" : "textView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 26, Column: 9",
+    "H_initialValue" : "UITextView()"
+  },
+  {
+    "A_name" : "remainOfContentView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 36, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        \n        view.backgroundColor = .clear\n        \n        view.addGestureRecognizer(UITapGestureRecognizer(\n            target: self, action: #selector(tapDismiss(_ :)))\n        )\n        \n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 37, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "contentView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 48, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        \n        view.setRounded(50)\n        view.backgroundColor = .white\n        \n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 49, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "mainTitleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 57, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        \n        label.numberOfLines = 0\n        label.font = .boldSystemFont(ofSize: CGFloat(36))\n        label.textColor = .black\n        label.text = StringConstants.setting\n        \n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 58, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "settingScrollViewContent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 68, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        \n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 69, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "setRemoteUrlTitleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 76, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        \n        label.numberOfLines = 0\n        label.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        label.textColor = .black\n        label.text = StringConstants.setRemoteUrlViewTitle\n        \n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 77, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "setRemoteUrlTextField",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 87, Column: 5",
+    "H_initialValue" : "{\n        let textField = UITextField()\n\n        textField.setRounded()\n        textField.setBorder(.black, 8)\n        textField.layer.cornerRadius = 4\n        textField.backgroundColor = .white\n        textField.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        textField.textColor = .black\n        textField.placeholder = StringConstants.setRemoteUrlTextFieldPlaceholder\n        textField.addLeftPadding()\n        \n        textField.delegate = self\n\n        return textField\n    }()"
+  },
+  {
+    "A_name" : "textField",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 88, Column: 9",
+    "H_initialValue" : "UITextField()"
+  },
+  {
+    "A_name" : "resetButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 104, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton()\n        \n        button.setTitle(StringConstants.reset, for: .normal)\n        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        button.setTitleColor(.white, for: .normal)\n        button.backgroundColor = .black\n        button.layer.cornerRadius = CGFloat(NumberConstants.settingButtonCornerRadius)\n        button.contentEdgeInsets = UIEdgeInsets(\n            top: CGFloat(NumberConstants.settingButtonContentEdgeInsetsTop),\n            left: CGFloat(NumberConstants.settingButtonContentEdgeInsetsLeft),\n            bottom: CGFloat(NumberConstants.settingButtonContentEdgeInsetsBottom),\n            right: CGFloat(NumberConstants.settingButtonContentEdgeInsetsRight)\n        )\n        \n        resetButtonInitialWidth = button.intrinsicContentSize.width\n        \n        button.addTarget(self, action: #selector(tapRemoteUrlResetButton(_:)), for: .touchUpInside)\n        \n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 105, Column: 9",
+    "H_initialValue" : "UIButton()"
+  },
+  {
+    "A_name" : "loadRemoteUrlPresetTitleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 128, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        \n        label.numberOfLines = 0\n        label.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        label.textColor = .black\n        label.text = StringConstants.setRemoteUrlPresetViewTitle\n        \n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 129, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "remoteUrlPresetStackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 139, Column: 5",
+    "H_initialValue" : "{\n        let stackView = UIStackView()\n        \n        stackView.axis = .horizontal\n        stackView.alignment = .leading\n        stackView.distribution = .fill\n        stackView.spacing = CGFloat(NumberConstants.settingStackViewSpacing)\n        stackView.translatesAutoresizingMaskIntoConstraints = false\n        \n        return stackView\n    }()"
+  },
+  {
+    "A_name" : "stackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 140, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "remoteUrlPresetStackScrollView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 151, Column: 5",
+    "H_initialValue" : "{\n        let scrollView = UIScrollView()\n        scrollView.translatesAutoresizingMaskIntoConstraints = false\n        scrollView.showsHorizontalScrollIndicator = false\n        scrollView.showsVerticalScrollIndicator = false\n        \n        return scrollView\n    }()"
+  },
+  {
+    "A_name" : "scrollView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 152, Column: 9",
+    "H_initialValue" : "UIScrollView()"
+  },
+  {
+    "A_name" : "remoteUrlPresetClearButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 160, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton()\n\n        button.setTitle(StringConstants.clear, for: .normal)\n        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        button.setTitleColor(.white, for: .normal)\n        button.setBackgroundColor(color: .gray, forState: .normal, cornerRadius: CGFloat(NumberConstants.settingButtonCornerRadius))\n        button.setBackgroundColor(color: .black, forState: .highlighted, cornerRadius: CGFloat(NumberConstants.settingButtonCornerRadius))\n        button.contentEdgeInsets = UIEdgeInsets(\n            top: CGFloat(NumberConstants.settingButtonContentEdgeInsetsTop),\n            left: CGFloat(NumberConstants.settingButtonContentEdgeInsetsLeft),\n            bottom: CGFloat(NumberConstants.settingButtonContentEdgeInsetsBottom),\n            right: CGFloat(NumberConstants.settingButtonContentEdgeInsetsRight)\n        )\n\n        button.addTarget(self, action: #selector(tapRemoteUrlPresetClearButton), for: .touchUpInside)\n\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 161, Column: 9",
+    "H_initialValue" : "UIButton()"
+  },
+  {
+    "A_name" : "remoteUrlPresetAddButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 180, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton()\n        \n        button.setTitle(StringConstants.plusSymbol, for: .normal)\n        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.settingContentLabelSize))\n        button.setTitleColor(.white, for: .normal)\n        button.setBackgroundColor(color: .gray, forState: .normal, cornerRadius: CGFloat(NumberConstants.settingButtonCornerRadius))\n        button.setBackgroundColor(color: .black, forState: .highlighted, cornerRadius: CGFloat(NumberConstants.settingButtonCornerRadius))\n        button.contentEdgeInsets = UIEdgeInsets(\n            top: CGFloat(NumberConstants.settingButtonContentEdgeInsetsTop),\n            left: CGFloat(NumberConstants.settingButtonContentEdgeInsetsLeft),\n            bottom: CGFloat(NumberConstants.settingButtonContentEdgeInsetsBottom),\n            right: CGFloat(NumberConstants.settingButtonContentEdgeInsetsRight)\n        )\n\n        button.addTarget(self, action: #selector(tapRemoteUrlPresetAddButton), for: .touchUpInside)\n\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 181, Column: 9",
+    "H_initialValue" : "UIButton()"
+  },
+  {
+    "A_name" : "stealienImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 200, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.contentMode = .scaleAspectFit\n        \n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 201, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 208, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "viewDidDisappear",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 232, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "setupVC",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 236, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setupVM",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 344, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setupBind",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 348, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "remoteUrlPresetButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 360, Column: 21",
+    "H_initialValue" : "RemoteUrlPresetButtonView()"
+  },
+  {
+    "A_name" : "touchesBegan",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 395, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Set<UITouch>",
+      "UIEvent?"
+    ],
+    "I_parameters" : [
+      "_",
+      "with"
+    ]
+  },
+  {
+    "A_name" : "tapDismiss",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 401, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITapGestureRecognizer"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "tapRemoteUrlResetButton",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 408, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UIButton"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "tapRemoteUrlPresetClearButton",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 416, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "alertController",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 420, Column: 9",
+        "H_initialValue" : "UIAlertController(title: StringConstants.removeAllPresetAlertTitle, message: StringConstants.removeAllPresetAlertMessage, preferredStyle: .alert)"
+      },
+      {
+        "A_name" : "deleteAction",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 422, Column: 9",
+        "H_initialValue" : "UIAlertAction(title: StringConstants.alertRemove, style: .destructive) { [weak self] _ in\n            self?.viewModel.removeAllRemoteUrlPresetData()\n        }"
+      },
+      {
+        "A_name" : "cancelAction",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 427, Column: 9",
+        "H_initialValue" : "UIAlertAction(title: StringConstants.alertCancle, style: .cancel, handler: nil)"
+      }
+    ],
+    "I_parameterType" : [
+      "UIButton"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "alertController",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 420, Column: 9",
+    "H_initialValue" : "UIAlertController(title: StringConstants.removeAllPresetAlertTitle, message: StringConstants.removeAllPresetAlertMessage, preferredStyle: .alert)"
+  },
+  {
+    "A_name" : "deleteAction",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 422, Column: 9",
+    "H_initialValue" : "UIAlertAction(title: StringConstants.alertRemove, style: .destructive) { [weak self] _ in\n            self?.viewModel.removeAllRemoteUrlPresetData()\n        }"
+  },
+  {
+    "A_name" : "cancelAction",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 427, Column: 9",
+    "H_initialValue" : "UIAlertAction(title: StringConstants.alertCancle, style: .cancel, handler: nil)"
+  },
+  {
+    "A_name" : "tapRemoteUrlPresetAddButton",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 433, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UIButton"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "clearRemoteUrl",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 440, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "savePresetUrl",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 446, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "index"
+    ]
+  },
+  {
+    "A_name" : "activateSecretSettings",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 454, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "antiCaptureSettingView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 459, Column: 9",
+        "H_initialValue" : "activateAntiCaptureSettingView(topView: remoteUrlPresetStackView)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "antiCaptureSettingView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 459, Column: 9",
+    "H_initialValue" : "activateAntiCaptureSettingView(topView: remoteUrlPresetStackView)"
+  },
+  {
+    "A_name" : "activateAntiCaptureSettingView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 463, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "antiCaptureSettingView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 466, Column: 9",
+        "H_initialValue" : "AntiCaptureSettingView()"
+      }
+    ],
+    "I_parameterType" : [
+      "UIView"
+    ],
+    "I_parameters" : [
+      "topView"
+    ],
+    "J_returnType" : "-> UIView"
+  },
+  {
+    "A_name" : "antiCaptureSettingView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 466, Column: 9",
+    "H_initialValue" : "AntiCaptureSettingView()"
+  },
+  {
+    "A_name" : "MainSettingViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UITextFieldDelegate"
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 493, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "textFieldDidEndEditing",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MainSettingViewController.swift - Line: 494, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITextField"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "textFieldDidEndEditing",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MainSettingViewController.swift - Line: 494, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITextField"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  }
+]

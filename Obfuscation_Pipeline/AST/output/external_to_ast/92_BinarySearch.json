@@ -1,0 +1,304 @@
+[
+  {
+    "A_name" : "Collection",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BinarySearch.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "binarySearch",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BinarySearch.swift - Line: 36, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "low",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BinarySearch.swift - Line: 37, Column: 9",
+            "H_initialValue" : "startIndex"
+          },
+          {
+            "A_name" : "high",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BinarySearch.swift - Line: 38, Column: 9",
+            "H_initialValue" : "endIndex"
+          }
+        ],
+        "I_parameterType" : [
+          "(Element) -> Bool"
+        ],
+        "I_parameters" : [
+          "predicate"
+        ],
+        "J_returnType" : "-> Index"
+      },
+      {
+        "A_name" : "indexOfElement",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BinarySearch.swift - Line: 73, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "ix",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BinarySearch.swift - Line: 74, Column: 9",
+            "H_initialValue" : "binarySearch { $0[keyPath: keyPath] < value }"
+          }
+        ],
+        "I_parameterType" : [
+          "T",
+          "KeyPath<Element, T>"
+        ],
+        "I_parameters" : [
+          "withValue",
+          "atKeyPath"
+        ],
+        "J_returnType" : "-> Index?"
+      },
+      {
+        "A_name" : "element",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BinarySearch.swift - Line: 80, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T",
+          "KeyPath<Element, T>"
+        ],
+        "I_parameters" : [
+          "withValue",
+          "atKeyPath"
+        ],
+        "J_returnType" : "-> Element?"
+      },
+      {
+        "A_name" : "elements",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BinarySearch.swift - Line: 87, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "end",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BinarySearch.swift - Line: 89, Column: 9",
+            "H_initialValue" : "index(after: start)"
+          }
+        ],
+        "I_parameterType" : [
+          "T",
+          "KeyPath<Element, T>"
+        ],
+        "I_parameters" : [
+          "withValue",
+          "atKeyPath"
+        ],
+        "J_returnType" : "-> [Element]"
+      }
+    ]
+  },
+  {
+    "A_name" : "binarySearch",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BinarySearch.swift - Line: 36, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "low",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BinarySearch.swift - Line: 37, Column: 9",
+        "H_initialValue" : "startIndex"
+      },
+      {
+        "A_name" : "high",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BinarySearch.swift - Line: 38, Column: 9",
+        "H_initialValue" : "endIndex"
+      }
+    ],
+    "I_parameterType" : [
+      "(Element) -> Bool"
+    ],
+    "I_parameters" : [
+      "predicate"
+    ],
+    "J_returnType" : "-> Index"
+  },
+  {
+    "A_name" : "low",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BinarySearch.swift - Line: 37, Column: 9",
+    "H_initialValue" : "startIndex"
+  },
+  {
+    "A_name" : "high",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BinarySearch.swift - Line: 38, Column: 9",
+    "H_initialValue" : "endIndex"
+  },
+  {
+    "A_name" : "mid",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BinarySearch.swift - Line: 40, Column: 13",
+    "H_initialValue" : "index(low, offsetBy: distance(from: low, to: high)\/2)"
+  },
+  {
+    "A_name" : "indexOfElement",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BinarySearch.swift - Line: 73, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "ix",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BinarySearch.swift - Line: 74, Column: 9",
+        "H_initialValue" : "binarySearch { $0[keyPath: keyPath] < value }"
+      }
+    ],
+    "I_parameterType" : [
+      "T",
+      "KeyPath<Element, T>"
+    ],
+    "I_parameters" : [
+      "withValue",
+      "atKeyPath"
+    ],
+    "J_returnType" : "-> Index?"
+  },
+  {
+    "A_name" : "ix",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BinarySearch.swift - Line: 74, Column: 9",
+    "H_initialValue" : "binarySearch { $0[keyPath: keyPath] < value }"
+  },
+  {
+    "A_name" : "element",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BinarySearch.swift - Line: 80, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T",
+      "KeyPath<Element, T>"
+    ],
+    "I_parameters" : [
+      "withValue",
+      "atKeyPath"
+    ],
+    "J_returnType" : "-> Element?"
+  },
+  {
+    "A_name" : "elements",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BinarySearch.swift - Line: 87, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "end",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BinarySearch.swift - Line: 89, Column: 9",
+        "H_initialValue" : "index(after: start)"
+      }
+    ],
+    "I_parameterType" : [
+      "T",
+      "KeyPath<Element, T>"
+    ],
+    "I_parameters" : [
+      "withValue",
+      "atKeyPath"
+    ],
+    "J_returnType" : "-> [Element]"
+  },
+  {
+    "A_name" : "end",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BinarySearch.swift - Line: 89, Column: 9",
+    "H_initialValue" : "index(after: start)"
+  }
+]

@@ -1,0 +1,1590 @@
+[
+  {
+    "A_name" : "BaseTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "BaseTests.swift - Line: 26, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 28, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setUp",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "BaseTests.swift - Line: 30, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "tearDown",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "BaseTests.swift - Line: 43, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testInit",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 47, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 55, Column: 9",
+            "H_initialValue" : "NSMutableDictionary()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompare",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 67, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "veryLargeNumber",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 69, Column: 9",
+            "H_initialValue" : "9876543210987654321"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testJSONDoesProduceValidWithCorrectKeyPath",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 83, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tweets",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 90, Column: 9",
+            "H_initialValue" : "json"
+          },
+          {
+            "A_name" : "tweets_array",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 91, Column: 9",
+            "H_initialValue" : "json.array"
+          },
+          {
+            "A_name" : "tweets_1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 92, Column: 9",
+            "H_initialValue" : "json[1]"
+          },
+          {
+            "A_name" : "tweets_1_user_name",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 94, Column: 9",
+            "H_initialValue" : "tweets_1[\"user\"][\"name\"]"
+          },
+          {
+            "A_name" : "tweets_1_user_name_string",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 95, Column: 9",
+            "H_initialValue" : "tweets_1[\"user\"][\"name\"].string"
+          },
+          {
+            "A_name" : "tweets_1_coordinates",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 102, Column: 9",
+            "H_initialValue" : "tweets_1[\"coordinates\"]"
+          },
+          {
+            "A_name" : "tweets_1_coordinates_coordinates",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 103, Column: 9",
+            "H_initialValue" : "tweets_1_coordinates[\"coordinates\"]"
+          },
+          {
+            "A_name" : "tweets_1_coordinates_coordinates_point_0_double",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 104, Column: 9",
+            "H_initialValue" : "tweets_1_coordinates_coordinates[0].double"
+          },
+          {
+            "A_name" : "tweets_1_coordinates_coordinates_point_1_float",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 105, Column: 9",
+            "H_initialValue" : "tweets_1_coordinates_coordinates[1].float"
+          },
+          {
+            "A_name" : "new_tweets_1_coordinates_coordinates",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 106, Column: 9",
+            "H_initialValue" : "JSON([-122.25831, 37.871609] as NSArray)"
+          },
+          {
+            "A_name" : "tweets_1_coordinates_coordinates_point_0_string",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 110, Column: 9",
+            "H_initialValue" : "tweets_1_coordinates_coordinates[0].stringValue"
+          },
+          {
+            "A_name" : "tweets_1_coordinates_coordinates_point_1_string",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 111, Column: 9",
+            "H_initialValue" : "tweets_1_coordinates_coordinates[1].stringValue"
+          },
+          {
+            "A_name" : "tweets_1_coordinates_coordinates_point_0",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 114, Column: 9",
+            "H_initialValue" : "tweets_1_coordinates_coordinates[0]"
+          },
+          {
+            "A_name" : "tweets_1_coordinates_coordinates_point_1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 115, Column: 9",
+            "H_initialValue" : "tweets_1_coordinates_coordinates[1]"
+          },
+          {
+            "A_name" : "created_at",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 119, Column: 9",
+            "H_initialValue" : "json[0][\"created_at\"].string"
+          },
+          {
+            "A_name" : "id_str",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 120, Column: 9",
+            "H_initialValue" : "json[0][\"id_str\"].string"
+          },
+          {
+            "A_name" : "favorited",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 121, Column: 9",
+            "H_initialValue" : "json[0][\"favorited\"].bool"
+          },
+          {
+            "A_name" : "id",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 122, Column: 9",
+            "H_initialValue" : "json[0][\"id\"].int64"
+          },
+          {
+            "A_name" : "in_reply_to_user_id_str",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 123, Column: 9",
+            "H_initialValue" : "json[0][\"in_reply_to_user_id_str\"]"
+          },
+          {
+            "A_name" : "user",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 130, Column: 9",
+            "H_initialValue" : "json[0][\"user\"]"
+          },
+          {
+            "A_name" : "user_name",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 131, Column: 9",
+            "H_initialValue" : "user[\"name\"].string"
+          },
+          {
+            "A_name" : "user_profile_image_url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 132, Column: 9",
+            "H_initialValue" : "user[\"profile_image_url\"].url"
+          },
+          {
+            "A_name" : "user_dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 136, Column: 9",
+            "H_initialValue" : "json[0][\"user\"].dictionary"
+          },
+          {
+            "A_name" : "user_dictionary_name",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 137, Column: 9",
+            "H_initialValue" : "user_dictionary?[\"name\"]?.string"
+          },
+          {
+            "A_name" : "user_dictionary_name_profile_image_url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 138, Column: 9",
+            "H_initialValue" : "user_dictionary?[\"profile_image_url\"]?.url"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testJSONNumberCompare",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 143, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testNumberConvertToString",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 161, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testNumberPrint",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 172, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testNullJSON",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 210, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 213, Column: 9",
+            "H_initialValue" : "JSON.null"
+          },
+          {
+            "A_name" : "json1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 216, Column: 9",
+            "H_initialValue" : "JSON(NSNull())"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testExistance",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 222, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 223, Column: 9",
+            "H_initialValue" : "[\"number\": 1111]"
+          },
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 224, Column: 9",
+            "H_initialValue" : "JSON(dictionary)"
+          },
+          {
+            "A_name" : "array",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 229, Column: 9",
+            "H_initialValue" : "[[\"number\": 1111]]"
+          },
+          {
+            "A_name" : "jsonForArray",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 230, Column: 9",
+            "H_initialValue" : "JSON(array)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testErrorHandle",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 236, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "wrongJSON",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 253, Column: 9",
+            "H_initialValue" : "JSON(NSObject())"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testReturnObject",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 259, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testErrorThrowing",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 267, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "invalidJson",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 268, Column: 9",
+            "H_initialValue" : "\"{\\\"foo\\\": 300]\"  \/\/ deliberately incorrect JSON"
+          },
+          {
+            "A_name" : "invalidData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseTests.swift - Line: 269, Column: 9",
+            "H_initialValue" : "invalidJson.data(using: .utf8)!"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 28, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setUp",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "BaseTests.swift - Line: 30, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tearDown",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "BaseTests.swift - Line: 43, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testInit",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 47, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 55, Column: 9",
+        "H_initialValue" : "NSMutableDictionary()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 55, Column: 9",
+    "H_initialValue" : "NSMutableDictionary()"
+  },
+  {
+    "A_name" : "object",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 60, Column: 13",
+    "H_initialValue" : "try JSONSerialization.jsonObject(with: self.testData, options: [])"
+  },
+  {
+    "A_name" : "json2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 61, Column: 13",
+    "H_initialValue" : "JSON(object)"
+  },
+  {
+    "A_name" : "testCompare",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 67, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "veryLargeNumber",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 69, Column: 9",
+        "H_initialValue" : "9876543210987654321"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "veryLargeNumber",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 69, Column: 9",
+    "H_initialValue" : "9876543210987654321"
+  },
+  {
+    "A_name" : "testJSONDoesProduceValidWithCorrectKeyPath",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 83, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tweets",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 90, Column: 9",
+        "H_initialValue" : "json"
+      },
+      {
+        "A_name" : "tweets_array",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 91, Column: 9",
+        "H_initialValue" : "json.array"
+      },
+      {
+        "A_name" : "tweets_1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 92, Column: 9",
+        "H_initialValue" : "json[1]"
+      },
+      {
+        "A_name" : "tweets_1_user_name",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 94, Column: 9",
+        "H_initialValue" : "tweets_1[\"user\"][\"name\"]"
+      },
+      {
+        "A_name" : "tweets_1_user_name_string",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 95, Column: 9",
+        "H_initialValue" : "tweets_1[\"user\"][\"name\"].string"
+      },
+      {
+        "A_name" : "tweets_1_coordinates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 102, Column: 9",
+        "H_initialValue" : "tweets_1[\"coordinates\"]"
+      },
+      {
+        "A_name" : "tweets_1_coordinates_coordinates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 103, Column: 9",
+        "H_initialValue" : "tweets_1_coordinates[\"coordinates\"]"
+      },
+      {
+        "A_name" : "tweets_1_coordinates_coordinates_point_0_double",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 104, Column: 9",
+        "H_initialValue" : "tweets_1_coordinates_coordinates[0].double"
+      },
+      {
+        "A_name" : "tweets_1_coordinates_coordinates_point_1_float",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 105, Column: 9",
+        "H_initialValue" : "tweets_1_coordinates_coordinates[1].float"
+      },
+      {
+        "A_name" : "new_tweets_1_coordinates_coordinates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 106, Column: 9",
+        "H_initialValue" : "JSON([-122.25831, 37.871609] as NSArray)"
+      },
+      {
+        "A_name" : "tweets_1_coordinates_coordinates_point_0_string",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 110, Column: 9",
+        "H_initialValue" : "tweets_1_coordinates_coordinates[0].stringValue"
+      },
+      {
+        "A_name" : "tweets_1_coordinates_coordinates_point_1_string",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 111, Column: 9",
+        "H_initialValue" : "tweets_1_coordinates_coordinates[1].stringValue"
+      },
+      {
+        "A_name" : "tweets_1_coordinates_coordinates_point_0",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 114, Column: 9",
+        "H_initialValue" : "tweets_1_coordinates_coordinates[0]"
+      },
+      {
+        "A_name" : "tweets_1_coordinates_coordinates_point_1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 115, Column: 9",
+        "H_initialValue" : "tweets_1_coordinates_coordinates[1]"
+      },
+      {
+        "A_name" : "created_at",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 119, Column: 9",
+        "H_initialValue" : "json[0][\"created_at\"].string"
+      },
+      {
+        "A_name" : "id_str",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 120, Column: 9",
+        "H_initialValue" : "json[0][\"id_str\"].string"
+      },
+      {
+        "A_name" : "favorited",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 121, Column: 9",
+        "H_initialValue" : "json[0][\"favorited\"].bool"
+      },
+      {
+        "A_name" : "id",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 122, Column: 9",
+        "H_initialValue" : "json[0][\"id\"].int64"
+      },
+      {
+        "A_name" : "in_reply_to_user_id_str",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 123, Column: 9",
+        "H_initialValue" : "json[0][\"in_reply_to_user_id_str\"]"
+      },
+      {
+        "A_name" : "user",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 130, Column: 9",
+        "H_initialValue" : "json[0][\"user\"]"
+      },
+      {
+        "A_name" : "user_name",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 131, Column: 9",
+        "H_initialValue" : "user[\"name\"].string"
+      },
+      {
+        "A_name" : "user_profile_image_url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 132, Column: 9",
+        "H_initialValue" : "user[\"profile_image_url\"].url"
+      },
+      {
+        "A_name" : "user_dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 136, Column: 9",
+        "H_initialValue" : "json[0][\"user\"].dictionary"
+      },
+      {
+        "A_name" : "user_dictionary_name",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 137, Column: 9",
+        "H_initialValue" : "user_dictionary?[\"name\"]?.string"
+      },
+      {
+        "A_name" : "user_dictionary_name_profile_image_url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 138, Column: 9",
+        "H_initialValue" : "user_dictionary?[\"profile_image_url\"]?.url"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tweets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 90, Column: 9",
+    "H_initialValue" : "json"
+  },
+  {
+    "A_name" : "tweets_array",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 91, Column: 9",
+    "H_initialValue" : "json.array"
+  },
+  {
+    "A_name" : "tweets_1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 92, Column: 9",
+    "H_initialValue" : "json[1]"
+  },
+  {
+    "A_name" : "tweets_1_user_name",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 94, Column: 9",
+    "H_initialValue" : "tweets_1[\"user\"][\"name\"]"
+  },
+  {
+    "A_name" : "tweets_1_user_name_string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 95, Column: 9",
+    "H_initialValue" : "tweets_1[\"user\"][\"name\"].string"
+  },
+  {
+    "A_name" : "tweets_1_coordinates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 102, Column: 9",
+    "H_initialValue" : "tweets_1[\"coordinates\"]"
+  },
+  {
+    "A_name" : "tweets_1_coordinates_coordinates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 103, Column: 9",
+    "H_initialValue" : "tweets_1_coordinates[\"coordinates\"]"
+  },
+  {
+    "A_name" : "tweets_1_coordinates_coordinates_point_0_double",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 104, Column: 9",
+    "H_initialValue" : "tweets_1_coordinates_coordinates[0].double"
+  },
+  {
+    "A_name" : "tweets_1_coordinates_coordinates_point_1_float",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 105, Column: 9",
+    "H_initialValue" : "tweets_1_coordinates_coordinates[1].float"
+  },
+  {
+    "A_name" : "new_tweets_1_coordinates_coordinates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 106, Column: 9",
+    "H_initialValue" : "JSON([-122.25831, 37.871609] as NSArray)"
+  },
+  {
+    "A_name" : "tweets_1_coordinates_coordinates_point_0_string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 110, Column: 9",
+    "H_initialValue" : "tweets_1_coordinates_coordinates[0].stringValue"
+  },
+  {
+    "A_name" : "tweets_1_coordinates_coordinates_point_1_string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 111, Column: 9",
+    "H_initialValue" : "tweets_1_coordinates_coordinates[1].stringValue"
+  },
+  {
+    "A_name" : "tweets_1_coordinates_coordinates_point_0",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 114, Column: 9",
+    "H_initialValue" : "tweets_1_coordinates_coordinates[0]"
+  },
+  {
+    "A_name" : "tweets_1_coordinates_coordinates_point_1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 115, Column: 9",
+    "H_initialValue" : "tweets_1_coordinates_coordinates[1]"
+  },
+  {
+    "A_name" : "created_at",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 119, Column: 9",
+    "H_initialValue" : "json[0][\"created_at\"].string"
+  },
+  {
+    "A_name" : "id_str",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 120, Column: 9",
+    "H_initialValue" : "json[0][\"id_str\"].string"
+  },
+  {
+    "A_name" : "favorited",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 121, Column: 9",
+    "H_initialValue" : "json[0][\"favorited\"].bool"
+  },
+  {
+    "A_name" : "id",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 122, Column: 9",
+    "H_initialValue" : "json[0][\"id\"].int64"
+  },
+  {
+    "A_name" : "in_reply_to_user_id_str",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 123, Column: 9",
+    "H_initialValue" : "json[0][\"in_reply_to_user_id_str\"]"
+  },
+  {
+    "A_name" : "user",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 130, Column: 9",
+    "H_initialValue" : "json[0][\"user\"]"
+  },
+  {
+    "A_name" : "user_name",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 131, Column: 9",
+    "H_initialValue" : "user[\"name\"].string"
+  },
+  {
+    "A_name" : "user_profile_image_url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 132, Column: 9",
+    "H_initialValue" : "user[\"profile_image_url\"].url"
+  },
+  {
+    "A_name" : "user_dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 136, Column: 9",
+    "H_initialValue" : "json[0][\"user\"].dictionary"
+  },
+  {
+    "A_name" : "user_dictionary_name",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 137, Column: 9",
+    "H_initialValue" : "user_dictionary?[\"name\"]?.string"
+  },
+  {
+    "A_name" : "user_dictionary_name_profile_image_url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 138, Column: 9",
+    "H_initialValue" : "user_dictionary?[\"profile_image_url\"]?.url"
+  },
+  {
+    "A_name" : "testJSONNumberCompare",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 143, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testNumberConvertToString",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 161, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testNumberPrint",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 172, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testNullJSON",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 210, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 213, Column: 9",
+        "H_initialValue" : "JSON.null"
+      },
+      {
+        "A_name" : "json1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 216, Column: 9",
+        "H_initialValue" : "JSON(NSNull())"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 213, Column: 9",
+    "H_initialValue" : "JSON.null"
+  },
+  {
+    "A_name" : "json1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 216, Column: 9",
+    "H_initialValue" : "JSON(NSNull())"
+  },
+  {
+    "A_name" : "testExistance",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 222, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 223, Column: 9",
+        "H_initialValue" : "[\"number\": 1111]"
+      },
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 224, Column: 9",
+        "H_initialValue" : "JSON(dictionary)"
+      },
+      {
+        "A_name" : "array",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 229, Column: 9",
+        "H_initialValue" : "[[\"number\": 1111]]"
+      },
+      {
+        "A_name" : "jsonForArray",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 230, Column: 9",
+        "H_initialValue" : "JSON(array)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 223, Column: 9",
+    "H_initialValue" : "[\"number\": 1111]"
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 224, Column: 9",
+    "H_initialValue" : "JSON(dictionary)"
+  },
+  {
+    "A_name" : "array",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 229, Column: 9",
+    "H_initialValue" : "[[\"number\": 1111]]"
+  },
+  {
+    "A_name" : "jsonForArray",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 230, Column: 9",
+    "H_initialValue" : "JSON(array)"
+  },
+  {
+    "A_name" : "testErrorHandle",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 236, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "wrongJSON",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 253, Column: 9",
+        "H_initialValue" : "JSON(NSObject())"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "wrongJSON",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 253, Column: 9",
+    "H_initialValue" : "JSON(NSObject())"
+  },
+  {
+    "A_name" : "testReturnObject",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 259, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testErrorThrowing",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 267, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "invalidJson",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 268, Column: 9",
+        "H_initialValue" : "\"{\\\"foo\\\": 300]\"  \/\/ deliberately incorrect JSON"
+      },
+      {
+        "A_name" : "invalidData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseTests.swift - Line: 269, Column: 9",
+        "H_initialValue" : "invalidJson.data(using: .utf8)!"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "invalidJson",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 268, Column: 9",
+    "H_initialValue" : "\"{\\\"foo\\\": 300]\"  \/\/ deliberately incorrect JSON"
+  },
+  {
+    "A_name" : "invalidData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseTests.swift - Line: 269, Column: 9",
+    "H_initialValue" : "invalidJson.data(using: .utf8)!"
+  }
+]

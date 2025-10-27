@@ -1,0 +1,90 @@
+[
+  {
+    "A_name" : "RandomNumberGeneratorWithSeed",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RandomNumberGenerator"
+    ],
+    "F_location" : "RandomNumberGenerator+RandomNumberGeneratorWithSeed.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RandomNumberGenerator+RandomNumberGeneratorWithSeed.swift - Line: 11, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "seed"
+        ]
+      },
+      {
+        "A_name" : "next",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RandomNumberGenerator+RandomNumberGeneratorWithSeed.swift - Line: 12, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> UInt64"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RandomNumberGenerator+RandomNumberGeneratorWithSeed.swift - Line: 11, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "seed"
+    ]
+  },
+  {
+    "A_name" : "next",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RandomNumberGenerator+RandomNumberGeneratorWithSeed.swift - Line: 12, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> UInt64"
+  }
+]

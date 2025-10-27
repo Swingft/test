@@ -1,0 +1,194 @@
+[
+  {
+    "A_name" : "View",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "epoxyLayoutMargins",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 17, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> some View"
+      }
+    ]
+  },
+  {
+    "A_name" : "epoxyLayoutMargins",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 17, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> some View"
+  },
+  {
+    "A_name" : "EnvironmentValues",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 24, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "epoxyLayoutMargins",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 26, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "epoxyLayoutMargins",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 26, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "EpoxyLayoutMarginsKey",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "EnvironmentKey"
+    ],
+    "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 34, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "defaultValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 35, Column: 3",
+        "H_initialValue" : "EdgeInsets()"
+      }
+    ]
+  },
+  {
+    "A_name" : "defaultValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 35, Column: 3",
+    "H_initialValue" : "EdgeInsets()"
+  },
+  {
+    "A_name" : "EpoxyLayoutMarginsPadding",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ViewModifier"
+    ],
+    "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 42, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "epoxyLayoutMargins",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "Environment"
+        ],
+        "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 43, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "body",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 45, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Content"
+        ],
+        "I_parameters" : [
+          "content"
+        ],
+        "J_returnType" : "-> some View"
+      }
+    ]
+  },
+  {
+    "A_name" : "epoxyLayoutMargins",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "Environment"
+    ],
+    "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 43, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "body",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EpoxySwiftUILayoutMargins.swift - Line: 45, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Content"
+    ],
+    "I_parameters" : [
+      "content"
+    ],
+    "J_returnType" : "-> some View"
+  }
+]

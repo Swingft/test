@@ -1,0 +1,3510 @@
+[
+  {
+    "A_name" : "ElementsTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "ElementsTest.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testLinuxTestSuiteIncludesAllTests",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 15, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testFilter",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 24, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "h",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 25, Column: 3",
+            "H_initialValue" : "\"<p>Excl<\/p><div class=headline><p>Hello<\/p><p>There<\/p><\/div><div class=headline><h1>Headline<\/h1><\/div>\""
+          },
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 26, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(h)"
+          },
+          {
+            "A_name" : "els",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 27, Column: 3",
+            "H_initialValue" : "try doc.select(\".headline\").select(\"p\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testRandomAccessCollection",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 33, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "h",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 34, Column: 3",
+            "H_initialValue" : "\"<div><p>one<\/p><div class=headline><p>two<\/p><p>three<\/p><\/div><p>four<\/p><\/div>\""
+          },
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 35, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(h)"
+          },
+          {
+            "A_name" : "els",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 36, Column: 3",
+            "H_initialValue" : "try doc.select(\"p\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAttributes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 44, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "h",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 45, Column: 3",
+            "H_initialValue" : "\"<p title=foo><p title=bar><p class=foo><p class=bar>\""
+          },
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 46, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(h)"
+          },
+          {
+            "A_name" : "withTitle",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 47, Column: 3",
+            "H_initialValue" : "try doc.select(\"p[title]\")"
+          },
+          {
+            "A_name" : "ps",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 57, Column: 3",
+            "H_initialValue" : "try doc.select(\"p\").attr(\"style\", \"classy\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHasAttr",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 63, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 64, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<p title=foo><p title=bar><p class=foo><p class=bar>\")"
+          },
+          {
+            "A_name" : "ps",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 65, Column: 3",
+            "H_initialValue" : "try doc.select(\"p\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHasAbsAttr",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 70, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 71, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<a id=1 href='\/foo'>One<\/a> <a id=2 href='https:\/\/google.com'>Two<\/a>\")"
+          },
+          {
+            "A_name" : "one",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 72, Column: 3",
+            "H_initialValue" : "try doc.select(\"#1\")"
+          },
+          {
+            "A_name" : "two",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 73, Column: 3",
+            "H_initialValue" : "try doc.select(\"#2\")"
+          },
+          {
+            "A_name" : "both",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 74, Column: 3",
+            "H_initialValue" : "try doc.select(\"a\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAttr",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 80, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 81, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<p title=foo><p title=bar><p class=foo><p class=bar>\")"
+          },
+          {
+            "A_name" : "classVal",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 82, Column: 3",
+            "H_initialValue" : "try doc.select(\"p\").attr(\"class\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAbsAttr",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 86, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 87, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<a id=1 href='\/foo'>One<\/a> <a id=2 href='https:\/\/google.com'>Two<\/a>\")"
+          },
+          {
+            "A_name" : "one",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 88, Column: 3",
+            "H_initialValue" : "try doc.select(\"#1\")"
+          },
+          {
+            "A_name" : "two",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 89, Column: 3",
+            "H_initialValue" : "try doc.select(\"#2\")"
+          },
+          {
+            "A_name" : "both",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 90, Column: 3",
+            "H_initialValue" : "try doc.select(\"a\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testClasses",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 97, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 98, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<div><p class='mellow yellow'><\/p><p class='red green'><\/p>\")"
+          },
+          {
+            "A_name" : "els",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 100, Column: 3",
+            "H_initialValue" : "try doc.select(\"p\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testText",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 111, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "h",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 112, Column: 3",
+            "H_initialValue" : "\"<div><p>Hello<p>there<p>world<\/div>\""
+          },
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 113, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(h)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHasText",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 117, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 118, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div><p><\/p><\/div>\")"
+          },
+          {
+            "A_name" : "divs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 119, Column: 3",
+            "H_initialValue" : "try doc.select(\"div\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHtml",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 124, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 125, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div><p>There<\/p><\/div>\")"
+          },
+          {
+            "A_name" : "divs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 126, Column: 3",
+            "H_initialValue" : "try doc.select(\"div\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testOuterHtml",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 130, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 131, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div><p>There<\/p><\/div>\")"
+          },
+          {
+            "A_name" : "divs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 132, Column: 3",
+            "H_initialValue" : "try doc.select(\"div\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSetHtml",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 136, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 137, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<p>One<\/p><p>Two<\/p><p>Three<\/p>\")"
+          },
+          {
+            "A_name" : "ps",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 138, Column: 3",
+            "H_initialValue" : "try doc.select(\"p\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testVal",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 147, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 148, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<input value='one' \/><textarea>two<\/textarea>\")"
+          },
+          {
+            "A_name" : "els",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 149, Column: 3",
+            "H_initialValue" : "try doc.select(\"input, textarea\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBefore",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 160, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 161, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<p>This <a>is<\/a> <a>SwiftSoup<\/a>.<\/p>\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAfter",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 166, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 167, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<p>This <a>is<\/a> <a>SwiftSoup<\/a>.<\/p>\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWrap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 172, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "h",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 173, Column: 3",
+            "H_initialValue" : "\"<p><b>This<\/b> is <b>SwiftSoup<\/b><\/p>\""
+          },
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 174, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(h)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWrapDiv",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 179, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "h",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 180, Column: 3",
+            "H_initialValue" : "\"<p><b>This<\/b> is <b>SwiftSoup<\/b>.<\/p> <p>How do you like it?<\/p>\""
+          },
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 181, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(h)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testUnwrap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 186, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "h",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 187, Column: 3",
+            "H_initialValue" : "\"<div><font>One<\/font> <font><a href=\\\"\/\\\">Two<\/a><\/font><\/div\""
+          },
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 188, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(h)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testUnwrapP",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 193, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "h",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 194, Column: 3",
+            "H_initialValue" : "\"<p><a>One<\/a> Two<\/p> Three <i>Four<\/i> <p>Fix <i>Six<\/i><\/p>\""
+          },
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 195, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(h)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testUnwrapKeepsSpace",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 200, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "h",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 201, Column: 3",
+            "H_initialValue" : "\"<p>One <span>two<\/span> <span>three<\/span> four<\/p>\""
+          },
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 202, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(h)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testEmpty",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 207, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 208, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello <b>there<\/b><\/p> <p>now!<\/p><\/div>\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testRemove",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 215, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 216, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello <b>there<\/b><\/p> SwiftSoup <p>now!<\/p><\/div>\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testEq",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 223, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "h",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 224, Column: 3",
+            "H_initialValue" : "\"<p>Hello<p>there<p>world\""
+          },
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 225, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(h)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testIs",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 230, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "h",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 231, Column: 3",
+            "H_initialValue" : "\"<p>Hello<p title=foo>there<p>world\""
+          },
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 232, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(h)"
+          },
+          {
+            "A_name" : "ps",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 233, Column: 3",
+            "H_initialValue" : "try doc.select(\"p\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testParents",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 238, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 239, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><p>There<\/p>\")"
+          },
+          {
+            "A_name" : "parents",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 240, Column: 3",
+            "H_initialValue" : "try doc.select(\"p\").parents()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testNot",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 248, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 249, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<div id=1><p>One<\/p><\/div> <div id=2><p><span>Two<\/span><\/p><\/div>\")"
+          },
+          {
+            "A_name" : "div1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 251, Column: 3",
+            "H_initialValue" : "try doc.select(\"div\").not(\":has(p > span)\")"
+          },
+          {
+            "A_name" : "div2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 255, Column: 3",
+            "H_initialValue" : "try doc.select(\"div\").not(\"#1\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testTagNameSet",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 260, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 261, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<p>Hello <i>there<\/i> <i>now<\/i><\/p>\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testTraverse",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 267, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 268, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div>There<\/div>\")"
+          },
+          {
+            "A_name" : "accum",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 269, Column: 3",
+            "H_initialValue" : "StringBuilder()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testForms",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 287, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 288, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<form id=1><input name=q><\/form><div \/><form id=2><input name=f><\/form>\")"
+          },
+          {
+            "A_name" : "els",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 289, Column: 3",
+            "H_initialValue" : "try doc.select(\"*\")"
+          },
+          {
+            "A_name" : "forms",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 292, Column: 3",
+            "H_initialValue" : "els.forms()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testClassWithHyphen",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 300, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 301, Column: 3",
+            "H_initialValue" : "try SwiftSoup.parse(\"<p class='tab-nav'>Check<\/p>\")"
+          },
+          {
+            "A_name" : "els",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 302, Column: 3",
+            "H_initialValue" : "try doc.getElementsByClass(\"tab-nav\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testEachText",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 307, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "doc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 308, Column: 9",
+            "H_initialValue" : "try SwiftSoup.parse(\"<div><p>1<p>2<p>3<p>4<p>5<p>6<\/div><div><p>7<p>8<p>9<p>10<p>11<p>12<p><\/p><\/div>\")"
+          },
+          {
+            "A_name" : "divText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 309, Column: 9",
+            "H_initialValue" : "try doc.select(\"div\").eachText()"
+          },
+          {
+            "A_name" : "pText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 314, Column: 9",
+            "H_initialValue" : "try doc.select(\"p\").eachText()"
+          },
+          {
+            "A_name" : "ps",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ElementsTest.swift - Line: 315, Column: 9",
+            "H_initialValue" : "try doc.select(\"p\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "allTests",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ElementsTest.swift - Line: 325, Column: 2",
+        "H_initialValue" : "{\n\t\treturn [\n            (\"testLinuxTestSuiteIncludesAllTests\", testLinuxTestSuiteIncludesAllTests),\n            (\"testFilter\", testFilter),\n\t\t\t(\"testRandomAccessCollection\", testRandomAccessCollection),\n\t\t\t(\"testAttributes\", testAttributes),\n\t\t\t(\"testHasAttr\", testHasAttr),\n\t\t\t(\"testHasAbsAttr\", testHasAbsAttr),\n\t\t\t(\"testAttr\", testAttr),\n\t\t\t(\"testAbsAttr\", testAbsAttr),\n\t\t\t(\"testClasses\", testClasses),\n\t\t\t(\"testText\", testText),\n\t\t\t(\"testHasText\", testHasText),\n\t\t\t(\"testHtml\", testHtml),\n\t\t\t(\"testOuterHtml\", testOuterHtml),\n\t\t\t(\"testSetHtml\", testSetHtml),\n\t\t\t(\"testVal\", testVal),\n\t\t\t(\"testBefore\", testBefore),\n\t\t\t(\"testAfter\", testAfter),\n\t\t\t(\"testWrap\", testWrap),\n\t\t\t(\"testWrapDiv\", testWrapDiv),\n\t\t\t(\"testUnwrap\", testUnwrap),\n\t\t\t(\"testUnwrapP\", testUnwrapP),\n\t\t\t(\"testUnwrapKeepsSpace\", testUnwrapKeepsSpace),\n\t\t\t(\"testEmpty\", testEmpty),\n\t\t\t(\"testRemove\", testRemove),\n\t\t\t(\"testEq\", testEq),\n\t\t\t(\"testIs\", testIs),\n\t\t\t(\"testParents\", testParents),\n\t\t\t(\"testNot\", testNot),\n\t\t\t(\"testTagNameSet\", testTagNameSet),\n\t\t\t(\"testTraverse\", testTraverse),\n\t\t\t(\"testForms\", testForms),\n\t\t\t(\"testClassWithHyphen\", testClassWithHyphen),\n            (\"testEachText\", testEachText)\n\t\t]\n\t}()"
+      }
+    ]
+  },
+  {
+    "A_name" : "testLinuxTestSuiteIncludesAllTests",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 15, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "thisClass",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 17, Column: 13",
+    "H_initialValue" : "type(of: self)"
+  },
+  {
+    "A_name" : "linuxCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 18, Column: 13",
+    "H_initialValue" : "thisClass.allTests.count"
+  },
+  {
+    "A_name" : "darwinCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 19, Column: 13",
+    "H_initialValue" : "Int(thisClass.defaultTestSuite.testCaseCount)"
+  },
+  {
+    "A_name" : "testFilter",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 24, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "h",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 25, Column: 3",
+        "H_initialValue" : "\"<p>Excl<\/p><div class=headline><p>Hello<\/p><p>There<\/p><\/div><div class=headline><h1>Headline<\/h1><\/div>\""
+      },
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 26, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(h)"
+      },
+      {
+        "A_name" : "els",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 27, Column: 3",
+        "H_initialValue" : "try doc.select(\".headline\").select(\"p\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 25, Column: 3",
+    "H_initialValue" : "\"<p>Excl<\/p><div class=headline><p>Hello<\/p><p>There<\/p><\/div><div class=headline><h1>Headline<\/h1><\/div>\""
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 26, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(h)"
+  },
+  {
+    "A_name" : "els",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 27, Column: 3",
+    "H_initialValue" : "try doc.select(\".headline\").select(\"p\")"
+  },
+  {
+    "A_name" : "testRandomAccessCollection",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 33, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "h",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 34, Column: 3",
+        "H_initialValue" : "\"<div><p>one<\/p><div class=headline><p>two<\/p><p>three<\/p><\/div><p>four<\/p><\/div>\""
+      },
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 35, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(h)"
+      },
+      {
+        "A_name" : "els",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 36, Column: 3",
+        "H_initialValue" : "try doc.select(\"p\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 34, Column: 3",
+    "H_initialValue" : "\"<div><p>one<\/p><div class=headline><p>two<\/p><p>three<\/p><\/div><p>four<\/p><\/div>\""
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 35, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(h)"
+  },
+  {
+    "A_name" : "els",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 36, Column: 3",
+    "H_initialValue" : "try doc.select(\"p\")"
+  },
+  {
+    "A_name" : "el",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 39, Column: 4",
+    "H_initialValue" : "els[i]"
+  },
+  {
+    "A_name" : "testAttributes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 44, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "h",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 45, Column: 3",
+        "H_initialValue" : "\"<p title=foo><p title=bar><p class=foo><p class=bar>\""
+      },
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 46, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(h)"
+      },
+      {
+        "A_name" : "withTitle",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 47, Column: 3",
+        "H_initialValue" : "try doc.select(\"p[title]\")"
+      },
+      {
+        "A_name" : "ps",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 57, Column: 3",
+        "H_initialValue" : "try doc.select(\"p\").attr(\"style\", \"classy\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 45, Column: 3",
+    "H_initialValue" : "\"<p title=foo><p title=bar><p class=foo><p class=bar>\""
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 46, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(h)"
+  },
+  {
+    "A_name" : "withTitle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 47, Column: 3",
+    "H_initialValue" : "try doc.select(\"p[title]\")"
+  },
+  {
+    "A_name" : "ps",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 57, Column: 3",
+    "H_initialValue" : "try doc.select(\"p\").attr(\"style\", \"classy\")"
+  },
+  {
+    "A_name" : "testHasAttr",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 63, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 64, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<p title=foo><p title=bar><p class=foo><p class=bar>\")"
+      },
+      {
+        "A_name" : "ps",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 65, Column: 3",
+        "H_initialValue" : "try doc.select(\"p\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 64, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<p title=foo><p title=bar><p class=foo><p class=bar>\")"
+  },
+  {
+    "A_name" : "ps",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 65, Column: 3",
+    "H_initialValue" : "try doc.select(\"p\")"
+  },
+  {
+    "A_name" : "testHasAbsAttr",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 70, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 71, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<a id=1 href='\/foo'>One<\/a> <a id=2 href='https:\/\/google.com'>Two<\/a>\")"
+      },
+      {
+        "A_name" : "one",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 72, Column: 3",
+        "H_initialValue" : "try doc.select(\"#1\")"
+      },
+      {
+        "A_name" : "two",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 73, Column: 3",
+        "H_initialValue" : "try doc.select(\"#2\")"
+      },
+      {
+        "A_name" : "both",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 74, Column: 3",
+        "H_initialValue" : "try doc.select(\"a\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 71, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<a id=1 href='\/foo'>One<\/a> <a id=2 href='https:\/\/google.com'>Two<\/a>\")"
+  },
+  {
+    "A_name" : "one",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 72, Column: 3",
+    "H_initialValue" : "try doc.select(\"#1\")"
+  },
+  {
+    "A_name" : "two",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 73, Column: 3",
+    "H_initialValue" : "try doc.select(\"#2\")"
+  },
+  {
+    "A_name" : "both",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 74, Column: 3",
+    "H_initialValue" : "try doc.select(\"a\")"
+  },
+  {
+    "A_name" : "testAttr",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 80, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 81, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<p title=foo><p title=bar><p class=foo><p class=bar>\")"
+      },
+      {
+        "A_name" : "classVal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 82, Column: 3",
+        "H_initialValue" : "try doc.select(\"p\").attr(\"class\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 81, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<p title=foo><p title=bar><p class=foo><p class=bar>\")"
+  },
+  {
+    "A_name" : "classVal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 82, Column: 3",
+    "H_initialValue" : "try doc.select(\"p\").attr(\"class\")"
+  },
+  {
+    "A_name" : "testAbsAttr",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 86, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 87, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<a id=1 href='\/foo'>One<\/a> <a id=2 href='https:\/\/google.com'>Two<\/a>\")"
+      },
+      {
+        "A_name" : "one",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 88, Column: 3",
+        "H_initialValue" : "try doc.select(\"#1\")"
+      },
+      {
+        "A_name" : "two",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 89, Column: 3",
+        "H_initialValue" : "try doc.select(\"#2\")"
+      },
+      {
+        "A_name" : "both",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 90, Column: 3",
+        "H_initialValue" : "try doc.select(\"a\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 87, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<a id=1 href='\/foo'>One<\/a> <a id=2 href='https:\/\/google.com'>Two<\/a>\")"
+  },
+  {
+    "A_name" : "one",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 88, Column: 3",
+    "H_initialValue" : "try doc.select(\"#1\")"
+  },
+  {
+    "A_name" : "two",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 89, Column: 3",
+    "H_initialValue" : "try doc.select(\"#2\")"
+  },
+  {
+    "A_name" : "both",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 90, Column: 3",
+    "H_initialValue" : "try doc.select(\"a\")"
+  },
+  {
+    "A_name" : "testClasses",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 97, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 98, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<div><p class='mellow yellow'><\/p><p class='red green'><\/p>\")"
+      },
+      {
+        "A_name" : "els",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 100, Column: 3",
+        "H_initialValue" : "try doc.select(\"p\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 98, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<div><p class='mellow yellow'><\/p><p class='red green'><\/p>\")"
+  },
+  {
+    "A_name" : "els",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 100, Column: 3",
+    "H_initialValue" : "try doc.select(\"p\")"
+  },
+  {
+    "A_name" : "testText",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 111, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "h",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 112, Column: 3",
+        "H_initialValue" : "\"<div><p>Hello<p>there<p>world<\/div>\""
+      },
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 113, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(h)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 112, Column: 3",
+    "H_initialValue" : "\"<div><p>Hello<p>there<p>world<\/div>\""
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 113, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(h)"
+  },
+  {
+    "A_name" : "testHasText",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 117, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 118, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div><p><\/p><\/div>\")"
+      },
+      {
+        "A_name" : "divs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 119, Column: 3",
+        "H_initialValue" : "try doc.select(\"div\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 118, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div><p><\/p><\/div>\")"
+  },
+  {
+    "A_name" : "divs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 119, Column: 3",
+    "H_initialValue" : "try doc.select(\"div\")"
+  },
+  {
+    "A_name" : "testHtml",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 124, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 125, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div><p>There<\/p><\/div>\")"
+      },
+      {
+        "A_name" : "divs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 126, Column: 3",
+        "H_initialValue" : "try doc.select(\"div\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 125, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div><p>There<\/p><\/div>\")"
+  },
+  {
+    "A_name" : "divs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 126, Column: 3",
+    "H_initialValue" : "try doc.select(\"div\")"
+  },
+  {
+    "A_name" : "testOuterHtml",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 130, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 131, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div><p>There<\/p><\/div>\")"
+      },
+      {
+        "A_name" : "divs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 132, Column: 3",
+        "H_initialValue" : "try doc.select(\"div\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 131, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div><p>There<\/p><\/div>\")"
+  },
+  {
+    "A_name" : "divs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 132, Column: 3",
+    "H_initialValue" : "try doc.select(\"div\")"
+  },
+  {
+    "A_name" : "testSetHtml",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 136, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 137, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<p>One<\/p><p>Two<\/p><p>Three<\/p>\")"
+      },
+      {
+        "A_name" : "ps",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 138, Column: 3",
+        "H_initialValue" : "try doc.select(\"p\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 137, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<p>One<\/p><p>Two<\/p><p>Three<\/p>\")"
+  },
+  {
+    "A_name" : "ps",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 138, Column: 3",
+    "H_initialValue" : "try doc.select(\"p\")"
+  },
+  {
+    "A_name" : "testVal",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 147, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 148, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<input value='one' \/><textarea>two<\/textarea>\")"
+      },
+      {
+        "A_name" : "els",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 149, Column: 3",
+        "H_initialValue" : "try doc.select(\"input, textarea\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 148, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<input value='one' \/><textarea>two<\/textarea>\")"
+  },
+  {
+    "A_name" : "els",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 149, Column: 3",
+    "H_initialValue" : "try doc.select(\"input, textarea\")"
+  },
+  {
+    "A_name" : "testBefore",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 160, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 161, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<p>This <a>is<\/a> <a>SwiftSoup<\/a>.<\/p>\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 161, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<p>This <a>is<\/a> <a>SwiftSoup<\/a>.<\/p>\")"
+  },
+  {
+    "A_name" : "testAfter",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 166, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 167, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<p>This <a>is<\/a> <a>SwiftSoup<\/a>.<\/p>\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 167, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<p>This <a>is<\/a> <a>SwiftSoup<\/a>.<\/p>\")"
+  },
+  {
+    "A_name" : "testWrap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 172, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "h",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 173, Column: 3",
+        "H_initialValue" : "\"<p><b>This<\/b> is <b>SwiftSoup<\/b><\/p>\""
+      },
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 174, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(h)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 173, Column: 3",
+    "H_initialValue" : "\"<p><b>This<\/b> is <b>SwiftSoup<\/b><\/p>\""
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 174, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(h)"
+  },
+  {
+    "A_name" : "testWrapDiv",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 179, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "h",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 180, Column: 3",
+        "H_initialValue" : "\"<p><b>This<\/b> is <b>SwiftSoup<\/b>.<\/p> <p>How do you like it?<\/p>\""
+      },
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 181, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(h)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 180, Column: 3",
+    "H_initialValue" : "\"<p><b>This<\/b> is <b>SwiftSoup<\/b>.<\/p> <p>How do you like it?<\/p>\""
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 181, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(h)"
+  },
+  {
+    "A_name" : "testUnwrap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 186, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "h",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 187, Column: 3",
+        "H_initialValue" : "\"<div><font>One<\/font> <font><a href=\\\"\/\\\">Two<\/a><\/font><\/div\""
+      },
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 188, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(h)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 187, Column: 3",
+    "H_initialValue" : "\"<div><font>One<\/font> <font><a href=\\\"\/\\\">Two<\/a><\/font><\/div\""
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 188, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(h)"
+  },
+  {
+    "A_name" : "testUnwrapP",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 193, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "h",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 194, Column: 3",
+        "H_initialValue" : "\"<p><a>One<\/a> Two<\/p> Three <i>Four<\/i> <p>Fix <i>Six<\/i><\/p>\""
+      },
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 195, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(h)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 194, Column: 3",
+    "H_initialValue" : "\"<p><a>One<\/a> Two<\/p> Three <i>Four<\/i> <p>Fix <i>Six<\/i><\/p>\""
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 195, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(h)"
+  },
+  {
+    "A_name" : "testUnwrapKeepsSpace",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 200, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "h",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 201, Column: 3",
+        "H_initialValue" : "\"<p>One <span>two<\/span> <span>three<\/span> four<\/p>\""
+      },
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 202, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(h)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 201, Column: 3",
+    "H_initialValue" : "\"<p>One <span>two<\/span> <span>three<\/span> four<\/p>\""
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 202, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(h)"
+  },
+  {
+    "A_name" : "testEmpty",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 207, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 208, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello <b>there<\/b><\/p> <p>now!<\/p><\/div>\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 208, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello <b>there<\/b><\/p> <p>now!<\/p><\/div>\")"
+  },
+  {
+    "A_name" : "testRemove",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 215, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 216, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello <b>there<\/b><\/p> SwiftSoup <p>now!<\/p><\/div>\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 216, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello <b>there<\/b><\/p> SwiftSoup <p>now!<\/p><\/div>\")"
+  },
+  {
+    "A_name" : "testEq",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 223, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "h",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 224, Column: 3",
+        "H_initialValue" : "\"<p>Hello<p>there<p>world\""
+      },
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 225, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(h)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 224, Column: 3",
+    "H_initialValue" : "\"<p>Hello<p>there<p>world\""
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 225, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(h)"
+  },
+  {
+    "A_name" : "testIs",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 230, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "h",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 231, Column: 3",
+        "H_initialValue" : "\"<p>Hello<p title=foo>there<p>world\""
+      },
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 232, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(h)"
+      },
+      {
+        "A_name" : "ps",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 233, Column: 3",
+        "H_initialValue" : "try doc.select(\"p\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 231, Column: 3",
+    "H_initialValue" : "\"<p>Hello<p title=foo>there<p>world\""
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 232, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(h)"
+  },
+  {
+    "A_name" : "ps",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 233, Column: 3",
+    "H_initialValue" : "try doc.select(\"p\")"
+  },
+  {
+    "A_name" : "testParents",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 238, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 239, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><p>There<\/p>\")"
+      },
+      {
+        "A_name" : "parents",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 240, Column: 3",
+        "H_initialValue" : "try doc.select(\"p\").parents()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 239, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><p>There<\/p>\")"
+  },
+  {
+    "A_name" : "parents",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 240, Column: 3",
+    "H_initialValue" : "try doc.select(\"p\").parents()"
+  },
+  {
+    "A_name" : "testNot",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 248, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 249, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<div id=1><p>One<\/p><\/div> <div id=2><p><span>Two<\/span><\/p><\/div>\")"
+      },
+      {
+        "A_name" : "div1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 251, Column: 3",
+        "H_initialValue" : "try doc.select(\"div\").not(\":has(p > span)\")"
+      },
+      {
+        "A_name" : "div2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 255, Column: 3",
+        "H_initialValue" : "try doc.select(\"div\").not(\"#1\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 249, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<div id=1><p>One<\/p><\/div> <div id=2><p><span>Two<\/span><\/p><\/div>\")"
+  },
+  {
+    "A_name" : "div1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 251, Column: 3",
+    "H_initialValue" : "try doc.select(\"div\").not(\":has(p > span)\")"
+  },
+  {
+    "A_name" : "div2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 255, Column: 3",
+    "H_initialValue" : "try doc.select(\"div\").not(\"#1\")"
+  },
+  {
+    "A_name" : "testTagNameSet",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 260, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 261, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<p>Hello <i>there<\/i> <i>now<\/i><\/p>\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 261, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<p>Hello <i>there<\/i> <i>now<\/i><\/p>\")"
+  },
+  {
+    "A_name" : "testTraverse",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 267, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 268, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div>There<\/div>\")"
+      },
+      {
+        "A_name" : "accum",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 269, Column: 3",
+        "H_initialValue" : "StringBuilder()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 268, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<div><p>Hello<\/p><\/div><div>There<\/div>\")"
+  },
+  {
+    "A_name" : "accum",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 269, Column: 3",
+    "H_initialValue" : "StringBuilder()"
+  },
+  {
+    "A_name" : "nv",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "NodeVisitor"
+    ],
+    "F_location" : "ElementsTest.swift - Line: 271, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "accum",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 272, Column: 4",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 273, Column: 4",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StringBuilder"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "head",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 276, Column: 4",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Node",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "tail",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 279, Column: 4",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Node",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "accum",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 272, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 273, Column: 4",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StringBuilder"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "head",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 276, Column: 4",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Node",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "tail",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 279, Column: 4",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Node",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "testForms",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 287, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 288, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<form id=1><input name=q><\/form><div \/><form id=2><input name=f><\/form>\")"
+      },
+      {
+        "A_name" : "els",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 289, Column: 3",
+        "H_initialValue" : "try doc.select(\"*\")"
+      },
+      {
+        "A_name" : "forms",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 292, Column: 3",
+        "H_initialValue" : "els.forms()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 288, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<form id=1><input name=q><\/form><div \/><form id=2><input name=f><\/form>\")"
+  },
+  {
+    "A_name" : "els",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 289, Column: 3",
+    "H_initialValue" : "try doc.select(\"*\")"
+  },
+  {
+    "A_name" : "forms",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 292, Column: 3",
+    "H_initialValue" : "els.forms()"
+  },
+  {
+    "A_name" : "testClassWithHyphen",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 300, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 301, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parse(\"<p class='tab-nav'>Check<\/p>\")"
+      },
+      {
+        "A_name" : "els",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 302, Column: 3",
+        "H_initialValue" : "try doc.getElementsByClass(\"tab-nav\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 301, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parse(\"<p class='tab-nav'>Check<\/p>\")"
+  },
+  {
+    "A_name" : "els",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 302, Column: 3",
+    "H_initialValue" : "try doc.getElementsByClass(\"tab-nav\")"
+  },
+  {
+    "A_name" : "testEachText",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 307, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "doc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 308, Column: 9",
+        "H_initialValue" : "try SwiftSoup.parse(\"<div><p>1<p>2<p>3<p>4<p>5<p>6<\/div><div><p>7<p>8<p>9<p>10<p>11<p>12<p><\/p><\/div>\")"
+      },
+      {
+        "A_name" : "divText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 309, Column: 9",
+        "H_initialValue" : "try doc.select(\"div\").eachText()"
+      },
+      {
+        "A_name" : "pText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 314, Column: 9",
+        "H_initialValue" : "try doc.select(\"p\").eachText()"
+      },
+      {
+        "A_name" : "ps",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ElementsTest.swift - Line: 315, Column: 9",
+        "H_initialValue" : "try doc.select(\"p\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "doc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 308, Column: 9",
+    "H_initialValue" : "try SwiftSoup.parse(\"<div><p>1<p>2<p>3<p>4<p>5<p>6<\/div><div><p>7<p>8<p>9<p>10<p>11<p>12<p><\/p><\/div>\")"
+  },
+  {
+    "A_name" : "divText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 309, Column: 9",
+    "H_initialValue" : "try doc.select(\"div\").eachText()"
+  },
+  {
+    "A_name" : "pText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 314, Column: 9",
+    "H_initialValue" : "try doc.select(\"p\").eachText()"
+  },
+  {
+    "A_name" : "ps",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ElementsTest.swift - Line: 315, Column: 9",
+    "H_initialValue" : "try doc.select(\"p\")"
+  },
+  {
+    "A_name" : "allTests",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ElementsTest.swift - Line: 325, Column: 2",
+    "H_initialValue" : "{\n\t\treturn [\n            (\"testLinuxTestSuiteIncludesAllTests\", testLinuxTestSuiteIncludesAllTests),\n            (\"testFilter\", testFilter),\n\t\t\t(\"testRandomAccessCollection\", testRandomAccessCollection),\n\t\t\t(\"testAttributes\", testAttributes),\n\t\t\t(\"testHasAttr\", testHasAttr),\n\t\t\t(\"testHasAbsAttr\", testHasAbsAttr),\n\t\t\t(\"testAttr\", testAttr),\n\t\t\t(\"testAbsAttr\", testAbsAttr),\n\t\t\t(\"testClasses\", testClasses),\n\t\t\t(\"testText\", testText),\n\t\t\t(\"testHasText\", testHasText),\n\t\t\t(\"testHtml\", testHtml),\n\t\t\t(\"testOuterHtml\", testOuterHtml),\n\t\t\t(\"testSetHtml\", testSetHtml),\n\t\t\t(\"testVal\", testVal),\n\t\t\t(\"testBefore\", testBefore),\n\t\t\t(\"testAfter\", testAfter),\n\t\t\t(\"testWrap\", testWrap),\n\t\t\t(\"testWrapDiv\", testWrapDiv),\n\t\t\t(\"testUnwrap\", testUnwrap),\n\t\t\t(\"testUnwrapP\", testUnwrapP),\n\t\t\t(\"testUnwrapKeepsSpace\", testUnwrapKeepsSpace),\n\t\t\t(\"testEmpty\", testEmpty),\n\t\t\t(\"testRemove\", testRemove),\n\t\t\t(\"testEq\", testEq),\n\t\t\t(\"testIs\", testIs),\n\t\t\t(\"testParents\", testParents),\n\t\t\t(\"testNot\", testNot),\n\t\t\t(\"testTagNameSet\", testTagNameSet),\n\t\t\t(\"testTraverse\", testTraverse),\n\t\t\t(\"testForms\", testForms),\n\t\t\t(\"testClassWithHyphen\", testClassWithHyphen),\n            (\"testEachText\", testEachText)\n\t\t]\n\t}()"
+  }
+]

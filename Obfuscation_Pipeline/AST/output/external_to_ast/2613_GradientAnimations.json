@@ -1,0 +1,658 @@
+[
+  {
+    "A_name" : "GradientShapeItem",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "OpacityAnimationModel"
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "startPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 10, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "endPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 11, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "gradientType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 12, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "numberOfColors",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 13, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "colors",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 14, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "startPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 10, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "endPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 11, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "gradientType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 12, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "numberOfColors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 13, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "colors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 14, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "GradientFill",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "GradientShapeItem"
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 19, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "GradientStroke",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "GradientShapeItem"
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 23, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "GradientRenderLayer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 27, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "addGradientAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 34, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "GradientShapeItem",
+          "GradientContentType",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "type",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "addLinearGradientAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 88, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "GradientShapeItem",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "addRadialGradientAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 112, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "combinedKeyframes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientAnimations.swift - Line: 115, Column: 5",
+            "H_initialValue" : "Keyframes.combined(\n      gradient.startPoint, gradient.endPoint,\n      makeCombinedResult: { absoluteStartPoint, absoluteEndPoint -> RadialGradientKeyframes in\n        \/\/ Convert the absolute start \/ end points to the relative structure used by Core Animation\n        let relativeStartPoint = percentBasedPointInBounds(from: absoluteStartPoint.pointValue)\n        let radius = absoluteStartPoint.pointValue.distanceTo(absoluteEndPoint.pointValue)\n        let relativeEndPoint = percentBasedPointInBounds(\n          from: CGPoint(\n            x: absoluteStartPoint.x + radius,\n            y: absoluteStartPoint.y + radius))\n\n        return RadialGradientKeyframes(startPoint: relativeStartPoint, endPoint: relativeEndPoint)\n      })"
+          }
+        ],
+        "I_parameterType" : [
+          "GradientShapeItem",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "context"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "addGradientAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 34, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "GradientShapeItem",
+      "GradientContentType",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "type",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "addLinearGradientAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 88, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "GradientShapeItem",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "addRadialGradientAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 112, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "combinedKeyframes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 115, Column: 5",
+        "H_initialValue" : "Keyframes.combined(\n      gradient.startPoint, gradient.endPoint,\n      makeCombinedResult: { absoluteStartPoint, absoluteEndPoint -> RadialGradientKeyframes in\n        \/\/ Convert the absolute start \/ end points to the relative structure used by Core Animation\n        let relativeStartPoint = percentBasedPointInBounds(from: absoluteStartPoint.pointValue)\n        let radius = absoluteStartPoint.pointValue.distanceTo(absoluteEndPoint.pointValue)\n        let relativeEndPoint = percentBasedPointInBounds(\n          from: CGPoint(\n            x: absoluteStartPoint.x + radius,\n            y: absoluteStartPoint.y + radius))\n\n        return RadialGradientKeyframes(startPoint: relativeStartPoint, endPoint: relativeEndPoint)\n      })"
+      }
+    ],
+    "I_parameterType" : [
+      "GradientShapeItem",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "combinedKeyframes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 115, Column: 5",
+    "H_initialValue" : "Keyframes.combined(\n      gradient.startPoint, gradient.endPoint,\n      makeCombinedResult: { absoluteStartPoint, absoluteEndPoint -> RadialGradientKeyframes in\n        \/\/ Convert the absolute start \/ end points to the relative structure used by Core Animation\n        let relativeStartPoint = percentBasedPointInBounds(from: absoluteStartPoint.pointValue)\n        let radius = absoluteStartPoint.pointValue.distanceTo(absoluteEndPoint.pointValue)\n        let relativeEndPoint = percentBasedPointInBounds(\n          from: CGPoint(\n            x: absoluteStartPoint.x + radius,\n            y: absoluteStartPoint.y + radius))\n\n        return RadialGradientKeyframes(startPoint: relativeStartPoint, endPoint: relativeEndPoint)\n      })"
+  },
+  {
+    "A_name" : "relativeStartPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 119, Column: 9",
+    "H_initialValue" : "percentBasedPointInBounds(from: absoluteStartPoint.pointValue)"
+  },
+  {
+    "A_name" : "radius",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 120, Column: 9",
+    "H_initialValue" : "absoluteStartPoint.pointValue.distanceTo(absoluteEndPoint.pointValue)"
+  },
+  {
+    "A_name" : "relativeEndPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 121, Column: 9",
+    "H_initialValue" : "percentBasedPointInBounds(\n          from: CGPoint(\n            x: absoluteStartPoint.x + radius,\n            y: absoluteStartPoint.y + radius))"
+  },
+  {
+    "A_name" : "RadialGradientKeyframes",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 145, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "startPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 146, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "endPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 147, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 149, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "RadialGradientKeyframes",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> RadialGradientKeyframes"
+      }
+    ]
+  },
+  {
+    "A_name" : "startPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 146, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "endPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 147, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 149, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "RadialGradientKeyframes",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> RadialGradientKeyframes"
+  },
+  {
+    "A_name" : "GradientContentType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 159, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "rgb",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 160, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "alpha",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 161, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "GradientShapeItem",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 167, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "hasAlphaComponent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 174, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "colorConfiguration",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientAnimations.swift - Line: 200, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[Double]",
+          "GradientContentType"
+        ],
+        "I_parameters" : [
+          "from",
+          "type"
+        ],
+        "J_returnType" : "-> GradientColorConfiguration"
+      }
+    ]
+  },
+  {
+    "A_name" : "hasAlphaComponent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 174, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "colorComponents",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 176, Column: 7",
+    "H_initialValue" : "colorComponentsKeyframe.value"
+  },
+  {
+    "A_name" : "alphaConfiguration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 177, Column: 7",
+    "H_initialValue" : "colorConfiguration(from: colorComponents, type: .alpha)"
+  },
+  {
+    "A_name" : "notFullyOpaque",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 179, Column: 7",
+    "H_initialValue" : "alphaConfiguration.contains(where: { color, _ in\n        color.alpha < 0.999\n      })"
+  },
+  {
+    "A_name" : "colorConfiguration",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 200, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Double]",
+      "GradientContentType"
+    ],
+    "I_parameters" : [
+      "from",
+      "type"
+    ],
+    "J_returnType" : "-> GradientColorConfiguration"
+  },
+  {
+    "A_name" : "colors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 213, Column: 7",
+    "H_initialValue" : "GradientColorConfiguration()"
+  },
+  {
+    "A_name" : "colorStartIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 216, Column: 9",
+    "H_initialValue" : "colorIndex * 4"
+  },
+  {
+    "A_name" : "colorLocation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 218, Column: 9",
+    "H_initialValue" : "CGFloat(colorComponents[colorStartIndex])"
+  },
+  {
+    "A_name" : "color",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 220, Column: 9",
+    "H_initialValue" : "CGColor.rgb(\n          CGFloat(colorComponents[colorStartIndex + 1]),\n          CGFloat(colorComponents[colorStartIndex + 2]),\n          CGFloat(colorComponents[colorStartIndex + 3]))"
+  },
+  {
+    "A_name" : "alphaValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 233, Column: 7",
+    "H_initialValue" : "GradientColorConfiguration()"
+  },
+  {
+    "A_name" : "alphaLocation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 236, Column: 9",
+    "H_initialValue" : "CGFloat(colorComponents[alphaIndex])"
+  },
+  {
+    "A_name" : "alphaValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientAnimations.swift - Line: 237, Column: 9",
+    "H_initialValue" : "CGFloat(colorComponents[alphaIndex + 1])"
+  }
+]

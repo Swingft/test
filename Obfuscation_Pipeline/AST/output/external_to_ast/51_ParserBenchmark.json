@@ -1,0 +1,262 @@
+[
+  {
+    "A_name" : "ParserBenchmark",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "ParserBenchmark.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Const",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "ParserBenchmark.swift - Line: 14, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "corpusHTMLData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "static",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "ParserBenchmark.swift - Line: 15, Column: 9",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "repetitions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "static",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "ParserBenchmark.swift - Line: 16, Column: 9",
+            "H_initialValue" : "5"
+          }
+        ]
+      },
+      {
+        "A_name" : "setUp",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ParserBenchmark.swift - Line: 19, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "bundle",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParserBenchmark.swift - Line: 20, Column: 9",
+            "H_initialValue" : "Bundle(for: type(of: self))"
+          },
+          {
+            "A_name" : "urls",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParserBenchmark.swift - Line: 21, Column: 9",
+            "H_initialValue" : "bundle.urls(forResourcesWithExtension: \".html\", subdirectory: nil)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testParserPerformance",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParserBenchmark.swift - Line: 25, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "count",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParserBenchmark.swift - Line: 26, Column: 9",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Const",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ParserBenchmark.swift - Line: 14, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "corpusHTMLData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ParserBenchmark.swift - Line: 15, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "repetitions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ParserBenchmark.swift - Line: 16, Column: 9",
+        "H_initialValue" : "5"
+      }
+    ]
+  },
+  {
+    "A_name" : "corpusHTMLData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ParserBenchmark.swift - Line: 15, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "repetitions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ParserBenchmark.swift - Line: 16, Column: 9",
+    "H_initialValue" : "5"
+  },
+  {
+    "A_name" : "setUp",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ParserBenchmark.swift - Line: 19, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "bundle",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParserBenchmark.swift - Line: 20, Column: 9",
+        "H_initialValue" : "Bundle(for: type(of: self))"
+      },
+      {
+        "A_name" : "urls",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParserBenchmark.swift - Line: 21, Column: 9",
+        "H_initialValue" : "bundle.urls(forResourcesWithExtension: \".html\", subdirectory: nil)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "bundle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParserBenchmark.swift - Line: 20, Column: 9",
+    "H_initialValue" : "Bundle(for: type(of: self))"
+  },
+  {
+    "A_name" : "urls",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParserBenchmark.swift - Line: 21, Column: 9",
+    "H_initialValue" : "bundle.urls(forResourcesWithExtension: \".html\", subdirectory: nil)"
+  },
+  {
+    "A_name" : "testParserPerformance",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParserBenchmark.swift - Line: 25, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "count",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParserBenchmark.swift - Line: 26, Column: 9",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "count",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParserBenchmark.swift - Line: 26, Column: 9",
+    "H_initialValue" : "0"
+  }
+]

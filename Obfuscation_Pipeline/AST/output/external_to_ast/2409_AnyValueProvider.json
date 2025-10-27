@@ -1,0 +1,410 @@
+[
+  {
+    "A_name" : "AnyValueProvider",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 18, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "valueType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 21, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "typeErasedStorage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 24, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "hasUpdate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 27, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationFrameTime"
+        ],
+        "I_parameters" : [
+          "frame"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "valueType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 21, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "typeErasedStorage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 24, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hasUpdate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 27, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationFrameTime"
+    ],
+    "I_parameters" : [
+      "frame"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "AnyValueProvider",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "value",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 33, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationFrameTime"
+        ],
+        "I_parameters" : [
+          "frame"
+        ],
+        "J_returnType" : "-> Any"
+      }
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 33, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationFrameTime"
+    ],
+    "I_parameters" : [
+      "frame"
+    ],
+    "J_returnType" : "-> Any"
+  },
+  {
+    "A_name" : "ValueProvider",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyValueProvider"
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 41, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "storage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 45, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "storage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 45, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ValueProvider",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 48, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "typeErasedStorage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 49, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "typeErasedStorage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 49, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ValueProviderStorage",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 70, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "singleValue",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 72, Column: 8",
+        "I_parameterType" : [
+          "T"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "keyframes",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 80, Column: 8",
+        "I_parameterType" : [
+          "[Keyframe<T>]"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "closure",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 84, Column: 8",
+        "I_parameterType" : [
+          "(AnimationFrameTime) -> T"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 88, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationFrameTime"
+        ],
+        "I_parameters" : [
+          "frame"
+        ],
+        "J_returnType" : "-> T"
+      }
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 88, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationFrameTime"
+    ],
+    "I_parameters" : [
+      "frame"
+    ],
+    "J_returnType" : "-> T"
+  },
+  {
+    "A_name" : "AnyValueProviderStorage",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 105, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "singleValue",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 107, Column: 8",
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "keyframes",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 112, Column: 8",
+        "I_parameterType" : [
+          "[Keyframe<Any>]",
+          "(AnimationFrameTime) -> Any"
+        ],
+        "I_parameters" : [
+          "_",
+          "interpolate"
+        ]
+      },
+      {
+        "A_name" : "closure",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 115, Column: 8",
+        "I_parameterType" : [
+          "(AnimationFrameTime) -> Any"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueProvider.swift - Line: 119, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationFrameTime"
+        ],
+        "I_parameters" : [
+          "frame"
+        ],
+        "J_returnType" : "-> Any"
+      }
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueProvider.swift - Line: 119, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationFrameTime"
+    ],
+    "I_parameters" : [
+      "frame"
+    ],
+    "J_returnType" : "-> Any"
+  }
+]

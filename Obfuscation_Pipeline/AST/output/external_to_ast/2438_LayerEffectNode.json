@@ -1,0 +1,126 @@
+[
+  {
+    "A_name" : "LayerEffectNode",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LayerEffectNode.swift - Line: 8, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "applyEffect",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffectNode.swift - Line: 9, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CALayer"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      },
+      {
+        "A_name" : "propertyMap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffectNode.swift - Line: 10, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "applyEffect",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LayerEffectNode.swift - Line: 9, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CALayer"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "propertyMap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LayerEffectNode.swift - Line: 10, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "LayerEffectNode",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LayerEffectNode.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "updateWithFrame",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffectNode.swift - Line: 15, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CALayer",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "layer",
+          "frame"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "updateWithFrame",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LayerEffectNode.swift - Line: 15, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CALayer",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "layer",
+      "frame"
+    ]
+  }
+]

@@ -1,0 +1,984 @@
+[
+  {
+    "A_name" : "STVPNBlock",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "objc",
+      "_hasMissingDesignatedInitializers",
+      "objcMembers"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObjectiveC.NSObject"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isDetectTypeInclude",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 17, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Int",
+          "STVPNBlockDetectType"
+        ],
+        "I_parameters" : [
+          "_",
+          "detectType"
+        ],
+        "J_returnType" : "-> Swift.Bool"
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 18, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "((Swift.Int) -> Swift.Void)?"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "stop",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 19, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "isDetectTypeInclude",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 17, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Int",
+      "STVPNBlockDetectType"
+    ],
+    "I_parameters" : [
+      "_",
+      "detectType"
+    ],
+    "J_returnType" : "-> Swift.Bool"
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 18, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "((Swift.Int) -> Swift.Void)?"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "stop",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 19, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "STVPNBlockBuilder",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "objc",
+      "_inheritsConvenienceInitializers",
+      "_hasMissingDesignatedInitializers",
+      "objcMembers"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObjectiveC.NSObject"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 21, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "shared",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "static"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 22, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setDetectType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 23, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STVPNBlockBuilder"
+      },
+      {
+        "A_name" : "setDetectIntervalType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 24, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "STVPNBlockDetectIntervalType"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STVPNBlockBuilder"
+      },
+      {
+        "A_name" : "setDetectInterval",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 25, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Double"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STVPNBlockBuilder"
+      },
+      {
+        "A_name" : "setCountryList",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 26, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[Swift.String]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STVPNBlockBuilder"
+      },
+      {
+        "A_name" : "setUseBlackList",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 27, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STVPNBlockBuilder"
+      },
+      {
+        "A_name" : "setStopDetectWhenUnauthorized",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 28, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STVPNBlockBuilder"
+      },
+      {
+        "A_name" : "setOnLocationAuthorizationFailure",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 29, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping @convention(block) (STVPNBlockLocationAuthorizationStatus) -> Swift.Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STVPNBlockBuilder"
+      },
+      {
+        "A_name" : "setRadarUrl",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 30, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.String?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STVPNBlockBuilder"
+      },
+      {
+        "A_name" : "setAuthUrl",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 31, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.String?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STVPNBlockBuilder"
+      },
+      {
+        "A_name" : "build",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 32, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> STVPNBlock"
+      }
+    ]
+  },
+  {
+    "A_name" : "shared",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "static"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 22, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setDetectType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 23, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STVPNBlockBuilder"
+  },
+  {
+    "A_name" : "setDetectIntervalType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 24, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "STVPNBlockDetectIntervalType"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STVPNBlockBuilder"
+  },
+  {
+    "A_name" : "setDetectInterval",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 25, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Double"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STVPNBlockBuilder"
+  },
+  {
+    "A_name" : "setCountryList",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 26, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Swift.String]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STVPNBlockBuilder"
+  },
+  {
+    "A_name" : "setUseBlackList",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 27, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STVPNBlockBuilder"
+  },
+  {
+    "A_name" : "setStopDetectWhenUnauthorized",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 28, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STVPNBlockBuilder"
+  },
+  {
+    "A_name" : "setOnLocationAuthorizationFailure",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 29, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping @convention(block) (STVPNBlockLocationAuthorizationStatus) -> Swift.Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STVPNBlockBuilder"
+  },
+  {
+    "A_name" : "setRadarUrl",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 30, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.String?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STVPNBlockBuilder"
+  },
+  {
+    "A_name" : "setAuthUrl",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 31, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.String?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STVPNBlockBuilder"
+  },
+  {
+    "A_name" : "build",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 32, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> STVPNBlock"
+  },
+  {
+    "A_name" : "STVPNBlockDetectType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Int"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 35, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "VPN",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 36, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "PROXY",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 37, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "FAKE_GPS",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 38, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "COUNTRY",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 39, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "ALL",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 40, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 41, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Int"
+        ],
+        "I_parameters" : [
+          "rawValue"
+        ]
+      },
+      {
+        "A_name" : "rawValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 43, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 41, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Int"
+    ],
+    "I_parameters" : [
+      "rawValue"
+    ]
+  },
+  {
+    "A_name" : "rawValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 43, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "STVPNBlockDetectIntervalType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Int"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 47, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "ONCE",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 48, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "INFINITE",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 49, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 50, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Int"
+        ],
+        "I_parameters" : [
+          "rawValue"
+        ]
+      },
+      {
+        "A_name" : "rawValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 52, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 50, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Int"
+    ],
+    "I_parameters" : [
+      "rawValue"
+    ]
+  },
+  {
+    "A_name" : "rawValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 52, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "STVPNBlockLocationAuthorizationStatus",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObjectiveC.NSObject"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 56, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "authorizationStatus",
+        "B_kind" : "variable",
+        "C_accessLevel" : "final",
+        "D_attributes" : [
+          "objc",
+          "final"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 57, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "accuracyAuthorization",
+        "B_kind" : "variable",
+        "C_accessLevel" : "final",
+        "D_attributes" : [
+          "objc",
+          "final"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 58, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios.swiftinterface - Line: 59, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CoreLocation.CLAuthorizationStatus",
+          "CoreLocation.CLAccuracyAuthorization"
+        ],
+        "I_parameters" : [
+          "authorizationStatus",
+          "accuracyAuthorization"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "authorizationStatus",
+    "B_kind" : "variable",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "objc",
+      "final"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 57, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "accuracyAuthorization",
+    "B_kind" : "variable",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "objc",
+      "final"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 58, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 59, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CoreLocation.CLAuthorizationStatus",
+      "CoreLocation.CLAccuracyAuthorization"
+    ],
+    "I_parameters" : [
+      "authorizationStatus",
+      "accuracyAuthorization"
+    ]
+  },
+  {
+    "A_name" : "STVPNBlockDetectType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Equatable"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 62, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "STVPNBlockDetectType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Hashable"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 63, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "STVPNBlockDetectType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.RawRepresentable"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 64, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "STVPNBlockDetectIntervalType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Equatable"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 65, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "STVPNBlockDetectIntervalType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Hashable"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 66, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "STVPNBlockDetectIntervalType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.RawRepresentable"
+    ],
+    "F_location" : "arm64-apple-ios.swiftinterface - Line: 67, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

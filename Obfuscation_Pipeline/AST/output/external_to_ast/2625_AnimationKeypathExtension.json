@@ -1,0 +1,871 @@
+[
+  {
+    "A_name" : "KeypathSearchable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "animatorNodes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 12, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AnimationKeypathExtension.swift - Line: 30, Column: 5",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> [AnimatorNode]?"
+      },
+      {
+        "A_name" : "nodeProperties",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 64, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AnimationKeypathExtension.swift - Line: 71, Column: 5",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> [AnyNodeProperty]?"
+      },
+      {
+        "A_name" : "layer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 98, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> CALayer?"
+      },
+      {
+        "A_name" : "keypath",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 118, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "allKeypaths",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AnimationKeypathExtension.swift - Line: 119, Column: 5",
+            "H_initialValue" : "layerKeypaths()"
+          }
+        ],
+        "I_parameterType" : [
+          "CALayer"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> AnimationKeypath?"
+      },
+      {
+        "A_name" : "allKeypaths",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 124, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "allKeypaths",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AnimationKeypathExtension.swift - Line: 125, Column: 5",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "newKeypath",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AnimationKeypathExtension.swift - Line: 127, Column: 5",
+            "H_initialValue" : "if let previousKeypath = keyPath {\n        previousKeypath.appendingKey(keypathName)\n      } else {\n        AnimationKeypath(keys: [keypathName])\n      }"
+          }
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath?"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> [String]"
+      },
+      {
+        "A_name" : "layerKeypaths",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 148, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "allKeypaths",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AnimationKeypathExtension.swift - Line: 149, Column: 5",
+            "H_initialValue" : "[:]"
+          },
+          {
+            "A_name" : "newKeypath",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AnimationKeypathExtension.swift - Line: 151, Column: 5",
+            "H_initialValue" : "if let previousKeypath = keyPath {\n        previousKeypath.appendingKey(keypathName)\n      } else {\n        AnimationKeypath(keys: [keypathName])\n      }"
+          }
+        ],
+        "I_parameterType" : [
+          "AnimationKeypath?"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> [CALayer: AnimationKeypath]"
+      }
+    ]
+  },
+  {
+    "A_name" : "animatorNodes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 12, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 30, Column: 5",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> [AnimatorNode]?"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 30, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "nodeProperties",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 64, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 71, Column: 5",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> [AnyNodeProperty]?"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 71, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "layer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 98, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> CALayer?"
+  },
+  {
+    "A_name" : "keypath",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 118, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "allKeypaths",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 119, Column: 5",
+        "H_initialValue" : "layerKeypaths()"
+      }
+    ],
+    "I_parameterType" : [
+      "CALayer"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> AnimationKeypath?"
+  },
+  {
+    "A_name" : "allKeypaths",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 119, Column: 5",
+    "H_initialValue" : "layerKeypaths()"
+  },
+  {
+    "A_name" : "allKeypaths",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 124, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "allKeypaths",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 125, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "newKeypath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 127, Column: 5",
+        "H_initialValue" : "if let previousKeypath = keyPath {\n        previousKeypath.appendingKey(keypathName)\n      } else {\n        AnimationKeypath(keys: [keypathName])\n      }"
+      }
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath?"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> [String]"
+  },
+  {
+    "A_name" : "allKeypaths",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 125, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "newKeypath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 127, Column: 5",
+    "H_initialValue" : "if let previousKeypath = keyPath {\n        previousKeypath.appendingKey(keypathName)\n      } else {\n        AnimationKeypath(keys: [keypathName])\n      }"
+  },
+  {
+    "A_name" : "layerKeypaths",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 148, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "allKeypaths",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 149, Column: 5",
+        "H_initialValue" : "[:]"
+      },
+      {
+        "A_name" : "newKeypath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 151, Column: 5",
+        "H_initialValue" : "if let previousKeypath = keyPath {\n        previousKeypath.appendingKey(keypathName)\n      } else {\n        AnimationKeypath(keys: [keypathName])\n      }"
+      }
+    ],
+    "I_parameterType" : [
+      "AnimationKeypath?"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> [CALayer: AnimationKeypath]"
+  },
+  {
+    "A_name" : "allKeypaths",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 149, Column: 5",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "newKeypath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 151, Column: 5",
+    "H_initialValue" : "if let previousKeypath = keyPath {\n        previousKeypath.appendingKey(keypathName)\n      } else {\n        AnimationKeypath(keys: [keypathName])\n      }"
+  },
+  {
+    "A_name" : "AnimationKeypath",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 172, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "currentKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 173, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "nextKeypath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 177, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "propertyKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 184, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "fullPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 196, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "popKey",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 201, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "newKeys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AnimationKeypathExtension.swift - Line: 212, Column: 5",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> AnimationKeypath?"
+      },
+      {
+        "A_name" : "appendingKey",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 237, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "newKeys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AnimationKeypathExtension.swift - Line: 238, Column: 5",
+            "H_initialValue" : "keys"
+          }
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> AnimationKeypath"
+      }
+    ]
+  },
+  {
+    "A_name" : "currentKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 173, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "nextKeypath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 177, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "propertyKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 184, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fullPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 196, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "popKey",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 201, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "newKeys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 212, Column: 5",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> AnimationKeypath?"
+  },
+  {
+    "A_name" : "newKeys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 212, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "oldKeys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 221, Column: 9",
+    "H_initialValue" : "keys"
+  },
+  {
+    "A_name" : "oldKeys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 229, Column: 7",
+    "H_initialValue" : "keys"
+  },
+  {
+    "A_name" : "appendingKey",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 237, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "newKeys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 238, Column: 5",
+        "H_initialValue" : "keys"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> AnimationKeypath"
+  },
+  {
+    "A_name" : "newKeys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 238, Column: 5",
+    "H_initialValue" : "keys"
+  },
+  {
+    "A_name" : "String",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 244, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "keyPathType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 245, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "equalsKeypath",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 256, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "keyPathType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 245, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "equalsKeypath",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 256, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "prefix",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 265, Column: 7",
+    "H_initialValue" : "String(prefix(upTo: index))"
+  },
+  {
+    "A_name" : "suffix",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 266, Column: 7",
+    "H_initialValue" : "String(suffix(from: self.index(after: index)))"
+  },
+  {
+    "A_name" : "testPrefix",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 273, Column: 9",
+    "H_initialValue" : "String(keyname.prefix(upTo: keyname.index(keyname.startIndex, offsetBy: prefix.count)))"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 285, Column: 9",
+    "H_initialValue" : "keyname.index(keyname.endIndex, offsetBy: -suffix.count)"
+  },
+  {
+    "A_name" : "testSuffix",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 286, Column: 9",
+    "H_initialValue" : "String(keyname.suffix(from: index))"
+  },
+  {
+    "A_name" : "KeyType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnimationKeypathExtension.swift - Line: 299, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "specific",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 300, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "wildcard",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 301, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "fuzzyWildcard",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypathExtension.swift - Line: 302, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  }
+]

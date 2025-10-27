@@ -1,0 +1,102 @@
+[
+  {
+    "A_name" : "BehaviorsConfigurableView",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ViewType"
+    ],
+    "F_location" : "BehaviorsConfigurableView.swift - Line: 21, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setBehaviors",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BehaviorsConfigurableView.swift - Line: 33, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Self.Behaviors?"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "setBehaviors",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BehaviorsConfigurableView.swift - Line: 33, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Self.Behaviors?"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "BehaviorsConfigurableView",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BehaviorsConfigurableView.swift - Line: 38, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setBehaviors",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BehaviorsConfigurableView.swift - Line: 39, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Never?"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "setBehaviors",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BehaviorsConfigurableView.swift - Line: 39, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Never?"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  }
+]

@@ -1,0 +1,928 @@
+[
+  {
+    "A_name" : "TransformModel",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "anchorPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 13, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_position",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 16, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_positionX",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 19, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_positionY",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 22, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "scale",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 25, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rotationX",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 28, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rotationY",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 31, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rotationZ",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 34, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_skew",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 37, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_skewAxis",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 40, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "anchorPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 13, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_position",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 16, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_positionX",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 19, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_positionY",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 22, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "scale",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 25, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rotationX",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 28, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rotationY",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 31, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rotationZ",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 34, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_skew",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 37, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_skewAxis",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 40, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Transform",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "TransformModel"
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 45, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "_position",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 46, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_positionX",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 47, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_positionY",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 48, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_skew",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 49, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_skewAxis",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 50, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "_position",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 46, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_positionX",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 47, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_positionY",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 48, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_skew",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 49, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_skewAxis",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 50, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ShapeTransform",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "TransformModel"
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 55, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "anchorPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 56, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_position",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 57, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_positionX",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 58, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_positionY",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 59, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_skew",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 60, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_skewAxis",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 61, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "anchorPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 56, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_position",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 57, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_positionX",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 58, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_positionY",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 59, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_skew",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 60, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_skewAxis",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 61, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CALayer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 66, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "addTransformAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 73, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TransformModel",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "addPositionAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 103, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TransformModel",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "from",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "addAnchorPointAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 137, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TransformModel",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "from",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "addScaleAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 162, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TransformModel",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "from",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "addRotationAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 191, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "containsXRotationValues",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TransformAnimations.swift - Line: 196, Column: 5",
+            "H_initialValue" : "transformModel.rotationX.keyframes.contains(where: { $0.value.cgFloatValue != 0 })"
+          },
+          {
+            "A_name" : "containsYRotationValues",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TransformAnimations.swift - Line: 197, Column: 5",
+            "H_initialValue" : "transformModel.rotationY.keyframes.contains(where: { $0.value.cgFloatValue != 0 })"
+          }
+        ],
+        "I_parameterType" : [
+          "TransformModel",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "from",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "addCombinedTransformAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 251, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "requiresManualInterpolation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TransformAnimations.swift - Line: 256, Column: 5",
+            "H_initialValue" : "\/\/ Core Animation doesn't animate skew changes properly. If the skew value\n      \/\/ changes over the course of the animation then we have to manually\n      \/\/ compute the `CATransform3D` for each frame individually.\n      transformModel.hasSkewAnimation\n      \/\/ `addAnimation` requires that we use an `Interpolatable` value, but we can't interpolate a `CATransform3D`.\n      \/\/ Since this is only necessary when using `complexTimeRemapping`, we can avoid this by manually interpolating\n      \/\/ when `context.mustUseComplexTimeRemapping` is true and just returning a `Hold` container.\n      \/\/ Since our keyframes are already manually interpolated, they won't need to be interpolated again.\n      || context.mustUseComplexTimeRemapping"
+          },
+          {
+            "A_name" : "combinedTransformKeyframes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TransformAnimations.swift - Line: 267, Column: 5",
+            "H_initialValue" : "Keyframes.combined(\n      transformModel.anchorPoint,\n      transformModel._position ?? KeyframeGroup(LottieVector3D(x: 0.0, y: 0.0, z: 0.0)),\n      transformModel._positionX ?? KeyframeGroup(LottieVector1D(0)),\n      transformModel._positionY ?? KeyframeGroup(LottieVector1D(0)),\n      transformModel.scale,\n      transformModel.rotationX,\n      transformModel.rotationY,\n      transformModel.rotationZ,\n      transformModel._skew ?? KeyframeGroup(LottieVector1D(0)),\n      transformModel._skewAxis ?? KeyframeGroup(LottieVector1D(0)),\n      requiresManualInterpolation: requiresManualInterpolation,\n      makeCombinedResult: {\n        anchor, position, positionX, positionY, scale, rotationX, rotationY, rotationZ, skew, skewAxis\n          -> Hold<CATransform3D> in\n\n        let transformPosition: CGPoint =\n          if transformModel._positionX != nil, transformModel._positionY != nil {\n            CGPoint(x: positionX.cgFloatValue, y: positionY.cgFloatValue)\n          } else {\n            position.pointValue\n          }\n\n        let transform = CATransform3D.makeTransform(\n          anchor: anchor.pointValue,\n          position: transformPosition,\n          scale: scale.sizeValue,\n          rotationX: rotationX.cgFloatValue,\n          rotationY: rotationY.cgFloatValue,\n          rotationZ: rotationZ.cgFloatValue,\n          skew: skew.cgFloatValue,\n          skewAxis: skewAxis.cgFloatValue)\n\n        return Hold(value: transform)\n      })"
+          }
+        ],
+        "I_parameterType" : [
+          "TransformModel",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "context"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "addTransformAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 73, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TransformModel",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "addPositionAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 103, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TransformModel",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "from",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "addAnchorPointAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 137, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TransformModel",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "from",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "addScaleAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 162, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TransformModel",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "from",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "addRotationAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 191, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "containsXRotationValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 196, Column: 5",
+        "H_initialValue" : "transformModel.rotationX.keyframes.contains(where: { $0.value.cgFloatValue != 0 })"
+      },
+      {
+        "A_name" : "containsYRotationValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 197, Column: 5",
+        "H_initialValue" : "transformModel.rotationY.keyframes.contains(where: { $0.value.cgFloatValue != 0 })"
+      }
+    ],
+    "I_parameterType" : [
+      "TransformModel",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "from",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "containsXRotationValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 196, Column: 5",
+    "H_initialValue" : "transformModel.rotationX.keyframes.contains(where: { $0.value.cgFloatValue != 0 })"
+  },
+  {
+    "A_name" : "containsYRotationValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 197, Column: 5",
+    "H_initialValue" : "transformModel.rotationY.keyframes.contains(where: { $0.value.cgFloatValue != 0 })"
+  },
+  {
+    "A_name" : "addCombinedTransformAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 251, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "requiresManualInterpolation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 256, Column: 5",
+        "H_initialValue" : "\/\/ Core Animation doesn't animate skew changes properly. If the skew value\n      \/\/ changes over the course of the animation then we have to manually\n      \/\/ compute the `CATransform3D` for each frame individually.\n      transformModel.hasSkewAnimation\n      \/\/ `addAnimation` requires that we use an `Interpolatable` value, but we can't interpolate a `CATransform3D`.\n      \/\/ Since this is only necessary when using `complexTimeRemapping`, we can avoid this by manually interpolating\n      \/\/ when `context.mustUseComplexTimeRemapping` is true and just returning a `Hold` container.\n      \/\/ Since our keyframes are already manually interpolated, they won't need to be interpolated again.\n      || context.mustUseComplexTimeRemapping"
+      },
+      {
+        "A_name" : "combinedTransformKeyframes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 267, Column: 5",
+        "H_initialValue" : "Keyframes.combined(\n      transformModel.anchorPoint,\n      transformModel._position ?? KeyframeGroup(LottieVector3D(x: 0.0, y: 0.0, z: 0.0)),\n      transformModel._positionX ?? KeyframeGroup(LottieVector1D(0)),\n      transformModel._positionY ?? KeyframeGroup(LottieVector1D(0)),\n      transformModel.scale,\n      transformModel.rotationX,\n      transformModel.rotationY,\n      transformModel.rotationZ,\n      transformModel._skew ?? KeyframeGroup(LottieVector1D(0)),\n      transformModel._skewAxis ?? KeyframeGroup(LottieVector1D(0)),\n      requiresManualInterpolation: requiresManualInterpolation,\n      makeCombinedResult: {\n        anchor, position, positionX, positionY, scale, rotationX, rotationY, rotationZ, skew, skewAxis\n          -> Hold<CATransform3D> in\n\n        let transformPosition: CGPoint =\n          if transformModel._positionX != nil, transformModel._positionY != nil {\n            CGPoint(x: positionX.cgFloatValue, y: positionY.cgFloatValue)\n          } else {\n            position.pointValue\n          }\n\n        let transform = CATransform3D.makeTransform(\n          anchor: anchor.pointValue,\n          position: transformPosition,\n          scale: scale.sizeValue,\n          rotationX: rotationX.cgFloatValue,\n          rotationY: rotationY.cgFloatValue,\n          rotationZ: rotationZ.cgFloatValue,\n          skew: skew.cgFloatValue,\n          skewAxis: skewAxis.cgFloatValue)\n\n        return Hold(value: transform)\n      })"
+      }
+    ],
+    "I_parameterType" : [
+      "TransformModel",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "requiresManualInterpolation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 256, Column: 5",
+    "H_initialValue" : "\/\/ Core Animation doesn't animate skew changes properly. If the skew value\n      \/\/ changes over the course of the animation then we have to manually\n      \/\/ compute the `CATransform3D` for each frame individually.\n      transformModel.hasSkewAnimation\n      \/\/ `addAnimation` requires that we use an `Interpolatable` value, but we can't interpolate a `CATransform3D`.\n      \/\/ Since this is only necessary when using `complexTimeRemapping`, we can avoid this by manually interpolating\n      \/\/ when `context.mustUseComplexTimeRemapping` is true and just returning a `Hold` container.\n      \/\/ Since our keyframes are already manually interpolated, they won't need to be interpolated again.\n      || context.mustUseComplexTimeRemapping"
+  },
+  {
+    "A_name" : "combinedTransformKeyframes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 267, Column: 5",
+    "H_initialValue" : "Keyframes.combined(\n      transformModel.anchorPoint,\n      transformModel._position ?? KeyframeGroup(LottieVector3D(x: 0.0, y: 0.0, z: 0.0)),\n      transformModel._positionX ?? KeyframeGroup(LottieVector1D(0)),\n      transformModel._positionY ?? KeyframeGroup(LottieVector1D(0)),\n      transformModel.scale,\n      transformModel.rotationX,\n      transformModel.rotationY,\n      transformModel.rotationZ,\n      transformModel._skew ?? KeyframeGroup(LottieVector1D(0)),\n      transformModel._skewAxis ?? KeyframeGroup(LottieVector1D(0)),\n      requiresManualInterpolation: requiresManualInterpolation,\n      makeCombinedResult: {\n        anchor, position, positionX, positionY, scale, rotationX, rotationY, rotationZ, skew, skewAxis\n          -> Hold<CATransform3D> in\n\n        let transformPosition: CGPoint =\n          if transformModel._positionX != nil, transformModel._positionY != nil {\n            CGPoint(x: positionX.cgFloatValue, y: positionY.cgFloatValue)\n          } else {\n            position.pointValue\n          }\n\n        let transform = CATransform3D.makeTransform(\n          anchor: anchor.pointValue,\n          position: transformPosition,\n          scale: scale.sizeValue,\n          rotationX: rotationX.cgFloatValue,\n          rotationY: rotationY.cgFloatValue,\n          rotationZ: rotationZ.cgFloatValue,\n          skew: skew.cgFloatValue,\n          skewAxis: skewAxis.cgFloatValue)\n\n        return Hold(value: transform)\n      })"
+  },
+  {
+    "A_name" : "transformPosition",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 283, Column: 9",
+    "H_initialValue" : "if transformModel._positionX != nil, transformModel._positionY != nil {\n            CGPoint(x: positionX.cgFloatValue, y: positionY.cgFloatValue)\n          } else {\n            position.pointValue\n          }"
+  },
+  {
+    "A_name" : "transform",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 290, Column: 9",
+    "H_initialValue" : "CATransform3D.makeTransform(\n          anchor: anchor.pointValue,\n          position: transformPosition,\n          scale: scale.sizeValue,\n          rotationX: rotationX.cgFloatValue,\n          rotationY: rotationY.cgFloatValue,\n          rotationZ: rotationZ.cgFloatValue,\n          skew: skew.cgFloatValue,\n          skewAxis: skewAxis.cgFloatValue)"
+  },
+  {
+    "A_name" : "TransformModel",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 312, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "hasSkew",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 314, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "hasSkewAnimation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 328, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "hasNegativeXScaleValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TransformAnimations.swift - Line: 340, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "hasSkew",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 314, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hasSkewAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 328, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hasNegativeXScaleValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TransformAnimations.swift - Line: 340, Column: 3",
+    "H_initialValue" : ""
+  }
+]

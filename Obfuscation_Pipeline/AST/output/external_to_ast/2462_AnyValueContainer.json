@@ -1,0 +1,112 @@
+[
+  {
+    "A_name" : "AnyValueContainer",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyObject"
+    ],
+    "F_location" : "AnyValueContainer.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueContainer.swift - Line: 15, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setNeedsUpdate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueContainer.swift - Line: 18, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "needsUpdate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueContainer.swift - Line: 21, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lastUpdateFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyValueContainer.swift - Line: 24, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueContainer.swift - Line: 15, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setNeedsUpdate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueContainer.swift - Line: 18, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "needsUpdate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueContainer.swift - Line: 21, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastUpdateFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyValueContainer.swift - Line: 24, Column: 3",
+    "H_initialValue" : ""
+  }
+]

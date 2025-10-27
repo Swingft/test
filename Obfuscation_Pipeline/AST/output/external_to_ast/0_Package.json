@@ -1,0 +1,12 @@
+[
+  {
+    "A_name" : "package",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Package.swift - Line: 4, Column: 1",
+    "H_initialValue" : "Package(\n    name: \"SwiftyJSON\",\n    products: [\n        .library(name: \"SwiftyJSON\", targets: [\"SwiftyJSON\"])\n    ],\n    targets: [\n        .target(name: \"SwiftyJSON\", \n                dependencies: [],\n                resources: [\n                    .copy(\"PrivacyInfo.xcprivacy\")\n                ]\n               ),\n        .testTarget(\n            name: \"SwiftJSONTests\",\n            dependencies: [\"SwiftyJSON\"],\n            resources: [\n                .copy(\"Tests.json\")\n            ]\n        )\n    ],\n    swiftLanguageVersions: [.v5]\n)"
+  }
+]

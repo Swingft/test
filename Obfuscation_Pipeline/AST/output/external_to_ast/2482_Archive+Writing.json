@@ -1,0 +1,1370 @@
+[
+  {
+    "A_name" : "Archive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "ModifyOperation",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Int"
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 14, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "remove",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 15, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "add",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 16, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "addEntry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 32, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 40, Column: 5",
+            "H_initialValue" : "baseURL.appendingPathComponent(path)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "URL",
+          "CompressionMethod",
+          "Int",
+          "Progress?"
+        ],
+        "I_parameters" : [
+          "with",
+          "relativeTo",
+          "compressionMethod",
+          "bufferSize",
+          "progress"
+        ]
+      },
+      {
+        "A_name" : "addEntry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 60, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "fileManager",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 68, Column: 5",
+            "H_initialValue" : "FileManager()"
+          },
+          {
+            "A_name" : "type",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 72, Column: 5",
+            "H_initialValue" : "try FileManager.typeForItem(at: fileURL)"
+          },
+          {
+            "A_name" : "modDate",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 77, Column: 5",
+            "H_initialValue" : "try FileManager.fileModificationDateTimeForItem(at: fileURL)"
+          },
+          {
+            "A_name" : "uncompressedSize",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 78, Column: 5",
+            "H_initialValue" : "type == .directory ? 0 : try FileManager.fileSizeForItem(at: fileURL)"
+          },
+          {
+            "A_name" : "permissions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 79, Column: 5",
+            "H_initialValue" : "try FileManager.permissionsForItem(at: fileURL)"
+          },
+          {
+            "A_name" : "provider",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 80, Column: 5",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "URL",
+          "CompressionMethod",
+          "Int",
+          "Progress?"
+        ],
+        "I_parameters" : [
+          "with",
+          "fileURL",
+          "compressionMethod",
+          "bufferSize",
+          "progress"
+        ]
+      },
+      {
+        "A_name" : "addEntry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 150, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "compressionMethod",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 164, Column: 5",
+            "H_initialValue" : "type == .file ? compressionMethod : .none"
+          },
+          {
+            "A_name" : "startOfCD",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 168, Column: 5",
+            "H_initialValue" : "Int64(offsetToStartOfCentralDirectory)"
+          },
+          {
+            "A_name" : "existingSize",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 170, Column: 5",
+            "H_initialValue" : "sizeOfCentralDirectory"
+          },
+          {
+            "A_name" : "existingData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 171, Column: 5",
+            "H_initialValue" : "try Data.readChunk(of: Int(existingSize), from: archiveFile)"
+          },
+          {
+            "A_name" : "fileHeaderStart",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 173, Column: 5",
+            "H_initialValue" : "Int64(ftello(archiveFile))"
+          },
+          {
+            "A_name" : "modDateTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 174, Column: 5",
+            "H_initialValue" : "modificationDate.fileModificationDateTime"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Entry.EntryType",
+          "Int64",
+          "Date",
+          "UInt16?",
+          "CompressionMethod",
+          "Int",
+          "Progress?",
+          "Provider"
+        ],
+        "I_parameters" : [
+          "with",
+          "type",
+          "uncompressedSize",
+          "modificationDate",
+          "permissions",
+          "compressionMethod",
+          "bufferSize",
+          "progress",
+          "provider"
+        ]
+      },
+      {
+        "A_name" : "remove",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 231, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "centralDirectoryData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 236, Column: 5",
+            "H_initialValue" : "Data()"
+          },
+          {
+            "A_name" : "offset",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 237, Column: 5",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "startOfCentralDirectory",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 263, Column: 5",
+            "H_initialValue" : "UInt64(ftello(tempArchive.archiveFile))"
+          },
+          {
+            "A_name" : "startOfEndOfCentralDirectory",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 265, Column: 5",
+            "H_initialValue" : "UInt64(ftello(tempArchive.archiveFile))"
+          },
+          {
+            "A_name" : "ecodStructure",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 268, Column: 5",
+            "H_initialValue" : "try\n      tempArchive.writeEndOfCentralDirectory(\n        centralDirectoryStructure: entry.centralDirectoryStructure,\n        startOfCentralDirectory: startOfCentralDirectory,\n        startOfEndOfCentralDirectory: startOfEndOfCentralDirectory,\n        operation: .remove)"
+          }
+        ],
+        "I_parameterType" : [
+          "Entry",
+          "Int",
+          "Progress?"
+        ],
+        "I_parameters" : [
+          "_",
+          "bufferSize",
+          "progress"
+        ]
+      },
+      {
+        "A_name" : "replaceCurrentArchive",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 280, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Archive"
+        ],
+        "I_parameters" : [
+          "with"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "ModifyOperation",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int"
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 14, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "remove",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 15, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "add",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 16, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "addEntry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 32, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 40, Column: 5",
+        "H_initialValue" : "baseURL.appendingPathComponent(path)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "URL",
+      "CompressionMethod",
+      "Int",
+      "Progress?"
+    ],
+    "I_parameters" : [
+      "with",
+      "relativeTo",
+      "compressionMethod",
+      "bufferSize",
+      "progress"
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 40, Column: 5",
+    "H_initialValue" : "baseURL.appendingPathComponent(path)"
+  },
+  {
+    "A_name" : "addEntry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 60, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "fileManager",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 68, Column: 5",
+        "H_initialValue" : "FileManager()"
+      },
+      {
+        "A_name" : "type",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 72, Column: 5",
+        "H_initialValue" : "try FileManager.typeForItem(at: fileURL)"
+      },
+      {
+        "A_name" : "modDate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 77, Column: 5",
+        "H_initialValue" : "try FileManager.fileModificationDateTimeForItem(at: fileURL)"
+      },
+      {
+        "A_name" : "uncompressedSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 78, Column: 5",
+        "H_initialValue" : "type == .directory ? 0 : try FileManager.fileSizeForItem(at: fileURL)"
+      },
+      {
+        "A_name" : "permissions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 79, Column: 5",
+        "H_initialValue" : "try FileManager.permissionsForItem(at: fileURL)"
+      },
+      {
+        "A_name" : "provider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 80, Column: 5",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "URL",
+      "CompressionMethod",
+      "Int",
+      "Progress?"
+    ],
+    "I_parameters" : [
+      "with",
+      "fileURL",
+      "compressionMethod",
+      "bufferSize",
+      "progress"
+    ]
+  },
+  {
+    "A_name" : "fileManager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 68, Column: 5",
+    "H_initialValue" : "FileManager()"
+  },
+  {
+    "A_name" : "type",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 72, Column: 5",
+    "H_initialValue" : "try FileManager.typeForItem(at: fileURL)"
+  },
+  {
+    "A_name" : "modDate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 77, Column: 5",
+    "H_initialValue" : "try FileManager.fileModificationDateTimeForItem(at: fileURL)"
+  },
+  {
+    "A_name" : "uncompressedSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 78, Column: 5",
+    "H_initialValue" : "type == .directory ? 0 : try FileManager.fileSizeForItem(at: fileURL)"
+  },
+  {
+    "A_name" : "permissions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 79, Column: 5",
+    "H_initialValue" : "try FileManager.permissionsForItem(at: fileURL)"
+  },
+  {
+    "A_name" : "provider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 80, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "entryFileSystemRepresentation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 83, Column: 7",
+    "H_initialValue" : "fileManager.fileSystemRepresentation(withPath: fileURL.path)"
+  },
+  {
+    "A_name" : "linkDestination",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 115, Column: 9",
+    "H_initialValue" : "try fileManager.destinationOfSymbolicLink(atPath: fileURL.path)"
+  },
+  {
+    "A_name" : "linkFileSystemRepresentation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 116, Column: 9",
+    "H_initialValue" : "fileManager.fileSystemRepresentation(withPath: linkDestination)"
+  },
+  {
+    "A_name" : "linkLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 117, Column: 9",
+    "H_initialValue" : "Int(strlen(linkFileSystemRepresentation))"
+  },
+  {
+    "A_name" : "linkBuffer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 118, Column: 9",
+    "H_initialValue" : "UnsafeBufferPointer(start: linkFileSystemRepresentation, count: linkLength)"
+  },
+  {
+    "A_name" : "addEntry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 150, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "compressionMethod",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 164, Column: 5",
+        "H_initialValue" : "type == .file ? compressionMethod : .none"
+      },
+      {
+        "A_name" : "startOfCD",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 168, Column: 5",
+        "H_initialValue" : "Int64(offsetToStartOfCentralDirectory)"
+      },
+      {
+        "A_name" : "existingSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 170, Column: 5",
+        "H_initialValue" : "sizeOfCentralDirectory"
+      },
+      {
+        "A_name" : "existingData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 171, Column: 5",
+        "H_initialValue" : "try Data.readChunk(of: Int(existingSize), from: archiveFile)"
+      },
+      {
+        "A_name" : "fileHeaderStart",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 173, Column: 5",
+        "H_initialValue" : "Int64(ftello(archiveFile))"
+      },
+      {
+        "A_name" : "modDateTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 174, Column: 5",
+        "H_initialValue" : "modificationDate.fileModificationDateTime"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Entry.EntryType",
+      "Int64",
+      "Date",
+      "UInt16?",
+      "CompressionMethod",
+      "Int",
+      "Progress?",
+      "Provider"
+    ],
+    "I_parameters" : [
+      "with",
+      "type",
+      "uncompressedSize",
+      "modificationDate",
+      "permissions",
+      "compressionMethod",
+      "bufferSize",
+      "progress",
+      "provider"
+    ]
+  },
+  {
+    "A_name" : "compressionMethod",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 164, Column: 5",
+    "H_initialValue" : "type == .file ? compressionMethod : .none"
+  },
+  {
+    "A_name" : "startOfCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 168, Column: 5",
+    "H_initialValue" : "Int64(offsetToStartOfCentralDirectory)"
+  },
+  {
+    "A_name" : "existingSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 170, Column: 5",
+    "H_initialValue" : "sizeOfCentralDirectory"
+  },
+  {
+    "A_name" : "existingData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 171, Column: 5",
+    "H_initialValue" : "try Data.readChunk(of: Int(existingSize), from: archiveFile)"
+  },
+  {
+    "A_name" : "fileHeaderStart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 173, Column: 5",
+    "H_initialValue" : "Int64(ftello(archiveFile))"
+  },
+  {
+    "A_name" : "modDateTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 174, Column: 5",
+    "H_initialValue" : "modificationDate.fileModificationDateTime"
+  },
+  {
+    "A_name" : "localFileHeader",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 178, Column: 7",
+    "H_initialValue" : "try writeLocalFileHeader(\n        path: path,\n        compressionMethod: compressionMethod,\n        size: (UInt64(uncompressedSize), 0),\n        checksum: 0,\n        modificationDateTime: modDateTime)"
+  },
+  {
+    "A_name" : "permissions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 204, Column: 7",
+    "H_initialValue" : "permissions ?? (type == .directory ? defaultDirectoryPermissions : defaultFilePermissions)"
+  },
+  {
+    "A_name" : "externalAttributes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 205, Column: 7",
+    "H_initialValue" : "FileManager.externalFileAttributesForEntry(of: type, permissions: permissions)"
+  },
+  {
+    "A_name" : "centralDir",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 206, Column: 7",
+    "H_initialValue" : "try writeCentralDirectoryStructure(\n        localFileHeader: localFileHeader,\n        relativeOffset: UInt64(fileHeaderStart),\n        externalFileAttributes: externalAttributes)"
+  },
+  {
+    "A_name" : "startOfEOCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 211, Column: 7",
+    "H_initialValue" : "UInt64(ftello(archiveFile))"
+  },
+  {
+    "A_name" : "eocd",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 212, Column: 7",
+    "H_initialValue" : "try writeEndOfCentralDirectory(\n        centralDirectoryStructure: centralDir,\n        startOfCentralDirectory: UInt64(startOfCD),\n        startOfEndOfCentralDirectory: startOfEOCD,\n        operation: .add)"
+  },
+  {
+    "A_name" : "remove",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 231, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "centralDirectoryData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 236, Column: 5",
+        "H_initialValue" : "Data()"
+      },
+      {
+        "A_name" : "offset",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 237, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "startOfCentralDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 263, Column: 5",
+        "H_initialValue" : "UInt64(ftello(tempArchive.archiveFile))"
+      },
+      {
+        "A_name" : "startOfEndOfCentralDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 265, Column: 5",
+        "H_initialValue" : "UInt64(ftello(tempArchive.archiveFile))"
+      },
+      {
+        "A_name" : "ecodStructure",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 268, Column: 5",
+        "H_initialValue" : "try\n      tempArchive.writeEndOfCentralDirectory(\n        centralDirectoryStructure: entry.centralDirectoryStructure,\n        startOfCentralDirectory: startOfCentralDirectory,\n        startOfEndOfCentralDirectory: startOfEndOfCentralDirectory,\n        operation: .remove)"
+      }
+    ],
+    "I_parameterType" : [
+      "Entry",
+      "Int",
+      "Progress?"
+    ],
+    "I_parameters" : [
+      "_",
+      "bufferSize",
+      "progress"
+    ]
+  },
+  {
+    "A_name" : "centralDirectoryData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 236, Column: 5",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "offset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 237, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "cds",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 239, Column: 7",
+    "H_initialValue" : "currentEntry.centralDirectoryStructure"
+  },
+  {
+    "A_name" : "entryStart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 241, Column: 9",
+    "H_initialValue" : "cds.effectiveRelativeOffsetOfLocalHeader"
+  },
+  {
+    "A_name" : "provider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 243, Column: 9",
+    "H_initialValue" : "{ _, chunkSize -> Data in\n          try Data.readChunk(of: chunkSize, from: self.archiveFile)\n        }"
+  },
+  {
+    "A_name" : "consumer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 246, Column: 9",
+    "H_initialValue" : "{\n          if progress?.isCancelled == true { throw ArchiveError.cancelledOperation }\n          _ = try Data.write(chunk: $0, to: tempArchive.archiveFile)\n          progress?.completedUnitCount += Int64($0.count)\n        }"
+  },
+  {
+    "A_name" : "updatedCentralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 257, Column: 9",
+    "H_initialValue" : "updateOffsetInCentralDirectory(\n          centralDirectoryStructure: cds,\n          updatedOffset: entryStart - offset)"
+  },
+  {
+    "A_name" : "startOfCentralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 263, Column: 5",
+    "H_initialValue" : "UInt64(ftello(tempArchive.archiveFile))"
+  },
+  {
+    "A_name" : "startOfEndOfCentralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 265, Column: 5",
+    "H_initialValue" : "UInt64(ftello(tempArchive.archiveFile))"
+  },
+  {
+    "A_name" : "ecodStructure",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 268, Column: 5",
+    "H_initialValue" : "try\n      tempArchive.writeEndOfCentralDirectory(\n        centralDirectoryStructure: entry.centralDirectoryStructure,\n        startOfCentralDirectory: startOfCentralDirectory,\n        startOfEndOfCentralDirectory: startOfEndOfCentralDirectory,\n        operation: .remove)"
+  },
+  {
+    "A_name" : "replaceCurrentArchive",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 280, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Archive"
+    ],
+    "I_parameters" : [
+      "with"
+    ]
+  },
+  {
+    "A_name" : "fileManager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 296, Column: 7",
+    "H_initialValue" : "FileManager()"
+  },
+  {
+    "A_name" : "fileSystemRepresentation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 308, Column: 7",
+    "H_initialValue" : "fileManager.fileSystemRepresentation(withPath: url.path)"
+  },
+  {
+    "A_name" : "Archive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 317, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "updateOffsetInCentralDirectory",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 319, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "zip64ExtendedInformation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 324, Column: 5",
+            "H_initialValue" : "Entry.ZIP64ExtendedInformation(\n      zip64ExtendedInformation: centralDirectoryStructure.zip64ExtendedInformation, offset: updatedOffset)"
+          },
+          {
+            "A_name" : "offsetInCD",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 326, Column: 5",
+            "H_initialValue" : "updatedOffset < maxOffsetOfLocalFileHeader ? UInt32(updatedOffset) : UInt32.max"
+          }
+        ],
+        "I_parameterType" : [
+          "CentralDirectoryStructure",
+          "UInt64"
+        ],
+        "I_parameters" : [
+          "centralDirectoryStructure",
+          "updatedOffset"
+        ],
+        "J_returnType" : "-> CentralDirectoryStructure"
+      },
+      {
+        "A_name" : "rollback",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 333, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UInt64",
+          "(data: Data, size: UInt64)",
+          "Int",
+          "EndOfCentralDirectoryRecord",
+          "ZIP64EndOfCentralDirectory?"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "makeTempArchive",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 356, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "archive",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 357, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Writing.swift - Line: 358, Column: 5",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> (Archive, URL?)"
+      }
+    ]
+  },
+  {
+    "A_name" : "updateOffsetInCentralDirectory",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 319, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "zip64ExtendedInformation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 324, Column: 5",
+        "H_initialValue" : "Entry.ZIP64ExtendedInformation(\n      zip64ExtendedInformation: centralDirectoryStructure.zip64ExtendedInformation, offset: updatedOffset)"
+      },
+      {
+        "A_name" : "offsetInCD",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 326, Column: 5",
+        "H_initialValue" : "updatedOffset < maxOffsetOfLocalFileHeader ? UInt32(updatedOffset) : UInt32.max"
+      }
+    ],
+    "I_parameterType" : [
+      "CentralDirectoryStructure",
+      "UInt64"
+    ],
+    "I_parameters" : [
+      "centralDirectoryStructure",
+      "updatedOffset"
+    ],
+    "J_returnType" : "-> CentralDirectoryStructure"
+  },
+  {
+    "A_name" : "zip64ExtendedInformation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 324, Column: 5",
+    "H_initialValue" : "Entry.ZIP64ExtendedInformation(\n      zip64ExtendedInformation: centralDirectoryStructure.zip64ExtendedInformation, offset: updatedOffset)"
+  },
+  {
+    "A_name" : "offsetInCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 326, Column: 5",
+    "H_initialValue" : "updatedOffset < maxOffsetOfLocalFileHeader ? UInt32(updatedOffset) : UInt32.max"
+  },
+  {
+    "A_name" : "rollback",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 333, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UInt64",
+      "(data: Data, size: UInt64)",
+      "Int",
+      "EndOfCentralDirectoryRecord",
+      "ZIP64EndOfCentralDirectory?"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "makeTempArchive",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 356, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "archive",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 357, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Writing.swift - Line: 358, Column: 5",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> (Archive, URL?)"
+  },
+  {
+    "A_name" : "archive",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 357, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 358, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "manager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 374, Column: 7",
+    "H_initialValue" : "FileManager()"
+  },
+  {
+    "A_name" : "tempDir",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 375, Column: 7",
+    "H_initialValue" : "URL.temporaryReplacementDirectoryURL(for: self)"
+  },
+  {
+    "A_name" : "uniqueString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 376, Column: 7",
+    "H_initialValue" : "ProcessInfo.processInfo.globallyUniqueString"
+  },
+  {
+    "A_name" : "tempArchiveURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Writing.swift - Line: 377, Column: 7",
+    "H_initialValue" : "tempDir.appendingPathComponent(uniqueString)"
+  }
+]

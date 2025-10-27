@@ -1,0 +1,1005 @@
+[
+  {
+    "A_name" : "SnapshotTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "MainActor",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testMainThreadRenderingEngine",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 21, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCoreAnimationRenderingEngine",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 26, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAutomaticRenderingEngine",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 31, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAllSnapshotsHaveCorrespondingSampleFile",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 37, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCustomSnapshotConfigurationsHaveCorrespondingSampleFile",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 75, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCanAccessSamplesAndSnapshots",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 89, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUp",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 94, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "tearDown",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 105, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "defaultProgressPercentageValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 113, Column: 3",
+        "H_initialValue" : "[0, 0.25, 0.5, 0.75, 1.0]"
+      },
+      {
+        "A_name" : "knownProgressPercentageValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 116, Column: 3",
+        "H_initialValue" : "Set(Samples.sampleAnimationNames.flatMap {\n    SnapshotConfiguration.forSample(named: $0).customProgressValuesToSnapshot ?? defaultProgressPercentageValues\n  })"
+      },
+      {
+        "A_name" : "knownFrameValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 121, Column: 3",
+        "H_initialValue" : "Set(Samples.sampleAnimationNames.flatMap {\n    SnapshotConfiguration.forSample(named: $0).customFramesToSnapshot ?? []\n  })"
+      },
+      {
+        "A_name" : "pausedStatesToSnapshot",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 126, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SnapshotConfiguration"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> [LottiePlaybackMode.PausedState]"
+      },
+      {
+        "A_name" : "compareSampleSnapshots",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 145, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieConfiguration",
+          "String"
+        ],
+        "I_parameters" : [
+          "configuration",
+          "testName"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testMainThreadRenderingEngine",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 21, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testCoreAnimationRenderingEngine",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 26, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testAutomaticRenderingEngine",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 31, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testAllSnapshotsHaveCorrespondingSampleFile",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 37, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "animationName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 47, Column: 7",
+    "H_initialValue" : "snapshotURL.lastPathComponent\n        .replacingOccurrences(of: \"testMainThreadRenderingEngine.\", with: \"\")\n        .replacingOccurrences(of: \"testCoreAnimationRenderingEngine.\", with: \"\")\n        .replacingOccurrences(of: \"testAutomaticRenderingEngine.\", with: \"\")"
+  },
+  {
+    "A_name" : "testCustomSnapshotConfigurationsHaveCorrespondingSampleFile",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 75, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "expectedJsonFile",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 77, Column: 7",
+    "H_initialValue" : "Bundle.lottie.bundleURL.appendingPathComponent(\"Samples\/\\(animationName).json\")"
+  },
+  {
+    "A_name" : "expectedDotLottieFile",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 78, Column: 7",
+    "H_initialValue" : "Bundle.lottie.bundleURL.appendingPathComponent(\"Samples\/\\(animationName).lottie\")"
+  },
+  {
+    "A_name" : "testCanAccessSamplesAndSnapshots",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 89, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setUp",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 94, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tearDown",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 105, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "defaultProgressPercentageValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 113, Column: 3",
+    "H_initialValue" : "[0, 0.25, 0.5, 0.75, 1.0]"
+  },
+  {
+    "A_name" : "knownProgressPercentageValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 116, Column: 3",
+    "H_initialValue" : "Set(Samples.sampleAnimationNames.flatMap {\n    SnapshotConfiguration.forSample(named: $0).customProgressValuesToSnapshot ?? defaultProgressPercentageValues\n  })"
+  },
+  {
+    "A_name" : "knownFrameValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 121, Column: 3",
+    "H_initialValue" : "Set(Samples.sampleAnimationNames.flatMap {\n    SnapshotConfiguration.forSample(named: $0).customFramesToSnapshot ?? []\n  })"
+  },
+  {
+    "A_name" : "pausedStatesToSnapshot",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 126, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SnapshotConfiguration"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> [LottiePlaybackMode.PausedState]"
+  },
+  {
+    "A_name" : "compareSampleSnapshots",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 145, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieConfiguration",
+      "String"
+    ],
+    "I_parameters" : [
+      "configuration",
+      "testName"
+    ]
+  },
+  {
+    "A_name" : "pauseStateDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 167, Column: 9",
+    "H_initialValue" : "switch pauseState {\n          case .progress(let percent):\n            \"\\(Int(percent * 100))%\"\n          case .frame(let frame):\n            \"Frame \\(Int(frame))\"\n          case .time(let time):\n            \"Time \\(time))\"\n          case .marker(let markerName, position: _):\n            markerName\n          case .currentFrame:\n            \"Current Frame\"\n          }"
+  },
+  {
+    "A_name" : "LottieAnimation",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 197, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "snapshotSize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 199, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "maxDimension",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotTests.swift - Line: 200, Column: 5",
+            "H_initialValue" : "configuration.maxSnapshotDimension"
+          }
+        ],
+        "I_parameterType" : [
+          "SnapshotConfiguration"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> CGSize"
+      }
+    ]
+  },
+  {
+    "A_name" : "snapshotSize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 199, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "maxDimension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 200, Column: 5",
+        "H_initialValue" : "configuration.maxSnapshotDimension"
+      }
+    ],
+    "I_parameterType" : [
+      "SnapshotConfiguration"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> CGSize"
+  },
+  {
+    "A_name" : "maxDimension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 200, Column: 5",
+    "H_initialValue" : "configuration.maxSnapshotDimension"
+  },
+  {
+    "A_name" : "newWidth",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 204, Column: 7",
+    "H_initialValue" : "min(CGFloat(width), maxDimension)"
+  },
+  {
+    "A_name" : "newHeight",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 205, Column: 7",
+    "H_initialValue" : "newWidth * (CGFloat(height) \/ CGFloat(width))"
+  },
+  {
+    "A_name" : "newHeight",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 212, Column: 7",
+    "H_initialValue" : "min(CGFloat(height), maxDimension)"
+  },
+  {
+    "A_name" : "newWidth",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 213, Column: 7",
+    "H_initialValue" : "newHeight * (CGFloat(width) \/ CGFloat(height))"
+  },
+  {
+    "A_name" : "SnapshotError",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Error"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 221, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "unsupportedPlatform",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 225, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "unsupportedDevice",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 229, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "SnapshotTests",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 232, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "enabled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 234, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "enabled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 234, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Samples",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 260, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "directoryName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 262, Column: 3",
+        "H_initialValue" : "\"Samples\""
+      },
+      {
+        "A_name" : "snapshotURLs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 265, Column: 3",
+        "H_initialValue" : "Bundle.lottie.fileURLs(\n    in: \"__Snapshots__\/SnapshotTests\",\n    withSuffix: \"png\")"
+      },
+      {
+        "A_name" : "sampleAnimationURLs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 270, Column: 3",
+        "H_initialValue" : "Bundle.lottie.fileURLs(in: Samples.directoryName, withSuffix: \"json\")\n    + Bundle.lottie.fileURLs(in: Samples.directoryName, withSuffix: \"lottie\")"
+      },
+      {
+        "A_name" : "sampleAnimationNames",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 274, Column: 3",
+        "H_initialValue" : "sampleAnimationURLs.lazy\n    .map { sampleAnimationURL -> String in\n      \/\/ Each of the sample animation URLs has the format\n      \/\/ `...\/*.bundle\/Samples\/{subfolder}\/{animationName}.json`.\n      \/\/ The sample animation name should include the subfolders\n      \/\/ (since that helps uniquely identity the animation JSON file).\n      let pathComponents = sampleAnimationURL.pathComponents\n      let samplesIndex = pathComponents.lastIndex(of: Samples.directoryName)!\n      let subpath = pathComponents[(samplesIndex + 1)...]\n\n      return subpath\n        .joined(separator: \"\/\")\n        .replacingOccurrences(of: \".json\", with: \"\")\n        .replacingOccurrences(of: \".lottie\", with: \"\")\n    }"
+      },
+      {
+        "A_name" : "animation",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 290, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "named"
+        ],
+        "J_returnType" : "-> LottieAnimation?"
+      },
+      {
+        "A_name" : "dotLottie",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 301, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "named"
+        ],
+        "J_returnType" : "-> DotLottieFile?"
+      }
+    ]
+  },
+  {
+    "A_name" : "directoryName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 262, Column: 3",
+    "H_initialValue" : "\"Samples\""
+  },
+  {
+    "A_name" : "snapshotURLs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 265, Column: 3",
+    "H_initialValue" : "Bundle.lottie.fileURLs(\n    in: \"__Snapshots__\/SnapshotTests\",\n    withSuffix: \"png\")"
+  },
+  {
+    "A_name" : "sampleAnimationURLs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 270, Column: 3",
+    "H_initialValue" : "Bundle.lottie.fileURLs(in: Samples.directoryName, withSuffix: \"json\")\n    + Bundle.lottie.fileURLs(in: Samples.directoryName, withSuffix: \"lottie\")"
+  },
+  {
+    "A_name" : "sampleAnimationNames",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 274, Column: 3",
+    "H_initialValue" : "sampleAnimationURLs.lazy\n    .map { sampleAnimationURL -> String in\n      \/\/ Each of the sample animation URLs has the format\n      \/\/ `...\/*.bundle\/Samples\/{subfolder}\/{animationName}.json`.\n      \/\/ The sample animation name should include the subfolders\n      \/\/ (since that helps uniquely identity the animation JSON file).\n      let pathComponents = sampleAnimationURL.pathComponents\n      let samplesIndex = pathComponents.lastIndex(of: Samples.directoryName)!\n      let subpath = pathComponents[(samplesIndex + 1)...]\n\n      return subpath\n        .joined(separator: \"\/\")\n        .replacingOccurrences(of: \".json\", with: \"\")\n        .replacingOccurrences(of: \".lottie\", with: \"\")\n    }"
+  },
+  {
+    "A_name" : "pathComponents",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 280, Column: 7",
+    "H_initialValue" : "sampleAnimationURL.pathComponents"
+  },
+  {
+    "A_name" : "samplesIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 281, Column: 7",
+    "H_initialValue" : "pathComponents.lastIndex(of: Samples.directoryName)!"
+  },
+  {
+    "A_name" : "subpath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 282, Column: 7",
+    "H_initialValue" : "pathComponents[(samplesIndex + 1)...]"
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 290, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "named"
+    ],
+    "J_returnType" : "-> LottieAnimation?"
+  },
+  {
+    "A_name" : "dotLottie",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 301, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "named"
+    ],
+    "J_returnType" : "-> DotLottieFile?"
+  },
+  {
+    "A_name" : "SnapshotConfiguration",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 316, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "makeAnimationView",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "MainActor",
+          "static"
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 318, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "snapshotConfiguration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotTests.swift - Line: 326, Column: 5",
+            "H_initialValue" : "customSnapshotConfiguration ?? SnapshotConfiguration.forSample(named: sampleAnimationName)"
+          },
+          {
+            "A_name" : "animationView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotTests.swift - Line: 328, Column: 5",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "LottieConfiguration",
+          "LottieLogger",
+          "SnapshotConfiguration?"
+        ],
+        "I_parameters" : [
+          "for",
+          "configuration",
+          "logger",
+          "customSnapshotConfiguration"
+        ],
+        "J_returnType" : "-> LottieAnimationView?"
+      }
+    ]
+  },
+  {
+    "A_name" : "makeAnimationView",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "MainActor",
+      "static"
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 318, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "snapshotConfiguration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 326, Column: 5",
+        "H_initialValue" : "customSnapshotConfiguration ?? SnapshotConfiguration.forSample(named: sampleAnimationName)"
+      },
+      {
+        "A_name" : "animationView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotTests.swift - Line: 328, Column: 5",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "LottieConfiguration",
+      "LottieLogger",
+      "SnapshotConfiguration?"
+    ],
+    "I_parameters" : [
+      "for",
+      "configuration",
+      "logger",
+      "customSnapshotConfiguration"
+    ],
+    "J_returnType" : "-> LottieAnimationView?"
+  },
+  {
+    "A_name" : "snapshotConfiguration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 326, Column: 5",
+    "H_initialValue" : "customSnapshotConfiguration ?? SnapshotConfiguration.forSample(named: sampleAnimationName)"
+  },
+  {
+    "A_name" : "animationView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotTests.swift - Line: 328, Column: 5",
+    "H_initialValue" : ""
+  }
+]

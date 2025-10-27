@@ -1,0 +1,110 @@
+[
+  {
+    "A_name" : "UILabel",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "UILabel+setLineSpacing.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setLineSpacing",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UILabel+setLineSpacing.swift - Line: 12, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "attrString",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UILabel+setLineSpacing.swift - Line: 13, Column: 9",
+            "H_initialValue" : "NSMutableAttributedString(string: text!)"
+          },
+          {
+            "A_name" : "paragraphStyle",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UILabel+setLineSpacing.swift - Line: 14, Column: 9",
+            "H_initialValue" : "NSMutableParagraphStyle()"
+          }
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "setLineSpacing",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UILabel+setLineSpacing.swift - Line: 12, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "attrString",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UILabel+setLineSpacing.swift - Line: 13, Column: 9",
+        "H_initialValue" : "NSMutableAttributedString(string: text!)"
+      },
+      {
+        "A_name" : "paragraphStyle",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UILabel+setLineSpacing.swift - Line: 14, Column: 9",
+        "H_initialValue" : "NSMutableParagraphStyle()"
+      }
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "attrString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UILabel+setLineSpacing.swift - Line: 13, Column: 9",
+    "H_initialValue" : "NSMutableAttributedString(string: text!)"
+  },
+  {
+    "A_name" : "paragraphStyle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UILabel+setLineSpacing.swift - Line: 14, Column: 9",
+    "H_initialValue" : "NSMutableParagraphStyle()"
+  }
+]

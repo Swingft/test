@@ -1,0 +1,116 @@
+[
+  {
+    "A_name" : "SectionedChangeset",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SectionedChangeset.swift - Line: 6, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SectionedChangeset.swift - Line: 10, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "IndexSetChangeset",
+          "IndexPathChangeset"
+        ],
+        "I_parameters" : [
+          "sectionChangeset",
+          "itemChangeset"
+        ]
+      },
+      {
+        "A_name" : "sectionChangeset",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SectionedChangeset.swift - Line: 21, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "itemChangeset",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SectionedChangeset.swift - Line: 25, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isEmpty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SectionedChangeset.swift - Line: 28, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SectionedChangeset.swift - Line: 10, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "IndexSetChangeset",
+      "IndexPathChangeset"
+    ],
+    "I_parameters" : [
+      "sectionChangeset",
+      "itemChangeset"
+    ]
+  },
+  {
+    "A_name" : "sectionChangeset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SectionedChangeset.swift - Line: 21, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "itemChangeset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SectionedChangeset.swift - Line: 25, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isEmpty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SectionedChangeset.swift - Line: 28, Column: 3",
+    "H_initialValue" : ""
+  }
+]

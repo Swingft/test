@@ -1,0 +1,1092 @@
+[
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 32, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 52, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+Kingfisher.swift - Line: 61, Column: 9",
+            "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+          }
+        ],
+        "I_parameterType" : [
+          "Source?",
+          "UIControl.State",
+          "UIImage?",
+          "KingfisherOptionsInfo?",
+          "DownloadProgressBlock?",
+          "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "for",
+          "placeholder",
+          "options",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "setImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 89, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Resource?",
+          "UIControl.State",
+          "UIImage?",
+          "KingfisherOptionsInfo?",
+          "DownloadProgressBlock?",
+          "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "for",
+          "placeholder",
+          "options",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "setImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 107, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+Kingfisher.swift - Line: 123, Column: 9",
+            "H_initialValue" : "parsedOptions"
+          },
+          {
+            "A_name" : "mutatingSelf",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+Kingfisher.swift - Line: 128, Column: 9",
+            "H_initialValue" : "self"
+          },
+          {
+            "A_name" : "issuedIdentifier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+Kingfisher.swift - Line: 129, Column: 9",
+            "H_initialValue" : "Source.Identifier.next()"
+          },
+          {
+            "A_name" : "task",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+Kingfisher.swift - Line: 136, Column: 9",
+            "H_initialValue" : "KingfisherManager.shared.retrieveImage(\n            with: source,\n            options: options,\n            downloadTaskUpdated: { mutatingSelf.imageTask = $0 },\n            progressiveImageSetter: { self.base.setImage($0, for: state) },\n            referenceTaskIdentifierChecker: { issuedIdentifier == self.taskIdentifier(for: state) },\n            completionHandler: { result in\n                CallbackQueue.mainCurrentOrAsync.execute {\n                    guard issuedIdentifier == self.taskIdentifier(for: state) else {\n                        let reason: KingfisherError.ImageSettingErrorReason\n                        do {\n                            let value = try result.get()\n                            reason = .notCurrentSourceTask(result: value, error: nil, source: source)\n                        } catch {\n                            reason = .notCurrentSourceTask(result: nil, error: error, source: source)\n                        }\n                        let error = KingfisherError.imageSettingError(reason: reason)\n                        completionHandler?(.failure(error))\n                        return\n                    }\n\n                    mutatingSelf.imageTask = nil\n                    mutatingSelf.setTaskIdentifier(nil, for: state)\n\n                    switch result {\n                    case .success(let value):\n                        self.base.setImage(value.image, for: state)\n                        completionHandler?(result)\n\n                    case .failure:\n                        if let image = options.onFailureImage {\n                            self.base.setImage(image, for: state)\n                        }\n                        completionHandler?(result)\n                    }\n                }\n            }\n        )"
+          }
+        ],
+        "I_parameterType" : [
+          "Source?",
+          "UIControl.State",
+          "UIImage?",
+          "KingfisherParsedOptionsInfo",
+          "DownloadProgressBlock?",
+          "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "for",
+          "placeholder",
+          "parsedOptions",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "cancelImageDownloadTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 183, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setBackgroundImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 206, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+Kingfisher.swift - Line: 215, Column: 9",
+            "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+          }
+        ],
+        "I_parameterType" : [
+          "Source?",
+          "UIControl.State",
+          "UIImage?",
+          "KingfisherOptionsInfo?",
+          "DownloadProgressBlock?",
+          "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "for",
+          "placeholder",
+          "options",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "setBackgroundImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 243, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Resource?",
+          "UIControl.State",
+          "UIImage?",
+          "KingfisherOptionsInfo?",
+          "DownloadProgressBlock?",
+          "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "for",
+          "placeholder",
+          "options",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "setBackgroundImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 261, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+Kingfisher.swift - Line: 276, Column: 9",
+            "H_initialValue" : "parsedOptions"
+          },
+          {
+            "A_name" : "mutatingSelf",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+Kingfisher.swift - Line: 281, Column: 9",
+            "H_initialValue" : "self"
+          },
+          {
+            "A_name" : "issuedIdentifier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+Kingfisher.swift - Line: 282, Column: 9",
+            "H_initialValue" : "Source.Identifier.next()"
+          },
+          {
+            "A_name" : "task",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+Kingfisher.swift - Line: 289, Column: 9",
+            "H_initialValue" : "KingfisherManager.shared.retrieveImage(\n            with: source,\n            options: options,\n            downloadTaskUpdated: { mutatingSelf.backgroundImageTask = $0 },\n            progressiveImageSetter: { self.base.setBackgroundImage($0, for: state) },\n            referenceTaskIdentifierChecker: { issuedIdentifier == self.backgroundTaskIdentifier(for: state) },\n            completionHandler: { result in\n                CallbackQueue.mainCurrentOrAsync.execute {\n                    guard issuedIdentifier == self.backgroundTaskIdentifier(for: state) else {\n                        let reason: KingfisherError.ImageSettingErrorReason\n                        do {\n                            let value = try result.get()\n                            reason = .notCurrentSourceTask(result: value, error: nil, source: source)\n                        } catch {\n                            reason = .notCurrentSourceTask(result: nil, error: error, source: source)\n                        }\n                        let error = KingfisherError.imageSettingError(reason: reason)\n                        completionHandler?(.failure(error))\n                        return\n                    }\n\n                    mutatingSelf.backgroundImageTask = nil\n                    mutatingSelf.setBackgroundTaskIdentifier(nil, for: state)\n\n                    switch result {\n                    case .success(let value):\n                        self.base.setBackgroundImage(value.image, for: state)\n                        completionHandler?(result)\n\n                    case .failure:\n                        if let image = options.onFailureImage {\n                            self.base.setBackgroundImage(image, for: state)\n                        }\n                        completionHandler?(result)\n                    }\n                }\n            }\n        )"
+          }
+        ],
+        "I_parameterType" : [
+          "Source?",
+          "UIControl.State",
+          "UIImage?",
+          "KingfisherParsedOptionsInfo",
+          "DownloadProgressBlock?",
+          "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "for",
+          "placeholder",
+          "parsedOptions",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "cancelBackgroundImageDownloadTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 336, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "setImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 52, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 61, Column: 9",
+        "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+      }
+    ],
+    "I_parameterType" : [
+      "Source?",
+      "UIControl.State",
+      "UIImage?",
+      "KingfisherOptionsInfo?",
+      "DownloadProgressBlock?",
+      "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "for",
+      "placeholder",
+      "options",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 61, Column: 9",
+    "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+  },
+  {
+    "A_name" : "setImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 89, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Resource?",
+      "UIControl.State",
+      "UIImage?",
+      "KingfisherOptionsInfo?",
+      "DownloadProgressBlock?",
+      "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "for",
+      "placeholder",
+      "options",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "setImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 107, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 123, Column: 9",
+        "H_initialValue" : "parsedOptions"
+      },
+      {
+        "A_name" : "mutatingSelf",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 128, Column: 9",
+        "H_initialValue" : "self"
+      },
+      {
+        "A_name" : "issuedIdentifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 129, Column: 9",
+        "H_initialValue" : "Source.Identifier.next()"
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 136, Column: 9",
+        "H_initialValue" : "KingfisherManager.shared.retrieveImage(\n            with: source,\n            options: options,\n            downloadTaskUpdated: { mutatingSelf.imageTask = $0 },\n            progressiveImageSetter: { self.base.setImage($0, for: state) },\n            referenceTaskIdentifierChecker: { issuedIdentifier == self.taskIdentifier(for: state) },\n            completionHandler: { result in\n                CallbackQueue.mainCurrentOrAsync.execute {\n                    guard issuedIdentifier == self.taskIdentifier(for: state) else {\n                        let reason: KingfisherError.ImageSettingErrorReason\n                        do {\n                            let value = try result.get()\n                            reason = .notCurrentSourceTask(result: value, error: nil, source: source)\n                        } catch {\n                            reason = .notCurrentSourceTask(result: nil, error: error, source: source)\n                        }\n                        let error = KingfisherError.imageSettingError(reason: reason)\n                        completionHandler?(.failure(error))\n                        return\n                    }\n\n                    mutatingSelf.imageTask = nil\n                    mutatingSelf.setTaskIdentifier(nil, for: state)\n\n                    switch result {\n                    case .success(let value):\n                        self.base.setImage(value.image, for: state)\n                        completionHandler?(result)\n\n                    case .failure:\n                        if let image = options.onFailureImage {\n                            self.base.setImage(image, for: state)\n                        }\n                        completionHandler?(result)\n                    }\n                }\n            }\n        )"
+      }
+    ],
+    "I_parameterType" : [
+      "Source?",
+      "UIControl.State",
+      "UIImage?",
+      "KingfisherParsedOptionsInfo",
+      "DownloadProgressBlock?",
+      "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "for",
+      "placeholder",
+      "parsedOptions",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 123, Column: 9",
+    "H_initialValue" : "parsedOptions"
+  },
+  {
+    "A_name" : "mutatingSelf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 128, Column: 9",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "issuedIdentifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 129, Column: 9",
+    "H_initialValue" : "Source.Identifier.next()"
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 136, Column: 9",
+    "H_initialValue" : "KingfisherManager.shared.retrieveImage(\n            with: source,\n            options: options,\n            downloadTaskUpdated: { mutatingSelf.imageTask = $0 },\n            progressiveImageSetter: { self.base.setImage($0, for: state) },\n            referenceTaskIdentifierChecker: { issuedIdentifier == self.taskIdentifier(for: state) },\n            completionHandler: { result in\n                CallbackQueue.mainCurrentOrAsync.execute {\n                    guard issuedIdentifier == self.taskIdentifier(for: state) else {\n                        let reason: KingfisherError.ImageSettingErrorReason\n                        do {\n                            let value = try result.get()\n                            reason = .notCurrentSourceTask(result: value, error: nil, source: source)\n                        } catch {\n                            reason = .notCurrentSourceTask(result: nil, error: error, source: source)\n                        }\n                        let error = KingfisherError.imageSettingError(reason: reason)\n                        completionHandler?(.failure(error))\n                        return\n                    }\n\n                    mutatingSelf.imageTask = nil\n                    mutatingSelf.setTaskIdentifier(nil, for: state)\n\n                    switch result {\n                    case .success(let value):\n                        self.base.setImage(value.image, for: state)\n                        completionHandler?(result)\n\n                    case .failure:\n                        if let image = options.onFailureImage {\n                            self.base.setImage(image, for: state)\n                        }\n                        completionHandler?(result)\n                    }\n                }\n            }\n        )"
+  },
+  {
+    "A_name" : "reason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 145, Column: 25",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 147, Column: 29",
+    "H_initialValue" : "try result.get()"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 152, Column: 25",
+    "H_initialValue" : "KingfisherError.imageSettingError(reason: reason)"
+  },
+  {
+    "A_name" : "cancelImageDownloadTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 183, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setBackgroundImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 206, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 215, Column: 9",
+        "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+      }
+    ],
+    "I_parameterType" : [
+      "Source?",
+      "UIControl.State",
+      "UIImage?",
+      "KingfisherOptionsInfo?",
+      "DownloadProgressBlock?",
+      "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "for",
+      "placeholder",
+      "options",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 215, Column: 9",
+    "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+  },
+  {
+    "A_name" : "setBackgroundImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 243, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Resource?",
+      "UIControl.State",
+      "UIImage?",
+      "KingfisherOptionsInfo?",
+      "DownloadProgressBlock?",
+      "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "for",
+      "placeholder",
+      "options",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "setBackgroundImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 261, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 276, Column: 9",
+        "H_initialValue" : "parsedOptions"
+      },
+      {
+        "A_name" : "mutatingSelf",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 281, Column: 9",
+        "H_initialValue" : "self"
+      },
+      {
+        "A_name" : "issuedIdentifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 282, Column: 9",
+        "H_initialValue" : "Source.Identifier.next()"
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 289, Column: 9",
+        "H_initialValue" : "KingfisherManager.shared.retrieveImage(\n            with: source,\n            options: options,\n            downloadTaskUpdated: { mutatingSelf.backgroundImageTask = $0 },\n            progressiveImageSetter: { self.base.setBackgroundImage($0, for: state) },\n            referenceTaskIdentifierChecker: { issuedIdentifier == self.backgroundTaskIdentifier(for: state) },\n            completionHandler: { result in\n                CallbackQueue.mainCurrentOrAsync.execute {\n                    guard issuedIdentifier == self.backgroundTaskIdentifier(for: state) else {\n                        let reason: KingfisherError.ImageSettingErrorReason\n                        do {\n                            let value = try result.get()\n                            reason = .notCurrentSourceTask(result: value, error: nil, source: source)\n                        } catch {\n                            reason = .notCurrentSourceTask(result: nil, error: error, source: source)\n                        }\n                        let error = KingfisherError.imageSettingError(reason: reason)\n                        completionHandler?(.failure(error))\n                        return\n                    }\n\n                    mutatingSelf.backgroundImageTask = nil\n                    mutatingSelf.setBackgroundTaskIdentifier(nil, for: state)\n\n                    switch result {\n                    case .success(let value):\n                        self.base.setBackgroundImage(value.image, for: state)\n                        completionHandler?(result)\n\n                    case .failure:\n                        if let image = options.onFailureImage {\n                            self.base.setBackgroundImage(image, for: state)\n                        }\n                        completionHandler?(result)\n                    }\n                }\n            }\n        )"
+      }
+    ],
+    "I_parameterType" : [
+      "Source?",
+      "UIControl.State",
+      "UIImage?",
+      "KingfisherParsedOptionsInfo",
+      "DownloadProgressBlock?",
+      "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "for",
+      "placeholder",
+      "parsedOptions",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 276, Column: 9",
+    "H_initialValue" : "parsedOptions"
+  },
+  {
+    "A_name" : "mutatingSelf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 281, Column: 9",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "issuedIdentifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 282, Column: 9",
+    "H_initialValue" : "Source.Identifier.next()"
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 289, Column: 9",
+    "H_initialValue" : "KingfisherManager.shared.retrieveImage(\n            with: source,\n            options: options,\n            downloadTaskUpdated: { mutatingSelf.backgroundImageTask = $0 },\n            progressiveImageSetter: { self.base.setBackgroundImage($0, for: state) },\n            referenceTaskIdentifierChecker: { issuedIdentifier == self.backgroundTaskIdentifier(for: state) },\n            completionHandler: { result in\n                CallbackQueue.mainCurrentOrAsync.execute {\n                    guard issuedIdentifier == self.backgroundTaskIdentifier(for: state) else {\n                        let reason: KingfisherError.ImageSettingErrorReason\n                        do {\n                            let value = try result.get()\n                            reason = .notCurrentSourceTask(result: value, error: nil, source: source)\n                        } catch {\n                            reason = .notCurrentSourceTask(result: nil, error: error, source: source)\n                        }\n                        let error = KingfisherError.imageSettingError(reason: reason)\n                        completionHandler?(.failure(error))\n                        return\n                    }\n\n                    mutatingSelf.backgroundImageTask = nil\n                    mutatingSelf.setBackgroundTaskIdentifier(nil, for: state)\n\n                    switch result {\n                    case .success(let value):\n                        self.base.setBackgroundImage(value.image, for: state)\n                        completionHandler?(result)\n\n                    case .failure:\n                        if let image = options.onFailureImage {\n                            self.base.setBackgroundImage(image, for: state)\n                        }\n                        completionHandler?(result)\n                    }\n                }\n            }\n        )"
+  },
+  {
+    "A_name" : "reason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 298, Column: 25",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 300, Column: 29",
+    "H_initialValue" : "try result.get()"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 305, Column: 25",
+    "H_initialValue" : "KingfisherError.imageSettingError(reason: reason)"
+  },
+  {
+    "A_name" : "cancelBackgroundImageDownloadTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 336, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "taskIdentifierKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 342, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageTaskKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 343, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 346, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "taskIdentifier",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 350, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UIControl.State"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> Source.Identifier.Value?"
+      },
+      {
+        "A_name" : "setTaskIdentifier",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 354, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source.Identifier.Value?",
+          "UIControl.State"
+        ],
+        "I_parameters" : [
+          "_",
+          "for"
+        ]
+      },
+      {
+        "A_name" : "taskIdentifierInfo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 358, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "imageTask",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 365, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "taskIdentifier",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 350, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UIControl.State"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> Source.Identifier.Value?"
+  },
+  {
+    "A_name" : "setTaskIdentifier",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 354, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source.Identifier.Value?",
+      "UIControl.State"
+    ],
+    "I_parameters" : [
+      "_",
+      "for"
+    ]
+  },
+  {
+    "A_name" : "taskIdentifierInfo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 358, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageTask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 365, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "backgroundTaskIdentifierKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 372, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "backgroundImageTaskKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 373, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 376, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "backgroundTaskIdentifier",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 378, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UIControl.State"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> Source.Identifier.Value?"
+      },
+      {
+        "A_name" : "setBackgroundTaskIdentifier",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 382, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source.Identifier.Value?",
+          "UIControl.State"
+        ],
+        "I_parameters" : [
+          "_",
+          "for"
+        ]
+      },
+      {
+        "A_name" : "backgroundTaskIdentifierInfo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 386, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "backgroundImageTask",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+Kingfisher.swift - Line: 393, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "backgroundTaskIdentifier",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 378, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UIControl.State"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> Source.Identifier.Value?"
+  },
+  {
+    "A_name" : "setBackgroundTaskIdentifier",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 382, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source.Identifier.Value?",
+      "UIControl.State"
+    ],
+    "I_parameters" : [
+      "_",
+      "for"
+    ]
+  },
+  {
+    "A_name" : "backgroundTaskIdentifierInfo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 386, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "backgroundImageTask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+Kingfisher.swift - Line: 393, Column: 5",
+    "H_initialValue" : ""
+  }
+]

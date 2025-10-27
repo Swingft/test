@@ -1,0 +1,648 @@
+[
+  {
+    "A_name" : "IndexChangeset",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 13, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[Int]",
+          "[Int]",
+          "[(old: Int, new: Int)]",
+          "[(old: Int, new: Int)]",
+          "[Int?]",
+          "[[Int]]"
+        ],
+        "I_parameters" : [
+          "inserts",
+          "deletes",
+          "updates",
+          "moves",
+          "newIndices",
+          "duplicates"
+        ]
+      },
+      {
+        "A_name" : "inserts",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 32, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "deletes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 35, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "updates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 38, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "moves",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 41, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "newIndices",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 47, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "duplicates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 58, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isEmpty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 61, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 13, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Int]",
+      "[Int]",
+      "[(old: Int, new: Int)]",
+      "[(old: Int, new: Int)]",
+      "[Int?]",
+      "[[Int]]"
+    ],
+    "I_parameters" : [
+      "inserts",
+      "deletes",
+      "updates",
+      "moves",
+      "newIndices",
+      "duplicates"
+    ]
+  },
+  {
+    "A_name" : "inserts",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 32, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "deletes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 35, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "updates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 38, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "moves",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 41, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "newIndices",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 47, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "duplicates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 58, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isEmpty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 61, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "IndexPathChangeset",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 70, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 74, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[IndexPath]",
+          "[IndexPath]",
+          "[(old: IndexPath, new: IndexPath)]",
+          "[(old: IndexPath, new: IndexPath)]",
+          "[[IndexPath]]"
+        ],
+        "I_parameters" : [
+          "inserts",
+          "deletes",
+          "updates",
+          "moves",
+          "duplicates"
+        ]
+      },
+      {
+        "A_name" : "inserts",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 91, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "deletes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 94, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "updates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 97, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "moves",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 100, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "duplicates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 112, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isEmpty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 115, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "+=",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 119, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "inout IndexPathChangeset",
+          "IndexPathChangeset"
+        ],
+        "I_parameters" : [
+          "left",
+          "right"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 74, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[IndexPath]",
+      "[IndexPath]",
+      "[(old: IndexPath, new: IndexPath)]",
+      "[(old: IndexPath, new: IndexPath)]",
+      "[[IndexPath]]"
+    ],
+    "I_parameters" : [
+      "inserts",
+      "deletes",
+      "updates",
+      "moves",
+      "duplicates"
+    ]
+  },
+  {
+    "A_name" : "inserts",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 91, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "deletes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 94, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "updates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 97, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "moves",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 100, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "duplicates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 112, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isEmpty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 115, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "+=",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 119, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "inout IndexPathChangeset",
+      "IndexPathChangeset"
+    ],
+    "I_parameters" : [
+      "left",
+      "right"
+    ]
+  },
+  {
+    "A_name" : "IndexSetChangeset",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 132, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 136, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "IndexSet",
+          "IndexSet",
+          "[(old: Int, new: Int)]",
+          "[(old: Int, new: Int)]",
+          "[Int?]",
+          "[IndexSet]"
+        ],
+        "I_parameters" : [
+          "inserts",
+          "deletes",
+          "updates",
+          "moves",
+          "newIndices",
+          "duplicates"
+        ]
+      },
+      {
+        "A_name" : "inserts",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 155, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "deletes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 158, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "updates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 161, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "moves",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 164, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "newIndices",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 170, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "duplicates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 181, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isEmpty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndexChangeset.swift - Line: 184, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 136, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "IndexSet",
+      "IndexSet",
+      "[(old: Int, new: Int)]",
+      "[(old: Int, new: Int)]",
+      "[Int?]",
+      "[IndexSet]"
+    ],
+    "I_parameters" : [
+      "inserts",
+      "deletes",
+      "updates",
+      "moves",
+      "newIndices",
+      "duplicates"
+    ]
+  },
+  {
+    "A_name" : "inserts",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 155, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "deletes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 158, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "updates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 161, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "moves",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 164, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "newIndices",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 170, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "duplicates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 181, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isEmpty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndexChangeset.swift - Line: 184, Column: 3",
+    "H_initialValue" : ""
+  }
+]

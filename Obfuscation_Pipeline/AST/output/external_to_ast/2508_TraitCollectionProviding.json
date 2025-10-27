@@ -1,0 +1,36 @@
+[
+  {
+    "A_name" : "TraitCollectionProviding",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "TraitCollectionProviding.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "traitCollection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TraitCollectionProviding.swift - Line: 12, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "traitCollection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TraitCollectionProviding.swift - Line: 12, Column: 3",
+    "H_initialValue" : ""
+  }
+]

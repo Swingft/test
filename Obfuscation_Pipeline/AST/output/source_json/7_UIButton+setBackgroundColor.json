@@ -1,0 +1,178 @@
+[
+  {
+    "A_name" : "UIButton",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "UIButton+setBackgroundColor.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setBackgroundColor",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+setBackgroundColor.swift - Line: 12, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "rect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+setBackgroundColor.swift - Line: 13, Column: 9",
+            "H_initialValue" : "CGRect(x: 0, y: 0, width: cornerRadius * 2 + 1, height: cornerRadius * 2 + 1)"
+          },
+          {
+            "A_name" : "path",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+setBackgroundColor.swift - Line: 17, Column: 9",
+            "H_initialValue" : "UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)"
+          },
+          {
+            "A_name" : "image",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+setBackgroundColor.swift - Line: 21, Column: 9",
+            "H_initialValue" : "UIGraphicsGetImageFromCurrentImageContext()"
+          },
+          {
+            "A_name" : "resizableImage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIButton+setBackgroundColor.swift - Line: 24, Column: 9",
+            "H_initialValue" : "image?.resizableImage(withCapInsets: UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius), resizingMode: .stretch)"
+          }
+        ],
+        "I_parameterType" : [
+          "UIColor",
+          "UIControl.State",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "color",
+          "forState",
+          "cornerRadius"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "setBackgroundColor",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+setBackgroundColor.swift - Line: 12, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "rect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+setBackgroundColor.swift - Line: 13, Column: 9",
+        "H_initialValue" : "CGRect(x: 0, y: 0, width: cornerRadius * 2 + 1, height: cornerRadius * 2 + 1)"
+      },
+      {
+        "A_name" : "path",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+setBackgroundColor.swift - Line: 17, Column: 9",
+        "H_initialValue" : "UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)"
+      },
+      {
+        "A_name" : "image",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+setBackgroundColor.swift - Line: 21, Column: 9",
+        "H_initialValue" : "UIGraphicsGetImageFromCurrentImageContext()"
+      },
+      {
+        "A_name" : "resizableImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIButton+setBackgroundColor.swift - Line: 24, Column: 9",
+        "H_initialValue" : "image?.resizableImage(withCapInsets: UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius), resizingMode: .stretch)"
+      }
+    ],
+    "I_parameterType" : [
+      "UIColor",
+      "UIControl.State",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "color",
+      "forState",
+      "cornerRadius"
+    ]
+  },
+  {
+    "A_name" : "rect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+setBackgroundColor.swift - Line: 13, Column: 9",
+    "H_initialValue" : "CGRect(x: 0, y: 0, width: cornerRadius * 2 + 1, height: cornerRadius * 2 + 1)"
+  },
+  {
+    "A_name" : "path",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+setBackgroundColor.swift - Line: 17, Column: 9",
+    "H_initialValue" : "UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+setBackgroundColor.swift - Line: 21, Column: 9",
+    "H_initialValue" : "UIGraphicsGetImageFromCurrentImageContext()"
+  },
+  {
+    "A_name" : "resizableImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIButton+setBackgroundColor.swift - Line: 24, Column: 9",
+    "H_initialValue" : "image?.resizableImage(withCapInsets: UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius), resizingMode: .stretch)"
+  }
+]

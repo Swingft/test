@@ -1,0 +1,1986 @@
+[
+  {
+    "A_name" : "defaultReadChunkSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 14, Column: 1",
+    "H_initialValue" : "Int(16 * 1024)"
+  },
+  {
+    "A_name" : "defaultWriteChunkSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 16, Column: 1",
+    "H_initialValue" : "defaultReadChunkSize"
+  },
+  {
+    "A_name" : "defaultFilePermissions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 18, Column: 1",
+    "H_initialValue" : "UInt16(0o644)"
+  },
+  {
+    "A_name" : "defaultDirectoryPermissions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 20, Column: 1",
+    "H_initialValue" : "UInt16(0o755)"
+  },
+  {
+    "A_name" : "defaultPOSIXBufferSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 21, Column: 1",
+    "H_initialValue" : "defaultReadChunkSize"
+  },
+  {
+    "A_name" : "defaultDirectoryUnitCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 22, Column: 1",
+    "H_initialValue" : "Int64(1)"
+  },
+  {
+    "A_name" : "minEndOfCentralDirectoryOffset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 23, Column: 1",
+    "H_initialValue" : "Int64(22)"
+  },
+  {
+    "A_name" : "endOfCentralDirectoryStructSignature",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 24, Column: 1",
+    "H_initialValue" : "0x06054b50"
+  },
+  {
+    "A_name" : "localFileHeaderStructSignature",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 25, Column: 1",
+    "H_initialValue" : "0x04034b50"
+  },
+  {
+    "A_name" : "dataDescriptorStructSignature",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 26, Column: 1",
+    "H_initialValue" : "0x08074b50"
+  },
+  {
+    "A_name" : "centralDirectoryStructSignature",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 27, Column: 1",
+    "H_initialValue" : "0x02014b50"
+  },
+  {
+    "A_name" : "memoryURLScheme",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 28, Column: 1",
+    "H_initialValue" : "\"memory\""
+  },
+  {
+    "A_name" : "Archive",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sequence"
+    ],
+    "F_location" : "Archive.swift - Line: 58, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 78, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL",
+          "AccessMode",
+          "String.Encoding?"
+        ],
+        "I_parameters" : [
+          "url",
+          "accessMode",
+          "preferredEncoding"
+        ]
+      },
+      {
+        "A_name" : "ArchiveError",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Error"
+        ],
+        "F_location" : "Archive.swift - Line: 103, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "unreadableArchive",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 105, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "unwritableArchive",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 107, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "invalidEntryPath",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 109, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "invalidCompressionMethod",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 111, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "invalidCRC32",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 113, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "cancelledOperation",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 115, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "invalidBufferSize",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 117, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "invalidEntrySize",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 119, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "invalidLocalHeaderDataOffset",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 121, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "invalidLocalHeaderSize",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 123, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "invalidCentralDirectoryOffset",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 125, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "invalidCentralDirectorySize",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 127, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "invalidCentralDirectoryEntryCount",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 129, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "missingEndOfCentralDirectoryRecord",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 131, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "AccessMode",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "UInt"
+        ],
+        "F_location" : "Archive.swift - Line: 135, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "create",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 137, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "read",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 139, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "update",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 141, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "Version",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "UInt16"
+        ],
+        "F_location" : "Archive.swift - Line: 145, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "v20",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 147, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "v45",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 149, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "EndOfCentralDirectoryRecord",
+        "B_kind" : "struct",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "DataSerializable"
+        ],
+        "F_location" : "Archive.swift - Line: 152, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "endOfCentralDirectorySignature",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 153, Column: 5",
+            "H_initialValue" : "UInt32(endOfCentralDirectoryStructSignature)"
+          },
+          {
+            "A_name" : "numberOfDisk",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 154, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "numberOfDiskStart",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 155, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "totalNumberOfEntriesOnDisk",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 156, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "totalNumberOfEntriesInCentralDirectory",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 157, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "sizeOfCentralDirectory",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 158, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "offsetToStartOfCentralDirectory",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 159, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "zipFileCommentLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 160, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "zipFileCommentData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 161, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "size",
+            "B_kind" : "variable",
+            "C_accessLevel" : "static",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "Archive.swift - Line: 162, Column: 5",
+            "H_initialValue" : "22"
+          }
+        ]
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 166, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "accessMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 168, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "archiveFile",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 169, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "endOfCentralDirectoryRecord",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 170, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "zip64EndOfCentralDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 171, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "preferredEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 172, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "totalNumberOfEntriesInCentralDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 209, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "sizeOfCentralDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 214, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "offsetToStartOfCentralDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 219, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "scanForEndOfCentralDirectoryRecord",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Archive.swift - Line: 226, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "eocdOffset",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 229, Column: 5",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 230, Column: 5",
+            "H_initialValue" : "minEndOfCentralDirectoryOffset"
+          },
+          {
+            "A_name" : "archiveLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 232, Column: 5",
+            "H_initialValue" : "Int64(ftello(file))"
+          }
+        ],
+        "I_parameterType" : [
+          "FILEPointer"
+        ],
+        "I_parameters" : [
+          "in"
+        ],
+        "J_returnType" : "-> EndOfCentralDirectoryStructure?"
+      },
+      {
+        "A_name" : "makeIterator",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 250, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "totalNumberOfEntriesInCD",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 251, Column: 5",
+            "H_initialValue" : "totalNumberOfEntriesInCentralDirectory"
+          },
+          {
+            "A_name" : "directoryIndex",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 252, Column: 5",
+            "H_initialValue" : "offsetToStartOfCentralDirectory"
+          },
+          {
+            "A_name" : "index",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 253, Column: 5",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnyIterator<Entry>"
+      },
+      {
+        "A_name" : "scanForZIP64EndOfCentralDirectory",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Archive.swift - Line: 316, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "locatorOffset",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 322, Column: 5",
+            "H_initialValue" : "eocdOffset - UInt64(ZIP64EndOfCentralDirectoryLocator.size)"
+          },
+          {
+            "A_name" : "recordOffset",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive.swift - Line: 327, Column: 5",
+            "H_initialValue" : "locatorOffset - UInt64(ZIP64EndOfCentralDirectoryRecord.size)"
+          }
+        ],
+        "I_parameterType" : [
+          "FILEPointer",
+          "UInt64"
+        ],
+        "I_parameters" : [
+          "in",
+          "eocdOffset"
+        ],
+        "J_returnType" : "-> ZIP64EndOfCentralDirectory?"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 78, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL",
+      "AccessMode",
+      "String.Encoding?"
+    ],
+    "I_parameters" : [
+      "url",
+      "accessMode",
+      "preferredEncoding"
+    ]
+  },
+  {
+    "A_name" : "ArchiveError",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Error"
+    ],
+    "F_location" : "Archive.swift - Line: 103, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "unreadableArchive",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 105, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "unwritableArchive",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 107, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidEntryPath",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 109, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidCompressionMethod",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 111, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidCRC32",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 113, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "cancelledOperation",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 115, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidBufferSize",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 117, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidEntrySize",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 119, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidLocalHeaderDataOffset",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 121, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidLocalHeaderSize",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 123, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidCentralDirectoryOffset",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 125, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidCentralDirectorySize",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 127, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidCentralDirectoryEntryCount",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 129, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "missingEndOfCentralDirectoryRecord",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 131, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "AccessMode",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UInt"
+    ],
+    "F_location" : "Archive.swift - Line: 135, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "create",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 137, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "read",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 139, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "update",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 141, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Version",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UInt16"
+    ],
+    "F_location" : "Archive.swift - Line: 145, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "v20",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 147, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "v45",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 149, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "EndOfCentralDirectoryRecord",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DataSerializable"
+    ],
+    "F_location" : "Archive.swift - Line: 152, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "endOfCentralDirectorySignature",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 153, Column: 5",
+        "H_initialValue" : "UInt32(endOfCentralDirectoryStructSignature)"
+      },
+      {
+        "A_name" : "numberOfDisk",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 154, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "numberOfDiskStart",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 155, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "totalNumberOfEntriesOnDisk",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 156, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "totalNumberOfEntriesInCentralDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 157, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "sizeOfCentralDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 158, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "offsetToStartOfCentralDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 159, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "zipFileCommentLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 160, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "zipFileCommentData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 161, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "size",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Archive.swift - Line: 162, Column: 5",
+        "H_initialValue" : "22"
+      }
+    ]
+  },
+  {
+    "A_name" : "endOfCentralDirectorySignature",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 153, Column: 5",
+    "H_initialValue" : "UInt32(endOfCentralDirectoryStructSignature)"
+  },
+  {
+    "A_name" : "numberOfDisk",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 154, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "numberOfDiskStart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 155, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "totalNumberOfEntriesOnDisk",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 156, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "totalNumberOfEntriesInCentralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 157, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sizeOfCentralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 158, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "offsetToStartOfCentralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 159, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "zipFileCommentLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 160, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "zipFileCommentData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 161, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "size",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Archive.swift - Line: 162, Column: 5",
+    "H_initialValue" : "22"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 166, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "accessMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 168, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "archiveFile",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 169, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "endOfCentralDirectoryRecord",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 170, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "zip64EndOfCentralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 171, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "preferredEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 172, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "memoryFile",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 175, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 191, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "AccessMode",
+      "String.Encoding?"
+    ],
+    "I_parameters" : [
+      "data",
+      "accessMode",
+      "preferredEncoding"
+    ]
+  },
+  {
+    "A_name" : "totalNumberOfEntriesInCentralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 209, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sizeOfCentralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 214, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "offsetToStartOfCentralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 219, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "scanForEndOfCentralDirectoryRecord",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Archive.swift - Line: 226, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "eocdOffset",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 229, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 230, Column: 5",
+        "H_initialValue" : "minEndOfCentralDirectoryOffset"
+      },
+      {
+        "A_name" : "archiveLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 232, Column: 5",
+        "H_initialValue" : "Int64(ftello(file))"
+      }
+    ],
+    "I_parameterType" : [
+      "FILEPointer"
+    ],
+    "I_parameters" : [
+      "in"
+    ],
+    "J_returnType" : "-> EndOfCentralDirectoryStructure?"
+  },
+  {
+    "A_name" : "eocdOffset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 229, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 230, Column: 5",
+    "H_initialValue" : "minEndOfCentralDirectoryOffset"
+  },
+  {
+    "A_name" : "archiveLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 232, Column: 5",
+    "H_initialValue" : "Int64(ftello(file))"
+  },
+  {
+    "A_name" : "potentialDirectoryEndTag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 235, Column: 7",
+    "H_initialValue" : "UInt32()"
+  },
+  {
+    "A_name" : "zip64EOCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 242, Column: 9",
+    "H_initialValue" : "scanForZIP64EndOfCentralDirectory(in: file, eocdOffset: eocdOffset)"
+  },
+  {
+    "A_name" : "makeIterator",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 250, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "totalNumberOfEntriesInCD",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 251, Column: 5",
+        "H_initialValue" : "totalNumberOfEntriesInCentralDirectory"
+      },
+      {
+        "A_name" : "directoryIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 252, Column: 5",
+        "H_initialValue" : "offsetToStartOfCentralDirectory"
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 253, Column: 5",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnyIterator<Entry>"
+  },
+  {
+    "A_name" : "totalNumberOfEntriesInCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 251, Column: 5",
+    "H_initialValue" : "totalNumberOfEntriesInCentralDirectory"
+  },
+  {
+    "A_name" : "directoryIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 252, Column: 5",
+    "H_initialValue" : "offsetToStartOfCentralDirectory"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 253, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "offset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 263, Column: 7",
+    "H_initialValue" : "UInt64(centralDirStruct.effectiveRelativeOffsetOfLocalHeader)"
+  },
+  {
+    "A_name" : "dataDescriptor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 269, Column: 7",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "zip64DataDescriptor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 270, Column: 7",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "additionalSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 272, Column: 9",
+    "H_initialValue" : "UInt64(localFileHeader.fileNameLength) + UInt64(localFileHeader.extraFieldLength)"
+  },
+  {
+    "A_name" : "isCompressed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 273, Column: 9",
+    "H_initialValue" : "centralDirStruct.compressionMethod != CompressionMethod.none.rawValue"
+  },
+  {
+    "A_name" : "dataSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 274, Column: 9",
+    "H_initialValue" : "isCompressed\n          ? centralDirStruct.effectiveCompressedSize\n          : centralDirStruct.effectiveUncompressedSize"
+  },
+  {
+    "A_name" : "descriptorPosition",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 277, Column: 9",
+    "H_initialValue" : "offset + UInt64(LocalFileHeader.size) + additionalSize + dataSize"
+  },
+  {
+    "A_name" : "scanForZIP64EndOfCentralDirectory",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Archive.swift - Line: 316, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "locatorOffset",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 322, Column: 5",
+        "H_initialValue" : "eocdOffset - UInt64(ZIP64EndOfCentralDirectoryLocator.size)"
+      },
+      {
+        "A_name" : "recordOffset",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 327, Column: 5",
+        "H_initialValue" : "locatorOffset - UInt64(ZIP64EndOfCentralDirectoryRecord.size)"
+      }
+    ],
+    "I_parameterType" : [
+      "FILEPointer",
+      "UInt64"
+    ],
+    "I_parameters" : [
+      "in",
+      "eocdOffset"
+    ],
+    "J_returnType" : "-> ZIP64EndOfCentralDirectory?"
+  },
+  {
+    "A_name" : "locatorOffset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 322, Column: 5",
+    "H_initialValue" : "eocdOffset - UInt64(ZIP64EndOfCentralDirectoryLocator.size)"
+  },
+  {
+    "A_name" : "recordOffset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 327, Column: 5",
+    "H_initialValue" : "locatorOffset - UInt64(ZIP64EndOfCentralDirectoryRecord.size)"
+  },
+  {
+    "A_name" : "Archive.EndOfCentralDirectoryRecord",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 338, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive.swift - Line: 376, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 342, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "(Int) throws -> Data"
+    ],
+    "I_parameters" : [
+      "data",
+      "additionalDataProvider"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 357, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Archive.EndOfCentralDirectoryRecord",
+      "UInt16",
+      "UInt16",
+      "UInt32",
+      "UInt32"
+    ],
+    "I_parameters" : [
+      "record",
+      "numberOfEntriesOnDisk",
+      "numberOfEntriesInCentralDirectory",
+      "updatedSizeOfCentralDirectory",
+      "startOfCentralDirectory"
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 376, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "endOfCDSignature",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 377, Column: 5",
+    "H_initialValue" : "endOfCentralDirectorySignature"
+  },
+  {
+    "A_name" : "numberOfDisk",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 378, Column: 5",
+    "H_initialValue" : "numberOfDisk"
+  },
+  {
+    "A_name" : "numberOfDiskStart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 379, Column: 5",
+    "H_initialValue" : "numberOfDiskStart"
+  },
+  {
+    "A_name" : "totalNumberOfEntriesOnDisk",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 380, Column: 5",
+    "H_initialValue" : "totalNumberOfEntriesOnDisk"
+  },
+  {
+    "A_name" : "totalNumberOfEntriesInCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 381, Column: 5",
+    "H_initialValue" : "totalNumberOfEntriesInCentralDirectory"
+  },
+  {
+    "A_name" : "sizeOfCentralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 382, Column: 5",
+    "H_initialValue" : "sizeOfCentralDirectory"
+  },
+  {
+    "A_name" : "offsetToStartOfCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 383, Column: 5",
+    "H_initialValue" : "offsetToStartOfCentralDirectory"
+  },
+  {
+    "A_name" : "zipFileCommentLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 384, Column: 5",
+    "H_initialValue" : "zipFileCommentLength"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive.swift - Line: 385, Column: 5",
+    "H_initialValue" : "Data()"
+  }
+]

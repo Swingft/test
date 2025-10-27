@@ -1,0 +1,128 @@
+[
+  {
+    "A_name" : "MakeViewProviding",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MakeViewProviding.swift - Line: 7, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "makeView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MakeViewProviding.swift - Line: 15, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "makeView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MakeViewProviding.swift - Line: 15, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ViewEpoxyModeled",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MakeViewProviding.swift - Line: 20, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "makeView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MakeViewProviding.swift - Line: 25, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "makeView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MakeViewProviding.swift - Line: 31, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping MakeView"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "makeViewProperty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MakeViewProviding.swift - Line: 37, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "makeView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MakeViewProviding.swift - Line: 25, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "makeView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MakeViewProviding.swift - Line: 31, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping MakeView"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "makeViewProperty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MakeViewProviding.swift - Line: 37, Column: 3",
+    "H_initialValue" : ""
+  }
+]

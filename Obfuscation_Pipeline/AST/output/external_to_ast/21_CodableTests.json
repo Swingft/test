@@ -1,0 +1,736 @@
+[
+  {
+    "A_name" : "CodableTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "CodableTests.swift - Line: 26, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testEncodeNull",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 28, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 29, Column: 9",
+            "H_initialValue" : "JSON([NSNull()])"
+          },
+          {
+            "A_name" : "dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 33, Column: 9",
+            "H_initialValue" : "[\"key\": nil]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testArrayCodable",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 38, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "jsonString",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 39, Column: 9",
+            "H_initialValue" : "\"\"\"\n        [1,\"false\", [\"A\", 4.3231],\"3\",true]\n        \"\"\""
+          },
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 42, Column: 9",
+            "H_initialValue" : "jsonString.data(using: .utf8)!"
+          },
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 43, Column: 9",
+            "H_initialValue" : "try! JSONDecoder().decode(JSON.self, from: data)"
+          },
+          {
+            "A_name" : "jsonList",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 51, Column: 9",
+            "H_initialValue" : "try! JSONDecoder().decode([JSON].self, from: data)"
+          },
+          {
+            "A_name" : "list",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 55, Column: 9",
+            "H_initialValue" : "try! JSONSerialization.jsonObject(with: data, options: []) as! [Any]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDictionaryCodable",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 60, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 61, Column: 9",
+            "H_initialValue" : "[\"number\": 9823.212, \"name\": \"NAME\", \"list\": [1234, 4.21223256], \"object\": [\"sub_number\": 877.2323, \"sub_name\": \"sub_name\"], \"bool\": true]"
+          },
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 62, Column: 9",
+            "H_initialValue" : "try! JSONSerialization.data(withJSONObject: dictionary, options: [])"
+          },
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 63, Column: 9",
+            "H_initialValue" : "try! JSONDecoder().decode(JSON.self, from: data)"
+          },
+          {
+            "A_name" : "jsonDict",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 69, Column: 9",
+            "H_initialValue" : "try! JSONDecoder().decode([String: JSON].self, from: data)"
+          },
+          {
+            "A_name" : "encoderDict",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 73, Column: 9",
+            "H_initialValue" : "try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCodableModel",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 82, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 83, Column: 9",
+            "H_initialValue" : "[\n            \"number\": 9823.212,\n            \"name\": \"NAME\",\n            \"list\": [1234, 4.21223256],\n            \"object\": [\"sub_number\": 877.2323, \"sub_name\": \"sub_name\"],\n            \"bool\": true]"
+          },
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 89, Column: 9",
+            "H_initialValue" : "try! JSONSerialization.data(withJSONObject: dictionary, options: [])"
+          },
+          {
+            "A_name" : "model",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CodableTests.swift - Line: 90, Column: 9",
+            "H_initialValue" : "try! JSONDecoder().decode(CodableModel.self, from: data)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testEncodeNull",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 28, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 29, Column: 9",
+        "H_initialValue" : "JSON([NSNull()])"
+      },
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 33, Column: 9",
+        "H_initialValue" : "[\"key\": nil]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 29, Column: 9",
+    "H_initialValue" : "JSON([NSNull()])"
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 33, Column: 9",
+    "H_initialValue" : "[\"key\": nil]"
+  },
+  {
+    "A_name" : "testArrayCodable",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 38, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "jsonString",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 39, Column: 9",
+        "H_initialValue" : "\"\"\"\n        [1,\"false\", [\"A\", 4.3231],\"3\",true]\n        \"\"\""
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 42, Column: 9",
+        "H_initialValue" : "jsonString.data(using: .utf8)!"
+      },
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 43, Column: 9",
+        "H_initialValue" : "try! JSONDecoder().decode(JSON.self, from: data)"
+      },
+      {
+        "A_name" : "jsonList",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 51, Column: 9",
+        "H_initialValue" : "try! JSONDecoder().decode([JSON].self, from: data)"
+      },
+      {
+        "A_name" : "list",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 55, Column: 9",
+        "H_initialValue" : "try! JSONSerialization.jsonObject(with: data, options: []) as! [Any]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "jsonString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 39, Column: 9",
+    "H_initialValue" : "\"\"\"\n        [1,\"false\", [\"A\", 4.3231],\"3\",true]\n        \"\"\""
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 42, Column: 9",
+    "H_initialValue" : "jsonString.data(using: .utf8)!"
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 43, Column: 9",
+    "H_initialValue" : "try! JSONDecoder().decode(JSON.self, from: data)"
+  },
+  {
+    "A_name" : "jsonList",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 51, Column: 9",
+    "H_initialValue" : "try! JSONDecoder().decode([JSON].self, from: data)"
+  },
+  {
+    "A_name" : "list",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 55, Column: 9",
+    "H_initialValue" : "try! JSONSerialization.jsonObject(with: data, options: []) as! [Any]"
+  },
+  {
+    "A_name" : "testDictionaryCodable",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 60, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 61, Column: 9",
+        "H_initialValue" : "[\"number\": 9823.212, \"name\": \"NAME\", \"list\": [1234, 4.21223256], \"object\": [\"sub_number\": 877.2323, \"sub_name\": \"sub_name\"], \"bool\": true]"
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 62, Column: 9",
+        "H_initialValue" : "try! JSONSerialization.data(withJSONObject: dictionary, options: [])"
+      },
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 63, Column: 9",
+        "H_initialValue" : "try! JSONDecoder().decode(JSON.self, from: data)"
+      },
+      {
+        "A_name" : "jsonDict",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 69, Column: 9",
+        "H_initialValue" : "try! JSONDecoder().decode([String: JSON].self, from: data)"
+      },
+      {
+        "A_name" : "encoderDict",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 73, Column: 9",
+        "H_initialValue" : "try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 61, Column: 9",
+    "H_initialValue" : "[\"number\": 9823.212, \"name\": \"NAME\", \"list\": [1234, 4.21223256], \"object\": [\"sub_number\": 877.2323, \"sub_name\": \"sub_name\"], \"bool\": true]"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 62, Column: 9",
+    "H_initialValue" : "try! JSONSerialization.data(withJSONObject: dictionary, options: [])"
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 63, Column: 9",
+    "H_initialValue" : "try! JSONDecoder().decode(JSON.self, from: data)"
+  },
+  {
+    "A_name" : "jsonDict",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 69, Column: 9",
+    "H_initialValue" : "try! JSONDecoder().decode([String: JSON].self, from: data)"
+  },
+  {
+    "A_name" : "encoderDict",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 73, Column: 9",
+    "H_initialValue" : "try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]"
+  },
+  {
+    "A_name" : "testCodableModel",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 82, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 83, Column: 9",
+        "H_initialValue" : "[\n            \"number\": 9823.212,\n            \"name\": \"NAME\",\n            \"list\": [1234, 4.21223256],\n            \"object\": [\"sub_number\": 877.2323, \"sub_name\": \"sub_name\"],\n            \"bool\": true]"
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 89, Column: 9",
+        "H_initialValue" : "try! JSONSerialization.data(withJSONObject: dictionary, options: [])"
+      },
+      {
+        "A_name" : "model",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 90, Column: 9",
+        "H_initialValue" : "try! JSONDecoder().decode(CodableModel.self, from: data)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 83, Column: 9",
+    "H_initialValue" : "[\n            \"number\": 9823.212,\n            \"name\": \"NAME\",\n            \"list\": [1234, 4.21223256],\n            \"object\": [\"sub_number\": 877.2323, \"sub_name\": \"sub_name\"],\n            \"bool\": true]"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 89, Column: 9",
+    "H_initialValue" : "try! JSONSerialization.data(withJSONObject: dictionary, options: [])"
+  },
+  {
+    "A_name" : "model",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 90, Column: 9",
+    "H_initialValue" : "try! JSONDecoder().decode(CodableModel.self, from: data)"
+  },
+  {
+    "A_name" : "CodableModel",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Codable"
+    ],
+    "F_location" : "CodableTests.swift - Line: 95, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "name",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 96, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "number",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 97, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "bool",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 98, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "list",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 99, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "object",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 100, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CodableTests.swift - Line: 101, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "name",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 96, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "number",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 97, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "bool",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 98, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "list",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 99, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "object",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 100, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CodableTests.swift - Line: 101, Column: 5",
+    "H_initialValue" : ""
+  }
+]

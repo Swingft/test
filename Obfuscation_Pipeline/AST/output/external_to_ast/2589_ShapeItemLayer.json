@@ -1,0 +1,1466 @@
+[
+  {
+    "A_name" : "ShapeItemLayer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseAnimationLayer"
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 18, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Item",
+          "[Item]",
+          "LayerContext"
+        ],
+        "I_parameters" : [
+          "shape",
+          "otherItems",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 35, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 41, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "Item",
+        "B_kind" : "struct",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 54, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "item",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 56, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "groupPath",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 64, Column: 5",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "setupAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 67, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "context"
+        ]
+      },
+      {
+        "A_name" : "GradientLayers",
+        "B_kind" : "struct",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 87, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "gradientColorLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 89, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "gradientAlphaLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 92, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "shapeMaskLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 94, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "overlayLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 96, Column: 5",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "FillLayerConfiguration",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 100, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "solidFill",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 102, Column: 10",
+            "I_parameterType" : [
+              "CAShapeLayer"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "gradientFill",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 105, Column: 10",
+            "I_parameterType" : [
+              "GradientLayers"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "shape",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 109, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "otherItems",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 112, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "sublayerConfiguration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 115, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setupLayerHierarchy",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 117, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "fillLayerConfiguration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 121, Column: 5",
+            "H_initialValue" : "if let gradientFill = otherItems.first(GradientFill.self) {\n        setupGradientFillLayerHierarchy(for: gradientFill)\n      } else {\n        setupSolidFillLayerHierarchy()\n      }"
+          },
+          {
+            "A_name" : "gradientStrokeConfiguration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 128, Column: 5",
+            "H_initialValue" : "if let gradientStroke = otherItems.first(GradientStroke.self) {\n        setupGradientStrokeLayerHierarchy(for: gradientStroke)\n      } else {\n        nil\n      }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupSolidFillLayerHierarchy",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 138, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "shapeLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 139, Column: 5",
+            "H_initialValue" : "CAShapeLayer()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> FillLayerConfiguration"
+      },
+      {
+        "A_name" : "setupGradientFillLayerHierarchy",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 151, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 155, Column: 5",
+            "H_initialValue" : "BaseAnimationLayer()"
+          },
+          {
+            "A_name" : "pathContainer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 156, Column: 5",
+            "H_initialValue" : "BaseAnimationLayer()"
+          },
+          {
+            "A_name" : "pathMask",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 158, Column: 5",
+            "H_initialValue" : "CAShapeLayer()"
+          },
+          {
+            "A_name" : "rgbGradientLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 162, Column: 5",
+            "H_initialValue" : "GradientRenderLayer()"
+          },
+          {
+            "A_name" : "overlayLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 166, Column: 5",
+            "H_initialValue" : "CAShapeLayer()"
+          },
+          {
+            "A_name" : "alphaGradientLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 172, Column: 5",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "GradientFill"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> FillLayerConfiguration"
+      },
+      {
+        "A_name" : "setupGradientStrokeLayerHierarchy",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 187, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 191, Column: 5",
+            "H_initialValue" : "BaseAnimationLayer()"
+          },
+          {
+            "A_name" : "pathMask",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 193, Column: 5",
+            "H_initialValue" : "CAShapeLayer()"
+          },
+          {
+            "A_name" : "rgbGradientLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 198, Column: 5",
+            "H_initialValue" : "GradientRenderLayer()"
+          },
+          {
+            "A_name" : "alphaGradientLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 202, Column: 5",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "GradientStroke"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> GradientLayers"
+      },
+      {
+        "A_name" : "setupSolidFillAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 217, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "trimPathMultiplier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 222, Column: 5",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+          "CAShapeLayer",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "shapeLayer",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "setupGradientFillAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 249, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "pathLayers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 254, Column: 5",
+            "H_initialValue" : "[layers.shapeMaskLayer, layers.overlayLayer]"
+          }
+        ],
+        "I_parameterType" : [
+          "GradientLayers",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "layers",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "setupGradientStrokeAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 274, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "trimPathMultiplier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 279, Column: 5",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+          "GradientLayers",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "layers",
+          "context"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 18, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Item",
+      "[Item]",
+      "LayerContext"
+    ],
+    "I_parameters" : [
+      "shape",
+      "otherItems",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 35, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 41, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "Item",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 54, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "item",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 56, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "groupPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 64, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "item",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 56, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "groupPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 64, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setupAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 67, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "context"
+    ]
+  },
+  {
+    "A_name" : "GradientLayers",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 87, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "gradientColorLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 89, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "gradientAlphaLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 92, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "shapeMaskLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 94, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "overlayLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 96, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "gradientColorLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 89, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "gradientAlphaLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 92, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "shapeMaskLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 94, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "overlayLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 96, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "FillLayerConfiguration",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 100, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "solidFill",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 102, Column: 10",
+        "I_parameterType" : [
+          "CAShapeLayer"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "gradientFill",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 105, Column: 10",
+        "I_parameterType" : [
+          "GradientLayers"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "shape",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 109, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "otherItems",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 112, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sublayerConfiguration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 115, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setupLayerHierarchy",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 117, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "fillLayerConfiguration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 121, Column: 5",
+        "H_initialValue" : "if let gradientFill = otherItems.first(GradientFill.self) {\n        setupGradientFillLayerHierarchy(for: gradientFill)\n      } else {\n        setupSolidFillLayerHierarchy()\n      }"
+      },
+      {
+        "A_name" : "gradientStrokeConfiguration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 128, Column: 5",
+        "H_initialValue" : "if let gradientStroke = otherItems.first(GradientStroke.self) {\n        setupGradientStrokeLayerHierarchy(for: gradientStroke)\n      } else {\n        nil\n      }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fillLayerConfiguration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 121, Column: 5",
+    "H_initialValue" : "if let gradientFill = otherItems.first(GradientFill.self) {\n        setupGradientFillLayerHierarchy(for: gradientFill)\n      } else {\n        setupSolidFillLayerHierarchy()\n      }"
+  },
+  {
+    "A_name" : "gradientStrokeConfiguration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 128, Column: 5",
+    "H_initialValue" : "if let gradientStroke = otherItems.first(GradientStroke.self) {\n        setupGradientStrokeLayerHierarchy(for: gradientStroke)\n      } else {\n        nil\n      }"
+  },
+  {
+    "A_name" : "setupSolidFillLayerHierarchy",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 138, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "shapeLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 139, Column: 5",
+        "H_initialValue" : "CAShapeLayer()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> FillLayerConfiguration"
+  },
+  {
+    "A_name" : "shapeLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 139, Column: 5",
+    "H_initialValue" : "CAShapeLayer()"
+  },
+  {
+    "A_name" : "setupGradientFillLayerHierarchy",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 151, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 155, Column: 5",
+        "H_initialValue" : "BaseAnimationLayer()"
+      },
+      {
+        "A_name" : "pathContainer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 156, Column: 5",
+        "H_initialValue" : "BaseAnimationLayer()"
+      },
+      {
+        "A_name" : "pathMask",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 158, Column: 5",
+        "H_initialValue" : "CAShapeLayer()"
+      },
+      {
+        "A_name" : "rgbGradientLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 162, Column: 5",
+        "H_initialValue" : "GradientRenderLayer()"
+      },
+      {
+        "A_name" : "overlayLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 166, Column: 5",
+        "H_initialValue" : "CAShapeLayer()"
+      },
+      {
+        "A_name" : "alphaGradientLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 172, Column: 5",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "GradientFill"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> FillLayerConfiguration"
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 155, Column: 5",
+    "H_initialValue" : "BaseAnimationLayer()"
+  },
+  {
+    "A_name" : "pathContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 156, Column: 5",
+    "H_initialValue" : "BaseAnimationLayer()"
+  },
+  {
+    "A_name" : "pathMask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 158, Column: 5",
+    "H_initialValue" : "CAShapeLayer()"
+  },
+  {
+    "A_name" : "rgbGradientLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 162, Column: 5",
+    "H_initialValue" : "GradientRenderLayer()"
+  },
+  {
+    "A_name" : "overlayLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 166, Column: 5",
+    "H_initialValue" : "CAShapeLayer()"
+  },
+  {
+    "A_name" : "alphaGradientLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 172, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setupGradientStrokeLayerHierarchy",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 187, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 191, Column: 5",
+        "H_initialValue" : "BaseAnimationLayer()"
+      },
+      {
+        "A_name" : "pathMask",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 193, Column: 5",
+        "H_initialValue" : "CAShapeLayer()"
+      },
+      {
+        "A_name" : "rgbGradientLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 198, Column: 5",
+        "H_initialValue" : "GradientRenderLayer()"
+      },
+      {
+        "A_name" : "alphaGradientLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 202, Column: 5",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "GradientStroke"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> GradientLayers"
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 191, Column: 5",
+    "H_initialValue" : "BaseAnimationLayer()"
+  },
+  {
+    "A_name" : "pathMask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 193, Column: 5",
+    "H_initialValue" : "CAShapeLayer()"
+  },
+  {
+    "A_name" : "rgbGradientLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 198, Column: 5",
+    "H_initialValue" : "GradientRenderLayer()"
+  },
+  {
+    "A_name" : "alphaGradientLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 202, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setupSolidFillAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 217, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "trimPathMultiplier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 222, Column: 5",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+      "CAShapeLayer",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "shapeLayer",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "trimPathMultiplier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 222, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "setupGradientFillAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 249, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "pathLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 254, Column: 5",
+        "H_initialValue" : "[layers.shapeMaskLayer, layers.overlayLayer]"
+      }
+    ],
+    "I_parameterType" : [
+      "GradientLayers",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "layers",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "pathLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 254, Column: 5",
+    "H_initialValue" : "[layers.shapeMaskLayer, layers.overlayLayer]"
+  },
+  {
+    "A_name" : "setupGradientStrokeAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 274, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "trimPathMultiplier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 279, Column: 5",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+      "GradientLayers",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "layers",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "trimPathMultiplier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 279, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "[ShapeItemLayer.Item]",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 302, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "first",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 304, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ItemType.Type",
+          "(ItemType) -> Bool",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "_",
+          "where",
+          "context"
+        ],
+        "J_returnType" : "-> (item: ItemType, context: LayerAnimationContext)?"
+      },
+      {
+        "A_name" : "first",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 320, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ItemType.Type"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ItemType?"
+      }
+    ]
+  },
+  {
+    "A_name" : "first",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 304, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ItemType.Type",
+      "(ItemType) -> Bool",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "_",
+      "where",
+      "context"
+    ],
+    "J_returnType" : "-> (item: ItemType, context: LayerAnimationContext)?"
+  },
+  {
+    "A_name" : "first",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 320, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ItemType.Type"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ItemType?"
+  },
+  {
+    "A_name" : "LayerAnimationContext",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 331, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "`for`",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 334, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "context",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeItemLayer.swift - Line: 335, Column: 5",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "ShapeItemLayer.Item"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> LayerAnimationContext"
+      }
+    ]
+  },
+  {
+    "A_name" : "`for`",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 334, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeItemLayer.swift - Line: 335, Column: 5",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "ShapeItemLayer.Item"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> LayerAnimationContext"
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeItemLayer.swift - Line: 335, Column: 5",
+    "H_initialValue" : "self"
+  }
+]

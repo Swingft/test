@@ -1,0 +1,146 @@
+[
+  {
+    "A_name" : "RestaurantRepositoryImpl",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RestaurantRepository"
+    ],
+    "F_location" : "RestaurantRepositoryImpl.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "localDataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RestaurantRepositoryImpl.swift - Line: 12, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "remoteDataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RestaurantRepositoryImpl.swift - Line: 13, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RestaurantRepositoryImpl.swift - Line: 15, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "RestaurantLocalDataSource",
+          "RestaurantRemoteDataSource"
+        ],
+        "I_parameters" : [
+          "localDataSource",
+          "remoteDataSource"
+        ]
+      },
+      {
+        "A_name" : "getRestaurantsData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RestaurantRepositoryImpl.swift - Line: 20, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL?",
+          "Bool",
+          "@escaping() -> Void",
+          "@escaping() -> Void"
+        ],
+        "I_parameters" : [
+          "remoteJsonUrl",
+          "needRefresh",
+          "downloadCompletion",
+          "refreshedCompletion"
+        ],
+        "J_returnType" : "-> Restaurant"
+      }
+    ]
+  },
+  {
+    "A_name" : "localDataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RestaurantRepositoryImpl.swift - Line: 12, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "remoteDataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RestaurantRepositoryImpl.swift - Line: 13, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RestaurantRepositoryImpl.swift - Line: 15, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "RestaurantLocalDataSource",
+      "RestaurantRemoteDataSource"
+    ],
+    "I_parameters" : [
+      "localDataSource",
+      "remoteDataSource"
+    ]
+  },
+  {
+    "A_name" : "getRestaurantsData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RestaurantRepositoryImpl.swift - Line: 20, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL?",
+      "Bool",
+      "@escaping() -> Void",
+      "@escaping() -> Void"
+    ],
+    "I_parameters" : [
+      "remoteJsonUrl",
+      "needRefresh",
+      "downloadCompletion",
+      "refreshedCompletion"
+    ],
+    "J_returnType" : "-> Restaurant"
+  }
+]

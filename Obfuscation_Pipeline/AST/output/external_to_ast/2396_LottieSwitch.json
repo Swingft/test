@@ -1,0 +1,486 @@
+[
+  {
+    "A_name" : "LottieSwitch",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIViewConfiguringSwiftUIView"
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 8, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 12, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieAnimation?"
+        ],
+        "I_parameters" : [
+          "animation"
+        ]
+      },
+      {
+        "A_name" : "body",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 18, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 49, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "copy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LottieSwitch.swift - Line: 50, Column: 5",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping (AnimatedSwitch) -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "configuration",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 58, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "copy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LottieSwitch.swift - Line: 59, Column: 5",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "LottieConfiguration"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "isOn",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 72, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "copy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LottieSwitch.swift - Line: 73, Column: 5",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "Binding<Bool>"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "onAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 87, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationProgressTime",
+          "AnimationProgressTime"
+        ],
+        "I_parameters" : [
+          "fromProgress",
+          "toProgress"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "offAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 105, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationProgressTime",
+          "AnimationProgressTime"
+        ],
+        "I_parameters" : [
+          "fromProgress",
+          "toProgress"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "valueProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 122, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ValueProvider",
+          "AnimationKeypath"
+        ],
+        "I_parameters" : [
+          "_",
+          "for"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "configurations",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 136, Column: 3",
+        "H_initialValue" : "[SwiftUIView<AnimatedSwitch, Void>.Configuration]()"
+      },
+      {
+        "A_name" : "animation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 140, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "configuration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 141, Column: 3",
+        "H_initialValue" : "LottieConfiguration.shared"
+      },
+      {
+        "A_name" : "isOn",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 142, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 12, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieAnimation?"
+    ],
+    "I_parameters" : [
+      "animation"
+    ]
+  },
+  {
+    "A_name" : "body",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 18, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "animatedSwitch",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 20, Column: 7",
+    "H_initialValue" : "AnimatedSwitch(animation: animation, configuration: configuration)"
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 49, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 50, Column: 5",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping (AnimatedSwitch) -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 50, Column: 5",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 58, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 59, Column: 5",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "LottieConfiguration"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 59, Column: 5",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "isOn",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 72, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieSwitch.swift - Line: 73, Column: 5",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "Binding<Bool>"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 73, Column: 5",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "onAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 87, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationProgressTime",
+      "AnimationProgressTime"
+    ],
+    "I_parameters" : [
+      "fromProgress",
+      "toProgress"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "offAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 105, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationProgressTime",
+      "AnimationProgressTime"
+    ],
+    "I_parameters" : [
+      "fromProgress",
+      "toProgress"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "valueProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 122, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ValueProvider",
+      "AnimationKeypath"
+    ],
+    "I_parameters" : [
+      "_",
+      "for"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "configurations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 136, Column: 3",
+    "H_initialValue" : "[SwiftUIView<AnimatedSwitch, Void>.Configuration]()"
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 140, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 141, Column: 3",
+    "H_initialValue" : "LottieConfiguration.shared"
+  },
+  {
+    "A_name" : "isOn",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieSwitch.swift - Line: 142, Column: 3",
+    "H_initialValue" : ""
+  }
+]

@@ -1,0 +1,952 @@
+[
+  {
+    "A_name" : "imagesKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 30, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "durationKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 31, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageSourceKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 35, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "animatedImageDataKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 45, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageFrameCountKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 46, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 49, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "animatedImageData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 50, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "imageFrameCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 55, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cost",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 101, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "animatedImageData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 50, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageFrameCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 55, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cgImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 61, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "scale",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 65, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "images",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 69, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "duration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 74, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "size",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 79, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "width",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 81, Column: 13",
+    "H_initialValue" : "max(size.width, CGFloat(rep.pixelsWide))"
+  },
+  {
+    "A_name" : "height",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 82, Column: 13",
+    "H_initialValue" : "max(size.height, CGFloat(rep.pixelsHigh))"
+  },
+  {
+    "A_name" : "cgImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 87, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "scale",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 88, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "images",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 89, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "duration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 90, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "size",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 91, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 94, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cost",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 101, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "pixel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 102, Column: 9",
+    "H_initialValue" : "Int(size.width * size.height * scale * scale)"
+  },
+  {
+    "A_name" : "bytesPerPixel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 106, Column: 9",
+    "H_initialValue" : "cgImage.bitsPerPixel \/ 8"
+  },
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 115, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Image.swift - Line: 117, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGImage",
+      "CGFloat",
+      "KFCrossPlatformImage?"
+    ],
+    "I_parameters" : [
+      "cgImage",
+      "scale",
+      "refImage"
+    ],
+    "J_returnType" : "-> KFCrossPlatformImage"
+  },
+  {
+    "A_name" : "normalized",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 122, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Image.swift - Line: 127, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGImage",
+      "CGFloat",
+      "KFCrossPlatformImage?"
+    ],
+    "I_parameters" : [
+      "cgImage",
+      "scale",
+      "refImage"
+    ],
+    "J_returnType" : "-> KFCrossPlatformImage"
+  },
+  {
+    "A_name" : "normalized",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 133, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fixOrientation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 145, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "transform",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 147, Column: 9",
+        "H_initialValue" : "CGAffineTransform.identity"
+      },
+      {
+        "A_name" : "orientation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 149, Column: 9",
+        "H_initialValue" : "base.imageOrientation"
+      }
+    ],
+    "I_parameterType" : [
+      "CGContext"
+    ],
+    "I_parameters" : [
+      "in"
+    ]
+  },
+  {
+    "A_name" : "transform",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 147, Column: 9",
+    "H_initialValue" : "CGAffineTransform.identity"
+  },
+  {
+    "A_name" : "orientation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 149, Column: 9",
+    "H_initialValue" : "base.imageOrientation"
+  },
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 197, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "pngRepresentation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 201, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Data?"
+      },
+      {
+        "A_name" : "jpegRepresentation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 217, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "compressionQuality"
+        ],
+        "J_returnType" : "-> Data?"
+      },
+      {
+        "A_name" : "gifRepresentation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 232, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Data?"
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 243, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageFormat",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "format",
+          "compressionQuality"
+        ],
+        "J_returnType" : "-> Data?"
+      }
+    ]
+  },
+  {
+    "A_name" : "pngRepresentation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 201, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Data?"
+  },
+  {
+    "A_name" : "rep",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 206, Column: 13",
+    "H_initialValue" : "NSBitmapImageRep(cgImage: cgImage)"
+  },
+  {
+    "A_name" : "jpegRepresentation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 217, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "compressionQuality"
+    ],
+    "J_returnType" : "-> Data?"
+  },
+  {
+    "A_name" : "rep",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 222, Column: 13",
+    "H_initialValue" : "NSBitmapImageRep(cgImage: cgImage)"
+  },
+  {
+    "A_name" : "gifRepresentation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 232, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Data?"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 243, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageFormat",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "format",
+      "compressionQuality"
+    ],
+    "J_returnType" : "-> Data?"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 245, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 259, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "animatedImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Image.swift - Line: 268, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "info",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Image.swift - Line: 269, Column: 9",
+            "H_initialValue" : "[\n            kCGImageSourceShouldCache as String: true,\n            kCGImageSourceTypeIdentifierHint as String: kUTTypeGIF\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+          "Data",
+          "ImageCreatingOptions"
+        ],
+        "I_parameters" : [
+          "data",
+          "options"
+        ],
+        "J_returnType" : "-> KFCrossPlatformImage?"
+      },
+      {
+        "A_name" : "image",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Image.swift - Line: 330, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "image",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Image.swift - Line: 331, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "Data",
+          "ImageCreatingOptions"
+        ],
+        "I_parameters" : [
+          "data",
+          "options"
+        ],
+        "J_returnType" : "-> KFCrossPlatformImage?"
+      },
+      {
+        "A_name" : "downsampledImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Image.swift - Line: 360, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "imageSourceOptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Image.swift - Line: 361, Column: 9",
+            "H_initialValue" : "[kCGImageSourceShouldCache: false] as CFDictionary"
+          },
+          {
+            "A_name" : "maxDimensionInPixels",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Image.swift - Line: 366, Column: 9",
+            "H_initialValue" : "max(pointSize.width, pointSize.height) * scale"
+          },
+          {
+            "A_name" : "downsampleOptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Image.swift - Line: 367, Column: 9",
+            "H_initialValue" : "[\n            kCGImageSourceCreateThumbnailFromImageAlways: true,\n            kCGImageSourceShouldCacheImmediately: true,\n            kCGImageSourceCreateThumbnailWithTransform: true,\n            kCGImageSourceThumbnailMaxPixelSize: maxDimensionInPixels\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+          "Data",
+          "CGSize",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "data",
+          "to",
+          "scale"
+        ],
+        "J_returnType" : "-> KFCrossPlatformImage?"
+      }
+    ]
+  },
+  {
+    "A_name" : "animatedImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Image.swift - Line: 268, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "info",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 269, Column: 9",
+        "H_initialValue" : "[\n            kCGImageSourceShouldCache as String: true,\n            kCGImageSourceTypeIdentifierHint as String: kUTTypeGIF\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+      "Data",
+      "ImageCreatingOptions"
+    ],
+    "I_parameters" : [
+      "data",
+      "options"
+    ],
+    "J_returnType" : "-> KFCrossPlatformImage?"
+  },
+  {
+    "A_name" : "info",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 269, Column: 9",
+    "H_initialValue" : "[\n            kCGImageSourceShouldCache as String: true,\n            kCGImageSourceTypeIdentifierHint as String: kUTTypeGIF\n        ]"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 282, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "kf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 287, Column: 13",
+    "H_initialValue" : "image?.kf"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 296, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "duration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 305, Column: 17",
+    "H_initialValue" : "options.duration <= 0.0 ? animatedImage.duration : options.duration"
+  },
+  {
+    "A_name" : "kf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 311, Column: 13",
+    "H_initialValue" : "image?.kf"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Image.swift - Line: 330, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "image",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 331, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "Data",
+      "ImageCreatingOptions"
+    ],
+    "I_parameters" : [
+      "data",
+      "options"
+    ],
+    "J_returnType" : "-> KFCrossPlatformImage?"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 331, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "downsampledImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Image.swift - Line: 360, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "imageSourceOptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 361, Column: 9",
+        "H_initialValue" : "[kCGImageSourceShouldCache: false] as CFDictionary"
+      },
+      {
+        "A_name" : "maxDimensionInPixels",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 366, Column: 9",
+        "H_initialValue" : "max(pointSize.width, pointSize.height) * scale"
+      },
+      {
+        "A_name" : "downsampleOptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Image.swift - Line: 367, Column: 9",
+        "H_initialValue" : "[\n            kCGImageSourceCreateThumbnailFromImageAlways: true,\n            kCGImageSourceShouldCacheImmediately: true,\n            kCGImageSourceCreateThumbnailWithTransform: true,\n            kCGImageSourceThumbnailMaxPixelSize: maxDimensionInPixels\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+      "Data",
+      "CGSize",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "data",
+      "to",
+      "scale"
+    ],
+    "J_returnType" : "-> KFCrossPlatformImage?"
+  },
+  {
+    "A_name" : "imageSourceOptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 361, Column: 9",
+    "H_initialValue" : "[kCGImageSourceShouldCache: false] as CFDictionary"
+  },
+  {
+    "A_name" : "maxDimensionInPixels",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 366, Column: 9",
+    "H_initialValue" : "max(pointSize.width, pointSize.height) * scale"
+  },
+  {
+    "A_name" : "downsampleOptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Image.swift - Line: 367, Column: 9",
+    "H_initialValue" : "[\n            kCGImageSourceCreateThumbnailFromImageAlways: true,\n            kCGImageSourceShouldCacheImmediately: true,\n            kCGImageSourceCreateThumbnailWithTransform: true,\n            kCGImageSourceThumbnailMaxPixelSize: maxDimensionInPixels\n        ]"
+  }
+]

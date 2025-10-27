@@ -1,0 +1,506 @@
+[
+  {
+    "A_name" : "Infallible",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Infallible+CombineLatest+arity.swift - Line: 22, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "I1",
+          "I2",
+          "@escaping (I1.Element, I2.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Infallible<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 22, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "I1",
+      "I2",
+      "@escaping (I1.Element, I2.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Infallible<Element>"
+  },
+  {
+    "A_name" : "Infallible",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 33, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Infallible+CombineLatest+arity.swift - Line: 42, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "I1",
+          "I2",
+          "I3",
+          "@escaping (I1.Element, I2.Element, I3.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Infallible<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 42, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "I1",
+      "I2",
+      "I3",
+      "@escaping (I1.Element, I2.Element, I3.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Infallible<Element>"
+  },
+  {
+    "A_name" : "Infallible",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 53, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Infallible+CombineLatest+arity.swift - Line: 62, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "I1",
+          "I2",
+          "I3",
+          "I4",
+          "@escaping (I1.Element, I2.Element, I3.Element, I4.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Infallible<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 62, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "I1",
+      "I2",
+      "I3",
+      "I4",
+      "@escaping (I1.Element, I2.Element, I3.Element, I4.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Infallible<Element>"
+  },
+  {
+    "A_name" : "Infallible",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 73, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Infallible+CombineLatest+arity.swift - Line: 82, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "I1",
+          "I2",
+          "I3",
+          "I4",
+          "I5",
+          "@escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Infallible<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 82, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "I1",
+      "I2",
+      "I3",
+      "I4",
+      "I5",
+      "@escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Infallible<Element>"
+  },
+  {
+    "A_name" : "Infallible",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 93, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Infallible+CombineLatest+arity.swift - Line: 102, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "I1",
+          "I2",
+          "I3",
+          "I4",
+          "I5",
+          "I6",
+          "@escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element, I6.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Infallible<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 102, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "I1",
+      "I2",
+      "I3",
+      "I4",
+      "I5",
+      "I6",
+      "@escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element, I6.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Infallible<Element>"
+  },
+  {
+    "A_name" : "Infallible",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 113, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Infallible+CombineLatest+arity.swift - Line: 122, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "I1",
+          "I2",
+          "I3",
+          "I4",
+          "I5",
+          "I6",
+          "I7",
+          "@escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element, I6.Element, I7.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Infallible<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 122, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "I1",
+      "I2",
+      "I3",
+      "I4",
+      "I5",
+      "I6",
+      "I7",
+      "@escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element, I6.Element, I7.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Infallible<Element>"
+  },
+  {
+    "A_name" : "Infallible",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 133, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Infallible+CombineLatest+arity.swift - Line: 142, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "I1",
+          "I2",
+          "I3",
+          "I4",
+          "I5",
+          "I6",
+          "I7",
+          "I8",
+          "@escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element, I6.Element, I7.Element, I8.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Infallible<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Infallible+CombineLatest+arity.swift - Line: 142, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "I1",
+      "I2",
+      "I3",
+      "I4",
+      "I5",
+      "I6",
+      "I7",
+      "I8",
+      "@escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element, I6.Element, I7.Element, I8.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Infallible<Element>"
+  }
+]

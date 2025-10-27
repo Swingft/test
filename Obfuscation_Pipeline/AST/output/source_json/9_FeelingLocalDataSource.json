@@ -1,0 +1,76 @@
+[
+  {
+    "A_name" : "FeelingLocalDataSource",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FeelingLocalDataSource.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "feelingNames",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeelingLocalDataSource.swift - Line: 11, Column: 5",
+        "H_initialValue" : "[StringConstants.Feeling.peace,\n                                    StringConstants.Feeling.happy,\n                                    StringConstants.Feeling.bewildered,\n                                    StringConstants.Feeling.grief,\n                                    StringConstants.Feeling.sad,\n                                    StringConstants.Feeling.woebegone,\n                                    StringConstants.Feeling.approved,\n                                    StringConstants.Feeling.trust,\n                                    StringConstants.Feeling.respect,\n                                    StringConstants.Feeling.hate,\n                                    StringConstants.Feeling.disgust,\n                                    StringConstants.Feeling.bored,\n                                    StringConstants.Feeling.nervous,\n                                    StringConstants.Feeling.horror,\n                                    StringConstants.Feeling.extremeHorror,\n                                    StringConstants.Feeling.furious,\n                                    StringConstants.Feeling.angry,\n                                    StringConstants.Feeling.annoyed,\n                                    StringConstants.Feeling.bothered,\n                                    StringConstants.Feeling.surprised,\n                                    StringConstants.Feeling.extremeSurprised,\n                                    StringConstants.Feeling.beware,\n                                    StringConstants.Feeling.lookingForward,\n                                    StringConstants.Feeling.interested]"
+      },
+      {
+        "A_name" : "selectedFeelings",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeelingLocalDataSource.swift - Line: 35, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "feelings",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "FeelingLocalDataSource.swift - Line: 37, Column: 5",
+        "H_initialValue" : "feelingNames.enumerated().map { Feeling(id: $0, feelName: $1, image: .init(named: $1)!) }"
+      }
+    ]
+  },
+  {
+    "A_name" : "feelingNames",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeelingLocalDataSource.swift - Line: 11, Column: 5",
+    "H_initialValue" : "[StringConstants.Feeling.peace,\n                                    StringConstants.Feeling.happy,\n                                    StringConstants.Feeling.bewildered,\n                                    StringConstants.Feeling.grief,\n                                    StringConstants.Feeling.sad,\n                                    StringConstants.Feeling.woebegone,\n                                    StringConstants.Feeling.approved,\n                                    StringConstants.Feeling.trust,\n                                    StringConstants.Feeling.respect,\n                                    StringConstants.Feeling.hate,\n                                    StringConstants.Feeling.disgust,\n                                    StringConstants.Feeling.bored,\n                                    StringConstants.Feeling.nervous,\n                                    StringConstants.Feeling.horror,\n                                    StringConstants.Feeling.extremeHorror,\n                                    StringConstants.Feeling.furious,\n                                    StringConstants.Feeling.angry,\n                                    StringConstants.Feeling.annoyed,\n                                    StringConstants.Feeling.bothered,\n                                    StringConstants.Feeling.surprised,\n                                    StringConstants.Feeling.extremeSurprised,\n                                    StringConstants.Feeling.beware,\n                                    StringConstants.Feeling.lookingForward,\n                                    StringConstants.Feeling.interested]"
+  },
+  {
+    "A_name" : "selectedFeelings",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeelingLocalDataSource.swift - Line: 35, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "feelings",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "FeelingLocalDataSource.swift - Line: 37, Column: 5",
+    "H_initialValue" : "feelingNames.enumerated().map { Feeling(id: $0, feelName: $1, image: .init(named: $1)!) }"
+  }
+]

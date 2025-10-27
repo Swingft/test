@@ -1,0 +1,370 @@
+[
+  {
+    "A_name" : "KFImage",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "KFImageProtocol"
+    ],
+    "F_location" : "KFImage.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFImage.swift - Line: 33, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFImage.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Context<Image>"
+        ],
+        "I_parameters" : [
+          "context"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFImage.swift - Line: 33, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFImage.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Context<Image>"
+    ],
+    "I_parameters" : [
+      "context"
+    ]
+  },
+  {
+    "A_name" : "Image",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "KFImageHoldingView"
+    ],
+    "F_location" : "KFImage.swift - Line: 39, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "created",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "KFImage.swift - Line: 42, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KFCrossPlatformImage?",
+          "KFImage.Context<Self>"
+        ],
+        "I_parameters" : [
+          "from",
+          "context"
+        ],
+        "J_returnType" : "-> Image"
+      }
+    ]
+  },
+  {
+    "A_name" : "created",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "KFImage.swift - Line: 42, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformImage?",
+      "KFImage.Context<Self>"
+    ],
+    "I_parameters" : [
+      "from",
+      "context"
+    ],
+    "J_returnType" : "-> Image"
+  },
+  {
+    "A_name" : "KFImage",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KFImage.swift - Line: 48, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "resizable",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFImage.swift - Line: 51, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "EdgeInsets",
+          "Image.ResizingMode"
+        ],
+        "I_parameters" : [
+          "capInsets",
+          "resizingMode"
+        ],
+        "J_returnType" : "-> KFImage"
+      },
+      {
+        "A_name" : "renderingMode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFImage.swift - Line: 58, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Image.TemplateRenderingMode?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> KFImage"
+      },
+      {
+        "A_name" : "interpolation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFImage.swift - Line: 62, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Image.Interpolation"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> KFImage"
+      },
+      {
+        "A_name" : "antialiased",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFImage.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> KFImage"
+      },
+      {
+        "A_name" : "loadImmediately",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "KFImage.swift - Line: 81, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> KFImage"
+      }
+    ]
+  },
+  {
+    "A_name" : "resizable",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFImage.swift - Line: 51, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "EdgeInsets",
+      "Image.ResizingMode"
+    ],
+    "I_parameters" : [
+      "capInsets",
+      "resizingMode"
+    ],
+    "J_returnType" : "-> KFImage"
+  },
+  {
+    "A_name" : "renderingMode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFImage.swift - Line: 58, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Image.TemplateRenderingMode?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> KFImage"
+  },
+  {
+    "A_name" : "interpolation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFImage.swift - Line: 62, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Image.Interpolation"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> KFImage"
+  },
+  {
+    "A_name" : "antialiased",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFImage.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> KFImage"
+  },
+  {
+    "A_name" : "loadImmediately",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "KFImage.swift - Line: 81, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> KFImage"
+  },
+  {
+    "A_name" : "KFImage_Previews",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "PreviewProvider"
+    ],
+    "F_location" : "KFImage.swift - Line: 88, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "previews",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "KFImage.swift - Line: 90, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "previews",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "KFImage.swift - Line: 90, Column: 5",
+    "H_initialValue" : ""
+  }
+]

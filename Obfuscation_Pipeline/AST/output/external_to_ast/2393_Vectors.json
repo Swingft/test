@@ -1,0 +1,192 @@
+[
+  {
+    "A_name" : "LottieVector1D",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable",
+      "Sendable"
+    ],
+    "F_location" : "Vectors.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Vectors.swift - Line: 12, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Double"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Vectors.swift - Line: 16, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Vectors.swift - Line: 12, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Double"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Vectors.swift - Line: 16, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "LottieVector3D",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable",
+      "Sendable"
+    ],
+    "F_location" : "Vectors.swift - Line: 24, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "x",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Vectors.swift - Line: 26, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "y",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Vectors.swift - Line: 27, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "z",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Vectors.swift - Line: 28, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Vectors.swift - Line: 30, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Double",
+          "Double",
+          "Double"
+        ],
+        "I_parameters" : [
+          "x",
+          "y",
+          "z"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "x",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Vectors.swift - Line: 26, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "y",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Vectors.swift - Line: 27, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "z",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Vectors.swift - Line: 28, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Vectors.swift - Line: 30, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Double",
+      "Double",
+      "Double"
+    ],
+    "I_parameters" : [
+      "x",
+      "y",
+      "z"
+    ]
+  }
+]

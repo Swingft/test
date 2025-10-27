@@ -1,0 +1,124 @@
+[
+  {
+    "A_name" : "Archive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Archive+ReadingDeprecated.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "extract",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Archive+ReadingDeprecated.swift - Line: 15, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Entry",
+          "URL",
+          "UInt32",
+          "Bool",
+          "Progress?"
+        ],
+        "I_parameters" : [
+          "_",
+          "to",
+          "bufferSize",
+          "skipCRC32",
+          "progress"
+        ],
+        "J_returnType" : "-> CRC32"
+      },
+      {
+        "A_name" : "extract",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Archive+ReadingDeprecated.swift - Line: 30, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Entry",
+          "UInt32",
+          "Bool",
+          "Progress?",
+          "Consumer"
+        ],
+        "I_parameters" : [
+          "_",
+          "bufferSize",
+          "skipCRC32",
+          "progress",
+          "consumer"
+        ],
+        "J_returnType" : "-> CRC32"
+      }
+    ]
+  },
+  {
+    "A_name" : "extract",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Archive+ReadingDeprecated.swift - Line: 15, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Entry",
+      "URL",
+      "UInt32",
+      "Bool",
+      "Progress?"
+    ],
+    "I_parameters" : [
+      "_",
+      "to",
+      "bufferSize",
+      "skipCRC32",
+      "progress"
+    ],
+    "J_returnType" : "-> CRC32"
+  },
+  {
+    "A_name" : "extract",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Archive+ReadingDeprecated.swift - Line: 30, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Entry",
+      "UInt32",
+      "Bool",
+      "Progress?",
+      "Consumer"
+    ],
+    "I_parameters" : [
+      "_",
+      "bufferSize",
+      "skipCRC32",
+      "progress",
+      "consumer"
+    ],
+    "J_returnType" : "-> CRC32"
+  }
+]

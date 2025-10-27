@@ -1,0 +1,164 @@
+[
+  {
+    "A_name" : "LottieConfiguration",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable"
+    ],
+    "F_location" : "LottieConfiguration.swift - Line: 7, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieConfiguration.swift - Line: 11, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "RenderingEngineOption",
+          "DecodingStrategy",
+          "CGColorSpace",
+          "ReducedMotionOption"
+        ],
+        "I_parameters" : [
+          "renderingEngine",
+          "decodingStrategy",
+          "colorSpace",
+          "reducedMotionOption"
+        ]
+      },
+      {
+        "A_name" : "shared",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "LottieConfiguration.swift - Line: 27, Column: 3",
+        "H_initialValue" : "LottieConfiguration()"
+      },
+      {
+        "A_name" : "renderingEngine",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieConfiguration.swift - Line: 34, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "decodingStrategy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieConfiguration.swift - Line: 37, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "reducedMotionOption",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieConfiguration.swift - Line: 42, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "colorSpace",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieConfiguration.swift - Line: 46, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieConfiguration.swift - Line: 11, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "RenderingEngineOption",
+      "DecodingStrategy",
+      "CGColorSpace",
+      "ReducedMotionOption"
+    ],
+    "I_parameters" : [
+      "renderingEngine",
+      "decodingStrategy",
+      "colorSpace",
+      "reducedMotionOption"
+    ]
+  },
+  {
+    "A_name" : "shared",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "LottieConfiguration.swift - Line: 27, Column: 3",
+    "H_initialValue" : "LottieConfiguration()"
+  },
+  {
+    "A_name" : "renderingEngine",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieConfiguration.swift - Line: 34, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "decodingStrategy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieConfiguration.swift - Line: 37, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "reducedMotionOption",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieConfiguration.swift - Line: 42, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "colorSpace",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieConfiguration.swift - Line: 46, Column: 3",
+    "H_initialValue" : ""
+  }
+]

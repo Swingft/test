@@ -1,0 +1,1843 @@
+{
+  "CLAccuracyAuthorization": {
+    "kind": "Enum",
+    "module": "CoreLocation",
+    "usr": "c:@E@CLAccuracyAuthorization",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So23CLAccuracyAuthorizationV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So23CLAccuracyAuthorizationV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So23CLAccuracyAuthorizationV8RawValuea"
+      },
+      "fullAccuracy": {
+        "kind": "EnumElement",
+        "type": "fullAccuracy",
+        "usr": "c:@E@CLAccuracyAuthorization@CLAccuracyAuthorizationFullAccuracy"
+      },
+      "reducedAccuracy": {
+        "kind": "EnumElement",
+        "type": "reducedAccuracy",
+        "usr": "c:@E@CLAccuracyAuthorization@CLAccuracyAuthorizationReducedAccuracy"
+      }
+    }
+  },
+  "CLActivityType": {
+    "kind": "Enum",
+    "module": "CoreLocation",
+    "usr": "c:@E@CLActivityType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So14CLActivityTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So14CLActivityTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So14CLActivityTypeV8RawValuea"
+      },
+      "other": {
+        "kind": "EnumElement",
+        "type": "other",
+        "usr": "c:@E@CLActivityType@CLActivityTypeOther"
+      },
+      "automotiveNavigation": {
+        "kind": "EnumElement",
+        "type": "automotiveNavigation",
+        "usr": "c:@E@CLActivityType@CLActivityTypeAutomotiveNavigation"
+      },
+      "fitness": {
+        "kind": "EnumElement",
+        "type": "fitness",
+        "usr": "c:@E@CLActivityType@CLActivityTypeFitness"
+      },
+      "otherNavigation": {
+        "kind": "EnumElement",
+        "type": "otherNavigation",
+        "usr": "c:@E@CLActivityType@CLActivityTypeOtherNavigation"
+      },
+      "airborne": {
+        "kind": "EnumElement",
+        "type": "airborne",
+        "usr": "c:@E@CLActivityType@CLActivityTypeAirborne"
+      }
+    }
+  },
+  "CLAuthorizationStatus": {
+    "kind": "Enum",
+    "module": "CoreLocation",
+    "usr": "c:@E@CLAuthorizationStatus",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So21CLAuthorizationStatusV8rawValueABSgs5Int32V_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So21CLAuthorizationStatusV8rawValues5Int32Vvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So21CLAuthorizationStatusV8RawValuea"
+      },
+      "notDetermined": {
+        "kind": "EnumElement",
+        "type": "notDetermined",
+        "usr": "c:@E@CLAuthorizationStatus@kCLAuthorizationStatusNotDetermined"
+      },
+      "restricted": {
+        "kind": "EnumElement",
+        "type": "restricted",
+        "usr": "c:@E@CLAuthorizationStatus@kCLAuthorizationStatusRestricted"
+      },
+      "denied": {
+        "kind": "EnumElement",
+        "type": "denied",
+        "usr": "c:@E@CLAuthorizationStatus@kCLAuthorizationStatusDenied"
+      },
+      "authorizedAlways": {
+        "kind": "EnumElement",
+        "type": "authorizedAlways",
+        "usr": "c:@E@CLAuthorizationStatus@kCLAuthorizationStatusAuthorizedAlways"
+      },
+      "authorizedWhenInUse": {
+        "kind": "EnumElement",
+        "type": "authorizedWhenInUse",
+        "usr": "c:@E@CLAuthorizationStatus@kCLAuthorizationStatusAuthorizedWhenInUse"
+      },
+      "authorized": {
+        "kind": "Var",
+        "type": "authorized",
+        "usr": "c:@E@CLAuthorizationStatus@kCLAuthorizationStatusAuthorized"
+      }
+    }
+  },
+  "CLBeacon": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLBeacon",
+    "members": {
+      "timestamp": {
+        "kind": "Var",
+        "type": "timestamp",
+        "usr": "c:objc(cs)CLBeacon(py)timestamp"
+      },
+      "uuid": {
+        "kind": "Var",
+        "type": "uuid",
+        "usr": "c:objc(cs)CLBeacon(py)UUID"
+      },
+      "proximityUUID": {
+        "kind": "Var",
+        "type": "proximityUUID",
+        "usr": "c:objc(cs)CLBeacon(py)proximityUUID"
+      },
+      "major": {
+        "kind": "Var",
+        "type": "major",
+        "usr": "c:objc(cs)CLBeacon(py)major"
+      },
+      "minor": {
+        "kind": "Var",
+        "type": "minor",
+        "usr": "c:objc(cs)CLBeacon(py)minor"
+      },
+      "proximity": {
+        "kind": "Var",
+        "type": "proximity",
+        "usr": "c:objc(cs)CLBeacon(py)proximity"
+      },
+      "accuracy": {
+        "kind": "Var",
+        "type": "accuracy",
+        "usr": "c:objc(cs)CLBeacon(py)accuracy"
+      },
+      "rssi": {
+        "kind": "Var",
+        "type": "rssi",
+        "usr": "c:objc(cs)CLBeacon(py)rssi"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "CLBeaconIdentityConstraint": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLBeaconIdentityConstraint",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(uuid:major:minor:)",
+        "usr": "c:objc(cs)CLBeaconIdentityCondition(im)initWithUUID:major:minor:"
+      },
+      "major": {
+        "kind": "Var",
+        "type": "major",
+        "usr": "s:So26CLBeaconIdentityConstraintC12CoreLocationE5majors6UInt16VSgvp"
+      },
+      "minor": {
+        "kind": "Var",
+        "type": "minor",
+        "usr": "s:So26CLBeaconIdentityConstraintC12CoreLocationE5minors6UInt16VSgvp"
+      }
+    }
+  },
+  "CLBeaconRegion": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLBeaconRegion",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "peripheralData": {
+        "kind": "Func",
+        "type": "peripheralData(withMeasuredPower:)",
+        "usr": "c:objc(cs)CLBeaconRegion(im)peripheralDataWithMeasuredPower:"
+      },
+      "beaconIdentityConstraint": {
+        "kind": "Var",
+        "type": "beaconIdentityConstraint",
+        "usr": "c:objc(cs)CLBeaconRegion(py)beaconIdentityConstraint"
+      },
+      "uuid": {
+        "kind": "Var",
+        "type": "uuid",
+        "usr": "c:objc(cs)CLBeaconRegion(py)UUID"
+      },
+      "proximityUUID": {
+        "kind": "Var",
+        "type": "proximityUUID",
+        "usr": "c:objc(cs)CLBeaconRegion(py)proximityUUID"
+      },
+      "major": {
+        "kind": "Var",
+        "type": "major",
+        "usr": "c:objc(cs)CLBeaconRegion(py)major"
+      },
+      "minor": {
+        "kind": "Var",
+        "type": "minor",
+        "usr": "c:objc(cs)CLBeaconRegion(py)minor"
+      },
+      "notifyEntryStateOnDisplay": {
+        "kind": "Var",
+        "type": "notifyEntryStateOnDisplay",
+        "usr": "c:objc(cs)CLBeaconRegion(py)notifyEntryStateOnDisplay"
+      }
+    }
+  },
+  "CLCircularRegion": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLCircularRegion",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "center": {
+        "kind": "Var",
+        "type": "center",
+        "usr": "c:objc(cs)CLCircularRegion(py)center"
+      },
+      "radius": {
+        "kind": "Var",
+        "type": "radius",
+        "usr": "c:objc(cs)CLCircularRegion(py)radius"
+      },
+      "contains": {
+        "kind": "Func",
+        "type": "contains(_:)",
+        "usr": "c:objc(cs)CLCircularRegion(im)containsCoordinate:"
+      }
+    }
+  },
+  "CLDeviceOrientation": {
+    "kind": "Enum",
+    "module": "CoreLocation",
+    "usr": "c:@E@CLDeviceOrientation",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So19CLDeviceOrientationV8rawValueABSgs5Int32V_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So19CLDeviceOrientationV8rawValues5Int32Vvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So19CLDeviceOrientationV8RawValuea"
+      },
+      "unknown": {
+        "kind": "EnumElement",
+        "type": "unknown",
+        "usr": "c:@E@CLDeviceOrientation@CLDeviceOrientationUnknown"
+      },
+      "portrait": {
+        "kind": "EnumElement",
+        "type": "portrait",
+        "usr": "c:@E@CLDeviceOrientation@CLDeviceOrientationPortrait"
+      },
+      "portraitUpsideDown": {
+        "kind": "EnumElement",
+        "type": "portraitUpsideDown",
+        "usr": "c:@E@CLDeviceOrientation@CLDeviceOrientationPortraitUpsideDown"
+      },
+      "landscapeLeft": {
+        "kind": "EnumElement",
+        "type": "landscapeLeft",
+        "usr": "c:@E@CLDeviceOrientation@CLDeviceOrientationLandscapeLeft"
+      },
+      "landscapeRight": {
+        "kind": "EnumElement",
+        "type": "landscapeRight",
+        "usr": "c:@E@CLDeviceOrientation@CLDeviceOrientationLandscapeRight"
+      },
+      "faceUp": {
+        "kind": "EnumElement",
+        "type": "faceUp",
+        "usr": "c:@E@CLDeviceOrientation@CLDeviceOrientationFaceUp"
+      },
+      "faceDown": {
+        "kind": "EnumElement",
+        "type": "faceDown",
+        "usr": "c:@E@CLDeviceOrientation@CLDeviceOrientationFaceDown"
+      }
+    }
+  },
+  "CLError": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "s:SC7CLErrorLeV",
+    "members": {
+      "_nsError": {
+        "kind": "Var",
+        "type": "_nsError",
+        "usr": "s:SC7CLErrorLeV8_nsErrorSo7NSErrorCvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_nsError:)",
+        "usr": "s:SC7CLErrorLeV8_nsErrorABSo7NSErrorC_tcfc"
+      },
+      "errorDomain": {
+        "kind": "Var",
+        "type": "errorDomain",
+        "usr": "s:SC7CLErrorLeV11errorDomainSSvpZ"
+      },
+      "Code": {
+        "kind": "Enum",
+        "type": "Code",
+        "usr": "c:@E@CLError"
+      },
+      "locationUnknown": {
+        "kind": "Var",
+        "type": "locationUnknown",
+        "usr": "s:SC7CLErrorLeV15locationUnknownSoAAVvpZ"
+      },
+      "denied": {
+        "kind": "Var",
+        "type": "denied",
+        "usr": "s:SC7CLErrorLeV6deniedSoAAVvpZ"
+      },
+      "network": {
+        "kind": "Var",
+        "type": "network",
+        "usr": "s:SC7CLErrorLeV7networkSoAAVvpZ"
+      },
+      "headingFailure": {
+        "kind": "Var",
+        "type": "headingFailure",
+        "usr": "s:SC7CLErrorLeV14headingFailureSoAAVvpZ"
+      },
+      "regionMonitoringDenied": {
+        "kind": "Var",
+        "type": "regionMonitoringDenied",
+        "usr": "s:SC7CLErrorLeV22regionMonitoringDeniedSoAAVvpZ"
+      },
+      "regionMonitoringFailure": {
+        "kind": "Var",
+        "type": "regionMonitoringFailure",
+        "usr": "s:SC7CLErrorLeV23regionMonitoringFailureSoAAVvpZ"
+      },
+      "regionMonitoringSetupDelayed": {
+        "kind": "Var",
+        "type": "regionMonitoringSetupDelayed",
+        "usr": "s:SC7CLErrorLeV28regionMonitoringSetupDelayedSoAAVvpZ"
+      },
+      "regionMonitoringResponseDelayed": {
+        "kind": "Var",
+        "type": "regionMonitoringResponseDelayed",
+        "usr": "s:SC7CLErrorLeV31regionMonitoringResponseDelayedSoAAVvpZ"
+      },
+      "geocodeFoundNoResult": {
+        "kind": "Var",
+        "type": "geocodeFoundNoResult",
+        "usr": "s:SC7CLErrorLeV20geocodeFoundNoResultSoAAVvpZ"
+      },
+      "geocodeFoundPartialResult": {
+        "kind": "Var",
+        "type": "geocodeFoundPartialResult",
+        "usr": "s:SC7CLErrorLeV25geocodeFoundPartialResultSoAAVvpZ"
+      },
+      "geocodeCanceled": {
+        "kind": "Var",
+        "type": "geocodeCanceled",
+        "usr": "s:SC7CLErrorLeV15geocodeCanceledSoAAVvpZ"
+      },
+      "deferredFailed": {
+        "kind": "Var",
+        "type": "deferredFailed",
+        "usr": "s:SC7CLErrorLeV14deferredFailedSoAAVvpZ"
+      },
+      "deferredNotUpdatingLocation": {
+        "kind": "Var",
+        "type": "deferredNotUpdatingLocation",
+        "usr": "s:SC7CLErrorLeV27deferredNotUpdatingLocationSoAAVvpZ"
+      },
+      "deferredAccuracyTooLow": {
+        "kind": "Var",
+        "type": "deferredAccuracyTooLow",
+        "usr": "s:SC7CLErrorLeV22deferredAccuracyTooLowSoAAVvpZ"
+      },
+      "deferredDistanceFiltered": {
+        "kind": "Var",
+        "type": "deferredDistanceFiltered",
+        "usr": "s:SC7CLErrorLeV24deferredDistanceFilteredSoAAVvpZ"
+      },
+      "deferredCanceled": {
+        "kind": "Var",
+        "type": "deferredCanceled",
+        "usr": "s:SC7CLErrorLeV16deferredCanceledSoAAVvpZ"
+      },
+      "rangingUnavailable": {
+        "kind": "Var",
+        "type": "rangingUnavailable",
+        "usr": "s:SC7CLErrorLeV18rangingUnavailableSoAAVvpZ"
+      },
+      "rangingFailure": {
+        "kind": "Var",
+        "type": "rangingFailure",
+        "usr": "s:SC7CLErrorLeV14rangingFailureSoAAVvpZ"
+      },
+      "promptDeclined": {
+        "kind": "Var",
+        "type": "promptDeclined",
+        "usr": "s:SC7CLErrorLeV14promptDeclinedSoAAVvpZ"
+      },
+      "historicalLocationError": {
+        "kind": "Var",
+        "type": "historicalLocationError",
+        "usr": "s:SC7CLErrorLeV23historicalLocationErrorSoAAVvpZ"
+      },
+      "alternateRegion": {
+        "kind": "Var",
+        "type": "alternateRegion",
+        "usr": "s:SC7CLErrorLeV12CoreLocationE15alternateRegionSo8CLRegionCSgvp"
+      }
+    }
+  },
+  "Code": {
+    "kind": "Enum",
+    "module": "CoreLocation",
+    "usr": "c:@E@CLLocationPushServiceError",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So26CLLocationPushServiceErrorV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So26CLLocationPushServiceErrorV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So26CLLocationPushServiceErrorV8RawValuea"
+      },
+      "_ErrorType": {
+        "kind": "TypeAlias",
+        "type": "_ErrorType",
+        "usr": "c:@E@CLLocationPushServiceError"
+      },
+      "unknown": {
+        "kind": "EnumElement",
+        "type": "unknown",
+        "usr": "c:@E@CLLocationPushServiceError@CLLocationPushServiceErrorUnknown"
+      },
+      "missingPushExtension": {
+        "kind": "EnumElement",
+        "type": "missingPushExtension",
+        "usr": "c:@E@CLLocationPushServiceError@CLLocationPushServiceErrorMissingPushExtension"
+      },
+      "missingPushServerEnvironment": {
+        "kind": "EnumElement",
+        "type": "missingPushServerEnvironment",
+        "usr": "c:@E@CLLocationPushServiceError@CLLocationPushServiceErrorMissingPushServerEnvironment"
+      },
+      "missingEntitlement": {
+        "kind": "EnumElement",
+        "type": "missingEntitlement",
+        "usr": "c:@E@CLLocationPushServiceError@CLLocationPushServiceErrorMissingEntitlement"
+      },
+      "unsupportedPlatform": {
+        "kind": "EnumElement",
+        "type": "unsupportedPlatform",
+        "usr": "c:@E@CLLocationPushServiceError@CLLocationPushServiceErrorUnsupportedPlatform"
+      }
+    }
+  },
+  "CLFloor": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLFloor",
+    "members": {
+      "level": {
+        "kind": "Var",
+        "type": "level",
+        "usr": "c:objc(cs)CLFloor(py)level"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "CLGeocoder": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLGeocoder",
+    "members": {
+      "isGeocoding": {
+        "kind": "Var",
+        "type": "isGeocoding",
+        "usr": "c:objc(cs)CLGeocoder(py)geocoding"
+      },
+      "reverseGeocodeLocation": {
+        "kind": "Func",
+        "type": "reverseGeocodeLocation(_:preferredLocale:)",
+        "usr": "c:objc(cs)CLGeocoder(im)reverseGeocodeLocation:preferredLocale:completionHandler:"
+      },
+      "geocodeAddressDictionary": {
+        "kind": "Func",
+        "type": "geocodeAddressDictionary(_:completionHandler:)",
+        "usr": "c:objc(cs)CLGeocoder(im)geocodeAddressDictionary:completionHandler:"
+      },
+      "geocodeAddressString": {
+        "kind": "Func",
+        "type": "geocodeAddressString(_:)",
+        "usr": "c:objc(cs)CLGeocoder(im)geocodeAddressString:completionHandler:"
+      },
+      "cancelGeocode": {
+        "kind": "Func",
+        "type": "cancelGeocode()",
+        "usr": "c:objc(cs)CLGeocoder(im)cancelGeocode"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "CLHeading": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLHeading",
+    "members": {
+      "magneticHeading": {
+        "kind": "Var",
+        "type": "magneticHeading",
+        "usr": "c:objc(cs)CLHeading(py)magneticHeading"
+      },
+      "trueHeading": {
+        "kind": "Var",
+        "type": "trueHeading",
+        "usr": "c:objc(cs)CLHeading(py)trueHeading"
+      },
+      "headingAccuracy": {
+        "kind": "Var",
+        "type": "headingAccuracy",
+        "usr": "c:objc(cs)CLHeading(py)headingAccuracy"
+      },
+      "x": {
+        "kind": "Var",
+        "type": "x",
+        "usr": "c:objc(cs)CLHeading(py)x"
+      },
+      "y": {
+        "kind": "Var",
+        "type": "y",
+        "usr": "c:objc(cs)CLHeading(py)y"
+      },
+      "z": {
+        "kind": "Var",
+        "type": "z",
+        "usr": "c:objc(cs)CLHeading(py)z"
+      },
+      "timestamp": {
+        "kind": "Var",
+        "type": "timestamp",
+        "usr": "c:objc(cs)CLHeading(py)timestamp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "CLLocation": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLLocation",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "coordinate": {
+        "kind": "Var",
+        "type": "coordinate",
+        "usr": "c:objc(cs)CLLocation(py)coordinate"
+      },
+      "altitude": {
+        "kind": "Var",
+        "type": "altitude",
+        "usr": "c:objc(cs)CLLocation(py)altitude"
+      },
+      "ellipsoidalAltitude": {
+        "kind": "Var",
+        "type": "ellipsoidalAltitude",
+        "usr": "c:objc(cs)CLLocation(py)ellipsoidalAltitude"
+      },
+      "horizontalAccuracy": {
+        "kind": "Var",
+        "type": "horizontalAccuracy",
+        "usr": "c:objc(cs)CLLocation(py)horizontalAccuracy"
+      },
+      "verticalAccuracy": {
+        "kind": "Var",
+        "type": "verticalAccuracy",
+        "usr": "c:objc(cs)CLLocation(py)verticalAccuracy"
+      },
+      "course": {
+        "kind": "Var",
+        "type": "course",
+        "usr": "c:objc(cs)CLLocation(py)course"
+      },
+      "courseAccuracy": {
+        "kind": "Var",
+        "type": "courseAccuracy",
+        "usr": "c:objc(cs)CLLocation(py)courseAccuracy"
+      },
+      "speed": {
+        "kind": "Var",
+        "type": "speed",
+        "usr": "c:objc(cs)CLLocation(py)speed"
+      },
+      "speedAccuracy": {
+        "kind": "Var",
+        "type": "speedAccuracy",
+        "usr": "c:objc(cs)CLLocation(py)speedAccuracy"
+      },
+      "timestamp": {
+        "kind": "Var",
+        "type": "timestamp",
+        "usr": "c:objc(cs)CLLocation(py)timestamp"
+      },
+      "floor": {
+        "kind": "Var",
+        "type": "floor",
+        "usr": "c:objc(cs)CLLocation(py)floor"
+      },
+      "sourceInformation": {
+        "kind": "Var",
+        "type": "sourceInformation",
+        "usr": "c:objc(cs)CLLocation(py)sourceInformation"
+      },
+      "distance": {
+        "kind": "Func",
+        "type": "distance(from:)",
+        "usr": "c:objc(cs)CLLocation(im)distanceFromLocation:"
+      }
+    }
+  },
+  "CLLocationCoordinate2D": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "c:@S@CLLocationCoordinate2D",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(latitude:longitude:)",
+        "usr": "s:So22CLLocationCoordinate2DV8latitude9longitudeABSd_Sdtcfc"
+      }
+    }
+  },
+  "CLLocationManager": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLLocationManager",
+    "members": {
+      "locationServicesEnabled": {
+        "kind": "Func",
+        "type": "locationServicesEnabled()",
+        "usr": "c:objc(cs)CLLocationManager(cm)locationServicesEnabled"
+      },
+      "headingAvailable": {
+        "kind": "Func",
+        "type": "headingAvailable()",
+        "usr": "c:objc(cs)CLLocationManager(cm)headingAvailable"
+      },
+      "significantLocationChangeMonitoringAvailable": {
+        "kind": "Func",
+        "type": "significantLocationChangeMonitoringAvailable()",
+        "usr": "c:objc(cs)CLLocationManager(cm)significantLocationChangeMonitoringAvailable"
+      },
+      "isMonitoringAvailable": {
+        "kind": "Func",
+        "type": "isMonitoringAvailable(for:)",
+        "usr": "c:objc(cs)CLLocationManager(cm)isMonitoringAvailableForClass:"
+      },
+      "isRangingAvailable": {
+        "kind": "Func",
+        "type": "isRangingAvailable()",
+        "usr": "c:objc(cs)CLLocationManager(cm)isRangingAvailable"
+      },
+      "authorizationStatus": {
+        "kind": "Func",
+        "type": "authorizationStatus()",
+        "usr": "c:objc(cs)CLLocationManager(cm)authorizationStatus"
+      },
+      "accuracyAuthorization": {
+        "kind": "Var",
+        "type": "accuracyAuthorization",
+        "usr": "c:objc(cs)CLLocationManager(py)accuracyAuthorization"
+      },
+      "isAuthorizedForWidgetUpdates": {
+        "kind": "Var",
+        "type": "isAuthorizedForWidgetUpdates",
+        "usr": "c:objc(cs)CLLocationManager(py)authorizedForWidgetUpdates"
+      },
+      "delegate": {
+        "kind": "Var",
+        "type": "delegate",
+        "usr": "c:objc(cs)CLLocationManager(py)delegate"
+      },
+      "activityType": {
+        "kind": "Var",
+        "type": "activityType",
+        "usr": "c:objc(cs)CLLocationManager(py)activityType"
+      },
+      "distanceFilter": {
+        "kind": "Var",
+        "type": "distanceFilter",
+        "usr": "c:objc(cs)CLLocationManager(py)distanceFilter"
+      },
+      "desiredAccuracy": {
+        "kind": "Var",
+        "type": "desiredAccuracy",
+        "usr": "c:objc(cs)CLLocationManager(py)desiredAccuracy"
+      },
+      "pausesLocationUpdatesAutomatically": {
+        "kind": "Var",
+        "type": "pausesLocationUpdatesAutomatically",
+        "usr": "c:objc(cs)CLLocationManager(py)pausesLocationUpdatesAutomatically"
+      },
+      "allowsBackgroundLocationUpdates": {
+        "kind": "Var",
+        "type": "allowsBackgroundLocationUpdates",
+        "usr": "c:objc(cs)CLLocationManager(py)allowsBackgroundLocationUpdates"
+      },
+      "showsBackgroundLocationIndicator": {
+        "kind": "Var",
+        "type": "showsBackgroundLocationIndicator",
+        "usr": "c:objc(cs)CLLocationManager(py)showsBackgroundLocationIndicator"
+      },
+      "location": {
+        "kind": "Var",
+        "type": "location",
+        "usr": "c:objc(cs)CLLocationManager(py)location"
+      },
+      "headingFilter": {
+        "kind": "Var",
+        "type": "headingFilter",
+        "usr": "c:objc(cs)CLLocationManager(py)headingFilter"
+      },
+      "headingOrientation": {
+        "kind": "Var",
+        "type": "headingOrientation",
+        "usr": "c:objc(cs)CLLocationManager(py)headingOrientation"
+      },
+      "heading": {
+        "kind": "Var",
+        "type": "heading",
+        "usr": "c:objc(cs)CLLocationManager(py)heading"
+      },
+      "maximumRegionMonitoringDistance": {
+        "kind": "Var",
+        "type": "maximumRegionMonitoringDistance",
+        "usr": "c:objc(cs)CLLocationManager(py)maximumRegionMonitoringDistance"
+      },
+      "monitoredRegions": {
+        "kind": "Var",
+        "type": "monitoredRegions",
+        "usr": "c:objc(cs)CLLocationManager(py)monitoredRegions"
+      },
+      "rangedRegions": {
+        "kind": "Var",
+        "type": "rangedRegions",
+        "usr": "c:objc(cs)CLLocationManager(py)rangedRegions"
+      },
+      "rangedBeaconConstraints": {
+        "kind": "Var",
+        "type": "rangedBeaconConstraints",
+        "usr": "c:objc(cs)CLLocationManager(py)rangedBeaconConstraints"
+      },
+      "requestWhenInUseAuthorization": {
+        "kind": "Func",
+        "type": "requestWhenInUseAuthorization()",
+        "usr": "c:objc(cs)CLLocationManager(im)requestWhenInUseAuthorization"
+      },
+      "requestAlwaysAuthorization": {
+        "kind": "Func",
+        "type": "requestAlwaysAuthorization()",
+        "usr": "c:objc(cs)CLLocationManager(im)requestAlwaysAuthorization"
+      },
+      "requestTemporaryFullAccuracyAuthorization": {
+        "kind": "Func",
+        "type": "requestTemporaryFullAccuracyAuthorization(withPurposeKey:)",
+        "usr": "c:objc(cs)CLLocationManager(im)requestTemporaryFullAccuracyAuthorizationWithPurposeKey:"
+      },
+      "startUpdatingLocation": {
+        "kind": "Func",
+        "type": "startUpdatingLocation()",
+        "usr": "c:objc(cs)CLLocationManager(im)startUpdatingLocation"
+      },
+      "stopUpdatingLocation": {
+        "kind": "Func",
+        "type": "stopUpdatingLocation()",
+        "usr": "c:objc(cs)CLLocationManager(im)stopUpdatingLocation"
+      },
+      "requestLocation": {
+        "kind": "Func",
+        "type": "requestLocation()",
+        "usr": "c:objc(cs)CLLocationManager(im)requestLocation"
+      },
+      "startUpdatingHeading": {
+        "kind": "Func",
+        "type": "startUpdatingHeading()",
+        "usr": "c:objc(cs)CLLocationManager(im)startUpdatingHeading"
+      },
+      "stopUpdatingHeading": {
+        "kind": "Func",
+        "type": "stopUpdatingHeading()",
+        "usr": "c:objc(cs)CLLocationManager(im)stopUpdatingHeading"
+      },
+      "dismissHeadingCalibrationDisplay": {
+        "kind": "Func",
+        "type": "dismissHeadingCalibrationDisplay()",
+        "usr": "c:objc(cs)CLLocationManager(im)dismissHeadingCalibrationDisplay"
+      },
+      "startMonitoringSignificantLocationChanges": {
+        "kind": "Func",
+        "type": "startMonitoringSignificantLocationChanges()",
+        "usr": "c:objc(cs)CLLocationManager(im)startMonitoringSignificantLocationChanges"
+      },
+      "stopMonitoringSignificantLocationChanges": {
+        "kind": "Func",
+        "type": "stopMonitoringSignificantLocationChanges()",
+        "usr": "c:objc(cs)CLLocationManager(im)stopMonitoringSignificantLocationChanges"
+      },
+      "startMonitoringLocationPushes": {
+        "kind": "Func",
+        "type": "startMonitoringLocationPushes()",
+        "usr": "c:objc(cs)CLLocationManager(im)startMonitoringLocationPushesWithCompletion:"
+      },
+      "stopMonitoringLocationPushes": {
+        "kind": "Func",
+        "type": "stopMonitoringLocationPushes()",
+        "usr": "c:objc(cs)CLLocationManager(im)stopMonitoringLocationPushes"
+      },
+      "stopMonitoring": {
+        "kind": "Func",
+        "type": "stopMonitoring(for:)",
+        "usr": "c:objc(cs)CLLocationManager(im)stopMonitoringForRegion:"
+      },
+      "startMonitoring": {
+        "kind": "Func",
+        "type": "startMonitoring(for:)",
+        "usr": "c:objc(cs)CLLocationManager(im)startMonitoringForRegion:"
+      },
+      "requestState": {
+        "kind": "Func",
+        "type": "requestState(for:)",
+        "usr": "c:objc(cs)CLLocationManager(im)requestStateForRegion:"
+      },
+      "startRangingBeacons": {
+        "kind": "Func",
+        "type": "startRangingBeacons(satisfying:)",
+        "usr": "c:objc(cs)CLLocationManager(im)startRangingBeaconsSatisfyingConstraint:"
+      },
+      "stopRangingBeacons": {
+        "kind": "Func",
+        "type": "stopRangingBeacons(satisfying:)",
+        "usr": "c:objc(cs)CLLocationManager(im)stopRangingBeaconsSatisfyingConstraint:"
+      },
+      "allowDeferredLocationUpdates": {
+        "kind": "Func",
+        "type": "allowDeferredLocationUpdates(untilTraveled:timeout:)",
+        "usr": "c:objc(cs)CLLocationManager(im)allowDeferredLocationUpdatesUntilTraveled:timeout:"
+      },
+      "disallowDeferredLocationUpdates": {
+        "kind": "Func",
+        "type": "disallowDeferredLocationUpdates()",
+        "usr": "c:objc(cs)CLLocationManager(im)disallowDeferredLocationUpdates"
+      },
+      "deferredLocationUpdatesAvailable": {
+        "kind": "Func",
+        "type": "deferredLocationUpdatesAvailable()",
+        "usr": "c:objc(cs)CLLocationManager(cm)deferredLocationUpdatesAvailable"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "startMonitoringVisits": {
+        "kind": "Func",
+        "type": "startMonitoringVisits()",
+        "usr": "c:objc(cs)CLLocationManager(im)startMonitoringVisits"
+      },
+      "stopMonitoringVisits": {
+        "kind": "Func",
+        "type": "stopMonitoringVisits()",
+        "usr": "c:objc(cs)CLLocationManager(im)stopMonitoringVisits"
+      }
+    }
+  },
+  "CLLocationManagerDelegate": {
+    "kind": "Protocol",
+    "module": "CoreLocation",
+    "usr": "c:objc(pl)CLLocationManagerDelegate",
+    "members": {
+      "locationManager": {
+        "kind": "Func",
+        "type": "locationManager(_:didVisit:)",
+        "usr": "c:objc(pl)CLLocationManagerDelegate(im)locationManager:didVisit:"
+      },
+      "locationManagerShouldDisplayHeadingCalibration": {
+        "kind": "Func",
+        "type": "locationManagerShouldDisplayHeadingCalibration(_:)",
+        "usr": "c:objc(pl)CLLocationManagerDelegate(im)locationManagerShouldDisplayHeadingCalibration:"
+      },
+      "locationManagerDidChangeAuthorization": {
+        "kind": "Func",
+        "type": "locationManagerDidChangeAuthorization(_:)",
+        "usr": "c:objc(pl)CLLocationManagerDelegate(im)locationManagerDidChangeAuthorization:"
+      },
+      "locationManagerDidPauseLocationUpdates": {
+        "kind": "Func",
+        "type": "locationManagerDidPauseLocationUpdates(_:)",
+        "usr": "c:objc(pl)CLLocationManagerDelegate(im)locationManagerDidPauseLocationUpdates:"
+      },
+      "locationManagerDidResumeLocationUpdates": {
+        "kind": "Func",
+        "type": "locationManagerDidResumeLocationUpdates(_:)",
+        "usr": "c:objc(pl)CLLocationManagerDelegate(im)locationManagerDidResumeLocationUpdates:"
+      }
+    }
+  },
+  "CLLocationPushServiceError": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "s:SC26CLLocationPushServiceErrorLeV",
+    "members": {
+      "_nsError": {
+        "kind": "Var",
+        "type": "_nsError",
+        "usr": "s:SC26CLLocationPushServiceErrorLeV03_nsD0So7NSErrorCvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_nsError:)",
+        "usr": "s:SC26CLLocationPushServiceErrorLeV03_nsD0ABSo7NSErrorC_tcfc"
+      },
+      "errorDomain": {
+        "kind": "Var",
+        "type": "errorDomain",
+        "usr": "s:SC26CLLocationPushServiceErrorLeV11errorDomainSSvpZ"
+      },
+      "Code": {
+        "kind": "Enum",
+        "type": "Code",
+        "usr": "c:@E@CLLocationPushServiceError"
+      },
+      "unknown": {
+        "kind": "Var",
+        "type": "unknown",
+        "usr": "s:SC26CLLocationPushServiceErrorLeV7unknownSoAAVvpZ"
+      },
+      "missingPushExtension": {
+        "kind": "Var",
+        "type": "missingPushExtension",
+        "usr": "s:SC26CLLocationPushServiceErrorLeV07missingB9ExtensionSoAAVvpZ"
+      },
+      "missingPushServerEnvironment": {
+        "kind": "Var",
+        "type": "missingPushServerEnvironment",
+        "usr": "s:SC26CLLocationPushServiceErrorLeV07missingB17ServerEnvironmentSoAAVvpZ"
+      },
+      "missingEntitlement": {
+        "kind": "Var",
+        "type": "missingEntitlement",
+        "usr": "s:SC26CLLocationPushServiceErrorLeV18missingEntitlementSoAAVvpZ"
+      },
+      "unsupportedPlatform": {
+        "kind": "Var",
+        "type": "unsupportedPlatform",
+        "usr": "s:SC26CLLocationPushServiceErrorLeV19unsupportedPlatformSoAAVvpZ"
+      }
+    }
+  },
+  "CLLocationPushServiceExtension": {
+    "kind": "Protocol",
+    "module": "CoreLocation",
+    "usr": "c:objc(pl)CLLocationPushServiceExtension",
+    "members": {
+      "didReceiveLocationPushPayload": {
+        "kind": "Func",
+        "type": "didReceiveLocationPushPayload(_:)",
+        "usr": "c:objc(pl)CLLocationPushServiceExtension(im)didReceiveLocationPushPayload:completion:"
+      },
+      "serviceExtensionWillTerminate": {
+        "kind": "Func",
+        "type": "serviceExtensionWillTerminate()",
+        "usr": "c:objc(pl)CLLocationPushServiceExtension(im)serviceExtensionWillTerminate"
+      }
+    }
+  },
+  "CLLocationSourceInformation": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLLocationSourceInformation",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "isSimulatedBySoftware": {
+        "kind": "Var",
+        "type": "isSimulatedBySoftware",
+        "usr": "c:objc(cs)CLLocationSourceInformation(py)isSimulatedBySoftware"
+      },
+      "isProducedByAccessory": {
+        "kind": "Var",
+        "type": "isProducedByAccessory",
+        "usr": "c:objc(cs)CLLocationSourceInformation(py)isProducedByAccessory"
+      }
+    }
+  },
+  "CLPlacemark": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLPlacemark",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(placemark:)",
+        "usr": "c:objc(cs)CLPlacemark(im)initWithPlacemark:"
+      },
+      "location": {
+        "kind": "Var",
+        "type": "location",
+        "usr": "c:objc(cs)CLPlacemark(py)location"
+      },
+      "region": {
+        "kind": "Var",
+        "type": "region",
+        "usr": "c:objc(cs)CLPlacemark(py)region"
+      },
+      "timeZone": {
+        "kind": "Var",
+        "type": "timeZone",
+        "usr": "c:objc(cs)CLPlacemark(py)timeZone"
+      },
+      "addressDictionary": {
+        "kind": "Var",
+        "type": "addressDictionary",
+        "usr": "c:objc(cs)CLPlacemark(py)addressDictionary"
+      },
+      "name": {
+        "kind": "Var",
+        "type": "name",
+        "usr": "c:objc(cs)CLPlacemark(py)name"
+      },
+      "thoroughfare": {
+        "kind": "Var",
+        "type": "thoroughfare",
+        "usr": "c:objc(cs)CLPlacemark(py)thoroughfare"
+      },
+      "subThoroughfare": {
+        "kind": "Var",
+        "type": "subThoroughfare",
+        "usr": "c:objc(cs)CLPlacemark(py)subThoroughfare"
+      },
+      "locality": {
+        "kind": "Var",
+        "type": "locality",
+        "usr": "c:objc(cs)CLPlacemark(py)locality"
+      },
+      "subLocality": {
+        "kind": "Var",
+        "type": "subLocality",
+        "usr": "c:objc(cs)CLPlacemark(py)subLocality"
+      },
+      "administrativeArea": {
+        "kind": "Var",
+        "type": "administrativeArea",
+        "usr": "c:objc(cs)CLPlacemark(py)administrativeArea"
+      },
+      "subAdministrativeArea": {
+        "kind": "Var",
+        "type": "subAdministrativeArea",
+        "usr": "c:objc(cs)CLPlacemark(py)subAdministrativeArea"
+      },
+      "postalCode": {
+        "kind": "Var",
+        "type": "postalCode",
+        "usr": "c:objc(cs)CLPlacemark(py)postalCode"
+      },
+      "isoCountryCode": {
+        "kind": "Var",
+        "type": "isoCountryCode",
+        "usr": "c:objc(cs)CLPlacemark(py)ISOcountryCode"
+      },
+      "country": {
+        "kind": "Var",
+        "type": "country",
+        "usr": "c:objc(cs)CLPlacemark(py)country"
+      },
+      "inlandWater": {
+        "kind": "Var",
+        "type": "inlandWater",
+        "usr": "c:objc(cs)CLPlacemark(py)inlandWater"
+      },
+      "ocean": {
+        "kind": "Var",
+        "type": "ocean",
+        "usr": "c:objc(cs)CLPlacemark(py)ocean"
+      },
+      "areasOfInterest": {
+        "kind": "Var",
+        "type": "areasOfInterest",
+        "usr": "c:objc(cs)CLPlacemark(py)areasOfInterest"
+      }
+    }
+  },
+  "CLProximity": {
+    "kind": "Enum",
+    "module": "CoreLocation",
+    "usr": "c:@E@CLProximity",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So11CLProximityV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So11CLProximityV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So11CLProximityV8RawValuea"
+      },
+      "unknown": {
+        "kind": "EnumElement",
+        "type": "unknown",
+        "usr": "c:@E@CLProximity@CLProximityUnknown"
+      },
+      "immediate": {
+        "kind": "EnumElement",
+        "type": "immediate",
+        "usr": "c:@E@CLProximity@CLProximityImmediate"
+      },
+      "near": {
+        "kind": "EnumElement",
+        "type": "near",
+        "usr": "c:@E@CLProximity@CLProximityNear"
+      },
+      "far": {
+        "kind": "EnumElement",
+        "type": "far",
+        "usr": "c:@E@CLProximity@CLProximityFar"
+      }
+    }
+  },
+  "CLRegion": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLRegion",
+    "members": {
+      "identifier": {
+        "kind": "Var",
+        "type": "identifier",
+        "usr": "c:objc(cs)CLRegion(py)identifier"
+      },
+      "notifyOnEntry": {
+        "kind": "Var",
+        "type": "notifyOnEntry",
+        "usr": "c:objc(cs)CLRegion(py)notifyOnEntry"
+      },
+      "notifyOnExit": {
+        "kind": "Var",
+        "type": "notifyOnExit",
+        "usr": "c:objc(cs)CLRegion(py)notifyOnExit"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "CLRegionState": {
+    "kind": "Enum",
+    "module": "CoreLocation",
+    "usr": "c:@E@CLRegionState",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So13CLRegionStateV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So13CLRegionStateV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So13CLRegionStateV8RawValuea"
+      },
+      "unknown": {
+        "kind": "EnumElement",
+        "type": "unknown",
+        "usr": "c:@E@CLRegionState@CLRegionStateUnknown"
+      },
+      "inside": {
+        "kind": "EnumElement",
+        "type": "inside",
+        "usr": "c:@E@CLRegionState@CLRegionStateInside"
+      },
+      "outside": {
+        "kind": "EnumElement",
+        "type": "outside",
+        "usr": "c:@E@CLRegionState@CLRegionStateOutside"
+      }
+    }
+  },
+  "CLVisit": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "c:objc(cs)CLVisit",
+    "members": {
+      "arrivalDate": {
+        "kind": "Var",
+        "type": "arrivalDate",
+        "usr": "c:objc(cs)CLVisit(py)arrivalDate"
+      },
+      "departureDate": {
+        "kind": "Var",
+        "type": "departureDate",
+        "usr": "c:objc(cs)CLVisit(py)departureDate"
+      },
+      "coordinate": {
+        "kind": "Var",
+        "type": "coordinate",
+        "usr": "c:objc(cs)CLVisit(py)coordinate"
+      },
+      "horizontalAccuracy": {
+        "kind": "Var",
+        "type": "horizontalAccuracy",
+        "usr": "c:objc(cs)CLVisit(py)horizontalAccuracy"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "CLCondition": {
+    "kind": "Protocol",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation11CLConditionP",
+    "members": {}
+  },
+  "CLMonitor": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation9CLMonitorC",
+    "members": {
+      "identifiers": {
+        "kind": "Var",
+        "type": "identifiers",
+        "usr": "s:12CoreLocation9CLMonitorC11identifiersSaySSGvp"
+      },
+      "events": {
+        "kind": "Var",
+        "type": "events",
+        "usr": "s:12CoreLocation9CLMonitorC6eventsAC6EventsVvp"
+      },
+      "add": {
+        "kind": "Func",
+        "type": "add(_:identifier:assuming:)",
+        "usr": "s:12CoreLocation9CLMonitorC3add_10identifier8assumingyAA11CLCondition_p_SSSo17CLMonitoringStateVtF"
+      },
+      "remove": {
+        "kind": "Func",
+        "type": "remove(_:)",
+        "usr": "s:12CoreLocation9CLMonitorC6removeyySSF"
+      },
+      "record": {
+        "kind": "Func",
+        "type": "record(for:)",
+        "usr": "s:12CoreLocation9CLMonitorC6record3forAC6RecordVSgSS_tF"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_:)",
+        "usr": "s:12CoreLocation9CLMonitorCyACSSYacfc"
+      },
+      "unownedExecutor": {
+        "kind": "Var",
+        "type": "unownedExecutor",
+        "usr": "s:12CoreLocation9CLMonitorC15unownedExecutorScevp"
+      }
+    }
+  },
+  "Record": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation9CLMonitorC6RecordV",
+    "members": {
+      "lastEvent": {
+        "kind": "Var",
+        "type": "lastEvent",
+        "usr": "s:12CoreLocation9CLMonitorC6RecordV9lastEventAC0F0Vvp"
+      },
+      "condition": {
+        "kind": "Var",
+        "type": "condition",
+        "usr": "s:12CoreLocation9CLMonitorC6RecordV9conditionAA11CLCondition_pvp"
+      }
+    }
+  },
+  "Event": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation9CLMonitorC5EventV",
+    "members": {
+      "State": {
+        "kind": "TypeAlias",
+        "type": "State",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV5Statea"
+      },
+      "refinement": {
+        "kind": "Var",
+        "type": "refinement",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV10refinementAA11CLCondition_pSgvp"
+      },
+      "identifier": {
+        "kind": "Var",
+        "type": "identifier",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV10identifierSSvp"
+      },
+      "state": {
+        "kind": "Var",
+        "type": "state",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV5stateSo17CLMonitoringStateVvp"
+      },
+      "date": {
+        "kind": "Var",
+        "type": "date",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV4date10Foundation4DateVvp"
+      },
+      "authorizationDenied": {
+        "kind": "Var",
+        "type": "authorizationDenied",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV19authorizationDeniedSbvp"
+      },
+      "authorizationDeniedGlobally": {
+        "kind": "Var",
+        "type": "authorizationDeniedGlobally",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV27authorizationDeniedGloballySbvp"
+      },
+      "authorizationRestricted": {
+        "kind": "Var",
+        "type": "authorizationRestricted",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV23authorizationRestrictedSbvp"
+      },
+      "insufficientlyInUse": {
+        "kind": "Var",
+        "type": "insufficientlyInUse",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV19insufficientlyInUseSbvp"
+      },
+      "accuracyLimited": {
+        "kind": "Var",
+        "type": "accuracyLimited",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV15accuracyLimitedSbvp"
+      },
+      "conditionUnsupported": {
+        "kind": "Var",
+        "type": "conditionUnsupported",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV20conditionUnsupportedSbvp"
+      },
+      "conditionLimitExceeded": {
+        "kind": "Var",
+        "type": "conditionLimitExceeded",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV22conditionLimitExceededSbvp"
+      },
+      "persistenceUnavailable": {
+        "kind": "Var",
+        "type": "persistenceUnavailable",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV22persistenceUnavailableSbvp"
+      },
+      "serviceSessionRequired": {
+        "kind": "Var",
+        "type": "serviceSessionRequired",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV22serviceSessionRequiredSbvp"
+      },
+      "authorizationRequestInProgress": {
+        "kind": "Var",
+        "type": "authorizationRequestInProgress",
+        "usr": "s:12CoreLocation9CLMonitorC5EventV30authorizationRequestInProgressSbvp"
+      }
+    }
+  },
+  "Events": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation9CLMonitorC6EventsV",
+    "members": {
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:12CoreLocation9CLMonitorC6EventsV7Elementa"
+      },
+      "makeAsyncIterator": {
+        "kind": "Func",
+        "type": "makeAsyncIterator()",
+        "usr": "s:12CoreLocation9CLMonitorC6EventsV17makeAsyncIteratorAE0G0VyF"
+      },
+      "AsyncIterator": {
+        "kind": "TypeAlias",
+        "type": "AsyncIterator",
+        "usr": "s:12CoreLocation9CLMonitorC6EventsV13AsyncIteratora"
+      }
+    }
+  },
+  "Iterator": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation27CLBackgroundActivitySessionC11DiagnosticsC8IteratorV",
+    "members": {
+      "next": {
+        "kind": "Func",
+        "type": "next()",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC11DiagnosticsC8IteratorV4nextAC10DiagnosticVSgyYaKF"
+      },
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC11DiagnosticsC8IteratorV7Elementa"
+      }
+    }
+  },
+  "CircularGeographicCondition": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation9CLMonitorC27CircularGeographicConditionV",
+    "members": {
+      "center": {
+        "kind": "Var",
+        "type": "center",
+        "usr": "s:12CoreLocation9CLMonitorC27CircularGeographicConditionV6centerSo22CLLocationCoordinate2DVvp"
+      },
+      "radius": {
+        "kind": "Var",
+        "type": "radius",
+        "usr": "s:12CoreLocation9CLMonitorC27CircularGeographicConditionV6radiusSdvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:12CoreLocation9CLMonitorC27CircularGeographicConditionV4fromAEs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:12CoreLocation9CLMonitorC27CircularGeographicConditionV6encode2toys7Encoder_p_tKF"
+      }
+    }
+  },
+  "BeaconIdentityCondition": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation9CLMonitorC23BeaconIdentityConditionV",
+    "members": {
+      "uuid": {
+        "kind": "Var",
+        "type": "uuid",
+        "usr": "s:12CoreLocation9CLMonitorC23BeaconIdentityConditionV4uuid10Foundation4UUIDVvp"
+      },
+      "major": {
+        "kind": "Var",
+        "type": "major",
+        "usr": "s:12CoreLocation9CLMonitorC23BeaconIdentityConditionV5majors6UInt16VSgvp"
+      },
+      "minor": {
+        "kind": "Var",
+        "type": "minor",
+        "usr": "s:12CoreLocation9CLMonitorC23BeaconIdentityConditionV5minors6UInt16VSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:12CoreLocation9CLMonitorC23BeaconIdentityConditionV4fromAEs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:12CoreLocation9CLMonitorC23BeaconIdentityConditionV6encode2toys7Encoder_p_tKF"
+      }
+    }
+  },
+  "CLServiceSession": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation16CLServiceSessionC",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(authorization:fullAccuracyPurposeKey:)",
+        "usr": "s:12CoreLocation16CLServiceSessionC13authorization22fullAccuracyPurposeKeyA2C24AuthorizationRequirementO_SStcfc"
+      },
+      "invalidate": {
+        "kind": "Func",
+        "type": "invalidate()",
+        "usr": "s:12CoreLocation16CLServiceSessionC10invalidateyyF"
+      },
+      "diagnostics": {
+        "kind": "Var",
+        "type": "diagnostics",
+        "usr": "s:12CoreLocation16CLServiceSessionC11diagnosticsAC11DiagnosticsCvp"
+      },
+      "AuthorizationRequirement": {
+        "kind": "Enum",
+        "type": "AuthorizationRequirement",
+        "usr": "s:12CoreLocation16CLServiceSessionC24AuthorizationRequirementO"
+      }
+    }
+  },
+  "Diagnostic": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation27CLBackgroundActivitySessionC10DiagnosticV",
+    "members": {
+      "authorizationDenied": {
+        "kind": "Var",
+        "type": "authorizationDenied",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC10DiagnosticV19authorizationDeniedSbvp"
+      },
+      "authorizationDeniedGlobally": {
+        "kind": "Var",
+        "type": "authorizationDeniedGlobally",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC10DiagnosticV27authorizationDeniedGloballySbvp"
+      },
+      "authorizationRestricted": {
+        "kind": "Var",
+        "type": "authorizationRestricted",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC10DiagnosticV23authorizationRestrictedSbvp"
+      },
+      "insufficientlyInUse": {
+        "kind": "Var",
+        "type": "insufficientlyInUse",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC10DiagnosticV19insufficientlyInUseSbvp"
+      },
+      "serviceSessionRequired": {
+        "kind": "Var",
+        "type": "serviceSessionRequired",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC10DiagnosticV07serviceE8RequiredSbvp"
+      },
+      "authorizationRequestInProgress": {
+        "kind": "Var",
+        "type": "authorizationRequestInProgress",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC10DiagnosticV30authorizationRequestInProgressSbvp"
+      }
+    }
+  },
+  "Diagnostics": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation27CLBackgroundActivitySessionC11DiagnosticsC",
+    "members": {
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC11DiagnosticsC7Elementa"
+      },
+      "makeAsyncIterator": {
+        "kind": "Func",
+        "type": "makeAsyncIterator()",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC11DiagnosticsC17makeAsyncIteratorAE0I0VyF"
+      },
+      "AsyncIterator": {
+        "kind": "TypeAlias",
+        "type": "AsyncIterator",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC11DiagnosticsC13AsyncIteratora"
+      }
+    }
+  },
+  "AuthorizationRequirement": {
+    "kind": "Enum",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation16CLServiceSessionC24AuthorizationRequirementO",
+    "members": {
+      "none": {
+        "kind": "EnumElement",
+        "type": "none",
+        "usr": "s:12CoreLocation16CLServiceSessionC24AuthorizationRequirementO4noneyA2EmF"
+      },
+      "whenInUse": {
+        "kind": "EnumElement",
+        "type": "whenInUse",
+        "usr": "s:12CoreLocation16CLServiceSessionC24AuthorizationRequirementO9whenInUseyA2EmF"
+      },
+      "always": {
+        "kind": "EnumElement",
+        "type": "always",
+        "usr": "s:12CoreLocation16CLServiceSessionC24AuthorizationRequirementO6alwaysyA2EmF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:12CoreLocation16CLServiceSessionC24AuthorizationRequirementO2eeoiySbAE_AEtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:12CoreLocation16CLServiceSessionC24AuthorizationRequirementO4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:12CoreLocation16CLServiceSessionC24AuthorizationRequirementO9hashValueSivp"
+      }
+    }
+  },
+  "CLLocationUpdate": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation16CLLocationUpdateV",
+    "members": {
+      "location": {
+        "kind": "Var",
+        "type": "location",
+        "usr": "s:12CoreLocation16CLLocationUpdateV8locationSo0C0CSgvp"
+      },
+      "isStationary": {
+        "kind": "Var",
+        "type": "isStationary",
+        "usr": "s:12CoreLocation16CLLocationUpdateV12isStationarySbvp"
+      },
+      "stationary": {
+        "kind": "Var",
+        "type": "stationary",
+        "usr": "s:12CoreLocation16CLLocationUpdateV10stationarySbvp"
+      },
+      "authorizationDenied": {
+        "kind": "Var",
+        "type": "authorizationDenied",
+        "usr": "s:12CoreLocation16CLLocationUpdateV19authorizationDeniedSbvp"
+      },
+      "authorizationDeniedGlobally": {
+        "kind": "Var",
+        "type": "authorizationDeniedGlobally",
+        "usr": "s:12CoreLocation16CLLocationUpdateV27authorizationDeniedGloballySbvp"
+      },
+      "authorizationRestricted": {
+        "kind": "Var",
+        "type": "authorizationRestricted",
+        "usr": "s:12CoreLocation16CLLocationUpdateV23authorizationRestrictedSbvp"
+      },
+      "insufficientlyInUse": {
+        "kind": "Var",
+        "type": "insufficientlyInUse",
+        "usr": "s:12CoreLocation16CLLocationUpdateV19insufficientlyInUseSbvp"
+      },
+      "locationUnavailable": {
+        "kind": "Var",
+        "type": "locationUnavailable",
+        "usr": "s:12CoreLocation16CLLocationUpdateV19locationUnavailableSbvp"
+      },
+      "accuracyLimited": {
+        "kind": "Var",
+        "type": "accuracyLimited",
+        "usr": "s:12CoreLocation16CLLocationUpdateV15accuracyLimitedSbvp"
+      },
+      "serviceSessionRequired": {
+        "kind": "Var",
+        "type": "serviceSessionRequired",
+        "usr": "s:12CoreLocation16CLLocationUpdateV22serviceSessionRequiredSbvp"
+      },
+      "authorizationRequestInProgress": {
+        "kind": "Var",
+        "type": "authorizationRequestInProgress",
+        "usr": "s:12CoreLocation16CLLocationUpdateV30authorizationRequestInProgressSbvp"
+      },
+      "LiveConfiguration": {
+        "kind": "Enum",
+        "type": "LiveConfiguration",
+        "usr": "s:12CoreLocation16CLLocationUpdateV17LiveConfigurationO"
+      },
+      "liveUpdates": {
+        "kind": "Func",
+        "type": "liveUpdates(_:)",
+        "usr": "s:12CoreLocation16CLLocationUpdateV11liveUpdatesyAC0F0VAC17LiveConfigurationOFZ"
+      }
+    }
+  },
+  "LiveConfiguration": {
+    "kind": "Enum",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation16CLLocationUpdateV17LiveConfigurationO",
+    "members": {
+      "default": {
+        "kind": "EnumElement",
+        "type": "default",
+        "usr": "s:12CoreLocation16CLLocationUpdateV17LiveConfigurationO7defaultyA2EmF"
+      },
+      "automotiveNavigation": {
+        "kind": "EnumElement",
+        "type": "automotiveNavigation",
+        "usr": "s:12CoreLocation16CLLocationUpdateV17LiveConfigurationO20automotiveNavigationyA2EmF"
+      },
+      "otherNavigation": {
+        "kind": "EnumElement",
+        "type": "otherNavigation",
+        "usr": "s:12CoreLocation16CLLocationUpdateV17LiveConfigurationO15otherNavigationyA2EmF"
+      },
+      "fitness": {
+        "kind": "EnumElement",
+        "type": "fitness",
+        "usr": "s:12CoreLocation16CLLocationUpdateV17LiveConfigurationO7fitnessyA2EmF"
+      },
+      "airborne": {
+        "kind": "EnumElement",
+        "type": "airborne",
+        "usr": "s:12CoreLocation16CLLocationUpdateV17LiveConfigurationO8airborneyA2EmF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:12CoreLocation16CLLocationUpdateV17LiveConfigurationO2eeoiySbAE_AEtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:12CoreLocation16CLLocationUpdateV17LiveConfigurationO4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:12CoreLocation16CLLocationUpdateV17LiveConfigurationO9hashValueSivp"
+      }
+    }
+  },
+  "Updates": {
+    "kind": "Struct",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation16CLLocationUpdateV7UpdatesV",
+    "members": {
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:12CoreLocation16CLLocationUpdateV7UpdatesV7Elementa"
+      },
+      "makeAsyncIterator": {
+        "kind": "Func",
+        "type": "makeAsyncIterator()",
+        "usr": "s:12CoreLocation16CLLocationUpdateV7UpdatesV17makeAsyncIteratorAE0H0VyF"
+      },
+      "AsyncIterator": {
+        "kind": "TypeAlias",
+        "type": "AsyncIterator",
+        "usr": "s:12CoreLocation16CLLocationUpdateV7UpdatesV13AsyncIteratora"
+      }
+    }
+  },
+  "CLBackgroundActivitySession": {
+    "kind": "Class",
+    "module": "CoreLocation",
+    "usr": "s:12CoreLocation27CLBackgroundActivitySessionC",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionCACycfc"
+      },
+      "invalidate": {
+        "kind": "Func",
+        "type": "invalidate()",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC10invalidateyyF"
+      },
+      "diagnostics": {
+        "kind": "Var",
+        "type": "diagnostics",
+        "usr": "s:12CoreLocation27CLBackgroundActivitySessionC11diagnosticsAC11DiagnosticsCvp"
+      }
+    }
+  }
+}

@@ -1,0 +1,230 @@
+[
+  {
+    "A_name" : "QueryParserTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "QueryParserTest.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testLinuxTestSuiteIncludesAllTests",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParserTest.swift - Line: 14, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testOrGetsCorrectPrecedence",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParserTest.swift - Line: 23, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "eval",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParserTest.swift - Line: 26, Column: 3",
+            "H_initialValue" : "try QueryParser.parse(\"a b, c d, e f\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testParsesMultiCorrectly",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParserTest.swift - Line: 43, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "eval",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParserTest.swift - Line: 44, Column: 3",
+            "H_initialValue" : "try QueryParser.parse(\".foo > ol, ol > li + li\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "allTests",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "QueryParserTest.swift - Line: 65, Column: 2",
+        "H_initialValue" : "{\n\t\treturn [\n            (\"testLinuxTestSuiteIncludesAllTests\", testLinuxTestSuiteIncludesAllTests),\n            (\"testOrGetsCorrectPrecedence\", testOrGetsCorrectPrecedence),\n\t\t\t(\"testParsesMultiCorrectly\", testParsesMultiCorrectly)\n\t\t]\n\t}()"
+      }
+    ]
+  },
+  {
+    "A_name" : "testLinuxTestSuiteIncludesAllTests",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParserTest.swift - Line: 14, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "thisClass",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParserTest.swift - Line: 16, Column: 13",
+    "H_initialValue" : "type(of: self)"
+  },
+  {
+    "A_name" : "linuxCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParserTest.swift - Line: 17, Column: 13",
+    "H_initialValue" : "thisClass.allTests.count"
+  },
+  {
+    "A_name" : "darwinCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParserTest.swift - Line: 18, Column: 13",
+    "H_initialValue" : "Int(thisClass.defaultTestSuite.testCaseCount)"
+  },
+  {
+    "A_name" : "testOrGetsCorrectPrecedence",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParserTest.swift - Line: 23, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "eval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParserTest.swift - Line: 26, Column: 3",
+        "H_initialValue" : "try QueryParser.parse(\"a b, c d, e f\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "eval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParserTest.swift - Line: 26, Column: 3",
+    "H_initialValue" : "try QueryParser.parse(\"a b, c d, e f\")"
+  },
+  {
+    "A_name" : "testParsesMultiCorrectly",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParserTest.swift - Line: 43, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "eval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParserTest.swift - Line: 44, Column: 3",
+        "H_initialValue" : "try QueryParser.parse(\".foo > ol, ol > li + li\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "eval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParserTest.swift - Line: 44, Column: 3",
+    "H_initialValue" : "try QueryParser.parse(\".foo > ol, ol > li + li\")"
+  },
+  {
+    "A_name" : "allTests",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "QueryParserTest.swift - Line: 65, Column: 2",
+    "H_initialValue" : "{\n\t\treturn [\n            (\"testLinuxTestSuiteIncludesAllTests\", testLinuxTestSuiteIncludesAllTests),\n            (\"testOrGetsCorrectPrecedence\", testOrGetsCorrectPrecedence),\n\t\t\t(\"testParsesMultiCorrectly\", testParsesMultiCorrectly)\n\t\t]\n\t}()"
+  }
+]

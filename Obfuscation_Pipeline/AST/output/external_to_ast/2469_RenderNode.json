@@ -1,0 +1,360 @@
+[
+  {
+    "A_name" : "RenderNode",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "renderer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RenderNode.swift - Line: 14, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "renderer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 14, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Renderable",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 20, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "hasUpdate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RenderNode.swift - Line: 23, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "hasRenderUpdates",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RenderNode.swift - Line: 25, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "shouldRenderInContext",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RenderNode.swift - Line: 30, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "updateShapeLayer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RenderNode.swift - Line: 33, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CAShapeLayer"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "renderBoundsFor",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RenderNode.swift - Line: 36, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> CGRect"
+      },
+      {
+        "A_name" : "setupSublayers",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RenderNode.swift - Line: 39, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CAShapeLayer"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "render",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RenderNode.swift - Line: 42, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGContext"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "hasUpdate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 23, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hasRenderUpdates",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 25, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "shouldRenderInContext",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 30, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "updateShapeLayer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 33, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CAShapeLayer"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "renderBoundsFor",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 36, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> CGRect"
+  },
+  {
+    "A_name" : "setupSublayers",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 39, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CAShapeLayer"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "render",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 42, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGContext"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "RenderNode",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 45, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "outputNode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RenderNode.swift - Line: 47, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "outputNode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 47, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Renderable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 53, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "renderBoundsFor",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RenderNode.swift - Line: 55, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> CGRect"
+      }
+    ]
+  },
+  {
+    "A_name" : "renderBoundsFor",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RenderNode.swift - Line: 55, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> CGRect"
+  }
+]

@@ -1,0 +1,381 @@
+[
+  {
+    "A_name" : "Keyframe",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Keyframe.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Keyframe.swift - Line: 16, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T",
+          "LottieVector3D?",
+          "LottieVector3D?"
+        ],
+        "I_parameters" : [
+          "_",
+          "spatialInTangent",
+          "spatialOutTangent"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Keyframe.swift - Line: 31, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T",
+          "AnimationFrameTime",
+          "Bool",
+          "LottieVector2D?",
+          "LottieVector2D?",
+          "LottieVector3D?",
+          "LottieVector3D?"
+        ],
+        "I_parameters" : [
+          "value",
+          "time",
+          "isHold",
+          "inTangent",
+          "outTangent",
+          "spatialInTangent",
+          "spatialOutTangent"
+        ]
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Keyframe.swift - Line: 52, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "time",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Keyframe.swift - Line: 54, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isHold",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Keyframe.swift - Line: 56, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inTangent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Keyframe.swift - Line: 58, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "outTangent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Keyframe.swift - Line: 60, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "spatialInTangent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Keyframe.swift - Line: 63, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "spatialOutTangent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Keyframe.swift - Line: 65, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Keyframe.swift - Line: 16, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T",
+      "LottieVector3D?",
+      "LottieVector3D?"
+    ],
+    "I_parameters" : [
+      "_",
+      "spatialInTangent",
+      "spatialOutTangent"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Keyframe.swift - Line: 31, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T",
+      "AnimationFrameTime",
+      "Bool",
+      "LottieVector2D?",
+      "LottieVector2D?",
+      "LottieVector3D?",
+      "LottieVector3D?"
+    ],
+    "I_parameters" : [
+      "value",
+      "time",
+      "isHold",
+      "inTangent",
+      "outTangent",
+      "spatialInTangent",
+      "spatialOutTangent"
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Keyframe.swift - Line: 52, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "time",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Keyframe.swift - Line: 54, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isHold",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Keyframe.swift - Line: 56, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inTangent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Keyframe.swift - Line: 58, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "outTangent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Keyframe.swift - Line: 60, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "spatialInTangent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Keyframe.swift - Line: 63, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "spatialOutTangent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Keyframe.swift - Line: 65, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Keyframe",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Equatable"
+    ],
+    "F_location" : "Keyframe.swift - Line: 70, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Keyframe.swift - Line: 71, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Keyframe<T>",
+          "Keyframe<T>"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Keyframe.swift - Line: 71, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Keyframe<T>",
+      "Keyframe<T>"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "Keyframe",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable"
+    ],
+    "F_location" : "Keyframe.swift - Line: 84, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "hash",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Keyframe.swift - Line: 85, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "inout Hasher"
+        ],
+        "I_parameters" : [
+          "into"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "hash",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Keyframe.swift - Line: 85, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "inout Hasher"
+    ],
+    "I_parameters" : [
+      "into"
+    ]
+  },
+  {
+    "A_name" : "Keyframe",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "Keyframe.swift - Line: 98, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

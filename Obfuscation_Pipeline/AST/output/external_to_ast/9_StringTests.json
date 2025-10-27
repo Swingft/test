@@ -1,0 +1,618 @@
+[
+  {
+    "A_name" : "StringTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "StringTests.swift - Line: 26, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testString",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 28, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringTests.swift - Line: 30, Column: 9",
+            "H_initialValue" : "JSON(\"abcdefg hijklmn;opqrst.?+_()\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testUrl",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 39, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringTests.swift - Line: 40, Column: 9",
+            "H_initialValue" : "JSON(\"http:\/\/github.com\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBool",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 44, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringTests.swift - Line: 45, Column: 9",
+            "H_initialValue" : "JSON(\"true\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBoolWithY",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 49, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringTests.swift - Line: 50, Column: 9",
+            "H_initialValue" : "JSON(\"Y\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBoolWithT",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 54, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringTests.swift - Line: 55, Column: 9",
+            "H_initialValue" : "JSON(\"T\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBoolWithYes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 59, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringTests.swift - Line: 60, Column: 9",
+            "H_initialValue" : "JSON(\"Yes\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBoolWith1",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 64, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringTests.swift - Line: 65, Column: 9",
+            "H_initialValue" : "JSON(\"1\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testUrlPercentEscapes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 69, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "emDash",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringTests.swift - Line: 70, Column: 9",
+            "H_initialValue" : "\"\\\\u2014\""
+          },
+          {
+            "A_name" : "urlString",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringTests.swift - Line: 71, Column: 9",
+            "H_initialValue" : "\"http:\/\/examble.com\/unencoded\" + emDash + \"string\""
+          },
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringTests.swift - Line: 75, Column: 9",
+            "H_initialValue" : "JSON(urlString)"
+          },
+          {
+            "A_name" : "preEscaped",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringTests.swift - Line: 77, Column: 9",
+            "H_initialValue" : "JSON(encodedURLString)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testString",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 28, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 30, Column: 9",
+        "H_initialValue" : "JSON(\"abcdefg hijklmn;opqrst.?+_()\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 30, Column: 9",
+    "H_initialValue" : "JSON(\"abcdefg hijklmn;opqrst.?+_()\")"
+  },
+  {
+    "A_name" : "testUrl",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 39, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 40, Column: 9",
+        "H_initialValue" : "JSON(\"http:\/\/github.com\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 40, Column: 9",
+    "H_initialValue" : "JSON(\"http:\/\/github.com\")"
+  },
+  {
+    "A_name" : "testBool",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 44, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 45, Column: 9",
+        "H_initialValue" : "JSON(\"true\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 45, Column: 9",
+    "H_initialValue" : "JSON(\"true\")"
+  },
+  {
+    "A_name" : "testBoolWithY",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 49, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 50, Column: 9",
+        "H_initialValue" : "JSON(\"Y\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 50, Column: 9",
+    "H_initialValue" : "JSON(\"Y\")"
+  },
+  {
+    "A_name" : "testBoolWithT",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 54, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 55, Column: 9",
+        "H_initialValue" : "JSON(\"T\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 55, Column: 9",
+    "H_initialValue" : "JSON(\"T\")"
+  },
+  {
+    "A_name" : "testBoolWithYes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 59, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 60, Column: 9",
+        "H_initialValue" : "JSON(\"Yes\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 60, Column: 9",
+    "H_initialValue" : "JSON(\"Yes\")"
+  },
+  {
+    "A_name" : "testBoolWith1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 64, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 65, Column: 9",
+        "H_initialValue" : "JSON(\"1\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 65, Column: 9",
+    "H_initialValue" : "JSON(\"1\")"
+  },
+  {
+    "A_name" : "testUrlPercentEscapes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 69, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "emDash",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 70, Column: 9",
+        "H_initialValue" : "\"\\\\u2014\""
+      },
+      {
+        "A_name" : "urlString",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 71, Column: 9",
+        "H_initialValue" : "\"http:\/\/examble.com\/unencoded\" + emDash + \"string\""
+      },
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 75, Column: 9",
+        "H_initialValue" : "JSON(urlString)"
+      },
+      {
+        "A_name" : "preEscaped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringTests.swift - Line: 77, Column: 9",
+        "H_initialValue" : "JSON(encodedURLString)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "emDash",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 70, Column: 9",
+    "H_initialValue" : "\"\\\\u2014\""
+  },
+  {
+    "A_name" : "urlString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 71, Column: 9",
+    "H_initialValue" : "\"http:\/\/examble.com\/unencoded\" + emDash + \"string\""
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 75, Column: 9",
+    "H_initialValue" : "JSON(urlString)"
+  },
+  {
+    "A_name" : "preEscaped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringTests.swift - Line: 77, Column: 9",
+    "H_initialValue" : "JSON(encodedURLString)"
+  }
+]

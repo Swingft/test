@@ -1,0 +1,180 @@
+[
+  {
+    "A_name" : "Data",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Data+CompressionDeprecated.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "compress",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "available",
+          "static"
+        ],
+        "F_location" : "Data+CompressionDeprecated.swift - Line: 15, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "newProvider",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Data+CompressionDeprecated.swift - Line: 23, Column: 5",
+            "H_initialValue" : "{ try provider(Int($0), $1) }"
+          }
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Int",
+          "(_ position: Int, _ size: Int) throws -> Data",
+          "Consumer"
+        ],
+        "I_parameters" : [
+          "size",
+          "bufferSize",
+          "provider",
+          "consumer"
+        ],
+        "J_returnType" : "-> CRC32"
+      },
+      {
+        "A_name" : "decompress",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "available",
+          "static"
+        ],
+        "F_location" : "Data+CompressionDeprecated.swift - Line: 27, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "newProvider",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Data+CompressionDeprecated.swift - Line: 36, Column: 5",
+            "H_initialValue" : "{ try provider(Int($0), $1) }"
+          }
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Int",
+          "Bool",
+          "(_ position: Int, _ size: Int) throws -> Data",
+          "Consumer"
+        ],
+        "I_parameters" : [
+          "size",
+          "bufferSize",
+          "skipCRC32",
+          "provider",
+          "consumer"
+        ],
+        "J_returnType" : "-> CRC32"
+      }
+    ]
+  },
+  {
+    "A_name" : "compress",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "available",
+      "static"
+    ],
+    "F_location" : "Data+CompressionDeprecated.swift - Line: 15, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "newProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Data+CompressionDeprecated.swift - Line: 23, Column: 5",
+        "H_initialValue" : "{ try provider(Int($0), $1) }"
+      }
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Int",
+      "(_ position: Int, _ size: Int) throws -> Data",
+      "Consumer"
+    ],
+    "I_parameters" : [
+      "size",
+      "bufferSize",
+      "provider",
+      "consumer"
+    ],
+    "J_returnType" : "-> CRC32"
+  },
+  {
+    "A_name" : "newProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Data+CompressionDeprecated.swift - Line: 23, Column: 5",
+    "H_initialValue" : "{ try provider(Int($0), $1) }"
+  },
+  {
+    "A_name" : "decompress",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "available",
+      "static"
+    ],
+    "F_location" : "Data+CompressionDeprecated.swift - Line: 27, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "newProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Data+CompressionDeprecated.swift - Line: 36, Column: 5",
+        "H_initialValue" : "{ try provider(Int($0), $1) }"
+      }
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Int",
+      "Bool",
+      "(_ position: Int, _ size: Int) throws -> Data",
+      "Consumer"
+    ],
+    "I_parameters" : [
+      "size",
+      "bufferSize",
+      "skipCRC32",
+      "provider",
+      "consumer"
+    ],
+    "J_returnType" : "-> CRC32"
+  },
+  {
+    "A_name" : "newProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Data+CompressionDeprecated.swift - Line: 36, Column: 5",
+    "H_initialValue" : "{ try provider(Int($0), $1) }"
+  }
+]

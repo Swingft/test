@@ -1,0 +1,462 @@
+[
+  {
+    "A_name" : "PreCompositionLayer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CompositionLayer"
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 14, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "layers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompositionLayer.swift - Line: 38, Column: 5",
+            "H_initialValue" : "asset.layers.initializeCompositionLayers(\n      assetLibrary: assetLibrary,\n      layerImageProvider: layerImageProvider,\n      layerTextProvider: layerTextProvider,\n      layerFontProvider: layerFontProvider,\n      textProvider: textProvider,\n      fontProvider: fontProvider,\n      frameRate: frameRate,\n      rootAnimationLayer: rootAnimationLayer)"
+          },
+          {
+            "A_name" : "imageLayers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompositionLayer.swift - Line: 48, Column: 5",
+            "H_initialValue" : "[ImageCompositionLayer]()"
+          },
+          {
+            "A_name" : "textLayers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompositionLayer.swift - Line: 49, Column: 5",
+            "H_initialValue" : "[TextCompositionLayer]()"
+          },
+          {
+            "A_name" : "mattedLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompositionLayer.swift - Line: 51, Column: 5",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+          "PreCompLayerModel",
+          "PrecompAsset",
+          "LayerImageProvider",
+          "LayerTextProvider",
+          "LayerFontProvider",
+          "AnimationKeypathTextProvider",
+          "AnimationFontProvider",
+          "AssetLibrary?",
+          "CGFloat",
+          "MainThreadAnimationLayer?"
+        ],
+        "I_parameters" : [
+          "precomp",
+          "asset",
+          "layerImageProvider",
+          "layerTextProvider",
+          "layerFontProvider",
+          "textProvider",
+          "fontProvider",
+          "assetLibrary",
+          "frameRate",
+          "rootAnimationLayer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 85, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 97, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "frameRate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 103, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "remappingNode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 104, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "keypathProperties",
+        "B_kind" : "variable",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 106, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "displayContentsWithFrame",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 113, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "localFrame",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompositionLayer.swift - Line: 114, Column: 5",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "frame",
+          "forceUpdates"
+        ]
+      },
+      {
+        "A_name" : "updateRenderScale",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 126, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "animationLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 135, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 14, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "layers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 38, Column: 5",
+        "H_initialValue" : "asset.layers.initializeCompositionLayers(\n      assetLibrary: assetLibrary,\n      layerImageProvider: layerImageProvider,\n      layerTextProvider: layerTextProvider,\n      layerFontProvider: layerFontProvider,\n      textProvider: textProvider,\n      fontProvider: fontProvider,\n      frameRate: frameRate,\n      rootAnimationLayer: rootAnimationLayer)"
+      },
+      {
+        "A_name" : "imageLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 48, Column: 5",
+        "H_initialValue" : "[ImageCompositionLayer]()"
+      },
+      {
+        "A_name" : "textLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 49, Column: 5",
+        "H_initialValue" : "[TextCompositionLayer]()"
+      },
+      {
+        "A_name" : "mattedLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 51, Column: 5",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+      "PreCompLayerModel",
+      "PrecompAsset",
+      "LayerImageProvider",
+      "LayerTextProvider",
+      "LayerFontProvider",
+      "AnimationKeypathTextProvider",
+      "AnimationFontProvider",
+      "AssetLibrary?",
+      "CGFloat",
+      "MainThreadAnimationLayer?"
+    ],
+    "I_parameters" : [
+      "precomp",
+      "asset",
+      "layerImageProvider",
+      "layerTextProvider",
+      "layerFontProvider",
+      "textProvider",
+      "fontProvider",
+      "assetLibrary",
+      "frameRate",
+      "rootAnimationLayer"
+    ]
+  },
+  {
+    "A_name" : "layers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 38, Column: 5",
+    "H_initialValue" : "asset.layers.initializeCompositionLayers(\n      assetLibrary: assetLibrary,\n      layerImageProvider: layerImageProvider,\n      layerTextProvider: layerTextProvider,\n      layerFontProvider: layerFontProvider,\n      textProvider: textProvider,\n      fontProvider: fontProvider,\n      frameRate: frameRate,\n      rootAnimationLayer: rootAnimationLayer)"
+  },
+  {
+    "A_name" : "imageLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 48, Column: 5",
+    "H_initialValue" : "[ImageCompositionLayer]()"
+  },
+  {
+    "A_name" : "textLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 49, Column: 5",
+    "H_initialValue" : "[TextCompositionLayer]()"
+  },
+  {
+    "A_name" : "mattedLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 51, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 85, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 97, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "frameRate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 103, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "remappingNode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 104, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "keypathProperties",
+    "B_kind" : "variable",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 106, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "displayContentsWithFrame",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 113, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "localFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompositionLayer.swift - Line: 114, Column: 5",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "frame",
+      "forceUpdates"
+    ]
+  },
+  {
+    "A_name" : "localFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 114, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "updateRenderScale",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 126, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "animationLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompositionLayer.swift - Line: 135, Column: 3",
+    "H_initialValue" : ""
+  }
+]

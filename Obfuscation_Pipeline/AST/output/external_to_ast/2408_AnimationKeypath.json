@@ -1,0 +1,165 @@
+[
+  {
+    "A_name" : "AnimationKeypath",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable",
+      "ExpressibleByStringLiteral"
+    ],
+    "F_location" : "AnimationKeypath.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypath.swift - Line: 33, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "keypath"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypath.swift - Line: 38, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "stringLiteral"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypath.swift - Line: 43, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String]"
+        ],
+        "I_parameters" : [
+          "keys"
+        ]
+      },
+      {
+        "A_name" : "keys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypath.swift - Line: 50, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "string",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationKeypath.swift - Line: 53, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypath.swift - Line: 33, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "keypath"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypath.swift - Line: 38, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "stringLiteral"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypath.swift - Line: 43, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String]"
+    ],
+    "I_parameters" : [
+      "keys"
+    ]
+  },
+  {
+    "A_name" : "keys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypath.swift - Line: 50, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationKeypath.swift - Line: 53, Column: 3",
+    "H_initialValue" : ""
+  }
+]

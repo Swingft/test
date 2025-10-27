@@ -1,0 +1,2316 @@
+[
+  {
+    "A_name" : "KFOptionSetter",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 30, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 31, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onFailureDelegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 33, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onSuccessDelegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 34, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onProgressDelegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 35, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "delegateObserver",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 37, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 31, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onFailureDelegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 33, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onSuccessDelegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 34, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onProgressDelegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 35, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "delegateObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 37, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KF.Builder",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "KFOptionSetter"
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 40, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "delegateObserver",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 41, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "delegateObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 41, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KFOptionSetter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 45, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "onProgress",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 51, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DownloadProgressBlock?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "onSuccess",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 62, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "((RetrieveImageResult) -> Void)?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "onFailure",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 73, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "((KingfisherError) -> Void)?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "onProgress",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 51, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DownloadProgressBlock?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "onSuccess",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 62, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "((RetrieveImageResult) -> Void)?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "onFailure",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 73, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "((KingfisherError) -> Void)?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "KFOptionSetter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 82, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "targetCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 90, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageCache"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "originalCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 110, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageCache"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "downloader",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 120, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageDownloader"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "downloadPriority",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 133, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Float"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "forceRefresh",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 141, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "fromMemoryCacheOrRefresh",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 153, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "cacheMemoryOnly",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 161, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "waitForCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 170, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "onlyFromCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 181, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "backgroundDecode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 193, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "callbackQueue",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 206, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CallbackQueue"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "scaleFactor",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 218, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "cacheOriginalImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 235, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "diskStoreWriteOptions",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 247, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data.WritingOptions"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "loadDiskFileSynchronously",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 264, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "processingQueue",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 277, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CallbackQueue?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "alternativeSources",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 294, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[Source]?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 302, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "RetryStrategy?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 316, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "strategy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KFOptionsSetter.swift - Line: 317, Column: 9",
+            "H_initialValue" : "DelayRetryStrategy(maxRetryCount: maxCount, retryInterval: interval)"
+          }
+        ],
+        "I_parameterType" : [
+          "Int",
+          "DelayRetryStrategy.Interval"
+        ],
+        "I_parameters" : [
+          "maxCount",
+          "interval"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "lowDataModeSource",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 334, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "forceTransition",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 342, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "onFailureImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 355, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KFCrossPlatformImage?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "targetCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 90, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageCache"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "originalCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 110, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageCache"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "downloader",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 120, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageDownloader"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "downloadPriority",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 133, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Float"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "forceRefresh",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 141, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "fromMemoryCacheOrRefresh",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 153, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "cacheMemoryOnly",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 161, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "waitForCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 170, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "onlyFromCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 181, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "backgroundDecode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 193, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "callbackQueue",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 206, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CallbackQueue"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "scaleFactor",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 218, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "cacheOriginalImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 235, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "diskStoreWriteOptions",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 247, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data.WritingOptions"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "loadDiskFileSynchronously",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 264, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "processingQueue",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 277, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CallbackQueue?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "alternativeSources",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 294, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Source]?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 302, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "RetryStrategy?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 316, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "strategy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 317, Column: 9",
+        "H_initialValue" : "DelayRetryStrategy(maxRetryCount: maxCount, retryInterval: interval)"
+      }
+    ],
+    "I_parameterType" : [
+      "Int",
+      "DelayRetryStrategy.Interval"
+    ],
+    "I_parameters" : [
+      "maxCount",
+      "interval"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "strategy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 317, Column: 9",
+    "H_initialValue" : "DelayRetryStrategy(maxRetryCount: maxCount, retryInterval: interval)"
+  },
+  {
+    "A_name" : "lowDataModeSource",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 334, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "forceTransition",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 342, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "onFailureImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 355, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformImage?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "KFOptionSetter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 362, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "requestModifier",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 370, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AsyncImageDownloadRequestModifier"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "requestModifier",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 382, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (inout URLRequest) -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "requestModifier",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 370, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AsyncImageDownloadRequestModifier"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "requestModifier",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 382, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (inout URLRequest) -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 384, Column: 13",
+    "H_initialValue" : "r"
+  },
+  {
+    "A_name" : "KFOptionSetter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 393, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "redirectHandler",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 401, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageDownloadRedirectHandler"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "redirectHandler",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 413, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "redirectHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KFOptionsSetter.swift - Line: 414, Column: 9",
+            "H_initialValue" : "AnyRedirectHandler { (task, response, request, handler) in\n            let payload = KF.RedirectPayload(\n                task: task, response: response, newRequest: request, completionHandler: handler\n            )\n            block(payload)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping (KF.RedirectPayload) -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "redirectHandler",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 401, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageDownloadRedirectHandler"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "redirectHandler",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 413, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "redirectHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 414, Column: 9",
+        "H_initialValue" : "AnyRedirectHandler { (task, response, request, handler) in\n            let payload = KF.RedirectPayload(\n                task: task, response: response, newRequest: request, completionHandler: handler\n            )\n            block(payload)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping (KF.RedirectPayload) -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "redirectHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 414, Column: 9",
+    "H_initialValue" : "AnyRedirectHandler { (task, response, request, handler) in\n            let payload = KF.RedirectPayload(\n                task: task, response: response, newRequest: request, completionHandler: handler\n            )\n            block(payload)\n        }"
+  },
+  {
+    "A_name" : "payload",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 415, Column: 13",
+    "H_initialValue" : "KF.RedirectPayload(\n                task: task, response: response, newRequest: request, completionHandler: handler\n            )"
+  },
+  {
+    "A_name" : "KFOptionSetter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 426, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setProcessor",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 435, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageProcessor"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "setProcessors",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 447, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[ImageProcessor]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "appendProcessor",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 462, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageProcessor"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "roundCorner",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 477, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "processor",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KFOptionsSetter.swift - Line: 484, Column: 9",
+            "H_initialValue" : "RoundCornerImageProcessor(\n            radius: radius,\n            targetSize: targetSize,\n            roundingCorners: corners,\n            backgroundColor: backgroundColor\n        )"
+          }
+        ],
+        "I_parameterType" : [
+          "Radius",
+          "CGSize?",
+          "RectCorner",
+          "KFCrossPlatformColor?"
+        ],
+        "I_parameters" : [
+          "radius",
+          "targetSize",
+          "roundingCorners",
+          "backgroundColor"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "blur",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 496, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "radius"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "overlay",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 507, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KFCrossPlatformColor",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "color",
+          "fraction"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "tint",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 516, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KFCrossPlatformColor"
+        ],
+        "I_parameters" : [
+          "color"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "blackWhite",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 524, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "cropping",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 537, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGSize",
+          "CGPoint"
+        ],
+        "I_parameters" : [
+          "size",
+          "anchor"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "downsampling",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 555, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "processor",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KFOptionsSetter.swift - Line: 556, Column: 9",
+            "H_initialValue" : "DownsamplingImageProcessor(size: size)"
+          }
+        ],
+        "I_parameterType" : [
+          "CGSize"
+        ],
+        "I_parameters" : [
+          "size"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "resizing",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 574, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGSize",
+          "ContentMode"
+        ],
+        "I_parameters" : [
+          "referenceSize",
+          "mode"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "setProcessor",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 435, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageProcessor"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "setProcessors",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 447, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[ImageProcessor]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "appendProcessor",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 462, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageProcessor"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "roundCorner",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 477, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "processor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 484, Column: 9",
+        "H_initialValue" : "RoundCornerImageProcessor(\n            radius: radius,\n            targetSize: targetSize,\n            roundingCorners: corners,\n            backgroundColor: backgroundColor\n        )"
+      }
+    ],
+    "I_parameterType" : [
+      "Radius",
+      "CGSize?",
+      "RectCorner",
+      "KFCrossPlatformColor?"
+    ],
+    "I_parameters" : [
+      "radius",
+      "targetSize",
+      "roundingCorners",
+      "backgroundColor"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "processor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 484, Column: 9",
+    "H_initialValue" : "RoundCornerImageProcessor(\n            radius: radius,\n            targetSize: targetSize,\n            roundingCorners: corners,\n            backgroundColor: backgroundColor\n        )"
+  },
+  {
+    "A_name" : "blur",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 496, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "radius"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "overlay",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 507, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformColor",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "color",
+      "fraction"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "tint",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 516, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformColor"
+    ],
+    "I_parameters" : [
+      "color"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "blackWhite",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 524, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "cropping",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 537, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGSize",
+      "CGPoint"
+    ],
+    "I_parameters" : [
+      "size",
+      "anchor"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "downsampling",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 555, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "processor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 556, Column: 9",
+        "H_initialValue" : "DownsamplingImageProcessor(size: size)"
+      }
+    ],
+    "I_parameterType" : [
+      "CGSize"
+    ],
+    "I_parameters" : [
+      "size"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "processor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 556, Column: 9",
+    "H_initialValue" : "DownsamplingImageProcessor(size: size)"
+  },
+  {
+    "A_name" : "resizing",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 574, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGSize",
+      "ContentMode"
+    ],
+    "I_parameters" : [
+      "referenceSize",
+      "mode"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "KFOptionSetter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 582, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 588, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CacheSerializer"
+        ],
+        "I_parameters" : [
+          "by"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 599, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "cacheSerializer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KFOptionsSetter.swift - Line: 600, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "ImageFormat",
+          "CGFloat?"
+        ],
+        "I_parameters" : [
+          "as",
+          "jpegCompressionQuality"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 588, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CacheSerializer"
+    ],
+    "I_parameters" : [
+      "by"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 599, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "cacheSerializer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 600, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "ImageFormat",
+      "CGFloat?"
+    ],
+    "I_parameters" : [
+      "as",
+      "jpegCompressionQuality"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "cacheSerializer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 600, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KFOptionSetter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 617, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "imageModifier",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 625, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageModifier?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "imageModifier",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 637, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "modifier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KFOptionsSetter.swift - Line: 638, Column: 9",
+            "H_initialValue" : "AnyImageModifier { image -> KFCrossPlatformImage in\n            var image = image\n            try block(&image)\n            return image\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping (inout KFCrossPlatformImage) throws -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "imageModifier",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 625, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageModifier?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "imageModifier",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 637, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "modifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 638, Column: 9",
+        "H_initialValue" : "AnyImageModifier { image -> KFCrossPlatformImage in\n            var image = image\n            try block(&image)\n            return image\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping (inout KFCrossPlatformImage) throws -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "modifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 638, Column: 9",
+    "H_initialValue" : "AnyImageModifier { image -> KFCrossPlatformImage in\n            var image = image\n            try block(&image)\n            return image\n        }"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 639, Column: 13",
+    "H_initialValue" : "image"
+  },
+  {
+    "A_name" : "KFOptionSetter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 650, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "memoryCacheExpiration",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 660, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StorageExpiration?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "memoryCacheAccessExtending",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 675, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ExpirationExtending"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "diskCacheExpiration",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 687, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StorageExpiration?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "diskCacheAccessExtending",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFOptionsSetter.swift - Line: 702, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ExpirationExtending"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "memoryCacheExpiration",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 660, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StorageExpiration?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "memoryCacheAccessExtending",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 675, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ExpirationExtending"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "diskCacheExpiration",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 687, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StorageExpiration?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "diskCacheAccessExtending",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFOptionsSetter.swift - Line: 702, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ExpirationExtending"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  }
+]

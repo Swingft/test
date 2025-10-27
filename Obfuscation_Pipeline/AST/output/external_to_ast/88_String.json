@@ -1,0 +1,1163 @@
+[
+  {
+    "A_name" : "String",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "String.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "unicodeScalar",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 27, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "ix",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "String.swift - Line: 28, Column: 9",
+            "H_initialValue" : "unicodeScalars.index(unicodeScalars.startIndex, offsetBy: i)"
+          }
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> UnicodeScalar"
+      },
+      {
+        "A_name" : "string",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 32, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "truncStart",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "String.swift - Line: 33, Column: 3",
+            "H_initialValue" : "self.unicodeScalars.count-offset"
+          }
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "split",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "String.swift - Line: 37, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "start",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "String.swift - Line: 38, Column: 9",
+            "H_initialValue" : "value.index(value.startIndex, offsetBy: offset)"
+          },
+          {
+            "A_name" : "end",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "String.swift - Line: 39, Column: 9",
+            "H_initialValue" : "value.index(value.startIndex, offsetBy: count+offset)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Int",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "isEmptyOrWhitespace",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 48, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "startsWith",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 56, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "indexOf",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 60, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "maxIndex",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "String.swift - Line: 63, Column: 9",
+            "H_initialValue" : "self.count - substring.count"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "indexOf",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 80, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "trim",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 84, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "equalsIgnoreCase",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 96, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?"
+        ],
+        "I_parameters" : [
+          "string"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "toHexString",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "String.swift - Line: 103, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "n"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "insert",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Int"
+        ],
+        "I_parameters" : [
+          "string",
+          "ind"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "charAt",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 111, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Character"
+      },
+      {
+        "A_name" : "substring",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 115, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "substring",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 119, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "regionMatches",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 123, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "Int",
+          "String",
+          "Int",
+          "Int"
+        ],
+        "I_parameters" : [
+          "ignoreCase",
+          "selfOffset",
+          "other",
+          "otherOffset",
+          "targetLength"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "startsWith",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 147, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "replaceFirst",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 159, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "of",
+          "with"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "replaceAll",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 167, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "NSRegularExpression.Options"
+        ],
+        "I_parameters" : [
+          "of",
+          "with",
+          "options"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "equals",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 178, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 21, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "s",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 22, Column: 9",
+        "H_initialValue" : "\"\""
+      }
+    ],
+    "I_parameterType" : [
+      "S"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "s",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 22, Column: 9",
+    "H_initialValue" : "\"\""
+  },
+  {
+    "A_name" : "unicodeScalar",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 27, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "ix",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 28, Column: 9",
+        "H_initialValue" : "unicodeScalars.index(unicodeScalars.startIndex, offsetBy: i)"
+      }
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> UnicodeScalar"
+  },
+  {
+    "A_name" : "ix",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 28, Column: 9",
+    "H_initialValue" : "unicodeScalars.index(unicodeScalars.startIndex, offsetBy: i)"
+  },
+  {
+    "A_name" : "string",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 32, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "truncStart",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 33, Column: 3",
+        "H_initialValue" : "self.unicodeScalars.count-offset"
+      }
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "truncStart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 33, Column: 3",
+    "H_initialValue" : "self.unicodeScalars.count-offset"
+  },
+  {
+    "A_name" : "split",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "String.swift - Line: 37, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "start",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 38, Column: 9",
+        "H_initialValue" : "value.index(value.startIndex, offsetBy: offset)"
+      },
+      {
+        "A_name" : "end",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 39, Column: 9",
+        "H_initialValue" : "value.index(value.startIndex, offsetBy: count+offset)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Int",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "start",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 38, Column: 9",
+    "H_initialValue" : "value.index(value.startIndex, offsetBy: offset)"
+  },
+  {
+    "A_name" : "end",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 39, Column: 9",
+    "H_initialValue" : "value.index(value.startIndex, offsetBy: count+offset)"
+  },
+  {
+    "A_name" : "range",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 43, Column: 9",
+    "H_initialValue" : "start..<end"
+  },
+  {
+    "A_name" : "isEmptyOrWhitespace",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 48, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "startsWith",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 56, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "indexOf",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 60, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "maxIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 63, Column: 9",
+        "H_initialValue" : "self.count - substring.count"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "maxIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 63, Column: 9",
+    "H_initialValue" : "self.count - substring.count"
+  },
+  {
+    "A_name" : "rangeSubstring",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 66, Column: 17",
+    "H_initialValue" : "self.index(self.startIndex, offsetBy: index)..<self.index(self.startIndex, offsetBy: index + substring.count)"
+  },
+  {
+    "A_name" : "selfSubstring",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 68, Column: 17",
+    "H_initialValue" : "self[rangeSubstring]"
+  },
+  {
+    "A_name" : "selfSubstring",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 70, Column: 17",
+    "H_initialValue" : "self.substring(with: rangeSubstring)"
+  },
+  {
+    "A_name" : "indexOf",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 80, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "trim",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 84, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "equalsIgnoreCase",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 96, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?"
+    ],
+    "I_parameters" : [
+      "string"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "toHexString",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "String.swift - Line: 103, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "n"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "insert",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Int"
+    ],
+    "I_parameters" : [
+      "string",
+      "ind"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "charAt",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 111, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Character"
+  },
+  {
+    "A_name" : "substring",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 115, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "substring",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 119, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "regionMatches",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 123, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "Int",
+      "String",
+      "Int",
+      "Int"
+    ],
+    "I_parameters" : [
+      "ignoreCase",
+      "selfOffset",
+      "other",
+      "otherOffset",
+      "targetLength"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "charSelf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 132, Column: 13",
+    "H_initialValue" : "self[i+selfOffset]"
+  },
+  {
+    "A_name" : "charOther",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 133, Column: 13",
+    "H_initialValue" : "other[i+otherOffset]"
+  },
+  {
+    "A_name" : "startsWith",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 147, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "charSelf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 152, Column: 13",
+    "H_initialValue" : "self[i+offset]"
+  },
+  {
+    "A_name" : "charOther",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 153, Column: 13",
+    "H_initialValue" : "input[i]"
+  },
+  {
+    "A_name" : "replaceFirst",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 159, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "of",
+      "with"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "replaceAll",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 167, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "NSRegularExpression.Options"
+    ],
+    "I_parameters" : [
+      "of",
+      "with",
+      "options"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "regex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 169, Column: 13",
+    "H_initialValue" : "try NSRegularExpression(pattern: pattern, options: [])"
+  },
+  {
+    "A_name" : "range",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 170, Column: 13",
+    "H_initialValue" : "NSRange(0..<self.utf16.count)"
+  },
+  {
+    "A_name" : "equals",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 178, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "String.Encoding",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "String.swift - Line: 184, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "canEncode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 185, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "displayName",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String.swift - Line: 189, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "canEncode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 185, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "displayName",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String.swift - Line: 189, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  }
+]

@@ -1,0 +1,185 @@
+[
+  {
+    "A_name" : "ParsingTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "ParsingTests.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testParsingIsTheSameForBothImplementations",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParsingTests.swift - Line: 17, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testParsingIsTheSameForBothImplementations",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParsingTests.swift - Line: 17, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParsingTests.swift - Line: 22, Column: 9",
+    "H_initialValue" : "try Data(contentsOf: url)"
+  },
+  {
+    "A_name" : "codableAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParsingTests.swift - Line: 23, Column: 9",
+    "H_initialValue" : "try LottieAnimation.from(data: data, strategy: .legacyCodable)"
+  },
+  {
+    "A_name" : "dictAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParsingTests.swift - Line: 24, Column: 9",
+    "H_initialValue" : "try LottieAnimation.from(data: data, strategy: .dictionaryBased)"
+  },
+  {
+    "A_name" : "XCTAssertNoDiff",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParsingTests.swift - Line: 34, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "expected",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParsingTests.swift - Line: 40, Column: 3",
+        "H_initialValue" : "try expected()"
+      },
+      {
+        "A_name" : "received",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParsingTests.swift - Line: 41, Column: 3",
+        "H_initialValue" : "try received()"
+      },
+      {
+        "A_name" : "diff",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParsingTests.swift - Line: 42, Column: 3",
+        "H_initialValue" : "diff(expected, received)"
+      },
+      {
+        "A_name" : "isEqual",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParsingTests.swift - Line: 43, Column: 3",
+        "H_initialValue" : "diff.isEmpty || diff.allSatisfy(\\.isEmpty)"
+      }
+    ],
+    "I_parameterType" : [
+      "@autoclosure () throws -> T",
+      "@autoclosure () throws -> T",
+      "StaticString",
+      "UInt"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "file",
+      "line"
+    ]
+  },
+  {
+    "A_name" : "expected",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParsingTests.swift - Line: 40, Column: 3",
+    "H_initialValue" : "try expected()"
+  },
+  {
+    "A_name" : "received",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParsingTests.swift - Line: 41, Column: 3",
+    "H_initialValue" : "try received()"
+  },
+  {
+    "A_name" : "diff",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParsingTests.swift - Line: 42, Column: 3",
+    "H_initialValue" : "diff(expected, received)"
+  },
+  {
+    "A_name" : "isEqual",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParsingTests.swift - Line: 43, Column: 3",
+    "H_initialValue" : "diff.isEmpty || diff.allSatisfy(\\.isEmpty)"
+  }
+]

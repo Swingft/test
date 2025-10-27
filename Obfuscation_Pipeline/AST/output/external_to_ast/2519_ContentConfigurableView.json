@@ -1,0 +1,110 @@
+[
+  {
+    "A_name" : "ContentConfigurableView",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ViewType"
+    ],
+    "F_location" : "ContentConfigurableView.swift - Line: 20, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setContent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ContentConfigurableView.swift - Line: 29, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Self.Content",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "animated"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "setContent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ContentConfigurableView.swift - Line: 29, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Self.Content",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "animated"
+    ]
+  },
+  {
+    "A_name" : "ContentConfigurableView",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ContentConfigurableView.swift - Line: 34, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setContent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ContentConfigurableView.swift - Line: 35, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Never",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "animated"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "setContent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ContentConfigurableView.swift - Line: 35, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Never",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "animated"
+    ]
+  }
+]

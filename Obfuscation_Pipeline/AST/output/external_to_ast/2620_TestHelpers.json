@@ -1,0 +1,56 @@
+[
+  {
+    "A_name" : "TestHelpers",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "TestHelpers.swift - Line: 4, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "snapshotTestsAreRunning",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "TestHelpers.swift - Line: 6, Column: 3",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "performanceTestsAreRunning",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "TestHelpers.swift - Line: 9, Column: 3",
+        "H_initialValue" : "false"
+      }
+    ]
+  },
+  {
+    "A_name" : "snapshotTestsAreRunning",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "TestHelpers.swift - Line: 6, Column: 3",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "performanceTestsAreRunning",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "TestHelpers.swift - Line: 9, Column: 3",
+    "H_initialValue" : "false"
+  }
+]

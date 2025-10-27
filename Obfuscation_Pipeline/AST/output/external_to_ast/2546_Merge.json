@@ -1,0 +1,409 @@
+[
+  {
+    "A_name" : "MergeMode",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int",
+      "Codable",
+      "Sendable"
+    ],
+    "F_location" : "Merge.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "none",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Merge.swift - Line: 11, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "merge",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Merge.swift - Line: 12, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "add",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Merge.swift - Line: 13, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "subtract",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Merge.swift - Line: 14, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "intersect",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Merge.swift - Line: 15, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "exclude",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Merge.swift - Line: 16, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Merge",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ShapeItem"
+    ],
+    "F_location" : "Merge.swift - Line: 21, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "Merge.swift - Line: 25, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Merge.swift - Line: 26, Column: 5",
+            "H_initialValue" : "try decoder.container(keyedBy: Merge.CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "Merge.swift - Line: 31, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "modeRawType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Merge.swift - Line: 32, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.mode)"
+          }
+        ],
+        "I_parameterType" : [
+          "[String: Any]"
+        ],
+        "I_parameters" : [
+          "dictionary"
+        ]
+      },
+      {
+        "A_name" : "mode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Merge.swift - Line: 43, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Merge.swift - Line: 45, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Merge.swift - Line: 47, Column: 5",
+            "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      },
+      {
+        "A_name" : "CodingKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String",
+          "CodingKey"
+        ],
+        "F_location" : "Merge.swift - Line: 53, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "mode",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Merge.swift - Line: 54, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "Merge.swift - Line: 25, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Merge.swift - Line: 26, Column: 5",
+        "H_initialValue" : "try decoder.container(keyedBy: Merge.CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Merge.swift - Line: 26, Column: 5",
+    "H_initialValue" : "try decoder.container(keyedBy: Merge.CodingKeys.self)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "Merge.swift - Line: 31, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "modeRawType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Merge.swift - Line: 32, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.mode)"
+      }
+    ],
+    "I_parameterType" : [
+      "[String: Any]"
+    ],
+    "I_parameters" : [
+      "dictionary"
+    ]
+  },
+  {
+    "A_name" : "modeRawType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Merge.swift - Line: 32, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.mode)"
+  },
+  {
+    "A_name" : "mode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Merge.swift - Line: 43, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Merge.swift - Line: 45, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Merge.swift - Line: 47, Column: 5",
+        "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Merge.swift - Line: 47, Column: 5",
+    "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+  },
+  {
+    "A_name" : "CodingKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String",
+      "CodingKey"
+    ],
+    "F_location" : "Merge.swift - Line: 53, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "mode",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Merge.swift - Line: 54, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Merge",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "Merge.swift - Line: 63, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "A_name" : "URL",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URL+ZIP.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "temporaryReplacementDirectoryURL",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "URL+ZIP.swift - Line: 15, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Archive"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> URL"
+      }
+    ]
+  },
+  {
+    "A_name" : "temporaryReplacementDirectoryURL",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "URL+ZIP.swift - Line: 15, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Archive"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> URL"
+  }
+]

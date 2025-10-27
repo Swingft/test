@@ -1,0 +1,1734 @@
+[
+  {
+    "A_name" : "Archive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "readUncompressed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 17, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "size",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 25, Column: 5",
+            "H_initialValue" : "entry.centralDirectoryStructure.effectiveUncompressedSize"
+          }
+        ],
+        "I_parameterType" : [
+          "Entry",
+          "Int",
+          "Bool",
+          "Progress?",
+          "Consumer"
+        ],
+        "I_parameters" : [
+          "entry",
+          "bufferSize",
+          "skipCRC32",
+          "progress",
+          "with"
+        ],
+        "J_returnType" : "-> CRC32"
+      },
+      {
+        "A_name" : "readCompressed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 41, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "size",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 49, Column: 5",
+            "H_initialValue" : "entry.centralDirectoryStructure.effectiveCompressedSize"
+          }
+        ],
+        "I_parameterType" : [
+          "Entry",
+          "Int",
+          "Bool",
+          "Progress?",
+          "Consumer"
+        ],
+        "I_parameters" : [
+          "entry",
+          "bufferSize",
+          "skipCRC32",
+          "progress",
+          "with"
+        ],
+        "J_returnType" : "-> CRC32"
+      },
+      {
+        "A_name" : "writeEntry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 67, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "checksum",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 76, Column: 5",
+            "H_initialValue" : "CRC32(0)"
+          },
+          {
+            "A_name" : "sizeWritten",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 77, Column: 5",
+            "H_initialValue" : "Int64(0)"
+          }
+        ],
+        "I_parameterType" : [
+          "Int64",
+          "Entry.EntryType",
+          "CompressionMethod",
+          "Int",
+          "Progress?",
+          "Provider"
+        ],
+        "I_parameters" : [
+          "uncompressedSize",
+          "type",
+          "compressionMethod",
+          "bufferSize",
+          "progress",
+          "provider"
+        ],
+        "J_returnType" : "-> (sizeWritten: Int64, crc32: CRC32)"
+      },
+      {
+        "A_name" : "writeLocalFileHeader",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 110, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "uncompressedSizeOfLFH",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 121, Column: 5",
+            "H_initialValue" : "UInt32(0)"
+          },
+          {
+            "A_name" : "compressedSizeOfLFH",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 122, Column: 5",
+            "H_initialValue" : "UInt32(0)"
+          },
+          {
+            "A_name" : "extraFieldLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 123, Column: 5",
+            "H_initialValue" : "UInt16(0)"
+          },
+          {
+            "A_name" : "zip64ExtendedInformation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 124, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "versionNeededToExtract",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 125, Column: 5",
+            "H_initialValue" : "Version.v20.rawValue"
+          },
+          {
+            "A_name" : "localFileHeader",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 143, Column: 5",
+            "H_initialValue" : "LocalFileHeader(\n      versionNeededToExtract: versionNeededToExtract,\n      generalPurposeBitFlag: UInt16(2048),\n      compressionMethod: compressionMethod.rawValue,\n      lastModFileTime: modificationDateTime.1,\n      lastModFileDate: modificationDateTime.0,\n      crc32: checksum,\n      compressedSize: compressedSizeOfLFH,\n      uncompressedSize: uncompressedSizeOfLFH,\n      fileNameLength: UInt16(fileNameData.count),\n      extraFieldLength: extraFieldLength,\n      fileNameData: fileNameData,\n      extraFieldData: zip64ExtendedInformation?.data ?? Data())"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "CompressionMethod",
+          "(uncompressed: UInt64, compressed: UInt64)",
+          "CRC32",
+          "(UInt16, UInt16)"
+        ],
+        "I_parameters" : [
+          "path",
+          "compressionMethod",
+          "size",
+          "checksum",
+          "modificationDateTime"
+        ],
+        "J_returnType" : "-> LocalFileHeader"
+      },
+      {
+        "A_name" : "writeCentralDirectoryStructure",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 160, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "extraUncompressedSize",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 166, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "extraCompressedSize",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 167, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "extraOffset",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 168, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "relativeOffsetOfCD",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 169, Column: 5",
+            "H_initialValue" : "UInt32(0)"
+          },
+          {
+            "A_name" : "extraFieldLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 170, Column: 5",
+            "H_initialValue" : "UInt16(0)"
+          },
+          {
+            "A_name" : "zip64ExtendedInformation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 171, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "centralDirectory",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 197, Column: 5",
+            "H_initialValue" : "CentralDirectoryStructure(\n      localFileHeader: localFileHeader,\n      fileAttributes: externalFileAttributes,\n      relativeOffset: relativeOffsetOfCD,\n      extraField: (\n        extraFieldLength,\n        zip64ExtendedInformation?.data ?? Data()))"
+          }
+        ],
+        "I_parameterType" : [
+          "LocalFileHeader",
+          "UInt64",
+          "UInt32"
+        ],
+        "I_parameters" : [
+          "localFileHeader",
+          "relativeOffset",
+          "externalFileAttributes"
+        ],
+        "J_returnType" : "-> CentralDirectoryStructure"
+      },
+      {
+        "A_name" : "writeEndOfCentralDirectory",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 208, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "record",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 215, Column: 5",
+            "H_initialValue" : "endOfCentralDirectoryRecord"
+          },
+          {
+            "A_name" : "sizeOfCD",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 216, Column: 5",
+            "H_initialValue" : "sizeOfCentralDirectory"
+          },
+          {
+            "A_name" : "numberOfTotalEntries",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 217, Column: 5",
+            "H_initialValue" : "totalNumberOfEntriesInCentralDirectory"
+          },
+          {
+            "A_name" : "countChange",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 218, Column: 5",
+            "H_initialValue" : "operation.rawValue"
+          },
+          {
+            "A_name" : "dataLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 219, Column: 5",
+            "H_initialValue" : "centralDirectoryStructure.extraFieldLength"
+          },
+          {
+            "A_name" : "cdDataLengthChange",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 222, Column: 5",
+            "H_initialValue" : "countChange * (Int(dataLength) + CentralDirectoryStructure.size)"
+          },
+          {
+            "A_name" : "sizeOfCDForEOCD",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 238, Column: 5",
+            "H_initialValue" : "updatedSizeOfCD >= maxSizeOfCentralDirectory\n      ? UInt32.max\n      : UInt32(updatedSizeOfCD)"
+          },
+          {
+            "A_name" : "numberOfTotalEntriesForEOCD",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 241, Column: 5",
+            "H_initialValue" : "updatedNumberOfEntries >= maxTotalNumberOfEntries\n      ? UInt16.max\n      : UInt16(updatedNumberOfEntries)"
+          },
+          {
+            "A_name" : "offsetOfCDForEOCD",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 244, Column: 5",
+            "H_initialValue" : "startOfCentralDirectory >= maxOffsetOfCentralDirectory\n      ? UInt32.max\n      : UInt32(startOfCentralDirectory)"
+          },
+          {
+            "A_name" : "zip64EOCD",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 248, Column: 5",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "CentralDirectoryStructure",
+          "UInt64",
+          "UInt64",
+          "ModifyOperation"
+        ],
+        "I_parameters" : [
+          "centralDirectoryStructure",
+          "startOfCentralDirectory",
+          "startOfEndOfCentralDirectory",
+          "operation"
+        ],
+        "J_returnType" : "-> EndOfCentralDirectoryStructure"
+      },
+      {
+        "A_name" : "writeUncompressed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 266, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "position",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 273, Column: 5",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "sizeWritten",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 274, Column: 5",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "checksum",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 275, Column: 5",
+            "H_initialValue" : "CRC32(0)"
+          }
+        ],
+        "I_parameterType" : [
+          "Int64",
+          "Int",
+          "Progress?",
+          "Provider"
+        ],
+        "I_parameters" : [
+          "size",
+          "bufferSize",
+          "progress",
+          "provider"
+        ],
+        "J_returnType" : "-> (sizeWritten: Int64, checksum: CRC32)"
+      },
+      {
+        "A_name" : "writeCompressed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 288, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "sizeWritten",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 295, Column: 5",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "consumer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 296, Column: 5",
+            "H_initialValue" : "{ data in sizeWritten += Int64(try Data.write(chunk: data, to: self.archiveFile)) }"
+          },
+          {
+            "A_name" : "checksum",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 297, Column: 5",
+            "H_initialValue" : "try Data.compress(\n      size: size,\n      bufferSize: bufferSize,\n      provider: { position, size -> Data in\n        if progress?.isCancelled == true { throw ArchiveError.cancelledOperation }\n        let data = try provider(position, size)\n        progress?.completedUnitCount += Int64(data.count)\n        return data\n      },\n      consumer: consumer)"
+          }
+        ],
+        "I_parameterType" : [
+          "Int64",
+          "Int",
+          "Progress?",
+          "Provider"
+        ],
+        "I_parameters" : [
+          "size",
+          "bufferSize",
+          "progress",
+          "provider"
+        ],
+        "J_returnType" : "-> (sizeWritten: Int64, checksum: CRC32)"
+      },
+      {
+        "A_name" : "writeSymbolicLink",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 310, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "linkData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 312, Column: 5",
+            "H_initialValue" : "try provider(0, size)"
+          },
+          {
+            "A_name" : "checksum",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 313, Column: 5",
+            "H_initialValue" : "linkData.crc32(checksum: 0)"
+          },
+          {
+            "A_name" : "sizeWritten",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 314, Column: 5",
+            "H_initialValue" : "try Data.write(chunk: linkData, to: archiveFile)"
+          }
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Provider"
+        ],
+        "I_parameters" : [
+          "size",
+          "provider"
+        ],
+        "J_returnType" : "-> (sizeWritten: Int, checksum: CRC32)"
+      },
+      {
+        "A_name" : "writeZIP64EOCD",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 318, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "zip64EOCD",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 325, Column: 5",
+            "H_initialValue" : "zip64EndOfCentralDirectory ?? {\n      \/\/ Shouldn't include the leading 12 bytes: (size - 12 = 44)\n      let record = ZIP64EndOfCentralDirectoryRecord(\n        sizeOfZIP64EndOfCentralDirectoryRecord: UInt64(44),\n        versionMadeBy: UInt16(789),\n        versionNeededToExtract: Version.v45.rawValue,\n        numberOfDisk: 0,\n        numberOfDiskStart: 0,\n        totalNumberOfEntriesOnDisk: 0,\n        totalNumberOfEntriesInCentralDirectory: 0,\n        sizeOfCentralDirectory: 0,\n        offsetToStartOfCentralDirectory: 0,\n        zip64ExtensibleDataSector: Data())\n      let locator = ZIP64EndOfCentralDirectoryLocator(\n        numberOfDiskWithZIP64EOCDRecordStart: 0,\n        relativeOffsetOfZIP64EOCDRecord: 0,\n        totalNumberOfDisk: 1)\n      return ZIP64EndOfCentralDirectory(record: record, locator: locator)\n    }()"
+          },
+          {
+            "A_name" : "updatedRecord",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 345, Column: 5",
+            "H_initialValue" : "ZIP64EndOfCentralDirectoryRecord(\n      record: zip64EOCD.record,\n      numberOfEntriesOnDisk: totalNumberOfEntries,\n      numberOfEntriesInCD: totalNumberOfEntries,\n      sizeOfCentralDirectory: sizeOfCentralDirectory,\n      offsetToStartOfCD: offsetOfCentralDirectory)"
+          },
+          {
+            "A_name" : "updatedLocator",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Helpers.swift - Line: 351, Column: 5",
+            "H_initialValue" : "ZIP64EndOfCentralDirectoryLocator(\n      locator: zip64EOCD.locator,\n      offsetOfZIP64EOCDRecord: offsetOfEndOfCentralDirectory)"
+          }
+        ],
+        "I_parameterType" : [
+          "UInt64",
+          "UInt64",
+          "UInt64",
+          "UInt64"
+        ],
+        "I_parameters" : [
+          "totalNumberOfEntries",
+          "sizeOfCentralDirectory",
+          "offsetOfCentralDirectory",
+          "offsetOfEndOfCentralDirectory"
+        ],
+        "J_returnType" : "-> ZIP64EndOfCentralDirectory"
+      }
+    ]
+  },
+  {
+    "A_name" : "readUncompressed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 17, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "size",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 25, Column: 5",
+        "H_initialValue" : "entry.centralDirectoryStructure.effectiveUncompressedSize"
+      }
+    ],
+    "I_parameterType" : [
+      "Entry",
+      "Int",
+      "Bool",
+      "Progress?",
+      "Consumer"
+    ],
+    "I_parameters" : [
+      "entry",
+      "bufferSize",
+      "skipCRC32",
+      "progress",
+      "with"
+    ],
+    "J_returnType" : "-> CRC32"
+  },
+  {
+    "A_name" : "size",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 25, Column: 5",
+    "H_initialValue" : "entry.centralDirectoryStructure.effectiveUncompressedSize"
+  },
+  {
+    "A_name" : "readCompressed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 41, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "size",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 49, Column: 5",
+        "H_initialValue" : "entry.centralDirectoryStructure.effectiveCompressedSize"
+      }
+    ],
+    "I_parameterType" : [
+      "Entry",
+      "Int",
+      "Bool",
+      "Progress?",
+      "Consumer"
+    ],
+    "I_parameters" : [
+      "entry",
+      "bufferSize",
+      "skipCRC32",
+      "progress",
+      "with"
+    ],
+    "J_returnType" : "-> CRC32"
+  },
+  {
+    "A_name" : "size",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 49, Column: 5",
+    "H_initialValue" : "entry.centralDirectoryStructure.effectiveCompressedSize"
+  },
+  {
+    "A_name" : "writeEntry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 67, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "checksum",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 76, Column: 5",
+        "H_initialValue" : "CRC32(0)"
+      },
+      {
+        "A_name" : "sizeWritten",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 77, Column: 5",
+        "H_initialValue" : "Int64(0)"
+      }
+    ],
+    "I_parameterType" : [
+      "Int64",
+      "Entry.EntryType",
+      "CompressionMethod",
+      "Int",
+      "Progress?",
+      "Provider"
+    ],
+    "I_parameters" : [
+      "uncompressedSize",
+      "type",
+      "compressionMethod",
+      "bufferSize",
+      "progress",
+      "provider"
+    ],
+    "J_returnType" : "-> (sizeWritten: Int64, crc32: CRC32)"
+  },
+  {
+    "A_name" : "checksum",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 76, Column: 5",
+    "H_initialValue" : "CRC32(0)"
+  },
+  {
+    "A_name" : "sizeWritten",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 77, Column: 5",
+    "H_initialValue" : "Int64(0)"
+  },
+  {
+    "A_name" : "writeLocalFileHeader",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 110, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "uncompressedSizeOfLFH",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 121, Column: 5",
+        "H_initialValue" : "UInt32(0)"
+      },
+      {
+        "A_name" : "compressedSizeOfLFH",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 122, Column: 5",
+        "H_initialValue" : "UInt32(0)"
+      },
+      {
+        "A_name" : "extraFieldLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 123, Column: 5",
+        "H_initialValue" : "UInt16(0)"
+      },
+      {
+        "A_name" : "zip64ExtendedInformation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 124, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "versionNeededToExtract",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 125, Column: 5",
+        "H_initialValue" : "Version.v20.rawValue"
+      },
+      {
+        "A_name" : "localFileHeader",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 143, Column: 5",
+        "H_initialValue" : "LocalFileHeader(\n      versionNeededToExtract: versionNeededToExtract,\n      generalPurposeBitFlag: UInt16(2048),\n      compressionMethod: compressionMethod.rawValue,\n      lastModFileTime: modificationDateTime.1,\n      lastModFileDate: modificationDateTime.0,\n      crc32: checksum,\n      compressedSize: compressedSizeOfLFH,\n      uncompressedSize: uncompressedSizeOfLFH,\n      fileNameLength: UInt16(fileNameData.count),\n      extraFieldLength: extraFieldLength,\n      fileNameData: fileNameData,\n      extraFieldData: zip64ExtendedInformation?.data ?? Data())"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "CompressionMethod",
+      "(uncompressed: UInt64, compressed: UInt64)",
+      "CRC32",
+      "(UInt16, UInt16)"
+    ],
+    "I_parameters" : [
+      "path",
+      "compressionMethod",
+      "size",
+      "checksum",
+      "modificationDateTime"
+    ],
+    "J_returnType" : "-> LocalFileHeader"
+  },
+  {
+    "A_name" : "uncompressedSizeOfLFH",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 121, Column: 5",
+    "H_initialValue" : "UInt32(0)"
+  },
+  {
+    "A_name" : "compressedSizeOfLFH",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 122, Column: 5",
+    "H_initialValue" : "UInt32(0)"
+  },
+  {
+    "A_name" : "extraFieldLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 123, Column: 5",
+    "H_initialValue" : "UInt16(0)"
+  },
+  {
+    "A_name" : "zip64ExtendedInformation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 124, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "versionNeededToExtract",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 125, Column: 5",
+    "H_initialValue" : "Version.v20.rawValue"
+  },
+  {
+    "A_name" : "localFileHeader",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 143, Column: 5",
+    "H_initialValue" : "LocalFileHeader(\n      versionNeededToExtract: versionNeededToExtract,\n      generalPurposeBitFlag: UInt16(2048),\n      compressionMethod: compressionMethod.rawValue,\n      lastModFileTime: modificationDateTime.1,\n      lastModFileDate: modificationDateTime.0,\n      crc32: checksum,\n      compressedSize: compressedSizeOfLFH,\n      uncompressedSize: uncompressedSizeOfLFH,\n      fileNameLength: UInt16(fileNameData.count),\n      extraFieldLength: extraFieldLength,\n      fileNameData: fileNameData,\n      extraFieldData: zip64ExtendedInformation?.data ?? Data())"
+  },
+  {
+    "A_name" : "writeCentralDirectoryStructure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 160, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "extraUncompressedSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 166, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "extraCompressedSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 167, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "extraOffset",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 168, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "relativeOffsetOfCD",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 169, Column: 5",
+        "H_initialValue" : "UInt32(0)"
+      },
+      {
+        "A_name" : "extraFieldLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 170, Column: 5",
+        "H_initialValue" : "UInt16(0)"
+      },
+      {
+        "A_name" : "zip64ExtendedInformation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 171, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "centralDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 197, Column: 5",
+        "H_initialValue" : "CentralDirectoryStructure(\n      localFileHeader: localFileHeader,\n      fileAttributes: externalFileAttributes,\n      relativeOffset: relativeOffsetOfCD,\n      extraField: (\n        extraFieldLength,\n        zip64ExtendedInformation?.data ?? Data()))"
+      }
+    ],
+    "I_parameterType" : [
+      "LocalFileHeader",
+      "UInt64",
+      "UInt32"
+    ],
+    "I_parameters" : [
+      "localFileHeader",
+      "relativeOffset",
+      "externalFileAttributes"
+    ],
+    "J_returnType" : "-> CentralDirectoryStructure"
+  },
+  {
+    "A_name" : "extraUncompressedSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 166, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "extraCompressedSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 167, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "extraOffset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 168, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "relativeOffsetOfCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 169, Column: 5",
+    "H_initialValue" : "UInt32(0)"
+  },
+  {
+    "A_name" : "extraFieldLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 170, Column: 5",
+    "H_initialValue" : "UInt16(0)"
+  },
+  {
+    "A_name" : "zip64ExtendedInformation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 171, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "zip64Field",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 173, Column: 7",
+    "H_initialValue" : "Entry.ZIP64ExtendedInformation\n        .scanForZIP64Field(in: localFileHeader.extraFieldData, fields: [.uncompressedSize, .compressedSize])"
+  },
+  {
+    "A_name" : "centralDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 197, Column: 5",
+    "H_initialValue" : "CentralDirectoryStructure(\n      localFileHeader: localFileHeader,\n      fileAttributes: externalFileAttributes,\n      relativeOffset: relativeOffsetOfCD,\n      extraField: (\n        extraFieldLength,\n        zip64ExtendedInformation?.data ?? Data()))"
+  },
+  {
+    "A_name" : "writeEndOfCentralDirectory",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 208, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "record",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 215, Column: 5",
+        "H_initialValue" : "endOfCentralDirectoryRecord"
+      },
+      {
+        "A_name" : "sizeOfCD",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 216, Column: 5",
+        "H_initialValue" : "sizeOfCentralDirectory"
+      },
+      {
+        "A_name" : "numberOfTotalEntries",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 217, Column: 5",
+        "H_initialValue" : "totalNumberOfEntriesInCentralDirectory"
+      },
+      {
+        "A_name" : "countChange",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 218, Column: 5",
+        "H_initialValue" : "operation.rawValue"
+      },
+      {
+        "A_name" : "dataLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 219, Column: 5",
+        "H_initialValue" : "centralDirectoryStructure.extraFieldLength"
+      },
+      {
+        "A_name" : "cdDataLengthChange",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 222, Column: 5",
+        "H_initialValue" : "countChange * (Int(dataLength) + CentralDirectoryStructure.size)"
+      },
+      {
+        "A_name" : "sizeOfCDForEOCD",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 238, Column: 5",
+        "H_initialValue" : "updatedSizeOfCD >= maxSizeOfCentralDirectory\n      ? UInt32.max\n      : UInt32(updatedSizeOfCD)"
+      },
+      {
+        "A_name" : "numberOfTotalEntriesForEOCD",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 241, Column: 5",
+        "H_initialValue" : "updatedNumberOfEntries >= maxTotalNumberOfEntries\n      ? UInt16.max\n      : UInt16(updatedNumberOfEntries)"
+      },
+      {
+        "A_name" : "offsetOfCDForEOCD",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 244, Column: 5",
+        "H_initialValue" : "startOfCentralDirectory >= maxOffsetOfCentralDirectory\n      ? UInt32.max\n      : UInt32(startOfCentralDirectory)"
+      },
+      {
+        "A_name" : "zip64EOCD",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 248, Column: 5",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "CentralDirectoryStructure",
+      "UInt64",
+      "UInt64",
+      "ModifyOperation"
+    ],
+    "I_parameters" : [
+      "centralDirectoryStructure",
+      "startOfCentralDirectory",
+      "startOfEndOfCentralDirectory",
+      "operation"
+    ],
+    "J_returnType" : "-> EndOfCentralDirectoryStructure"
+  },
+  {
+    "A_name" : "record",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 215, Column: 5",
+    "H_initialValue" : "endOfCentralDirectoryRecord"
+  },
+  {
+    "A_name" : "sizeOfCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 216, Column: 5",
+    "H_initialValue" : "sizeOfCentralDirectory"
+  },
+  {
+    "A_name" : "numberOfTotalEntries",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 217, Column: 5",
+    "H_initialValue" : "totalNumberOfEntriesInCentralDirectory"
+  },
+  {
+    "A_name" : "countChange",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 218, Column: 5",
+    "H_initialValue" : "operation.rawValue"
+  },
+  {
+    "A_name" : "dataLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 219, Column: 5",
+    "H_initialValue" : "centralDirectoryStructure.extraFieldLength"
+  },
+  {
+    "A_name" : "cdDataLengthChange",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 222, Column: 5",
+    "H_initialValue" : "countChange * (Int(dataLength) + CentralDirectoryStructure.size)"
+  },
+  {
+    "A_name" : "sizeOfCDForEOCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 238, Column: 5",
+    "H_initialValue" : "updatedSizeOfCD >= maxSizeOfCentralDirectory\n      ? UInt32.max\n      : UInt32(updatedSizeOfCD)"
+  },
+  {
+    "A_name" : "numberOfTotalEntriesForEOCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 241, Column: 5",
+    "H_initialValue" : "updatedNumberOfEntries >= maxTotalNumberOfEntries\n      ? UInt16.max\n      : UInt16(updatedNumberOfEntries)"
+  },
+  {
+    "A_name" : "offsetOfCDForEOCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 244, Column: 5",
+    "H_initialValue" : "startOfCentralDirectory >= maxOffsetOfCentralDirectory\n      ? UInt32.max\n      : UInt32(startOfCentralDirectory)"
+  },
+  {
+    "A_name" : "zip64EOCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 248, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "writeUncompressed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 266, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "position",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 273, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "sizeWritten",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 274, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "checksum",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 275, Column: 5",
+        "H_initialValue" : "CRC32(0)"
+      }
+    ],
+    "I_parameterType" : [
+      "Int64",
+      "Int",
+      "Progress?",
+      "Provider"
+    ],
+    "I_parameters" : [
+      "size",
+      "bufferSize",
+      "progress",
+      "provider"
+    ],
+    "J_returnType" : "-> (sizeWritten: Int64, checksum: CRC32)"
+  },
+  {
+    "A_name" : "position",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 273, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "sizeWritten",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 274, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "checksum",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 275, Column: 5",
+    "H_initialValue" : "CRC32(0)"
+  },
+  {
+    "A_name" : "readSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 278, Column: 7",
+    "H_initialValue" : "(size - position) >= bufferSize ? bufferSize : Int(size - position)"
+  },
+  {
+    "A_name" : "entryChunk",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 279, Column: 7",
+    "H_initialValue" : "try provider(position, readSize)"
+  },
+  {
+    "A_name" : "writeCompressed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 288, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "sizeWritten",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 295, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "consumer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 296, Column: 5",
+        "H_initialValue" : "{ data in sizeWritten += Int64(try Data.write(chunk: data, to: self.archiveFile)) }"
+      },
+      {
+        "A_name" : "checksum",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 297, Column: 5",
+        "H_initialValue" : "try Data.compress(\n      size: size,\n      bufferSize: bufferSize,\n      provider: { position, size -> Data in\n        if progress?.isCancelled == true { throw ArchiveError.cancelledOperation }\n        let data = try provider(position, size)\n        progress?.completedUnitCount += Int64(data.count)\n        return data\n      },\n      consumer: consumer)"
+      }
+    ],
+    "I_parameterType" : [
+      "Int64",
+      "Int",
+      "Progress?",
+      "Provider"
+    ],
+    "I_parameters" : [
+      "size",
+      "bufferSize",
+      "progress",
+      "provider"
+    ],
+    "J_returnType" : "-> (sizeWritten: Int64, checksum: CRC32)"
+  },
+  {
+    "A_name" : "sizeWritten",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 295, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "consumer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 296, Column: 5",
+    "H_initialValue" : "{ data in sizeWritten += Int64(try Data.write(chunk: data, to: self.archiveFile)) }"
+  },
+  {
+    "A_name" : "checksum",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 297, Column: 5",
+    "H_initialValue" : "try Data.compress(\n      size: size,\n      bufferSize: bufferSize,\n      provider: { position, size -> Data in\n        if progress?.isCancelled == true { throw ArchiveError.cancelledOperation }\n        let data = try provider(position, size)\n        progress?.completedUnitCount += Int64(data.count)\n        return data\n      },\n      consumer: consumer)"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 302, Column: 9",
+    "H_initialValue" : "try provider(position, size)"
+  },
+  {
+    "A_name" : "writeSymbolicLink",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 310, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "linkData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 312, Column: 5",
+        "H_initialValue" : "try provider(0, size)"
+      },
+      {
+        "A_name" : "checksum",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 313, Column: 5",
+        "H_initialValue" : "linkData.crc32(checksum: 0)"
+      },
+      {
+        "A_name" : "sizeWritten",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 314, Column: 5",
+        "H_initialValue" : "try Data.write(chunk: linkData, to: archiveFile)"
+      }
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Provider"
+    ],
+    "I_parameters" : [
+      "size",
+      "provider"
+    ],
+    "J_returnType" : "-> (sizeWritten: Int, checksum: CRC32)"
+  },
+  {
+    "A_name" : "linkData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 312, Column: 5",
+    "H_initialValue" : "try provider(0, size)"
+  },
+  {
+    "A_name" : "checksum",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 313, Column: 5",
+    "H_initialValue" : "linkData.crc32(checksum: 0)"
+  },
+  {
+    "A_name" : "sizeWritten",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 314, Column: 5",
+    "H_initialValue" : "try Data.write(chunk: linkData, to: archiveFile)"
+  },
+  {
+    "A_name" : "writeZIP64EOCD",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 318, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "zip64EOCD",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 325, Column: 5",
+        "H_initialValue" : "zip64EndOfCentralDirectory ?? {\n      \/\/ Shouldn't include the leading 12 bytes: (size - 12 = 44)\n      let record = ZIP64EndOfCentralDirectoryRecord(\n        sizeOfZIP64EndOfCentralDirectoryRecord: UInt64(44),\n        versionMadeBy: UInt16(789),\n        versionNeededToExtract: Version.v45.rawValue,\n        numberOfDisk: 0,\n        numberOfDiskStart: 0,\n        totalNumberOfEntriesOnDisk: 0,\n        totalNumberOfEntriesInCentralDirectory: 0,\n        sizeOfCentralDirectory: 0,\n        offsetToStartOfCentralDirectory: 0,\n        zip64ExtensibleDataSector: Data())\n      let locator = ZIP64EndOfCentralDirectoryLocator(\n        numberOfDiskWithZIP64EOCDRecordStart: 0,\n        relativeOffsetOfZIP64EOCDRecord: 0,\n        totalNumberOfDisk: 1)\n      return ZIP64EndOfCentralDirectory(record: record, locator: locator)\n    }()"
+      },
+      {
+        "A_name" : "updatedRecord",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 345, Column: 5",
+        "H_initialValue" : "ZIP64EndOfCentralDirectoryRecord(\n      record: zip64EOCD.record,\n      numberOfEntriesOnDisk: totalNumberOfEntries,\n      numberOfEntriesInCD: totalNumberOfEntries,\n      sizeOfCentralDirectory: sizeOfCentralDirectory,\n      offsetToStartOfCD: offsetOfCentralDirectory)"
+      },
+      {
+        "A_name" : "updatedLocator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Helpers.swift - Line: 351, Column: 5",
+        "H_initialValue" : "ZIP64EndOfCentralDirectoryLocator(\n      locator: zip64EOCD.locator,\n      offsetOfZIP64EOCDRecord: offsetOfEndOfCentralDirectory)"
+      }
+    ],
+    "I_parameterType" : [
+      "UInt64",
+      "UInt64",
+      "UInt64",
+      "UInt64"
+    ],
+    "I_parameters" : [
+      "totalNumberOfEntries",
+      "sizeOfCentralDirectory",
+      "offsetOfCentralDirectory",
+      "offsetOfEndOfCentralDirectory"
+    ],
+    "J_returnType" : "-> ZIP64EndOfCentralDirectory"
+  },
+  {
+    "A_name" : "zip64EOCD",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 325, Column: 5",
+    "H_initialValue" : "zip64EndOfCentralDirectory ?? {\n      \/\/ Shouldn't include the leading 12 bytes: (size - 12 = 44)\n      let record = ZIP64EndOfCentralDirectoryRecord(\n        sizeOfZIP64EndOfCentralDirectoryRecord: UInt64(44),\n        versionMadeBy: UInt16(789),\n        versionNeededToExtract: Version.v45.rawValue,\n        numberOfDisk: 0,\n        numberOfDiskStart: 0,\n        totalNumberOfEntriesOnDisk: 0,\n        totalNumberOfEntriesInCentralDirectory: 0,\n        sizeOfCentralDirectory: 0,\n        offsetToStartOfCentralDirectory: 0,\n        zip64ExtensibleDataSector: Data())\n      let locator = ZIP64EndOfCentralDirectoryLocator(\n        numberOfDiskWithZIP64EOCDRecordStart: 0,\n        relativeOffsetOfZIP64EOCDRecord: 0,\n        totalNumberOfDisk: 1)\n      return ZIP64EndOfCentralDirectory(record: record, locator: locator)\n    }()"
+  },
+  {
+    "A_name" : "record",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 327, Column: 7",
+    "H_initialValue" : "ZIP64EndOfCentralDirectoryRecord(\n        sizeOfZIP64EndOfCentralDirectoryRecord: UInt64(44),\n        versionMadeBy: UInt16(789),\n        versionNeededToExtract: Version.v45.rawValue,\n        numberOfDisk: 0,\n        numberOfDiskStart: 0,\n        totalNumberOfEntriesOnDisk: 0,\n        totalNumberOfEntriesInCentralDirectory: 0,\n        sizeOfCentralDirectory: 0,\n        offsetToStartOfCentralDirectory: 0,\n        zip64ExtensibleDataSector: Data())"
+  },
+  {
+    "A_name" : "locator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 338, Column: 7",
+    "H_initialValue" : "ZIP64EndOfCentralDirectoryLocator(\n        numberOfDiskWithZIP64EOCDRecordStart: 0,\n        relativeOffsetOfZIP64EOCDRecord: 0,\n        totalNumberOfDisk: 1)"
+  },
+  {
+    "A_name" : "updatedRecord",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 345, Column: 5",
+    "H_initialValue" : "ZIP64EndOfCentralDirectoryRecord(\n      record: zip64EOCD.record,\n      numberOfEntriesOnDisk: totalNumberOfEntries,\n      numberOfEntriesInCD: totalNumberOfEntries,\n      sizeOfCentralDirectory: sizeOfCentralDirectory,\n      offsetToStartOfCD: offsetOfCentralDirectory)"
+  },
+  {
+    "A_name" : "updatedLocator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Helpers.swift - Line: 351, Column: 5",
+    "H_initialValue" : "ZIP64EndOfCentralDirectoryLocator(\n      locator: zip64EOCD.locator,\n      offsetOfZIP64EOCDRecord: offsetOfEndOfCentralDirectory)"
+  }
+]

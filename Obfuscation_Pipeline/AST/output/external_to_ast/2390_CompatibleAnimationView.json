@@ -1,0 +1,2227 @@
+[
+  {
+    "A_name" : "CompatibleAnimation",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "NSObject"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 19, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String?",
+          "Bundle"
+        ],
+        "I_parameters" : [
+          "name",
+          "subdirectory",
+          "bundle"
+        ]
+      },
+      {
+        "A_name" : "animation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 33, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "named",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "objc",
+          "static"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 37, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> CompatibleAnimation"
+      },
+      {
+        "A_name" : "name",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 44, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subdirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 45, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "bundle",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 46, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 19, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String?",
+      "Bundle"
+    ],
+    "I_parameters" : [
+      "name",
+      "subdirectory",
+      "bundle"
+    ]
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 33, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "named",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "objc",
+      "static"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 37, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> CompatibleAnimation"
+  },
+  {
+    "A_name" : "name",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 44, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subdirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 45, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "bundle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 46, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CompatibleRenderingEngineOption",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 51, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "shared",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 54, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "defaultEngine",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 57, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "automatic",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 61, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "mainThread",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 64, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "coreAnimation",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 68, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "generateLottieConfiguration",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 74, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CompatibleRenderingEngineOption"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> LottieConfiguration"
+      }
+    ]
+  },
+  {
+    "A_name" : "generateLottieConfiguration",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 74, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CompatibleRenderingEngineOption"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> LottieConfiguration"
+  },
+  {
+    "A_name" : "CompatibleBackgroundBehavior",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 94, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "stop",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 97, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "pause",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 100, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "pauseAndRestore",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 105, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "forceFinish",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 108, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "continuePlaying",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 116, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "CompatibleAnimationView",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIView"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 120, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "convenience"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 127, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CompatibleAnimation"
+        ],
+        "I_parameters" : [
+          "compatibleAnimation"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 134, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CompatibleAnimation",
+          "CompatibleRenderingEngineOption"
+        ],
+        "I_parameters" : [
+          "compatibleAnimation",
+          "compatibleRenderingEngineOption"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "convenience"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 149, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "url"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 156, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL",
+          "CompatibleRenderingEngineOption"
+        ],
+        "I_parameters" : [
+          "url",
+          "compatibleRenderingEngineOption"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "convenience"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 168, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "data"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 175, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data",
+          "CompatibleRenderingEngineOption"
+        ],
+        "I_parameters" : [
+          "data",
+          "compatibleRenderingEngineOption"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "override"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 189, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 196, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "compatibleAnimation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 204, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "loopAnimationCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 210, Column: 3",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "compatibleDictionaryTextProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 216, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "contentMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "override"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 222, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "shouldRasterizeWhenIdle",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 228, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentProgress",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 234, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "duration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 240, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 245, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 251, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "realtimeAnimationFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 257, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "realtimeAnimationProgress",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 262, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "animationSpeed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 267, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "respectAnimationFrameRate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 273, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isAnimationPlaying",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 279, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "backgroundMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 284, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 316, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 321, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "((Bool) -> Void)?"
+        ],
+        "I_parameters" : [
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 328, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "CGFloat",
+          "((Bool) -> Void)?"
+        ],
+        "I_parameters" : [
+          "fromProgress",
+          "toProgress",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 343, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "CGFloat",
+          "((Bool) -> Void)?"
+        ],
+        "I_parameters" : [
+          "fromFrame",
+          "toFrame",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 358, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "((Bool) -> Void)?"
+        ],
+        "I_parameters" : [
+          "fromMarker",
+          "toMarker",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "play",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 370, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "((Bool) -> Void)?"
+        ],
+        "I_parameters" : [
+          "marker",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "stop",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 380, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "pause",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 385, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "reloadImages",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 390, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "forceDisplayUpdate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 395, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "getValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 400, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CompatibleAnimationKeypath",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "for",
+          "atFrame"
+        ],
+        "J_returnType" : "-> Any?"
+      },
+      {
+        "A_name" : "logHierarchyKeypaths",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 411, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setColorValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 416, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "red",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibleAnimationView.swift - Line: 418, Column: 5",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "green",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibleAnimationView.swift - Line: 419, Column: 5",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "blue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibleAnimationView.swift - Line: 420, Column: 5",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "alpha",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibleAnimationView.swift - Line: 421, Column: 5",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "colorspace",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibleAnimationView.swift - Line: 423, Column: 5",
+            "H_initialValue" : "LottieConfiguration.shared.colorSpace"
+          },
+          {
+            "A_name" : "convertedColor",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibleAnimationView.swift - Line: 425, Column: 5",
+            "H_initialValue" : "color.cgColor.converted(to: colorspace, intent: .defaultIntent, options: nil)"
+          },
+          {
+            "A_name" : "valueProvider",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibleAnimationView.swift - Line: 436, Column: 5",
+            "H_initialValue" : "ColorValueProvider(LottieColor(r: Double(red), g: Double(green), b: Double(blue), a: Double(alpha)))"
+          }
+        ],
+        "I_parameterType" : [
+          "UIColor",
+          "CompatibleAnimationKeypath"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKeypath"
+        ]
+      },
+      {
+        "A_name" : "getColorValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 440, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "value",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibleAnimationView.swift - Line: 442, Column: 5",
+            "H_initialValue" : "animationView.getValue(for: keypath.animationKeypath, atFrame: atFrame)"
+          }
+        ],
+        "I_parameterType" : [
+          "CompatibleAnimationKeypath",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "for",
+          "atFrame"
+        ],
+        "J_returnType" : "-> UIColor?"
+      },
+      {
+        "A_name" : "addSubview",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 454, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationSubview",
+          "CompatibleAnimationKeypath"
+        ],
+        "I_parameters" : [
+          "_",
+          "forLayerAt"
+        ]
+      },
+      {
+        "A_name" : "convert",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 464, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect",
+          "CompatibleAnimationKeypath?"
+        ],
+        "I_parameters" : [
+          "rect",
+          "toLayerAt"
+        ],
+        "J_returnType" : "-> CGRect"
+      },
+      {
+        "A_name" : "convert",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 475, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGPoint",
+          "CompatibleAnimationKeypath?"
+        ],
+        "I_parameters" : [
+          "point",
+          "toLayerAt"
+        ],
+        "J_returnType" : "-> CGPoint"
+      },
+      {
+        "A_name" : "progressTime",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 486, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forMarker"
+        ],
+        "J_returnType" : "-> CGFloat"
+      },
+      {
+        "A_name" : "frameTime",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 491, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forMarker"
+        ],
+        "J_returnType" : "-> CGFloat"
+      },
+      {
+        "A_name" : "durationFrameTime",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 496, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forMarker"
+        ],
+        "J_returnType" : "-> CGFloat"
+      },
+      {
+        "A_name" : "animationView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 503, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "commonInit",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 505, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUpViews",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 509, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "convenience"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 127, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CompatibleAnimation"
+    ],
+    "I_parameters" : [
+      "compatibleAnimation"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 134, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CompatibleAnimation",
+      "CompatibleRenderingEngineOption"
+    ],
+    "I_parameters" : [
+      "compatibleAnimation",
+      "compatibleRenderingEngineOption"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "convenience"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 149, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL"
+    ],
+    "I_parameters" : [
+      "url"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 156, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL",
+      "CompatibleRenderingEngineOption"
+    ],
+    "I_parameters" : [
+      "url",
+      "compatibleRenderingEngineOption"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "convenience"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 168, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data"
+    ],
+    "I_parameters" : [
+      "data"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 175, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "CompatibleRenderingEngineOption"
+    ],
+    "I_parameters" : [
+      "data",
+      "compatibleRenderingEngineOption"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "override"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 189, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 196, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "compatibleAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 204, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "loopAnimationCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 210, Column: 3",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "compatibleDictionaryTextProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 216, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "contentMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "override"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 222, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "shouldRasterizeWhenIdle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 228, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentProgress",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 234, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "duration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 240, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 245, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 251, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "realtimeAnimationFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 257, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "realtimeAnimationProgress",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 262, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "animationSpeed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 267, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "respectAnimationFrameRate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 273, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isAnimationPlaying",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 279, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "backgroundMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 284, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 316, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 321, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "((Bool) -> Void)?"
+    ],
+    "I_parameters" : [
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 328, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat",
+      "((Bool) -> Void)?"
+    ],
+    "I_parameters" : [
+      "fromProgress",
+      "toProgress",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 343, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat",
+      "((Bool) -> Void)?"
+    ],
+    "I_parameters" : [
+      "fromFrame",
+      "toFrame",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 358, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "((Bool) -> Void)?"
+    ],
+    "I_parameters" : [
+      "fromMarker",
+      "toMarker",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "play",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 370, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "((Bool) -> Void)?"
+    ],
+    "I_parameters" : [
+      "marker",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "stop",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 380, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "pause",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 385, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "reloadImages",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 390, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "forceDisplayUpdate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 395, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "getValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 400, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CompatibleAnimationKeypath",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "for",
+      "atFrame"
+    ],
+    "J_returnType" : "-> Any?"
+  },
+  {
+    "A_name" : "logHierarchyKeypaths",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 411, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setColorValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 416, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "red",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 418, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "green",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 419, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "blue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 420, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "alpha",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 421, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "colorspace",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 423, Column: 5",
+        "H_initialValue" : "LottieConfiguration.shared.colorSpace"
+      },
+      {
+        "A_name" : "convertedColor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 425, Column: 5",
+        "H_initialValue" : "color.cgColor.converted(to: colorspace, intent: .defaultIntent, options: nil)"
+      },
+      {
+        "A_name" : "valueProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 436, Column: 5",
+        "H_initialValue" : "ColorValueProvider(LottieColor(r: Double(red), g: Double(green), b: Double(blue), a: Double(alpha)))"
+      }
+    ],
+    "I_parameterType" : [
+      "UIColor",
+      "CompatibleAnimationKeypath"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKeypath"
+    ]
+  },
+  {
+    "A_name" : "red",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 418, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "green",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 419, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "blue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 420, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "alpha",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 421, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "colorspace",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 423, Column: 5",
+    "H_initialValue" : "LottieConfiguration.shared.colorSpace"
+  },
+  {
+    "A_name" : "convertedColor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 425, Column: 5",
+    "H_initialValue" : "color.cgColor.converted(to: colorspace, intent: .defaultIntent, options: nil)"
+  },
+  {
+    "A_name" : "valueProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 436, Column: 5",
+    "H_initialValue" : "ColorValueProvider(LottieColor(r: Double(red), g: Double(green), b: Double(blue), a: Double(alpha)))"
+  },
+  {
+    "A_name" : "getColorValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 440, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 442, Column: 5",
+        "H_initialValue" : "animationView.getValue(for: keypath.animationKeypath, atFrame: atFrame)"
+      }
+    ],
+    "I_parameterType" : [
+      "CompatibleAnimationKeypath",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "for",
+      "atFrame"
+    ],
+    "J_returnType" : "-> UIColor?"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 442, Column: 5",
+    "H_initialValue" : "animationView.getValue(for: keypath.animationKeypath, atFrame: atFrame)"
+  },
+  {
+    "A_name" : "addSubview",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 454, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationSubview",
+      "CompatibleAnimationKeypath"
+    ],
+    "I_parameters" : [
+      "_",
+      "forLayerAt"
+    ]
+  },
+  {
+    "A_name" : "convert",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 464, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect",
+      "CompatibleAnimationKeypath?"
+    ],
+    "I_parameters" : [
+      "rect",
+      "toLayerAt"
+    ],
+    "J_returnType" : "-> CGRect"
+  },
+  {
+    "A_name" : "convert",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 475, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGPoint",
+      "CompatibleAnimationKeypath?"
+    ],
+    "I_parameters" : [
+      "point",
+      "toLayerAt"
+    ],
+    "J_returnType" : "-> CGPoint"
+  },
+  {
+    "A_name" : "progressTime",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 486, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forMarker"
+    ],
+    "J_returnType" : "-> CGFloat"
+  },
+  {
+    "A_name" : "frameTime",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 491, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forMarker"
+    ],
+    "J_returnType" : "-> CGFloat"
+  },
+  {
+    "A_name" : "durationFrameTime",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 496, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forMarker"
+    ],
+    "J_returnType" : "-> CGFloat"
+  },
+  {
+    "A_name" : "animationView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 503, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "commonInit",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 505, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setUpViews",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 509, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "CompatibleDictionaryTextProvider",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "NSObject"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 522, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 527, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String: String]"
+        ],
+        "I_parameters" : [
+          "values"
+        ]
+      },
+      {
+        "A_name" : "textProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 535, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "values",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationView.swift - Line: 541, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 527, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String: String]"
+    ],
+    "I_parameters" : [
+      "values"
+    ]
+  },
+  {
+    "A_name" : "textProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 535, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationView.swift - Line: 541, Column: 3",
+    "H_initialValue" : ""
+  }
+]

@@ -1,0 +1,334 @@
+[
+  {
+    "A_name" : "MeasuringViewRepresentable",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ViewRepresentableType"
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sizing",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MeasuringViewRepresentable.swift - Line: 29, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "sizing",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 29, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "MeasuringViewRepresentable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 34, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sizing",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MeasuringViewRepresentable.swift - Line: 36, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "copy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MeasuringViewRepresentable.swift - Line: 37, Column: 5",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "SwiftUIMeasurementContainerStrategy"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "sizing",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 36, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MeasuringViewRepresentable.swift - Line: 37, Column: 5",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "SwiftUIMeasurementContainerStrategy"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 37, Column: 5",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "MeasuringViewRepresentable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 46, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "_overrideSizeThatFits",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MeasuringViewRepresentable.swift - Line: 47, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "children",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MeasuringViewRepresentable.swift - Line: 56, Column: 5",
+            "H_initialValue" : "Mirror(reflecting: proposedSize).children"
+          }
+        ],
+        "I_parameterType" : [
+          "inout CGSize",
+          "_ProposedSize",
+          "UIViewType"
+        ],
+        "I_parameters" : [
+          "_",
+          "in",
+          "uiView"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "_overrideSizeThatFits",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 47, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "children",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MeasuringViewRepresentable.swift - Line: 56, Column: 5",
+        "H_initialValue" : "Mirror(reflecting: proposedSize).children"
+      }
+    ],
+    "I_parameterType" : [
+      "inout CGSize",
+      "_ProposedSize",
+      "UIViewType"
+    ],
+    "I_parameters" : [
+      "_",
+      "in",
+      "uiView"
+    ]
+  },
+  {
+    "A_name" : "children",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 56, Column: 5",
+    "H_initialValue" : "Mirror(reflecting: proposedSize).children"
+  },
+  {
+    "A_name" : "sizeThatFits",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 67, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ProposedViewSize",
+      "UIViewType",
+      "Context"
+    ],
+    "I_parameters" : [
+      "_",
+      "uiView",
+      "context"
+    ],
+    "J_returnType" : "-> CGSize?"
+  },
+  {
+    "A_name" : "MeasuringViewRepresentable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 87, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "_overrideSizeThatFits",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MeasuringViewRepresentable.swift - Line: 88, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "children",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MeasuringViewRepresentable.swift - Line: 95, Column: 5",
+            "H_initialValue" : "Mirror(reflecting: proposedSize).children"
+          }
+        ],
+        "I_parameterType" : [
+          "inout CGSize",
+          "_ProposedSize",
+          "NSViewType"
+        ],
+        "I_parameters" : [
+          "_",
+          "in",
+          "nsView"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "_overrideSizeThatFits",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 88, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "children",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MeasuringViewRepresentable.swift - Line: 95, Column: 5",
+        "H_initialValue" : "Mirror(reflecting: proposedSize).children"
+      }
+    ],
+    "I_parameterType" : [
+      "inout CGSize",
+      "_ProposedSize",
+      "NSViewType"
+    ],
+    "I_parameters" : [
+      "_",
+      "in",
+      "nsView"
+    ]
+  },
+  {
+    "A_name" : "children",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 95, Column: 5",
+    "H_initialValue" : "Mirror(reflecting: proposedSize).children"
+  },
+  {
+    "A_name" : "sizeThatFits",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "MeasuringViewRepresentable.swift - Line: 107, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ProposedViewSize",
+      "NSViewType",
+      "Context"
+    ],
+    "I_parameters" : [
+      "_",
+      "nsView",
+      "context"
+    ],
+    "J_returnType" : "-> CGSize?"
+  }
+]

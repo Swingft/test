@@ -1,0 +1,152 @@
+[
+  {
+    "A_name" : "MKMapView",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MKMapView+setPlaceMark.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setPlaceMark",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MKMapView+setPlaceMark.swift - Line: 12, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "address",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MKMapView+setPlaceMark.swift - Line: 13, Column: 9",
+            "H_initialValue" : "address"
+          },
+          {
+            "A_name" : "geocoder",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MKMapView+setPlaceMark.swift - Line: 14, Column: 9",
+            "H_initialValue" : "CLGeocoder()"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String",
+          "UIImage"
+        ],
+        "I_parameters" : [
+          "address",
+          "placemarkTitle",
+          "placemarkSubTitle",
+          "placemarkPinImage"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "setPlaceMark",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MKMapView+setPlaceMark.swift - Line: 12, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "address",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MKMapView+setPlaceMark.swift - Line: 13, Column: 9",
+        "H_initialValue" : "address"
+      },
+      {
+        "A_name" : "geocoder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MKMapView+setPlaceMark.swift - Line: 14, Column: 9",
+        "H_initialValue" : "CLGeocoder()"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String",
+      "UIImage"
+    ],
+    "I_parameters" : [
+      "address",
+      "placemarkTitle",
+      "placemarkSubTitle",
+      "placemarkPinImage"
+    ]
+  },
+  {
+    "A_name" : "address",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MKMapView+setPlaceMark.swift - Line: 13, Column: 9",
+    "H_initialValue" : "address"
+  },
+  {
+    "A_name" : "geocoder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MKMapView+setPlaceMark.swift - Line: 14, Column: 9",
+    "H_initialValue" : "CLGeocoder()"
+  },
+  {
+    "A_name" : "topResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MKMapView+setPlaceMark.swift - Line: 18, Column: 17",
+    "H_initialValue" : "placemarks![0]"
+  },
+  {
+    "A_name" : "placemark",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MKMapView+setPlaceMark.swift - Line: 19, Column: 17",
+    "H_initialValue" : "MKPointAnnotation()"
+  },
+  {
+    "A_name" : "region",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MKMapView+setPlaceMark.swift - Line: 28, Column: 17",
+    "H_initialValue" : "self.region"
+  }
+]

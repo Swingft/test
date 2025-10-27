@@ -1,2 +1,0 @@
-Swift version 6.2 (swift-6.2-RELEASE)
-Target: arm64-apple-macosx15.0

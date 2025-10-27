@@ -1,0 +1,1250 @@
+[
+  {
+    "A_name" : "SnapshotConfiguration",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "precision",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 18, Column: 3",
+        "H_initialValue" : "0.985"
+      },
+      {
+        "A_name" : "customValueProviders",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 21, Column: 3",
+        "H_initialValue" : "[:]"
+      },
+      {
+        "A_name" : "customImageProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 24, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "customTextProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 27, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "customFontProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 30, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "testWithAutomaticEngine",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 36, Column: 3",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "excludeCoreAnimationRenderingEngine",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 40, Column: 3",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "customProgressValuesToSnapshot",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 43, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "customFramesToSnapshot",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 46, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "maxSnapshotDimension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 49, Column: 3",
+        "H_initialValue" : "500"
+      },
+      {
+        "A_name" : "customViewportFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 52, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "precision",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 18, Column: 3",
+    "H_initialValue" : "0.985"
+  },
+  {
+    "A_name" : "customValueProviders",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 21, Column: 3",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "customImageProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 24, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "customTextProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 27, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "customFontProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 30, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testWithAutomaticEngine",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 36, Column: 3",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "excludeCoreAnimationRenderingEngine",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 40, Column: 3",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "customProgressValuesToSnapshot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 43, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "customFramesToSnapshot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 46, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "maxSnapshotDimension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 49, Column: 3",
+    "H_initialValue" : "500"
+  },
+  {
+    "A_name" : "customViewportFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 52, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "SnapshotConfiguration",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 57, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "customMapping",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 60, Column: 3",
+        "H_initialValue" : "[\n    \/\/\/ These samples appear to render in a slightly non-deterministic way,\n    \/\/\/ depending on the test environment, so we have to decrease precision a bit.\n    \"Issues\/issue_1407\": .precision(0.9),\n    \"Nonanimating\/FirstText\": .precision(0.99),\n    \"Nonanimating\/verifyLineHeight\": .precision(0.99),\n    \"Nonanimating\/blend_mode_test\": .precision(0.99),\n    \"Nonanimating\/base64Test\": .precision(0.9),\n    \"Issues\/issue_2066\": .precision(0.9),\n    \"LottieFiles\/dog_car_ride\": .precision(0.95),\n    \"Issues\/issue_1800\": .precision(0.95),\n    \"Issues\/issue_1882\": .precision(0.95),\n    \"Issues\/issue_1717\": .precision(0.95),\n    \"Issues\/issue_1887\": .precision(0.95),\n    \"Issues\/issue_1683\": .precision(0.93),\n    \"Issues\/pr_1763\": .precision(0.95),\n    \"Issues\/pr_1964\": .precision(0.95),\n    \"Issues\/pr_1930_rx\": .precision(0.93),\n    \"Issues\/pr_1930_ry\": .precision(0.93),\n    \"Issues\/pr_1930_all_axis\": .precision(0.93),\n    \"Issues\/issue_1169_four_shadows\": .precision(0.93),\n    \"DotLottie\/animation_external_image\": .precision(0.95),\n    \"DotLottie\/animation_inline_image\": .precision(0.95),\n    \"LottieFiles\/gradient_shapes\": .precision(0.95),\n\n    \/\/\/ Test cases for the `AnimationKeypath` \/ `AnyValueProvider` system\n    \"Nonanimating\/keypathTest\": .customValueProviders([\n      \"**.Stroke 1.Color\": ColorValueProvider(.black),\n      \"**.Fill 1.Color\": ColorValueProvider(.red),\n    ]),\n\n    \"Switch\": .customValueProviders([\n      \"Checkmark Outlines.Group 1.Stroke 1.Color\": ColorValueProvider(.black),\n      \"Checkmark Outlines 2.Group 1.Stroke 1.Color\": ColorValueProvider(.black),\n      \"X Outlines.Group 1.Stroke 1.Color\": ColorValueProvider(.black),\n      \"Switch Outline Outlines.Fill 1.Color\": ColorValueProvider([\n        Keyframe(value: LottieColor.black, time: 0),\n        Keyframe(value: LottieColor(r: 0.76, g: 0.76, b: 0.76, a: 1), time: 75),\n        Keyframe(value: LottieColor.black, time: 150),\n      ]),\n    ]),\n\n    \"Issues\/issue_1837_opacity\": .customValueProviders([\n      \"Dark Gray Solid 1.Transform.Opacity\": FloatValueProvider(10),\n    ]),\n\n    \"Issues\/issue_1837_scale_rotation\": .customValueProviders([\n      \"H2.Transform.Scale\": PointValueProvider(CGPoint(x: 200, y: 150)),\n      \"H2.Transform.Rotation\": FloatValueProvider(90),\n    ]),\n\n    \"Issues\/issue_2042\": .customValueProviders([\n      \"MASTER.Transform.Position\": PointValueProvider(CGPoint(x: 214, y: 120)),\n    ]),\n\n    \"Issues\/issue_1664\": .customValueProviders([\n      \"**.base_color.**.Color\": ColorValueProvider(.black),\n    ]).precision(0.95),\n\n    \"Issues\/issue_1854\": .customValueProviders([\n      \"**.Colors\": GradientValueProvider(\n        [\n          LottieColor(r: 0, g: 0, b: 0, a: 0),\n          LottieColor(r: 1, g: 1, b: 1, a: 0.5),\n          LottieColor(r: 1, g: 1, b: 1, a: 1),\n        ],\n        locations: [0, 0.3, 1.0]),\n    ]),\n\n    \"Issues\/issue_1847\": .customValueProviders([\n      \"**.Stroke 1.**.Color\": ColorValueProvider(.red),\n    ]),\n\n    \"Issues\/issue_2150\": .customValueProviders([\n      \"**.Color\": ColorValueProvider(.red),\n    ]),\n\n    \"Issues\/issue_2094\": .customValueProviders([\n      \"**.Stroke Width\": FloatValueProvider(2),\n    ]),\n\n    \"Issues\/issue_2262\": .customValueProviders([\n      \"**.Accent.**.Color\": ColorValueProvider(.black),\n    ]),\n\n    \/\/ Test cases for `AnimatedImageProvider`\n    \/\/  - These snapshots are pretty large (2 MB) by default, so we limit their number and size.\n    \"Nonanimating\/dog\": .customImageProvider(HardcodedImageProvider(imageName: \"Samples\/Images\/dog.png\"))\n      .nonanimating()\n      .precision(0.9),\n    \"Nonanimating\/dog_landscape\": .customImageProvider(HardcodedImageProvider(imageName: \"Samples\/Images\/dog-landscape.jpeg\"))\n      .nonanimating()\n      .precision(0.9),\n\n    \/\/ Test cases for `AnimationTextProvider`\n    \"Issues\/issue_1722\": .customTextProvider(HardcodedTextProvider(text: \"Bounce-bounce\")),\n\n    \"Issues\/issue_1949_full_paths\": SnapshotConfiguration\n      .customTextProvider(DictionaryTextProvider([\n        \"ENVELOPE-FRONT.sender_username\": \"Lottie\",\n        \"ENVELOPE-FRONT.From\": \"Airbnb (front)\",\n        \"ENVELOPE-BACK-TEXTBOX.LETTER-TEXTBOX.sender_username\": \"Airbnb (back)\",\n        \"ENVELOPE-BACK-TEXTBOX.LETTER-TEXTBOX.custom_text\": \"Text providers are cool!\",\n      ]))\n      .progressValuesToSnapshot([0.3, 0.75]),\n\n    \"Issues\/issue_1949_short_paths\": SnapshotConfiguration\n      .customTextProvider(DictionaryTextProvider([\n        \"sender_username\": \"Lottie\",\n        \"From\": \"Airbnb\",\n        \"custom_text\": \"Text providers are cool!\",\n      ]))\n      .progressValuesToSnapshot([0.3, 0.75]),\n\n    \"Issues\/issue_2209\": SnapshotConfiguration.default\n      .framesToSnapshot([\n        4.999, \/\/ Should show frame 4\n        5.0, \/\/ Should show frame 5\n        9.9999999, \/\/ Should show frame 9\n        10, \/\/ Should show frame 10\n      ]),\n\n    \"Issues\/issue_2226\": SnapshotConfiguration.default\n      .framesToSnapshot([\n        19.25,\n        113,\n      ]),\n\n    \/\/ Test cases for `AnimationFontProvider`\n    \"Nonanimating\/Text_Glyph\": .customFontProvider(HardcodedFontProvider(font: UIFont(name: \"Chalkduster\", size: 36)!)),\n\n    \/\/ Test cases for `RenderingEngineOption.automatic`\n    \"9squares_AlBoardman\": .useAutomaticRenderingEngine, \/\/ Supports the Core Animation engine\n    \"LottieFiles\/shop\": .useAutomaticRenderingEngine, \/\/ Throws a compatibility error in `init`\n    \"TypeFace\/G\": { \/\/ Throws a compatibility error in `display()`\n      var configuration = SnapshotConfiguration.useAutomaticRenderingEngine\n      configuration.customValueProviders = [\n        \"G 2.Ellipse 1.Stroke 1.Color\": ColorValueProvider(.red),\n        \"G Outlines 3.G.Fill 1.Color\": ColorValueProvider(.red),\n        \"Shape Layer 18.Shape 1.Stroke 2.Color\": ColorValueProvider(.red),\n      ]\n      return configuration\n    }(),\n\n    \/\/\/ Animations which are very expensive to render using the Core Animation rendering engine,\n    \/\/\/ and should fall back to the Main Thread engine when using `RenderingEngineOption.automatic`.\n    \"Issues\/pr_2286\": .excludeCoreAnimationRenderingEngine,\n\n    \/\/ Other misc test cases\n    \"Issues\/issue_2310\": .customViewportFrame(\n      CGRect(x: 0, y: 0, width: 85, height: 85).insetBy(dx: 10, dy: 10)),\n  ]"
+      }
+    ]
+  },
+  {
+    "A_name" : "customMapping",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 60, Column: 3",
+    "H_initialValue" : "[\n    \/\/\/ These samples appear to render in a slightly non-deterministic way,\n    \/\/\/ depending on the test environment, so we have to decrease precision a bit.\n    \"Issues\/issue_1407\": .precision(0.9),\n    \"Nonanimating\/FirstText\": .precision(0.99),\n    \"Nonanimating\/verifyLineHeight\": .precision(0.99),\n    \"Nonanimating\/blend_mode_test\": .precision(0.99),\n    \"Nonanimating\/base64Test\": .precision(0.9),\n    \"Issues\/issue_2066\": .precision(0.9),\n    \"LottieFiles\/dog_car_ride\": .precision(0.95),\n    \"Issues\/issue_1800\": .precision(0.95),\n    \"Issues\/issue_1882\": .precision(0.95),\n    \"Issues\/issue_1717\": .precision(0.95),\n    \"Issues\/issue_1887\": .precision(0.95),\n    \"Issues\/issue_1683\": .precision(0.93),\n    \"Issues\/pr_1763\": .precision(0.95),\n    \"Issues\/pr_1964\": .precision(0.95),\n    \"Issues\/pr_1930_rx\": .precision(0.93),\n    \"Issues\/pr_1930_ry\": .precision(0.93),\n    \"Issues\/pr_1930_all_axis\": .precision(0.93),\n    \"Issues\/issue_1169_four_shadows\": .precision(0.93),\n    \"DotLottie\/animation_external_image\": .precision(0.95),\n    \"DotLottie\/animation_inline_image\": .precision(0.95),\n    \"LottieFiles\/gradient_shapes\": .precision(0.95),\n\n    \/\/\/ Test cases for the `AnimationKeypath` \/ `AnyValueProvider` system\n    \"Nonanimating\/keypathTest\": .customValueProviders([\n      \"**.Stroke 1.Color\": ColorValueProvider(.black),\n      \"**.Fill 1.Color\": ColorValueProvider(.red),\n    ]),\n\n    \"Switch\": .customValueProviders([\n      \"Checkmark Outlines.Group 1.Stroke 1.Color\": ColorValueProvider(.black),\n      \"Checkmark Outlines 2.Group 1.Stroke 1.Color\": ColorValueProvider(.black),\n      \"X Outlines.Group 1.Stroke 1.Color\": ColorValueProvider(.black),\n      \"Switch Outline Outlines.Fill 1.Color\": ColorValueProvider([\n        Keyframe(value: LottieColor.black, time: 0),\n        Keyframe(value: LottieColor(r: 0.76, g: 0.76, b: 0.76, a: 1), time: 75),\n        Keyframe(value: LottieColor.black, time: 150),\n      ]),\n    ]),\n\n    \"Issues\/issue_1837_opacity\": .customValueProviders([\n      \"Dark Gray Solid 1.Transform.Opacity\": FloatValueProvider(10),\n    ]),\n\n    \"Issues\/issue_1837_scale_rotation\": .customValueProviders([\n      \"H2.Transform.Scale\": PointValueProvider(CGPoint(x: 200, y: 150)),\n      \"H2.Transform.Rotation\": FloatValueProvider(90),\n    ]),\n\n    \"Issues\/issue_2042\": .customValueProviders([\n      \"MASTER.Transform.Position\": PointValueProvider(CGPoint(x: 214, y: 120)),\n    ]),\n\n    \"Issues\/issue_1664\": .customValueProviders([\n      \"**.base_color.**.Color\": ColorValueProvider(.black),\n    ]).precision(0.95),\n\n    \"Issues\/issue_1854\": .customValueProviders([\n      \"**.Colors\": GradientValueProvider(\n        [\n          LottieColor(r: 0, g: 0, b: 0, a: 0),\n          LottieColor(r: 1, g: 1, b: 1, a: 0.5),\n          LottieColor(r: 1, g: 1, b: 1, a: 1),\n        ],\n        locations: [0, 0.3, 1.0]),\n    ]),\n\n    \"Issues\/issue_1847\": .customValueProviders([\n      \"**.Stroke 1.**.Color\": ColorValueProvider(.red),\n    ]),\n\n    \"Issues\/issue_2150\": .customValueProviders([\n      \"**.Color\": ColorValueProvider(.red),\n    ]),\n\n    \"Issues\/issue_2094\": .customValueProviders([\n      \"**.Stroke Width\": FloatValueProvider(2),\n    ]),\n\n    \"Issues\/issue_2262\": .customValueProviders([\n      \"**.Accent.**.Color\": ColorValueProvider(.black),\n    ]),\n\n    \/\/ Test cases for `AnimatedImageProvider`\n    \/\/  - These snapshots are pretty large (2 MB) by default, so we limit their number and size.\n    \"Nonanimating\/dog\": .customImageProvider(HardcodedImageProvider(imageName: \"Samples\/Images\/dog.png\"))\n      .nonanimating()\n      .precision(0.9),\n    \"Nonanimating\/dog_landscape\": .customImageProvider(HardcodedImageProvider(imageName: \"Samples\/Images\/dog-landscape.jpeg\"))\n      .nonanimating()\n      .precision(0.9),\n\n    \/\/ Test cases for `AnimationTextProvider`\n    \"Issues\/issue_1722\": .customTextProvider(HardcodedTextProvider(text: \"Bounce-bounce\")),\n\n    \"Issues\/issue_1949_full_paths\": SnapshotConfiguration\n      .customTextProvider(DictionaryTextProvider([\n        \"ENVELOPE-FRONT.sender_username\": \"Lottie\",\n        \"ENVELOPE-FRONT.From\": \"Airbnb (front)\",\n        \"ENVELOPE-BACK-TEXTBOX.LETTER-TEXTBOX.sender_username\": \"Airbnb (back)\",\n        \"ENVELOPE-BACK-TEXTBOX.LETTER-TEXTBOX.custom_text\": \"Text providers are cool!\",\n      ]))\n      .progressValuesToSnapshot([0.3, 0.75]),\n\n    \"Issues\/issue_1949_short_paths\": SnapshotConfiguration\n      .customTextProvider(DictionaryTextProvider([\n        \"sender_username\": \"Lottie\",\n        \"From\": \"Airbnb\",\n        \"custom_text\": \"Text providers are cool!\",\n      ]))\n      .progressValuesToSnapshot([0.3, 0.75]),\n\n    \"Issues\/issue_2209\": SnapshotConfiguration.default\n      .framesToSnapshot([\n        4.999, \/\/ Should show frame 4\n        5.0, \/\/ Should show frame 5\n        9.9999999, \/\/ Should show frame 9\n        10, \/\/ Should show frame 10\n      ]),\n\n    \"Issues\/issue_2226\": SnapshotConfiguration.default\n      .framesToSnapshot([\n        19.25,\n        113,\n      ]),\n\n    \/\/ Test cases for `AnimationFontProvider`\n    \"Nonanimating\/Text_Glyph\": .customFontProvider(HardcodedFontProvider(font: UIFont(name: \"Chalkduster\", size: 36)!)),\n\n    \/\/ Test cases for `RenderingEngineOption.automatic`\n    \"9squares_AlBoardman\": .useAutomaticRenderingEngine, \/\/ Supports the Core Animation engine\n    \"LottieFiles\/shop\": .useAutomaticRenderingEngine, \/\/ Throws a compatibility error in `init`\n    \"TypeFace\/G\": { \/\/ Throws a compatibility error in `display()`\n      var configuration = SnapshotConfiguration.useAutomaticRenderingEngine\n      configuration.customValueProviders = [\n        \"G 2.Ellipse 1.Stroke 1.Color\": ColorValueProvider(.red),\n        \"G Outlines 3.G.Fill 1.Color\": ColorValueProvider(.red),\n        \"Shape Layer 18.Shape 1.Stroke 2.Color\": ColorValueProvider(.red),\n      ]\n      return configuration\n    }(),\n\n    \/\/\/ Animations which are very expensive to render using the Core Animation rendering engine,\n    \/\/\/ and should fall back to the Main Thread engine when using `RenderingEngineOption.automatic`.\n    \"Issues\/pr_2286\": .excludeCoreAnimationRenderingEngine,\n\n    \/\/ Other misc test cases\n    \"Issues\/issue_2310\": .customViewportFrame(\n      CGRect(x: 0, y: 0, width: 85, height: 85).insetBy(dx: 10, dy: 10)),\n  ]"
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 195, Column: 7",
+    "H_initialValue" : "SnapshotConfiguration.useAutomaticRenderingEngine"
+  },
+  {
+    "A_name" : "SnapshotConfiguration",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 216, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "`default`",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 218, Column: 3",
+        "H_initialValue" : "SnapshotConfiguration()"
+      },
+      {
+        "A_name" : "useAutomaticRenderingEngine",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 221, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "excludeCoreAnimationRenderingEngine",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 229, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "forSample",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 237, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "named"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "precision",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 246, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "configuration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotConfiguration.swift - Line: 247, Column: 5",
+            "H_initialValue" : "SnapshotConfiguration.default"
+          }
+        ],
+        "I_parameterType" : [
+          "Float"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "customValueProviders",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 253, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "configuration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotConfiguration.swift - Line: 257, Column: 5",
+            "H_initialValue" : "SnapshotConfiguration.default"
+          }
+        ],
+        "I_parameterType" : [
+          "[AnimationKeypath: AnyValueProvider]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "customImageProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 263, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "configuration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotConfiguration.swift - Line: 267, Column: 5",
+            "H_initialValue" : "SnapshotConfiguration.default"
+          }
+        ],
+        "I_parameterType" : [
+          "AnimationImageProvider"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "customTextProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 272, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "configuration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotConfiguration.swift - Line: 276, Column: 5",
+            "H_initialValue" : "SnapshotConfiguration.default"
+          }
+        ],
+        "I_parameterType" : [
+          "AnimationKeypathTextProvider"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "customFontProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 282, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "configuration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotConfiguration.swift - Line: 286, Column: 5",
+            "H_initialValue" : "SnapshotConfiguration.default"
+          }
+        ],
+        "I_parameterType" : [
+          "AnimationFontProvider"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "customViewportFrame",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 292, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "configuration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotConfiguration.swift - Line: 293, Column: 5",
+            "H_initialValue" : "SnapshotConfiguration.default"
+          }
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "nonanimating",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 299, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "copy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotConfiguration.swift - Line: 300, Column: 5",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "progressValuesToSnapshot",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 306, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "copy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotConfiguration.swift - Line: 307, Column: 5",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "[Double]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "framesToSnapshot",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 313, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "copy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotConfiguration.swift - Line: 314, Column: 5",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "[Double]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "maxSnapshotDimension",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 320, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "copy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotConfiguration.swift - Line: 321, Column: 5",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "precision",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 327, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "copy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SnapshotConfiguration.swift - Line: 328, Column: 5",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "Float"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SnapshotConfiguration"
+      },
+      {
+        "A_name" : "shouldSnapshot",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 334, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieConfiguration"
+        ],
+        "I_parameters" : [
+          "using"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "`default`",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 218, Column: 3",
+    "H_initialValue" : "SnapshotConfiguration()"
+  },
+  {
+    "A_name" : "useAutomaticRenderingEngine",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 221, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 222, Column: 5",
+    "H_initialValue" : "SnapshotConfiguration.default"
+  },
+  {
+    "A_name" : "excludeCoreAnimationRenderingEngine",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 229, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 230, Column: 5",
+    "H_initialValue" : "SnapshotConfiguration.default"
+  },
+  {
+    "A_name" : "forSample",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 237, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "named"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "precision",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 246, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "configuration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 247, Column: 5",
+        "H_initialValue" : "SnapshotConfiguration.default"
+      }
+    ],
+    "I_parameterType" : [
+      "Float"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 247, Column: 5",
+    "H_initialValue" : "SnapshotConfiguration.default"
+  },
+  {
+    "A_name" : "customValueProviders",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 253, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "configuration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 257, Column: 5",
+        "H_initialValue" : "SnapshotConfiguration.default"
+      }
+    ],
+    "I_parameterType" : [
+      "[AnimationKeypath: AnyValueProvider]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 257, Column: 5",
+    "H_initialValue" : "SnapshotConfiguration.default"
+  },
+  {
+    "A_name" : "customImageProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 263, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "configuration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 267, Column: 5",
+        "H_initialValue" : "SnapshotConfiguration.default"
+      }
+    ],
+    "I_parameterType" : [
+      "AnimationImageProvider"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 267, Column: 5",
+    "H_initialValue" : "SnapshotConfiguration.default"
+  },
+  {
+    "A_name" : "customTextProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 272, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "configuration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 276, Column: 5",
+        "H_initialValue" : "SnapshotConfiguration.default"
+      }
+    ],
+    "I_parameterType" : [
+      "AnimationKeypathTextProvider"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 276, Column: 5",
+    "H_initialValue" : "SnapshotConfiguration.default"
+  },
+  {
+    "A_name" : "customFontProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 282, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "configuration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 286, Column: 5",
+        "H_initialValue" : "SnapshotConfiguration.default"
+      }
+    ],
+    "I_parameterType" : [
+      "AnimationFontProvider"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 286, Column: 5",
+    "H_initialValue" : "SnapshotConfiguration.default"
+  },
+  {
+    "A_name" : "customViewportFrame",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 292, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "configuration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 293, Column: 5",
+        "H_initialValue" : "SnapshotConfiguration.default"
+      }
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 293, Column: 5",
+    "H_initialValue" : "SnapshotConfiguration.default"
+  },
+  {
+    "A_name" : "nonanimating",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 299, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 300, Column: 5",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 300, Column: 5",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "progressValuesToSnapshot",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 306, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 307, Column: 5",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "[Double]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 307, Column: 5",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "framesToSnapshot",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 313, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 314, Column: 5",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "[Double]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 314, Column: 5",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "maxSnapshotDimension",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 320, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 321, Column: 5",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 321, Column: 5",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "precision",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 327, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 328, Column: 5",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "Float"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SnapshotConfiguration"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 328, Column: 5",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "shouldSnapshot",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 334, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieConfiguration"
+    ],
+    "I_parameters" : [
+      "using"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "LottieColor",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 348, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "black",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 349, Column: 3",
+        "H_initialValue" : "LottieColor(r: 0, g: 0, b: 0, a: 1)"
+      },
+      {
+        "A_name" : "red",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 350, Column: 3",
+        "H_initialValue" : "LottieColor(r: 1, g: 0, b: 0, a: 1)"
+      },
+      {
+        "A_name" : "blue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SnapshotConfiguration.swift - Line: 351, Column: 3",
+        "H_initialValue" : "LottieColor(r: 0, g: 0, b: 1, a: 1)"
+      }
+    ]
+  },
+  {
+    "A_name" : "black",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 349, Column: 3",
+    "H_initialValue" : "LottieColor(r: 0, g: 0, b: 0, a: 1)"
+  },
+  {
+    "A_name" : "red",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 350, Column: 3",
+    "H_initialValue" : "LottieColor(r: 1, g: 0, b: 0, a: 1)"
+  },
+  {
+    "A_name" : "blue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SnapshotConfiguration.swift - Line: 351, Column: 3",
+    "H_initialValue" : "LottieColor(r: 0, g: 0, b: 1, a: 1)"
+  }
+]
