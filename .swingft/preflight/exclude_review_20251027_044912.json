@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-10-27T04:49:12.060278Z",
+  "kind": "exclude_review",
+  "project_input": "/Users/lanian/Desktop/UIKit+SPM_2",
+  "ast_node_path": "/Users/lanian/Desktop/test/Obfuscation_Pipeline/AST/output/ast_node.json",
+  "approved_identifiers": [
+    "changeSystemFont",
+    "chooseViewModel",
+    "createMenuLabelText",
+    "deleteSelectedFeeling",
+    "detailViewModel",
+    "getFeelings",
+    "getRestaurantsData",
+    "hideDeleteButton",
+    "loadFeelingUseCase",
+    "loadRemoteUrlPresetDataUseCase",
+    "loadRestaurantUseCase",
+    "loadSelectedRestaurantUseCase",
+    "onSelectRestaurant",
+    "restaurantRepository",
+    "setBackgroundColor",
+    "setupAntiCaptureView",
+    "setupBind",
+    "setupVM",
+    "setupVPNBlock"
+  ],
+  "source": "exclude_review",
+  "decision_basis": "user_confirmation_only"
+}
