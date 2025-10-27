@@ -4,6 +4,9 @@ import json
 KEYWORD = set()
 
 def get_keyworkd(node):
+    if not isinstance(node, dict):
+        return
+    
     kind = node.get("B_kind")
     access = node.get("C_accessLevel")
     attr = node.get("D_attributes", [])
@@ -16,6 +19,9 @@ def repeat_match_member(data):
     if data is None: 
         return
     node = data.get("node", data)
+    if not isinstance(node, dict):
+        return
+    
     extensions = data.get("extension", [])
     children = data.get("children", [])
 
@@ -37,9 +43,9 @@ def find_node(data):
             get_keyworkd(node)
 
 def find_keyword():
-    input_file_1 = "./AST/output/inheritance_node.json"
-    input_file_2 = "./AST/output/no_inheritance_node.json"
-    output_file = "./AST/output/keyword_list.txt"
+    input_file_1 = os.path.join(".", "AST", "output", "inheritance_node.json")
+    input_file_2 = os.path.join(".", "AST", "output", "no_inheritance_node.json")
+    output_file = os.path.join(".", "AST", "output", "keyword_list.txt")
     
     if os.path.exists(input_file_1):
         with open(input_file_1, "r", encoding="utf-8") as f:

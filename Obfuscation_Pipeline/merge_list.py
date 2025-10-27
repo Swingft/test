@@ -21,8 +21,9 @@ def repeat_match_node(data):
     if data is None: 
             return
     node = data.get("node", data)
-    if not node:
-        node = data
+    if not isinstance(node, dict):
+        return
+    
     extensions = data.get("extension", [])
     children = data.get("children", [])
     
@@ -34,13 +35,13 @@ def repeat_match_node(data):
         repeat_match_node(child)
 
 def merge_llm_and_rule():
-    llm_output = "../llm_output.txt"
+    llm_output = os.path.join("..", "llm_output.txt")
     if os.path.exists(llm_output):
         with open(llm_output, "r", encoding="utf-8") as f:
             for line in f:
                 LLM_ID.append(line.strip())
 
-        file_path = "../AST-Code/output/ast_node.json"
+        file_path = os.path.join("..", "AST-Code", "output", "ast_node.json")
         if os.path.exists(file_path):
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)

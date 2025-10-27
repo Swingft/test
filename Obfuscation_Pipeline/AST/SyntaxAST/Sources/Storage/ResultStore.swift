@@ -7,7 +7,7 @@
 
 //  AST 분석 결과 저장소
 
-class ResultStore {
+internal class ResultStore {
     private var _results: [IdentifierInfo] = []
     private var _typealiasResults: [TypealiasInfo] = []
     private var _importResult: Set<String> = []

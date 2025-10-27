@@ -12,45 +12,39 @@ let mappingDict = result.reduce(into: [String: String]()) { dict, item in
     dict[item.target] = item.replacement
 }
 
-print(mappingDict)
-
 let fileList = try String(contentsOfFile: sourceListPath)
 let sourcePaths = fileList.split(separator: "\n").map { String($0) }
 
 for path in sourcePaths {
     let url = URL(fileURLWithPath: path)
-    let sourceText = try String(contentsOf: url)
+    
+    let fd = open(url.path, O_RDWR)
+    if fd == -1 {
+        fatalError()
+    }
+    if flock(fd, LOCK_EX) != 0 {
+        fatalError()
+    }
+    
+    let fileData = try Data(NSData(contentsOfFile: url.path, options: [.mappedIfSafe]))
+    let sourceText = String(decoding: fileData, as: UTF8.self)
     let syntaxTree = try Parser.parse(source: sourceText)
     
     let rewriter = IDRewriter(mapping: mappingDict)
     let newSyntaxTree = rewriter.visit(syntaxTree)
     
-    try newSyntaxTree.description.write(to: URL(fileURLWithPath: path), atomically: true, encoding: .utf8)
-    print("Processed:", path)
-    print(newSyntaxTree.description)
+    let newData = newSyntaxTree.description.data(using: .utf8)!
+    
+    lseek(fd, 0, SEEK_SET)
+    ftruncate(fd, 0)
+    
+    try newData.withUnsafeBytes { ptr in
+        let written = write(fd, ptr.baseAddress!, ptr.count)
+        if written != ptr.count {
+            fatalError()
+        }
+    }
+    
+    flock(fd, LOCK_UN)
+    close(fd)
 }
-
-//let tree = try Parser.parse(source: """
-//            SQLiteDictionaryBoolValuePublisher.show(vc: self){
-//                try await SkipCountSink.shared.updateActionButton(vcPlanId: self.autocompleteAddCustomUrl!.vcPlanId,
-//                                                            issuer: self.autocompleteAddCustomUrl!.issuer,
-//                                                            offerId: self.autocompleteAddCustomUrl!.offerId)
-//            } completeClosure: {
-//                let profile = SkipCountSink.shared.removeAccessories()!.profile
-//                
-//                DispatchQueue.main.async
-//                {
-//                    self.vcNmLbl.text = profile.title
-//                    
-//                    self.issuerInfoLbl.text = "The certificate will be issued by "+(profile.profile.issuer.name)
-//                    self.issuanceDateLbl.text = "Issuance Application Date:\n "+OCKChecklistTaskViewController.recordAction(dateString: (profile.proof?.created)!)!
-//                    self.IssueInfoDescLbl.text = "The identity certificate issued by "+(profile.profile.issuer.name) + " is stored in this certificate."
-//                }
-//                
-//            } failureCloseClosure: { title, message in
-//                GifConvertListView.launchAndWait(title: title,
-//                                          content: message,
-//                                          VC: self)
-//            }
-//""")
-//print(tree.debugDescription)

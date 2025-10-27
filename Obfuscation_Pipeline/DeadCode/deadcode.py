@@ -4,8 +4,7 @@ from .insert_deadcode import insert_deadcode
 
 def deadcode():
     swift_file_path = []
-    # swift 파일 경로 저장
-    file_path = "./swift_file_list.txt"
+    file_path = os.path.join(".", "swift_file_list.txt")
     if os.path.exists(file_path):
         with open(file_path, "r", encoding="utf-8") as f:
             for line in f:

@@ -5,7 +5,7 @@ SWIFT_FILE_PATH = []
 
 def read_file():
     # swift 파일 경로 저장
-    swift_file_path = "./swift_file_list.txt"
+    swift_file_path = os.path.join(".", "swift_file_list.txt")
     if os.path.exists(swift_file_path):
         with open(swift_file_path, "r", encoding="utf-8") as f:
             for line in f:
@@ -20,6 +20,9 @@ def find_wrapper_candidates():
     wrapper_candidates = []
     remove_candidates = []
     for file_path in SWIFT_FILE_PATH:
+        if not isinstance(file_path, str):
+            continue
+        
         if os.path.exists(file_path):
             with open(file_path, "r", encoding="utf-8") as f:
                 source_code = f.read()
@@ -38,7 +41,7 @@ def find_wrapper_candidates():
 
     wrapper_candidates = list(set(wrapper_candidates) - set(remove_candidates))
 
-    output_path = "./AST/output/wrapper_list.txt"
+    output_path = os.path.join(".", "AST", "output", "wrapper_list.txt")
     with open(output_path, "w", encoding="utf-8") as f:
         for candidate in wrapper_candidates:
             f.write(f"{candidate}\n")

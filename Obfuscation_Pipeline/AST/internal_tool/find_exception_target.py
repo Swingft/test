@@ -2,6 +2,7 @@ import json
 import re
 import os
 
+VISITED_NODE = set()
 MATCHED_LIST = []
 STORYBOARD_AND_XC_WRAP_NAME = []
 
@@ -12,7 +13,7 @@ def in_matched_list(node):
 
 # 스토리보드, xcassets
 def get_storyboard_and_xc_wrapper_info():
-    storyboard_path = "./AST/output/storyboard_list.txt"
+    storyboard_path = os.path.join(".", "AST", "output", "storyboard_list.txt")
     if os.path.exists(storyboard_path):
         with open(storyboard_path, "r", encoding="utf-8") as f:
             for name in f:
@@ -20,7 +21,7 @@ def get_storyboard_and_xc_wrapper_info():
                 if name:
                     STORYBOARD_AND_XC_WRAP_NAME.append(name)
 
-    xc_path = "./AST/output/xc_list.txt"
+    xc_path = os.path.join(".", "AST", "output", "xc_list.txt")
     if os.path.exists(xc_path):
         with open(xc_path, "r", encoding="utf-8") as f:
             for name in f:
@@ -28,7 +29,7 @@ def get_storyboard_and_xc_wrapper_info():
                 if name:
                     STORYBOARD_AND_XC_WRAP_NAME.append(name)
     
-    wrapper_path = "./AST/output/wrapper_list.txt"
+    wrapper_path = os.path.join(".", "AST", "output", "wrapper_list.txt")
     if os.path.exists(wrapper_path):
         with open(wrapper_path, "r", encoding="utf-8") as f:
             for name in f:
@@ -36,7 +37,7 @@ def get_storyboard_and_xc_wrapper_info():
                 if name:
                     STORYBOARD_AND_XC_WRAP_NAME.append(name)
     
-    keyword_path = "./AST/output/keyword_list.txt"
+    keyword_path = os.path.join(".", "AST", "output", "keyword_list.txt")
     if os.path.exists(keyword_path):
         with open(keyword_path, "r", encoding="utf-8") as f:
             for name in f:
@@ -50,6 +51,9 @@ def check_attribute(node, p_same_name):
         for member in members:
             check_attribute(member, p_same_name)
 
+    if not isinstance(node, dict):
+        return
+    
     attributes = node.get("D_attributes", [])
     adopted = node.get("E_adoptedClassProtocols", [])
     members = node.get("G_members", [])
@@ -111,7 +115,15 @@ def check_attribute(node, p_same_name):
 def repeat_match_member(data, p_same_name):
     if data is None: 
         return
-    node = data.get("node", data)
+    node = data.get("node") or data
+    if not node:
+        return
+    
+    node_id = id(node)
+    if node_id in VISITED_NODE:
+        return
+    VISITED_NODE.add(node_id)
+
     extensions = data.get("extension", [])
     children = data.get("children", [])
 
@@ -132,9 +144,9 @@ def find_node(data, p_same_name):
             check_attribute(node, p_same_name)
 
 def find_exception_target(p_same_name):
-    input_file_1 = "./AST/output/inheritance_node.json"
-    input_file_2 = "./AST/output/no_inheritance_node.json"
-    output_file_1 = "./AST/output/internal_exception_list.json"
+    input_file_1 = os.path.join(".", "AST", "output", "inheritance_node.json")
+    input_file_2 = os.path.join(".", "AST", "output", "no_inheritance_node.json")
+    output_file_1 = os.path.join(".", "AST", "output", "internal_exception_list.json")
 
     get_storyboard_and_xc_wrapper_info()
     
@@ -150,7 +162,7 @@ def find_exception_target(p_same_name):
     with open(output_file_1, "w", encoding="utf-8") as f:
         json.dump(MATCHED_LIST, f, indent=2, ensure_ascii=False)
     
-    temp = "./AST/output/external_name.txt"
+    temp = os.path.join(".", "AST", "output", "external_name.txt")
     with open(temp, "w", encoding="utf-8") as f:
         for name in p_same_name:
             f.write(f"{name}\n")
