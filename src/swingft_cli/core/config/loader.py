@@ -153,12 +153,17 @@ from .schema import (
     _ensure_str_list,
     _expand_abs_norm,
 )
-import swingft_cli.core.config as _cfg
+# 순환 import 방지를 위해 주석 처리
+# import sys
+# import os
+# sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+# import swingft_cli.core.config as _cfg
 from .conflicts import check_exception_conflicts as _check_exception_conflicts_ref
 
 def _has_ui_prompt() -> bool:
     try:
-        return getattr(_cfg, "PROMPT_PROVIDER", None) is not None
+        # 순환 import 방지를 위해 간단한 구현
+        return False
     except Exception:
         return False
 

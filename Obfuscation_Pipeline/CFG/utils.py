@@ -10,7 +10,7 @@ import json
 import os
 import shutil
 import sys
-from typing import List, Dict, Optional
+from typing import List
 
 # ---------- 전역 설정 ----------
 APP_TAG = "[dyn_obf]"

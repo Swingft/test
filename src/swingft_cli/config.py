@@ -5,15 +5,15 @@ from __future__ import annotations
 
 from typing import Any, Dict, Iterable, List, Tuple
 
-from swingft_cli.core.config.loader import load_config_or_exit
-from swingft_cli.core.config.rules import (
+from .core.config.loader import load_config_or_exit
+from .core.config.rules import (
     extract_rule_patterns,
     summarize_identifier_presence,
     clear_identifier_cache,
 )
 
 # Backwards-compatible APIs
-from swingft_cli.core.config.rules import scan_swift_identifiers as scan_swift_identifiers  # re-export
+from .core.config.rules import scan_swift_identifiers as scan_swift_identifiers  # re-export
 
 def summarize_risks_and_confirm(config: Dict[str, Any], auto_yes: bool = False) -> bool:
     """Summarize risks and get user confirmation"""
