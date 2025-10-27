@@ -1,7 +1,14 @@
 from __future__ import annotations
 
+import logging
 from pathlib import Path
-from typing import Optional, List
+from typing import Optional, List, Tuple
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
 class ParseState:
@@ -22,6 +29,10 @@ class StateContext:
         self.state = state
         self.hash_count = hash_count
         self.quote_count = quote_count
+
+
+class CommentRemovalError(Exception):
+    pass
 
 
 class SwiftCommentRemover:
@@ -45,25 +56,33 @@ class SwiftCommentRemover:
         self.line_had_content = False
 
     def remove_comments(self, source: str) -> str:
-        self.source = source
-        self.result = []
-        self.i = 0
-        self.length = len(source)
-        self.state_stack = []
-        self.current_state = ParseState.NORMAL
-        self.nesting_level = 0
-        self.current_hash_count = 0
-        self.current_quote_count = 0
-        self.interpolation_depth = 0
-        self.brace_depth = 0
-        self.bracket_depth = 0
-        self.line_had_content = False
+        if not isinstance(source, str):
+            raise CommentRemovalError(f"소스는 문자열이어야 합니다. 받은 타입: {type(source)}")
 
-        while self.i < self.length:
-            self._process_current_char()
-            self.i += 1
+        try:
+            self.source = source
+            self.result = []
+            self.i = 0
+            self.length = len(source)
+            self.state_stack = []
+            self.current_state = ParseState.NORMAL
+            self.nesting_level = 0
+            self.current_hash_count = 0
+            self.current_quote_count = 0
+            self.interpolation_depth = 0
+            self.brace_depth = 0
+            self.bracket_depth = 0
+            self.line_had_content = False
 
-        return ''.join(self.result)
+            while self.i < self.length:
+                self._process_current_char()
+                self.i += 1
+
+            return ''.join(self.result)
+        except IndexError as e:
+            raise CommentRemovalError(f"인덱스 범위 초과 오류 (위치: {self.i}): {str(e)}")
+        except Exception as e:
+            raise CommentRemovalError(f"파싱 중 예상치 못한 오류 발생 (위치: {self.i}): {str(e)}")
 
     def _process_current_char(self):
         handlers = {
@@ -333,19 +352,94 @@ class SwiftCommentRemover:
         self._append(char)
 
 
-def strip_comments_in_place(project_dir: str) -> None:
-    """Recursively remove comments from all .swift files under project_dir (in-place)."""
+def strip_comments_in_place(project_dir: str) -> Tuple[int, int, List[str]]:
     root = Path(project_dir)
+
     if not root.exists():
-        return
+        raise ValueError(f"디렉토리가 존재하지 않습니다: {project_dir}")
+
+    if not root.is_dir():
+        raise ValueError(f"디렉토리가 아닙니다: {project_dir}")
+
     remover = SwiftCommentRemover()
-    for fp in root.rglob("*.swift"):
+    success_count = 0
+    failure_count = 0
+    failed_files = []
+
+    swift_files = list(root.rglob("*.swift"))
+
+    if not swift_files:
+        logger.warning(f"Swift 파일을 찾을 수 없습니다: {project_dir}")
+        return 0, 0, []
+
+    logger.info(f"총 {len(swift_files)}개의 Swift 파일 발견")
+
+    for fp in swift_files:
         try:
-            text = fp.read_text(encoding="utf-8")
+            try:
+                text = fp.read_text(encoding="utf-8")
+            except UnicodeDecodeError:
+                logger.warning(f"UTF-8 디코딩 실패, 다른 인코딩 시도: {fp}")
+                text = fp.read_text(encoding="utf-8", errors="ignore")
+
             cleaned = remover.remove_comments(text)
+
             if cleaned != text:
                 fp.write_text(cleaned, encoding="utf-8")
-        except Exception:
-            continue
+                logger.debug(f"주석 제거 완료: {fp}")
+
+            success_count += 1
+
+        except CommentRemovalError as e:
+            logger.error(f"주석 제거 실패: {fp} - {str(e)}")
+            failure_count += 1
+            failed_files.append(str(fp))
+
+        except PermissionError as e:
+            logger.error(f"파일 권한 오류: {fp} - {str(e)}")
+            failure_count += 1
+            failed_files.append(str(fp))
+
+        except OSError as e:
+            logger.error(f"파일 시스템 오류: {fp} - {str(e)}")
+            failure_count += 1
+            failed_files.append(str(fp))
+
+        except Exception as e:
+            logger.error(f"예상치 못한 오류 발생: {fp} - {type(e).__name__}: {str(e)}")
+            failure_count += 1
+            failed_files.append(str(fp))
+
+    logger.info(f"처리 완료 - 성공: {success_count}, 실패: {failure_count}")
+
+    return success_count, failure_count, failed_files
 
 
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) < 2:
+        print("사용법: python swift_comment_remover_secure.py <project_directory>")
+        sys.exit(1)
+
+    project_path = sys.argv[1]
+
+    try:
+        success, failure, failed = strip_comments_in_place(project_path)
+        print(f"\n처리 결과:")
+        print(f"  성공: {success}개 파일")
+        print(f"  실패: {failure}개 파일")
+
+        if failed:
+            print(f"\n실패한 파일 목록:")
+            for file_path in failed:
+                print(f"  - {file_path}")
+
+        sys.exit(0 if failure == 0 else 1)
+
+    except ValueError as e:
+        logger.error(str(e))
+        sys.exit(1)
+    except Exception as e:
+        logger.error(f"치명적 오류: {type(e).__name__}: {str(e)}")
+        sys.exit(1)
