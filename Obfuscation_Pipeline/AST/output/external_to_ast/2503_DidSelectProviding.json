@@ -1,0 +1,109 @@
+[
+  {
+    "A_name" : "DidSelectProviding",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DidSelectProviding.swift - Line: 8, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "CallbackContextEpoxyModeled",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DidSelectProviding.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "didSelect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DidSelectProviding.swift - Line: 20, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "didSelect",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DidSelectProviding.swift - Line: 27, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DidSelect?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "didSelectProperty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DidSelectProviding.swift - Line: 33, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "didSelect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DidSelectProviding.swift - Line: 20, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "didSelect",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DidSelectProviding.swift - Line: 27, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DidSelect?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "didSelectProperty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DidSelectProviding.swift - Line: 33, Column: 3",
+    "H_initialValue" : ""
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "A_name" : "Bundle",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Bundle+Module.swift - Line: 6, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lottie",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Bundle+Module.swift - Line: 8, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "fileURLs",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Bundle+Module.swift - Line: 13, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "enumerator",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Bundle+Module.swift - Line: 14, Column: 5",
+            "H_initialValue" : "FileManager.default.enumerator(atPath: Bundle.lottie.bundlePath)!"
+          },
+          {
+            "A_name" : "fileURLs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Bundle+Module.swift - Line: 16, Column: 5",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "in",
+          "withSuffix"
+        ],
+        "J_returnType" : "-> [URL]"
+      }
+    ]
+  },
+  {
+    "A_name" : "lottie",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Bundle+Module.swift - Line: 8, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fileURLs",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Bundle+Module.swift - Line: 13, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "enumerator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Bundle+Module.swift - Line: 14, Column: 5",
+        "H_initialValue" : "FileManager.default.enumerator(atPath: Bundle.lottie.bundlePath)!"
+      },
+      {
+        "A_name" : "fileURLs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Bundle+Module.swift - Line: 16, Column: 5",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "in",
+      "withSuffix"
+    ],
+    "J_returnType" : "-> [URL]"
+  },
+  {
+    "A_name" : "enumerator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Bundle+Module.swift - Line: 14, Column: 5",
+    "H_initialValue" : "FileManager.default.enumerator(atPath: Bundle.lottie.bundlePath)!"
+  },
+  {
+    "A_name" : "fileURLs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Bundle+Module.swift - Line: 16, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Bundle+Module.swift - Line: 23, Column: 9",
+    "H_initialValue" : "Bundle.lottie.bundleURL.appendingPathComponent(fileSubpath)"
+  }
+]

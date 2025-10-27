@@ -1,0 +1,120 @@
+[
+  {
+    "A_name" : "ResultViewModel",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ResultViewModel.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "firstImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResultViewModel.swift - Line: 12, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "secondImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResultViewModel.swift - Line: 13, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "thirdImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResultViewModel.swift - Line: 14, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResultViewModel.swift - Line: 16, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UIImage",
+          "UIImage",
+          "UIImage"
+        ],
+        "I_parameters" : [
+          "firstImage",
+          "secondImage",
+          "thirdImage"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "firstImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResultViewModel.swift - Line: 12, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "secondImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResultViewModel.swift - Line: 13, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "thirdImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResultViewModel.swift - Line: 14, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResultViewModel.swift - Line: 16, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UIImage",
+      "UIImage",
+      "UIImage"
+    ],
+    "I_parameters" : [
+      "firstImage",
+      "secondImage",
+      "thirdImage"
+    ]
+  }
+]

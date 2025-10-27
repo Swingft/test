@@ -1,0 +1,533 @@
+[
+  {
+    "A_name" : "TextLayerModel",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "LayerModel"
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 15, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextLayerModel.swift - Line: 16, Column: 5",
+            "H_initialValue" : "try decoder.container(keyedBy: TextLayerModel.CodingKeys.self)"
+          },
+          {
+            "A_name" : "textContainer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextLayerModel.swift - Line: 17, Column: 5",
+            "H_initialValue" : "try container.nestedContainer(keyedBy: TextCodingKeys.self, forKey: .textGroup)"
+          }
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 23, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "containerDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextLayerModel.swift - Line: 24, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.textGroup)"
+          },
+          {
+            "A_name" : "textDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextLayerModel.swift - Line: 25, Column: 5",
+            "H_initialValue" : "try containerDictionary.value(for: TextCodingKeys.text)"
+          },
+          {
+            "A_name" : "animatorDictionaries",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextLayerModel.swift - Line: 27, Column: 5",
+            "H_initialValue" : "try containerDictionary.value(for: TextCodingKeys.animators)"
+          }
+        ],
+        "I_parameterType" : [
+          "[String: Any]"
+        ],
+        "I_parameters" : [
+          "dictionary"
+        ]
+      },
+      {
+        "A_name" : "text",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 35, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "animators",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 38, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 40, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextLayerModel.swift - Line: 42, Column: 5",
+            "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+          },
+          {
+            "A_name" : "textContainer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextLayerModel.swift - Line: 43, Column: 5",
+            "H_initialValue" : "container.nestedContainer(keyedBy: TextCodingKeys.self, forKey: .textGroup)"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      },
+      {
+        "A_name" : "CodingKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String",
+          "CodingKey"
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 50, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "textGroup",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextLayerModel.swift - Line: 51, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "TextCodingKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String",
+          "CodingKey"
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 54, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "text",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextLayerModel.swift - Line: 55, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "animators",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextLayerModel.swift - Line: 56, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 15, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 16, Column: 5",
+        "H_initialValue" : "try decoder.container(keyedBy: TextLayerModel.CodingKeys.self)"
+      },
+      {
+        "A_name" : "textContainer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 17, Column: 5",
+        "H_initialValue" : "try container.nestedContainer(keyedBy: TextCodingKeys.self, forKey: .textGroup)"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 16, Column: 5",
+    "H_initialValue" : "try decoder.container(keyedBy: TextLayerModel.CodingKeys.self)"
+  },
+  {
+    "A_name" : "textContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 17, Column: 5",
+    "H_initialValue" : "try container.nestedContainer(keyedBy: TextCodingKeys.self, forKey: .textGroup)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 23, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "containerDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 24, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.textGroup)"
+      },
+      {
+        "A_name" : "textDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 25, Column: 5",
+        "H_initialValue" : "try containerDictionary.value(for: TextCodingKeys.text)"
+      },
+      {
+        "A_name" : "animatorDictionaries",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 27, Column: 5",
+        "H_initialValue" : "try containerDictionary.value(for: TextCodingKeys.animators)"
+      }
+    ],
+    "I_parameterType" : [
+      "[String: Any]"
+    ],
+    "I_parameters" : [
+      "dictionary"
+    ]
+  },
+  {
+    "A_name" : "containerDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 24, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.textGroup)"
+  },
+  {
+    "A_name" : "textDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 25, Column: 5",
+    "H_initialValue" : "try containerDictionary.value(for: TextCodingKeys.text)"
+  },
+  {
+    "A_name" : "animatorDictionaries",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 27, Column: 5",
+    "H_initialValue" : "try containerDictionary.value(for: TextCodingKeys.animators)"
+  },
+  {
+    "A_name" : "text",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 35, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "animators",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 38, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 40, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 42, Column: 5",
+        "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+      },
+      {
+        "A_name" : "textContainer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 43, Column: 5",
+        "H_initialValue" : "container.nestedContainer(keyedBy: TextCodingKeys.self, forKey: .textGroup)"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 42, Column: 5",
+    "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+  },
+  {
+    "A_name" : "textContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 43, Column: 5",
+    "H_initialValue" : "container.nestedContainer(keyedBy: TextCodingKeys.self, forKey: .textGroup)"
+  },
+  {
+    "A_name" : "CodingKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String",
+      "CodingKey"
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 50, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "textGroup",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 51, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "TextCodingKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String",
+      "CodingKey"
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 54, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "text",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 55, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "animators",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextLayerModel.swift - Line: 56, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "TextLayerModel",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "TextLayerModel.swift - Line: 65, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

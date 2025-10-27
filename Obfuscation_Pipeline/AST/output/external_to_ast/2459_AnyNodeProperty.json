@@ -1,0 +1,332 @@
+[
+  {
+    "A_name" : "AnyNodeProperty",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "needsUpdate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyNodeProperty.swift - Line: 17, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "frame"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "update",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyNodeProperty.swift - Line: 20, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "valueContainer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyNodeProperty.swift - Line: 23, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "valueProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyNodeProperty.swift - Line: 26, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "originalValueProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyNodeProperty.swift - Line: 29, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "valueType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyNodeProperty.swift - Line: 32, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyNodeProperty.swift - Line: 35, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnyValueProvider"
+        ],
+        "I_parameters" : [
+          "provider"
+        ]
+      },
+      {
+        "A_name" : "removeProvider",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyNodeProperty.swift - Line: 38, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "needsUpdate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 17, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "frame"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "update",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 20, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "valueContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 23, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "valueProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 26, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "originalValueProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 29, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "valueType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 32, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 35, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnyValueProvider"
+    ],
+    "I_parameters" : [
+      "provider"
+    ]
+  },
+  {
+    "A_name" : "removeProvider",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 38, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "AnyNodeProperty",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 41, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "getValueOfType",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyNodeProperty.swift - Line: 44, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> T?"
+      },
+      {
+        "A_name" : "getValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnyNodeProperty.swift - Line: 49, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Any?"
+      }
+    ]
+  },
+  {
+    "A_name" : "getValueOfType",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 44, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> T?"
+  },
+  {
+    "A_name" : "getValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnyNodeProperty.swift - Line: 49, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Any?"
+  }
+]

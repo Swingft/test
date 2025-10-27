@@ -1,0 +1,208 @@
+[
+  {
+    "A_name" : "ReactivePickerViewControllerExample",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIViewController"
+    ],
+    "F_location" : "Example5_UIPickerView.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "firstPickerView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "IBOutlet",
+          "weak"
+        ],
+        "F_location" : "Example5_UIPickerView.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "secondPickerView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "IBOutlet",
+          "weak"
+        ],
+        "F_location" : "Example5_UIPickerView.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "thirdPickerView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "IBOutlet",
+          "weak"
+        ],
+        "F_location" : "Example5_UIPickerView.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "disposeBag",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example5_UIPickerView.swift - Line: 20, Column: 5",
+        "H_initialValue" : "DisposeBag()"
+      },
+      {
+        "A_name" : "stringPickerAdapter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example5_UIPickerView.swift - Line: 22, Column: 5",
+        "H_initialValue" : "RxPickerViewStringAdapter<[String]>(components: [],\n                                                                          numberOfComponents: { _,_,_  in 1 },\n                                                                          numberOfRowsInComponent: { _, _, items, _ -> Int in\n                                                                            return items.count\n                                                                          },\n                                                                          titleForRow: { _, _, items, row, _ -> String? in\n                                                                                return items[row]\n                                                                          })"
+      },
+      {
+        "A_name" : "attributedStringPickerAdapter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example5_UIPickerView.swift - Line: 30, Column: 5",
+        "H_initialValue" : "RxPickerViewAttributedStringAdapter<[String]>(\n        components: [],\n        numberOfComponents: { _,_,_  in 1 },\n        numberOfRowsInComponent: { _, _, items, _ -> Int in\n            return items.count\n        },\n        attributedTitleForRow: { _, _, items, row, _ -> NSAttributedString? in\n            NSAttributedString(\n                string: items[row],\n                attributes: [\n                    .foregroundColor: UIColor.purple,\n                    .underlineStyle: NSUnderlineStyle.double.rawValue,\n                    .textEffect: NSAttributedString.TextEffectStyle.letterpressStyle\n                ]\n            )\n        }\n    )"
+      },
+      {
+        "A_name" : "viewPickerAdapter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Example5_UIPickerView.swift - Line: 47, Column: 5",
+        "H_initialValue" : "RxPickerViewViewAdapter<[String]>(\n        components: [],\n        numberOfComponents: { _,_,_  in 1 },\n        numberOfRowsInComponent: { _, _, items, _ -> Int in\n            return items.count\n        },\n        viewForRow: { _, _, _, row, _, view -> UIView in\n            let componentView = view ?? UIView()\n            componentView.backgroundColor = row % 2 == 0 ? UIColor.red : UIColor.blue\n            return componentView\n        }\n    )"
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Example5_UIPickerView.swift - Line: 60, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "firstPickerView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "IBOutlet",
+      "weak"
+    ],
+    "F_location" : "Example5_UIPickerView.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "secondPickerView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "IBOutlet",
+      "weak"
+    ],
+    "F_location" : "Example5_UIPickerView.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "thirdPickerView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "IBOutlet",
+      "weak"
+    ],
+    "F_location" : "Example5_UIPickerView.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "disposeBag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example5_UIPickerView.swift - Line: 20, Column: 5",
+    "H_initialValue" : "DisposeBag()"
+  },
+  {
+    "A_name" : "stringPickerAdapter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example5_UIPickerView.swift - Line: 22, Column: 5",
+    "H_initialValue" : "RxPickerViewStringAdapter<[String]>(components: [],\n                                                                          numberOfComponents: { _,_,_  in 1 },\n                                                                          numberOfRowsInComponent: { _, _, items, _ -> Int in\n                                                                            return items.count\n                                                                          },\n                                                                          titleForRow: { _, _, items, row, _ -> String? in\n                                                                                return items[row]\n                                                                          })"
+  },
+  {
+    "A_name" : "attributedStringPickerAdapter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example5_UIPickerView.swift - Line: 30, Column: 5",
+    "H_initialValue" : "RxPickerViewAttributedStringAdapter<[String]>(\n        components: [],\n        numberOfComponents: { _,_,_  in 1 },\n        numberOfRowsInComponent: { _, _, items, _ -> Int in\n            return items.count\n        },\n        attributedTitleForRow: { _, _, items, row, _ -> NSAttributedString? in\n            NSAttributedString(\n                string: items[row],\n                attributes: [\n                    .foregroundColor: UIColor.purple,\n                    .underlineStyle: NSUnderlineStyle.double.rawValue,\n                    .textEffect: NSAttributedString.TextEffectStyle.letterpressStyle\n                ]\n            )\n        }\n    )"
+  },
+  {
+    "A_name" : "viewPickerAdapter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example5_UIPickerView.swift - Line: 47, Column: 5",
+    "H_initialValue" : "RxPickerViewViewAdapter<[String]>(\n        components: [],\n        numberOfComponents: { _,_,_  in 1 },\n        numberOfRowsInComponent: { _, _, items, _ -> Int in\n            return items.count\n        },\n        viewForRow: { _, _, _, row, _, view -> UIView in\n            let componentView = view ?? UIView()\n            componentView.backgroundColor = row % 2 == 0 ? UIColor.red : UIColor.blue\n            return componentView\n        }\n    )"
+  },
+  {
+    "A_name" : "componentView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Example5_UIPickerView.swift - Line: 54, Column: 13",
+    "H_initialValue" : "view ?? UIView()"
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Example5_UIPickerView.swift - Line: 60, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

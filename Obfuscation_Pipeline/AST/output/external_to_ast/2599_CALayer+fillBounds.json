@@ -1,0 +1,102 @@
+[
+  {
+    "A_name" : "CALayer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CALayer+fillBounds.swift - Line: 8, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "fillBoundsOfSuperlayer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "CALayer+fillBounds.swift - Line: 11, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "fillBoundsOfSuperlayer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "CALayer+fillBounds.swift - Line: 11, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "CustomLayoutLayer",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CALayer"
+    ],
+    "F_location" : "CALayer+fillBounds.swift - Line: 33, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "layout",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+fillBounds.swift - Line: 34, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "superlayerBounds"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "layout",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+fillBounds.swift - Line: 34, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "superlayerBounds"
+    ]
+  }
+]

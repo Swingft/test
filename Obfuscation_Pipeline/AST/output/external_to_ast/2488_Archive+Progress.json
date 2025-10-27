@@ -1,0 +1,282 @@
+[
+  {
+    "A_name" : "Archive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Archive+Progress.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "totalUnitCountForRemoving",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Progress.swift - Line: 19, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Entry"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Int64"
+      },
+      {
+        "A_name" : "makeProgressForRemoving",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Progress.swift - Line: 23, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Entry"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Progress"
+      },
+      {
+        "A_name" : "totalUnitCountForReading",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Progress.swift - Line: 32, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Entry"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Int64"
+      },
+      {
+        "A_name" : "makeProgressForReading",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Progress.swift - Line: 41, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Entry"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Progress"
+      },
+      {
+        "A_name" : "totalUnitCountForAddingItem",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Progress.swift - Line: 49, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "count",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+Progress.swift - Line: 50, Column: 5",
+            "H_initialValue" : "Int64(0)"
+          }
+        ],
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "at"
+        ],
+        "J_returnType" : "-> Int64"
+      },
+      {
+        "A_name" : "makeProgressForAddingItem",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Progress.swift - Line: 63, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "at"
+        ],
+        "J_returnType" : "-> Progress"
+      }
+    ]
+  },
+  {
+    "A_name" : "totalUnitCountForRemoving",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Progress.swift - Line: 19, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Entry"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Int64"
+  },
+  {
+    "A_name" : "makeProgressForRemoving",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Progress.swift - Line: 23, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Entry"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Progress"
+  },
+  {
+    "A_name" : "totalUnitCountForReading",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Progress.swift - Line: 32, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Entry"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Int64"
+  },
+  {
+    "A_name" : "makeProgressForReading",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Progress.swift - Line: 41, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Entry"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Progress"
+  },
+  {
+    "A_name" : "totalUnitCountForAddingItem",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Progress.swift - Line: 49, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "count",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+Progress.swift - Line: 50, Column: 5",
+        "H_initialValue" : "Int64(0)"
+      }
+    ],
+    "I_parameterType" : [
+      "URL"
+    ],
+    "I_parameters" : [
+      "at"
+    ],
+    "J_returnType" : "-> Int64"
+  },
+  {
+    "A_name" : "count",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Progress.swift - Line: 50, Column: 5",
+    "H_initialValue" : "Int64(0)"
+  },
+  {
+    "A_name" : "type",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Progress.swift - Line: 52, Column: 7",
+    "H_initialValue" : "try FileManager.typeForItem(at: url)"
+  },
+  {
+    "A_name" : "makeProgressForAddingItem",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+Progress.swift - Line: 63, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL"
+    ],
+    "I_parameters" : [
+      "at"
+    ],
+    "J_returnType" : "-> Progress"
+  }
+]

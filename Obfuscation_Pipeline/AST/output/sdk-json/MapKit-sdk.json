@@ -1,0 +1,4407 @@
+{
+  "MKAddressFilter": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKAddressFilter",
+    "members": {
+      "includingAll": {
+        "kind": "Var",
+        "type": "includingAll",
+        "usr": "c:objc(cs)MKAddressFilter(cpy)filterIncludingAll"
+      },
+      "excludingAll": {
+        "kind": "Var",
+        "type": "excludingAll",
+        "usr": "c:objc(cs)MKAddressFilter(cpy)filterExcludingAll"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "includes": {
+        "kind": "Func",
+        "type": "includes(_:)",
+        "usr": "c:objc(cs)MKAddressFilter(im)includesOptions:"
+      },
+      "excludes": {
+        "kind": "Func",
+        "type": "excludes(_:)",
+        "usr": "c:objc(cs)MKAddressFilter(im)excludesOptions:"
+      }
+    }
+  },
+  "Options": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapSnapshotOptions",
+    "members": {
+      "preferredConfiguration": {
+        "kind": "Var",
+        "type": "preferredConfiguration",
+        "usr": "c:objc(cs)MKMapSnapshotOptions(py)preferredConfiguration"
+      },
+      "camera": {
+        "kind": "Var",
+        "type": "camera",
+        "usr": "c:objc(cs)MKMapSnapshotOptions(py)camera"
+      },
+      "mapRect": {
+        "kind": "Var",
+        "type": "mapRect",
+        "usr": "c:objc(cs)MKMapSnapshotOptions(py)mapRect"
+      },
+      "region": {
+        "kind": "Var",
+        "type": "region",
+        "usr": "c:objc(cs)MKMapSnapshotOptions(py)region"
+      },
+      "mapType": {
+        "kind": "Var",
+        "type": "mapType",
+        "usr": "c:objc(cs)MKMapSnapshotOptions(py)mapType"
+      },
+      "pointOfInterestFilter": {
+        "kind": "Var",
+        "type": "pointOfInterestFilter",
+        "usr": "c:objc(cs)MKMapSnapshotOptions(py)pointOfInterestFilter"
+      },
+      "showsPointsOfInterest": {
+        "kind": "Var",
+        "type": "showsPointsOfInterest",
+        "usr": "c:objc(cs)MKMapSnapshotOptions(py)showsPointsOfInterest"
+      },
+      "showsBuildings": {
+        "kind": "Var",
+        "type": "showsBuildings",
+        "usr": "c:objc(cs)MKMapSnapshotOptions(py)showsBuildings"
+      },
+      "size": {
+        "kind": "Var",
+        "type": "size",
+        "usr": "c:objc(cs)MKMapSnapshotOptions(py)size"
+      },
+      "scale": {
+        "kind": "Var",
+        "type": "scale",
+        "usr": "c:objc(cs)MKMapSnapshotOptions(py)scale"
+      },
+      "traitCollection": {
+        "kind": "Var",
+        "type": "traitCollection",
+        "usr": "c:objc(cs)MKMapSnapshotOptions(py)traitCollection"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKAnnotation": {
+    "kind": "Protocol",
+    "module": "MapKit",
+    "usr": "c:objc(pl)MKAnnotation",
+    "members": {
+      "coordinate": {
+        "kind": "Var",
+        "type": "coordinate",
+        "usr": "c:objc(pl)MKAnnotation(py)coordinate"
+      },
+      "title": {
+        "kind": "Var",
+        "type": "title",
+        "usr": "c:objc(pl)MKAnnotation(py)title"
+      },
+      "subtitle": {
+        "kind": "Var",
+        "type": "subtitle",
+        "usr": "c:objc(pl)MKAnnotation(py)subtitle"
+      }
+    }
+  },
+  "MKAnnotationView": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKAnnotationView",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "reuseIdentifier": {
+        "kind": "Var",
+        "type": "reuseIdentifier",
+        "usr": "c:objc(cs)MKAnnotationView(py)reuseIdentifier"
+      },
+      "prepareForReuse": {
+        "kind": "Func",
+        "type": "prepareForReuse()",
+        "usr": "c:objc(cs)MKAnnotationView(im)prepareForReuse"
+      },
+      "prepareForDisplay": {
+        "kind": "Func",
+        "type": "prepareForDisplay()",
+        "usr": "c:objc(cs)MKAnnotationView(im)prepareForDisplay"
+      },
+      "annotation": {
+        "kind": "Var",
+        "type": "annotation",
+        "usr": "c:objc(cs)MKAnnotationView(py)annotation"
+      },
+      "image": {
+        "kind": "Var",
+        "type": "image",
+        "usr": "c:objc(cs)MKAnnotationView(py)image"
+      },
+      "centerOffset": {
+        "kind": "Var",
+        "type": "centerOffset",
+        "usr": "c:objc(cs)MKAnnotationView(py)centerOffset"
+      },
+      "accessoryOffset": {
+        "kind": "Var",
+        "type": "accessoryOffset",
+        "usr": "c:objc(cs)MKAnnotationView(py)accessoryOffset"
+      },
+      "calloutOffset": {
+        "kind": "Var",
+        "type": "calloutOffset",
+        "usr": "c:objc(cs)MKAnnotationView(py)calloutOffset"
+      },
+      "isEnabled": {
+        "kind": "Var",
+        "type": "isEnabled",
+        "usr": "c:objc(cs)MKAnnotationView(py)enabled"
+      },
+      "isHighlighted": {
+        "kind": "Var",
+        "type": "isHighlighted",
+        "usr": "c:objc(cs)MKAnnotationView(py)highlighted"
+      },
+      "isSelected": {
+        "kind": "Var",
+        "type": "isSelected",
+        "usr": "c:objc(cs)MKAnnotationView(py)selected"
+      },
+      "setSelected": {
+        "kind": "Func",
+        "type": "setSelected(_:animated:)",
+        "usr": "c:objc(cs)MKAnnotationView(im)setSelected:animated:"
+      },
+      "canShowCallout": {
+        "kind": "Var",
+        "type": "canShowCallout",
+        "usr": "c:objc(cs)MKAnnotationView(py)canShowCallout"
+      },
+      "leftCalloutAccessoryView": {
+        "kind": "Var",
+        "type": "leftCalloutAccessoryView",
+        "usr": "c:objc(cs)MKAnnotationView(py)leftCalloutAccessoryView"
+      },
+      "rightCalloutAccessoryView": {
+        "kind": "Var",
+        "type": "rightCalloutAccessoryView",
+        "usr": "c:objc(cs)MKAnnotationView(py)rightCalloutAccessoryView"
+      },
+      "detailCalloutAccessoryView": {
+        "kind": "Var",
+        "type": "detailCalloutAccessoryView",
+        "usr": "c:objc(cs)MKAnnotationView(py)detailCalloutAccessoryView"
+      },
+      "isDraggable": {
+        "kind": "Var",
+        "type": "isDraggable",
+        "usr": "c:objc(cs)MKAnnotationView(py)draggable"
+      },
+      "dragState": {
+        "kind": "Var",
+        "type": "dragState",
+        "usr": "c:objc(cs)MKAnnotationView(py)dragState"
+      },
+      "setDragState": {
+        "kind": "Func",
+        "type": "setDragState(_:animated:)",
+        "usr": "c:objc(cs)MKAnnotationView(im)setDragState:animated:"
+      },
+      "clusteringIdentifier": {
+        "kind": "Var",
+        "type": "clusteringIdentifier",
+        "usr": "c:objc(cs)MKAnnotationView(py)clusteringIdentifier"
+      },
+      "cluster": {
+        "kind": "Var",
+        "type": "cluster",
+        "usr": "c:objc(cs)MKAnnotationView(py)clusterAnnotationView"
+      },
+      "displayPriority": {
+        "kind": "Var",
+        "type": "displayPriority",
+        "usr": "c:objc(cs)MKAnnotationView(py)displayPriority"
+      },
+      "zPriority": {
+        "kind": "Var",
+        "type": "zPriority",
+        "usr": "c:objc(cs)MKAnnotationView(py)zPriority"
+      },
+      "selectedZPriority": {
+        "kind": "Var",
+        "type": "selectedZPriority",
+        "usr": "c:objc(cs)MKAnnotationView(py)selectedZPriority"
+      },
+      "collisionMode": {
+        "kind": "Var",
+        "type": "collisionMode",
+        "usr": "c:objc(cs)MKAnnotationView(py)collisionMode"
+      },
+      "DragState": {
+        "kind": "Enum",
+        "type": "DragState",
+        "usr": "c:@E@MKAnnotationViewDragState"
+      },
+      "CollisionMode": {
+        "kind": "Enum",
+        "type": "CollisionMode",
+        "usr": "c:@E@MKAnnotationViewCollisionMode"
+      }
+    }
+  },
+  "DragState": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKAnnotationViewDragState",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So25MKAnnotationViewDragStateV8rawValueABSgSu_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So25MKAnnotationViewDragStateV8rawValueSuvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So25MKAnnotationViewDragStateV8RawValuea"
+      },
+      "none": {
+        "kind": "EnumElement",
+        "type": "none",
+        "usr": "c:@E@MKAnnotationViewDragState@MKAnnotationViewDragStateNone"
+      },
+      "starting": {
+        "kind": "EnumElement",
+        "type": "starting",
+        "usr": "c:@E@MKAnnotationViewDragState@MKAnnotationViewDragStateStarting"
+      },
+      "dragging": {
+        "kind": "EnumElement",
+        "type": "dragging",
+        "usr": "c:@E@MKAnnotationViewDragState@MKAnnotationViewDragStateDragging"
+      },
+      "canceling": {
+        "kind": "EnumElement",
+        "type": "canceling",
+        "usr": "c:@E@MKAnnotationViewDragState@MKAnnotationViewDragStateCanceling"
+      },
+      "ending": {
+        "kind": "EnumElement",
+        "type": "ending",
+        "usr": "c:@E@MKAnnotationViewDragState@MKAnnotationViewDragStateEnding"
+      }
+    }
+  },
+  "CollisionMode": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKAnnotationViewCollisionMode",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So29MKAnnotationViewCollisionModeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So29MKAnnotationViewCollisionModeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So29MKAnnotationViewCollisionModeV8RawValuea"
+      },
+      "rectangle": {
+        "kind": "EnumElement",
+        "type": "rectangle",
+        "usr": "c:@E@MKAnnotationViewCollisionMode@MKAnnotationViewCollisionModeRectangle"
+      },
+      "circle": {
+        "kind": "EnumElement",
+        "type": "circle",
+        "usr": "c:@E@MKAnnotationViewCollisionMode@MKAnnotationViewCollisionModeCircle"
+      },
+      "none": {
+        "kind": "EnumElement",
+        "type": "none",
+        "usr": "c:@E@MKAnnotationViewCollisionMode@MKAnnotationViewCollisionModeNone"
+      }
+    }
+  },
+  "MKAnnotationViewZPriority": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@T@MKAnnotationViewZPriority",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So25MKAnnotationViewZPrioritya8rawValueABSf_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So25MKAnnotationViewZPrioritya8rawValueSfvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So25MKAnnotationViewZPrioritya8RawValuea"
+      },
+      "max": {
+        "kind": "Var",
+        "type": "max",
+        "usr": "c:@MKAnnotationViewZPriorityMax"
+      },
+      "defaultSelected": {
+        "kind": "Var",
+        "type": "defaultSelected",
+        "usr": "c:@MKAnnotationViewZPriorityDefaultSelected"
+      },
+      "defaultUnselected": {
+        "kind": "Var",
+        "type": "defaultUnselected",
+        "usr": "c:@MKAnnotationViewZPriorityDefaultUnselected"
+      },
+      "min": {
+        "kind": "Var",
+        "type": "min",
+        "usr": "c:@MKAnnotationViewZPriorityMin"
+      }
+    }
+  },
+  "MKCircle": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKCircle",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "coordinate": {
+        "kind": "Var",
+        "type": "coordinate",
+        "usr": "c:objc(cs)MKCircle(py)coordinate"
+      },
+      "radius": {
+        "kind": "Var",
+        "type": "radius",
+        "usr": "c:objc(cs)MKCircle(py)radius"
+      },
+      "boundingMapRect": {
+        "kind": "Var",
+        "type": "boundingMapRect",
+        "usr": "c:objc(cs)MKCircle(py)boundingMapRect"
+      }
+    }
+  },
+  "MKCircleRenderer": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKCircleRenderer",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "circle": {
+        "kind": "Var",
+        "type": "circle",
+        "usr": "c:objc(cs)MKCircleRenderer(py)circle"
+      },
+      "strokeStart": {
+        "kind": "Var",
+        "type": "strokeStart",
+        "usr": "c:objc(cs)MKCircleRenderer(py)strokeStart"
+      },
+      "strokeEnd": {
+        "kind": "Var",
+        "type": "strokeEnd",
+        "usr": "c:objc(cs)MKCircleRenderer(py)strokeEnd"
+      }
+    }
+  },
+  "MKCircleView": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKCircleView",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKClusterAnnotation": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKClusterAnnotation",
+    "members": {
+      "title": {
+        "kind": "Var",
+        "type": "title",
+        "usr": "c:objc(cs)MKClusterAnnotation(py)title"
+      },
+      "subtitle": {
+        "kind": "Var",
+        "type": "subtitle",
+        "usr": "c:objc(cs)MKClusterAnnotation(py)subtitle"
+      },
+      "memberAnnotations": {
+        "kind": "Var",
+        "type": "memberAnnotations",
+        "usr": "c:objc(cs)MKClusterAnnotation(py)memberAnnotations"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(memberAnnotations:)",
+        "usr": "c:objc(cs)MKClusterAnnotation(im)initWithMemberAnnotations:"
+      }
+    }
+  },
+  "MKCompassButton": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKCompassButton",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "mapView": {
+        "kind": "Var",
+        "type": "mapView",
+        "usr": "c:objc(cs)MKCompassButton(py)mapView"
+      },
+      "compassVisibility": {
+        "kind": "Var",
+        "type": "compassVisibility",
+        "usr": "c:objc(cs)MKCompassButton(py)compassVisibility"
+      }
+    }
+  },
+  "MKCoordinateRegion": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@SA@MKCoordinateRegion",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_:)",
+        "usr": "c:@F@MKCoordinateRegionForMapRect"
+      }
+    }
+  },
+  "MKCoordinateSpan": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@SA@MKCoordinateSpan",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(latitudeDelta:longitudeDelta:)",
+        "usr": "s:So16MKCoordinateSpana13latitudeDelta09longitudeD0ABSd_Sdtcfc"
+      }
+    }
+  },
+  "MKDirections": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKDirections",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "calculate": {
+        "kind": "Func",
+        "type": "calculate()",
+        "usr": "c:objc(cs)MKDirections(im)calculateDirectionsWithCompletionHandler:"
+      },
+      "calculateETA": {
+        "kind": "Func",
+        "type": "calculateETA()",
+        "usr": "c:objc(cs)MKDirections(im)calculateETAWithCompletionHandler:"
+      },
+      "cancel": {
+        "kind": "Func",
+        "type": "cancel()",
+        "usr": "c:objc(cs)MKDirections(im)cancel"
+      },
+      "isCalculating": {
+        "kind": "Var",
+        "type": "isCalculating",
+        "usr": "c:objc(cs)MKDirections(py)calculating"
+      },
+      "DirectionsHandler": {
+        "kind": "TypeAlias",
+        "type": "DirectionsHandler",
+        "usr": "c:@T@MKDirectionsHandler"
+      },
+      "ETAHandler": {
+        "kind": "TypeAlias",
+        "type": "ETAHandler",
+        "usr": "c:@T@MKETAHandler"
+      },
+      "RoutePreference": {
+        "kind": "Enum",
+        "type": "RoutePreference",
+        "usr": "c:@E@MKDirectionsRoutePreference"
+      }
+    }
+  },
+  "Response": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKLocalSearchResponse",
+    "members": {
+      "mapItems": {
+        "kind": "Var",
+        "type": "mapItems",
+        "usr": "c:objc(cs)MKLocalSearchResponse(py)mapItems"
+      },
+      "boundingRegion": {
+        "kind": "Var",
+        "type": "boundingRegion",
+        "usr": "c:objc(cs)MKLocalSearchResponse(py)boundingRegion"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "ETAResponse": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKETAResponse",
+    "members": {
+      "source": {
+        "kind": "Var",
+        "type": "source",
+        "usr": "c:objc(cs)MKETAResponse(py)source"
+      },
+      "destination": {
+        "kind": "Var",
+        "type": "destination",
+        "usr": "c:objc(cs)MKETAResponse(py)destination"
+      },
+      "expectedTravelTime": {
+        "kind": "Var",
+        "type": "expectedTravelTime",
+        "usr": "c:objc(cs)MKETAResponse(py)expectedTravelTime"
+      },
+      "distance": {
+        "kind": "Var",
+        "type": "distance",
+        "usr": "c:objc(cs)MKETAResponse(py)distance"
+      },
+      "expectedArrivalDate": {
+        "kind": "Var",
+        "type": "expectedArrivalDate",
+        "usr": "c:objc(cs)MKETAResponse(py)expectedArrivalDate"
+      },
+      "expectedDepartureDate": {
+        "kind": "Var",
+        "type": "expectedDepartureDate",
+        "usr": "c:objc(cs)MKETAResponse(py)expectedDepartureDate"
+      },
+      "transportType": {
+        "kind": "Var",
+        "type": "transportType",
+        "usr": "c:objc(cs)MKETAResponse(py)transportType"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "RoutePreference": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKDirectionsRoutePreference",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So27MKDirectionsRoutePreferenceV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So27MKDirectionsRoutePreferenceV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So27MKDirectionsRoutePreferenceV8RawValuea"
+      },
+      "any": {
+        "kind": "EnumElement",
+        "type": "any",
+        "usr": "c:@E@MKDirectionsRoutePreference@MKDirectionsRoutePreferenceAny"
+      },
+      "avoid": {
+        "kind": "EnumElement",
+        "type": "avoid",
+        "usr": "c:@E@MKDirectionsRoutePreference@MKDirectionsRoutePreferenceAvoid"
+      }
+    }
+  },
+  "Request": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKLocalSearchRequest",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(completion:)",
+        "usr": "c:objc(cs)MKLocalSearchRequest(im)initWithCompletion:"
+      },
+      "naturalLanguageQuery": {
+        "kind": "Var",
+        "type": "naturalLanguageQuery",
+        "usr": "c:objc(cs)MKLocalSearchRequest(py)naturalLanguageQuery"
+      },
+      "region": {
+        "kind": "Var",
+        "type": "region",
+        "usr": "c:objc(cs)MKLocalSearchRequest(py)region"
+      },
+      "regionPriority": {
+        "kind": "Var",
+        "type": "regionPriority",
+        "usr": "c:objc(cs)MKLocalSearchRequest(py)regionPriority"
+      },
+      "resultTypes": {
+        "kind": "Var",
+        "type": "resultTypes",
+        "usr": "c:objc(cs)MKLocalSearchRequest(py)resultTypes"
+      },
+      "pointOfInterestFilter": {
+        "kind": "Var",
+        "type": "pointOfInterestFilter",
+        "usr": "c:objc(cs)MKLocalSearchRequest(py)pointOfInterestFilter"
+      },
+      "addressFilter": {
+        "kind": "Var",
+        "type": "addressFilter",
+        "usr": "c:objc(cs)MKLocalSearchRequest(py)addressFilter"
+      },
+      "ResultType": {
+        "kind": "TypeAlias",
+        "type": "ResultType",
+        "usr": "s:So20MKLocalSearchRequestC6MapKitE10ResultTypea"
+      }
+    }
+  },
+  "MKDirectionsTransportType": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@E@MKDirectionsTransportType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So25MKDirectionsTransportTypeV8rawValueABSu_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So25MKDirectionsTransportTypeV8rawValueSuvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So25MKDirectionsTransportTypeV8RawValuea"
+      },
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:So25MKDirectionsTransportTypeV7Elementa"
+      },
+      "ArrayLiteralElement": {
+        "kind": "TypeAlias",
+        "type": "ArrayLiteralElement",
+        "usr": "s:So25MKDirectionsTransportTypeV19ArrayLiteralElementa"
+      },
+      "automobile": {
+        "kind": "Var",
+        "type": "automobile",
+        "usr": "c:@E@MKDirectionsTransportType@MKDirectionsTransportTypeAutomobile"
+      },
+      "walking": {
+        "kind": "Var",
+        "type": "walking",
+        "usr": "c:@E@MKDirectionsTransportType@MKDirectionsTransportTypeWalking"
+      },
+      "transit": {
+        "kind": "Var",
+        "type": "transit",
+        "usr": "c:@E@MKDirectionsTransportType@MKDirectionsTransportTypeTransit"
+      },
+      "any": {
+        "kind": "Var",
+        "type": "any",
+        "usr": "c:@E@MKDirectionsTransportType@MKDirectionsTransportTypeAny"
+      }
+    }
+  },
+  "MKDistanceFormatter": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKDistanceFormatter",
+    "members": {
+      "string": {
+        "kind": "Func",
+        "type": "string(fromDistance:)",
+        "usr": "c:objc(cs)MKDistanceFormatter(im)stringFromDistance:"
+      },
+      "distance": {
+        "kind": "Func",
+        "type": "distance(from:)",
+        "usr": "c:objc(cs)MKDistanceFormatter(im)distanceFromString:"
+      },
+      "locale": {
+        "kind": "Var",
+        "type": "locale",
+        "usr": "c:objc(cs)MKDistanceFormatter(py)locale"
+      },
+      "units": {
+        "kind": "Var",
+        "type": "units",
+        "usr": "c:objc(cs)MKDistanceFormatter(py)units"
+      },
+      "unitStyle": {
+        "kind": "Var",
+        "type": "unitStyle",
+        "usr": "c:objc(cs)MKDistanceFormatter(py)unitStyle"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "Units": {
+        "kind": "Enum",
+        "type": "Units",
+        "usr": "c:@E@MKDistanceFormatterUnits"
+      },
+      "DistanceUnitStyle": {
+        "kind": "Enum",
+        "type": "DistanceUnitStyle",
+        "usr": "c:@E@MKDistanceFormatterUnitStyle"
+      }
+    }
+  },
+  "Units": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKDistanceFormatterUnits",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So24MKDistanceFormatterUnitsV8rawValueABSgSu_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So24MKDistanceFormatterUnitsV8rawValueSuvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So24MKDistanceFormatterUnitsV8RawValuea"
+      },
+      "default": {
+        "kind": "EnumElement",
+        "type": "default",
+        "usr": "c:@E@MKDistanceFormatterUnits@MKDistanceFormatterUnitsDefault"
+      },
+      "metric": {
+        "kind": "EnumElement",
+        "type": "metric",
+        "usr": "c:@E@MKDistanceFormatterUnits@MKDistanceFormatterUnitsMetric"
+      },
+      "imperial": {
+        "kind": "EnumElement",
+        "type": "imperial",
+        "usr": "c:@E@MKDistanceFormatterUnits@MKDistanceFormatterUnitsImperial"
+      },
+      "imperialWithYards": {
+        "kind": "EnumElement",
+        "type": "imperialWithYards",
+        "usr": "c:@E@MKDistanceFormatterUnits@MKDistanceFormatterUnitsImperialWithYards"
+      }
+    }
+  },
+  "DistanceUnitStyle": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKDistanceFormatterUnitStyle",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So28MKDistanceFormatterUnitStyleV8rawValueABSgSu_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So28MKDistanceFormatterUnitStyleV8rawValueSuvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So28MKDistanceFormatterUnitStyleV8RawValuea"
+      },
+      "default": {
+        "kind": "EnumElement",
+        "type": "default",
+        "usr": "c:@E@MKDistanceFormatterUnitStyle@MKDistanceFormatterUnitStyleDefault"
+      },
+      "abbreviated": {
+        "kind": "EnumElement",
+        "type": "abbreviated",
+        "usr": "c:@E@MKDistanceFormatterUnitStyle@MKDistanceFormatterUnitStyleAbbreviated"
+      },
+      "full": {
+        "kind": "EnumElement",
+        "type": "full",
+        "usr": "c:@E@MKDistanceFormatterUnitStyle@MKDistanceFormatterUnitStyleFull"
+      }
+    }
+  },
+  "MKError": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "s:SC11MKErrorCodeLeV",
+    "members": {
+      "_nsError": {
+        "kind": "Var",
+        "type": "_nsError",
+        "usr": "s:SC11MKErrorCodeLeV8_nsErrorSo7NSErrorCvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_nsError:)",
+        "usr": "s:SC11MKErrorCodeLeV8_nsErrorABSo7NSErrorC_tcfc"
+      },
+      "errorDomain": {
+        "kind": "Var",
+        "type": "errorDomain",
+        "usr": "s:SC11MKErrorCodeLeV11errorDomainSSvpZ"
+      },
+      "Code": {
+        "kind": "Enum",
+        "type": "Code",
+        "usr": "c:@E@MKErrorCode"
+      },
+      "unknown": {
+        "kind": "Var",
+        "type": "unknown",
+        "usr": "s:SC11MKErrorCodeLeV7unknownSoAAVvpZ"
+      },
+      "serverFailure": {
+        "kind": "Var",
+        "type": "serverFailure",
+        "usr": "s:SC11MKErrorCodeLeV13serverFailureSoAAVvpZ"
+      },
+      "loadingThrottled": {
+        "kind": "Var",
+        "type": "loadingThrottled",
+        "usr": "s:SC11MKErrorCodeLeV16loadingThrottledSoAAVvpZ"
+      },
+      "placemarkNotFound": {
+        "kind": "Var",
+        "type": "placemarkNotFound",
+        "usr": "s:SC11MKErrorCodeLeV17placemarkNotFoundSoAAVvpZ"
+      },
+      "directionsNotFound": {
+        "kind": "Var",
+        "type": "directionsNotFound",
+        "usr": "s:SC11MKErrorCodeLeV18directionsNotFoundSoAAVvpZ"
+      },
+      "decodingFailed": {
+        "kind": "Var",
+        "type": "decodingFailed",
+        "usr": "s:SC11MKErrorCodeLeV14decodingFailedSoAAVvpZ"
+      }
+    }
+  },
+  "Code": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKErrorCode",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So11MKErrorCodeV8rawValueABSgSu_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So11MKErrorCodeV8rawValueSuvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So11MKErrorCodeV8RawValuea"
+      },
+      "_ErrorType": {
+        "kind": "TypeAlias",
+        "type": "_ErrorType",
+        "usr": "c:@E@MKErrorCode"
+      },
+      "unknown": {
+        "kind": "EnumElement",
+        "type": "unknown",
+        "usr": "c:@E@MKErrorCode@MKErrorUnknown"
+      },
+      "serverFailure": {
+        "kind": "EnumElement",
+        "type": "serverFailure",
+        "usr": "c:@E@MKErrorCode@MKErrorServerFailure"
+      },
+      "loadingThrottled": {
+        "kind": "EnumElement",
+        "type": "loadingThrottled",
+        "usr": "c:@E@MKErrorCode@MKErrorLoadingThrottled"
+      },
+      "placemarkNotFound": {
+        "kind": "EnumElement",
+        "type": "placemarkNotFound",
+        "usr": "c:@E@MKErrorCode@MKErrorPlacemarkNotFound"
+      },
+      "directionsNotFound": {
+        "kind": "EnumElement",
+        "type": "directionsNotFound",
+        "usr": "c:@E@MKErrorCode@MKErrorDirectionsNotFound"
+      },
+      "decodingFailed": {
+        "kind": "EnumElement",
+        "type": "decodingFailed",
+        "usr": "c:@E@MKErrorCode@MKErrorDecodingFailed"
+      }
+    }
+  },
+  "MKFeatureDisplayPriority": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@T@MKFeatureDisplayPriority",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So24MKFeatureDisplayPrioritya8rawValueABSf_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So24MKFeatureDisplayPrioritya8rawValueSfvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So24MKFeatureDisplayPrioritya8RawValuea"
+      },
+      "required": {
+        "kind": "Var",
+        "type": "required",
+        "usr": "c:@MKFeatureDisplayPriorityRequired"
+      },
+      "defaultHigh": {
+        "kind": "Var",
+        "type": "defaultHigh",
+        "usr": "c:@MKFeatureDisplayPriorityDefaultHigh"
+      },
+      "defaultLow": {
+        "kind": "Var",
+        "type": "defaultLow",
+        "usr": "c:@MKFeatureDisplayPriorityDefaultLow"
+      }
+    }
+  },
+  "MKFeatureVisibility": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKFeatureVisibility",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So19MKFeatureVisibilityV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So19MKFeatureVisibilityV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So19MKFeatureVisibilityV8RawValuea"
+      },
+      "adaptive": {
+        "kind": "EnumElement",
+        "type": "adaptive",
+        "usr": "c:@E@MKFeatureVisibility@MKFeatureVisibilityAdaptive"
+      },
+      "hidden": {
+        "kind": "EnumElement",
+        "type": "hidden",
+        "usr": "c:@E@MKFeatureVisibility@MKFeatureVisibilityHidden"
+      },
+      "visible": {
+        "kind": "EnumElement",
+        "type": "visible",
+        "usr": "c:@E@MKFeatureVisibility@MKFeatureVisibilityVisible"
+      }
+    }
+  },
+  "MKGeoJSONDecoder": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKGeoJSONDecoder",
+    "members": {
+      "decode": {
+        "kind": "Func",
+        "type": "decode(_:)",
+        "usr": "c:objc(cs)MKGeoJSONDecoder(im)geoJSONObjectsWithData:error:"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKGeoJSONFeature": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKGeoJSONFeature",
+    "members": {
+      "identifier": {
+        "kind": "Var",
+        "type": "identifier",
+        "usr": "c:objc(cs)MKGeoJSONFeature(py)identifier"
+      },
+      "properties": {
+        "kind": "Var",
+        "type": "properties",
+        "usr": "c:objc(cs)MKGeoJSONFeature(py)properties"
+      },
+      "geometry": {
+        "kind": "Var",
+        "type": "geometry",
+        "usr": "c:objc(cs)MKGeoJSONFeature(py)geometry"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKGeoJSONObject": {
+    "kind": "Protocol",
+    "module": "MapKit",
+    "usr": "c:objc(pl)MKGeoJSONObject",
+    "members": {}
+  },
+  "MKGeodesicPolyline": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKGeodesicPolyline",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKGradientPolylineRenderer": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKGradientPolylineRenderer",
+    "members": {
+      "colors": {
+        "kind": "Var",
+        "type": "colors",
+        "usr": "c:objc(cs)MKGradientPolylineRenderer(py)colors"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "locations": {
+        "kind": "Var",
+        "type": "locations",
+        "usr": "s:So26MKGradientPolylineRendererC6MapKitE9locationsSay14CoreFoundation7CGFloatVGvp"
+      },
+      "setColors": {
+        "kind": "Func",
+        "type": "setColors(_:locations:)",
+        "usr": "s:So26MKGradientPolylineRendererC6MapKitE9setColors_9locationsySaySo7UIColorCG_Say14CoreFoundation7CGFloatVGtF"
+      }
+    }
+  },
+  "MKHybridMapConfiguration": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKHybridMapConfiguration",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(elevationStyle:)",
+        "usr": "c:objc(cs)MKHybridMapConfiguration(im)initWithElevationStyle:"
+      },
+      "pointOfInterestFilter": {
+        "kind": "Var",
+        "type": "pointOfInterestFilter",
+        "usr": "c:objc(cs)MKHybridMapConfiguration(py)pointOfInterestFilter"
+      },
+      "showsTraffic": {
+        "kind": "Var",
+        "type": "showsTraffic",
+        "usr": "c:objc(cs)MKHybridMapConfiguration(py)showsTraffic"
+      }
+    }
+  },
+  "MKIconStyle": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKIconStyle",
+    "members": {
+      "backgroundColor": {
+        "kind": "Var",
+        "type": "backgroundColor",
+        "usr": "c:objc(cs)MKIconStyle(py)backgroundColor"
+      },
+      "image": {
+        "kind": "Var",
+        "type": "image",
+        "usr": "c:objc(cs)MKIconStyle(py)image"
+      }
+    }
+  },
+  "MKImageryMapConfiguration": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKImageryMapConfiguration",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(elevationStyle:)",
+        "usr": "c:objc(cs)MKImageryMapConfiguration(im)initWithElevationStyle:"
+      }
+    }
+  },
+  "MKLocalPointsOfInterestRequest": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKLocalPointsOfInterestRequest",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(coordinateRegion:)",
+        "usr": "c:objc(cs)MKLocalPointsOfInterestRequest(im)initWithCoordinateRegion:"
+      },
+      "coordinate": {
+        "kind": "Var",
+        "type": "coordinate",
+        "usr": "c:objc(cs)MKLocalPointsOfInterestRequest(py)coordinate"
+      },
+      "radius": {
+        "kind": "Var",
+        "type": "radius",
+        "usr": "c:objc(cs)MKLocalPointsOfInterestRequest(py)radius"
+      },
+      "region": {
+        "kind": "Var",
+        "type": "region",
+        "usr": "c:objc(cs)MKLocalPointsOfInterestRequest(py)region"
+      },
+      "pointOfInterestFilter": {
+        "kind": "Var",
+        "type": "pointOfInterestFilter",
+        "usr": "c:objc(cs)MKLocalPointsOfInterestRequest(py)pointOfInterestFilter"
+      },
+      "maxRadius": {
+        "kind": "Var",
+        "type": "maxRadius",
+        "usr": "c:@MKPointsOfInterestRequestMaxRadius"
+      }
+    }
+  },
+  "MKLocalSearch": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKLocalSearch",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "start": {
+        "kind": "Func",
+        "type": "start()",
+        "usr": "c:objc(cs)MKLocalSearch(im)startWithCompletionHandler:"
+      },
+      "cancel": {
+        "kind": "Func",
+        "type": "cancel()",
+        "usr": "c:objc(cs)MKLocalSearch(im)cancel"
+      },
+      "isSearching": {
+        "kind": "Var",
+        "type": "isSearching",
+        "usr": "c:objc(cs)MKLocalSearch(py)searching"
+      },
+      "CompletionHandler": {
+        "kind": "TypeAlias",
+        "type": "CompletionHandler",
+        "usr": "c:@T@MKLocalSearchCompletionHandler"
+      }
+    }
+  },
+  "ResultType": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@E@MKLocalSearchCompleterResultType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So32MKLocalSearchCompleterResultTypeV8rawValueABSu_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So32MKLocalSearchCompleterResultTypeV8rawValueSuvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So32MKLocalSearchCompleterResultTypeV8RawValuea"
+      },
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:So32MKLocalSearchCompleterResultTypeV7Elementa"
+      },
+      "ArrayLiteralElement": {
+        "kind": "TypeAlias",
+        "type": "ArrayLiteralElement",
+        "usr": "s:So32MKLocalSearchCompleterResultTypeV19ArrayLiteralElementa"
+      },
+      "address": {
+        "kind": "Var",
+        "type": "address",
+        "usr": "c:@E@MKLocalSearchCompleterResultType@MKLocalSearchCompleterResultTypeAddress"
+      },
+      "pointOfInterest": {
+        "kind": "Var",
+        "type": "pointOfInterest",
+        "usr": "c:@E@MKLocalSearchCompleterResultType@MKLocalSearchCompleterResultTypePointOfInterest"
+      },
+      "query": {
+        "kind": "Var",
+        "type": "query",
+        "usr": "c:@E@MKLocalSearchCompleterResultType@MKLocalSearchCompleterResultTypeQuery"
+      },
+      "physicalFeature": {
+        "kind": "Var",
+        "type": "physicalFeature",
+        "usr": "c:@E@MKLocalSearchCompleterResultType@MKLocalSearchCompleterResultTypePhysicalFeature"
+      }
+    }
+  },
+  "MKLocalSearchCompleter": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKLocalSearchCompleter",
+    "members": {
+      "queryFragment": {
+        "kind": "Var",
+        "type": "queryFragment",
+        "usr": "c:objc(cs)MKLocalSearchCompleter(py)queryFragment"
+      },
+      "region": {
+        "kind": "Var",
+        "type": "region",
+        "usr": "c:objc(cs)MKLocalSearchCompleter(py)region"
+      },
+      "regionPriority": {
+        "kind": "Var",
+        "type": "regionPriority",
+        "usr": "c:objc(cs)MKLocalSearchCompleter(py)regionPriority"
+      },
+      "filterType": {
+        "kind": "Var",
+        "type": "filterType",
+        "usr": "c:objc(cs)MKLocalSearchCompleter(py)filterType"
+      },
+      "resultTypes": {
+        "kind": "Var",
+        "type": "resultTypes",
+        "usr": "c:objc(cs)MKLocalSearchCompleter(py)resultTypes"
+      },
+      "pointOfInterestFilter": {
+        "kind": "Var",
+        "type": "pointOfInterestFilter",
+        "usr": "c:objc(cs)MKLocalSearchCompleter(py)pointOfInterestFilter"
+      },
+      "addressFilter": {
+        "kind": "Var",
+        "type": "addressFilter",
+        "usr": "c:objc(cs)MKLocalSearchCompleter(py)addressFilter"
+      },
+      "delegate": {
+        "kind": "Var",
+        "type": "delegate",
+        "usr": "c:objc(cs)MKLocalSearchCompleter(py)delegate"
+      },
+      "results": {
+        "kind": "Var",
+        "type": "results",
+        "usr": "c:objc(cs)MKLocalSearchCompleter(py)results"
+      },
+      "isSearching": {
+        "kind": "Var",
+        "type": "isSearching",
+        "usr": "c:objc(cs)MKLocalSearchCompleter(py)searching"
+      },
+      "cancel": {
+        "kind": "Func",
+        "type": "cancel()",
+        "usr": "c:objc(cs)MKLocalSearchCompleter(im)cancel"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "FilterType": {
+        "kind": "Enum",
+        "type": "FilterType",
+        "usr": "c:@E@MKSearchCompletionFilterType"
+      }
+    }
+  },
+  "FilterType": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKSearchCompletionFilterType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So28MKSearchCompletionFilterTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So28MKSearchCompletionFilterTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So28MKSearchCompletionFilterTypeV8RawValuea"
+      },
+      "locationsAndQueries": {
+        "kind": "EnumElement",
+        "type": "locationsAndQueries",
+        "usr": "c:@E@MKSearchCompletionFilterType@MKSearchCompletionFilterTypeLocationsAndQueries"
+      },
+      "locationsOnly": {
+        "kind": "EnumElement",
+        "type": "locationsOnly",
+        "usr": "c:@E@MKSearchCompletionFilterType@MKSearchCompletionFilterTypeLocationsOnly"
+      }
+    }
+  },
+  "MKLocalSearchCompleterDelegate": {
+    "kind": "Protocol",
+    "module": "MapKit",
+    "usr": "c:objc(pl)MKLocalSearchCompleterDelegate",
+    "members": {
+      "completerDidUpdateResults": {
+        "kind": "Func",
+        "type": "completerDidUpdateResults(_:)",
+        "usr": "c:objc(pl)MKLocalSearchCompleterDelegate(im)completerDidUpdateResults:"
+      },
+      "completer": {
+        "kind": "Func",
+        "type": "completer(_:didFailWithError:)",
+        "usr": "c:objc(pl)MKLocalSearchCompleterDelegate(im)completer:didFailWithError:"
+      }
+    }
+  },
+  "MKLocalSearchCompletion": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKLocalSearchCompletion",
+    "members": {
+      "title": {
+        "kind": "Var",
+        "type": "title",
+        "usr": "c:objc(cs)MKLocalSearchCompletion(py)title"
+      },
+      "titleHighlightRanges": {
+        "kind": "Var",
+        "type": "titleHighlightRanges",
+        "usr": "c:objc(cs)MKLocalSearchCompletion(py)titleHighlightRanges"
+      },
+      "subtitle": {
+        "kind": "Var",
+        "type": "subtitle",
+        "usr": "c:objc(cs)MKLocalSearchCompletion(py)subtitle"
+      },
+      "subtitleHighlightRanges": {
+        "kind": "Var",
+        "type": "subtitleHighlightRanges",
+        "usr": "c:objc(cs)MKLocalSearchCompletion(py)subtitleHighlightRanges"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKLocalSearchRegionPriority": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKLocalSearchRegionPriority",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So27MKLocalSearchRegionPriorityV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So27MKLocalSearchRegionPriorityV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So27MKLocalSearchRegionPriorityV8RawValuea"
+      },
+      "default": {
+        "kind": "EnumElement",
+        "type": "default",
+        "usr": "c:@E@MKLocalSearchRegionPriority@MKLocalSearchRegionPriorityDefault"
+      },
+      "required": {
+        "kind": "EnumElement",
+        "type": "required",
+        "usr": "c:@E@MKLocalSearchRegionPriority@MKLocalSearchRegionPriorityRequired"
+      }
+    }
+  },
+  "MKLookAroundBadgePosition": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKLookAroundBadgePosition",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So25MKLookAroundBadgePositionV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So25MKLookAroundBadgePositionV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So25MKLookAroundBadgePositionV8RawValuea"
+      },
+      "topLeading": {
+        "kind": "EnumElement",
+        "type": "topLeading",
+        "usr": "c:@E@MKLookAroundBadgePosition@MKLookAroundBadgePositionTopLeading"
+      },
+      "topTrailing": {
+        "kind": "EnumElement",
+        "type": "topTrailing",
+        "usr": "c:@E@MKLookAroundBadgePosition@MKLookAroundBadgePositionTopTrailing"
+      },
+      "bottomTrailing": {
+        "kind": "EnumElement",
+        "type": "bottomTrailing",
+        "usr": "c:@E@MKLookAroundBadgePosition@MKLookAroundBadgePositionBottomTrailing"
+      }
+    }
+  },
+  "MKLookAroundScene": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKLookAroundScene",
+    "members": {}
+  },
+  "MKLookAroundSceneRequest": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKLookAroundSceneRequest",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(mapItem:)",
+        "usr": "c:objc(cs)MKLookAroundSceneRequest(im)initWithMapItem:"
+      },
+      "coordinate": {
+        "kind": "Var",
+        "type": "coordinate",
+        "usr": "c:objc(cs)MKLookAroundSceneRequest(py)coordinate"
+      },
+      "mapItem": {
+        "kind": "Var",
+        "type": "mapItem",
+        "usr": "c:objc(cs)MKLookAroundSceneRequest(py)mapItem"
+      },
+      "isCancelled": {
+        "kind": "Var",
+        "type": "isCancelled",
+        "usr": "c:objc(cs)MKLookAroundSceneRequest(py)cancelled"
+      },
+      "isLoading": {
+        "kind": "Var",
+        "type": "isLoading",
+        "usr": "c:objc(cs)MKLookAroundSceneRequest(py)loading"
+      },
+      "getSceneWithCompletionHandler": {
+        "kind": "Func",
+        "type": "getSceneWithCompletionHandler(_:)",
+        "usr": "c:objc(cs)MKLookAroundSceneRequest(im)getSceneWithCompletionHandler:"
+      },
+      "scene": {
+        "kind": "Var",
+        "type": "scene",
+        "usr": "c:objc(cs)MKLookAroundSceneRequest(im)getSceneWithCompletionHandler:"
+      },
+      "cancel": {
+        "kind": "Func",
+        "type": "cancel()",
+        "usr": "c:objc(cs)MKLookAroundSceneRequest(im)cancel"
+      }
+    }
+  },
+  "MKLookAroundSnapshotter": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKLookAroundSnapshotter",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(scene:options:)",
+        "usr": "c:objc(cs)MKLookAroundSnapshotter(im)initWithScene:options:"
+      },
+      "getSnapshotWithCompletionHandler": {
+        "kind": "Func",
+        "type": "getSnapshotWithCompletionHandler(_:)",
+        "usr": "c:objc(cs)MKLookAroundSnapshotter(im)getSnapshotWithCompletionHandler:"
+      },
+      "snapshot": {
+        "kind": "Var",
+        "type": "snapshot",
+        "usr": "c:objc(cs)MKLookAroundSnapshotter(im)getSnapshotWithCompletionHandler:"
+      },
+      "cancel": {
+        "kind": "Func",
+        "type": "cancel()",
+        "usr": "c:objc(cs)MKLookAroundSnapshotter(im)cancel"
+      },
+      "isLoading": {
+        "kind": "Var",
+        "type": "isLoading",
+        "usr": "c:objc(cs)MKLookAroundSnapshotter(py)loading"
+      }
+    }
+  },
+  "Snapshot": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapSnapshot",
+    "members": {
+      "image": {
+        "kind": "Var",
+        "type": "image",
+        "usr": "c:objc(cs)MKMapSnapshot(py)image"
+      },
+      "point": {
+        "kind": "Func",
+        "type": "point(for:)",
+        "usr": "c:objc(cs)MKMapSnapshot(im)pointForCoordinate:"
+      },
+      "traitCollection": {
+        "kind": "Var",
+        "type": "traitCollection",
+        "usr": "c:objc(cs)MKMapSnapshot(py)traitCollection"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKLookAroundViewController": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKLookAroundViewController",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "delegate": {
+        "kind": "Var",
+        "type": "delegate",
+        "usr": "c:objc(cs)MKLookAroundViewController(py)delegate"
+      },
+      "scene": {
+        "kind": "Var",
+        "type": "scene",
+        "usr": "c:objc(cs)MKLookAroundViewController(py)scene"
+      },
+      "isNavigationEnabled": {
+        "kind": "Var",
+        "type": "isNavigationEnabled",
+        "usr": "c:objc(cs)MKLookAroundViewController(py)navigationEnabled"
+      },
+      "showsRoadLabels": {
+        "kind": "Var",
+        "type": "showsRoadLabels",
+        "usr": "c:objc(cs)MKLookAroundViewController(py)showsRoadLabels"
+      },
+      "pointOfInterestFilter": {
+        "kind": "Var",
+        "type": "pointOfInterestFilter",
+        "usr": "c:objc(cs)MKLookAroundViewController(py)pointOfInterestFilter"
+      },
+      "badgePosition": {
+        "kind": "Var",
+        "type": "badgePosition",
+        "usr": "c:objc(cs)MKLookAroundViewController(py)badgePosition"
+      }
+    }
+  },
+  "MKLookAroundViewControllerDelegate": {
+    "kind": "Protocol",
+    "module": "MapKit",
+    "usr": "c:objc(pl)MKLookAroundViewControllerDelegate",
+    "members": {
+      "lookAroundViewControllerWillUpdateScene": {
+        "kind": "Func",
+        "type": "lookAroundViewControllerWillUpdateScene(_:)",
+        "usr": "c:objc(pl)MKLookAroundViewControllerDelegate(im)lookAroundViewControllerWillUpdateScene:"
+      },
+      "lookAroundViewControllerDidUpdateScene": {
+        "kind": "Func",
+        "type": "lookAroundViewControllerDidUpdateScene(_:)",
+        "usr": "c:objc(pl)MKLookAroundViewControllerDelegate(im)lookAroundViewControllerDidUpdateScene:"
+      },
+      "lookAroundViewControllerWillPresentFullScreen": {
+        "kind": "Func",
+        "type": "lookAroundViewControllerWillPresentFullScreen(_:)",
+        "usr": "c:objc(pl)MKLookAroundViewControllerDelegate(im)lookAroundViewControllerWillPresentFullScreen:"
+      },
+      "lookAroundViewControllerDidPresentFullScreen": {
+        "kind": "Func",
+        "type": "lookAroundViewControllerDidPresentFullScreen(_:)",
+        "usr": "c:objc(pl)MKLookAroundViewControllerDelegate(im)lookAroundViewControllerDidPresentFullScreen:"
+      },
+      "lookAroundViewControllerWillDismissFullScreen": {
+        "kind": "Func",
+        "type": "lookAroundViewControllerWillDismissFullScreen(_:)",
+        "usr": "c:objc(pl)MKLookAroundViewControllerDelegate(im)lookAroundViewControllerWillDismissFullScreen:"
+      },
+      "lookAroundViewControllerDidDismissFullScreen": {
+        "kind": "Func",
+        "type": "lookAroundViewControllerDidDismissFullScreen(_:)",
+        "usr": "c:objc(pl)MKLookAroundViewControllerDelegate(im)lookAroundViewControllerDidDismissFullScreen:"
+      }
+    }
+  },
+  "MKMapCamera": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapCamera",
+    "members": {
+      "centerCoordinate": {
+        "kind": "Var",
+        "type": "centerCoordinate",
+        "usr": "c:objc(cs)MKMapCamera(py)centerCoordinate"
+      },
+      "centerCoordinateDistance": {
+        "kind": "Var",
+        "type": "centerCoordinateDistance",
+        "usr": "c:objc(cs)MKMapCamera(py)centerCoordinateDistance"
+      },
+      "heading": {
+        "kind": "Var",
+        "type": "heading",
+        "usr": "c:objc(cs)MKMapCamera(py)heading"
+      },
+      "pitch": {
+        "kind": "Var",
+        "type": "pitch",
+        "usr": "c:objc(cs)MKMapCamera(py)pitch"
+      },
+      "altitude": {
+        "kind": "Var",
+        "type": "altitude",
+        "usr": "c:objc(cs)MKMapCamera(py)altitude"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKMapConfiguration": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapConfiguration",
+    "members": {
+      "elevationStyle": {
+        "kind": "Var",
+        "type": "elevationStyle",
+        "usr": "c:objc(cs)MKMapConfiguration(py)elevationStyle"
+      },
+      "ElevationStyle": {
+        "kind": "Enum",
+        "type": "ElevationStyle",
+        "usr": "c:@E@MKMapElevationStyle"
+      }
+    }
+  },
+  "ElevationStyle": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKMapElevationStyle",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So19MKMapElevationStyleV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So19MKMapElevationStyleV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So19MKMapElevationStyleV8RawValuea"
+      },
+      "flat": {
+        "kind": "EnumElement",
+        "type": "flat",
+        "usr": "c:@E@MKMapElevationStyle@MKMapElevationStyleFlat"
+      },
+      "realistic": {
+        "kind": "EnumElement",
+        "type": "realistic",
+        "usr": "c:@E@MKMapElevationStyle@MKMapElevationStyleRealistic"
+      }
+    }
+  },
+  "MKMapFeatureAnnotation": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapFeatureAnnotation",
+    "members": {
+      "featureType": {
+        "kind": "Var",
+        "type": "featureType",
+        "usr": "c:objc(cs)MKMapFeatureAnnotation(py)featureType"
+      },
+      "iconStyle": {
+        "kind": "Var",
+        "type": "iconStyle",
+        "usr": "c:objc(cs)MKMapFeatureAnnotation(py)iconStyle"
+      },
+      "pointOfInterestCategory": {
+        "kind": "Var",
+        "type": "pointOfInterestCategory",
+        "usr": "c:objc(cs)MKMapFeatureAnnotation(py)pointOfInterestCategory"
+      },
+      "FeatureType": {
+        "kind": "Enum",
+        "type": "FeatureType",
+        "usr": "c:@E@MKMapFeatureType"
+      }
+    }
+  },
+  "FeatureType": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKMapFeatureType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So16MKMapFeatureTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So16MKMapFeatureTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So16MKMapFeatureTypeV8RawValuea"
+      },
+      "pointOfInterest": {
+        "kind": "EnumElement",
+        "type": "pointOfInterest",
+        "usr": "c:@E@MKMapFeatureType@MKMapFeatureTypePointOfInterest"
+      },
+      "territory": {
+        "kind": "EnumElement",
+        "type": "territory",
+        "usr": "c:@E@MKMapFeatureType@MKMapFeatureTypeTerritory"
+      },
+      "physicalFeature": {
+        "kind": "EnumElement",
+        "type": "physicalFeature",
+        "usr": "c:@E@MKMapFeatureType@MKMapFeatureTypePhysicalFeature"
+      }
+    }
+  },
+  "MKMapFeatureOptions": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@E@MKMapFeatureOptions",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So19MKMapFeatureOptionsV8rawValueABSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So19MKMapFeatureOptionsV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So19MKMapFeatureOptionsV8RawValuea"
+      },
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:So19MKMapFeatureOptionsV7Elementa"
+      },
+      "ArrayLiteralElement": {
+        "kind": "TypeAlias",
+        "type": "ArrayLiteralElement",
+        "usr": "s:So19MKMapFeatureOptionsV19ArrayLiteralElementa"
+      },
+      "pointsOfInterest": {
+        "kind": "Var",
+        "type": "pointsOfInterest",
+        "usr": "c:@E@MKMapFeatureOptions@MKMapFeatureOptionPointsOfInterest"
+      },
+      "territories": {
+        "kind": "Var",
+        "type": "territories",
+        "usr": "c:@E@MKMapFeatureOptions@MKMapFeatureOptionTerritories"
+      },
+      "physicalFeatures": {
+        "kind": "Var",
+        "type": "physicalFeatures",
+        "usr": "c:@E@MKMapFeatureOptions@MKMapFeatureOptionPhysicalFeatures"
+      }
+    }
+  },
+  "MKMapItem": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapItem",
+    "members": {
+      "identifier": {
+        "kind": "Var",
+        "type": "identifier",
+        "usr": "c:objc(cs)MKMapItem(py)identifier"
+      },
+      "alternateIdentifiers": {
+        "kind": "Var",
+        "type": "alternateIdentifiers",
+        "usr": "c:objc(cs)MKMapItem(py)alternateIdentifiers"
+      },
+      "placemark": {
+        "kind": "Var",
+        "type": "placemark",
+        "usr": "c:objc(cs)MKMapItem(py)placemark"
+      },
+      "isCurrentLocation": {
+        "kind": "Var",
+        "type": "isCurrentLocation",
+        "usr": "c:objc(cs)MKMapItem(py)isCurrentLocation"
+      },
+      "name": {
+        "kind": "Var",
+        "type": "name",
+        "usr": "c:objc(cs)MKMapItem(py)name"
+      },
+      "phoneNumber": {
+        "kind": "Var",
+        "type": "phoneNumber",
+        "usr": "c:objc(cs)MKMapItem(py)phoneNumber"
+      },
+      "url": {
+        "kind": "Var",
+        "type": "url",
+        "usr": "c:objc(cs)MKMapItem(py)url"
+      },
+      "timeZone": {
+        "kind": "Var",
+        "type": "timeZone",
+        "usr": "c:objc(cs)MKMapItem(py)timeZone"
+      },
+      "pointOfInterestCategory": {
+        "kind": "Var",
+        "type": "pointOfInterestCategory",
+        "usr": "c:objc(cs)MKMapItem(py)pointOfInterestCategory"
+      },
+      "forCurrentLocation": {
+        "kind": "Func",
+        "type": "forCurrentLocation()",
+        "usr": "c:objc(cs)MKMapItem(cm)mapItemForCurrentLocation"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "openInMaps": {
+        "kind": "Func",
+        "type": "openInMaps(launchOptions:from:)",
+        "usr": "c:objc(cs)MKMapItem(im)openInMapsWithLaunchOptions:fromScene:completionHandler:"
+      },
+      "openMaps": {
+        "kind": "Func",
+        "type": "openMaps(with:launchOptions:from:)",
+        "usr": "c:objc(cs)MKMapItem(cm)openMapsWithItems:launchOptions:fromScene:completionHandler:"
+      }
+    }
+  },
+  "Identifier": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapItemIdentifier",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "c:objc(cs)MKMapItemIdentifier(im)initWithIdentifierString:"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "c:objc(cs)MKMapItemIdentifier(py)identifierString"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So19MKMapItemIdentifierC6MapKitE8RawValuea"
+      }
+    }
+  },
+  "MKMapItemAnnotation": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapItemAnnotation",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(mapItem:)",
+        "usr": "c:objc(cs)MKMapItemAnnotation(im)initWithMapItem:"
+      },
+      "mapItem": {
+        "kind": "Var",
+        "type": "mapItem",
+        "usr": "c:objc(cs)MKMapItemAnnotation(py)mapItem"
+      }
+    }
+  },
+  "MKMapItemDetailViewController": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapItemDetailViewController",
+    "members": {
+      "mapItem": {
+        "kind": "Var",
+        "type": "mapItem",
+        "usr": "c:objc(cs)MKMapItemDetailViewController(py)mapItem"
+      },
+      "delegate": {
+        "kind": "Var",
+        "type": "delegate",
+        "usr": "c:objc(cs)MKMapItemDetailViewController(py)delegate"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKMapItemDetailViewControllerDelegate": {
+    "kind": "Protocol",
+    "module": "MapKit",
+    "usr": "c:objc(pl)MKMapItemDetailViewControllerDelegate",
+    "members": {
+      "mapItemDetailViewControllerDidFinish": {
+        "kind": "Func",
+        "type": "mapItemDetailViewControllerDidFinish(_:)",
+        "usr": "c:objc(pl)MKMapItemDetailViewControllerDelegate(im)mapItemDetailViewControllerDidFinish:"
+      }
+    }
+  },
+  "MKMapItemRequest": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapItemRequest",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(mapFeatureAnnotation:)",
+        "usr": "c:objc(cs)MKMapItemRequest(im)initWithMapFeatureAnnotation:"
+      },
+      "getMapItem": {
+        "kind": "Func",
+        "type": "getMapItem(completionHandler:)",
+        "usr": "c:objc(cs)MKMapItemRequest(im)getMapItemWithCompletionHandler:"
+      },
+      "mapItem": {
+        "kind": "Var",
+        "type": "mapItem",
+        "usr": "c:objc(cs)MKMapItemRequest(im)getMapItemWithCompletionHandler:"
+      },
+      "cancel": {
+        "kind": "Func",
+        "type": "cancel()",
+        "usr": "c:objc(cs)MKMapItemRequest(im)cancel"
+      },
+      "mapItemIdentifier": {
+        "kind": "Var",
+        "type": "mapItemIdentifier",
+        "usr": "c:objc(cs)MKMapItemRequest(py)mapItemIdentifier"
+      },
+      "mapFeatureAnnotation": {
+        "kind": "Var",
+        "type": "mapFeatureAnnotation",
+        "usr": "c:objc(cs)MKMapItemRequest(py)mapFeatureAnnotation"
+      },
+      "featureAnnotation": {
+        "kind": "Var",
+        "type": "featureAnnotation",
+        "usr": "c:objc(cs)MKMapItemRequest(py)featureAnnotation"
+      },
+      "isCancelled": {
+        "kind": "Var",
+        "type": "isCancelled",
+        "usr": "c:objc(cs)MKMapItemRequest(py)cancelled"
+      },
+      "isLoading": {
+        "kind": "Var",
+        "type": "isLoading",
+        "usr": "c:objc(cs)MKMapItemRequest(py)loading"
+      }
+    }
+  },
+  "MKMapPoint": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@SA@MKMapPoint",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_:)",
+        "usr": "c:@F@MKMapPointForCoordinate"
+      },
+      "coordinate": {
+        "kind": "Var",
+        "type": "coordinate",
+        "usr": "c:@F@MKCoordinateForMapPoint"
+      },
+      "distance": {
+        "kind": "Func",
+        "type": "distance(to:)",
+        "usr": "c:@F@MKMetersBetweenMapPoints"
+      }
+    }
+  },
+  "MKMapRect": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@SA@MKMapRect",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(x:y:width:height:)",
+        "usr": "c:@F@MKMapRectMake"
+      },
+      "world": {
+        "kind": "Var",
+        "type": "world",
+        "usr": "c:@MKMapRectWorld"
+      },
+      "null": {
+        "kind": "Var",
+        "type": "null",
+        "usr": "c:@MKMapRectNull"
+      },
+      "minX": {
+        "kind": "Var",
+        "type": "minX",
+        "usr": "c:@F@MKMapRectGetMinX"
+      },
+      "minY": {
+        "kind": "Var",
+        "type": "minY",
+        "usr": "c:@F@MKMapRectGetMinY"
+      },
+      "midX": {
+        "kind": "Var",
+        "type": "midX",
+        "usr": "c:@F@MKMapRectGetMidX"
+      },
+      "midY": {
+        "kind": "Var",
+        "type": "midY",
+        "usr": "c:@F@MKMapRectGetMidY"
+      },
+      "maxX": {
+        "kind": "Var",
+        "type": "maxX",
+        "usr": "c:@F@MKMapRectGetMaxX"
+      },
+      "maxY": {
+        "kind": "Var",
+        "type": "maxY",
+        "usr": "c:@F@MKMapRectGetMaxY"
+      },
+      "width": {
+        "kind": "Var",
+        "type": "width",
+        "usr": "c:@F@MKMapRectGetWidth"
+      },
+      "height": {
+        "kind": "Var",
+        "type": "height",
+        "usr": "c:@F@MKMapRectGetHeight"
+      },
+      "isNull": {
+        "kind": "Var",
+        "type": "isNull",
+        "usr": "c:@F@MKMapRectIsNull"
+      },
+      "isEmpty": {
+        "kind": "Var",
+        "type": "isEmpty",
+        "usr": "c:@F@MKMapRectIsEmpty"
+      },
+      "union": {
+        "kind": "Func",
+        "type": "union(_:)",
+        "usr": "c:@F@MKMapRectUnion"
+      },
+      "intersection": {
+        "kind": "Func",
+        "type": "intersection(_:)",
+        "usr": "c:@F@MKMapRectIntersection"
+      },
+      "insetBy": {
+        "kind": "Func",
+        "type": "insetBy(dx:dy:)",
+        "usr": "c:@F@MKMapRectInset"
+      },
+      "offsetBy": {
+        "kind": "Func",
+        "type": "offsetBy(dx:dy:)",
+        "usr": "c:@F@MKMapRectOffset"
+      },
+      "contains": {
+        "kind": "Func",
+        "type": "contains(_:)",
+        "usr": "c:@F@MKMapRectContainsRect"
+      },
+      "intersects": {
+        "kind": "Func",
+        "type": "intersects(_:)",
+        "usr": "c:@F@MKMapRectIntersectsRect"
+      },
+      "spans180thMeridian": {
+        "kind": "Var",
+        "type": "spans180thMeridian",
+        "usr": "c:@F@MKMapRectSpans180thMeridian"
+      },
+      "remainder": {
+        "kind": "Var",
+        "type": "remainder",
+        "usr": "c:@F@MKMapRectRemainder"
+      }
+    }
+  },
+  "MKMapSize": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@SA@MKMapSize",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(width:height:)",
+        "usr": "s:So9MKMapSizea5width6heightABSd_Sdtcfc"
+      },
+      "world": {
+        "kind": "Var",
+        "type": "world",
+        "usr": "c:@MKMapSizeWorld"
+      }
+    }
+  },
+  "MKMapSnapshotter": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapSnapshotter",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "start": {
+        "kind": "Func",
+        "type": "start(with:)",
+        "usr": "c:objc(cs)MKMapSnapshotter(im)startWithQueue:completionHandler:"
+      },
+      "cancel": {
+        "kind": "Func",
+        "type": "cancel()",
+        "usr": "c:objc(cs)MKMapSnapshotter(im)cancel"
+      },
+      "isLoading": {
+        "kind": "Var",
+        "type": "isLoading",
+        "usr": "c:objc(cs)MKMapSnapshotter(py)loading"
+      },
+      "CompletionHandler": {
+        "kind": "TypeAlias",
+        "type": "CompletionHandler",
+        "usr": "c:@T@MKMapSnapshotCompletionHandler"
+      }
+    }
+  },
+  "MKMapType": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKMapType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So9MKMapTypeV8rawValueABSgSu_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So9MKMapTypeV8rawValueSuvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So9MKMapTypeV8RawValuea"
+      },
+      "standard": {
+        "kind": "EnumElement",
+        "type": "standard",
+        "usr": "c:@E@MKMapType@MKMapTypeStandard"
+      },
+      "satellite": {
+        "kind": "EnumElement",
+        "type": "satellite",
+        "usr": "c:@E@MKMapType@MKMapTypeSatellite"
+      },
+      "hybrid": {
+        "kind": "EnumElement",
+        "type": "hybrid",
+        "usr": "c:@E@MKMapType@MKMapTypeHybrid"
+      },
+      "satelliteFlyover": {
+        "kind": "EnumElement",
+        "type": "satelliteFlyover",
+        "usr": "c:@E@MKMapType@MKMapTypeSatelliteFlyover"
+      },
+      "hybridFlyover": {
+        "kind": "EnumElement",
+        "type": "hybridFlyover",
+        "usr": "c:@E@MKMapType@MKMapTypeHybridFlyover"
+      },
+      "mutedStandard": {
+        "kind": "EnumElement",
+        "type": "mutedStandard",
+        "usr": "c:@E@MKMapType@MKMapTypeMutedStandard"
+      }
+    }
+  },
+  "MKMapView": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapView",
+    "members": {
+      "delegate": {
+        "kind": "Var",
+        "type": "delegate",
+        "usr": "c:objc(cs)MKMapView(py)delegate"
+      },
+      "mapType": {
+        "kind": "Var",
+        "type": "mapType",
+        "usr": "c:objc(cs)MKMapView(py)mapType"
+      },
+      "preferredConfiguration": {
+        "kind": "Var",
+        "type": "preferredConfiguration",
+        "usr": "c:objc(cs)MKMapView(py)preferredConfiguration"
+      },
+      "selectableMapFeatures": {
+        "kind": "Var",
+        "type": "selectableMapFeatures",
+        "usr": "c:objc(cs)MKMapView(py)selectableMapFeatures"
+      },
+      "region": {
+        "kind": "Var",
+        "type": "region",
+        "usr": "c:objc(cs)MKMapView(py)region"
+      },
+      "setRegion": {
+        "kind": "Func",
+        "type": "setRegion(_:animated:)",
+        "usr": "c:objc(cs)MKMapView(im)setRegion:animated:"
+      },
+      "centerCoordinate": {
+        "kind": "Var",
+        "type": "centerCoordinate",
+        "usr": "c:objc(cs)MKMapView(py)centerCoordinate"
+      },
+      "setCenter": {
+        "kind": "Func",
+        "type": "setCenter(_:animated:)",
+        "usr": "c:objc(cs)MKMapView(im)setCenterCoordinate:animated:"
+      },
+      "regionThatFits": {
+        "kind": "Func",
+        "type": "regionThatFits(_:)",
+        "usr": "c:objc(cs)MKMapView(im)regionThatFits:"
+      },
+      "visibleMapRect": {
+        "kind": "Var",
+        "type": "visibleMapRect",
+        "usr": "c:objc(cs)MKMapView(py)visibleMapRect"
+      },
+      "setVisibleMapRect": {
+        "kind": "Func",
+        "type": "setVisibleMapRect(_:edgePadding:animated:)",
+        "usr": "c:objc(cs)MKMapView(im)setVisibleMapRect:edgePadding:animated:"
+      },
+      "mapRectThatFits": {
+        "kind": "Func",
+        "type": "mapRectThatFits(_:edgePadding:)",
+        "usr": "c:objc(cs)MKMapView(im)mapRectThatFits:edgePadding:"
+      },
+      "camera": {
+        "kind": "Var",
+        "type": "camera",
+        "usr": "c:objc(cs)MKMapView(py)camera"
+      },
+      "setCamera": {
+        "kind": "Func",
+        "type": "setCamera(_:animated:)",
+        "usr": "c:objc(cs)MKMapView(im)setCamera:animated:"
+      },
+      "cameraZoomRange": {
+        "kind": "Var",
+        "type": "cameraZoomRange",
+        "usr": "c:objc(cs)MKMapView(py)cameraZoomRange"
+      },
+      "setCameraZoomRange": {
+        "kind": "Func",
+        "type": "setCameraZoomRange(_:animated:)",
+        "usr": "c:objc(cs)MKMapView(im)setCameraZoomRange:animated:"
+      },
+      "cameraBoundary": {
+        "kind": "Var",
+        "type": "cameraBoundary",
+        "usr": "c:objc(cs)MKMapView(py)cameraBoundary"
+      },
+      "setCameraBoundary": {
+        "kind": "Func",
+        "type": "setCameraBoundary(_:animated:)",
+        "usr": "c:objc(cs)MKMapView(im)setCameraBoundary:animated:"
+      },
+      "convert": {
+        "kind": "Func",
+        "type": "convert(_:toRegionFrom:)",
+        "usr": "c:objc(cs)MKMapView(im)convertRect:toRegionFromView:"
+      },
+      "isZoomEnabled": {
+        "kind": "Var",
+        "type": "isZoomEnabled",
+        "usr": "c:objc(cs)MKMapView(py)zoomEnabled"
+      },
+      "isScrollEnabled": {
+        "kind": "Var",
+        "type": "isScrollEnabled",
+        "usr": "c:objc(cs)MKMapView(py)scrollEnabled"
+      },
+      "isRotateEnabled": {
+        "kind": "Var",
+        "type": "isRotateEnabled",
+        "usr": "c:objc(cs)MKMapView(py)rotateEnabled"
+      },
+      "isPitchEnabled": {
+        "kind": "Var",
+        "type": "isPitchEnabled",
+        "usr": "c:objc(cs)MKMapView(py)pitchEnabled"
+      },
+      "showsUserTrackingButton": {
+        "kind": "Var",
+        "type": "showsUserTrackingButton",
+        "usr": "c:objc(cs)MKMapView(py)showsUserTrackingButton"
+      },
+      "pitchButtonVisibility": {
+        "kind": "Var",
+        "type": "pitchButtonVisibility",
+        "usr": "c:objc(cs)MKMapView(py)pitchButtonVisibility"
+      },
+      "showsCompass": {
+        "kind": "Var",
+        "type": "showsCompass",
+        "usr": "c:objc(cs)MKMapView(py)showsCompass"
+      },
+      "showsScale": {
+        "kind": "Var",
+        "type": "showsScale",
+        "usr": "c:objc(cs)MKMapView(py)showsScale"
+      },
+      "pointOfInterestFilter": {
+        "kind": "Var",
+        "type": "pointOfInterestFilter",
+        "usr": "c:objc(cs)MKMapView(py)pointOfInterestFilter"
+      },
+      "showsPointsOfInterest": {
+        "kind": "Var",
+        "type": "showsPointsOfInterest",
+        "usr": "c:objc(cs)MKMapView(py)showsPointsOfInterest"
+      },
+      "showsBuildings": {
+        "kind": "Var",
+        "type": "showsBuildings",
+        "usr": "c:objc(cs)MKMapView(py)showsBuildings"
+      },
+      "showsTraffic": {
+        "kind": "Var",
+        "type": "showsTraffic",
+        "usr": "c:objc(cs)MKMapView(py)showsTraffic"
+      },
+      "showsUserLocation": {
+        "kind": "Var",
+        "type": "showsUserLocation",
+        "usr": "c:objc(cs)MKMapView(py)showsUserLocation"
+      },
+      "userLocation": {
+        "kind": "Var",
+        "type": "userLocation",
+        "usr": "c:objc(cs)MKMapView(py)userLocation"
+      },
+      "userTrackingMode": {
+        "kind": "Var",
+        "type": "userTrackingMode",
+        "usr": "c:objc(cs)MKMapView(py)userTrackingMode"
+      },
+      "setUserTrackingMode": {
+        "kind": "Func",
+        "type": "setUserTrackingMode(_:animated:)",
+        "usr": "c:objc(cs)MKMapView(im)setUserTrackingMode:animated:"
+      },
+      "isUserLocationVisible": {
+        "kind": "Var",
+        "type": "isUserLocationVisible",
+        "usr": "c:objc(cs)MKMapView(py)userLocationVisible"
+      },
+      "addAnnotation": {
+        "kind": "Func",
+        "type": "addAnnotation(_:)",
+        "usr": "c:objc(cs)MKMapView(im)addAnnotation:"
+      },
+      "addAnnotations": {
+        "kind": "Func",
+        "type": "addAnnotations(_:)",
+        "usr": "c:objc(cs)MKMapView(im)addAnnotations:"
+      },
+      "removeAnnotation": {
+        "kind": "Func",
+        "type": "removeAnnotation(_:)",
+        "usr": "c:objc(cs)MKMapView(im)removeAnnotation:"
+      },
+      "removeAnnotations": {
+        "kind": "Func",
+        "type": "removeAnnotations(_:)",
+        "usr": "c:objc(cs)MKMapView(im)removeAnnotations:"
+      },
+      "annotations": {
+        "kind": "Func",
+        "type": "annotations(in:)",
+        "usr": "c:objc(cs)MKMapView(im)annotationsInMapRect:"
+      },
+      "view": {
+        "kind": "Func",
+        "type": "view(for:)",
+        "usr": "c:objc(cs)MKMapView(im)viewForOverlay:"
+      },
+      "dequeueReusableAnnotationView": {
+        "kind": "Func",
+        "type": "dequeueReusableAnnotationView(withIdentifier:for:)",
+        "usr": "c:objc(cs)MKMapView(im)dequeueReusableAnnotationViewWithIdentifier:forAnnotation:"
+      },
+      "register": {
+        "kind": "Func",
+        "type": "register(_:forAnnotationViewWithReuseIdentifier:)",
+        "usr": "c:objc(cs)MKMapView(im)registerClass:forAnnotationViewWithReuseIdentifier:"
+      },
+      "selectAnnotation": {
+        "kind": "Func",
+        "type": "selectAnnotation(_:animated:)",
+        "usr": "c:objc(cs)MKMapView(im)selectAnnotation:animated:"
+      },
+      "deselectAnnotation": {
+        "kind": "Func",
+        "type": "deselectAnnotation(_:animated:)",
+        "usr": "c:objc(cs)MKMapView(im)deselectAnnotation:animated:"
+      },
+      "selectedAnnotations": {
+        "kind": "Var",
+        "type": "selectedAnnotations",
+        "usr": "c:objc(cs)MKMapView(py)selectedAnnotations"
+      },
+      "annotationVisibleRect": {
+        "kind": "Var",
+        "type": "annotationVisibleRect",
+        "usr": "c:objc(cs)MKMapView(py)annotationVisibleRect"
+      },
+      "showAnnotations": {
+        "kind": "Func",
+        "type": "showAnnotations(_:animated:)",
+        "usr": "c:objc(cs)MKMapView(im)showAnnotations:animated:"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "addOverlay": {
+        "kind": "Func",
+        "type": "addOverlay(_:)",
+        "usr": "c:objc(cs)MKMapView(im)addOverlay:"
+      },
+      "addOverlays": {
+        "kind": "Func",
+        "type": "addOverlays(_:)",
+        "usr": "c:objc(cs)MKMapView(im)addOverlays:"
+      },
+      "removeOverlay": {
+        "kind": "Func",
+        "type": "removeOverlay(_:)",
+        "usr": "c:objc(cs)MKMapView(im)removeOverlay:"
+      },
+      "removeOverlays": {
+        "kind": "Func",
+        "type": "removeOverlays(_:)",
+        "usr": "c:objc(cs)MKMapView(im)removeOverlays:"
+      },
+      "insertOverlay": {
+        "kind": "Func",
+        "type": "insertOverlay(_:at:)",
+        "usr": "c:objc(cs)MKMapView(im)insertOverlay:atIndex:"
+      },
+      "exchangeOverlay": {
+        "kind": "Func",
+        "type": "exchangeOverlay(at:withOverlayAt:)",
+        "usr": "c:objc(cs)MKMapView(im)exchangeOverlayAtIndex:withOverlayAtIndex:"
+      },
+      "overlays": {
+        "kind": "Func",
+        "type": "overlays(in:)",
+        "usr": "c:objc(cs)MKMapView(im)overlaysInLevel:"
+      },
+      "renderer": {
+        "kind": "Func",
+        "type": "renderer(for:)",
+        "usr": "c:objc(cs)MKMapView(im)rendererForOverlay:"
+      }
+    }
+  },
+  "CameraBoundary": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapCameraBoundary",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "mapRect": {
+        "kind": "Var",
+        "type": "mapRect",
+        "usr": "c:objc(cs)MKMapCameraBoundary(py)mapRect"
+      },
+      "region": {
+        "kind": "Var",
+        "type": "region",
+        "usr": "c:objc(cs)MKMapCameraBoundary(py)region"
+      }
+    }
+  },
+  "CameraZoomRange": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapCameraZoomRange",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "minCenterCoordinateDistance": {
+        "kind": "Var",
+        "type": "minCenterCoordinateDistance",
+        "usr": "c:objc(cs)MKMapCameraZoomRange(py)minCenterCoordinateDistance"
+      },
+      "maxCenterCoordinateDistance": {
+        "kind": "Var",
+        "type": "maxCenterCoordinateDistance",
+        "usr": "c:objc(cs)MKMapCameraZoomRange(py)maxCenterCoordinateDistance"
+      }
+    }
+  },
+  "MKMapViewDelegate": {
+    "kind": "Protocol",
+    "module": "MapKit",
+    "usr": "c:objc(pl)MKMapViewDelegate",
+    "members": {
+      "mapView": {
+        "kind": "Func",
+        "type": "mapView(_:clusterAnnotationForMemberAnnotations:)",
+        "usr": "c:objc(pl)MKMapViewDelegate(im)mapView:clusterAnnotationForMemberAnnotations:"
+      },
+      "mapViewDidChangeVisibleRegion": {
+        "kind": "Func",
+        "type": "mapViewDidChangeVisibleRegion(_:)",
+        "usr": "c:objc(pl)MKMapViewDelegate(im)mapViewDidChangeVisibleRegion:"
+      },
+      "mapViewWillStartLoadingMap": {
+        "kind": "Func",
+        "type": "mapViewWillStartLoadingMap(_:)",
+        "usr": "c:objc(pl)MKMapViewDelegate(im)mapViewWillStartLoadingMap:"
+      },
+      "mapViewDidFinishLoadingMap": {
+        "kind": "Func",
+        "type": "mapViewDidFinishLoadingMap(_:)",
+        "usr": "c:objc(pl)MKMapViewDelegate(im)mapViewDidFinishLoadingMap:"
+      },
+      "mapViewDidFailLoadingMap": {
+        "kind": "Func",
+        "type": "mapViewDidFailLoadingMap(_:withError:)",
+        "usr": "c:objc(pl)MKMapViewDelegate(im)mapViewDidFailLoadingMap:withError:"
+      },
+      "mapViewWillStartRenderingMap": {
+        "kind": "Func",
+        "type": "mapViewWillStartRenderingMap(_:)",
+        "usr": "c:objc(pl)MKMapViewDelegate(im)mapViewWillStartRenderingMap:"
+      },
+      "mapViewDidFinishRenderingMap": {
+        "kind": "Func",
+        "type": "mapViewDidFinishRenderingMap(_:fullyRendered:)",
+        "usr": "c:objc(pl)MKMapViewDelegate(im)mapViewDidFinishRenderingMap:fullyRendered:"
+      },
+      "mapViewWillStartLocatingUser": {
+        "kind": "Func",
+        "type": "mapViewWillStartLocatingUser(_:)",
+        "usr": "c:objc(pl)MKMapViewDelegate(im)mapViewWillStartLocatingUser:"
+      },
+      "mapViewDidStopLocatingUser": {
+        "kind": "Func",
+        "type": "mapViewDidStopLocatingUser(_:)",
+        "usr": "c:objc(pl)MKMapViewDelegate(im)mapViewDidStopLocatingUser:"
+      }
+    }
+  },
+  "MKMarkerAnnotationView": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMarkerAnnotationView",
+    "members": {
+      "titleVisibility": {
+        "kind": "Var",
+        "type": "titleVisibility",
+        "usr": "c:objc(cs)MKMarkerAnnotationView(py)titleVisibility"
+      },
+      "subtitleVisibility": {
+        "kind": "Var",
+        "type": "subtitleVisibility",
+        "usr": "c:objc(cs)MKMarkerAnnotationView(py)subtitleVisibility"
+      },
+      "markerTintColor": {
+        "kind": "Var",
+        "type": "markerTintColor",
+        "usr": "c:objc(cs)MKMarkerAnnotationView(py)markerTintColor"
+      },
+      "glyphTintColor": {
+        "kind": "Var",
+        "type": "glyphTintColor",
+        "usr": "c:objc(cs)MKMarkerAnnotationView(py)glyphTintColor"
+      },
+      "glyphText": {
+        "kind": "Var",
+        "type": "glyphText",
+        "usr": "c:objc(cs)MKMarkerAnnotationView(py)glyphText"
+      },
+      "glyphImage": {
+        "kind": "Var",
+        "type": "glyphImage",
+        "usr": "c:objc(cs)MKMarkerAnnotationView(py)glyphImage"
+      },
+      "selectedGlyphImage": {
+        "kind": "Var",
+        "type": "selectedGlyphImage",
+        "usr": "c:objc(cs)MKMarkerAnnotationView(py)selectedGlyphImage"
+      },
+      "animatesWhenAdded": {
+        "kind": "Var",
+        "type": "animatesWhenAdded",
+        "usr": "c:objc(cs)MKMarkerAnnotationView(py)animatesWhenAdded"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKMultiPoint": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMultiPoint",
+    "members": {
+      "points": {
+        "kind": "Func",
+        "type": "points()",
+        "usr": "c:objc(cs)MKMultiPoint(im)points"
+      },
+      "pointCount": {
+        "kind": "Var",
+        "type": "pointCount",
+        "usr": "c:objc(cs)MKMultiPoint(py)pointCount"
+      },
+      "getCoordinates": {
+        "kind": "Func",
+        "type": "getCoordinates(_:range:)",
+        "usr": "c:objc(cs)MKMultiPoint(im)getCoordinates:range:"
+      },
+      "location": {
+        "kind": "Func",
+        "type": "location(atPointIndex:)",
+        "usr": "c:objc(cs)MKMultiPoint(im)locationAtPointIndex:"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "locations": {
+        "kind": "Func",
+        "type": "locations(at:)",
+        "usr": "s:So12MKMultiPointC6MapKitE9locations2atSay14CoreFoundation7CGFloatVG0H08IndexSetV_tF"
+      }
+    }
+  },
+  "MKMultiPolygon": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMultiPolygon",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "polygons": {
+        "kind": "Var",
+        "type": "polygons",
+        "usr": "c:objc(cs)MKMultiPolygon(py)polygons"
+      }
+    }
+  },
+  "MKMultiPolygonRenderer": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMultiPolygonRenderer",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "multiPolygon": {
+        "kind": "Var",
+        "type": "multiPolygon",
+        "usr": "c:objc(cs)MKMultiPolygonRenderer(py)multiPolygon"
+      }
+    }
+  },
+  "MKMultiPolyline": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMultiPolyline",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "polylines": {
+        "kind": "Var",
+        "type": "polylines",
+        "usr": "c:objc(cs)MKMultiPolyline(py)polylines"
+      }
+    }
+  },
+  "MKMultiPolylineRenderer": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMultiPolylineRenderer",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "multiPolyline": {
+        "kind": "Var",
+        "type": "multiPolyline",
+        "usr": "c:objc(cs)MKMultiPolylineRenderer(py)multiPolyline"
+      }
+    }
+  },
+  "MKOverlay": {
+    "kind": "Protocol",
+    "module": "MapKit",
+    "usr": "c:objc(pl)MKOverlay",
+    "members": {
+      "coordinate": {
+        "kind": "Var",
+        "type": "coordinate",
+        "usr": "c:objc(pl)MKOverlay(py)coordinate"
+      },
+      "boundingMapRect": {
+        "kind": "Var",
+        "type": "boundingMapRect",
+        "usr": "c:objc(pl)MKOverlay(py)boundingMapRect"
+      },
+      "intersects": {
+        "kind": "Func",
+        "type": "intersects(_:)",
+        "usr": "c:objc(pl)MKOverlay(im)intersectsMapRect:"
+      },
+      "canReplaceMapContent": {
+        "kind": "Func",
+        "type": "canReplaceMapContent()",
+        "usr": "c:objc(pl)MKOverlay(im)canReplaceMapContent"
+      }
+    }
+  },
+  "MKOverlayLevel": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKOverlayLevel",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So14MKOverlayLevelV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So14MKOverlayLevelV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So14MKOverlayLevelV8RawValuea"
+      },
+      "aboveRoads": {
+        "kind": "EnumElement",
+        "type": "aboveRoads",
+        "usr": "c:@E@MKOverlayLevel@MKOverlayLevelAboveRoads"
+      },
+      "aboveLabels": {
+        "kind": "EnumElement",
+        "type": "aboveLabels",
+        "usr": "c:@E@MKOverlayLevel@MKOverlayLevelAboveLabels"
+      }
+    }
+  },
+  "MKOverlayPathRenderer": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKOverlayPathRenderer",
+    "members": {
+      "fillColor": {
+        "kind": "Var",
+        "type": "fillColor",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(py)fillColor"
+      },
+      "strokeColor": {
+        "kind": "Var",
+        "type": "strokeColor",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(py)strokeColor"
+      },
+      "lineWidth": {
+        "kind": "Var",
+        "type": "lineWidth",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(py)lineWidth"
+      },
+      "lineJoin": {
+        "kind": "Var",
+        "type": "lineJoin",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(py)lineJoin"
+      },
+      "lineCap": {
+        "kind": "Var",
+        "type": "lineCap",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(py)lineCap"
+      },
+      "miterLimit": {
+        "kind": "Var",
+        "type": "miterLimit",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(py)miterLimit"
+      },
+      "lineDashPhase": {
+        "kind": "Var",
+        "type": "lineDashPhase",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(py)lineDashPhase"
+      },
+      "lineDashPattern": {
+        "kind": "Var",
+        "type": "lineDashPattern",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(py)lineDashPattern"
+      },
+      "shouldRasterize": {
+        "kind": "Var",
+        "type": "shouldRasterize",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(py)shouldRasterize"
+      },
+      "createPath": {
+        "kind": "Func",
+        "type": "createPath()",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(im)createPath"
+      },
+      "path": {
+        "kind": "Var",
+        "type": "path",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(py)path"
+      },
+      "invalidatePath": {
+        "kind": "Func",
+        "type": "invalidatePath()",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(im)invalidatePath"
+      },
+      "applyStrokeProperties": {
+        "kind": "Func",
+        "type": "applyStrokeProperties(to:atZoomScale:)",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(im)applyStrokePropertiesToContext:atZoomScale:"
+      },
+      "applyFillProperties": {
+        "kind": "Func",
+        "type": "applyFillProperties(to:atZoomScale:)",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(im)applyFillPropertiesToContext:atZoomScale:"
+      },
+      "strokePath": {
+        "kind": "Func",
+        "type": "strokePath(_:in:)",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(im)strokePath:inContext:"
+      },
+      "fillPath": {
+        "kind": "Func",
+        "type": "fillPath(_:in:)",
+        "usr": "c:objc(cs)MKOverlayPathRenderer(im)fillPath:inContext:"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKOverlayPathView": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKOverlayPathView",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKOverlayRenderer": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKOverlayRenderer",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "overlay": {
+        "kind": "Var",
+        "type": "overlay",
+        "usr": "c:objc(cs)MKOverlayRenderer(py)overlay"
+      },
+      "point": {
+        "kind": "Func",
+        "type": "point(for:)",
+        "usr": "c:objc(cs)MKOverlayRenderer(im)pointForMapPoint:"
+      },
+      "mapPoint": {
+        "kind": "Func",
+        "type": "mapPoint(for:)",
+        "usr": "c:objc(cs)MKOverlayRenderer(im)mapPointForPoint:"
+      },
+      "rect": {
+        "kind": "Func",
+        "type": "rect(for:)",
+        "usr": "c:objc(cs)MKOverlayRenderer(im)rectForMapRect:"
+      },
+      "mapRect": {
+        "kind": "Func",
+        "type": "mapRect(for:)",
+        "usr": "c:objc(cs)MKOverlayRenderer(im)mapRectForRect:"
+      },
+      "canDraw": {
+        "kind": "Func",
+        "type": "canDraw(_:zoomScale:)",
+        "usr": "c:objc(cs)MKOverlayRenderer(im)canDrawMapRect:zoomScale:"
+      },
+      "draw": {
+        "kind": "Func",
+        "type": "draw(_:zoomScale:in:)",
+        "usr": "c:objc(cs)MKOverlayRenderer(im)drawMapRect:zoomScale:inContext:"
+      },
+      "setNeedsDisplay": {
+        "kind": "Func",
+        "type": "setNeedsDisplay(_:zoomScale:)",
+        "usr": "c:objc(cs)MKOverlayRenderer(im)setNeedsDisplayInMapRect:zoomScale:"
+      },
+      "alpha": {
+        "kind": "Var",
+        "type": "alpha",
+        "usr": "c:objc(cs)MKOverlayRenderer(py)alpha"
+      },
+      "contentScaleFactor": {
+        "kind": "Var",
+        "type": "contentScaleFactor",
+        "usr": "c:objc(cs)MKOverlayRenderer(py)contentScaleFactor"
+      },
+      "blendMode": {
+        "kind": "Var",
+        "type": "blendMode",
+        "usr": "c:objc(cs)MKOverlayRenderer(py)blendMode"
+      }
+    }
+  },
+  "MKOverlayView": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKOverlayView",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKPinAnnotationColor": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKPinAnnotationColor",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So20MKPinAnnotationColorV8rawValueABSgSu_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So20MKPinAnnotationColorV8rawValueSuvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So20MKPinAnnotationColorV8RawValuea"
+      },
+      "red": {
+        "kind": "EnumElement",
+        "type": "red",
+        "usr": "c:@E@MKPinAnnotationColor@MKPinAnnotationColorRed"
+      },
+      "green": {
+        "kind": "EnumElement",
+        "type": "green",
+        "usr": "c:@E@MKPinAnnotationColor@MKPinAnnotationColorGreen"
+      },
+      "purple": {
+        "kind": "EnumElement",
+        "type": "purple",
+        "usr": "c:@E@MKPinAnnotationColor@MKPinAnnotationColorPurple"
+      }
+    }
+  },
+  "MKPinAnnotationView": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKPinAnnotationView",
+    "members": {
+      "redPinColor": {
+        "kind": "Func",
+        "type": "redPinColor()",
+        "usr": "c:objc(cs)MKPinAnnotationView(cm)redPinColor"
+      },
+      "greenPinColor": {
+        "kind": "Func",
+        "type": "greenPinColor()",
+        "usr": "c:objc(cs)MKPinAnnotationView(cm)greenPinColor"
+      },
+      "purplePinColor": {
+        "kind": "Func",
+        "type": "purplePinColor()",
+        "usr": "c:objc(cs)MKPinAnnotationView(cm)purplePinColor"
+      },
+      "pinTintColor": {
+        "kind": "Var",
+        "type": "pinTintColor",
+        "usr": "c:objc(cs)MKPinAnnotationView(py)pinTintColor"
+      },
+      "animatesDrop": {
+        "kind": "Var",
+        "type": "animatesDrop",
+        "usr": "c:objc(cs)MKPinAnnotationView(py)animatesDrop"
+      },
+      "pinColor": {
+        "kind": "Var",
+        "type": "pinColor",
+        "usr": "c:objc(cs)MKPinAnnotationView(py)pinColor"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKPlacemark": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKPlacemark",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(placemark:)",
+        "usr": "c:objc(cs)CLPlacemark(im)initWithPlacemark:"
+      },
+      "countryCode": {
+        "kind": "Var",
+        "type": "countryCode",
+        "usr": "c:objc(cs)MKPlacemark(py)countryCode"
+      }
+    }
+  },
+  "MKPointAnnotation": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKPointAnnotation",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)MKPointAnnotation(im)init"
+      },
+      "coordinate": {
+        "kind": "Var",
+        "type": "coordinate",
+        "usr": "c:objc(cs)MKPointAnnotation(py)coordinate"
+      }
+    }
+  },
+  "MKPointOfInterestCategory": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@T@MKPointOfInterestCategory",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So25MKPointOfInterestCategorya8rawValueABSS_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So25MKPointOfInterestCategorya8rawValueSSvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So25MKPointOfInterestCategorya8RawValuea"
+      },
+      "_ObjectiveCType": {
+        "kind": "TypeAlias",
+        "type": "_ObjectiveCType",
+        "usr": "s:So25MKPointOfInterestCategorya15_ObjectiveCTypea"
+      },
+      "animalService": {
+        "kind": "Var",
+        "type": "animalService",
+        "usr": "c:@MKPointOfInterestCategoryAnimalService"
+      },
+      "airport": {
+        "kind": "Var",
+        "type": "airport",
+        "usr": "c:@MKPointOfInterestCategoryAirport"
+      },
+      "amusementPark": {
+        "kind": "Var",
+        "type": "amusementPark",
+        "usr": "c:@MKPointOfInterestCategoryAmusementPark"
+      },
+      "aquarium": {
+        "kind": "Var",
+        "type": "aquarium",
+        "usr": "c:@MKPointOfInterestCategoryAquarium"
+      },
+      "atm": {
+        "kind": "Var",
+        "type": "atm",
+        "usr": "c:@MKPointOfInterestCategoryATM"
+      },
+      "automotiveRepair": {
+        "kind": "Var",
+        "type": "automotiveRepair",
+        "usr": "c:@MKPointOfInterestCategoryAutomotiveRepair"
+      },
+      "bakery": {
+        "kind": "Var",
+        "type": "bakery",
+        "usr": "c:@MKPointOfInterestCategoryBakery"
+      },
+      "bank": {
+        "kind": "Var",
+        "type": "bank",
+        "usr": "c:@MKPointOfInterestCategoryBank"
+      },
+      "baseball": {
+        "kind": "Var",
+        "type": "baseball",
+        "usr": "c:@MKPointOfInterestCategoryBaseball"
+      },
+      "basketball": {
+        "kind": "Var",
+        "type": "basketball",
+        "usr": "c:@MKPointOfInterestCategoryBasketball"
+      },
+      "beach": {
+        "kind": "Var",
+        "type": "beach",
+        "usr": "c:@MKPointOfInterestCategoryBeach"
+      },
+      "beauty": {
+        "kind": "Var",
+        "type": "beauty",
+        "usr": "c:@MKPointOfInterestCategoryBeauty"
+      },
+      "bowling": {
+        "kind": "Var",
+        "type": "bowling",
+        "usr": "c:@MKPointOfInterestCategoryBowling"
+      },
+      "brewery": {
+        "kind": "Var",
+        "type": "brewery",
+        "usr": "c:@MKPointOfInterestCategoryBrewery"
+      },
+      "cafe": {
+        "kind": "Var",
+        "type": "cafe",
+        "usr": "c:@MKPointOfInterestCategoryCafe"
+      },
+      "campground": {
+        "kind": "Var",
+        "type": "campground",
+        "usr": "c:@MKPointOfInterestCategoryCampground"
+      },
+      "carRental": {
+        "kind": "Var",
+        "type": "carRental",
+        "usr": "c:@MKPointOfInterestCategoryCarRental"
+      },
+      "castle": {
+        "kind": "Var",
+        "type": "castle",
+        "usr": "c:@MKPointOfInterestCategoryCastle"
+      },
+      "conventionCenter": {
+        "kind": "Var",
+        "type": "conventionCenter",
+        "usr": "c:@MKPointOfInterestCategoryConventionCenter"
+      },
+      "distillery": {
+        "kind": "Var",
+        "type": "distillery",
+        "usr": "c:@MKPointOfInterestCategoryDistillery"
+      },
+      "evCharger": {
+        "kind": "Var",
+        "type": "evCharger",
+        "usr": "c:@MKPointOfInterestCategoryEVCharger"
+      },
+      "fairground": {
+        "kind": "Var",
+        "type": "fairground",
+        "usr": "c:@MKPointOfInterestCategoryFairground"
+      },
+      "fireStation": {
+        "kind": "Var",
+        "type": "fireStation",
+        "usr": "c:@MKPointOfInterestCategoryFireStation"
+      },
+      "fishing": {
+        "kind": "Var",
+        "type": "fishing",
+        "usr": "c:@MKPointOfInterestCategoryFishing"
+      },
+      "fitnessCenter": {
+        "kind": "Var",
+        "type": "fitnessCenter",
+        "usr": "c:@MKPointOfInterestCategoryFitnessCenter"
+      },
+      "foodMarket": {
+        "kind": "Var",
+        "type": "foodMarket",
+        "usr": "c:@MKPointOfInterestCategoryFoodMarket"
+      },
+      "fortress": {
+        "kind": "Var",
+        "type": "fortress",
+        "usr": "c:@MKPointOfInterestCategoryFortress"
+      },
+      "gasStation": {
+        "kind": "Var",
+        "type": "gasStation",
+        "usr": "c:@MKPointOfInterestCategoryGasStation"
+      },
+      "golf": {
+        "kind": "Var",
+        "type": "golf",
+        "usr": "c:@MKPointOfInterestCategoryGolf"
+      },
+      "goKart": {
+        "kind": "Var",
+        "type": "goKart",
+        "usr": "c:@MKPointOfInterestCategoryGoKart"
+      },
+      "hiking": {
+        "kind": "Var",
+        "type": "hiking",
+        "usr": "c:@MKPointOfInterestCategoryHiking"
+      },
+      "hospital": {
+        "kind": "Var",
+        "type": "hospital",
+        "usr": "c:@MKPointOfInterestCategoryHospital"
+      },
+      "hotel": {
+        "kind": "Var",
+        "type": "hotel",
+        "usr": "c:@MKPointOfInterestCategoryHotel"
+      },
+      "kayaking": {
+        "kind": "Var",
+        "type": "kayaking",
+        "usr": "c:@MKPointOfInterestCategoryKayaking"
+      },
+      "landmark": {
+        "kind": "Var",
+        "type": "landmark",
+        "usr": "c:@MKPointOfInterestCategoryLandmark"
+      },
+      "laundry": {
+        "kind": "Var",
+        "type": "laundry",
+        "usr": "c:@MKPointOfInterestCategoryLaundry"
+      },
+      "library": {
+        "kind": "Var",
+        "type": "library",
+        "usr": "c:@MKPointOfInterestCategoryLibrary"
+      },
+      "mailbox": {
+        "kind": "Var",
+        "type": "mailbox",
+        "usr": "c:@MKPointOfInterestCategoryMailbox"
+      },
+      "marina": {
+        "kind": "Var",
+        "type": "marina",
+        "usr": "c:@MKPointOfInterestCategoryMarina"
+      },
+      "miniGolf": {
+        "kind": "Var",
+        "type": "miniGolf",
+        "usr": "c:@MKPointOfInterestCategoryMiniGolf"
+      },
+      "movieTheater": {
+        "kind": "Var",
+        "type": "movieTheater",
+        "usr": "c:@MKPointOfInterestCategoryMovieTheater"
+      },
+      "museum": {
+        "kind": "Var",
+        "type": "museum",
+        "usr": "c:@MKPointOfInterestCategoryMuseum"
+      },
+      "musicVenue": {
+        "kind": "Var",
+        "type": "musicVenue",
+        "usr": "c:@MKPointOfInterestCategoryMusicVenue"
+      },
+      "nationalMonument": {
+        "kind": "Var",
+        "type": "nationalMonument",
+        "usr": "c:@MKPointOfInterestCategoryNationalMonument"
+      },
+      "nationalPark": {
+        "kind": "Var",
+        "type": "nationalPark",
+        "usr": "c:@MKPointOfInterestCategoryNationalPark"
+      },
+      "nightlife": {
+        "kind": "Var",
+        "type": "nightlife",
+        "usr": "c:@MKPointOfInterestCategoryNightlife"
+      },
+      "park": {
+        "kind": "Var",
+        "type": "park",
+        "usr": "c:@MKPointOfInterestCategoryPark"
+      },
+      "parking": {
+        "kind": "Var",
+        "type": "parking",
+        "usr": "c:@MKPointOfInterestCategoryParking"
+      },
+      "pharmacy": {
+        "kind": "Var",
+        "type": "pharmacy",
+        "usr": "c:@MKPointOfInterestCategoryPharmacy"
+      },
+      "planetarium": {
+        "kind": "Var",
+        "type": "planetarium",
+        "usr": "c:@MKPointOfInterestCategoryPlanetarium"
+      },
+      "police": {
+        "kind": "Var",
+        "type": "police",
+        "usr": "c:@MKPointOfInterestCategoryPolice"
+      },
+      "postOffice": {
+        "kind": "Var",
+        "type": "postOffice",
+        "usr": "c:@MKPointOfInterestCategoryPostOffice"
+      },
+      "publicTransport": {
+        "kind": "Var",
+        "type": "publicTransport",
+        "usr": "c:@MKPointOfInterestCategoryPublicTransport"
+      },
+      "restaurant": {
+        "kind": "Var",
+        "type": "restaurant",
+        "usr": "c:@MKPointOfInterestCategoryRestaurant"
+      },
+      "restroom": {
+        "kind": "Var",
+        "type": "restroom",
+        "usr": "c:@MKPointOfInterestCategoryRestroom"
+      },
+      "rockClimbing": {
+        "kind": "Var",
+        "type": "rockClimbing",
+        "usr": "c:@MKPointOfInterestCategoryRockClimbing"
+      },
+      "rvPark": {
+        "kind": "Var",
+        "type": "rvPark",
+        "usr": "c:@MKPointOfInterestCategoryRVPark"
+      },
+      "school": {
+        "kind": "Var",
+        "type": "school",
+        "usr": "c:@MKPointOfInterestCategorySchool"
+      },
+      "skatePark": {
+        "kind": "Var",
+        "type": "skatePark",
+        "usr": "c:@MKPointOfInterestCategorySkatePark"
+      },
+      "skating": {
+        "kind": "Var",
+        "type": "skating",
+        "usr": "c:@MKPointOfInterestCategorySkating"
+      },
+      "skiing": {
+        "kind": "Var",
+        "type": "skiing",
+        "usr": "c:@MKPointOfInterestCategorySkiing"
+      },
+      "soccer": {
+        "kind": "Var",
+        "type": "soccer",
+        "usr": "c:@MKPointOfInterestCategorySoccer"
+      },
+      "spa": {
+        "kind": "Var",
+        "type": "spa",
+        "usr": "c:@MKPointOfInterestCategorySpa"
+      },
+      "stadium": {
+        "kind": "Var",
+        "type": "stadium",
+        "usr": "c:@MKPointOfInterestCategoryStadium"
+      },
+      "store": {
+        "kind": "Var",
+        "type": "store",
+        "usr": "c:@MKPointOfInterestCategoryStore"
+      },
+      "surfing": {
+        "kind": "Var",
+        "type": "surfing",
+        "usr": "c:@MKPointOfInterestCategorySurfing"
+      },
+      "swimming": {
+        "kind": "Var",
+        "type": "swimming",
+        "usr": "c:@MKPointOfInterestCategorySwimming"
+      },
+      "tennis": {
+        "kind": "Var",
+        "type": "tennis",
+        "usr": "c:@MKPointOfInterestCategoryTennis"
+      },
+      "theater": {
+        "kind": "Var",
+        "type": "theater",
+        "usr": "c:@MKPointOfInterestCategoryTheater"
+      },
+      "university": {
+        "kind": "Var",
+        "type": "university",
+        "usr": "c:@MKPointOfInterestCategoryUniversity"
+      },
+      "winery": {
+        "kind": "Var",
+        "type": "winery",
+        "usr": "c:@MKPointOfInterestCategoryWinery"
+      },
+      "volleyball": {
+        "kind": "Var",
+        "type": "volleyball",
+        "usr": "c:@MKPointOfInterestCategoryVolleyball"
+      },
+      "zoo": {
+        "kind": "Var",
+        "type": "zoo",
+        "usr": "c:@MKPointOfInterestCategoryZoo"
+      }
+    }
+  },
+  "MKPointOfInterestFilter": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKPointOfInterestFilter",
+    "members": {
+      "includingAll": {
+        "kind": "Var",
+        "type": "includingAll",
+        "usr": "c:objc(cs)MKPointOfInterestFilter(cpy)filterIncludingAllCategories"
+      },
+      "excludingAll": {
+        "kind": "Var",
+        "type": "excludingAll",
+        "usr": "c:objc(cs)MKPointOfInterestFilter(cpy)filterExcludingAllCategories"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "includes": {
+        "kind": "Func",
+        "type": "includes(_:)",
+        "usr": "c:objc(cs)MKPointOfInterestFilter(im)includesCategory:"
+      },
+      "excludes": {
+        "kind": "Func",
+        "type": "excludes(_:)",
+        "usr": "c:objc(cs)MKPointOfInterestFilter(im)excludesCategory:"
+      }
+    }
+  },
+  "MKPolygon": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKPolygon",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "interiorPolygons": {
+        "kind": "Var",
+        "type": "interiorPolygons",
+        "usr": "c:objc(cs)MKPolygon(py)interiorPolygons"
+      }
+    }
+  },
+  "MKPolygonRenderer": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKPolygonRenderer",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "polygon": {
+        "kind": "Var",
+        "type": "polygon",
+        "usr": "c:objc(cs)MKPolygonRenderer(py)polygon"
+      },
+      "strokeStart": {
+        "kind": "Var",
+        "type": "strokeStart",
+        "usr": "c:objc(cs)MKPolygonRenderer(py)strokeStart"
+      },
+      "strokeEnd": {
+        "kind": "Var",
+        "type": "strokeEnd",
+        "usr": "c:objc(cs)MKPolygonRenderer(py)strokeEnd"
+      }
+    }
+  },
+  "MKPolygonView": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKPolygonView",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKPolyline": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKPolyline",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKPolylineRenderer": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKPolylineRenderer",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "polyline": {
+        "kind": "Var",
+        "type": "polyline",
+        "usr": "c:objc(cs)MKPolylineRenderer(py)polyline"
+      },
+      "strokeStart": {
+        "kind": "Var",
+        "type": "strokeStart",
+        "usr": "c:objc(cs)MKPolylineRenderer(py)strokeStart"
+      },
+      "strokeEnd": {
+        "kind": "Var",
+        "type": "strokeEnd",
+        "usr": "c:objc(cs)MKPolylineRenderer(py)strokeEnd"
+      }
+    }
+  },
+  "MKPolylineView": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKPolylineView",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKRoute": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKRoute",
+    "members": {
+      "name": {
+        "kind": "Var",
+        "type": "name",
+        "usr": "c:objc(cs)MKRoute(py)name"
+      },
+      "advisoryNotices": {
+        "kind": "Var",
+        "type": "advisoryNotices",
+        "usr": "c:objc(cs)MKRoute(py)advisoryNotices"
+      },
+      "distance": {
+        "kind": "Var",
+        "type": "distance",
+        "usr": "c:objc(cs)MKRoute(py)distance"
+      },
+      "expectedTravelTime": {
+        "kind": "Var",
+        "type": "expectedTravelTime",
+        "usr": "c:objc(cs)MKRoute(py)expectedTravelTime"
+      },
+      "transportType": {
+        "kind": "Var",
+        "type": "transportType",
+        "usr": "c:objc(cs)MKRoute(py)transportType"
+      },
+      "polyline": {
+        "kind": "Var",
+        "type": "polyline",
+        "usr": "c:objc(cs)MKRoute(py)polyline"
+      },
+      "steps": {
+        "kind": "Var",
+        "type": "steps",
+        "usr": "c:objc(cs)MKRoute(py)steps"
+      },
+      "hasTolls": {
+        "kind": "Var",
+        "type": "hasTolls",
+        "usr": "c:objc(cs)MKRoute(py)hasTolls"
+      },
+      "hasHighways": {
+        "kind": "Var",
+        "type": "hasHighways",
+        "usr": "c:objc(cs)MKRoute(py)hasHighways"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "Step": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKRouteStep",
+    "members": {
+      "instructions": {
+        "kind": "Var",
+        "type": "instructions",
+        "usr": "c:objc(cs)MKRouteStep(py)instructions"
+      },
+      "notice": {
+        "kind": "Var",
+        "type": "notice",
+        "usr": "c:objc(cs)MKRouteStep(py)notice"
+      },
+      "polyline": {
+        "kind": "Var",
+        "type": "polyline",
+        "usr": "c:objc(cs)MKRouteStep(py)polyline"
+      },
+      "distance": {
+        "kind": "Var",
+        "type": "distance",
+        "usr": "c:objc(cs)MKRouteStep(py)distance"
+      },
+      "transportType": {
+        "kind": "Var",
+        "type": "transportType",
+        "usr": "c:objc(cs)MKRouteStep(py)transportType"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKScaleView": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKScaleView",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "mapView": {
+        "kind": "Var",
+        "type": "mapView",
+        "usr": "c:objc(cs)MKScaleView(py)mapView"
+      },
+      "scaleVisibility": {
+        "kind": "Var",
+        "type": "scaleVisibility",
+        "usr": "c:objc(cs)MKScaleView(py)scaleVisibility"
+      },
+      "legendAlignment": {
+        "kind": "Var",
+        "type": "legendAlignment",
+        "usr": "c:objc(cs)MKScaleView(py)legendAlignment"
+      },
+      "Alignment": {
+        "kind": "Enum",
+        "type": "Alignment",
+        "usr": "c:@E@MKScaleViewAlignment"
+      }
+    }
+  },
+  "Alignment": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKScaleViewAlignment",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So20MKScaleViewAlignmentV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So20MKScaleViewAlignmentV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So20MKScaleViewAlignmentV8RawValuea"
+      },
+      "leading": {
+        "kind": "EnumElement",
+        "type": "leading",
+        "usr": "c:@E@MKScaleViewAlignment@MKScaleViewAlignmentLeading"
+      },
+      "trailing": {
+        "kind": "EnumElement",
+        "type": "trailing",
+        "usr": "c:@E@MKScaleViewAlignment@MKScaleViewAlignmentTrailing"
+      }
+    }
+  },
+  "MKSelectionAccessory": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKSelectionAccessory",
+    "members": {
+      "mapItemDetail": {
+        "kind": "Func",
+        "type": "mapItemDetail(_:)",
+        "usr": "c:objc(cs)MKSelectionAccessory(cm)mapItemDetailWithPresentationStyle:"
+      }
+    }
+  },
+  "MapItemDetailPresentationStyle": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKMapItemDetailSelectionAccessoryPresentationStyle",
+    "members": {
+      "callout": {
+        "kind": "Func",
+        "type": "callout(_:)",
+        "usr": "s:So50MKMapItemDetailSelectionAccessoryPresentationStyleC6MapKitE7calloutyABSo0abcde7CalloutG0VFZ"
+      },
+      "sheet": {
+        "kind": "Func",
+        "type": "sheet(presentedFrom:)",
+        "usr": "c:objc(cs)MKMapItemDetailSelectionAccessoryPresentationStyle(cm)sheetPresentedFromViewController:"
+      },
+      "openInMaps": {
+        "kind": "Var",
+        "type": "openInMaps",
+        "usr": "c:objc(cs)MKMapItemDetailSelectionAccessoryPresentationStyle(cpy)openInMaps"
+      },
+      "CalloutStyle": {
+        "kind": "Enum",
+        "type": "CalloutStyle",
+        "usr": "c:@E@MKMapItemDetailSelectionAccessoryCalloutStyle"
+      },
+      "automatic": {
+        "kind": "Func",
+        "type": "automatic(presentationViewController:)",
+        "usr": "s:So50MKMapItemDetailSelectionAccessoryPresentationStyleC6MapKitE9automatic26presentationViewControllerABSo06UIViewM0CSg_tFZ"
+      }
+    }
+  },
+  "CalloutStyle": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKMapItemDetailSelectionAccessoryCalloutStyle",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So45MKMapItemDetailSelectionAccessoryCalloutStyleV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So45MKMapItemDetailSelectionAccessoryCalloutStyleV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So45MKMapItemDetailSelectionAccessoryCalloutStyleV8RawValuea"
+      },
+      "automatic": {
+        "kind": "EnumElement",
+        "type": "automatic",
+        "usr": "c:@E@MKMapItemDetailSelectionAccessoryCalloutStyle@MKMapItemDetailSelectionAccessoryCalloutStyleAutomatic"
+      },
+      "full": {
+        "kind": "EnumElement",
+        "type": "full",
+        "usr": "c:@E@MKMapItemDetailSelectionAccessoryCalloutStyle@MKMapItemDetailSelectionAccessoryCalloutStyleFull"
+      },
+      "compact": {
+        "kind": "EnumElement",
+        "type": "compact",
+        "usr": "c:@E@MKMapItemDetailSelectionAccessoryCalloutStyle@MKMapItemDetailSelectionAccessoryCalloutStyleCompact"
+      }
+    }
+  },
+  "MKShape": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKShape",
+    "members": {
+      "title": {
+        "kind": "Var",
+        "type": "title",
+        "usr": "c:objc(cs)MKShape(py)title"
+      },
+      "subtitle": {
+        "kind": "Var",
+        "type": "subtitle",
+        "usr": "c:objc(cs)MKShape(py)subtitle"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKStandardMapConfiguration": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKStandardMapConfiguration",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(emphasisStyle:)",
+        "usr": "c:objc(cs)MKStandardMapConfiguration(im)initWithEmphasisStyle:"
+      },
+      "emphasisStyle": {
+        "kind": "Var",
+        "type": "emphasisStyle",
+        "usr": "c:objc(cs)MKStandardMapConfiguration(py)emphasisStyle"
+      },
+      "pointOfInterestFilter": {
+        "kind": "Var",
+        "type": "pointOfInterestFilter",
+        "usr": "c:objc(cs)MKStandardMapConfiguration(py)pointOfInterestFilter"
+      },
+      "showsTraffic": {
+        "kind": "Var",
+        "type": "showsTraffic",
+        "usr": "c:objc(cs)MKStandardMapConfiguration(py)showsTraffic"
+      },
+      "EmphasisStyle": {
+        "kind": "Enum",
+        "type": "EmphasisStyle",
+        "usr": "c:@E@MKStandardMapEmphasisStyle"
+      }
+    }
+  },
+  "EmphasisStyle": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKStandardMapEmphasisStyle",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So26MKStandardMapEmphasisStyleV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So26MKStandardMapEmphasisStyleV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So26MKStandardMapEmphasisStyleV8RawValuea"
+      },
+      "default": {
+        "kind": "EnumElement",
+        "type": "default",
+        "usr": "c:@E@MKStandardMapEmphasisStyle@MKStandardMapEmphasisStyleDefault"
+      },
+      "muted": {
+        "kind": "EnumElement",
+        "type": "muted",
+        "usr": "c:@E@MKStandardMapEmphasisStyle@MKStandardMapEmphasisStyleMuted"
+      }
+    }
+  },
+  "MKTileOverlay": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKTileOverlay",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "tileSize": {
+        "kind": "Var",
+        "type": "tileSize",
+        "usr": "c:objc(cs)MKTileOverlay(py)tileSize"
+      },
+      "isGeometryFlipped": {
+        "kind": "Var",
+        "type": "isGeometryFlipped",
+        "usr": "c:objc(cs)MKTileOverlay(py)geometryFlipped"
+      },
+      "minimumZ": {
+        "kind": "Var",
+        "type": "minimumZ",
+        "usr": "c:objc(cs)MKTileOverlay(py)minimumZ"
+      },
+      "maximumZ": {
+        "kind": "Var",
+        "type": "maximumZ",
+        "usr": "c:objc(cs)MKTileOverlay(py)maximumZ"
+      },
+      "urlTemplate": {
+        "kind": "Var",
+        "type": "urlTemplate",
+        "usr": "c:objc(cs)MKTileOverlay(py)URLTemplate"
+      },
+      "canReplaceMapContent": {
+        "kind": "Var",
+        "type": "canReplaceMapContent",
+        "usr": "c:objc(cs)MKTileOverlay(py)canReplaceMapContent"
+      },
+      "url": {
+        "kind": "Func",
+        "type": "url(forTilePath:)",
+        "usr": "c:objc(cs)MKTileOverlay(im)URLForTilePath:"
+      },
+      "loadTile": {
+        "kind": "Func",
+        "type": "loadTile(at:)",
+        "usr": "c:objc(cs)MKTileOverlay(im)loadTileAtPath:result:"
+      }
+    }
+  },
+  "MKTileOverlayPath": {
+    "kind": "Struct",
+    "module": "MapKit",
+    "usr": "c:@SA@MKTileOverlayPath",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(x:y:z:contentScaleFactor:)",
+        "usr": "s:So17MKTileOverlayPatha1x1y1z18contentScaleFactorABSi_S2i14CoreFoundation7CGFloatVtcfc"
+      }
+    }
+  },
+  "MKTileOverlayRenderer": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKTileOverlayRenderer",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "reloadData": {
+        "kind": "Func",
+        "type": "reloadData()",
+        "usr": "c:objc(cs)MKTileOverlayRenderer(im)reloadData"
+      }
+    }
+  },
+  "MKUserLocation": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKUserLocation",
+    "members": {
+      "isUpdating": {
+        "kind": "Var",
+        "type": "isUpdating",
+        "usr": "c:objc(cs)MKUserLocation(py)updating"
+      },
+      "location": {
+        "kind": "Var",
+        "type": "location",
+        "usr": "c:objc(cs)MKUserLocation(py)location"
+      },
+      "heading": {
+        "kind": "Var",
+        "type": "heading",
+        "usr": "c:objc(cs)MKUserLocation(py)heading"
+      },
+      "title": {
+        "kind": "Var",
+        "type": "title",
+        "usr": "c:objc(cs)MKUserLocation(py)title"
+      },
+      "subtitle": {
+        "kind": "Var",
+        "type": "subtitle",
+        "usr": "c:objc(cs)MKUserLocation(py)subtitle"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKUserLocationView": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKUserLocationView",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MKUserTrackingBarButtonItem": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKUserTrackingBarButtonItem",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(customView:)",
+        "usr": "c:objc(cs)UIBarButtonItem(im)initWithCustomView:"
+      },
+      "mapView": {
+        "kind": "Var",
+        "type": "mapView",
+        "usr": "c:objc(cs)MKUserTrackingBarButtonItem(py)mapView"
+      }
+    }
+  },
+  "MKUserTrackingButton": {
+    "kind": "Class",
+    "module": "MapKit",
+    "usr": "c:objc(cs)MKUserTrackingButton",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "mapView": {
+        "kind": "Var",
+        "type": "mapView",
+        "usr": "c:objc(cs)MKUserTrackingButton(py)mapView"
+      }
+    }
+  },
+  "MKUserTrackingMode": {
+    "kind": "Enum",
+    "module": "MapKit",
+    "usr": "c:@E@MKUserTrackingMode",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So18MKUserTrackingModeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So18MKUserTrackingModeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So18MKUserTrackingModeV8RawValuea"
+      },
+      "none": {
+        "kind": "EnumElement",
+        "type": "none",
+        "usr": "c:@E@MKUserTrackingMode@MKUserTrackingModeNone"
+      },
+      "follow": {
+        "kind": "EnumElement",
+        "type": "follow",
+        "usr": "c:@E@MKUserTrackingMode@MKUserTrackingModeFollow"
+      },
+      "followWithHeading": {
+        "kind": "EnumElement",
+        "type": "followWithHeading",
+        "usr": "c:@E@MKUserTrackingMode@MKUserTrackingModeFollowWithHeading"
+      }
+    }
+  },
+  "NSValue": {
+    "kind": "Class",
+    "module": "Foundation",
+    "usr": "c:objc(cs)NSValue",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(mkCoordinateSpan:)",
+        "usr": "c:objc(cs)NSValue(cm)valueWithMKCoordinateSpan:"
+      },
+      "mkCoordinateValue": {
+        "kind": "Var",
+        "type": "mkCoordinateValue",
+        "usr": "c:objc(cs)NSValue(py)MKCoordinateValue"
+      },
+      "mkCoordinateSpanValue": {
+        "kind": "Var",
+        "type": "mkCoordinateSpanValue",
+        "usr": "c:objc(cs)NSValue(py)MKCoordinateSpanValue"
+      }
+    }
+  },
+  "NSUserActivity": {
+    "kind": "Class",
+    "module": "Foundation",
+    "usr": "c:objc(cs)NSUserActivity",
+    "members": {
+      "mapItem": {
+        "kind": "Var",
+        "type": "mapItem",
+        "usr": "c:objc(cs)NSUserActivity(py)mapItem"
+      }
+    }
+  },
+  "Name": {
+    "kind": "Struct",
+    "module": "Foundation",
+    "usr": "c:@T@NSNotificationName",
+    "members": {
+      "MKAnnotationCalloutInfoDidChange": {
+        "kind": "Var",
+        "type": "MKAnnotationCalloutInfoDidChange",
+        "usr": "c:@MKAnnotationCalloutInfoDidChangeNotification"
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "A_name" : "RemoteUrlPresetRepositoryImpl",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RemoteUrlPresetRepository"
+    ],
+    "F_location" : "RemoteUrlPresetRepositoryImpl.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "localDataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RemoteUrlPresetRepositoryImpl.swift - Line: 11, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RemoteUrlPresetRepositoryImpl.swift - Line: 13, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "RemoteUrlPresetLocalDataSource"
+        ],
+        "I_parameters" : [
+          "localDataSource"
+        ]
+      },
+      {
+        "A_name" : "getPresetData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RemoteUrlPresetRepositoryImpl.swift - Line: 17, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> [URL]"
+      },
+      {
+        "A_name" : "addPresetData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RemoteUrlPresetRepositoryImpl.swift - Line: 21, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "url"
+        ]
+      },
+      {
+        "A_name" : "savePresetData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RemoteUrlPresetRepositoryImpl.swift - Line: 25, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[URL]"
+        ],
+        "I_parameters" : [
+          "remoteUrlPresetData"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "localDataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RemoteUrlPresetRepositoryImpl.swift - Line: 11, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RemoteUrlPresetRepositoryImpl.swift - Line: 13, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "RemoteUrlPresetLocalDataSource"
+    ],
+    "I_parameters" : [
+      "localDataSource"
+    ]
+  },
+  {
+    "A_name" : "getPresetData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RemoteUrlPresetRepositoryImpl.swift - Line: 17, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> [URL]"
+  },
+  {
+    "A_name" : "addPresetData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RemoteUrlPresetRepositoryImpl.swift - Line: 21, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL"
+    ],
+    "I_parameters" : [
+      "url"
+    ]
+  },
+  {
+    "A_name" : "savePresetData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RemoteUrlPresetRepositoryImpl.swift - Line: 25, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[URL]"
+    ],
+    "I_parameters" : [
+      "remoteUrlPresetData"
+    ]
+  }
+]

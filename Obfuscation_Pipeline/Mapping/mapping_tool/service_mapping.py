@@ -18,7 +18,7 @@ Service Mapping Script
 
 import argparse
 import json
-import random
+import secrets
 import sys
 from pathlib import Path
 from typing import List, Dict, Any, Set
@@ -239,7 +239,7 @@ def select_far_clusters(index_dir: Path, kind: str, target: str, k: int,
 
 
 def create_mapping(targets: List[str], pool_dir: Path, index_dir: Path, kind: str,
-                  rnd: random.Random, forbidden: Set[str], used_repls: Set[str], 
+                  rnd: secrets.Random, forbidden: Set[str], used_repls: Set[str], 
                   cluster_threshold: float = DEFAULT_CLUSTER_SIMILARITY_THRESHOLD) -> List[Dict[str, str]]:
     """매핑 생성"""
     # 후보 풀 로드
@@ -394,7 +394,7 @@ def main():
             forbidden.add(_name)
 
     # 매핑 생성
-    rnd = random.SystemRandom()
+    rnd = secrets.SystemRandom()
     result = {}
 
     used_repls: Set[str] = set()

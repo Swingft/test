@@ -1,0 +1,1212 @@
+[
+  {
+    "A_name" : "TextNode",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Node"
+    ],
+    "F_location" : "TextNode.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "TEXT_KEY",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "TextNode.swift - Line: 20, Column: 5",
+        "H_initialValue" : "\"text\""
+      },
+      {
+        "A_name" : "_text",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 21, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 30, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "nodeName",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 37, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "text",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 46, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "text",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "TextNode.swift - Line: 55, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> TextNode"
+      },
+      {
+        "A_name" : "getWholeText",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 73, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "isBlank",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 81, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "splitText",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 91, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "head",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextNode.swift - Line: 95, Column: 9",
+            "H_initialValue" : "getWholeText().substring(0, offset)"
+          },
+          {
+            "A_name" : "tail",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextNode.swift - Line: 96, Column: 9",
+            "H_initialValue" : "getWholeText().substring(offset)"
+          },
+          {
+            "A_name" : "tailNode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextNode.swift - Line: 98, Column: 9",
+            "H_initialValue" : "TextNode(tail, self.getBaseUri())"
+          }
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "->TextNode"
+      },
+      {
+        "A_name" : "outerHtmlHead",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 105, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "par",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextNode.swift - Line: 112, Column: 9",
+            "H_initialValue" : "parent() as? Element"
+          },
+          {
+            "A_name" : "normaliseWhite",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextNode.swift - Line: 113, Column: 9",
+            "H_initialValue" : "out.prettyPrint() && par != nil && !Element.preserveWhitespace(par!)"
+          }
+        ],
+        "I_parameterType" : [
+          "StringBuilder",
+          "Int",
+          "OutputSettings"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "outerHtmlTail",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 118, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StringBuilder",
+          "Int",
+          "OutputSettings"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "createFromEncoded",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "TextNode.swift - Line: 127, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "text",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextNode.swift - Line: 128, Column: 9",
+            "H_initialValue" : "try Entities.unescape(encodedText)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->TextNode"
+      },
+      {
+        "A_name" : "normaliseWhitespace",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "TextNode.swift - Line: 132, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "_text",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextNode.swift - Line: 133, Column: 9",
+            "H_initialValue" : "StringUtil.normaliseWhitespace(text)"
+          }
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "stripLeadingWhitespace",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "TextNode.swift - Line: 137, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "lastCharIsWhitespace",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "TextNode.swift - Line: 142, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StringBuilder"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "ensureAttributes",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 147, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "attr",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 156, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "->String"
+      },
+      {
+        "A_name" : "getAttributes",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 161, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Attributes"
+      },
+      {
+        "A_name" : "attr",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 166, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Node"
+      },
+      {
+        "A_name" : "hasAttr",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 171, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "removeAttr",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 176, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "->Node"
+      },
+      {
+        "A_name" : "absUrl",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 181, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "->String"
+      },
+      {
+        "A_name" : "copy",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 186, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "clone",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextNode.swift - Line: 187, Column: 3",
+            "H_initialValue" : "TextNode(_text, baseUri)"
+          }
+        ],
+        "I_parameterType" : [
+          "NSZone?"
+        ],
+        "I_parameters" : [
+          "with"
+        ],
+        "J_returnType" : "-> Any"
+      },
+      {
+        "A_name" : "copy",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 191, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "clone",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TextNode.swift - Line: 192, Column: 3",
+            "H_initialValue" : "TextNode(_text, baseUri)"
+          }
+        ],
+        "I_parameterType" : [
+          "Node?"
+        ],
+        "I_parameters" : [
+          "parent"
+        ],
+        "J_returnType" : "-> Node"
+      },
+      {
+        "A_name" : "copy",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TextNode.swift - Line: 196, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Node",
+          "Node?"
+        ],
+        "I_parameters" : [
+          "clone",
+          "parent"
+        ],
+        "J_returnType" : "-> Node"
+      }
+    ]
+  },
+  {
+    "A_name" : "TEXT_KEY",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "TextNode.swift - Line: 20, Column: 5",
+    "H_initialValue" : "\"text\""
+  },
+  {
+    "A_name" : "_text",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 21, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 30, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "nodeName",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 37, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "text",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 46, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "text",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "TextNode.swift - Line: 55, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> TextNode"
+  },
+  {
+    "A_name" : "getWholeText",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 73, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "isBlank",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 81, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "splitText",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 91, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "head",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 95, Column: 9",
+        "H_initialValue" : "getWholeText().substring(0, offset)"
+      },
+      {
+        "A_name" : "tail",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 96, Column: 9",
+        "H_initialValue" : "getWholeText().substring(offset)"
+      },
+      {
+        "A_name" : "tailNode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 98, Column: 9",
+        "H_initialValue" : "TextNode(tail, self.getBaseUri())"
+      }
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->TextNode"
+  },
+  {
+    "A_name" : "head",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 95, Column: 9",
+    "H_initialValue" : "getWholeText().substring(0, offset)"
+  },
+  {
+    "A_name" : "tail",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 96, Column: 9",
+    "H_initialValue" : "getWholeText().substring(offset)"
+  },
+  {
+    "A_name" : "tailNode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 98, Column: 9",
+    "H_initialValue" : "TextNode(tail, self.getBaseUri())"
+  },
+  {
+    "A_name" : "outerHtmlHead",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 105, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "par",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 112, Column: 9",
+        "H_initialValue" : "parent() as? Element"
+      },
+      {
+        "A_name" : "normaliseWhite",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 113, Column: 9",
+        "H_initialValue" : "out.prettyPrint() && par != nil && !Element.preserveWhitespace(par!)"
+      }
+    ],
+    "I_parameterType" : [
+      "StringBuilder",
+      "Int",
+      "OutputSettings"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "par",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 112, Column: 9",
+    "H_initialValue" : "parent() as? Element"
+  },
+  {
+    "A_name" : "normaliseWhite",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 113, Column: 9",
+    "H_initialValue" : "out.prettyPrint() && par != nil && !Element.preserveWhitespace(par!)"
+  },
+  {
+    "A_name" : "outerHtmlTail",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 118, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StringBuilder",
+      "Int",
+      "OutputSettings"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "createFromEncoded",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "TextNode.swift - Line: 127, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "text",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 128, Column: 9",
+        "H_initialValue" : "try Entities.unescape(encodedText)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->TextNode"
+  },
+  {
+    "A_name" : "text",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 128, Column: 9",
+    "H_initialValue" : "try Entities.unescape(encodedText)"
+  },
+  {
+    "A_name" : "normaliseWhitespace",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "TextNode.swift - Line: 132, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "_text",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 133, Column: 9",
+        "H_initialValue" : "StringUtil.normaliseWhitespace(text)"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "_text",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 133, Column: 9",
+    "H_initialValue" : "StringUtil.normaliseWhitespace(text)"
+  },
+  {
+    "A_name" : "stripLeadingWhitespace",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "TextNode.swift - Line: 137, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "lastCharIsWhitespace",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "TextNode.swift - Line: 142, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StringBuilder"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "ensureAttributes",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 147, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "attr",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 156, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->String"
+  },
+  {
+    "A_name" : "getAttributes",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 161, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Attributes"
+  },
+  {
+    "A_name" : "attr",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 166, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Node"
+  },
+  {
+    "A_name" : "hasAttr",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 171, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "removeAttr",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 176, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->Node"
+  },
+  {
+    "A_name" : "absUrl",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 181, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->String"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 186, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "clone",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 187, Column: 3",
+        "H_initialValue" : "TextNode(_text, baseUri)"
+      }
+    ],
+    "I_parameterType" : [
+      "NSZone?"
+    ],
+    "I_parameters" : [
+      "with"
+    ],
+    "J_returnType" : "-> Any"
+  },
+  {
+    "A_name" : "clone",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 187, Column: 3",
+    "H_initialValue" : "TextNode(_text, baseUri)"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 191, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "clone",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TextNode.swift - Line: 192, Column: 3",
+        "H_initialValue" : "TextNode(_text, baseUri)"
+      }
+    ],
+    "I_parameterType" : [
+      "Node?"
+    ],
+    "I_parameters" : [
+      "parent"
+    ],
+    "J_returnType" : "-> Node"
+  },
+  {
+    "A_name" : "clone",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TextNode.swift - Line: 192, Column: 3",
+    "H_initialValue" : "TextNode(_text, baseUri)"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TextNode.swift - Line: 196, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Node",
+      "Node?"
+    ],
+    "I_parameters" : [
+      "clone",
+      "parent"
+    ],
+    "J_returnType" : "-> Node"
+  }
+]

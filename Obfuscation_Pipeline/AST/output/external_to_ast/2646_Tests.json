@@ -1,0 +1,378 @@
+[
+  {
+    "A_name" : "Tests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "Tests.swift - Line: 5, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "centeredCollectionViewFlowLayout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 7, Column: 2",
+        "H_initialValue" : "CenteredCollectionViewFlowLayout()"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 8, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectedItemDimension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 9, Column: 2",
+        "H_initialValue" : "80"
+      },
+      {
+        "A_name" : "expectedLineSpacing",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 10, Column: 2",
+        "H_initialValue" : "20"
+      },
+      {
+        "A_name" : "expectedFrameDimension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 11, Column: 2",
+        "H_initialValue" : "300"
+      },
+      {
+        "A_name" : "setUp",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Tests.swift - Line: 13, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDefaultValuesNoFrame",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 30, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "expectedItemDimension",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Tests.swift - Line: 31, Column: 3",
+            "H_initialValue" : "50"
+          },
+          {
+            "A_name" : "expectedLineSpacing",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Tests.swift - Line: 32, Column: 3",
+            "H_initialValue" : "10"
+          },
+          {
+            "A_name" : "centeredCollectionViewFlowLayout",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Tests.swift - Line: 33, Column: 3",
+            "H_initialValue" : "CenteredCollectionViewFlowLayout()"
+          },
+          {
+            "A_name" : "collectionView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Tests.swift - Line: 34, Column: 3",
+            "H_initialValue" : "UICollectionView(centeredCollectionViewFlowLayout: centeredCollectionViewFlowLayout)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDefaultValuesWithFrameHorizontal",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 48, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDefaultValuesWithFrameVertical",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 62, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "centeredCollectionViewFlowLayout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 7, Column: 2",
+    "H_initialValue" : "CenteredCollectionViewFlowLayout()"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 8, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectedItemDimension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 9, Column: 2",
+    "H_initialValue" : "80"
+  },
+  {
+    "A_name" : "expectedLineSpacing",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 10, Column: 2",
+    "H_initialValue" : "20"
+  },
+  {
+    "A_name" : "expectedFrameDimension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 11, Column: 2",
+    "H_initialValue" : "300"
+  },
+  {
+    "A_name" : "setUp",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Tests.swift - Line: 13, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testDefaultValuesNoFrame",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 30, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "expectedItemDimension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 31, Column: 3",
+        "H_initialValue" : "50"
+      },
+      {
+        "A_name" : "expectedLineSpacing",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 32, Column: 3",
+        "H_initialValue" : "10"
+      },
+      {
+        "A_name" : "centeredCollectionViewFlowLayout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 33, Column: 3",
+        "H_initialValue" : "CenteredCollectionViewFlowLayout()"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tests.swift - Line: 34, Column: 3",
+        "H_initialValue" : "UICollectionView(centeredCollectionViewFlowLayout: centeredCollectionViewFlowLayout)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "expectedItemDimension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 31, Column: 3",
+    "H_initialValue" : "50"
+  },
+  {
+    "A_name" : "expectedLineSpacing",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 32, Column: 3",
+    "H_initialValue" : "10"
+  },
+  {
+    "A_name" : "centeredCollectionViewFlowLayout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 33, Column: 3",
+    "H_initialValue" : "CenteredCollectionViewFlowLayout()"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 34, Column: 3",
+    "H_initialValue" : "UICollectionView(centeredCollectionViewFlowLayout: centeredCollectionViewFlowLayout)"
+  },
+  {
+    "A_name" : "testDefaultValuesWithFrameHorizontal",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 48, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testDefaultValuesWithFrameVertical",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tests.swift - Line: 62, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

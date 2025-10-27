@@ -1,0 +1,566 @@
+[
+  {
+    "A_name" : "LayerEffectType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int",
+      "Codable",
+      "Sendable"
+    ],
+    "F_location" : "LayerEffect.swift - Line: 7, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dropShadow",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 8, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "unknown",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 9, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 11, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LayerEffect.swift - Line: 11, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "LayerEffectType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ClassFamily"
+    ],
+    "F_location" : "LayerEffect.swift - Line: 18, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "discriminator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "LayerEffect.swift - Line: 19, Column: 3",
+        "H_initialValue" : "Discriminator.type"
+      },
+      {
+        "A_name" : "getType",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 21, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnyObject.Type"
+      }
+    ]
+  },
+  {
+    "A_name" : "discriminator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "LayerEffect.swift - Line: 19, Column: 3",
+    "H_initialValue" : "Discriminator.type"
+  },
+  {
+    "A_name" : "getType",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LayerEffect.swift - Line: 21, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnyObject.Type"
+  },
+  {
+    "A_name" : "LayerEffect",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Codable",
+      "DictionaryInitializable"
+    ],
+    "F_location" : "LayerEffect.swift - Line: 34, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "LayerEffect.swift - Line: 38, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LayerEffect.swift - Line: 39, Column: 5",
+            "H_initialValue" : "try decoder.container(keyedBy: LayerEffect.CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "LayerEffect.swift - Line: 45, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String: Any]"
+        ],
+        "I_parameters" : [
+          "dictionary"
+        ]
+      },
+      {
+        "A_name" : "name",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 58, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "type",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 61, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "effects",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 64, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 67, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "named"
+        ],
+        "J_returnType" : "-> ValueType?"
+      },
+      {
+        "A_name" : "CodingKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String",
+          "CodingKey"
+        ],
+        "F_location" : "LayerEffect.swift - Line: 75, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "name",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LayerEffect.swift - Line: 76, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "type",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LayerEffect.swift - Line: 77, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "effects",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LayerEffect.swift - Line: 78, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "LayerEffect.swift - Line: 38, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 39, Column: 5",
+        "H_initialValue" : "try decoder.container(keyedBy: LayerEffect.CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LayerEffect.swift - Line: 39, Column: 5",
+    "H_initialValue" : "try decoder.container(keyedBy: LayerEffect.CodingKeys.self)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "LayerEffect.swift - Line: 45, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String: Any]"
+    ],
+    "I_parameters" : [
+      "dictionary"
+    ]
+  },
+  {
+    "A_name" : "name",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LayerEffect.swift - Line: 58, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "type",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LayerEffect.swift - Line: 61, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "effects",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LayerEffect.swift - Line: 64, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LayerEffect.swift - Line: 67, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "named"
+    ],
+    "J_returnType" : "-> ValueType?"
+  },
+  {
+    "A_name" : "CodingKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String",
+      "CodingKey"
+    ],
+    "F_location" : "LayerEffect.swift - Line: 75, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "name",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 76, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "type",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 77, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "effects",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LayerEffect.swift - Line: 78, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "[LayerEffect]",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LayerEffect.swift - Line: 82, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "fromDictionaries",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "LayerEffect.swift - Line: 83, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[[String: Any]]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> [LayerEffect]"
+      }
+    ]
+  },
+  {
+    "A_name" : "fromDictionaries",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "LayerEffect.swift - Line: 83, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[[String: Any]]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> [LayerEffect]"
+  },
+  {
+    "A_name" : "shapeType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LayerEffect.swift - Line: 85, Column: 7",
+    "H_initialValue" : "dictionary[LayerEffect.CodingKeys.type.rawValue] as? Int"
+  },
+  {
+    "A_name" : "LayerEffect",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "LayerEffect.swift - Line: 102, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

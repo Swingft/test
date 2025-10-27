@@ -1,0 +1,325 @@
+[
+  {
+    "A_name" : "GradientStrokeRenderer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "PassThroughOutputNode",
+      "Renderable"
+    ],
+    "F_location" : "GradientStrokeRenderer.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "GradientStrokeRenderer.swift - Line: 16, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NodeOutput?"
+        ],
+        "I_parameters" : [
+          "parent"
+        ]
+      },
+      {
+        "A_name" : "shouldRenderInContext",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientStrokeRenderer.swift - Line: 25, Column: 3",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "strokeRender",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientStrokeRenderer.swift - Line: 27, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "gradientRender",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientStrokeRenderer.swift - Line: 28, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "hasOutputUpdates",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "GradientStrokeRenderer.swift - Line: 30, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "updates",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientStrokeRenderer.swift - Line: 31, Column: 5",
+            "H_initialValue" : "super.hasOutputUpdates(forFrame)"
+          }
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "updateShapeLayer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientStrokeRenderer.swift - Line: 35, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CAShapeLayer"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "setupSublayers",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientStrokeRenderer.swift - Line: 39, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CAShapeLayer"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "render",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientStrokeRenderer.swift - Line: 43, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGContext"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "renderBoundsFor",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientStrokeRenderer.swift - Line: 60, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> CGRect"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "GradientStrokeRenderer.swift - Line: 16, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NodeOutput?"
+    ],
+    "I_parameters" : [
+      "parent"
+    ]
+  },
+  {
+    "A_name" : "shouldRenderInContext",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientStrokeRenderer.swift - Line: 25, Column: 3",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "strokeRender",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientStrokeRenderer.swift - Line: 27, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "gradientRender",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientStrokeRenderer.swift - Line: 28, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hasOutputUpdates",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "GradientStrokeRenderer.swift - Line: 30, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "updates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientStrokeRenderer.swift - Line: 31, Column: 5",
+        "H_initialValue" : "super.hasOutputUpdates(forFrame)"
+      }
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "updates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientStrokeRenderer.swift - Line: 31, Column: 5",
+    "H_initialValue" : "super.hasOutputUpdates(forFrame)"
+  },
+  {
+    "A_name" : "updateShapeLayer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientStrokeRenderer.swift - Line: 35, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CAShapeLayer"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "setupSublayers",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientStrokeRenderer.swift - Line: 39, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CAShapeLayer"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "render",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientStrokeRenderer.swift - Line: 43, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGContext"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "renderBoundsFor",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientStrokeRenderer.swift - Line: 60, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> CGRect"
+  }
+]

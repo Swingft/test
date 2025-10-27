@@ -1,0 +1,152 @@
+[
+  {
+    "A_name" : "String",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "StringExtensions.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "cgColor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringExtensions.swift - Line: 13, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lottieColor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringExtensions.swift - Line: 18, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "hexColorComponents",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringExtensions.swift - Line: 23, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "cString",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringExtensions.swift - Line: 24, Column: 5",
+            "H_initialValue" : "trimmingCharacters(in: .whitespacesAndNewlines).uppercased()"
+          },
+          {
+            "A_name" : "rgbValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StringExtensions.swift - Line: 34, Column: 5",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> (red: CGFloat, green: CGFloat, blue: CGFloat)"
+      }
+    ]
+  },
+  {
+    "A_name" : "cgColor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringExtensions.swift - Line: 13, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lottieColor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringExtensions.swift - Line: 18, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hexColorComponents",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringExtensions.swift - Line: 23, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "cString",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringExtensions.swift - Line: 24, Column: 5",
+        "H_initialValue" : "trimmingCharacters(in: .whitespacesAndNewlines).uppercased()"
+      },
+      {
+        "A_name" : "rgbValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StringExtensions.swift - Line: 34, Column: 5",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> (red: CGFloat, green: CGFloat, blue: CGFloat)"
+  },
+  {
+    "A_name" : "cString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringExtensions.swift - Line: 24, Column: 5",
+    "H_initialValue" : "trimmingCharacters(in: .whitespacesAndNewlines).uppercased()"
+  },
+  {
+    "A_name" : "rgbValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StringExtensions.swift - Line: 34, Column: 5",
+    "H_initialValue" : "0"
+  }
+]

@@ -1,0 +1,461 @@
+{
+  "SecKeyAlgorithm": {
+    "kind": "Struct",
+    "module": "Security",
+    "usr": "c:@T@SecKeyAlgorithm",
+    "members": {
+      "rsaSignatureRaw": {
+        "kind": "Var",
+        "type": "rsaSignatureRaw",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureRaw"
+      },
+      "rsaSignatureDigestPKCS1v15Raw": {
+        "kind": "Var",
+        "type": "rsaSignatureDigestPKCS1v15Raw",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureDigestPKCS1v15Raw"
+      },
+      "rsaSignatureDigestPKCS1v15SHA1": {
+        "kind": "Var",
+        "type": "rsaSignatureDigestPKCS1v15SHA1",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureDigestPKCS1v15SHA1"
+      },
+      "rsaSignatureDigestPKCS1v15SHA224": {
+        "kind": "Var",
+        "type": "rsaSignatureDigestPKCS1v15SHA224",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureDigestPKCS1v15SHA224"
+      },
+      "rsaSignatureDigestPKCS1v15SHA256": {
+        "kind": "Var",
+        "type": "rsaSignatureDigestPKCS1v15SHA256",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureDigestPKCS1v15SHA256"
+      },
+      "rsaSignatureDigestPKCS1v15SHA384": {
+        "kind": "Var",
+        "type": "rsaSignatureDigestPKCS1v15SHA384",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureDigestPKCS1v15SHA384"
+      },
+      "rsaSignatureDigestPKCS1v15SHA512": {
+        "kind": "Var",
+        "type": "rsaSignatureDigestPKCS1v15SHA512",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureDigestPKCS1v15SHA512"
+      },
+      "rsaSignatureMessagePKCS1v15SHA1": {
+        "kind": "Var",
+        "type": "rsaSignatureMessagePKCS1v15SHA1",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA1"
+      },
+      "rsaSignatureMessagePKCS1v15SHA224": {
+        "kind": "Var",
+        "type": "rsaSignatureMessagePKCS1v15SHA224",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA224"
+      },
+      "rsaSignatureMessagePKCS1v15SHA256": {
+        "kind": "Var",
+        "type": "rsaSignatureMessagePKCS1v15SHA256",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA256"
+      },
+      "rsaSignatureMessagePKCS1v15SHA384": {
+        "kind": "Var",
+        "type": "rsaSignatureMessagePKCS1v15SHA384",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA384"
+      },
+      "rsaSignatureMessagePKCS1v15SHA512": {
+        "kind": "Var",
+        "type": "rsaSignatureMessagePKCS1v15SHA512",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA512"
+      },
+      "rsaSignatureDigestPSSSHA1": {
+        "kind": "Var",
+        "type": "rsaSignatureDigestPSSSHA1",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureDigestPSSSHA1"
+      },
+      "rsaSignatureDigestPSSSHA224": {
+        "kind": "Var",
+        "type": "rsaSignatureDigestPSSSHA224",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureDigestPSSSHA224"
+      },
+      "rsaSignatureDigestPSSSHA256": {
+        "kind": "Var",
+        "type": "rsaSignatureDigestPSSSHA256",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureDigestPSSSHA256"
+      },
+      "rsaSignatureDigestPSSSHA384": {
+        "kind": "Var",
+        "type": "rsaSignatureDigestPSSSHA384",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureDigestPSSSHA384"
+      },
+      "rsaSignatureDigestPSSSHA512": {
+        "kind": "Var",
+        "type": "rsaSignatureDigestPSSSHA512",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureDigestPSSSHA512"
+      },
+      "rsaSignatureMessagePSSSHA1": {
+        "kind": "Var",
+        "type": "rsaSignatureMessagePSSSHA1",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureMessagePSSSHA1"
+      },
+      "rsaSignatureMessagePSSSHA224": {
+        "kind": "Var",
+        "type": "rsaSignatureMessagePSSSHA224",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureMessagePSSSHA224"
+      },
+      "rsaSignatureMessagePSSSHA256": {
+        "kind": "Var",
+        "type": "rsaSignatureMessagePSSSHA256",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureMessagePSSSHA256"
+      },
+      "rsaSignatureMessagePSSSHA384": {
+        "kind": "Var",
+        "type": "rsaSignatureMessagePSSSHA384",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureMessagePSSSHA384"
+      },
+      "rsaSignatureMessagePSSSHA512": {
+        "kind": "Var",
+        "type": "rsaSignatureMessagePSSSHA512",
+        "usr": "c:@kSecKeyAlgorithmRSASignatureMessagePSSSHA512"
+      },
+      "ecdsaSignatureDigestX962": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestX962",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestX962"
+      },
+      "ecdsaSignatureDigestX962SHA1": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestX962SHA1",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestX962SHA1"
+      },
+      "ecdsaSignatureDigestX962SHA224": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestX962SHA224",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestX962SHA224"
+      },
+      "ecdsaSignatureDigestX962SHA256": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestX962SHA256",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestX962SHA256"
+      },
+      "ecdsaSignatureDigestX962SHA384": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestX962SHA384",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestX962SHA384"
+      },
+      "ecdsaSignatureDigestX962SHA512": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestX962SHA512",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestX962SHA512"
+      },
+      "ecdsaSignatureMessageX962SHA1": {
+        "kind": "Var",
+        "type": "ecdsaSignatureMessageX962SHA1",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureMessageX962SHA1"
+      },
+      "ecdsaSignatureMessageX962SHA224": {
+        "kind": "Var",
+        "type": "ecdsaSignatureMessageX962SHA224",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureMessageX962SHA224"
+      },
+      "ecdsaSignatureMessageX962SHA256": {
+        "kind": "Var",
+        "type": "ecdsaSignatureMessageX962SHA256",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureMessageX962SHA256"
+      },
+      "ecdsaSignatureMessageX962SHA384": {
+        "kind": "Var",
+        "type": "ecdsaSignatureMessageX962SHA384",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureMessageX962SHA384"
+      },
+      "ecdsaSignatureMessageX962SHA512": {
+        "kind": "Var",
+        "type": "ecdsaSignatureMessageX962SHA512",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureMessageX962SHA512"
+      },
+      "ecdsaSignatureDigestRFC4754": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestRFC4754",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestRFC4754"
+      },
+      "ecdsaSignatureDigestRFC4754SHA1": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestRFC4754SHA1",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA1"
+      },
+      "ecdsaSignatureDigestRFC4754SHA224": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestRFC4754SHA224",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA224"
+      },
+      "ecdsaSignatureDigestRFC4754SHA256": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestRFC4754SHA256",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA256"
+      },
+      "ecdsaSignatureDigestRFC4754SHA384": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestRFC4754SHA384",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA384"
+      },
+      "ecdsaSignatureDigestRFC4754SHA512": {
+        "kind": "Var",
+        "type": "ecdsaSignatureDigestRFC4754SHA512",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA512"
+      },
+      "ecdsaSignatureMessageRFC4754SHA1": {
+        "kind": "Var",
+        "type": "ecdsaSignatureMessageRFC4754SHA1",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA1"
+      },
+      "ecdsaSignatureMessageRFC4754SHA224": {
+        "kind": "Var",
+        "type": "ecdsaSignatureMessageRFC4754SHA224",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA224"
+      },
+      "ecdsaSignatureMessageRFC4754SHA256": {
+        "kind": "Var",
+        "type": "ecdsaSignatureMessageRFC4754SHA256",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA256"
+      },
+      "ecdsaSignatureMessageRFC4754SHA384": {
+        "kind": "Var",
+        "type": "ecdsaSignatureMessageRFC4754SHA384",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA384"
+      },
+      "ecdsaSignatureMessageRFC4754SHA512": {
+        "kind": "Var",
+        "type": "ecdsaSignatureMessageRFC4754SHA512",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA512"
+      },
+      "ecdsaSignatureRFC4754": {
+        "kind": "Var",
+        "type": "ecdsaSignatureRFC4754",
+        "usr": "c:@kSecKeyAlgorithmECDSASignatureRFC4754"
+      },
+      "rsaEncryptionRaw": {
+        "kind": "Var",
+        "type": "rsaEncryptionRaw",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionRaw"
+      },
+      "rsaEncryptionPKCS1": {
+        "kind": "Var",
+        "type": "rsaEncryptionPKCS1",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionPKCS1"
+      },
+      "rsaEncryptionOAEPSHA1": {
+        "kind": "Var",
+        "type": "rsaEncryptionOAEPSHA1",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionOAEPSHA1"
+      },
+      "rsaEncryptionOAEPSHA224": {
+        "kind": "Var",
+        "type": "rsaEncryptionOAEPSHA224",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionOAEPSHA224"
+      },
+      "rsaEncryptionOAEPSHA256": {
+        "kind": "Var",
+        "type": "rsaEncryptionOAEPSHA256",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionOAEPSHA256"
+      },
+      "rsaEncryptionOAEPSHA384": {
+        "kind": "Var",
+        "type": "rsaEncryptionOAEPSHA384",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionOAEPSHA384"
+      },
+      "rsaEncryptionOAEPSHA512": {
+        "kind": "Var",
+        "type": "rsaEncryptionOAEPSHA512",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionOAEPSHA512"
+      },
+      "rsaEncryptionOAEPSHA1AESGCM": {
+        "kind": "Var",
+        "type": "rsaEncryptionOAEPSHA1AESGCM",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionOAEPSHA1AESGCM"
+      },
+      "rsaEncryptionOAEPSHA224AESGCM": {
+        "kind": "Var",
+        "type": "rsaEncryptionOAEPSHA224AESGCM",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionOAEPSHA224AESGCM"
+      },
+      "rsaEncryptionOAEPSHA256AESGCM": {
+        "kind": "Var",
+        "type": "rsaEncryptionOAEPSHA256AESGCM",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionOAEPSHA256AESGCM"
+      },
+      "rsaEncryptionOAEPSHA384AESGCM": {
+        "kind": "Var",
+        "type": "rsaEncryptionOAEPSHA384AESGCM",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionOAEPSHA384AESGCM"
+      },
+      "rsaEncryptionOAEPSHA512AESGCM": {
+        "kind": "Var",
+        "type": "rsaEncryptionOAEPSHA512AESGCM",
+        "usr": "c:@kSecKeyAlgorithmRSAEncryptionOAEPSHA512AESGCM"
+      },
+      "eciesEncryptionStandardX963SHA1AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionStandardX963SHA1AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionStandardX963SHA1AESGCM"
+      },
+      "eciesEncryptionStandardX963SHA224AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionStandardX963SHA224AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionStandardX963SHA224AESGCM"
+      },
+      "eciesEncryptionStandardX963SHA256AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionStandardX963SHA256AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionStandardX963SHA256AESGCM"
+      },
+      "eciesEncryptionStandardX963SHA384AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionStandardX963SHA384AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionStandardX963SHA384AESGCM"
+      },
+      "eciesEncryptionStandardX963SHA512AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionStandardX963SHA512AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionStandardX963SHA512AESGCM"
+      },
+      "eciesEncryptionCofactorX963SHA1AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionCofactorX963SHA1AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionCofactorX963SHA1AESGCM"
+      },
+      "eciesEncryptionCofactorX963SHA224AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionCofactorX963SHA224AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionCofactorX963SHA224AESGCM"
+      },
+      "eciesEncryptionCofactorX963SHA256AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionCofactorX963SHA256AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionCofactorX963SHA256AESGCM"
+      },
+      "eciesEncryptionCofactorX963SHA384AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionCofactorX963SHA384AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionCofactorX963SHA384AESGCM"
+      },
+      "eciesEncryptionCofactorX963SHA512AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionCofactorX963SHA512AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionCofactorX963SHA512AESGCM"
+      },
+      "eciesEncryptionStandardVariableIVX963SHA224AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionStandardVariableIVX963SHA224AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA224AESGCM"
+      },
+      "eciesEncryptionStandardVariableIVX963SHA256AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionStandardVariableIVX963SHA256AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA256AESGCM"
+      },
+      "eciesEncryptionStandardVariableIVX963SHA384AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionStandardVariableIVX963SHA384AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA384AESGCM"
+      },
+      "eciesEncryptionStandardVariableIVX963SHA512AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionStandardVariableIVX963SHA512AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA512AESGCM"
+      },
+      "eciesEncryptionCofactorVariableIVX963SHA224AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionCofactorVariableIVX963SHA224AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA224AESGCM"
+      },
+      "eciesEncryptionCofactorVariableIVX963SHA256AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionCofactorVariableIVX963SHA256AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA256AESGCM"
+      },
+      "eciesEncryptionCofactorVariableIVX963SHA384AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionCofactorVariableIVX963SHA384AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA384AESGCM"
+      },
+      "eciesEncryptionCofactorVariableIVX963SHA512AESGCM": {
+        "kind": "Var",
+        "type": "eciesEncryptionCofactorVariableIVX963SHA512AESGCM",
+        "usr": "c:@kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA512AESGCM"
+      },
+      "ecdhKeyExchangeStandard": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeStandard",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeStandard"
+      },
+      "ecdhKeyExchangeStandardX963SHA1": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeStandardX963SHA1",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA1"
+      },
+      "ecdhKeyExchangeStandardX963SHA224": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeStandardX963SHA224",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA224"
+      },
+      "ecdhKeyExchangeStandardX963SHA256": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeStandardX963SHA256",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA256"
+      },
+      "ecdhKeyExchangeStandardX963SHA384": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeStandardX963SHA384",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA384"
+      },
+      "ecdhKeyExchangeStandardX963SHA512": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeStandardX963SHA512",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA512"
+      },
+      "ecdhKeyExchangeCofactor": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeCofactor",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeCofactor"
+      },
+      "ecdhKeyExchangeCofactorX963SHA1": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeCofactorX963SHA1",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeCofactorX963SHA1"
+      },
+      "ecdhKeyExchangeCofactorX963SHA224": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeCofactorX963SHA224",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeCofactorX963SHA224"
+      },
+      "ecdhKeyExchangeCofactorX963SHA256": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeCofactorX963SHA256",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeCofactorX963SHA256"
+      },
+      "ecdhKeyExchangeCofactorX963SHA384": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeCofactorX963SHA384",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeCofactorX963SHA384"
+      },
+      "ecdhKeyExchangeCofactorX963SHA512": {
+        "kind": "Var",
+        "type": "ecdhKeyExchangeCofactorX963SHA512",
+        "usr": "c:@kSecKeyAlgorithmECDHKeyExchangeCofactorX963SHA512"
+      }
+    }
+  },
+  "SecKeyKeyExchangeParameter": {
+    "kind": "Struct",
+    "module": "Security",
+    "usr": "c:@T@SecKeyKeyExchangeParameter",
+    "members": {
+      "requestedSize": {
+        "kind": "Var",
+        "type": "requestedSize",
+        "usr": "c:@kSecKeyKeyExchangeParameterRequestedSize"
+      },
+      "sharedInfo": {
+        "kind": "Var",
+        "type": "sharedInfo",
+        "usr": "c:@kSecKeyKeyExchangeParameterSharedInfo"
+      }
+    }
+  }
+}

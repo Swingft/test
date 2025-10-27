@@ -1,0 +1,1096 @@
+[
+  {
+    "A_name" : "VirtualTimeScheduler",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "SchedulerType"
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "running",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentClock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "schedulerQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 20, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "converter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 21, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "nextId",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 23, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "now",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 26, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "clock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 31, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 38, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "VirtualTime",
+          "Converter"
+        ],
+        "I_parameters" : [
+          "initialClock",
+          "converter"
+        ]
+      },
+      {
+        "A_name" : "schedule",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 64, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StateType",
+          "@escaping (StateType) -> Disposable"
+        ],
+        "I_parameters" : [
+          "_",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "scheduleRelative",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 78, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "time",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VirtualTimeScheduler.swift - Line: 79, Column: 9",
+            "H_initialValue" : "self.now.addingDispatchInterval(dueTime)"
+          },
+          {
+            "A_name" : "absoluteTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VirtualTimeScheduler.swift - Line: 80, Column: 9",
+            "H_initialValue" : "self.converter.convertToVirtualTime(time)"
+          },
+          {
+            "A_name" : "adjustedTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VirtualTimeScheduler.swift - Line: 81, Column: 9",
+            "H_initialValue" : "self.adjustScheduledTime(absoluteTime)"
+          }
+        ],
+        "I_parameterType" : [
+          "StateType",
+          "RxTimeInterval",
+          "@escaping (StateType) -> Disposable"
+        ],
+        "I_parameters" : [
+          "_",
+          "dueTime",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "scheduleRelativeVirtual",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 93, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "time",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VirtualTimeScheduler.swift - Line: 94, Column: 9",
+            "H_initialValue" : "self.converter.offsetVirtualTime(self.clock, offset: dueTime)"
+          }
+        ],
+        "I_parameterType" : [
+          "StateType",
+          "VirtualTimeInterval",
+          "@escaping (StateType) -> Disposable"
+        ],
+        "I_parameters" : [
+          "_",
+          "dueTime",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "scheduleAbsoluteVirtual",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 106, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "compositeDisposable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VirtualTimeScheduler.swift - Line: 109, Column: 9",
+            "H_initialValue" : "CompositeDisposable()"
+          },
+          {
+            "A_name" : "item",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VirtualTimeScheduler.swift - Line: 111, Column: 9",
+            "H_initialValue" : "VirtualSchedulerItem(action: {\n            return action(state)\n        }, time: time, id: self.nextId)"
+          }
+        ],
+        "I_parameterType" : [
+          "StateType",
+          "VirtualTime",
+          "@escaping (StateType) -> Disposable"
+        ],
+        "I_parameters" : [
+          "_",
+          "time",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "adjustScheduledTime",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 125, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "VirtualTime"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> VirtualTime"
+      },
+      {
+        "A_name" : "start",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 130, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "findNext",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 154, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> VirtualSchedulerItem<VirtualTime>?"
+      },
+      {
+        "A_name" : "advanceTo",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 170, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "VirtualTime"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "sleep",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 199, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sleepTo",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VirtualTimeScheduler.swift - Line: 202, Column: 9",
+            "H_initialValue" : "self.converter.offsetVirtualTime(self.clock, offset: virtualInterval)"
+          }
+        ],
+        "I_parameterType" : [
+          "VirtualTimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "stop",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 211, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "running",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentClock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "schedulerQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 20, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "converter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 21, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "nextId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 23, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "now",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 26, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "clock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 31, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 38, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "VirtualTime",
+      "Converter"
+    ],
+    "I_parameters" : [
+      "initialClock",
+      "converter"
+    ]
+  },
+  {
+    "A_name" : "schedule",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 64, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StateType",
+      "@escaping (StateType) -> Disposable"
+    ],
+    "I_parameters" : [
+      "_",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "scheduleRelative",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 78, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "time",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 79, Column: 9",
+        "H_initialValue" : "self.now.addingDispatchInterval(dueTime)"
+      },
+      {
+        "A_name" : "absoluteTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 80, Column: 9",
+        "H_initialValue" : "self.converter.convertToVirtualTime(time)"
+      },
+      {
+        "A_name" : "adjustedTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 81, Column: 9",
+        "H_initialValue" : "self.adjustScheduledTime(absoluteTime)"
+      }
+    ],
+    "I_parameterType" : [
+      "StateType",
+      "RxTimeInterval",
+      "@escaping (StateType) -> Disposable"
+    ],
+    "I_parameters" : [
+      "_",
+      "dueTime",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "time",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 79, Column: 9",
+    "H_initialValue" : "self.now.addingDispatchInterval(dueTime)"
+  },
+  {
+    "A_name" : "absoluteTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 80, Column: 9",
+    "H_initialValue" : "self.converter.convertToVirtualTime(time)"
+  },
+  {
+    "A_name" : "adjustedTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 81, Column: 9",
+    "H_initialValue" : "self.adjustScheduledTime(absoluteTime)"
+  },
+  {
+    "A_name" : "scheduleRelativeVirtual",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 93, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "time",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 94, Column: 9",
+        "H_initialValue" : "self.converter.offsetVirtualTime(self.clock, offset: dueTime)"
+      }
+    ],
+    "I_parameterType" : [
+      "StateType",
+      "VirtualTimeInterval",
+      "@escaping (StateType) -> Disposable"
+    ],
+    "I_parameters" : [
+      "_",
+      "dueTime",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "time",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 94, Column: 9",
+    "H_initialValue" : "self.converter.offsetVirtualTime(self.clock, offset: dueTime)"
+  },
+  {
+    "A_name" : "scheduleAbsoluteVirtual",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 106, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "compositeDisposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 109, Column: 9",
+        "H_initialValue" : "CompositeDisposable()"
+      },
+      {
+        "A_name" : "item",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 111, Column: 9",
+        "H_initialValue" : "VirtualSchedulerItem(action: {\n            return action(state)\n        }, time: time, id: self.nextId)"
+      }
+    ],
+    "I_parameterType" : [
+      "StateType",
+      "VirtualTime",
+      "@escaping (StateType) -> Disposable"
+    ],
+    "I_parameters" : [
+      "_",
+      "time",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "compositeDisposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 109, Column: 9",
+    "H_initialValue" : "CompositeDisposable()"
+  },
+  {
+    "A_name" : "item",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 111, Column: 9",
+    "H_initialValue" : "VirtualSchedulerItem(action: {\n            return action(state)\n        }, time: time, id: self.nextId)"
+  },
+  {
+    "A_name" : "adjustScheduledTime",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 125, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "VirtualTime"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> VirtualTime"
+  },
+  {
+    "A_name" : "start",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 130, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "findNext",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 154, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> VirtualSchedulerItem<VirtualTime>?"
+  },
+  {
+    "A_name" : "advanceTo",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 170, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "VirtualTime"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "sleep",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 199, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sleepTo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 202, Column: 9",
+        "H_initialValue" : "self.converter.offsetVirtualTime(self.clock, offset: virtualInterval)"
+      }
+    ],
+    "I_parameterType" : [
+      "VirtualTimeInterval"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "sleepTo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 202, Column: 9",
+    "H_initialValue" : "self.converter.offsetVirtualTime(self.clock, offset: virtualInterval)"
+  },
+  {
+    "A_name" : "stop",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 211, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "VirtualTimeScheduler",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomDebugStringConvertible"
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 226, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "debugDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 228, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "debugDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 228, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "VirtualSchedulerItem",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Disposable"
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 233, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "action",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 237, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "time",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 238, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "id",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 239, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 241, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "disposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 245, Column: 5",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 247, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping Action",
+          "Time",
+          "Int"
+        ],
+        "I_parameters" : [
+          "action",
+          "time",
+          "id"
+        ]
+      },
+      {
+        "A_name" : "invoke",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 253, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 257, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "action",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 237, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "time",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 238, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "id",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 239, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 241, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 245, Column: 5",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 247, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping Action",
+      "Time",
+      "Int"
+    ],
+    "I_parameters" : [
+      "action",
+      "time",
+      "id"
+    ]
+  },
+  {
+    "A_name" : "invoke",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 253, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 257, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "VirtualSchedulerItem",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomDebugStringConvertible"
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 262, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "debugDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VirtualTimeScheduler.swift - Line: 264, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "debugDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VirtualTimeScheduler.swift - Line: 264, Column: 5",
+    "H_initialValue" : ""
+  }
+]

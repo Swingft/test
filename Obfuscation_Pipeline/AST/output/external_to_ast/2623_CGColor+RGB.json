@@ -1,0 +1,170 @@
+[
+  {
+    "A_name" : "CGColor",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CGColor+RGB.swift - Line: 6, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "rgb",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGColor+RGB.swift - Line: 8, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rgb",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CGColor+RGB.swift - Line: 25, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "CGFloat",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> CGColor"
+      },
+      {
+        "A_name" : "gray",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CGColor+RGB.swift - Line: 30, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> CGColor"
+      },
+      {
+        "A_name" : "rgba",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CGColor+RGB.swift - Line: 37, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "CGFloat",
+          "CGFloat",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> CGColor"
+      }
+    ]
+  },
+  {
+    "A_name" : "rgb",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGColor+RGB.swift - Line: 8, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rgb",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CGColor+RGB.swift - Line: 25, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> CGColor"
+  },
+  {
+    "A_name" : "gray",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CGColor+RGB.swift - Line: 30, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> CGColor"
+  },
+  {
+    "A_name" : "rgba",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CGColor+RGB.swift - Line: 37, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat",
+      "CGFloat",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> CGColor"
+  }
+]

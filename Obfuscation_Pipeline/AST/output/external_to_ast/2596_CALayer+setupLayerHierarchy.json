@@ -1,0 +1,362 @@
+[
+  {
+    "A_name" : "CALayer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 6, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setupLayerHierarchy",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 12, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "layersInZAxisOrder",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 22, Column: 5",
+            "H_initialValue" : "layers.reversed()"
+          },
+          {
+            "A_name" : "layersByIndex",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 24, Column: 5",
+            "H_initialValue" : "Dictionary(grouping: layersInZAxisOrder, by: \\.index)\n      .compactMapValues(\\.first)"
+          }
+        ],
+        "I_parameterType" : [
+          "[LayerModel]",
+          "LayerContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "maskLayer",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 106, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LayerModel",
+          "MatteType",
+          "LayerContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "type",
+          "context"
+        ],
+        "J_returnType" : "-> CALayer?"
+      }
+    ]
+  },
+  {
+    "A_name" : "setupLayerHierarchy",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 12, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "layersInZAxisOrder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 22, Column: 5",
+        "H_initialValue" : "layers.reversed()"
+      },
+      {
+        "A_name" : "layersByIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 24, Column: 5",
+        "H_initialValue" : "Dictionary(grouping: layersInZAxisOrder, by: \\.index)\n      .compactMapValues(\\.first)"
+      }
+    ],
+    "I_parameterType" : [
+      "[LayerModel]",
+      "LayerContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "layersInZAxisOrder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 22, Column: 5",
+    "H_initialValue" : "layers.reversed()"
+  },
+  {
+    "A_name" : "layersByIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 24, Column: 5",
+    "H_initialValue" : "Dictionary(grouping: layersInZAxisOrder, by: \\.index)\n      .compactMapValues(\\.first)"
+  },
+  {
+    "A_name" : "makeParentTransformLayer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 32, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "parentLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 43, Column: 7",
+        "H_initialValue" : "TransformLayer(layerModel: parentLayerModel)"
+      }
+    ],
+    "I_parameterType" : [
+      "LayerModel",
+      "CALayer",
+      "(LayerModel) -> String"
+    ],
+    "I_parameters" : [
+      "childLayerModel",
+      "childLayer",
+      "name"
+    ],
+    "J_returnType" : "-> CALayer"
+  },
+  {
+    "A_name" : "parentLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 43, Column: 7",
+    "H_initialValue" : "TransformLayer(layerModel: parentLayerModel)"
+  },
+  {
+    "A_name" : "parentTransformLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 61, Column: 7",
+    "H_initialValue" : "makeParentTransformLayer(\n        childLayerModel: layerModel,\n        childLayer: layer,\n        name: { parentLayerModel in\n          \"\\(layerModel.name) (parent, \\(parentLayerModel.name))\"\n        })"
+  },
+  {
+    "A_name" : "maskParentTransformLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 73, Column: 9",
+    "H_initialValue" : "makeParentTransformLayer(\n          childLayerModel: mask.model,\n          childLayer: maskLayer,\n          name: { parentLayerModel in\n            \"\\(mask.model.name) (mask of \\(layerModel.name)) (parent, \\(parentLayerModel.name))\"\n          })"
+  },
+  {
+    "A_name" : "maskContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 82, Column: 9",
+    "H_initialValue" : "BaseAnimationLayer()"
+  },
+  {
+    "A_name" : "additionalMaskParent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 89, Column: 9",
+    "H_initialValue" : "BaseAnimationLayer()"
+  },
+  {
+    "A_name" : "maskLayer",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 106, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LayerModel",
+      "MatteType",
+      "LayerContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "type",
+      "context"
+    ],
+    "J_returnType" : "-> CALayer?"
+  },
+  {
+    "A_name" : "base",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 128, Column: 7",
+    "H_initialValue" : "InfiniteOpaqueAnimationLayer()"
+  },
+  {
+    "A_name" : "Collection<LayerModel>",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 141, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "pairedLayersAndMasks",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 146, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "layersAndMasks",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 149, Column: 5",
+            "H_initialValue" : "[(layer: LayerModel, mask: (model: LayerModel, matteType: MatteType)?)]()"
+          },
+          {
+            "A_name" : "unprocessedLayers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 150, Column: 5",
+            "H_initialValue" : "reversed()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> [(layer: LayerModel, mask: (model: LayerModel, matteType: MatteType)?)]"
+      }
+    ]
+  },
+  {
+    "A_name" : "pairedLayersAndMasks",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 146, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "layersAndMasks",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 149, Column: 5",
+        "H_initialValue" : "[(layer: LayerModel, mask: (model: LayerModel, matteType: MatteType)?)]()"
+      },
+      {
+        "A_name" : "unprocessedLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 150, Column: 5",
+        "H_initialValue" : "reversed()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> [(layer: LayerModel, mask: (model: LayerModel, matteType: MatteType)?)]"
+  },
+  {
+    "A_name" : "layersAndMasks",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 149, Column: 5",
+    "H_initialValue" : "[(layer: LayerModel, mask: (model: LayerModel, matteType: MatteType)?)]()"
+  },
+  {
+    "A_name" : "unprocessedLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+setupLayerHierarchy.swift - Line: 150, Column: 5",
+    "H_initialValue" : "reversed()"
+  }
+]

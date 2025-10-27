@@ -1,0 +1,414 @@
+[
+  {
+    "A_name" : "AttributesTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "AttributesTest.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testLinuxTestSuiteIncludesAllTests",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AttributesTest.swift - Line: 14, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHtml",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AttributesTest.swift - Line: 23, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "a",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AttributesTest.swift - Line: 24, Column: 3",
+            "H_initialValue" : "Attributes()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testIterator",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AttributesTest.swift - Line: 64, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "a",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AttributesTest.swift - Line: 65, Column: 3",
+            "H_initialValue" : "Attributes()"
+          },
+          {
+            "A_name" : "datas",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AttributesTest.swift - Line: 66, Column: 3",
+            "H_initialValue" : "[[\"Tot\", \"raul\"], [\"Hello\", \"pismuth\"], [\"data-name\", \"Jsoup\"]]"
+          },
+          {
+            "A_name" : "iterator",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AttributesTest.swift - Line: 72, Column: 3",
+            "H_initialValue" : "a.makeIterator()"
+          },
+          {
+            "A_name" : "i",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AttributesTest.swift - Line: 74, Column: 3",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testIteratorEmpty",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AttributesTest.swift - Line: 83, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "a",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AttributesTest.swift - Line: 84, Column: 3",
+            "H_initialValue" : "Attributes()"
+          },
+          {
+            "A_name" : "iterator",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AttributesTest.swift - Line: 86, Column: 3",
+            "H_initialValue" : "a.makeIterator()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "allTests",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "AttributesTest.swift - Line: 90, Column: 2",
+        "H_initialValue" : "{\n\t\treturn [\n            (\"testLinuxTestSuiteIncludesAllTests\", testLinuxTestSuiteIncludesAllTests),\n            (\"testHtml\", testHtml),\n\t\t\t(\"testIterator\", testIterator),\n\t\t\t(\"testIteratorEmpty\", testIteratorEmpty)\n\t\t]\n\t}()"
+      }
+    ]
+  },
+  {
+    "A_name" : "testLinuxTestSuiteIncludesAllTests",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 14, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "thisClass",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 16, Column: 13",
+    "H_initialValue" : "type(of: self)"
+  },
+  {
+    "A_name" : "linuxCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 17, Column: 13",
+    "H_initialValue" : "thisClass.allTests.count"
+  },
+  {
+    "A_name" : "darwinCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 18, Column: 13",
+    "H_initialValue" : "Int(thisClass.defaultTestSuite.testCaseCount)"
+  },
+  {
+    "A_name" : "testHtml",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 23, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "a",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AttributesTest.swift - Line: 24, Column: 3",
+        "H_initialValue" : "Attributes()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "a",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 24, Column: 3",
+    "H_initialValue" : "Attributes()"
+  },
+  {
+    "A_name" : "testIterator",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 64, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "a",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AttributesTest.swift - Line: 65, Column: 3",
+        "H_initialValue" : "Attributes()"
+      },
+      {
+        "A_name" : "datas",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AttributesTest.swift - Line: 66, Column: 3",
+        "H_initialValue" : "[[\"Tot\", \"raul\"], [\"Hello\", \"pismuth\"], [\"data-name\", \"Jsoup\"]]"
+      },
+      {
+        "A_name" : "iterator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AttributesTest.swift - Line: 72, Column: 3",
+        "H_initialValue" : "a.makeIterator()"
+      },
+      {
+        "A_name" : "i",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AttributesTest.swift - Line: 74, Column: 3",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "a",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 65, Column: 3",
+    "H_initialValue" : "Attributes()"
+  },
+  {
+    "A_name" : "datas",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 66, Column: 3",
+    "H_initialValue" : "[[\"Tot\", \"raul\"], [\"Hello\", \"pismuth\"], [\"data-name\", \"Jsoup\"]]"
+  },
+  {
+    "A_name" : "iterator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 72, Column: 3",
+    "H_initialValue" : "a.makeIterator()"
+  },
+  {
+    "A_name" : "i",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 74, Column: 3",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "testIteratorEmpty",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 83, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "a",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AttributesTest.swift - Line: 84, Column: 3",
+        "H_initialValue" : "Attributes()"
+      },
+      {
+        "A_name" : "iterator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AttributesTest.swift - Line: 86, Column: 3",
+        "H_initialValue" : "a.makeIterator()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "a",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 84, Column: 3",
+    "H_initialValue" : "Attributes()"
+  },
+  {
+    "A_name" : "iterator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AttributesTest.swift - Line: 86, Column: 3",
+    "H_initialValue" : "a.makeIterator()"
+  },
+  {
+    "A_name" : "allTests",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "AttributesTest.swift - Line: 90, Column: 2",
+    "H_initialValue" : "{\n\t\treturn [\n            (\"testLinuxTestSuiteIncludesAllTests\", testLinuxTestSuiteIncludesAllTests),\n            (\"testHtml\", testHtml),\n\t\t\t(\"testIterator\", testIterator),\n\t\t\t(\"testIteratorEmpty\", testIteratorEmpty)\n\t\t]\n\t}()"
+  }
+]

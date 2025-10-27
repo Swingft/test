@@ -1,0 +1,1542 @@
+[
+  {
+    "A_name" : "QueryParser",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combinators",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "QueryParser.swift - Line: 15, Column: 5",
+        "H_initialValue" : "[\",\", \">\", \"+\", \"~\", \" \"]"
+      },
+      {
+        "A_name" : "AttributeEvals",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "QueryParser.swift - Line: 16, Column: 5",
+        "H_initialValue" : "[\"=\", \"!=\", \"^=\", \"$=\", \"*=\", \"~=\"]"
+      },
+      {
+        "A_name" : "tq",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "query",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 19, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "evals",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 20, Column: 5",
+        "H_initialValue" : "Array<Evaluator>()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 26, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "parse",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "QueryParser.swift - Line: 36, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "p",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 37, Column: 9",
+            "H_initialValue" : "QueryParser(query)"
+          }
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "->Evaluator"
+      },
+      {
+        "A_name" : "parse",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 45, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "->Evaluator"
+      },
+      {
+        "A_name" : "combinator",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 74, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subQuery",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 76, Column: 9",
+            "H_initialValue" : "consumeSubQuery() \/\/ support multi > childs"
+          },
+          {
+            "A_name" : "rootEval",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 78, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "currentEval",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 79, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "newEval",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 80, Column: 9",
+            "H_initialValue" : "try QueryParser.parse(subQuery) \/\/ the evaluator to add into target evaluator"
+          },
+          {
+            "A_name" : "replaceRightMost",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 81, Column: 9",
+            "H_initialValue" : "false"
+          }
+        ],
+        "I_parameterType" : [
+          "Character"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "consumeSubQuery",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 121, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sq",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 122, Column: 9",
+            "H_initialValue" : "\"\""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "findElements",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 141, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "byId",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 151, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "id",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 152, Column: 9",
+            "H_initialValue" : "tq.consumeCssIdentifier()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "byClass",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 157, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "className",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 158, Column: 9",
+            "H_initialValue" : "tq.consumeCssIdentifier()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "byTag",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 163, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tagName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 164, Column: 9",
+            "H_initialValue" : "tq.consumeElementSelector()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "byAttribute",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 184, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "cq",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 185, Column: 9",
+            "H_initialValue" : "TokenQueue(tq.chompBalanced(\"[\", \"]\")) \/\/ content queue"
+          },
+          {
+            "A_name" : "key",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 186, Column: 9",
+            "H_initialValue" : "cq.consumeToAny(QueryParser.AttributeEvals) \/\/ eq, not, start, end, contain, match, (no val)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "allElements",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 215, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "indexLessThan",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 220, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "indexGreaterThan",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 224, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "indexEquals",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 228, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "NTH_AB",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "QueryParser.swift - Line: 233, Column: 5",
+        "H_initialValue" : "Pattern.compile(\"((\\\\+|-)?(\\\\d+)?)n(\\\\s*(\\\\+|-)?\\\\s*\\\\d+)?\", Pattern.CASE_INSENSITIVE)"
+      },
+      {
+        "A_name" : "NTH_B",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "QueryParser.swift - Line: 234, Column: 5",
+        "H_initialValue" : "Pattern.compile(\"(\\\\+|-)?(\\\\d+)\")"
+      },
+      {
+        "A_name" : "cssNthChild",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 236, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "argS",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 237, Column: 9",
+            "H_initialValue" : "tq.chompTo(\")\").trim().lowercased()"
+          },
+          {
+            "A_name" : "mAB",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 238, Column: 9",
+            "H_initialValue" : "QueryParser.NTH_AB.matcher(in: argS)"
+          },
+          {
+            "A_name" : "mB",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 239, Column: 9",
+            "H_initialValue" : "QueryParser.NTH_B.matcher(in: argS)"
+          },
+          {
+            "A_name" : "a",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 240, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "b",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 241, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "consumeIndex",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 274, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "indexS",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 275, Column: 9",
+            "H_initialValue" : "tq.chompTo(\")\").trim()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "->Int"
+      },
+      {
+        "A_name" : "has",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 281, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subQuery",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 283, Column: 9",
+            "H_initialValue" : "tq.chompBalanced(\"(\", \")\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "contains",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 289, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "searchText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 291, Column: 9",
+            "H_initialValue" : "TokenQueue.unescape(tq.chompBalanced(\"(\", \")\"))"
+          }
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "matches",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 301, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "regex",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 303, Column: 9",
+            "H_initialValue" : "tq.chompBalanced(\"(\", \")\") \/\/ don't unescape, as regex bits will be escaped"
+          }
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "not",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 314, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subQuery",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "QueryParser.swift - Line: 316, Column: 9",
+            "H_initialValue" : "tq.chompBalanced(\"(\", \")\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "combinators",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "QueryParser.swift - Line: 15, Column: 5",
+    "H_initialValue" : "[\",\", \">\", \"+\", \"~\", \" \"]"
+  },
+  {
+    "A_name" : "AttributeEvals",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "QueryParser.swift - Line: 16, Column: 5",
+    "H_initialValue" : "[\"=\", \"!=\", \"^=\", \"$=\", \"*=\", \"~=\"]"
+  },
+  {
+    "A_name" : "tq",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "query",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 19, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "evals",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 20, Column: 5",
+    "H_initialValue" : "Array<Evaluator>()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 26, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "parse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "QueryParser.swift - Line: 36, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "p",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 37, Column: 9",
+        "H_initialValue" : "QueryParser(query)"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->Evaluator"
+  },
+  {
+    "A_name" : "p",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 37, Column: 9",
+    "H_initialValue" : "QueryParser(query)"
+  },
+  {
+    "A_name" : "parse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 45, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "->Evaluator"
+  },
+  {
+    "A_name" : "seenWhite",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 57, Column: 13",
+    "H_initialValue" : "tq.consumeWhitespace()"
+  },
+  {
+    "A_name" : "combinator",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 74, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subQuery",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 76, Column: 9",
+        "H_initialValue" : "consumeSubQuery() \/\/ support multi > childs"
+      },
+      {
+        "A_name" : "rootEval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 78, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentEval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 79, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "newEval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 80, Column: 9",
+        "H_initialValue" : "try QueryParser.parse(subQuery) \/\/ the evaluator to add into target evaluator"
+      },
+      {
+        "A_name" : "replaceRightMost",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 81, Column: 9",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+      "Character"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "subQuery",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 76, Column: 9",
+    "H_initialValue" : "consumeSubQuery() \/\/ support multi > childs"
+  },
+  {
+    "A_name" : "rootEval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 78, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentEval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 79, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "newEval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 80, Column: 9",
+    "H_initialValue" : "try QueryParser.parse(subQuery) \/\/ the evaluator to add into target evaluator"
+  },
+  {
+    "A_name" : "replaceRightMost",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 81, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "or",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 99, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "consumeSubQuery",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 121, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sq",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 122, Column: 9",
+        "H_initialValue" : "\"\""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "sq",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 122, Column: 9",
+    "H_initialValue" : "\"\""
+  },
+  {
+    "A_name" : "findElements",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 141, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "byId",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 151, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "id",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 152, Column: 9",
+        "H_initialValue" : "tq.consumeCssIdentifier()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "id",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 152, Column: 9",
+    "H_initialValue" : "tq.consumeCssIdentifier()"
+  },
+  {
+    "A_name" : "byClass",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 157, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "className",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 158, Column: 9",
+        "H_initialValue" : "tq.consumeCssIdentifier()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "className",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 158, Column: 9",
+    "H_initialValue" : "tq.consumeCssIdentifier()"
+  },
+  {
+    "A_name" : "byTag",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 163, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tagName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 164, Column: 9",
+        "H_initialValue" : "tq.consumeElementSelector()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tagName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 164, Column: 9",
+    "H_initialValue" : "tq.consumeElementSelector()"
+  },
+  {
+    "A_name" : "byAttribute",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 184, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "cq",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 185, Column: 9",
+        "H_initialValue" : "TokenQueue(tq.chompBalanced(\"[\", \"]\")) \/\/ content queue"
+      },
+      {
+        "A_name" : "key",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 186, Column: 9",
+        "H_initialValue" : "cq.consumeToAny(QueryParser.AttributeEvals) \/\/ eq, not, start, end, contain, match, (no val)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "cq",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 185, Column: 9",
+    "H_initialValue" : "TokenQueue(tq.chompBalanced(\"[\", \"]\")) \/\/ content queue"
+  },
+  {
+    "A_name" : "key",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 186, Column: 9",
+    "H_initialValue" : "cq.consumeToAny(QueryParser.AttributeEvals) \/\/ eq, not, start, end, contain, match, (no val)"
+  },
+  {
+    "A_name" : "allElements",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 215, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "indexLessThan",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 220, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "indexGreaterThan",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 224, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "indexEquals",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 228, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "NTH_AB",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "QueryParser.swift - Line: 233, Column: 5",
+    "H_initialValue" : "Pattern.compile(\"((\\\\+|-)?(\\\\d+)?)n(\\\\s*(\\\\+|-)?\\\\s*\\\\d+)?\", Pattern.CASE_INSENSITIVE)"
+  },
+  {
+    "A_name" : "NTH_B",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "QueryParser.swift - Line: 234, Column: 5",
+    "H_initialValue" : "Pattern.compile(\"(\\\\+|-)?(\\\\d+)\")"
+  },
+  {
+    "A_name" : "cssNthChild",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 236, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "argS",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 237, Column: 9",
+        "H_initialValue" : "tq.chompTo(\")\").trim().lowercased()"
+      },
+      {
+        "A_name" : "mAB",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 238, Column: 9",
+        "H_initialValue" : "QueryParser.NTH_AB.matcher(in: argS)"
+      },
+      {
+        "A_name" : "mB",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 239, Column: 9",
+        "H_initialValue" : "QueryParser.NTH_B.matcher(in: argS)"
+      },
+      {
+        "A_name" : "a",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 240, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "b",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 241, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "argS",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 237, Column: 9",
+    "H_initialValue" : "tq.chompTo(\")\").trim().lowercased()"
+  },
+  {
+    "A_name" : "mAB",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 238, Column: 9",
+    "H_initialValue" : "QueryParser.NTH_AB.matcher(in: argS)"
+  },
+  {
+    "A_name" : "mB",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 239, Column: 9",
+    "H_initialValue" : "QueryParser.NTH_B.matcher(in: argS)"
+  },
+  {
+    "A_name" : "a",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 240, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "b",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 241, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "consumeIndex",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 274, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "indexS",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 275, Column: 9",
+        "H_initialValue" : "tq.chompTo(\")\").trim()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "->Int"
+  },
+  {
+    "A_name" : "indexS",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 275, Column: 9",
+    "H_initialValue" : "tq.chompTo(\")\").trim()"
+  },
+  {
+    "A_name" : "has",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 281, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subQuery",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 283, Column: 9",
+        "H_initialValue" : "tq.chompBalanced(\"(\", \")\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "subQuery",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 283, Column: 9",
+    "H_initialValue" : "tq.chompBalanced(\"(\", \")\")"
+  },
+  {
+    "A_name" : "contains",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 289, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "searchText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 291, Column: 9",
+        "H_initialValue" : "TokenQueue.unescape(tq.chompBalanced(\"(\", \")\"))"
+      }
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "searchText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 291, Column: 9",
+    "H_initialValue" : "TokenQueue.unescape(tq.chompBalanced(\"(\", \")\"))"
+  },
+  {
+    "A_name" : "matches",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 301, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "regex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 303, Column: 9",
+        "H_initialValue" : "tq.chompBalanced(\"(\", \")\") \/\/ don't unescape, as regex bits will be escaped"
+      }
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "regex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 303, Column: 9",
+    "H_initialValue" : "tq.chompBalanced(\"(\", \")\") \/\/ don't unescape, as regex bits will be escaped"
+  },
+  {
+    "A_name" : "not",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 314, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subQuery",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "QueryParser.swift - Line: 316, Column: 9",
+        "H_initialValue" : "tq.chompBalanced(\"(\", \")\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "subQuery",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "QueryParser.swift - Line: 316, Column: 9",
+    "H_initialValue" : "tq.chompBalanced(\"(\", \")\")"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "A_name" : "package",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Package.swift - Line: 4, Column: 1",
+    "H_initialValue" : "Package(\n    name: \"Kingfisher\",\n    platforms: [.iOS(.v12), .macOS(.v10_14), .tvOS(.v12), .watchOS(.v5)],\n    products: [\n        .library(name: \"Kingfisher\", targets: [\"Kingfisher\"])\n    ],\n    targets: [\n        .target(\n            name: \"Kingfisher\",\n            path: \"Sources\"\n        )\n    ]\n)"
+  }
+]

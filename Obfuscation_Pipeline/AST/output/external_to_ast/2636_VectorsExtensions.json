@@ -1,0 +1,1486 @@
+[
+  {
+    "A_name" : "LottieVector1D",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Codable"
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 31, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 32, Column: 5",
+            "H_initialValue" : "encoder.singleValueContainer()"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      },
+      {
+        "A_name" : "cgFloatValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 38, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 19, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 22, Column: 7",
+    "H_initialValue" : "try decoder.unkeyedContainer()"
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 31, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 32, Column: 5",
+        "H_initialValue" : "encoder.singleValueContainer()"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 32, Column: 5",
+    "H_initialValue" : "encoder.singleValueContainer()"
+  },
+  {
+    "A_name" : "cgFloatValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 38, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "LottieVector1D",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyInitializable"
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 46, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 48, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "value"
+    ]
+  },
+  {
+    "A_name" : "Double",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 63, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "vectorValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 64, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "vectorValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 64, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "LottieVector2D",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Codable",
+      "Hashable",
+      "Sendable"
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 72, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 76, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Double",
+          "Double"
+        ],
+        "I_parameters" : [
+          "x",
+          "y"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 81, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 82, Column: 5",
+            "H_initialValue" : "try decoder.container(keyedBy: LottieVector2D.CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 101, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 102, Column: 5",
+            "H_initialValue" : "encoder.container(keyedBy: LottieVector2D.CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      },
+      {
+        "A_name" : "x",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 109, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "y",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 110, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "pointValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 112, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "CodingKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String",
+          "CodingKey"
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 118, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "x",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 119, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "y",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 120, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 76, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Double",
+      "Double"
+    ],
+    "I_parameters" : [
+      "x",
+      "y"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 81, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 82, Column: 5",
+        "H_initialValue" : "try decoder.container(keyedBy: LottieVector2D.CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 82, Column: 5",
+    "H_initialValue" : "try decoder.container(keyedBy: LottieVector2D.CodingKeys.self)"
+  },
+  {
+    "A_name" : "xValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 85, Column: 7",
+    "H_initialValue" : "try container.decode([Double].self, forKey: .x)"
+  },
+  {
+    "A_name" : "yValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 92, Column: 7",
+    "H_initialValue" : "try container.decode([Double].self, forKey: .y)"
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 101, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 102, Column: 5",
+        "H_initialValue" : "encoder.container(keyedBy: LottieVector2D.CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 102, Column: 5",
+    "H_initialValue" : "encoder.container(keyedBy: LottieVector2D.CodingKeys.self)"
+  },
+  {
+    "A_name" : "x",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 109, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "y",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 110, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "pointValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 112, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CodingKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String",
+      "CodingKey"
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 118, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "x",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 119, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "y",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 120, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "LottieVector2D",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyInitializable"
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 126, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 128, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "value"
+    ]
+  },
+  {
+    "A_name" : "CGPoint",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 156, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "vector2dValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 157, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "vector2dValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 157, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "LottieVector3D",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Codable"
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 167, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 201, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 202, Column: 5",
+            "H_initialValue" : "encoder.unkeyedContainer()"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 171, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "x",
+      "y",
+      "z"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 177, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 178, Column: 5",
+        "H_initialValue" : "try decoder.unkeyedContainer()"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 178, Column: 5",
+    "H_initialValue" : "try decoder.unkeyedContainer()"
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 201, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 202, Column: 5",
+        "H_initialValue" : "encoder.unkeyedContainer()"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 202, Column: 5",
+    "H_initialValue" : "encoder.unkeyedContainer()"
+  },
+  {
+    "A_name" : "LottieVector3D",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyInitializable"
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 212, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 214, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "value"
+    ]
+  },
+  {
+    "A_name" : "LottieVector3D",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 225, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "pointValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 226, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "sizeValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 230, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "pointValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 226, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sizeValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 230, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CGPoint",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 235, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "vector3dValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 236, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "vector3dValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 236, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CGSize",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 241, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "vector3dValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 242, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "vector3dValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 242, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CATransform3D",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 247, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Axis",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 249, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "x",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 250, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "y",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 250, Column: 13",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "z",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 250, Column: 16",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "makeSkew",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 253, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "mCos",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 254, Column: 5",
+            "H_initialValue" : "cos(skewAxis.toRadians())"
+          },
+          {
+            "A_name" : "mSin",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 255, Column: 5",
+            "H_initialValue" : "sin(skewAxis.toRadians())"
+          },
+          {
+            "A_name" : "aTan",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 256, Column: 5",
+            "H_initialValue" : "tan(skew.toRadians())"
+          },
+          {
+            "A_name" : "transform1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 258, Column: 5",
+            "H_initialValue" : "CATransform3D(\n      m11: mCos,\n      m12: mSin,\n      m13: 0,\n      m14: 0,\n      m21: -mSin,\n      m22: mCos,\n      m23: 0,\n      m24: 0,\n      m31: 0,\n      m32: 0,\n      m33: 1,\n      m34: 0,\n      m41: 0,\n      m42: 0,\n      m43: 0,\n      m44: 1)"
+          },
+          {
+            "A_name" : "transform2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 276, Column: 5",
+            "H_initialValue" : "CATransform3D(\n      m11: 1,\n      m12: 0,\n      m13: 0,\n      m14: 0,\n      m21: aTan,\n      m22: 1,\n      m23: 0,\n      m24: 0,\n      m31: 0,\n      m32: 0,\n      m33: 1,\n      m34: 0,\n      m41: 0,\n      m42: 0,\n      m43: 0,\n      m44: 1)"
+          },
+          {
+            "A_name" : "transform3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VectorsExtensions.swift - Line: 294, Column: 5",
+            "H_initialValue" : "CATransform3D(\n      m11: mCos,\n      m12: -mSin,\n      m13: 0,\n      m14: 0,\n      m21: mSin,\n      m22: mCos,\n      m23: 0,\n      m24: 0,\n      m31: 0,\n      m32: 0,\n      m33: 1,\n      m34: 0,\n      m41: 0,\n      m42: 0,\n      m43: 0,\n      m44: 1)"
+          }
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "skew",
+          "skewAxis"
+        ],
+        "J_returnType" : "-> CATransform3D"
+      },
+      {
+        "A_name" : "makeTransform",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 314, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGPoint",
+          "CGPoint",
+          "CGSize",
+          "CGFloat",
+          "CGFloat",
+          "CGFloat",
+          "CGFloat?",
+          "CGFloat?"
+        ],
+        "I_parameters" : [
+          "anchor",
+          "position",
+          "scale",
+          "rotationX",
+          "rotationY",
+          "rotationZ",
+          "skew",
+          "skewAxis"
+        ],
+        "J_returnType" : "-> CATransform3D"
+      },
+      {
+        "A_name" : "rotated",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 342, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "Axis"
+        ],
+        "I_parameters" : [
+          "_",
+          "axis"
+        ],
+        "J_returnType" : "-> CATransform3D"
+      },
+      {
+        "A_name" : "translated",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 351, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGPoint"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> CATransform3D"
+      },
+      {
+        "A_name" : "scaled",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 355, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGSize"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> CATransform3D"
+      },
+      {
+        "A_name" : "skewed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 359, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "skew",
+          "skewAxis"
+        ],
+        "J_returnType" : "-> CATransform3D"
+      }
+    ]
+  },
+  {
+    "A_name" : "Axis",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 249, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "x",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 250, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "y",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 250, Column: 13",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "z",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 250, Column: 16",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "makeSkew",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 253, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "mCos",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 254, Column: 5",
+        "H_initialValue" : "cos(skewAxis.toRadians())"
+      },
+      {
+        "A_name" : "mSin",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 255, Column: 5",
+        "H_initialValue" : "sin(skewAxis.toRadians())"
+      },
+      {
+        "A_name" : "aTan",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 256, Column: 5",
+        "H_initialValue" : "tan(skew.toRadians())"
+      },
+      {
+        "A_name" : "transform1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 258, Column: 5",
+        "H_initialValue" : "CATransform3D(\n      m11: mCos,\n      m12: mSin,\n      m13: 0,\n      m14: 0,\n      m21: -mSin,\n      m22: mCos,\n      m23: 0,\n      m24: 0,\n      m31: 0,\n      m32: 0,\n      m33: 1,\n      m34: 0,\n      m41: 0,\n      m42: 0,\n      m43: 0,\n      m44: 1)"
+      },
+      {
+        "A_name" : "transform2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 276, Column: 5",
+        "H_initialValue" : "CATransform3D(\n      m11: 1,\n      m12: 0,\n      m13: 0,\n      m14: 0,\n      m21: aTan,\n      m22: 1,\n      m23: 0,\n      m24: 0,\n      m31: 0,\n      m32: 0,\n      m33: 1,\n      m34: 0,\n      m41: 0,\n      m42: 0,\n      m43: 0,\n      m44: 1)"
+      },
+      {
+        "A_name" : "transform3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VectorsExtensions.swift - Line: 294, Column: 5",
+        "H_initialValue" : "CATransform3D(\n      m11: mCos,\n      m12: -mSin,\n      m13: 0,\n      m14: 0,\n      m21: mSin,\n      m22: mCos,\n      m23: 0,\n      m24: 0,\n      m31: 0,\n      m32: 0,\n      m33: 1,\n      m34: 0,\n      m41: 0,\n      m42: 0,\n      m43: 0,\n      m44: 1)"
+      }
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "skew",
+      "skewAxis"
+    ],
+    "J_returnType" : "-> CATransform3D"
+  },
+  {
+    "A_name" : "mCos",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 254, Column: 5",
+    "H_initialValue" : "cos(skewAxis.toRadians())"
+  },
+  {
+    "A_name" : "mSin",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 255, Column: 5",
+    "H_initialValue" : "sin(skewAxis.toRadians())"
+  },
+  {
+    "A_name" : "aTan",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 256, Column: 5",
+    "H_initialValue" : "tan(skew.toRadians())"
+  },
+  {
+    "A_name" : "transform1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 258, Column: 5",
+    "H_initialValue" : "CATransform3D(\n      m11: mCos,\n      m12: mSin,\n      m13: 0,\n      m14: 0,\n      m21: -mSin,\n      m22: mCos,\n      m23: 0,\n      m24: 0,\n      m31: 0,\n      m32: 0,\n      m33: 1,\n      m34: 0,\n      m41: 0,\n      m42: 0,\n      m43: 0,\n      m44: 1)"
+  },
+  {
+    "A_name" : "transform2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 276, Column: 5",
+    "H_initialValue" : "CATransform3D(\n      m11: 1,\n      m12: 0,\n      m13: 0,\n      m14: 0,\n      m21: aTan,\n      m22: 1,\n      m23: 0,\n      m24: 0,\n      m31: 0,\n      m32: 0,\n      m33: 1,\n      m34: 0,\n      m41: 0,\n      m42: 0,\n      m43: 0,\n      m44: 1)"
+  },
+  {
+    "A_name" : "transform3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 294, Column: 5",
+    "H_initialValue" : "CATransform3D(\n      m11: mCos,\n      m12: -mSin,\n      m13: 0,\n      m14: 0,\n      m21: mSin,\n      m22: mCos,\n      m23: 0,\n      m24: 0,\n      m31: 0,\n      m32: 0,\n      m33: 1,\n      m34: 0,\n      m41: 0,\n      m42: 0,\n      m43: 0,\n      m44: 1)"
+  },
+  {
+    "A_name" : "makeTransform",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 314, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGPoint",
+      "CGPoint",
+      "CGSize",
+      "CGFloat",
+      "CGFloat",
+      "CGFloat",
+      "CGFloat?",
+      "CGFloat?"
+    ],
+    "I_parameters" : [
+      "anchor",
+      "position",
+      "scale",
+      "rotationX",
+      "rotationY",
+      "rotationZ",
+      "skew",
+      "skewAxis"
+    ],
+    "J_returnType" : "-> CATransform3D"
+  },
+  {
+    "A_name" : "rotated",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 342, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "Axis"
+    ],
+    "I_parameters" : [
+      "_",
+      "axis"
+    ],
+    "J_returnType" : "-> CATransform3D"
+  },
+  {
+    "A_name" : "translated",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 351, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGPoint"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> CATransform3D"
+  },
+  {
+    "A_name" : "scaled",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 355, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGSize"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> CATransform3D"
+  },
+  {
+    "A_name" : "skewed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VectorsExtensions.swift - Line: 359, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "skew",
+      "skewAxis"
+    ],
+    "J_returnType" : "-> CATransform3D"
+  }
+]

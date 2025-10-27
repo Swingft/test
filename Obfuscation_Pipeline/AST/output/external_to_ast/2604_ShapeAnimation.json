@@ -1,0 +1,754 @@
+[
+  {
+    "A_name" : "CAShapeLayer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 6, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "addAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 8, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ShapeItem",
+          "LayerAnimationContext",
+          "PathMultiplier",
+          "RoundedCorners?"
+        ],
+        "I_parameters" : [
+          "for",
+          "context",
+          "pathMultiplier",
+          "roundedCorners"
+        ]
+      },
+      {
+        "A_name" : "addAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 54, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Fill",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "addAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 68, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Trim",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "context"
+        ],
+        "J_returnType" : "-> PathMultiplier"
+      }
+    ]
+  },
+  {
+    "A_name" : "addAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 8, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ShapeItem",
+      "LayerAnimationContext",
+      "PathMultiplier",
+      "RoundedCorners?"
+    ],
+    "I_parameters" : [
+      "for",
+      "context",
+      "pathMultiplier",
+      "roundedCorners"
+    ]
+  },
+  {
+    "A_name" : "addAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 54, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Fill",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "addAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 68, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Trim",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "context"
+    ],
+    "J_returnType" : "-> PathMultiplier"
+  },
+  {
+    "A_name" : "Trim",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 99, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "caShapeLayerKeyframes",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 106, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "strokeStart",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 110, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "strokeEnd",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 111, Column: 5",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "offsetStrokeKeyframes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 144, Column: 5",
+            "H_initialValue" : "Keyframes.combined(\n      strokeStart,\n      strokeEnd,\n      offset,\n      makeCombinedResult: { start, end, offset -> (start: LottieVector1D, end: LottieVector1D) in\n        \/\/ Compute the adjusted value by converting the offset value to a stroke value\n        let offsetStart = start.cgFloatValue + (offset.cgFloatValue \/ 360 * 100)\n        let offsetEnd = end.cgFloatValue + (offset.cgFloatValue \/ 360 * 100)\n        return (start: LottieVector1D(offsetStart), end: LottieVector1D(offsetEnd))\n      })"
+          },
+          {
+            "A_name" : "adjustedStrokeStart",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 155, Column: 5",
+            "H_initialValue" : "offsetStrokeKeyframes.map { $0.start }"
+          },
+          {
+            "A_name" : "adjustedStrokeEnd",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 156, Column: 5",
+            "H_initialValue" : "offsetStrokeKeyframes.map { $0.end }"
+          },
+          {
+            "A_name" : "startStrokes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 160, Column: 5",
+            "H_initialValue" : "adjustedStrokeStart.keyframes.map { $0.value.cgFloatValue }"
+          },
+          {
+            "A_name" : "endStrokes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 161, Column: 5",
+            "H_initialValue" : "adjustedStrokeEnd.keyframes.map { $0.value.cgFloatValue }"
+          },
+          {
+            "A_name" : "minimumStrokeMultiplier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 162, Column: 5",
+            "H_initialValue" : "Double(floor((startStrokes.min() ?? 0) \/ 100.0))"
+          },
+          {
+            "A_name" : "maximumStrokeMultiplier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 163, Column: 5",
+            "H_initialValue" : "Double(ceil((endStrokes.max() ?? 100) \/ 100.0))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> (strokeStart: KeyframeGroup<LottieVector1D>, strokeEnd: KeyframeGroup<LottieVector1D>, pathMultiplier: PathMultiplier)"
+      },
+      {
+        "A_name" : "startValueIsAlwaysLessOrEqualToThanEndValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 182, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "startValueIsAlwaysGreaterThanOrEqualToEndValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 190, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "startAndEndValuesAllSatisfy",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 196, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "keyframeTimes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 197, Column: 5",
+            "H_initialValue" : "Set(start.keyframes.map { $0.time } + end.keyframes.map { $0.time })"
+          },
+          {
+            "A_name" : "startInterpolator",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 199, Column: 5",
+            "H_initialValue" : "KeyframeInterpolator(keyframes: start.keyframes)"
+          },
+          {
+            "A_name" : "endInterpolator",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 200, Column: 5",
+            "H_initialValue" : "KeyframeInterpolator(keyframes: end.keyframes)"
+          }
+        ],
+        "I_parameterType" : [
+          "(_ start: CGFloat, _ end: CGFloat) -> Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "interpolatedAtEachFrame",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 218, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "combinedKeyframes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeAnimation.swift - Line: 221, Column: 5",
+            "H_initialValue" : "Keyframes.combined(\n      start,\n      end,\n      makeCombinedResult: { startValue, endValue -> (start: LottieVector1D, end: LottieVector1D) in\n        if startValue.cgFloatValue < endValue.cgFloatValue {\n          return (start: startValue, end: endValue)\n        } else {\n          return (start: endValue, end: startValue)\n        }\n      })"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> (strokeStart: KeyframeGroup<LottieVector1D>, strokeEnd: KeyframeGroup<LottieVector1D>)"
+      }
+    ]
+  },
+  {
+    "A_name" : "caShapeLayerKeyframes",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 106, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "strokeStart",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 110, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "strokeEnd",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 111, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "offsetStrokeKeyframes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 144, Column: 5",
+        "H_initialValue" : "Keyframes.combined(\n      strokeStart,\n      strokeEnd,\n      offset,\n      makeCombinedResult: { start, end, offset -> (start: LottieVector1D, end: LottieVector1D) in\n        \/\/ Compute the adjusted value by converting the offset value to a stroke value\n        let offsetStart = start.cgFloatValue + (offset.cgFloatValue \/ 360 * 100)\n        let offsetEnd = end.cgFloatValue + (offset.cgFloatValue \/ 360 * 100)\n        return (start: LottieVector1D(offsetStart), end: LottieVector1D(offsetEnd))\n      })"
+      },
+      {
+        "A_name" : "adjustedStrokeStart",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 155, Column: 5",
+        "H_initialValue" : "offsetStrokeKeyframes.map { $0.start }"
+      },
+      {
+        "A_name" : "adjustedStrokeEnd",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 156, Column: 5",
+        "H_initialValue" : "offsetStrokeKeyframes.map { $0.end }"
+      },
+      {
+        "A_name" : "startStrokes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 160, Column: 5",
+        "H_initialValue" : "adjustedStrokeStart.keyframes.map { $0.value.cgFloatValue }"
+      },
+      {
+        "A_name" : "endStrokes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 161, Column: 5",
+        "H_initialValue" : "adjustedStrokeEnd.keyframes.map { $0.value.cgFloatValue }"
+      },
+      {
+        "A_name" : "minimumStrokeMultiplier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 162, Column: 5",
+        "H_initialValue" : "Double(floor((startStrokes.min() ?? 0) \/ 100.0))"
+      },
+      {
+        "A_name" : "maximumStrokeMultiplier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 163, Column: 5",
+        "H_initialValue" : "Double(ceil((endStrokes.max() ?? 100) \/ 100.0))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> (strokeStart: KeyframeGroup<LottieVector1D>, strokeEnd: KeyframeGroup<LottieVector1D>, pathMultiplier: PathMultiplier)"
+  },
+  {
+    "A_name" : "strokeStart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 110, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "strokeEnd",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 111, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "offsetStrokeKeyframes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 144, Column: 5",
+    "H_initialValue" : "Keyframes.combined(\n      strokeStart,\n      strokeEnd,\n      offset,\n      makeCombinedResult: { start, end, offset -> (start: LottieVector1D, end: LottieVector1D) in\n        \/\/ Compute the adjusted value by converting the offset value to a stroke value\n        let offsetStart = start.cgFloatValue + (offset.cgFloatValue \/ 360 * 100)\n        let offsetEnd = end.cgFloatValue + (offset.cgFloatValue \/ 360 * 100)\n        return (start: LottieVector1D(offsetStart), end: LottieVector1D(offsetEnd))\n      })"
+  },
+  {
+    "A_name" : "offsetStart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 150, Column: 9",
+    "H_initialValue" : "start.cgFloatValue + (offset.cgFloatValue \/ 360 * 100)"
+  },
+  {
+    "A_name" : "offsetEnd",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 151, Column: 9",
+    "H_initialValue" : "end.cgFloatValue + (offset.cgFloatValue \/ 360 * 100)"
+  },
+  {
+    "A_name" : "adjustedStrokeStart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 155, Column: 5",
+    "H_initialValue" : "offsetStrokeKeyframes.map { $0.start }"
+  },
+  {
+    "A_name" : "adjustedStrokeEnd",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 156, Column: 5",
+    "H_initialValue" : "offsetStrokeKeyframes.map { $0.end }"
+  },
+  {
+    "A_name" : "startStrokes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 160, Column: 5",
+    "H_initialValue" : "adjustedStrokeStart.keyframes.map { $0.value.cgFloatValue }"
+  },
+  {
+    "A_name" : "endStrokes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 161, Column: 5",
+    "H_initialValue" : "adjustedStrokeEnd.keyframes.map { $0.value.cgFloatValue }"
+  },
+  {
+    "A_name" : "minimumStrokeMultiplier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 162, Column: 5",
+    "H_initialValue" : "Double(floor((startStrokes.min() ?? 0) \/ 100.0))"
+  },
+  {
+    "A_name" : "maximumStrokeMultiplier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 163, Column: 5",
+    "H_initialValue" : "Double(ceil((endStrokes.max() ?? 100) \/ 100.0))"
+  },
+  {
+    "A_name" : "startValueIsAlwaysLessOrEqualToThanEndValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 182, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "startValueIsAlwaysGreaterThanOrEqualToEndValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 190, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "startAndEndValuesAllSatisfy",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 196, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "keyframeTimes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 197, Column: 5",
+        "H_initialValue" : "Set(start.keyframes.map { $0.time } + end.keyframes.map { $0.time })"
+      },
+      {
+        "A_name" : "startInterpolator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 199, Column: 5",
+        "H_initialValue" : "KeyframeInterpolator(keyframes: start.keyframes)"
+      },
+      {
+        "A_name" : "endInterpolator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 200, Column: 5",
+        "H_initialValue" : "KeyframeInterpolator(keyframes: end.keyframes)"
+      }
+    ],
+    "I_parameterType" : [
+      "(_ start: CGFloat, _ end: CGFloat) -> Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "keyframeTimes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 197, Column: 5",
+    "H_initialValue" : "Set(start.keyframes.map { $0.time } + end.keyframes.map { $0.time })"
+  },
+  {
+    "A_name" : "startInterpolator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 199, Column: 5",
+    "H_initialValue" : "KeyframeInterpolator(keyframes: start.keyframes)"
+  },
+  {
+    "A_name" : "endInterpolator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 200, Column: 5",
+    "H_initialValue" : "KeyframeInterpolator(keyframes: end.keyframes)"
+  },
+  {
+    "A_name" : "interpolatedAtEachFrame",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 218, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "combinedKeyframes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeAnimation.swift - Line: 221, Column: 5",
+        "H_initialValue" : "Keyframes.combined(\n      start,\n      end,\n      makeCombinedResult: { startValue, endValue -> (start: LottieVector1D, end: LottieVector1D) in\n        if startValue.cgFloatValue < endValue.cgFloatValue {\n          return (start: startValue, end: endValue)\n        } else {\n          return (start: endValue, end: startValue)\n        }\n      })"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> (strokeStart: KeyframeGroup<LottieVector1D>, strokeEnd: KeyframeGroup<LottieVector1D>)"
+  },
+  {
+    "A_name" : "combinedKeyframes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeAnimation.swift - Line: 221, Column: 5",
+    "H_initialValue" : "Keyframes.combined(\n      start,\n      end,\n      makeCombinedResult: { startValue, endValue -> (start: LottieVector1D, end: LottieVector1D) in\n        if startValue.cgFloatValue < endValue.cgFloatValue {\n          return (start: startValue, end: endValue)\n        } else {\n          return (start: endValue, end: startValue)\n        }\n      })"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "A_name" : "Dictionary",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Array+Extensions.swift - Line: 12, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Array+Extensions.swift - Line: 13, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Array+Extensions.swift - Line: 14, Column: 9",
+        "H_initialValue" : "[:]"
+      }
+    ],
+    "I_parameterType" : [
+      "[T]",
+      "(T) -> Key",
+      "(T) -> Value"
+    ],
+    "I_parameters" : [
+      "elements",
+      "keySelector",
+      "valueSelector"
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Array+Extensions.swift - Line: 14, Column: 9",
+    "H_initialValue" : "[:]"
+  }
+]

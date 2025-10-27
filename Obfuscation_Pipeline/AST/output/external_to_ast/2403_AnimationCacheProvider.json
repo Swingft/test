@@ -1,0 +1,131 @@
+[
+  {
+    "A_name" : "AnimationCacheProvider",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyObject",
+      "Sendable"
+    ],
+    "F_location" : "AnimationCacheProvider.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "animation",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationCacheProvider.swift - Line: 15, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forKey"
+        ],
+        "J_returnType" : "-> LottieAnimation?"
+      },
+      {
+        "A_name" : "setAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationCacheProvider.swift - Line: 17, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieAnimation",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "clearCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationCacheProvider.swift - Line: 19, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationCacheProvider.swift - Line: 15, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forKey"
+    ],
+    "J_returnType" : "-> LottieAnimation?"
+  },
+  {
+    "A_name" : "setAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationCacheProvider.swift - Line: 17, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieAnimation",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "clearCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationCacheProvider.swift - Line: 19, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

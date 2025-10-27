@@ -1,0 +1,168 @@
+[
+  {
+    "A_name" : "LottieAnimationSource",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "LottieAnimationSource.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lottieAnimation",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationSource.swift - Line: 11, Column: 8",
+        "I_parameterType" : [
+          "LottieAnimation"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "dotLottieFile",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationSource.swift - Line: 14, Column: 8",
+        "I_parameterType" : [
+          "DotLottieFile"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "LottieAnimationSource",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LottieAnimationSource.swift - Line: 17, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "animation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationSource.swift - Line: 19, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dotLottieAnimation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationSource.swift - Line: 29, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationSource.swift - Line: 19, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dotLottieAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationSource.swift - Line: 29, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "LottieAnimation",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LottieAnimationSource.swift - Line: 39, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "animationSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationSource.swift - Line: 41, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "animationSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationSource.swift - Line: 41, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "DotLottieFile",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LottieAnimationSource.swift - Line: 46, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "animationSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LottieAnimationSource.swift - Line: 48, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "animationSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LottieAnimationSource.swift - Line: 48, Column: 3",
+    "H_initialValue" : ""
+  }
+]

@@ -1,0 +1,1131 @@
+[
+  {
+    "A_name" : "Interpolatable",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyInterpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 28, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Self",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 28, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Self",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "SpatialInterpolatable",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyInterpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 37, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 44, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Self",
+          "CGFloat",
+          "CGPoint?",
+          "CGPoint?"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount",
+          "spatialOutTangent",
+          "spatialInTangent"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 44, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Self",
+      "CGFloat",
+      "CGPoint?",
+      "CGPoint?"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount",
+      "spatialOutTangent",
+      "spatialInTangent"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "AnyInterpolatable",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 56, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "_interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 60, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Self",
+          "CGFloat",
+          "CGPoint?",
+          "CGPoint?"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount",
+          "spatialOutTangent",
+          "spatialInTangent"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "_interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 60, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Self",
+      "CGFloat",
+      "CGPoint?",
+      "CGPoint?"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount",
+      "spatialOutTangent",
+      "spatialInTangent"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "Interpolatable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 68, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "_interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 69, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Self",
+          "CGFloat",
+          "CGPoint?",
+          "CGPoint?"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount",
+          "spatialOutTangent",
+          "spatialInTangent"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "_interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 69, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Self",
+      "CGFloat",
+      "CGPoint?",
+      "CGPoint?"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount",
+      "spatialOutTangent",
+      "spatialInTangent"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "SpatialInterpolatable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 80, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 83, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Self",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "_interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 91, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Self",
+          "CGFloat",
+          "CGPoint?",
+          "CGPoint?"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount",
+          "spatialOutTangent",
+          "spatialInTangent"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 83, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Self",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "_interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 91, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Self",
+      "CGFloat",
+      "CGPoint?",
+      "CGPoint?"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount",
+      "spatialOutTangent",
+      "spatialInTangent"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "Double",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 108, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "CGFloat",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 112, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Float",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 116, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Interpolatable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 118, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 119, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Self",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 119, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Self",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "CGRect",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 126, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 127, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> CGRect"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 127, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> CGRect"
+  },
+  {
+    "A_name" : "CGSize",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 138, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 139, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGSize",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> CGSize"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 139, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGSize",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> CGSize"
+  },
+  {
+    "A_name" : "CGPoint",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "SpatialInterpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 148, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 149, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "cp1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Interpolatable.swift - Line: 165, Column: 5",
+            "H_initialValue" : "self + outTan"
+          },
+          {
+            "A_name" : "cp2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Interpolatable.swift - Line: 166, Column: 5",
+            "H_initialValue" : "to + inTan"
+          }
+        ],
+        "I_parameterType" : [
+          "CGPoint",
+          "CGFloat",
+          "CGPoint?",
+          "CGPoint?"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount",
+          "spatialOutTangent",
+          "spatialInTangent"
+        ],
+        "J_returnType" : "-> CGPoint"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 149, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "cp1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 165, Column: 5",
+        "H_initialValue" : "self + outTan"
+      },
+      {
+        "A_name" : "cp2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 166, Column: 5",
+        "H_initialValue" : "to + inTan"
+      }
+    ],
+    "I_parameterType" : [
+      "CGPoint",
+      "CGFloat",
+      "CGPoint?",
+      "CGPoint?"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount",
+      "spatialOutTangent",
+      "spatialInTangent"
+    ],
+    "J_returnType" : "-> CGPoint"
+  },
+  {
+    "A_name" : "cp1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 165, Column: 5",
+    "H_initialValue" : "self + outTan"
+  },
+  {
+    "A_name" : "cp2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 166, Column: 5",
+    "H_initialValue" : "to + inTan"
+  },
+  {
+    "A_name" : "LottieColor",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 173, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 174, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieColor",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> LottieColor"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 174, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieColor",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> LottieColor"
+  },
+  {
+    "A_name" : "LottieVector1D",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 185, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 186, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieVector1D",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> LottieVector1D"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 186, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieVector1D",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> LottieVector1D"
+  },
+  {
+    "A_name" : "LottieVector2D",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "SpatialInterpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 193, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 194, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieVector2D",
+          "CGFloat",
+          "CGPoint?",
+          "CGPoint?"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount",
+          "spatialOutTangent",
+          "spatialInTangent"
+        ],
+        "J_returnType" : "-> LottieVector2D"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 194, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieVector2D",
+      "CGFloat",
+      "CGPoint?",
+      "CGPoint?"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount",
+      "spatialOutTangent",
+      "spatialInTangent"
+    ],
+    "J_returnType" : "-> LottieVector2D"
+  },
+  {
+    "A_name" : "LottieVector3D",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "SpatialInterpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 212, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 213, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LottieVector3D",
+          "CGFloat",
+          "CGPoint?",
+          "CGPoint?"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount",
+          "spatialOutTangent",
+          "spatialInTangent"
+        ],
+        "J_returnType" : "-> LottieVector3D"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 213, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LottieVector3D",
+      "CGFloat",
+      "CGPoint?",
+      "CGPoint?"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount",
+      "spatialOutTangent",
+      "spatialInTangent"
+    ],
+    "J_returnType" : "-> LottieVector3D"
+  },
+  {
+    "A_name" : "point",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 222, Column: 7",
+    "H_initialValue" : "pointValue.interpolate(\n        to: to.pointValue,\n        amount: amount,\n        spatialOutTangent: spatialOutTangent,\n        spatialInTangent: spatialInTangent)"
+  },
+  {
+    "A_name" : "Array",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable",
+      "AnyInterpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 243, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 244, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[Element]",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> [Element]"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 244, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Element]",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> [Element]"
+  },
+  {
+    "A_name" : "Optional",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable",
+      "AnyInterpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 257, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 258, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Wrapped?",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> Wrapped?"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 258, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Wrapped?",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> Wrapped?"
+  },
+  {
+    "A_name" : "Hold",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "Interpolatable.swift - Line: 269, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 270, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Interpolatable.swift - Line: 272, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Hold<T>",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> Hold<T>"
+      }
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 270, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Interpolatable.swift - Line: 272, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Hold<T>",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> Hold<T>"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "A_name" : "Array",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Array+remove.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "remove",
+        "B_kind" : "function",
+        "C_accessLevel" : "mutating",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "Array+remove.swift - Line: 11, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "object"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "remove",
+    "B_kind" : "function",
+    "C_accessLevel" : "mutating",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "Array+remove.swift - Line: 11, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element"
+    ],
+    "I_parameters" : [
+      "object"
+    ]
+  }
+]

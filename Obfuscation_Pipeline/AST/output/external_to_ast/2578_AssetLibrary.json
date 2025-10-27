@@ -1,0 +1,460 @@
+[
+  {
+    "A_name" : "AssetLibrary",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Codable",
+      "AnyInitializable",
+      "Sendable"
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 8, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 12, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AssetLibrary.swift - Line: 13, Column: 5",
+            "H_initialValue" : "try decoder.unkeyedContainer()"
+          },
+          {
+            "A_name" : "containerForKeys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AssetLibrary.swift - Line: 14, Column: 5",
+            "H_initialValue" : "container"
+          },
+          {
+            "A_name" : "decodedAssets",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AssetLibrary.swift - Line: 16, Column: 5",
+            "H_initialValue" : "[String: Asset]()"
+          },
+          {
+            "A_name" : "imageAssets",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AssetLibrary.swift - Line: 18, Column: 5",
+            "H_initialValue" : "[String: ImageAsset]()"
+          },
+          {
+            "A_name" : "precompAssets",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AssetLibrary.swift - Line: 19, Column: 5",
+            "H_initialValue" : "[String: PrecompAsset]()"
+          }
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 41, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "decodedAssets",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AssetLibrary.swift - Line: 45, Column: 5",
+            "H_initialValue" : "[String: Asset]()"
+          },
+          {
+            "A_name" : "imageAssets",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AssetLibrary.swift - Line: 46, Column: 5",
+            "H_initialValue" : "[String: ImageAsset]()"
+          },
+          {
+            "A_name" : "precompAssets",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AssetLibrary.swift - Line: 47, Column: 5",
+            "H_initialValue" : "[String: PrecompAsset]()"
+          }
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "value"
+        ]
+      },
+      {
+        "A_name" : "assets",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 66, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "imageAssets",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 68, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "precompAssets",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 69, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 71, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AssetLibrary.swift - Line: 72, Column: 5",
+            "H_initialValue" : "encoder.unkeyedContainer()"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 12, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 13, Column: 5",
+        "H_initialValue" : "try decoder.unkeyedContainer()"
+      },
+      {
+        "A_name" : "containerForKeys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 14, Column: 5",
+        "H_initialValue" : "container"
+      },
+      {
+        "A_name" : "decodedAssets",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 16, Column: 5",
+        "H_initialValue" : "[String: Asset]()"
+      },
+      {
+        "A_name" : "imageAssets",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 18, Column: 5",
+        "H_initialValue" : "[String: ImageAsset]()"
+      },
+      {
+        "A_name" : "precompAssets",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 19, Column: 5",
+        "H_initialValue" : "[String: PrecompAsset]()"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 13, Column: 5",
+    "H_initialValue" : "try decoder.unkeyedContainer()"
+  },
+  {
+    "A_name" : "containerForKeys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 14, Column: 5",
+    "H_initialValue" : "container"
+  },
+  {
+    "A_name" : "decodedAssets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 16, Column: 5",
+    "H_initialValue" : "[String: Asset]()"
+  },
+  {
+    "A_name" : "imageAssets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 18, Column: 5",
+    "H_initialValue" : "[String: ImageAsset]()"
+  },
+  {
+    "A_name" : "precompAssets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 19, Column: 5",
+    "H_initialValue" : "[String: PrecompAsset]()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 41, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "decodedAssets",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 45, Column: 5",
+        "H_initialValue" : "[String: Asset]()"
+      },
+      {
+        "A_name" : "imageAssets",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 46, Column: 5",
+        "H_initialValue" : "[String: ImageAsset]()"
+      },
+      {
+        "A_name" : "precompAssets",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 47, Column: 5",
+        "H_initialValue" : "[String: PrecompAsset]()"
+      }
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "value"
+    ]
+  },
+  {
+    "A_name" : "decodedAssets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 45, Column: 5",
+    "H_initialValue" : "[String: Asset]()"
+  },
+  {
+    "A_name" : "imageAssets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 46, Column: 5",
+    "H_initialValue" : "[String: ImageAsset]()"
+  },
+  {
+    "A_name" : "precompAssets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 47, Column: 5",
+    "H_initialValue" : "[String: PrecompAsset]()"
+  },
+  {
+    "A_name" : "asset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 50, Column: 9",
+    "H_initialValue" : "try PrecompAsset(dictionary: dictionary)"
+  },
+  {
+    "A_name" : "assets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 66, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageAssets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 68, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "precompAssets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 69, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 71, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AssetLibrary.swift - Line: 72, Column: 5",
+        "H_initialValue" : "encoder.unkeyedContainer()"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AssetLibrary.swift - Line: 72, Column: 5",
+    "H_initialValue" : "encoder.unkeyedContainer()"
+  }
+]

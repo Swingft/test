@@ -1,0 +1,602 @@
+[
+  {
+    "A_name" : "RawRepresentableTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 26, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testNumber",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 28, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "json",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 29, Column: 9",
+            "H_initialValue" : "JSON(rawValue: 948394394.347384 as NSNumber)!"
+          },
+          {
+            "A_name" : "object",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 37, Column: 9",
+            "H_initialValue" : "json.rawValue"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBool",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 48, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "jsonTrue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 49, Column: 9",
+            "H_initialValue" : "JSON(rawValue: true as NSNumber)!"
+          },
+          {
+            "A_name" : "jsonFalse",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 53, Column: 9",
+            "H_initialValue" : "JSON(rawValue: false)!"
+          },
+          {
+            "A_name" : "objectTrue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 57, Column: 9",
+            "H_initialValue" : "jsonTrue.rawValue"
+          },
+          {
+            "A_name" : "objectFalse",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 60, Column: 9",
+            "H_initialValue" : "jsonFalse.rawValue"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testString",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 64, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "string",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 65, Column: 9",
+            "H_initialValue" : "\"The better way to deal with JSON data in Swift.\""
+          },
+          {
+            "A_name" : "object",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 79, Column: 9",
+            "H_initialValue" : "JSON(rawValue: string)!.rawValue"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testNil",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 83, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testArray",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 95, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "array",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 96, Column: 9",
+            "H_initialValue" : "[1, 2, \"3\", 4102, \"5632\", \"abocde\", \"!@# $%^&*()\"] as NSArray"
+          },
+          {
+            "A_name" : "object",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 101, Column: 9",
+            "H_initialValue" : "JSON(rawValue: array)!.rawValue"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDictionary",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 105, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 106, Column: 9",
+            "H_initialValue" : "[\"1\": 2, \"2\": 2, \"three\": 3, \"list\": [\"aa\", \"bb\", \"dd\"]] as NSDictionary"
+          },
+          {
+            "A_name" : "object",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RawRepresentableTests.swift - Line: 111, Column: 9",
+            "H_initialValue" : "JSON(rawValue: dictionary)!.rawValue"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testNumber",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 28, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "json",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 29, Column: 9",
+        "H_initialValue" : "JSON(rawValue: 948394394.347384 as NSNumber)!"
+      },
+      {
+        "A_name" : "object",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 37, Column: 9",
+        "H_initialValue" : "json.rawValue"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 29, Column: 9",
+    "H_initialValue" : "JSON(rawValue: 948394394.347384 as NSNumber)!"
+  },
+  {
+    "A_name" : "object",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 37, Column: 9",
+    "H_initialValue" : "json.rawValue"
+  },
+  {
+    "A_name" : "testBool",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 48, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "jsonTrue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 49, Column: 9",
+        "H_initialValue" : "JSON(rawValue: true as NSNumber)!"
+      },
+      {
+        "A_name" : "jsonFalse",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 53, Column: 9",
+        "H_initialValue" : "JSON(rawValue: false)!"
+      },
+      {
+        "A_name" : "objectTrue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 57, Column: 9",
+        "H_initialValue" : "jsonTrue.rawValue"
+      },
+      {
+        "A_name" : "objectFalse",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 60, Column: 9",
+        "H_initialValue" : "jsonFalse.rawValue"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "jsonTrue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 49, Column: 9",
+    "H_initialValue" : "JSON(rawValue: true as NSNumber)!"
+  },
+  {
+    "A_name" : "jsonFalse",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 53, Column: 9",
+    "H_initialValue" : "JSON(rawValue: false)!"
+  },
+  {
+    "A_name" : "objectTrue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 57, Column: 9",
+    "H_initialValue" : "jsonTrue.rawValue"
+  },
+  {
+    "A_name" : "objectFalse",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 60, Column: 9",
+    "H_initialValue" : "jsonFalse.rawValue"
+  },
+  {
+    "A_name" : "testString",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 64, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "string",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 65, Column: 9",
+        "H_initialValue" : "\"The better way to deal with JSON data in Swift.\""
+      },
+      {
+        "A_name" : "object",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 79, Column: 9",
+        "H_initialValue" : "JSON(rawValue: string)!.rawValue"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 65, Column: 9",
+    "H_initialValue" : "\"The better way to deal with JSON data in Swift.\""
+  },
+  {
+    "A_name" : "object",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 79, Column: 9",
+    "H_initialValue" : "JSON(rawValue: string)!.rawValue"
+  },
+  {
+    "A_name" : "testNil",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 83, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "n",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 89, Column: 13",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 90, Column: 13",
+    "H_initialValue" : "JSON(n as Any)"
+  },
+  {
+    "A_name" : "testArray",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 95, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "array",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 96, Column: 9",
+        "H_initialValue" : "[1, 2, \"3\", 4102, \"5632\", \"abocde\", \"!@# $%^&*()\"] as NSArray"
+      },
+      {
+        "A_name" : "object",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 101, Column: 9",
+        "H_initialValue" : "JSON(rawValue: array)!.rawValue"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "array",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 96, Column: 9",
+    "H_initialValue" : "[1, 2, \"3\", 4102, \"5632\", \"abocde\", \"!@# $%^&*()\"] as NSArray"
+  },
+  {
+    "A_name" : "object",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 101, Column: 9",
+    "H_initialValue" : "JSON(rawValue: array)!.rawValue"
+  },
+  {
+    "A_name" : "testDictionary",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 105, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 106, Column: 9",
+        "H_initialValue" : "[\"1\": 2, \"2\": 2, \"three\": 3, \"list\": [\"aa\", \"bb\", \"dd\"]] as NSDictionary"
+      },
+      {
+        "A_name" : "object",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RawRepresentableTests.swift - Line: 111, Column: 9",
+        "H_initialValue" : "JSON(rawValue: dictionary)!.rawValue"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 106, Column: 9",
+    "H_initialValue" : "[\"1\": 2, \"2\": 2, \"three\": 3, \"list\": [\"aa\", \"bb\", \"dd\"]] as NSDictionary"
+  },
+  {
+    "A_name" : "object",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RawRepresentableTests.swift - Line: 111, Column: 9",
+    "H_initialValue" : "JSON(rawValue: dictionary)!.rawValue"
+  }
+]

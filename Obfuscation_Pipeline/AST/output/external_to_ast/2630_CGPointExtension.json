@@ -1,0 +1,142 @@
+[
+  {
+    "A_name" : "CGPoint",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyInitializable"
+    ],
+    "F_location" : "CGPointExtension.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "CodingKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String"
+        ],
+        "F_location" : "CGPointExtension.swift - Line: 31, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "x",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGPointExtension.swift - Line: 32, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "y",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGPointExtension.swift - Line: 33, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGPointExtension.swift - Line: 14, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "value"
+    ]
+  },
+  {
+    "A_name" : "x",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGPointExtension.swift - Line: 16, Column: 7",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.x)"
+  },
+  {
+    "A_name" : "y",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGPointExtension.swift - Line: 17, Column: 7",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.y)"
+  },
+  {
+    "A_name" : "CodingKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String"
+    ],
+    "F_location" : "CGPointExtension.swift - Line: 31, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "x",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGPointExtension.swift - Line: 32, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "y",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGPointExtension.swift - Line: 33, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  }
+]

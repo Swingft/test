@@ -1,0 +1,938 @@
+[
+  {
+    "A_name" : "DotLottieFile",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "SynchronouslyBlockingCurrentThread",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 12, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "loadedFrom",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "DotLottieFileHelpers.swift - Line: 18, Column: 5",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String",
+              "DotLottieCacheProvider?"
+            ],
+            "I_parameters" : [
+              "filepath",
+              "dotLottieCache"
+            ],
+            "J_returnType" : "-> Result<DotLottieFile, Error>"
+          },
+          {
+            "A_name" : "named",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "DotLottieFileHelpers.swift - Line: 55, Column: 5",
+            "G_members" : [
+              {
+                "A_name" : "cacheKey",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "DotLottieFileHelpers.swift - Line: 67, Column: 7",
+                "H_initialValue" : "bundle.bundlePath + (subdirectory ?? \"\") + \"\/\" + name"
+              }
+            ],
+            "I_parameterType" : [
+              "String",
+              "Bundle",
+              "String?",
+              "DotLottieCacheProvider?"
+            ],
+            "I_parameters" : [
+              "_",
+              "bundle",
+              "subdirectory",
+              "dotLottieCache"
+            ],
+            "J_returnType" : "-> Result<DotLottieFile, Error>"
+          },
+          {
+            "A_name" : "loadedFrom",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "DotLottieFileHelpers.swift - Line: 97, Column: 5",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Data",
+              "String"
+            ],
+            "I_parameters" : [
+              "data",
+              "filename"
+            ],
+            "J_returnType" : "-> Result<DotLottieFile, Error>"
+          }
+        ]
+      },
+      {
+        "A_name" : "named",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 121, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Bundle",
+          "String?",
+          "DotLottieCacheProvider?"
+        ],
+        "I_parameters" : [
+          "_",
+          "bundle",
+          "subdirectory",
+          "dotLottieCache"
+        ],
+        "J_returnType" : "-> DotLottieFile"
+      },
+      {
+        "A_name" : "named",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 143, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Bundle",
+          "String?",
+          "DotLottieCacheProvider?",
+          "DispatchQueue",
+          "@escaping (Result<DotLottieFile, Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "bundle",
+          "subdirectory",
+          "dotLottieCache",
+          "dispatchQueue",
+          "handleResult"
+        ]
+      },
+      {
+        "A_name" : "loadedFrom",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 167, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "DotLottieCacheProvider?"
+        ],
+        "I_parameters" : [
+          "filepath",
+          "dotLottieCache"
+        ],
+        "J_returnType" : "-> DotLottieFile"
+      },
+      {
+        "A_name" : "loadedFrom",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 184, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "DotLottieCacheProvider?",
+          "DispatchQueue",
+          "@escaping (Result<DotLottieFile, Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "filepath",
+          "dotLottieCache",
+          "dispatchQueue",
+          "handleResult"
+        ]
+      },
+      {
+        "A_name" : "asset",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 205, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Bundle",
+          "DotLottieCacheProvider?"
+        ],
+        "I_parameters" : [
+          "named",
+          "bundle",
+          "dotLottieCache"
+        ],
+        "J_returnType" : "-> DotLottieFile"
+      },
+      {
+        "A_name" : "asset",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 224, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Bundle",
+          "DotLottieCacheProvider?",
+          "DispatchQueue",
+          "@escaping (Result<DotLottieFile, Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "named",
+          "bundle",
+          "dotLottieCache",
+          "dispatchQueue",
+          "handleResult"
+        ]
+      },
+      {
+        "A_name" : "loadedFrom",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 270, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL",
+          "URLSession",
+          "DotLottieCacheProvider?"
+        ],
+        "I_parameters" : [
+          "url",
+          "session",
+          "dotLottieCache"
+        ],
+        "J_returnType" : "-> DotLottieFile"
+      },
+      {
+        "A_name" : "loadedFrom",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 288, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL",
+          "URLSession",
+          "DotLottieCacheProvider?",
+          "@escaping (Result<DotLottieFile, Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "url",
+          "session",
+          "dotLottieCache",
+          "handleResult"
+        ]
+      },
+      {
+        "A_name" : "loadedFrom",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 327, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data",
+          "String",
+          "DispatchQueue",
+          "@escaping (Result<DotLottieFile, Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "data",
+          "filename",
+          "dispatchQueue",
+          "handleResult"
+        ]
+      },
+      {
+        "A_name" : "loadedFrom",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 353, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data",
+          "String",
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "data",
+          "filename",
+          "dispatchQueue"
+        ],
+        "J_returnType" : "-> DotLottieFile"
+      }
+    ]
+  },
+  {
+    "A_name" : "SynchronouslyBlockingCurrentThread",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 12, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "loadedFrom",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 18, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "DotLottieCacheProvider?"
+        ],
+        "I_parameters" : [
+          "filepath",
+          "dotLottieCache"
+        ],
+        "J_returnType" : "-> Result<DotLottieFile, Error>"
+      },
+      {
+        "A_name" : "named",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 55, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "cacheKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DotLottieFileHelpers.swift - Line: 67, Column: 7",
+            "H_initialValue" : "bundle.bundlePath + (subdirectory ?? \"\") + \"\/\" + name"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Bundle",
+          "String?",
+          "DotLottieCacheProvider?"
+        ],
+        "I_parameters" : [
+          "_",
+          "bundle",
+          "subdirectory",
+          "dotLottieCache"
+        ],
+        "J_returnType" : "-> Result<DotLottieFile, Error>"
+      },
+      {
+        "A_name" : "loadedFrom",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 97, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data",
+          "String"
+        ],
+        "I_parameters" : [
+          "data",
+          "filename"
+        ],
+        "J_returnType" : "-> Result<DotLottieFile, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "loadedFrom",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 18, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "DotLottieCacheProvider?"
+    ],
+    "I_parameters" : [
+      "filepath",
+      "dotLottieCache"
+    ],
+    "J_returnType" : "-> Result<DotLottieFile, Error>"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 37, Column: 9",
+    "H_initialValue" : "URL(fileURLWithPath: filepath)"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 38, Column: 9",
+    "H_initialValue" : "try Data(contentsOf: url)"
+  },
+  {
+    "A_name" : "lottie",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 39, Column: 9",
+    "H_initialValue" : "try DotLottieFile(data: data, filename: url.deletingPathExtension().lastPathComponent)"
+  },
+  {
+    "A_name" : "named",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 55, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "cacheKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 67, Column: 7",
+        "H_initialValue" : "bundle.bundlePath + (subdirectory ?? \"\") + \"\/\" + name"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Bundle",
+      "String?",
+      "DotLottieCacheProvider?"
+    ],
+    "I_parameters" : [
+      "_",
+      "bundle",
+      "subdirectory",
+      "dotLottieCache"
+    ],
+    "J_returnType" : "-> Result<DotLottieFile, Error>"
+  },
+  {
+    "A_name" : "cacheKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 67, Column: 7",
+    "H_initialValue" : "bundle.bundlePath + (subdirectory ?? \"\") + \"\/\" + name"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 79, Column: 9",
+    "H_initialValue" : "try bundle.dotLottieData(name, subdirectory: subdirectory)"
+  },
+  {
+    "A_name" : "lottie",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 80, Column: 9",
+    "H_initialValue" : "try DotLottieFile(data: data, filename: name)"
+  },
+  {
+    "A_name" : "loadedFrom",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 97, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "String"
+    ],
+    "I_parameters" : [
+      "data",
+      "filename"
+    ],
+    "J_returnType" : "-> Result<DotLottieFile, Error>"
+  },
+  {
+    "A_name" : "dotLottieFile",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 107, Column: 9",
+    "H_initialValue" : "try DotLottieFile(data: data, filename: filename)"
+  },
+  {
+    "A_name" : "named",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 121, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Bundle",
+      "String?",
+      "DotLottieCacheProvider?"
+    ],
+    "I_parameters" : [
+      "_",
+      "bundle",
+      "subdirectory",
+      "dotLottieCache"
+    ],
+    "J_returnType" : "-> DotLottieFile"
+  },
+  {
+    "A_name" : "named",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 143, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Bundle",
+      "String?",
+      "DotLottieCacheProvider?",
+      "DispatchQueue",
+      "@escaping (Result<DotLottieFile, Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "bundle",
+      "subdirectory",
+      "dotLottieCache",
+      "dispatchQueue",
+      "handleResult"
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 152, Column: 7",
+    "H_initialValue" : "SynchronouslyBlockingCurrentThread.named(\n        name,\n        bundle: bundle,\n        subdirectory: subdirectory,\n        dotLottieCache: dotLottieCache)"
+  },
+  {
+    "A_name" : "loadedFrom",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 167, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "DotLottieCacheProvider?"
+    ],
+    "I_parameters" : [
+      "filepath",
+      "dotLottieCache"
+    ],
+    "J_returnType" : "-> DotLottieFile"
+  },
+  {
+    "A_name" : "loadedFrom",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 184, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "DotLottieCacheProvider?",
+      "DispatchQueue",
+      "@escaping (Result<DotLottieFile, Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "filepath",
+      "dotLottieCache",
+      "dispatchQueue",
+      "handleResult"
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 191, Column: 7",
+    "H_initialValue" : "SynchronouslyBlockingCurrentThread.loadedFrom(\n        filepath: filepath,\n        dotLottieCache: dotLottieCache)"
+  },
+  {
+    "A_name" : "asset",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 205, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Bundle",
+      "DotLottieCacheProvider?"
+    ],
+    "I_parameters" : [
+      "named",
+      "bundle",
+      "dotLottieCache"
+    ],
+    "J_returnType" : "-> DotLottieFile"
+  },
+  {
+    "A_name" : "asset",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 224, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Bundle",
+      "DotLottieCacheProvider?",
+      "DispatchQueue",
+      "@escaping (Result<DotLottieFile, Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "named",
+      "bundle",
+      "dotLottieCache",
+      "dispatchQueue",
+      "handleResult"
+    ]
+  },
+  {
+    "A_name" : "cacheKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 233, Column: 7",
+    "H_initialValue" : "bundle.bundlePath + \"\/\" + name"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 249, Column: 9",
+    "H_initialValue" : "try Data(assetName: name, in: bundle)"
+  },
+  {
+    "A_name" : "lottie",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 252, Column: 9",
+    "H_initialValue" : "try DotLottieFile(data: data, filename: name)"
+  },
+  {
+    "A_name" : "loadedFrom",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 270, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL",
+      "URLSession",
+      "DotLottieCacheProvider?"
+    ],
+    "I_parameters" : [
+      "url",
+      "session",
+      "dotLottieCache"
+    ],
+    "J_returnType" : "-> DotLottieFile"
+  },
+  {
+    "A_name" : "loadedFrom",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 288, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL",
+      "URLSession",
+      "DotLottieCacheProvider?",
+      "@escaping (Result<DotLottieFile, Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "url",
+      "session",
+      "dotLottieCache",
+      "handleResult"
+    ]
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 297, Column: 7",
+    "H_initialValue" : "session.dataTask(with: url) { data, _, error in\n        do {\n          if let error {\n            throw error\n          }\n          guard let data else {\n            throw DotLottieError.noDataLoaded\n          }\n          let lottie = try DotLottieFile(data: data, filename: url.deletingPathExtension().lastPathComponent)\n          DispatchQueue.main.async {\n            dotLottieCache?.setFile(lottie, forKey: url.absoluteString)\n            handleResult(.success(lottie))\n          }\n        } catch {\n          DispatchQueue.main.async {\n            handleResult(.failure(error))\n          }\n        }\n      }"
+  },
+  {
+    "A_name" : "lottie",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 305, Column: 11",
+    "H_initialValue" : "try DotLottieFile(data: data, filename: url.deletingPathExtension().lastPathComponent)"
+  },
+  {
+    "A_name" : "loadedFrom",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 327, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "String",
+      "DispatchQueue",
+      "@escaping (Result<DotLottieFile, Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "data",
+      "filename",
+      "dispatchQueue",
+      "handleResult"
+    ]
+  },
+  {
+    "A_name" : "dotLottie",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 335, Column: 9",
+    "H_initialValue" : "try DotLottieFile(data: data, filename: filename)"
+  },
+  {
+    "A_name" : "loadedFrom",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 353, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "String",
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "data",
+      "filename",
+      "dispatchQueue"
+    ],
+    "J_returnType" : "-> DotLottieFile"
+  },
+  {
+    "A_name" : "DispatchQueue",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 367, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dotLottie",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieFileHelpers.swift - Line: 370, Column: 3",
+        "H_initialValue" : "DispatchQueue(\n    label: \"com.airbnb.lottie.dot-lottie\",\n    qos: .userInitiated)"
+      }
+    ]
+  },
+  {
+    "A_name" : "dotLottie",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieFileHelpers.swift - Line: 370, Column: 3",
+    "H_initialValue" : "DispatchQueue(\n    label: \"com.airbnb.lottie.dot-lottie\",\n    qos: .userInitiated)"
+  }
+]

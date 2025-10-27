@@ -1,0 +1,965 @@
+[
+  {
+    "A_name" : "RxCollectionViewSectionedDataSourceTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 16, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "RxCollectionViewSectionedDataSourceTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 20, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testCollectionViewSectionedReloadDataSource_optionalConfigureSupplementaryView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 21, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dataSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 22, Column: 9",
+            "H_initialValue" : "RxCollectionViewSectionedReloadDataSource<AnimatableSectionModel<String, String>>(configureCell: { _, _, _, _  in UICollectionViewCell() })"
+          },
+          {
+            "A_name" : "layout",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 23, Column: 9",
+            "H_initialValue" : "UICollectionViewFlowLayout()"
+          },
+          {
+            "A_name" : "collectionView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 24, Column: 9",
+            "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+          },
+          {
+            "A_name" : "sentinel",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 28, Column: 9",
+            "H_initialValue" : "UICollectionReusableView()"
+          },
+          {
+            "A_name" : "returnValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 31, Column: 9",
+            "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCollectionViewSectionedDataSource_optionalConfigureSupplementaryView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 40, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dataSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 41, Column: 9",
+            "H_initialValue" : "CollectionViewSectionedDataSource<AnimatableSectionModel<String, String>>(configureCell: { _, _, _, _  in UICollectionViewCell() })"
+          },
+          {
+            "A_name" : "layout",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 42, Column: 9",
+            "H_initialValue" : "UICollectionViewFlowLayout()"
+          },
+          {
+            "A_name" : "collectionView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 43, Column: 9",
+            "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+          },
+          {
+            "A_name" : "sentinel",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 47, Column: 9",
+            "H_initialValue" : "UICollectionReusableView()"
+          },
+          {
+            "A_name" : "returnValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 50, Column: 9",
+            "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testCollectionViewSectionedReloadDataSource_optionalConfigureSupplementaryView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 21, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 22, Column: 9",
+        "H_initialValue" : "RxCollectionViewSectionedReloadDataSource<AnimatableSectionModel<String, String>>(configureCell: { _, _, _, _  in UICollectionViewCell() })"
+      },
+      {
+        "A_name" : "layout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 23, Column: 9",
+        "H_initialValue" : "UICollectionViewFlowLayout()"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 24, Column: 9",
+        "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+      },
+      {
+        "A_name" : "sentinel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 28, Column: 9",
+        "H_initialValue" : "UICollectionReusableView()"
+      },
+      {
+        "A_name" : "returnValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 31, Column: 9",
+        "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 22, Column: 9",
+    "H_initialValue" : "RxCollectionViewSectionedReloadDataSource<AnimatableSectionModel<String, String>>(configureCell: { _, _, _, _  in UICollectionViewCell() })"
+  },
+  {
+    "A_name" : "layout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 23, Column: 9",
+    "H_initialValue" : "UICollectionViewFlowLayout()"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 24, Column: 9",
+    "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+  },
+  {
+    "A_name" : "sentinel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 28, Column: 9",
+    "H_initialValue" : "UICollectionReusableView()"
+  },
+  {
+    "A_name" : "returnValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 31, Column: 9",
+    "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+  },
+  {
+    "A_name" : "testCollectionViewSectionedDataSource_optionalConfigureSupplementaryView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 40, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 41, Column: 9",
+        "H_initialValue" : "CollectionViewSectionedDataSource<AnimatableSectionModel<String, String>>(configureCell: { _, _, _, _  in UICollectionViewCell() })"
+      },
+      {
+        "A_name" : "layout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 42, Column: 9",
+        "H_initialValue" : "UICollectionViewFlowLayout()"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 43, Column: 9",
+        "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+      },
+      {
+        "A_name" : "sentinel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 47, Column: 9",
+        "H_initialValue" : "UICollectionReusableView()"
+      },
+      {
+        "A_name" : "returnValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 50, Column: 9",
+        "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 41, Column: 9",
+    "H_initialValue" : "CollectionViewSectionedDataSource<AnimatableSectionModel<String, String>>(configureCell: { _, _, _, _  in UICollectionViewCell() })"
+  },
+  {
+    "A_name" : "layout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 42, Column: 9",
+    "H_initialValue" : "UICollectionViewFlowLayout()"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 43, Column: 9",
+    "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+  },
+  {
+    "A_name" : "sentinel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 47, Column: 9",
+    "H_initialValue" : "UICollectionReusableView()"
+  },
+  {
+    "A_name" : "returnValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 50, Column: 9",
+    "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+  },
+  {
+    "A_name" : "RxCollectionViewSectionedDataSourceTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 61, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testCollectionViewSectionedAnimatedDataSource_optionalConfigureSupplementaryView_initializer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 62, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sentinel",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 63, Column: 9",
+            "H_initialValue" : "UICollectionReusableView()"
+          },
+          {
+            "A_name" : "dataSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 64, Column: 9",
+            "H_initialValue" : "RxCollectionViewSectionedAnimatedDataSource<AnimatableSectionModel<String, String>>(\n            configureCell: { _, _, _, _  in UICollectionViewCell() },\n            configureSupplementaryView: { _, _, _, _ in return sentinel }\n        )"
+          },
+          {
+            "A_name" : "layout",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 68, Column: 9",
+            "H_initialValue" : "UICollectionViewFlowLayout()"
+          },
+          {
+            "A_name" : "collectionView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 69, Column: 9",
+            "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+          },
+          {
+            "A_name" : "returnValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 71, Column: 9",
+            "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCollectionViewSectionedReloadDataSource_optionalConfigureSupplementaryView_initializer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 80, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sentinel",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 81, Column: 9",
+            "H_initialValue" : "UICollectionReusableView()"
+          },
+          {
+            "A_name" : "dataSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 82, Column: 9",
+            "H_initialValue" : "RxCollectionViewSectionedReloadDataSource<AnimatableSectionModel<String, String>>(\n            configureCell: { _, _, _, _  in UICollectionViewCell() },\n            configureSupplementaryView: { _, _, _, _ in return sentinel }\n        )"
+          },
+          {
+            "A_name" : "layout",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 86, Column: 9",
+            "H_initialValue" : "UICollectionViewFlowLayout()"
+          },
+          {
+            "A_name" : "collectionView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 87, Column: 9",
+            "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+          },
+          {
+            "A_name" : "returnValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 89, Column: 9",
+            "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCollectionViewSectionedDataSource_optionalConfigureSupplementaryView_initializer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 98, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sentinel",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 99, Column: 9",
+            "H_initialValue" : "UICollectionReusableView()"
+          },
+          {
+            "A_name" : "dataSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 100, Column: 9",
+            "H_initialValue" : "CollectionViewSectionedDataSource<AnimatableSectionModel<String, String>>(\n            configureCell: { _, _, _, _  in UICollectionViewCell() },\n            configureSupplementaryView: { _, _, _, _ in return sentinel }\n        )"
+          },
+          {
+            "A_name" : "layout",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 104, Column: 9",
+            "H_initialValue" : "UICollectionViewFlowLayout()"
+          },
+          {
+            "A_name" : "collectionView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 105, Column: 9",
+            "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+          },
+          {
+            "A_name" : "returnValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 107, Column: 9",
+            "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testCollectionViewSectionedAnimatedDataSource_optionalConfigureSupplementaryView_initializer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 62, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sentinel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 63, Column: 9",
+        "H_initialValue" : "UICollectionReusableView()"
+      },
+      {
+        "A_name" : "dataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 64, Column: 9",
+        "H_initialValue" : "RxCollectionViewSectionedAnimatedDataSource<AnimatableSectionModel<String, String>>(\n            configureCell: { _, _, _, _  in UICollectionViewCell() },\n            configureSupplementaryView: { _, _, _, _ in return sentinel }\n        )"
+      },
+      {
+        "A_name" : "layout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 68, Column: 9",
+        "H_initialValue" : "UICollectionViewFlowLayout()"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 69, Column: 9",
+        "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+      },
+      {
+        "A_name" : "returnValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 71, Column: 9",
+        "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "sentinel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 63, Column: 9",
+    "H_initialValue" : "UICollectionReusableView()"
+  },
+  {
+    "A_name" : "dataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 64, Column: 9",
+    "H_initialValue" : "RxCollectionViewSectionedAnimatedDataSource<AnimatableSectionModel<String, String>>(\n            configureCell: { _, _, _, _  in UICollectionViewCell() },\n            configureSupplementaryView: { _, _, _, _ in return sentinel }\n        )"
+  },
+  {
+    "A_name" : "layout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 68, Column: 9",
+    "H_initialValue" : "UICollectionViewFlowLayout()"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 69, Column: 9",
+    "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+  },
+  {
+    "A_name" : "returnValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 71, Column: 9",
+    "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+  },
+  {
+    "A_name" : "testCollectionViewSectionedReloadDataSource_optionalConfigureSupplementaryView_initializer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 80, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sentinel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 81, Column: 9",
+        "H_initialValue" : "UICollectionReusableView()"
+      },
+      {
+        "A_name" : "dataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 82, Column: 9",
+        "H_initialValue" : "RxCollectionViewSectionedReloadDataSource<AnimatableSectionModel<String, String>>(\n            configureCell: { _, _, _, _  in UICollectionViewCell() },\n            configureSupplementaryView: { _, _, _, _ in return sentinel }\n        )"
+      },
+      {
+        "A_name" : "layout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 86, Column: 9",
+        "H_initialValue" : "UICollectionViewFlowLayout()"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 87, Column: 9",
+        "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+      },
+      {
+        "A_name" : "returnValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 89, Column: 9",
+        "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "sentinel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 81, Column: 9",
+    "H_initialValue" : "UICollectionReusableView()"
+  },
+  {
+    "A_name" : "dataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 82, Column: 9",
+    "H_initialValue" : "RxCollectionViewSectionedReloadDataSource<AnimatableSectionModel<String, String>>(\n            configureCell: { _, _, _, _  in UICollectionViewCell() },\n            configureSupplementaryView: { _, _, _, _ in return sentinel }\n        )"
+  },
+  {
+    "A_name" : "layout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 86, Column: 9",
+    "H_initialValue" : "UICollectionViewFlowLayout()"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 87, Column: 9",
+    "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+  },
+  {
+    "A_name" : "returnValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 89, Column: 9",
+    "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+  },
+  {
+    "A_name" : "testCollectionViewSectionedDataSource_optionalConfigureSupplementaryView_initializer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 98, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sentinel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 99, Column: 9",
+        "H_initialValue" : "UICollectionReusableView()"
+      },
+      {
+        "A_name" : "dataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 100, Column: 9",
+        "H_initialValue" : "CollectionViewSectionedDataSource<AnimatableSectionModel<String, String>>(\n            configureCell: { _, _, _, _  in UICollectionViewCell() },\n            configureSupplementaryView: { _, _, _, _ in return sentinel }\n        )"
+      },
+      {
+        "A_name" : "layout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 104, Column: 9",
+        "H_initialValue" : "UICollectionViewFlowLayout()"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 105, Column: 9",
+        "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+      },
+      {
+        "A_name" : "returnValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 107, Column: 9",
+        "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "sentinel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 99, Column: 9",
+    "H_initialValue" : "UICollectionReusableView()"
+  },
+  {
+    "A_name" : "dataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 100, Column: 9",
+    "H_initialValue" : "CollectionViewSectionedDataSource<AnimatableSectionModel<String, String>>(\n            configureCell: { _, _, _, _  in UICollectionViewCell() },\n            configureSupplementaryView: { _, _, _, _ in return sentinel }\n        )"
+  },
+  {
+    "A_name" : "layout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 104, Column: 9",
+    "H_initialValue" : "UICollectionViewFlowLayout()"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 105, Column: 9",
+    "H_initialValue" : "UICollectionView(frame: .zero, collectionViewLayout: layout)"
+  },
+  {
+    "A_name" : "returnValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedDataSource+Test.swift - Line: 107, Column: 9",
+    "H_initialValue" : "dataSource.collectionView(\n            collectionView,\n            viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,\n            at: IndexPath(item: 0, section: 0)\n        )"
+  }
+]

@@ -1,0 +1,1034 @@
+[
+  {
+    "A_name" : "GradientType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int",
+      "Codable",
+      "Sendable"
+    ],
+    "F_location" : "GradientFill.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "none",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 11, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "linear",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 12, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "radial",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 13, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "GradientFill",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ShapeItem"
+    ],
+    "F_location" : "GradientFill.swift - Line: 18, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "GradientFill.swift - Line: 22, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 23, Column: 5",
+            "H_initialValue" : "try decoder.container(keyedBy: GradientFill.CodingKeys.self)"
+          },
+          {
+            "A_name" : "colorsContainer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 31, Column: 5",
+            "H_initialValue" : "try container.nestedContainer(keyedBy: GradientDataKeys.self, forKey: .colors)"
+          }
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "GradientFill.swift - Line: 37, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "opacityDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 38, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.opacity)"
+          },
+          {
+            "A_name" : "startPointDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 40, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.startPoint)"
+          },
+          {
+            "A_name" : "endPointDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 42, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.endPoint)"
+          },
+          {
+            "A_name" : "gradientRawType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 44, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.gradientType)"
+          },
+          {
+            "A_name" : "colorsDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 59, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.colors)"
+          },
+          {
+            "A_name" : "nestedColorsDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 60, Column: 5",
+            "H_initialValue" : "try colorsDictionary.value(for: GradientDataKeys.colors)"
+          }
+        ],
+        "I_parameterType" : [
+          "[String: Any]"
+        ],
+        "I_parameters" : [
+          "dictionary"
+        ]
+      },
+      {
+        "A_name" : "opacity",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 77, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "startPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 80, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "endPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 83, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "gradientType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 86, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "highlightLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 89, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "highlightAngle",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 92, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "numberOfColors",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 95, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "colors",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 98, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "fillRule",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 101, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "GradientFill.swift - Line: 103, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 105, Column: 5",
+            "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+          },
+          {
+            "A_name" : "colorsContainer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 113, Column: 5",
+            "H_initialValue" : "container.nestedContainer(keyedBy: GradientDataKeys.self, forKey: .colors)"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      },
+      {
+        "A_name" : "CodingKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String",
+          "CodingKey"
+        ],
+        "F_location" : "GradientFill.swift - Line: 120, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "opacity",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 121, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "startPoint",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 122, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "endPoint",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 123, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "gradientType",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 124, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "highlightLength",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 125, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "highlightAngle",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 126, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "colors",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 127, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "fillRule",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 128, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "GradientDataKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String",
+          "CodingKey"
+        ],
+        "F_location" : "GradientFill.swift - Line: 131, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "numberOfColors",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 132, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "colors",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GradientFill.swift - Line: 133, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "GradientFill.swift - Line: 22, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 23, Column: 5",
+        "H_initialValue" : "try decoder.container(keyedBy: GradientFill.CodingKeys.self)"
+      },
+      {
+        "A_name" : "colorsContainer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 31, Column: 5",
+        "H_initialValue" : "try container.nestedContainer(keyedBy: GradientDataKeys.self, forKey: .colors)"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 23, Column: 5",
+    "H_initialValue" : "try decoder.container(keyedBy: GradientFill.CodingKeys.self)"
+  },
+  {
+    "A_name" : "colorsContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 31, Column: 5",
+    "H_initialValue" : "try container.nestedContainer(keyedBy: GradientDataKeys.self, forKey: .colors)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "GradientFill.swift - Line: 37, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "opacityDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 38, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.opacity)"
+      },
+      {
+        "A_name" : "startPointDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 40, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.startPoint)"
+      },
+      {
+        "A_name" : "endPointDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 42, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.endPoint)"
+      },
+      {
+        "A_name" : "gradientRawType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 44, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.gradientType)"
+      },
+      {
+        "A_name" : "colorsDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 59, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.colors)"
+      },
+      {
+        "A_name" : "nestedColorsDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 60, Column: 5",
+        "H_initialValue" : "try colorsDictionary.value(for: GradientDataKeys.colors)"
+      }
+    ],
+    "I_parameterType" : [
+      "[String: Any]"
+    ],
+    "I_parameters" : [
+      "dictionary"
+    ]
+  },
+  {
+    "A_name" : "opacityDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 38, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.opacity)"
+  },
+  {
+    "A_name" : "startPointDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 40, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.startPoint)"
+  },
+  {
+    "A_name" : "endPointDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 42, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.endPoint)"
+  },
+  {
+    "A_name" : "gradientRawType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 44, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.gradientType)"
+  },
+  {
+    "A_name" : "colorsDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 59, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.colors)"
+  },
+  {
+    "A_name" : "nestedColorsDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 60, Column: 5",
+    "H_initialValue" : "try colorsDictionary.value(for: GradientDataKeys.colors)"
+  },
+  {
+    "A_name" : "opacity",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 77, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "startPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 80, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "endPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 83, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "gradientType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 86, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "highlightLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 89, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "highlightAngle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 92, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "numberOfColors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 95, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "colors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 98, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fillRule",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 101, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "GradientFill.swift - Line: 103, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 105, Column: 5",
+        "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+      },
+      {
+        "A_name" : "colorsContainer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 113, Column: 5",
+        "H_initialValue" : "container.nestedContainer(keyedBy: GradientDataKeys.self, forKey: .colors)"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 105, Column: 5",
+    "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+  },
+  {
+    "A_name" : "colorsContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GradientFill.swift - Line: 113, Column: 5",
+    "H_initialValue" : "container.nestedContainer(keyedBy: GradientDataKeys.self, forKey: .colors)"
+  },
+  {
+    "A_name" : "CodingKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String",
+      "CodingKey"
+    ],
+    "F_location" : "GradientFill.swift - Line: 120, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "opacity",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 121, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "startPoint",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 122, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "endPoint",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 123, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "gradientType",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 124, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "highlightLength",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 125, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "highlightAngle",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 126, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "colors",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 127, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "fillRule",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 128, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "GradientDataKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String",
+      "CodingKey"
+    ],
+    "F_location" : "GradientFill.swift - Line: 131, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "numberOfColors",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 132, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "colors",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GradientFill.swift - Line: 133, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "GradientFill",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "GradientFill.swift - Line: 142, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

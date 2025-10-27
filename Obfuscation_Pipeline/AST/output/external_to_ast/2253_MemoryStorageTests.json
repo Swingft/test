@@ -1,0 +1,1072 @@
+[
+  {
+    "A_name" : "Int",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CacheCostCalculable"
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 30, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "cacheCost",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 31, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "cacheCost",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 31, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "MemoryStorageTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 36, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "storage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 38, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setUp",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 40, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "config",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 42, Column: 9",
+            "H_initialValue" : "MemoryStorage.Config(totalCostLimit: 3)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "tearDown",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 46, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testConfigSettingStorage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 51, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testStoreAndGetValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 63, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testStoreValueOverwritting",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 72, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testRemoveValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 80, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testRemoveAllValues",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 89, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testStoreWithExpiration",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 100, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 101, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testStoreWithConfigExpiration",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 123, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 124, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testStoreWithExpirationExtending",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 142, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 143, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testStoreWithExpirationNotExtending",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 168, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 169, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testRemoveExpired",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 193, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 194, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testExtendExpirationByAccessing",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 214, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 215, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "expiration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 217, Column: 9",
+            "H_initialValue" : "StorageExpiration.seconds(0.5)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAutoCleanExpiredMemory",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 238, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 239, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "config",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 240, Column: 9",
+            "H_initialValue" : "MemoryStorage.Config(totalCostLimit: 3, cleanInterval: 0.1)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testStorageObject",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 257, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "now",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 258, Column: 9",
+            "H_initialValue" : "Date()"
+          },
+          {
+            "A_name" : "obj",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 259, Column: 9",
+            "H_initialValue" : "MemoryStorage.StorageObject(1, expiration: .seconds(1))"
+          },
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorageTests.swift - Line: 267, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "storage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 38, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setUp",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 40, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "config",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 42, Column: 9",
+        "H_initialValue" : "MemoryStorage.Config(totalCostLimit: 3)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "config",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 42, Column: 9",
+    "H_initialValue" : "MemoryStorage.Config(totalCostLimit: 3)"
+  },
+  {
+    "A_name" : "tearDown",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 46, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testConfigSettingStorage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 51, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testStoreAndGetValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 63, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testStoreValueOverwritting",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 72, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testRemoveValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 80, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testRemoveAllValues",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 89, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testStoreWithExpiration",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 100, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 101, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 101, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "obj",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 116, Column: 13",
+    "H_initialValue" : "self.storage.storage.object(forKey: \"1\")"
+  },
+  {
+    "A_name" : "testStoreWithConfigExpiration",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 123, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 124, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 124, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "obj",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 135, Column: 13",
+    "H_initialValue" : "self.storage.storage.object(forKey: \"1\")"
+  },
+  {
+    "A_name" : "testStoreWithExpirationExtending",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 142, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 143, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 143, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "expirationDate1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 150, Column: 13",
+    "H_initialValue" : "self.storage.storage.object(forKey: \"1\")?.estimatedExpiration"
+  },
+  {
+    "A_name" : "obj",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 154, Column: 13",
+    "H_initialValue" : "self.storage.value(forKey: \"1\", extendingExpiration: .expirationTime(.seconds(5)))"
+  },
+  {
+    "A_name" : "expirationDate2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 157, Column: 13",
+    "H_initialValue" : "self.storage.storage.object(forKey: \"1\")?.estimatedExpiration"
+  },
+  {
+    "A_name" : "testStoreWithExpirationNotExtending",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 168, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 169, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 169, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "expirationDate1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 176, Column: 13",
+    "H_initialValue" : "self.storage.storage.object(forKey: \"1\")?.estimatedExpiration"
+  },
+  {
+    "A_name" : "obj",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 180, Column: 13",
+    "H_initialValue" : "self.storage.value(forKey: \"1\", extendingExpiration: .none)"
+  },
+  {
+    "A_name" : "expirationDate2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 183, Column: 13",
+    "H_initialValue" : "self.storage.storage.object(forKey: \"1\")?.estimatedExpiration"
+  },
+  {
+    "A_name" : "testRemoveExpired",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 193, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 194, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 194, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "testExtendExpirationByAccessing",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 214, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 215, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "expiration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 217, Column: 9",
+        "H_initialValue" : "StorageExpiration.seconds(0.5)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 215, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "expiration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 217, Column: 9",
+    "H_initialValue" : "StorageExpiration.seconds(0.5)"
+  },
+  {
+    "A_name" : "v",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 222, Column: 13",
+    "H_initialValue" : "self.storage.value(forKey: \"1\")"
+  },
+  {
+    "A_name" : "testAutoCleanExpiredMemory",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 238, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 239, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "config",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 240, Column: 9",
+        "H_initialValue" : "MemoryStorage.Config(totalCostLimit: 3, cleanInterval: 0.1)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 239, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "config",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 240, Column: 9",
+    "H_initialValue" : "MemoryStorage.Config(totalCostLimit: 3, cleanInterval: 0.1)"
+  },
+  {
+    "A_name" : "testStorageObject",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 257, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "now",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 258, Column: 9",
+        "H_initialValue" : "Date()"
+      },
+      {
+        "A_name" : "obj",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 259, Column: 9",
+        "H_initialValue" : "MemoryStorage.StorageObject(1, expiration: .seconds(1))"
+      },
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorageTests.swift - Line: 267, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "now",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 258, Column: 9",
+    "H_initialValue" : "Date()"
+  },
+  {
+    "A_name" : "obj",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 259, Column: 9",
+    "H_initialValue" : "MemoryStorage.StorageObject(1, expiration: .seconds(1))"
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorageTests.swift - Line: 267, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  }
+]

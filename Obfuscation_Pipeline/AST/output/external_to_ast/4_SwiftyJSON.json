@@ -1,0 +1,3460 @@
+[
+  {
+    "A_name" : "SwiftyJSONError",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int",
+      "Swift.Error"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 27, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "unsupportedType",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 28, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "indexOutOfBounds",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 29, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "elementTooDeep",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 30, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "wrongType",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 31, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "notExist",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 32, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidJSON",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 33, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "SwiftyJSONError",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomNSError"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 36, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "errorDomain",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 39, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "errorCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 42, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "errorUserInfo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 45, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "errorDomain",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 39, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "errorCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 42, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "errorUserInfo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 45, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Type",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 70, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "number",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 71, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "string",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 72, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "bool",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 73, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "array",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 74, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 75, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "null",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 76, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "unknown",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 77, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 82, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 92, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "object",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SwiftyJSON.swift - Line: 93, Column: 9",
+            "H_initialValue" : "try JSONSerialization.jsonObject(with: data, options: opt)"
+          }
+        ],
+        "I_parameterType" : [
+          "Data",
+          "JSONSerialization.ReadingOptions"
+        ],
+        "I_parameters" : [
+          "data",
+          "options"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 105, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 125, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "parseJSON"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 140, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "jsonObject"
+        ]
+      },
+      {
+        "A_name" : "merge",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 152, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "JSON"
+        ],
+        "I_parameters" : [
+          "with"
+        ]
+      },
+      {
+        "A_name" : "merged",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 166, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "merged",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SwiftyJSON.swift - Line: 167, Column: 9",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "JSON"
+        ],
+        "I_parameters" : [
+          "with"
+        ],
+        "J_returnType" : "-> JSON"
+      },
+      {
+        "A_name" : "merge",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 176, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "JSON",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "with",
+          "typecheck"
+        ]
+      },
+      {
+        "A_name" : "rawArray",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 198, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "rawDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 199, Column: 5",
+        "H_initialValue" : "[:]"
+      },
+      {
+        "A_name" : "rawString",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 200, Column: 5",
+        "H_initialValue" : "\"\""
+      },
+      {
+        "A_name" : "rawNumber",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 201, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "rawNull",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 202, Column: 5",
+        "H_initialValue" : "NSNull()"
+      },
+      {
+        "A_name" : "rawBool",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 203, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "type",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 206, Column: 5",
+        "H_initialValue" : ".null"
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 209, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "object",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 212, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "nullJSON",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available",
+          "static"
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 255, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "null",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 257, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 92, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "object",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 93, Column: 9",
+        "H_initialValue" : "try JSONSerialization.jsonObject(with: data, options: opt)"
+      }
+    ],
+    "I_parameterType" : [
+      "Data",
+      "JSONSerialization.ReadingOptions"
+    ],
+    "I_parameters" : [
+      "data",
+      "options"
+    ]
+  },
+  {
+    "A_name" : "object",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 93, Column: 9",
+    "H_initialValue" : "try JSONSerialization.jsonObject(with: data, options: opt)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 105, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 125, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "parseJSON"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 140, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "jsonObject"
+    ]
+  },
+  {
+    "A_name" : "merge",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 152, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "JSON"
+    ],
+    "I_parameters" : [
+      "with"
+    ]
+  },
+  {
+    "A_name" : "merged",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 166, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "merged",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 167, Column: 9",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "JSON"
+    ],
+    "I_parameters" : [
+      "with"
+    ],
+    "J_returnType" : "-> JSON"
+  },
+  {
+    "A_name" : "merged",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 167, Column: 9",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "merge",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 176, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "JSON",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "with",
+      "typecheck"
+    ]
+  },
+  {
+    "A_name" : "rawArray",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 198, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "rawDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 199, Column: 5",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "rawString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 200, Column: 5",
+    "H_initialValue" : "\"\""
+  },
+  {
+    "A_name" : "rawNumber",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 201, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "rawNull",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 202, Column: 5",
+    "H_initialValue" : "NSNull()"
+  },
+  {
+    "A_name" : "rawBool",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 203, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "type",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 206, Column: 5",
+    "H_initialValue" : ".null"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 209, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "object",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 212, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "nullJSON",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "static"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 255, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "null",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 257, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "unwrap",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 261, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Any"
+  },
+  {
+    "A_name" : "Index",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Comparable"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 274, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "array",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 275, Column: 10",
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 276, Column: 10",
+        "I_parameterType" : [
+          "DictionaryIndex<String, T>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "null",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 277, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 279, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Index",
+          "Index"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "<",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 288, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Index",
+          "Index"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 279, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Index",
+      "Index"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "<",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 288, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Index",
+      "Index"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Collection"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 300, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "startIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 304, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "endIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 312, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 320, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Index"
+        ],
+        "I_parameters" : [
+          "after"
+        ],
+        "J_returnType" : "-> Index"
+      }
+    ]
+  },
+  {
+    "A_name" : "startIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 304, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "endIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 312, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 320, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Index"
+    ],
+    "I_parameters" : [
+      "after"
+    ],
+    "J_returnType" : "-> Index"
+  },
+  {
+    "A_name" : "JSONKey",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 342, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "index",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 343, Column: 10",
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "key",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 344, Column: 10",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "JSONSubscriptType",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 347, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "jsonKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 348, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "jsonKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 348, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Int",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "JSONSubscriptType"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 351, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "jsonKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 352, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "jsonKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 352, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "String",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "JSONSubscriptType"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 357, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "jsonKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 358, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "jsonKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 358, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 363, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "r",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 369, Column: 17",
+    "H_initialValue" : "JSON.null"
+  },
+  {
+    "A_name" : "r",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 375, Column: 17",
+    "H_initialValue" : "JSON.null"
+  },
+  {
+    "A_name" : "r",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 392, Column: 13",
+    "H_initialValue" : "JSON.null"
+  },
+  {
+    "A_name" : "aPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 453, Column: 17",
+    "H_initialValue" : "path"
+  },
+  {
+    "A_name" : "nextJSON",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 455, Column: 17",
+    "H_initialValue" : "self[sub: path[0]]"
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.ExpressibleByStringLiteral"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 489, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 491, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StringLiteralType"
+    ],
+    "I_parameters" : [
+      "stringLiteral"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 495, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StringLiteralType"
+    ],
+    "I_parameters" : [
+      "extendedGraphemeClusterLiteral"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 499, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StringLiteralType"
+    ],
+    "I_parameters" : [
+      "unicodeScalarLiteral"
+    ]
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.ExpressibleByIntegerLiteral"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 504, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 506, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "IntegerLiteralType"
+    ],
+    "I_parameters" : [
+      "integerLiteral"
+    ]
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.ExpressibleByBooleanLiteral"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 511, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 513, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "BooleanLiteralType"
+    ],
+    "I_parameters" : [
+      "booleanLiteral"
+    ]
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.ExpressibleByFloatLiteral"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 518, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 520, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FloatLiteralType"
+    ],
+    "I_parameters" : [
+      "floatLiteral"
+    ]
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.ExpressibleByDictionaryLiteral"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 525, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 526, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 527, Column: 9",
+        "H_initialValue" : "Dictionary(elements, uniquingKeysWith: { $1 })"
+      }
+    ],
+    "I_parameterType" : [
+      "(String, Any)"
+    ],
+    "I_parameters" : [
+      "dictionaryLiteral"
+    ]
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 527, Column: 9",
+    "H_initialValue" : "Dictionary(elements, uniquingKeysWith: { $1 })"
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.ExpressibleByArrayLiteral"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 532, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 534, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "arrayLiteral"
+    ]
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.RawRepresentable"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 541, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "rawValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 551, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rawData",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 555, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "JSONSerialization.WritingOptions"
+        ],
+        "I_parameters" : [
+          "options"
+        ],
+        "J_returnType" : "-> Data"
+      },
+      {
+        "A_name" : "rawString",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 563, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String.Encoding",
+          "JSONSerialization.WritingOptions"
+        ],
+        "I_parameters" : [
+          "_",
+          "options"
+        ],
+        "J_returnType" : "-> String?"
+      },
+      {
+        "A_name" : "rawString",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 572, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "encoding",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SwiftyJSON.swift - Line: 573, Column: 3",
+            "H_initialValue" : "options[.encoding] as? String.Encoding ?? String.Encoding.utf8"
+          },
+          {
+            "A_name" : "maxObjectDepth",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SwiftyJSON.swift - Line: 574, Column: 3",
+            "H_initialValue" : "options[.maxObjextDepth] as? Int ?? 10"
+          }
+        ],
+        "I_parameterType" : [
+          "[writingOptionsKeys: Any]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String?"
+      },
+      {
+        "A_name" : "_rawString",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 583, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String.Encoding",
+          "[writingOptionsKeys: Any]",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "options",
+          "maxObjectDepth"
+        ],
+        "J_returnType" : "-> String?"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 543, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "rawValue"
+    ]
+  },
+  {
+    "A_name" : "rawValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 551, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rawData",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 555, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "JSONSerialization.WritingOptions"
+    ],
+    "I_parameters" : [
+      "options"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "rawString",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 563, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String.Encoding",
+      "JSONSerialization.WritingOptions"
+    ],
+    "I_parameters" : [
+      "_",
+      "options"
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "rawString",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 572, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "encoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 573, Column: 3",
+        "H_initialValue" : "options[.encoding] as? String.Encoding ?? String.Encoding.utf8"
+      },
+      {
+        "A_name" : "maxObjectDepth",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 574, Column: 3",
+        "H_initialValue" : "options[.maxObjextDepth] as? Int ?? 10"
+      }
+    ],
+    "I_parameterType" : [
+      "[writingOptionsKeys: Any]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "encoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 573, Column: 3",
+    "H_initialValue" : "options[.encoding] as? String.Encoding ?? String.Encoding.utf8"
+  },
+  {
+    "A_name" : "maxObjectDepth",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 574, Column: 3",
+    "H_initialValue" : "options[.maxObjextDepth] as? Int ?? 10"
+  },
+  {
+    "A_name" : "_rawString",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 583, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String.Encoding",
+      "[writingOptionsKeys: Any]",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "options",
+      "maxObjectDepth"
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "jsonOption",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 589, Column: 6",
+    "H_initialValue" : "options[.jsonSerialization] as? JSONSerialization.WritingOptions ?? JSONSerialization.WritingOptions.prettyPrinted"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 590, Column: 6",
+    "H_initialValue" : "try rawData(options: jsonOption)"
+  },
+  {
+    "A_name" : "body",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 597, Column: 5",
+    "H_initialValue" : "try dict.keys.map { key throws -> String in\n\t\t\t\t\tguard let value = dict[key] else {\n\t\t\t\t\t\treturn \"\\\"\\(key)\\\": null\"\n\t\t\t\t\t}\n\t\t\t\t\tguard let unwrappedValue = value else {\n\t\t\t\t\t\treturn \"\\\"\\(key)\\\": null\"\n\t\t\t\t\t}\n\n\t\t\t\t\tlet nestedValue = JSON(unwrappedValue)\n\t\t\t\t\tguard let nestedString = try nestedValue._rawString(encoding, options: options, maxObjectDepth: maxObjectDepth - 1) else {\n\t\t\t\t\t\tthrow SwiftyJSONError.elementTooDeep\n\t\t\t\t\t}\n\t\t\t\t\tif nestedValue.type == .string {\n\t\t\t\t\t\treturn \"\\\"\\(key)\\\": \\\"\\(nestedString.replacingOccurrences(of: \"\\\\\", with: \"\\\\\\\\\").replacingOccurrences(of: \"\\\"\", with: \"\\\\\\\"\"))\\\"\"\n\t\t\t\t\t} else {\n\t\t\t\t\t\treturn \"\\\"\\(key)\\\": \\(nestedString)\"\n\t\t\t\t\t}\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "nestedValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 605, Column: 6",
+    "H_initialValue" : "JSON(unwrappedValue)"
+  },
+  {
+    "A_name" : "jsonOption",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 623, Column: 6",
+    "H_initialValue" : "options[.jsonSerialization] as? JSONSerialization.WritingOptions ?? JSONSerialization.WritingOptions.prettyPrinted"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 624, Column: 6",
+    "H_initialValue" : "try rawData(options: jsonOption)"
+  },
+  {
+    "A_name" : "body",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 631, Column: 17",
+    "H_initialValue" : "try array.map { value throws -> String in\n                    guard let unwrappedValue = value else {\n                        return \"null\"\n                    }\n\n                    let nestedValue = JSON(unwrappedValue)\n                    guard let nestedString = try nestedValue._rawString(encoding, options: options, maxObjectDepth: maxObjectDepth - 1) else {\n                        throw SwiftyJSONError.invalidJSON\n                    }\n                    if nestedValue.type == .string {\n                        return \"\\\"\\(nestedString.replacingOccurrences(of: \"\\\\\", with: \"\\\\\\\\\").replacingOccurrences(of: \"\\\"\", with: \"\\\\\\\"\"))\\\"\"\n                    } else {\n                        return nestedString\n                    }\n                }"
+  },
+  {
+    "A_name" : "nestedValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 636, Column: 21",
+    "H_initialValue" : "JSON(unwrappedValue)"
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.CustomStringConvertible",
+      "Swift.CustomDebugStringConvertible"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 662, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "description",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 664, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "debugDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 668, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "description",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 664, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "debugDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 668, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 675, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "array",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 678, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "arrayValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 683, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "arrayObject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 688, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "array",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 678, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "arrayValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 683, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "arrayObject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 688, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 703, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 706, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dictionaryValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 715, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dictionaryObject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 721, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 706, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dictionaryValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 715, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dictionaryObject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 721, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 736, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "bool",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 739, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "boolValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 752, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "bool",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 739, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boolValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 752, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 769, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "string",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 772, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "stringValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 785, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 772, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "stringValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 785, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 802, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "number",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 805, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "numberValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 819, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "number",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 805, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "numberValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 819, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "decimal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 823, Column: 17",
+    "H_initialValue" : "NSDecimalNumber(string: object as? String)"
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 838, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "null",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 840, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "exists",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 851, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "null",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 840, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "exists",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 851, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 861, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 864, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 864, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 889, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "double",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 891, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "doubleValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 904, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "float",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 913, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "floatValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 926, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "int",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 935, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "intValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 948, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uInt",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 957, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uIntValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 970, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "int8",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 979, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "int8Value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 992, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uInt8",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1001, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uInt8Value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1014, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "int16",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1023, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "int16Value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1036, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uInt16",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1045, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uInt16Value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1058, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "int32",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1067, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "int32Value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1080, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uInt32",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1089, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uInt32Value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1102, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "int64",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1111, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "int64Value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1124, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uInt64",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1133, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uInt64Value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1146, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "double",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 891, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "doubleValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 904, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "float",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 913, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "floatValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 926, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "int",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 935, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "intValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 948, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uInt",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 957, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uIntValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 970, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "int8",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 979, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "int8Value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 992, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uInt8",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1001, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uInt8Value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1014, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "int16",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1023, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "int16Value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1036, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uInt16",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1045, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uInt16Value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1058, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "int32",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1067, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "int32Value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1080, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uInt32",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1089, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uInt32Value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1102, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "int64",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1111, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "int64Value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1124, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uInt64",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1133, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uInt64Value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1146, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Comparable"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1158, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1160, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "JSON",
+      "JSON"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "<=",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1173, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "JSON",
+      "JSON"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : ">=",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1186, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "JSON",
+      "JSON"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : ">",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1199, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "JSON",
+      "JSON"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "<",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1208, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "JSON",
+      "JSON"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "trueNumber",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1217, Column: 1",
+    "H_initialValue" : "NSNumber(value: true)"
+  },
+  {
+    "A_name" : "falseNumber",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1218, Column: 1",
+    "H_initialValue" : "NSNumber(value: false)"
+  },
+  {
+    "A_name" : "trueObjCType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1219, Column: 1",
+    "H_initialValue" : "String(cString: trueNumber.objCType)"
+  },
+  {
+    "A_name" : "falseObjCType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1220, Column: 1",
+    "H_initialValue" : "String(cString: falseNumber.objCType)"
+  },
+  {
+    "A_name" : "NSNumber",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1224, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isBool",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1225, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "isBool",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1225, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "objCType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1226, Column: 9",
+    "H_initialValue" : "String(cString: self.objCType)"
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1235, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSNumber",
+      "NSNumber"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "!=",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1243, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSNumber",
+      "NSNumber"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "<",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1247, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSNumber",
+      "NSNumber"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : ">",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1256, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSNumber",
+      "NSNumber"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "<=",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1265, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSNumber",
+      "NSNumber"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : ">=",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1274, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSNumber",
+      "NSNumber"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "writingOptionsKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1283, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "jsonSerialization",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1284, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "castNilToNSNull",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1285, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "maxObjextDepth",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1286, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "encoding",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1287, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Codable"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1291, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "codableTypes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1292, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1356, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SwiftyJSON.swift - Line: 1357, Column: 9",
+            "H_initialValue" : "encoder.singleValueContainer()"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "codableTypes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1292, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1311, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "object",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1312, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "object",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1312, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1356, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftyJSON.swift - Line: 1357, Column: 9",
+        "H_initialValue" : "encoder.singleValueContainer()"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1357, Column: 9",
+    "H_initialValue" : "encoder.singleValueContainer()"
+  },
+  {
+    "A_name" : "jsonValueArray",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1388, Column: 13",
+    "H_initialValue" : "array ?? []"
+  },
+  {
+    "A_name" : "jsonValueDictValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftyJSON.swift - Line: 1391, Column: 13",
+    "H_initialValue" : "dictionary ?? [:]"
+  }
+]

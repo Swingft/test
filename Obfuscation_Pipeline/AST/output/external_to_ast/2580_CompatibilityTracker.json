@@ -1,0 +1,696 @@
+[
+  {
+    "A_name" : "CompatibilityIssue",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomStringConvertible"
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 7, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 8, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 9, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "description",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 11, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 8, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 9, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "description",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 11, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CompatibilityTracker",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 19, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 23, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Mode",
+          "LottieLogger"
+        ],
+        "I_parameters" : [
+          "mode",
+          "logger"
+        ]
+      },
+      {
+        "A_name" : "Mode",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 31, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "abort",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibilityTracker.swift - Line: 34, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "track",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibilityTracker.swift - Line: 37, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "Error",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Swift.Error"
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 40, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "encounteredCompatibilityIssue",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibilityTracker.swift - Line: 41, Column: 10",
+            "I_parameterType" : [
+              "CompatibilityIssue"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "logIssue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 45, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "issue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompatibilityTracker.swift - Line: 48, Column: 5",
+            "H_initialValue" : "CompatibilityIssue(\n      \/\/ Compatibility messages are usually written in source files using multi-line strings,\n      \/\/ but converting them to be a single line makes it easier to read the ultimate log output.\n      message: message.replacingOccurrences(of: \"\\n\", with: \" \"),\n      context: context)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "message",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "assert",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 64, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "@autoclosure () -> String",
+          "@autoclosure () -> String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "reportCompatibilityIssues",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 77, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "([CompatibilityIssue]) -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "mode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 84, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "logger",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 85, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "issues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 88, Column: 3",
+        "H_initialValue" : "[CompatibilityIssue]()"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 23, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Mode",
+      "LottieLogger"
+    ],
+    "I_parameters" : [
+      "mode",
+      "logger"
+    ]
+  },
+  {
+    "A_name" : "Mode",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 31, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "abort",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 34, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "track",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 37, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Error",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Error"
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 40, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "encounteredCompatibilityIssue",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 41, Column: 10",
+        "I_parameterType" : [
+          "CompatibilityIssue"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "logIssue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 45, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "issue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 48, Column: 5",
+        "H_initialValue" : "CompatibilityIssue(\n      \/\/ Compatibility messages are usually written in source files using multi-line strings,\n      \/\/ but converting them to be a single line makes it easier to read the ultimate log output.\n      message: message.replacingOccurrences(of: \"\\n\", with: \" \"),\n      context: context)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "message",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "issue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 48, Column: 5",
+    "H_initialValue" : "CompatibilityIssue(\n      \/\/ Compatibility messages are usually written in source files using multi-line strings,\n      \/\/ but converting them to be a single line makes it easier to read the ultimate log output.\n      message: message.replacingOccurrences(of: \"\\n\", with: \" \"),\n      context: context)"
+  },
+  {
+    "A_name" : "assert",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 64, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "@autoclosure () -> String",
+      "@autoclosure () -> String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "reportCompatibilityIssues",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 77, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "([CompatibilityIssue]) -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "mode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 84, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "logger",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 85, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "issues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 88, Column: 3",
+    "H_initialValue" : "[CompatibilityIssue]()"
+  },
+  {
+    "A_name" : "CompatibilityTrackerProviding",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 94, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "compatibilityTracker",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 95, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "compatibilityIssueContext",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 96, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "compatibilityTracker",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 95, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "compatibilityIssueContext",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 96, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CompatibilityTrackerProviding",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 99, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "logCompatibilityIssue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 101, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "compatibilityAssert",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 107, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "@autoclosure () -> String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "logCompatibilityIssue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 101, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "compatibilityAssert",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 107, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "@autoclosure () -> String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "LayerContext",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CompatibilityTrackerProviding"
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 118, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "compatibilityIssueContext",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 119, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "compatibilityIssueContext",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 119, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "LayerAnimationContext",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CompatibilityTrackerProviding"
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 126, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "compatibilityIssueContext",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibilityTracker.swift - Line: 127, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "compatibilityIssueContext",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibilityTracker.swift - Line: 127, Column: 3",
+    "H_initialValue" : ""
+  }
+]

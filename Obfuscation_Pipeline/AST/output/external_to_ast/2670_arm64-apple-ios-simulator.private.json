@@ -1,0 +1,673 @@
+[
+  {
+    "A_name" : "AVSuitDetectIntervalType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Int"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "ONCE",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 12, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "INFINITE",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 13, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 14, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Int"
+        ],
+        "I_parameters" : [
+          "rawValue"
+        ]
+      },
+      {
+        "A_name" : "rawValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 16, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 14, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Int"
+    ],
+    "I_parameters" : [
+      "rawValue"
+    ]
+  },
+  {
+    "A_name" : "rawValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 16, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AVSuitDetectType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Int"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 20, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "JAILBREAK",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 21, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "FRIDA",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 22, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "DEBUG",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 23, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "HOOKING",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 24, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "SWITCH_CONTROL",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 25, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "ALL",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 26, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 27, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Int"
+        ],
+        "I_parameters" : [
+          "rawValue"
+        ]
+      },
+      {
+        "A_name" : "rawValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 29, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 27, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Int"
+    ],
+    "I_parameters" : [
+      "rawValue"
+    ]
+  },
+  {
+    "A_name" : "rawValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 29, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AVSuit",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "objc",
+      "_hasMissingDesignatedInitializers",
+      "objcMembers"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObjectiveC.NSObject"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 33, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isDetectTypeInclude",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 35, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Int",
+          "STAVSuit.AVSuitDetectType"
+        ],
+        "I_parameters" : [
+          "_",
+          "detectType"
+        ],
+        "J_returnType" : "-> Swift.Bool"
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 36, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "((Swift.Int) -> Swift.Void)?"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "stop",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 37, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "isDetectTypeInclude",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 35, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Int",
+      "STAVSuit.AVSuitDetectType"
+    ],
+    "I_parameters" : [
+      "_",
+      "detectType"
+    ],
+    "J_returnType" : "-> Swift.Bool"
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 36, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "((Swift.Int) -> Swift.Void)?"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "stop",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 37, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "AVSuitBuilder",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "objc",
+      "_inheritsConvenienceInitializers",
+      "_hasMissingDesignatedInitializers",
+      "objcMembers"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObjectiveC.NSObject"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 39, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "shared",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "static"
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 40, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setDetectType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 41, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STAVSuit.AVSuitBuilder"
+      },
+      {
+        "A_name" : "setDetectIntervalType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 42, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "STAVSuit.AVSuitDetectIntervalType"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STAVSuit.AVSuitBuilder"
+      },
+      {
+        "A_name" : "setDetectInterval",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 43, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Double"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> STAVSuit.AVSuitBuilder"
+      },
+      {
+        "A_name" : "build",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 44, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> STAVSuit.AVSuit"
+      }
+    ]
+  },
+  {
+    "A_name" : "shared",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "static"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 40, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setDetectType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 41, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STAVSuit.AVSuitBuilder"
+  },
+  {
+    "A_name" : "setDetectIntervalType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 42, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "STAVSuit.AVSuitDetectIntervalType"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STAVSuit.AVSuitBuilder"
+  },
+  {
+    "A_name" : "setDetectInterval",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 43, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Double"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> STAVSuit.AVSuitBuilder"
+  },
+  {
+    "A_name" : "build",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 44, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> STAVSuit.AVSuit"
+  },
+  {
+    "A_name" : "STAVSuit.AVSuitDetectIntervalType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Equatable"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 47, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "STAVSuit.AVSuitDetectIntervalType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Hashable"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 48, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "STAVSuit.AVSuitDetectIntervalType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.RawRepresentable"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 49, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "STAVSuit.AVSuitDetectType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Equatable"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 50, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "STAVSuit.AVSuitDetectType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Hashable"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 51, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "STAVSuit.AVSuitDetectType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.RawRepresentable"
+    ],
+    "F_location" : "arm64-apple-ios-simulator.private.swiftinterface - Line: 52, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

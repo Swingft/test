@@ -1,0 +1,36 @@
+[
+  {
+    "A_name" : "AnimationSubview",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "NSView"
+    ],
+    "F_location" : "AnimationSubview.macOS.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "viewLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnimationSubview.macOS.swift - Line: 14, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "viewLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnimationSubview.macOS.swift - Line: 14, Column: 3",
+    "H_initialValue" : ""
+  }
+]

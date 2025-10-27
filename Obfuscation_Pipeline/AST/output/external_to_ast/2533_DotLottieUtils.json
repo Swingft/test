@@ -1,0 +1,312 @@
+[
+  {
+    "A_name" : "DotLottieUtils",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DotLottieUtils.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dotLottieExtension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 13, Column: 3",
+        "H_initialValue" : "\"lottie\""
+      },
+      {
+        "A_name" : "jsonExtension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 14, Column: 3",
+        "H_initialValue" : "\"json\""
+      },
+      {
+        "A_name" : "tempDirectoryURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 17, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "dotLottieExtension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieUtils.swift - Line: 13, Column: 3",
+    "H_initialValue" : "\"lottie\""
+  },
+  {
+    "A_name" : "jsonExtension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieUtils.swift - Line: 14, Column: 3",
+    "H_initialValue" : "\"json\""
+  },
+  {
+    "A_name" : "tempDirectoryURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DotLottieUtils.swift - Line: 17, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "URL",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DotLottieUtils.swift - Line: 22, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isDotLottie",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 24, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isJsonFile",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 29, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "urls",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 33, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "isDotLottie",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieUtils.swift - Line: 24, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isJsonFile",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieUtils.swift - Line: 29, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "urls",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieUtils.swift - Line: 33, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "FileManager",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DotLottieUtils.swift - Line: 38, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "urls",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 44, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "for",
+          "skipsHiddenFiles"
+        ],
+        "J_returnType" : "-> [URL]?"
+      }
+    ]
+  },
+  {
+    "A_name" : "urls",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DotLottieUtils.swift - Line: 44, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "for",
+      "skipsHiddenFiles"
+    ],
+    "J_returnType" : "-> [URL]?"
+  },
+  {
+    "A_name" : "DotLottieError",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Error"
+    ],
+    "F_location" : "DotLottieUtils.swift - Line: 51, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "noDataLoaded",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 53, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "assetNotFound",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 55, Column: 8",
+        "I_parameterType" : [
+          "String",
+          "Bundle?"
+        ],
+        "I_parameters" : [
+          "name",
+          "bundle"
+        ]
+      },
+      {
+        "A_name" : "loadingFromAssetNotSupported",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 58, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidFileFormat",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 61, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidData",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 63, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "animationNotAvailable",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "DotLottieUtils.swift - Line: 65, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  }
+]

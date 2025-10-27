@@ -1,0 +1,439 @@
+[
+  {
+    "A_name" : "StrokeShapeItem",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ShapeItem",
+      "OpacityAnimationModel"
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "strokeColor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 10, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "width",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 11, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lineCap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 12, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lineJoin",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 13, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "miterLimit",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 14, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dashPattern",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 15, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "copy",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 16, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KeyframeGroup<LottieVector1D>"
+        ],
+        "I_parameters" : [
+          "width"
+        ],
+        "J_returnType" : "-> StrokeShapeItem"
+      }
+    ]
+  },
+  {
+    "A_name" : "strokeColor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 10, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "width",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 11, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lineCap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 12, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lineJoin",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 13, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "miterLimit",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 14, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dashPattern",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 15, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 16, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KeyframeGroup<LottieVector1D>"
+    ],
+    "I_parameters" : [
+      "width"
+    ],
+    "J_returnType" : "-> StrokeShapeItem"
+  },
+  {
+    "A_name" : "Stroke",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "StrokeShapeItem"
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 21, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "strokeColor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 22, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "copy",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 24, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "copy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StrokeAnimation.swift - Line: 27, Column: 5",
+            "H_initialValue" : "copy(width: width)"
+          }
+        ],
+        "I_parameterType" : [
+          "KeyframeGroup<LottieVector1D>"
+        ],
+        "I_parameters" : [
+          "width"
+        ],
+        "J_returnType" : "-> StrokeShapeItem"
+      }
+    ]
+  },
+  {
+    "A_name" : "strokeColor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 22, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 24, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 27, Column: 5",
+        "H_initialValue" : "copy(width: width)"
+      }
+    ],
+    "I_parameterType" : [
+      "KeyframeGroup<LottieVector1D>"
+    ],
+    "I_parameters" : [
+      "width"
+    ],
+    "J_returnType" : "-> StrokeShapeItem"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 27, Column: 5",
+    "H_initialValue" : "copy(width: width)"
+  },
+  {
+    "A_name" : "GradientStroke",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "StrokeShapeItem"
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 34, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "strokeColor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 35, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "copy",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 37, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "copy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StrokeAnimation.swift - Line: 40, Column: 5",
+            "H_initialValue" : "copy(width: width)"
+          }
+        ],
+        "I_parameterType" : [
+          "KeyframeGroup<LottieVector1D>"
+        ],
+        "I_parameters" : [
+          "width"
+        ],
+        "J_returnType" : "-> StrokeShapeItem"
+      }
+    ]
+  },
+  {
+    "A_name" : "strokeColor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 35, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 37, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "copy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 40, Column: 5",
+        "H_initialValue" : "copy(width: width)"
+      }
+    ],
+    "I_parameterType" : [
+      "KeyframeGroup<LottieVector1D>"
+    ],
+    "I_parameters" : [
+      "width"
+    ],
+    "J_returnType" : "-> StrokeShapeItem"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 40, Column: 5",
+    "H_initialValue" : "copy(width: width)"
+  },
+  {
+    "A_name" : "CAShapeLayer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 47, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "addStrokeAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "StrokeAnimation.swift - Line: 49, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StrokeShapeItem",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "context"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "addStrokeAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 49, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StrokeShapeItem",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "lineDashPattern",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StrokeAnimation.swift - Line: 72, Column: 7",
+    "H_initialValue" : "try dashPattern.map {\n        try KeyframeGroup(keyframes: $0)\n          .exactlyOneKeyframe(context: context, description: \"stroke dashPattern\").cgFloatValue\n      }"
+  }
+]

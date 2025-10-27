@@ -1,0 +1,298 @@
+[
+  {
+    "A_name" : "ShapeCompositionLayer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CompositionLayer"
+    ],
+    "F_location" : "ShapeCompositionLayer.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeCompositionLayer.swift - Line: 16, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeCompositionLayer.swift - Line: 17, Column: 5",
+            "H_initialValue" : "shapeLayer.items.initializeNodeTree()"
+          },
+          {
+            "A_name" : "renderContainer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ShapeCompositionLayer.swift - Line: 18, Column: 5",
+            "H_initialValue" : "ShapeContainerLayer()"
+          }
+        ],
+        "I_parameterType" : [
+          "ShapeLayerModel"
+        ],
+        "I_parameters" : [
+          "shapeLayer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ShapeCompositionLayer.swift - Line: 30, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "ShapeCompositionLayer.swift - Line: 39, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "rootNode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeCompositionLayer.swift - Line: 45, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "renderContainer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeCompositionLayer.swift - Line: 46, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "displayContentsWithFrame",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ShapeCompositionLayer.swift - Line: 48, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "frame",
+          "forceUpdates"
+        ]
+      },
+      {
+        "A_name" : "updateRenderScale",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ShapeCompositionLayer.swift - Line: 53, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeCompositionLayer.swift - Line: 16, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeCompositionLayer.swift - Line: 17, Column: 5",
+        "H_initialValue" : "shapeLayer.items.initializeNodeTree()"
+      },
+      {
+        "A_name" : "renderContainer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ShapeCompositionLayer.swift - Line: 18, Column: 5",
+        "H_initialValue" : "ShapeContainerLayer()"
+      }
+    ],
+    "I_parameterType" : [
+      "ShapeLayerModel"
+    ],
+    "I_parameters" : [
+      "shapeLayer"
+    ]
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeCompositionLayer.swift - Line: 17, Column: 5",
+    "H_initialValue" : "shapeLayer.items.initializeNodeTree()"
+  },
+  {
+    "A_name" : "renderContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeCompositionLayer.swift - Line: 18, Column: 5",
+    "H_initialValue" : "ShapeContainerLayer()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ShapeCompositionLayer.swift - Line: 30, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "ShapeCompositionLayer.swift - Line: 39, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "rootNode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeCompositionLayer.swift - Line: 45, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "renderContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ShapeCompositionLayer.swift - Line: 46, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "displayContentsWithFrame",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ShapeCompositionLayer.swift - Line: 48, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "frame",
+      "forceUpdates"
+    ]
+  },
+  {
+    "A_name" : "updateRenderScale",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ShapeCompositionLayer.swift - Line: 53, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

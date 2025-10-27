@@ -1,0 +1,3061 @@
+[
+  {
+    "A_name" : "CompletableAndThenTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "CompletableAndThenTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testCompletableEmpty_CompletableCompleted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 18, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 19, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 21, Column: 9",
+            "H_initialValue" : "Completable.empty()"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 23, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 27, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asCompletable())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableCompleted_CompletableCompleted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 40, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 41, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 43, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 47, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 51, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asCompletable())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableError_CompletableCompleted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 68, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 69, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 71, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 75, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 79, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asCompletable())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableCompleted_CompletableError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 95, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 96, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 98, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 102, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 106, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asCompletable())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testCompletableEmpty_CompletableCompleted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 18, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 19, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 21, Column: 9",
+        "H_initialValue" : "Completable.empty()"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 23, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 27, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asCompletable())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 19, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 21, Column: 9",
+    "H_initialValue" : "Completable.empty()"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 23, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 27, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asCompletable())\n        }"
+  },
+  {
+    "A_name" : "testCompletableCompleted_CompletableCompleted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 40, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 41, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 43, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 47, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 51, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asCompletable())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 41, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 43, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 47, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 51, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asCompletable())\n        }"
+  },
+  {
+    "A_name" : "testCompletableError_CompletableCompleted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 68, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 69, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 71, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 75, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 79, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asCompletable())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 69, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 71, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 75, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 79, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asCompletable())\n        }"
+  },
+  {
+    "A_name" : "testCompletableCompleted_CompletableError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 95, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 96, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 98, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 102, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 106, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asCompletable())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 96, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 98, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 102, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 106, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asCompletable())\n        }"
+  },
+  {
+    "A_name" : "testAndThenCompletableReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 124, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testAndThenCompletableReleasesResourcesOnError1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 128, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testAndThenCompletableReleasesResourcesOnError2",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 132, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "CompletableAndThenTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 138, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testCompletableEmpty_SingleCompleted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 140, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 141, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 143, Column: 9",
+            "H_initialValue" : "Completable.empty()"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 145, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(285, 1),\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 150, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asSingle())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableCompleted_SingleNormal",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 164, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 165, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 167, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 171, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 176, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asSingle())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableError_SingleNormal",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 195, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 196, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 198, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 202, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 207, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asSingle())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableCompleted_SingleError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 223, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 224, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 226, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 230, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 234, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asSingle())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testCompletableEmpty_SingleCompleted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 140, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 141, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 143, Column: 9",
+        "H_initialValue" : "Completable.empty()"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 145, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(285, 1),\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 150, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asSingle())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 141, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 143, Column: 9",
+    "H_initialValue" : "Completable.empty()"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 145, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(285, 1),\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 150, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asSingle())\n        }"
+  },
+  {
+    "A_name" : "testCompletableCompleted_SingleNormal",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 164, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 165, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 167, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 171, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 176, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asSingle())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 165, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 167, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 171, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 176, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asSingle())\n        }"
+  },
+  {
+    "A_name" : "testCompletableError_SingleNormal",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 195, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 196, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 198, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 202, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 207, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asSingle())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 196, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 198, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 202, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 207, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asSingle())\n        }"
+  },
+  {
+    "A_name" : "testCompletableCompleted_SingleError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 223, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 224, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 226, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 230, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 234, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asSingle())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 224, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 226, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 230, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 234, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asSingle())\n        }"
+  },
+  {
+    "A_name" : "testAndThenSingleReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 252, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testAndThenSingleReleasesResourcesOnError1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 256, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testAndThenSingleReleasesResourcesOnError2",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 260, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "CompletableAndThenTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 266, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testCompletableEmpty_MaybeCompleted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 268, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 269, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 271, Column: 9",
+            "H_initialValue" : "Completable.empty()"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 273, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(285, 1),\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 278, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asMaybe())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableCompleted_MaybeNormal",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 292, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 293, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 295, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 299, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 304, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableError_MaybeNormal",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 323, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 324, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 326, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 330, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 335, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableCompleted_MaybeError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 351, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 352, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 354, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 358, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 362, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableCompleted_MaybeEmpty",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 379, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 380, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 382, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 386, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 390, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testCompletableEmpty_MaybeCompleted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 268, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 269, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 271, Column: 9",
+        "H_initialValue" : "Completable.empty()"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 273, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(285, 1),\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 278, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asMaybe())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 269, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 271, Column: 9",
+    "H_initialValue" : "Completable.empty()"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 273, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(285, 1),\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 278, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asMaybe())\n        }"
+  },
+  {
+    "A_name" : "testCompletableCompleted_MaybeNormal",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 292, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 293, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 295, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 299, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 304, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 293, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 295, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 299, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 304, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+  },
+  {
+    "A_name" : "testCompletableError_MaybeNormal",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 323, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 324, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 326, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 330, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 335, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 324, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 326, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 330, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(290, 1),\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 335, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+  },
+  {
+    "A_name" : "testCompletableCompleted_MaybeError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 351, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 352, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 354, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 358, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 362, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 352, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 354, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 358, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 362, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+  },
+  {
+    "A_name" : "testCompletableCompleted_MaybeEmpty",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 379, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 380, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 382, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 386, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 390, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 380, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 382, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 386, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 390, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asMaybe())\n        }"
+  },
+  {
+    "A_name" : "testAndThenMaybeReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 408, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testAndThenMaybeReleasesResourcesOnError1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 412, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testAndThenMaybeReleasesResourcesOnError2",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 416, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "CompletableAndThenTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 422, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testCompletableEmpty_ObservableCompleted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 424, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 425, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 427, Column: 9",
+            "H_initialValue" : "Completable.empty()"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 429, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(285, 1),\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 434, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asObservable())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableCompleted_ObservableNormal",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 448, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 449, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 451, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 455, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(280, 1),\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 460, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableError_ObservableNormal",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 479, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 480, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 482, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 486, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(280, 1),\n            .completed(290),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 491, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableCompleted_ObservableError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 507, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 508, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 510, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 514, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 518, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCompletableCompleted_ObservableEmpty",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 535, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 536, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "x1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 538, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+          },
+          {
+            "A_name" : "x2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 542, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Completable+AndThen.swift - Line: 546, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testCompletableEmpty_ObservableCompleted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 424, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 425, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 427, Column: 9",
+        "H_initialValue" : "Completable.empty()"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 429, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(285, 1),\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 434, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asObservable())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 425, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 427, Column: 9",
+    "H_initialValue" : "Completable.empty()"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 429, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(285, 1),\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 434, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.andThen(x2.asObservable())\n        }"
+  },
+  {
+    "A_name" : "testCompletableCompleted_ObservableNormal",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 448, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 449, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 451, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 455, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(280, 1),\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 460, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 449, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 451, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 455, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(280, 1),\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 460, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+  },
+  {
+    "A_name" : "testCompletableError_ObservableNormal",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 479, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 480, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 482, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 486, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(280, 1),\n            .completed(290),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 491, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 480, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 482, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 486, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(280, 1),\n            .completed(290),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 491, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+  },
+  {
+    "A_name" : "testCompletableCompleted_ObservableError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 507, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 508, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 510, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 514, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 518, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 508, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 510, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 514, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .error(290, testError),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 518, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+  },
+  {
+    "A_name" : "testCompletableCompleted_ObservableEmpty",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 535, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 536, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "x1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 538, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+      },
+      {
+        "A_name" : "x2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 542, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Completable+AndThen.swift - Line: 546, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 536, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "x1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 538, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(210),\n            ])"
+  },
+  {
+    "A_name" : "x2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 542, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(290)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 546, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            x1.asCompletable().andThen(x2.asObservable())\n        }"
+  },
+  {
+    "A_name" : "testAndThenObservableReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 565, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testAndThenObservableReleasesResourcesOnError1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 569, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testAndThenObservableReleasesResourcesOnError2",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Completable+AndThen.swift - Line: 573, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

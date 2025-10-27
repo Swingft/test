@@ -1,0 +1,414 @@
+[
+  {
+    "A_name" : "Comment",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Node"
+    ],
+    "F_location" : "Comment.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "COMMENT_KEY",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Comment.swift - Line: 15, Column: 5",
+        "H_initialValue" : "\"comment\""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Comment.swift - Line: 22, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "nodeName",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Comment.swift - Line: 29, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "getData",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Comment.swift - Line: 37, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "outerHtmlHead",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Comment.swift - Line: 41, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StringBuilder",
+          "Int",
+          "OutputSettings"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "outerHtmlTail",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Comment.swift - Line: 51, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StringBuilder",
+          "Int",
+          "OutputSettings"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "copy",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Comment.swift - Line: 53, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "clone",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Comment.swift - Line: 54, Column: 3",
+            "H_initialValue" : "Comment(attributes!.get(key: Comment.COMMENT_KEY), baseUri!)"
+          }
+        ],
+        "I_parameterType" : [
+          "NSZone?"
+        ],
+        "I_parameters" : [
+          "with"
+        ],
+        "J_returnType" : "-> Any"
+      },
+      {
+        "A_name" : "copy",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Comment.swift - Line: 58, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "clone",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Comment.swift - Line: 59, Column: 3",
+            "H_initialValue" : "Comment(attributes!.get(key: Comment.COMMENT_KEY), baseUri!)"
+          }
+        ],
+        "I_parameterType" : [
+          "Node?"
+        ],
+        "I_parameters" : [
+          "parent"
+        ],
+        "J_returnType" : "-> Node"
+      },
+      {
+        "A_name" : "copy",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Comment.swift - Line: 63, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Node",
+          "Node?"
+        ],
+        "I_parameters" : [
+          "clone",
+          "parent"
+        ],
+        "J_returnType" : "-> Node"
+      }
+    ]
+  },
+  {
+    "A_name" : "COMMENT_KEY",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Comment.swift - Line: 15, Column: 5",
+    "H_initialValue" : "\"comment\""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Comment.swift - Line: 22, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "nodeName",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Comment.swift - Line: 29, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "getData",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Comment.swift - Line: 37, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "outerHtmlHead",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Comment.swift - Line: 41, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StringBuilder",
+      "Int",
+      "OutputSettings"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "outerHtmlTail",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Comment.swift - Line: 51, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StringBuilder",
+      "Int",
+      "OutputSettings"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Comment.swift - Line: 53, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "clone",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Comment.swift - Line: 54, Column: 3",
+        "H_initialValue" : "Comment(attributes!.get(key: Comment.COMMENT_KEY), baseUri!)"
+      }
+    ],
+    "I_parameterType" : [
+      "NSZone?"
+    ],
+    "I_parameters" : [
+      "with"
+    ],
+    "J_returnType" : "-> Any"
+  },
+  {
+    "A_name" : "clone",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Comment.swift - Line: 54, Column: 3",
+    "H_initialValue" : "Comment(attributes!.get(key: Comment.COMMENT_KEY), baseUri!)"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Comment.swift - Line: 58, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "clone",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Comment.swift - Line: 59, Column: 3",
+        "H_initialValue" : "Comment(attributes!.get(key: Comment.COMMENT_KEY), baseUri!)"
+      }
+    ],
+    "I_parameterType" : [
+      "Node?"
+    ],
+    "I_parameters" : [
+      "parent"
+    ],
+    "J_returnType" : "-> Node"
+  },
+  {
+    "A_name" : "clone",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Comment.swift - Line: 59, Column: 3",
+    "H_initialValue" : "Comment(attributes!.get(key: Comment.COMMENT_KEY), baseUri!)"
+  },
+  {
+    "A_name" : "copy",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Comment.swift - Line: 63, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Node",
+      "Node?"
+    ],
+    "I_parameters" : [
+      "clone",
+      "parent"
+    ],
+    "J_returnType" : "-> Node"
+  }
+]

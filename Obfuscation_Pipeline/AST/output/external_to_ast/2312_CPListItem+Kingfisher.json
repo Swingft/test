@@ -1,0 +1,484 @@
+[
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "CPListItem+Kingfisher.swift - Line: 53, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CPListItem+Kingfisher.swift - Line: 61, Column: 9",
+            "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? []))"
+          }
+        ],
+        "I_parameterType" : [
+          "Source?",
+          "KFCrossPlatformImage?",
+          "KingfisherOptionsInfo?",
+          "DownloadProgressBlock?",
+          "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "placeholder",
+          "options",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "setImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "CPListItem+Kingfisher.swift - Line: 88, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Resource?",
+          "KFCrossPlatformImage?",
+          "KingfisherOptionsInfo?",
+          "DownloadProgressBlock?",
+          "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "placeholder",
+          "options",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "setImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CPListItem+Kingfisher.swift - Line: 104, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "mutatingSelf",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CPListItem+Kingfisher.swift - Line: 111, Column: 9",
+            "H_initialValue" : "self"
+          },
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CPListItem+Kingfisher.swift - Line: 133, Column: 9",
+            "H_initialValue" : "parsedOptions"
+          },
+          {
+            "A_name" : "issuedIdentifier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CPListItem+Kingfisher.swift - Line: 151, Column: 9",
+            "H_initialValue" : "Source.Identifier.next()"
+          },
+          {
+            "A_name" : "task",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CPListItem+Kingfisher.swift - Line: 158, Column: 9",
+            "H_initialValue" : "KingfisherManager.shared.retrieveImage(\n            with: source,\n            options: options,\n            downloadTaskUpdated: { mutatingSelf.imageTask = $0 },\n            progressiveImageSetter: { self.base.setImage($0) },\n            referenceTaskIdentifierChecker: { issuedIdentifier == self.taskIdentifier },\n            completionHandler: { result in\n                CallbackQueue.mainCurrentOrAsync.execute {\n                    guard issuedIdentifier == self.taskIdentifier else {\n                        let reason: KingfisherError.ImageSettingErrorReason\n                        do {\n                            let value = try result.get()\n                            reason = .notCurrentSourceTask(result: value, error: nil, source: source)\n                        } catch {\n                            reason = .notCurrentSourceTask(result: nil, error: error, source: source)\n                        }\n                        let error = KingfisherError.imageSettingError(reason: reason)\n                        completionHandler?(.failure(error))\n                        return\n                    }\n                    \n                    mutatingSelf.imageTask = nil\n                    mutatingSelf.taskIdentifier = nil\n                    \n                    switch result {\n                        case .success(let value):\n                            self.base.setImage(value.image)\n                            completionHandler?(result)\n                            \n                        case .failure:\n                            if let image = options.onFailureImage {\n                                \/**\n                                 * In iOS SDK 14.0-14.4 the image param was non-`nil`. The SDK changed in 14.5\n                                 * to allow `nil`. The compiler version 5.4 was introduced in this same SDK,\n                                 * which allows >=14.5 SDK to set a `nil` image. This compile check allows\n                                 * newer SDK users to set the image to `nil`, while still allowing older SDK\n                                 * users to compile the framework.\n                                 *\/\n                                #if compiler(>=5.4)\n                                self.base.setImage(image)\n                                #else \/\/ Let older SDK users deal with the older behavior.\n                                if let unwrapped = image {\n                                    self.base.setImage(unwrapped)\n                                }\n                                #endif   \n                            }\n                            completionHandler?(result)\n                    }\n                }\n            }\n        )"
+          }
+        ],
+        "I_parameterType" : [
+          "Source?",
+          "KFCrossPlatformImage?",
+          "KingfisherParsedOptionsInfo",
+          "DownloadProgressBlock?",
+          "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "placeholder",
+          "parsedOptions",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "cancelDownloadTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CPListItem+Kingfisher.swift - Line: 218, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "setImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 53, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CPListItem+Kingfisher.swift - Line: 61, Column: 9",
+        "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? []))"
+      }
+    ],
+    "I_parameterType" : [
+      "Source?",
+      "KFCrossPlatformImage?",
+      "KingfisherOptionsInfo?",
+      "DownloadProgressBlock?",
+      "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "placeholder",
+      "options",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 61, Column: 9",
+    "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? []))"
+  },
+  {
+    "A_name" : "setImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 88, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Resource?",
+      "KFCrossPlatformImage?",
+      "KingfisherOptionsInfo?",
+      "DownloadProgressBlock?",
+      "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "placeholder",
+      "options",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "setImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 104, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "mutatingSelf",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CPListItem+Kingfisher.swift - Line: 111, Column: 9",
+        "H_initialValue" : "self"
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CPListItem+Kingfisher.swift - Line: 133, Column: 9",
+        "H_initialValue" : "parsedOptions"
+      },
+      {
+        "A_name" : "issuedIdentifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CPListItem+Kingfisher.swift - Line: 151, Column: 9",
+        "H_initialValue" : "Source.Identifier.next()"
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CPListItem+Kingfisher.swift - Line: 158, Column: 9",
+        "H_initialValue" : "KingfisherManager.shared.retrieveImage(\n            with: source,\n            options: options,\n            downloadTaskUpdated: { mutatingSelf.imageTask = $0 },\n            progressiveImageSetter: { self.base.setImage($0) },\n            referenceTaskIdentifierChecker: { issuedIdentifier == self.taskIdentifier },\n            completionHandler: { result in\n                CallbackQueue.mainCurrentOrAsync.execute {\n                    guard issuedIdentifier == self.taskIdentifier else {\n                        let reason: KingfisherError.ImageSettingErrorReason\n                        do {\n                            let value = try result.get()\n                            reason = .notCurrentSourceTask(result: value, error: nil, source: source)\n                        } catch {\n                            reason = .notCurrentSourceTask(result: nil, error: error, source: source)\n                        }\n                        let error = KingfisherError.imageSettingError(reason: reason)\n                        completionHandler?(.failure(error))\n                        return\n                    }\n                    \n                    mutatingSelf.imageTask = nil\n                    mutatingSelf.taskIdentifier = nil\n                    \n                    switch result {\n                        case .success(let value):\n                            self.base.setImage(value.image)\n                            completionHandler?(result)\n                            \n                        case .failure:\n                            if let image = options.onFailureImage {\n                                \/**\n                                 * In iOS SDK 14.0-14.4 the image param was non-`nil`. The SDK changed in 14.5\n                                 * to allow `nil`. The compiler version 5.4 was introduced in this same SDK,\n                                 * which allows >=14.5 SDK to set a `nil` image. This compile check allows\n                                 * newer SDK users to set the image to `nil`, while still allowing older SDK\n                                 * users to compile the framework.\n                                 *\/\n                                #if compiler(>=5.4)\n                                self.base.setImage(image)\n                                #else \/\/ Let older SDK users deal with the older behavior.\n                                if let unwrapped = image {\n                                    self.base.setImage(unwrapped)\n                                }\n                                #endif   \n                            }\n                            completionHandler?(result)\n                    }\n                }\n            }\n        )"
+      }
+    ],
+    "I_parameterType" : [
+      "Source?",
+      "KFCrossPlatformImage?",
+      "KingfisherParsedOptionsInfo",
+      "DownloadProgressBlock?",
+      "((Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "placeholder",
+      "parsedOptions",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "mutatingSelf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 111, Column: 9",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 133, Column: 9",
+    "H_initialValue" : "parsedOptions"
+  },
+  {
+    "A_name" : "issuedIdentifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 151, Column: 9",
+    "H_initialValue" : "Source.Identifier.next()"
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 158, Column: 9",
+    "H_initialValue" : "KingfisherManager.shared.retrieveImage(\n            with: source,\n            options: options,\n            downloadTaskUpdated: { mutatingSelf.imageTask = $0 },\n            progressiveImageSetter: { self.base.setImage($0) },\n            referenceTaskIdentifierChecker: { issuedIdentifier == self.taskIdentifier },\n            completionHandler: { result in\n                CallbackQueue.mainCurrentOrAsync.execute {\n                    guard issuedIdentifier == self.taskIdentifier else {\n                        let reason: KingfisherError.ImageSettingErrorReason\n                        do {\n                            let value = try result.get()\n                            reason = .notCurrentSourceTask(result: value, error: nil, source: source)\n                        } catch {\n                            reason = .notCurrentSourceTask(result: nil, error: error, source: source)\n                        }\n                        let error = KingfisherError.imageSettingError(reason: reason)\n                        completionHandler?(.failure(error))\n                        return\n                    }\n                    \n                    mutatingSelf.imageTask = nil\n                    mutatingSelf.taskIdentifier = nil\n                    \n                    switch result {\n                        case .success(let value):\n                            self.base.setImage(value.image)\n                            completionHandler?(result)\n                            \n                        case .failure:\n                            if let image = options.onFailureImage {\n                                \/**\n                                 * In iOS SDK 14.0-14.4 the image param was non-`nil`. The SDK changed in 14.5\n                                 * to allow `nil`. The compiler version 5.4 was introduced in this same SDK,\n                                 * which allows >=14.5 SDK to set a `nil` image. This compile check allows\n                                 * newer SDK users to set the image to `nil`, while still allowing older SDK\n                                 * users to compile the framework.\n                                 *\/\n                                #if compiler(>=5.4)\n                                self.base.setImage(image)\n                                #else \/\/ Let older SDK users deal with the older behavior.\n                                if let unwrapped = image {\n                                    self.base.setImage(unwrapped)\n                                }\n                                #endif   \n                            }\n                            completionHandler?(result)\n                    }\n                }\n            }\n        )"
+  },
+  {
+    "A_name" : "reason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 167, Column: 25",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 169, Column: 29",
+    "H_initialValue" : "try result.get()"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 174, Column: 25",
+    "H_initialValue" : "KingfisherError.imageSettingError(reason: reason)"
+  },
+  {
+    "A_name" : "cancelDownloadTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 218, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "taskIdentifierKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 223, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageTaskKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 224, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 227, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "taskIdentifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CPListItem+Kingfisher.swift - Line: 229, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "imageTask",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CPListItem+Kingfisher.swift - Line: 240, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "taskIdentifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 229, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "box",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 231, Column: 13",
+    "H_initialValue" : "getAssociatedObject(base, &taskIdentifierKey)"
+  },
+  {
+    "A_name" : "box",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 235, Column: 13",
+    "H_initialValue" : "newValue.map { Box($0) }"
+  },
+  {
+    "A_name" : "imageTask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CPListItem+Kingfisher.swift - Line: 240, Column: 5",
+    "H_initialValue" : ""
+  }
+]

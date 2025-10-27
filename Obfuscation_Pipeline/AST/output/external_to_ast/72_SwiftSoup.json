@@ -1,0 +1,352 @@
+[
+  {
+    "A_name" : "parse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 19, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Document"
+  },
+  {
+    "A_name" : "parse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 33, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "Parser"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Document"
+  },
+  {
+    "A_name" : "parse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 46, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->Document"
+  },
+  {
+    "A_name" : "parseBodyFragment",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 139, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Document"
+  },
+  {
+    "A_name" : "parseBodyFragment",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 151, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->Document"
+  },
+  {
+    "A_name" : "clean",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 189, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "dirty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftSoup.swift - Line: 190, Column: 3",
+        "H_initialValue" : "try parseBodyFragment(bodyHtml, baseUri)"
+      },
+      {
+        "A_name" : "cleaner",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftSoup.swift - Line: 191, Column: 3",
+        "H_initialValue" : "Cleaner(whitelist)"
+      },
+      {
+        "A_name" : "clean",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftSoup.swift - Line: 192, Column: 3",
+        "H_initialValue" : "try cleaner.clean(dirty)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "Whitelist"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->String?"
+  },
+  {
+    "A_name" : "dirty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 190, Column: 3",
+    "H_initialValue" : "try parseBodyFragment(bodyHtml, baseUri)"
+  },
+  {
+    "A_name" : "cleaner",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 191, Column: 3",
+    "H_initialValue" : "Cleaner(whitelist)"
+  },
+  {
+    "A_name" : "clean",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 192, Column: 3",
+    "H_initialValue" : "try cleaner.clean(dirty)"
+  },
+  {
+    "A_name" : "clean",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 206, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Whitelist"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->String?"
+  },
+  {
+    "A_name" : "clean",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 222, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "dirty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftSoup.swift - Line: 223, Column: 3",
+        "H_initialValue" : "try SwiftSoup.parseBodyFragment(bodyHtml, baseUri)"
+      },
+      {
+        "A_name" : "cleaner",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftSoup.swift - Line: 224, Column: 3",
+        "H_initialValue" : "Cleaner(whitelist)"
+      },
+      {
+        "A_name" : "clean",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftSoup.swift - Line: 225, Column: 3",
+        "H_initialValue" : "try cleaner.clean(dirty)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "Whitelist",
+      "OutputSettings"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->String?"
+  },
+  {
+    "A_name" : "dirty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 223, Column: 3",
+    "H_initialValue" : "try SwiftSoup.parseBodyFragment(bodyHtml, baseUri)"
+  },
+  {
+    "A_name" : "cleaner",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 224, Column: 3",
+    "H_initialValue" : "Cleaner(whitelist)"
+  },
+  {
+    "A_name" : "clean",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 225, Column: 3",
+    "H_initialValue" : "try cleaner.clean(dirty)"
+  },
+  {
+    "A_name" : "isValid",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 238, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dirty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftSoup.swift - Line: 239, Column: 9",
+        "H_initialValue" : "try parseBodyFragment(bodyHtml, \"\")"
+      },
+      {
+        "A_name" : "cleaner",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwiftSoup.swift - Line: 240, Column: 9",
+        "H_initialValue" : "Cleaner(whitelist)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Whitelist"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Bool"
+  },
+  {
+    "A_name" : "dirty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 239, Column: 9",
+    "H_initialValue" : "try parseBodyFragment(bodyHtml, \"\")"
+  },
+  {
+    "A_name" : "cleaner",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwiftSoup.swift - Line: 240, Column: 9",
+    "H_initialValue" : "Cleaner(whitelist)"
+  }
+]

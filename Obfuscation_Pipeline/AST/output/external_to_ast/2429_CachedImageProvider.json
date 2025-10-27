@@ -1,0 +1,202 @@
+[
+  {
+    "A_name" : "CachedImageProvider",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnimationImageProvider"
+    ],
+    "F_location" : "CachedImageProvider.swift - Line: 8, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedImageProvider.swift - Line: 16, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationImageProvider"
+        ],
+        "I_parameters" : [
+          "imageProvider"
+        ]
+      },
+      {
+        "A_name" : "imageForAsset",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedImageProvider.swift - Line: 22, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageAsset"
+        ],
+        "I_parameters" : [
+          "asset"
+        ],
+        "J_returnType" : "-> CGImage?"
+      },
+      {
+        "A_name" : "contentsGravity",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedImageProvider.swift - Line: 35, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageAsset"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> CALayerContentsGravity"
+      },
+      {
+        "A_name" : "imageCache",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedImageProvider.swift - Line: 45, Column: 3",
+        "H_initialValue" : "LRUCache<String, CGImage>()"
+      },
+      {
+        "A_name" : "imageProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedImageProvider.swift - Line: 46, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedImageProvider.swift - Line: 16, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationImageProvider"
+    ],
+    "I_parameters" : [
+      "imageProvider"
+    ]
+  },
+  {
+    "A_name" : "imageForAsset",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedImageProvider.swift - Line: 22, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageAsset"
+    ],
+    "I_parameters" : [
+      "asset"
+    ],
+    "J_returnType" : "-> CGImage?"
+  },
+  {
+    "A_name" : "contentsGravity",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedImageProvider.swift - Line: 35, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageAsset"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> CALayerContentsGravity"
+  },
+  {
+    "A_name" : "imageCache",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedImageProvider.swift - Line: 45, Column: 3",
+    "H_initialValue" : "LRUCache<String, CGImage>()"
+  },
+  {
+    "A_name" : "imageProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedImageProvider.swift - Line: 46, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AnimationImageProvider",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CachedImageProvider.swift - Line: 50, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "cachedImageProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedImageProvider.swift - Line: 54, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "cachedImageProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedImageProvider.swift - Line: 54, Column: 3",
+    "H_initialValue" : ""
+  }
+]

@@ -1,0 +1,1518 @@
+[
+  {
+    "A_name" : "Tag",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable"
+    ],
+    "F_location" : "Tag.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tags",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 13, Column: 5",
+        "H_initialValue" : "{\n        do {\n            return try Tag.initializeMaps()\n        } catch {\n            preconditionFailure(\"This method must be overridden\")\n        }\n        return Dictionary<String, Tag>()\n    }()"
+      },
+      {
+        "A_name" : "_tagName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 22, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_tagNameNormal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 23, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_isBlock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 24, Column: 5",
+        "H_initialValue" : "true \/\/ block or inline"
+      },
+      {
+        "A_name" : "_formatAsBlock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 25, Column: 5",
+        "H_initialValue" : "true \/\/ should be formatted as a block"
+      },
+      {
+        "A_name" : "_canContainBlock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 26, Column: 5",
+        "H_initialValue" : "true \/\/ Can this tag hold block level tags?"
+      },
+      {
+        "A_name" : "_canContainInline",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 27, Column: 5",
+        "H_initialValue" : "true \/\/ only pcdata if not"
+      },
+      {
+        "A_name" : "_empty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 28, Column: 5",
+        "H_initialValue" : "false \/\/ can hold nothing e.g. img"
+      },
+      {
+        "A_name" : "_selfClosing",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 29, Column: 5",
+        "H_initialValue" : "false \/\/ can self close (<foo \/>). used for unknown tags that self close, without forcing them as empty."
+      },
+      {
+        "A_name" : "_preserveWhitespace",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 30, Column: 5",
+        "H_initialValue" : "false \/\/ for pre, textarea, script etc"
+      },
+      {
+        "A_name" : "_formList",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 31, Column: 5",
+        "H_initialValue" : "false \/\/ a control that appears in forms: input, textarea, output etc"
+      },
+      {
+        "A_name" : "_formSubmit",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 32, Column: 5",
+        "H_initialValue" : "false \/\/ a control that can be submitted in a form: input etc"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "getName",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 44, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "getNameNormal",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 47, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "valueOf",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 61, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tagName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Tag.swift - Line: 62, Column: 9",
+            "H_initialValue" : "tagName"
+          },
+          {
+            "A_name" : "tag",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Tag.swift - Line: 63, Column: 9",
+            "H_initialValue" : "Tag.tags[tagName]"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "ParseSettings"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Tag"
+      },
+      {
+        "A_name" : "valueOf",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 89, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "->Tag"
+      },
+      {
+        "A_name" : "isBlock",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 98, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "formatAsBlock",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "canContainBlock",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 116, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "isInline",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 125, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "isData",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 134, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "isEmpty",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 143, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "isSelfClosing",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 152, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "isKnownTag",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 161, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "isKnownTag",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 171, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "preserveWhitespace",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 180, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "isFormListed",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 188, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "isFormSubmittable",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 196, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "setSelfClosing",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Tag.swift - Line: 200, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Tag"
+      },
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 214, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "this",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Tag.swift - Line: 215, Column: 9",
+            "H_initialValue" : "lhs"
+          },
+          {
+            "A_name" : "o",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Tag.swift - Line: 216, Column: 9",
+            "H_initialValue" : "rhs"
+          },
+          {
+            "A_name" : "tag",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Tag.swift - Line: 220, Column: 9",
+            "H_initialValue" : "o"
+          }
+        ],
+        "I_parameterType" : [
+          "Tag",
+          "Tag"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "equals",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 234, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Tag"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "hash",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 242, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "inout Hasher"
+        ],
+        "I_parameters" : [
+          "into"
+        ]
+      },
+      {
+        "A_name" : "toString",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 255, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "blockTags",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 261, Column: 5",
+        "H_initialValue" : "[\n        \"html\", \"head\", \"body\", \"frameset\", \"script\", \"noscript\", \"style\", \"meta\", \"link\", \"title\", \"frame\",\n        \"noframes\", \"section\", \"nav\", \"aside\", \"hgroup\", \"header\", \"footer\", \"p\", \"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\",\n        \"ul\", \"ol\", \"pre\", \"div\", \"blockquote\", \"hr\", \"address\", \"figure\", \"figcaption\", \"form\", \"fieldset\", \"ins\",\n        \"del\", \"s\", \"dl\", \"dt\", \"dd\", \"li\", \"table\", \"caption\", \"thead\", \"tfoot\", \"tbody\", \"colgroup\", \"col\", \"tr\", \"th\",\n        \"td\", \"video\", \"audio\", \"canvas\", \"details\", \"menu\", \"plaintext\", \"template\", \"article\", \"main\",\n        \"svg\", \"math\"\n    ]"
+      },
+      {
+        "A_name" : "inlineTags",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 269, Column: 5",
+        "H_initialValue" : "[\n        \"object\", \"base\", \"font\", \"tt\", \"i\", \"b\", \"u\", \"big\", \"small\", \"em\", \"strong\", \"dfn\", \"code\", \"samp\", \"kbd\",\n        \"var\", \"cite\", \"abbr\", \"time\", \"acronym\", \"mark\", \"ruby\", \"rt\", \"rp\", \"a\", \"img\", \"br\", \"wbr\", \"map\", \"q\",\n        \"sub\", \"sup\", \"bdo\", \"iframe\", \"embed\", \"span\", \"input\", \"select\", \"textarea\", \"label\", \"button\", \"optgroup\",\n        \"option\", \"legend\", \"datalist\", \"keygen\", \"output\", \"progress\", \"meter\", \"area\", \"param\", \"source\", \"track\",\n        \"summary\", \"command\", \"device\", \"area\", \"basefont\", \"bgsound\", \"menuitem\", \"param\", \"source\", \"track\",\n        \"data\", \"bdi\"\n    ]"
+      },
+      {
+        "A_name" : "emptyTags",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 277, Column: 5",
+        "H_initialValue" : "[\n        \"meta\", \"link\", \"base\", \"frame\", \"img\", \"br\", \"wbr\", \"embed\", \"hr\", \"input\", \"keygen\", \"col\", \"command\",\n        \"device\", \"area\", \"basefont\", \"bgsound\", \"menuitem\", \"param\", \"source\", \"track\"\n    ]"
+      },
+      {
+        "A_name" : "formatAsInlineTags",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 281, Column: 5",
+        "H_initialValue" : "[\n        \"title\", \"a\", \"p\", \"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"pre\", \"address\", \"li\", \"th\", \"td\", \"script\", \"style\",\n        \"ins\", \"del\", \"s\"\n    ]"
+      },
+      {
+        "A_name" : "preserveWhitespaceTags",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 285, Column: 5",
+        "H_initialValue" : "[\n        \"pre\", \"plaintext\", \"title\", \"textarea\"\n        \/\/ script is not here as it is a data node, which always preserve whitespace\n    ]"
+      },
+      {
+        "A_name" : "formListedTags",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 290, Column: 5",
+        "H_initialValue" : "[\n        \"button\", \"fieldset\", \"input\", \"keygen\", \"object\", \"output\", \"select\", \"textarea\"\n    ]"
+      },
+      {
+        "A_name" : "formSubmitTags",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 293, Column: 5",
+        "H_initialValue" : "[\n        \"input\", \"keygen\", \"object\", \"select\", \"textarea\"\n    ]"
+      },
+      {
+        "A_name" : "initializeMaps",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tag.swift - Line: 297, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dict",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Tag.swift - Line: 298, Column: 9",
+            "H_initialValue" : "Dictionary<String, Tag>()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "->Dictionary<String, Tag>"
+      }
+    ]
+  },
+  {
+    "A_name" : "tags",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 13, Column: 5",
+    "H_initialValue" : "{\n        do {\n            return try Tag.initializeMaps()\n        } catch {\n            preconditionFailure(\"This method must be overridden\")\n        }\n        return Dictionary<String, Tag>()\n    }()"
+  },
+  {
+    "A_name" : "_tagName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 22, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_tagNameNormal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 23, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_isBlock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 24, Column: 5",
+    "H_initialValue" : "true \/\/ block or inline"
+  },
+  {
+    "A_name" : "_formatAsBlock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 25, Column: 5",
+    "H_initialValue" : "true \/\/ should be formatted as a block"
+  },
+  {
+    "A_name" : "_canContainBlock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 26, Column: 5",
+    "H_initialValue" : "true \/\/ Can this tag hold block level tags?"
+  },
+  {
+    "A_name" : "_canContainInline",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 27, Column: 5",
+    "H_initialValue" : "true \/\/ only pcdata if not"
+  },
+  {
+    "A_name" : "_empty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 28, Column: 5",
+    "H_initialValue" : "false \/\/ can hold nothing e.g. img"
+  },
+  {
+    "A_name" : "_selfClosing",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 29, Column: 5",
+    "H_initialValue" : "false \/\/ can self close (<foo \/>). used for unknown tags that self close, without forcing them as empty."
+  },
+  {
+    "A_name" : "_preserveWhitespace",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 30, Column: 5",
+    "H_initialValue" : "false \/\/ for pre, textarea, script etc"
+  },
+  {
+    "A_name" : "_formList",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 31, Column: 5",
+    "H_initialValue" : "false \/\/ a control that appears in forms: input, textarea, output etc"
+  },
+  {
+    "A_name" : "_formSubmit",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 32, Column: 5",
+    "H_initialValue" : "false \/\/ a control that can be submitted in a form: input etc"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "getName",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 44, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "getNameNormal",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 47, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "valueOf",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 61, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tagName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 62, Column: 9",
+        "H_initialValue" : "tagName"
+      },
+      {
+        "A_name" : "tag",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 63, Column: 9",
+        "H_initialValue" : "Tag.tags[tagName]"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "ParseSettings"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Tag"
+  },
+  {
+    "A_name" : "tagName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 62, Column: 9",
+    "H_initialValue" : "tagName"
+  },
+  {
+    "A_name" : "tag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 63, Column: 9",
+    "H_initialValue" : "Tag.tags[tagName]"
+  },
+  {
+    "A_name" : "valueOf",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 89, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->Tag"
+  },
+  {
+    "A_name" : "isBlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 98, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "formatAsBlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "canContainBlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 116, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "isInline",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 125, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "isData",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 134, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "isEmpty",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 143, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "isSelfClosing",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 152, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "isKnownTag",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 161, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "isKnownTag",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 171, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "preserveWhitespace",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 180, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "isFormListed",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 188, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "isFormSubmittable",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 196, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "setSelfClosing",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Tag.swift - Line: 200, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Tag"
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 214, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "this",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 215, Column: 9",
+        "H_initialValue" : "lhs"
+      },
+      {
+        "A_name" : "o",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 216, Column: 9",
+        "H_initialValue" : "rhs"
+      },
+      {
+        "A_name" : "tag",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 220, Column: 9",
+        "H_initialValue" : "o"
+      }
+    ],
+    "I_parameterType" : [
+      "Tag",
+      "Tag"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "this",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 215, Column: 9",
+    "H_initialValue" : "lhs"
+  },
+  {
+    "A_name" : "o",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 216, Column: 9",
+    "H_initialValue" : "rhs"
+  },
+  {
+    "A_name" : "tag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 220, Column: 9",
+    "H_initialValue" : "o"
+  },
+  {
+    "A_name" : "equals",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 234, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Tag"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "hash",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 242, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "inout Hasher"
+    ],
+    "I_parameters" : [
+      "into"
+    ]
+  },
+  {
+    "A_name" : "toString",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 255, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "blockTags",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 261, Column: 5",
+    "H_initialValue" : "[\n        \"html\", \"head\", \"body\", \"frameset\", \"script\", \"noscript\", \"style\", \"meta\", \"link\", \"title\", \"frame\",\n        \"noframes\", \"section\", \"nav\", \"aside\", \"hgroup\", \"header\", \"footer\", \"p\", \"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\",\n        \"ul\", \"ol\", \"pre\", \"div\", \"blockquote\", \"hr\", \"address\", \"figure\", \"figcaption\", \"form\", \"fieldset\", \"ins\",\n        \"del\", \"s\", \"dl\", \"dt\", \"dd\", \"li\", \"table\", \"caption\", \"thead\", \"tfoot\", \"tbody\", \"colgroup\", \"col\", \"tr\", \"th\",\n        \"td\", \"video\", \"audio\", \"canvas\", \"details\", \"menu\", \"plaintext\", \"template\", \"article\", \"main\",\n        \"svg\", \"math\"\n    ]"
+  },
+  {
+    "A_name" : "inlineTags",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 269, Column: 5",
+    "H_initialValue" : "[\n        \"object\", \"base\", \"font\", \"tt\", \"i\", \"b\", \"u\", \"big\", \"small\", \"em\", \"strong\", \"dfn\", \"code\", \"samp\", \"kbd\",\n        \"var\", \"cite\", \"abbr\", \"time\", \"acronym\", \"mark\", \"ruby\", \"rt\", \"rp\", \"a\", \"img\", \"br\", \"wbr\", \"map\", \"q\",\n        \"sub\", \"sup\", \"bdo\", \"iframe\", \"embed\", \"span\", \"input\", \"select\", \"textarea\", \"label\", \"button\", \"optgroup\",\n        \"option\", \"legend\", \"datalist\", \"keygen\", \"output\", \"progress\", \"meter\", \"area\", \"param\", \"source\", \"track\",\n        \"summary\", \"command\", \"device\", \"area\", \"basefont\", \"bgsound\", \"menuitem\", \"param\", \"source\", \"track\",\n        \"data\", \"bdi\"\n    ]"
+  },
+  {
+    "A_name" : "emptyTags",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 277, Column: 5",
+    "H_initialValue" : "[\n        \"meta\", \"link\", \"base\", \"frame\", \"img\", \"br\", \"wbr\", \"embed\", \"hr\", \"input\", \"keygen\", \"col\", \"command\",\n        \"device\", \"area\", \"basefont\", \"bgsound\", \"menuitem\", \"param\", \"source\", \"track\"\n    ]"
+  },
+  {
+    "A_name" : "formatAsInlineTags",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 281, Column: 5",
+    "H_initialValue" : "[\n        \"title\", \"a\", \"p\", \"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"pre\", \"address\", \"li\", \"th\", \"td\", \"script\", \"style\",\n        \"ins\", \"del\", \"s\"\n    ]"
+  },
+  {
+    "A_name" : "preserveWhitespaceTags",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 285, Column: 5",
+    "H_initialValue" : "[\n        \"pre\", \"plaintext\", \"title\", \"textarea\"\n        \/\/ script is not here as it is a data node, which always preserve whitespace\n    ]"
+  },
+  {
+    "A_name" : "formListedTags",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 290, Column: 5",
+    "H_initialValue" : "[\n        \"button\", \"fieldset\", \"input\", \"keygen\", \"object\", \"output\", \"select\", \"textarea\"\n    ]"
+  },
+  {
+    "A_name" : "formSubmitTags",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 293, Column: 5",
+    "H_initialValue" : "[\n        \"input\", \"keygen\", \"object\", \"select\", \"textarea\"\n    ]"
+  },
+  {
+    "A_name" : "initializeMaps",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tag.swift - Line: 297, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dict",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tag.swift - Line: 298, Column: 9",
+        "H_initialValue" : "Dictionary<String, Tag>()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "->Dictionary<String, Tag>"
+  },
+  {
+    "A_name" : "dict",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 298, Column: 9",
+    "H_initialValue" : "Dictionary<String, Tag>()"
+  },
+  {
+    "A_name" : "tag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 302, Column: 13",
+    "H_initialValue" : "Tag(tagName)"
+  },
+  {
+    "A_name" : "tag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 306, Column: 13",
+    "H_initialValue" : "Tag(tagName)"
+  },
+  {
+    "A_name" : "tag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 315, Column: 13",
+    "H_initialValue" : "dict[tagName]"
+  },
+  {
+    "A_name" : "tag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 323, Column: 13",
+    "H_initialValue" : "dict[tagName]"
+  },
+  {
+    "A_name" : "tag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 329, Column: 13",
+    "H_initialValue" : "dict[tagName]"
+  },
+  {
+    "A_name" : "tag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 335, Column: 13",
+    "H_initialValue" : "dict[tagName]"
+  },
+  {
+    "A_name" : "tag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tag.swift - Line: 341, Column: 13",
+    "H_initialValue" : "dict[tagName]"
+  }
+]

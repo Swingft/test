@@ -1,0 +1,260 @@
+[
+  {
+    "A_name" : "Archive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Archive+WritingDeprecated.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "addEntry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Archive+WritingDeprecated.swift - Line: 15, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "URL",
+          "CompressionMethod",
+          "UInt32",
+          "Progress?"
+        ],
+        "I_parameters" : [
+          "with",
+          "relativeTo",
+          "compressionMethod",
+          "bufferSize",
+          "progress"
+        ]
+      },
+      {
+        "A_name" : "addEntry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Archive+WritingDeprecated.swift - Line: 35, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "URL",
+          "CompressionMethod",
+          "UInt32",
+          "Progress?"
+        ],
+        "I_parameters" : [
+          "with",
+          "fileURL",
+          "compressionMethod",
+          "bufferSize",
+          "progress"
+        ]
+      },
+      {
+        "A_name" : "addEntry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Archive+WritingDeprecated.swift - Line: 55, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "newProvider",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Archive+WritingDeprecated.swift - Line: 71, Column: 5",
+            "H_initialValue" : "{ try provider(Int($0), $1) }"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Entry.EntryType",
+          "UInt32",
+          "Date",
+          "UInt16?",
+          "CompressionMethod",
+          "Int",
+          "Progress?",
+          "(_ position: Int, _ size: Int) throws -> Data"
+        ],
+        "I_parameters" : [
+          "with",
+          "type",
+          "uncompressedSize",
+          "modificationDate",
+          "permissions",
+          "compressionMethod",
+          "bufferSize",
+          "progress",
+          "provider"
+        ]
+      },
+      {
+        "A_name" : "remove",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Archive+WritingDeprecated.swift - Line: 84, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Entry",
+          "UInt32",
+          "Progress?"
+        ],
+        "I_parameters" : [
+          "_",
+          "bufferSize",
+          "progress"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "addEntry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Archive+WritingDeprecated.swift - Line: 15, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "URL",
+      "CompressionMethod",
+      "UInt32",
+      "Progress?"
+    ],
+    "I_parameters" : [
+      "with",
+      "relativeTo",
+      "compressionMethod",
+      "bufferSize",
+      "progress"
+    ]
+  },
+  {
+    "A_name" : "addEntry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Archive+WritingDeprecated.swift - Line: 35, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "URL",
+      "CompressionMethod",
+      "UInt32",
+      "Progress?"
+    ],
+    "I_parameters" : [
+      "with",
+      "fileURL",
+      "compressionMethod",
+      "bufferSize",
+      "progress"
+    ]
+  },
+  {
+    "A_name" : "addEntry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Archive+WritingDeprecated.swift - Line: 55, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "newProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Archive+WritingDeprecated.swift - Line: 71, Column: 5",
+        "H_initialValue" : "{ try provider(Int($0), $1) }"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Entry.EntryType",
+      "UInt32",
+      "Date",
+      "UInt16?",
+      "CompressionMethod",
+      "Int",
+      "Progress?",
+      "(_ position: Int, _ size: Int) throws -> Data"
+    ],
+    "I_parameters" : [
+      "with",
+      "type",
+      "uncompressedSize",
+      "modificationDate",
+      "permissions",
+      "compressionMethod",
+      "bufferSize",
+      "progress",
+      "provider"
+    ]
+  },
+  {
+    "A_name" : "newProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Archive+WritingDeprecated.swift - Line: 71, Column: 5",
+    "H_initialValue" : "{ try provider(Int($0), $1) }"
+  },
+  {
+    "A_name" : "remove",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Archive+WritingDeprecated.swift - Line: 84, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Entry",
+      "UInt32",
+      "Progress?"
+    ],
+    "I_parameters" : [
+      "_",
+      "bufferSize",
+      "progress"
+    ]
+  }
+]

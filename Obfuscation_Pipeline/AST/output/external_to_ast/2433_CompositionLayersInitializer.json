@@ -1,0 +1,260 @@
+[
+  {
+    "A_name" : "[LayerModel]",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "initializeCompositionLayers",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompositionLayersInitializer.swift - Line: 13, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "compositionLayers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompositionLayersInitializer.swift - Line: 24, Column: 5",
+            "H_initialValue" : "[CompositionLayer]()"
+          },
+          {
+            "A_name" : "layerMap",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompositionLayersInitializer.swift - Line: 25, Column: 5",
+            "H_initialValue" : "[Int: CompositionLayer]()"
+          },
+          {
+            "A_name" : "childLayers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CompositionLayersInitializer.swift - Line: 28, Column: 5",
+            "H_initialValue" : "[LayerModel]()"
+          }
+        ],
+        "I_parameterType" : [
+          "AssetLibrary?",
+          "LayerImageProvider",
+          "LayerTextProvider",
+          "LayerFontProvider",
+          "AnimationKeypathTextProvider",
+          "AnimationFontProvider",
+          "CGFloat",
+          "MainThreadAnimationLayer?"
+        ],
+        "I_parameters" : [
+          "assetLibrary",
+          "layerImageProvider",
+          "layerTextProvider",
+          "layerFontProvider",
+          "textProvider",
+          "fontProvider",
+          "frameRate",
+          "rootAnimationLayer"
+        ],
+        "J_returnType" : "-> [CompositionLayer]"
+      }
+    ]
+  },
+  {
+    "A_name" : "initializeCompositionLayers",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 13, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "compositionLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompositionLayersInitializer.swift - Line: 24, Column: 5",
+        "H_initialValue" : "[CompositionLayer]()"
+      },
+      {
+        "A_name" : "layerMap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompositionLayersInitializer.swift - Line: 25, Column: 5",
+        "H_initialValue" : "[Int: CompositionLayer]()"
+      },
+      {
+        "A_name" : "childLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompositionLayersInitializer.swift - Line: 28, Column: 5",
+        "H_initialValue" : "[LayerModel]()"
+      }
+    ],
+    "I_parameterType" : [
+      "AssetLibrary?",
+      "LayerImageProvider",
+      "LayerTextProvider",
+      "LayerFontProvider",
+      "AnimationKeypathTextProvider",
+      "AnimationFontProvider",
+      "CGFloat",
+      "MainThreadAnimationLayer?"
+    ],
+    "I_parameters" : [
+      "assetLibrary",
+      "layerImageProvider",
+      "layerTextProvider",
+      "layerFontProvider",
+      "textProvider",
+      "fontProvider",
+      "frameRate",
+      "rootAnimationLayer"
+    ],
+    "J_returnType" : "-> [CompositionLayer]"
+  },
+  {
+    "A_name" : "compositionLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 24, Column: 5",
+    "H_initialValue" : "[CompositionLayer]()"
+  },
+  {
+    "A_name" : "layerMap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 25, Column: 5",
+    "H_initialValue" : "[Int: CompositionLayer]()"
+  },
+  {
+    "A_name" : "childLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 28, Column: 5",
+    "H_initialValue" : "[LayerModel]()"
+  },
+  {
+    "A_name" : "genericLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 32, Column: 9",
+    "H_initialValue" : "NullCompositionLayer(layer: layer)"
+  },
+  {
+    "A_name" : "shapeContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 36, Column: 9",
+    "H_initialValue" : "ShapeCompositionLayer(shapeLayer: shapeLayer)"
+  },
+  {
+    "A_name" : "solidContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 40, Column: 9",
+    "H_initialValue" : "SolidCompositionLayer(solid: solidLayer)"
+  },
+  {
+    "A_name" : "precompContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 48, Column: 9",
+    "H_initialValue" : "PreCompositionLayer(\n          precomp: precompLayer,\n          asset: precompAsset,\n          layerImageProvider: layerImageProvider,\n          layerTextProvider: layerTextProvider,\n          layerFontProvider: layerFontProvider,\n          textProvider: textProvider,\n          fontProvider: fontProvider,\n          assetLibrary: assetLibrary,\n          frameRate: frameRate,\n          rootAnimationLayer: rootAnimationLayer)"
+  },
+  {
+    "A_name" : "imageContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 66, Column: 9",
+    "H_initialValue" : "ImageCompositionLayer(\n          imageLayer: imageLayer,\n          size: CGSize(width: imageAsset.width, height: imageAsset.height))"
+  },
+  {
+    "A_name" : "textContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 72, Column: 9",
+    "H_initialValue" : "TextCompositionLayer(\n          textLayer: textLayer,\n          textProvider: textProvider,\n          fontProvider: fontProvider,\n          rootAnimationLayer: rootAnimationLayer)"
+  },
+  {
+    "A_name" : "genericLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 80, Column: 9",
+    "H_initialValue" : "NullCompositionLayer(layer: layer)"
+  },
+  {
+    "A_name" : "childLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 92, Column: 9",
+    "H_initialValue" : "layerMap[layerModel.index]"
+  },
+  {
+    "A_name" : "parentLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompositionLayersInitializer.swift - Line: 93, Column: 9",
+    "H_initialValue" : "layerMap[parentID]"
+  }
+]

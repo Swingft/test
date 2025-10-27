@@ -1,0 +1,203 @@
+[
+  {
+    "A_name" : "DropShadowEffect",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "LayerEffect"
+    ],
+    "F_location" : "DropShadowEffect.swift - Line: 6, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "DropShadowEffect.swift - Line: 10, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "DropShadowEffect.swift - Line: 14, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String: Any]"
+        ],
+        "I_parameters" : [
+          "dictionary"
+        ]
+      },
+      {
+        "A_name" : "color",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowEffect.swift - Line: 21, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "opacity",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowEffect.swift - Line: 26, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "direction",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowEffect.swift - Line: 31, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "distance",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowEffect.swift - Line: 36, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "softness",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowEffect.swift - Line: 41, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "DropShadowEffect.swift - Line: 10, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "DropShadowEffect.swift - Line: 14, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String: Any]"
+    ],
+    "I_parameters" : [
+      "dictionary"
+    ]
+  },
+  {
+    "A_name" : "color",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowEffect.swift - Line: 21, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "opacity",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowEffect.swift - Line: 26, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "direction",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowEffect.swift - Line: 31, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "distance",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowEffect.swift - Line: 36, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "softness",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowEffect.swift - Line: 41, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "DropShadowEffect",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "DropShadowEffect.swift - Line: 52, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

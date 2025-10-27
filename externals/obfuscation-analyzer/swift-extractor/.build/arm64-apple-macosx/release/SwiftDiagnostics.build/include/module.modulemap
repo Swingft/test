@@ -1,3 +1,0 @@
-module SwiftDiagnostics {
-    header "/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftDiagnostics.build/include/SwiftDiagnostics-Swift.h"
-}

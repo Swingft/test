@@ -1,0 +1,623 @@
+[
+  {
+    "A_name" : "DropShadowStyle",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "LayerStyle"
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 6, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 10, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 11, Column: 5",
+            "H_initialValue" : "try decoder.container(keyedBy: DropShadowStyle.CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Decoder"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 20, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "opacityDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 21, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.opacity)"
+          },
+          {
+            "A_name" : "colorDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 23, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.color)"
+          },
+          {
+            "A_name" : "angleDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 25, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.angle)"
+          },
+          {
+            "A_name" : "sizeDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 27, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.size)"
+          },
+          {
+            "A_name" : "distanceDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 29, Column: 5",
+            "H_initialValue" : "try dictionary.value(for: CodingKeys.distance)"
+          }
+        ],
+        "I_parameterType" : [
+          "[String: Any]"
+        ],
+        "I_parameters" : [
+          "dictionary"
+        ]
+      },
+      {
+        "A_name" : "opacity",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 37, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "color",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 40, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "angle",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 45, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "size",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 48, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "distance",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 51, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 53, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 55, Column: 5",
+            "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Encoder"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      },
+      {
+        "A_name" : "CodingKeys",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "String",
+          "CodingKey"
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 65, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "color",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 66, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "opacity",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 67, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "angle",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 68, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "size",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 69, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "distance",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DropShadowStyle.swift - Line: 70, Column: 10",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 10, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 11, Column: 5",
+        "H_initialValue" : "try decoder.container(keyedBy: DropShadowStyle.CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Decoder"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 11, Column: 5",
+    "H_initialValue" : "try decoder.container(keyedBy: DropShadowStyle.CodingKeys.self)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 20, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "opacityDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 21, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.opacity)"
+      },
+      {
+        "A_name" : "colorDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 23, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.color)"
+      },
+      {
+        "A_name" : "angleDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 25, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.angle)"
+      },
+      {
+        "A_name" : "sizeDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 27, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.size)"
+      },
+      {
+        "A_name" : "distanceDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 29, Column: 5",
+        "H_initialValue" : "try dictionary.value(for: CodingKeys.distance)"
+      }
+    ],
+    "I_parameterType" : [
+      "[String: Any]"
+    ],
+    "I_parameters" : [
+      "dictionary"
+    ]
+  },
+  {
+    "A_name" : "opacityDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 21, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.opacity)"
+  },
+  {
+    "A_name" : "colorDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 23, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.color)"
+  },
+  {
+    "A_name" : "angleDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 25, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.angle)"
+  },
+  {
+    "A_name" : "sizeDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 27, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.size)"
+  },
+  {
+    "A_name" : "distanceDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 29, Column: 5",
+    "H_initialValue" : "try dictionary.value(for: CodingKeys.distance)"
+  },
+  {
+    "A_name" : "opacity",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 37, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "color",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 40, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "angle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 45, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "size",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 48, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "distance",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 51, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 53, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 55, Column: 5",
+        "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Encoder"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 55, Column: 5",
+    "H_initialValue" : "encoder.container(keyedBy: CodingKeys.self)"
+  },
+  {
+    "A_name" : "CodingKeys",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "String",
+      "CodingKey"
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 65, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "color",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 66, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "opacity",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 67, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "angle",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 68, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "size",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 69, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "distance",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DropShadowStyle.swift - Line: 70, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "DropShadowStyle",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "DropShadowStyle.swift - Line: 79, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

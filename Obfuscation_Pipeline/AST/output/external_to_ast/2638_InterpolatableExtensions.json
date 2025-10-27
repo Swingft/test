@@ -1,0 +1,509 @@
+[
+  {
+    "A_name" : "LottieColor",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "hsva",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "InterpolatableExtensions.swift - Line: 73, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "yuv",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "InterpolatableExtensions.swift - Line: 96, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 16, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "i",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "InterpolatableExtensions.swift - Line: 17, Column: 5",
+        "H_initialValue" : "floor(h * 6)"
+      },
+      {
+        "A_name" : "f",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "InterpolatableExtensions.swift - Line: 18, Column: 5",
+        "H_initialValue" : "h * 6 - i"
+      },
+      {
+        "A_name" : "p",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "InterpolatableExtensions.swift - Line: 19, Column: 5",
+        "H_initialValue" : "v * (1 - s)"
+      },
+      {
+        "A_name" : "q",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "InterpolatableExtensions.swift - Line: 20, Column: 5",
+        "H_initialValue" : "v * (1 - f * s)"
+      },
+      {
+        "A_name" : "t",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "InterpolatableExtensions.swift - Line: 21, Column: 5",
+        "H_initialValue" : "v * (1 - (1 - f) * s)"
+      }
+    ],
+    "I_parameterType" : [
+      "Double",
+      "Double",
+      "Double",
+      "Double"
+    ],
+    "I_parameters" : [
+      "h",
+      "s",
+      "v",
+      "a"
+    ]
+  },
+  {
+    "A_name" : "i",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 17, Column: 5",
+    "H_initialValue" : "floor(h * 6)"
+  },
+  {
+    "A_name" : "f",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 18, Column: 5",
+    "H_initialValue" : "h * 6 - i"
+  },
+  {
+    "A_name" : "p",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 19, Column: 5",
+    "H_initialValue" : "v * (1 - s)"
+  },
+  {
+    "A_name" : "q",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 20, Column: 5",
+    "H_initialValue" : "v * (1 - f * s)"
+  },
+  {
+    "A_name" : "t",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 21, Column: 5",
+    "H_initialValue" : "v * (1 - (1 - f) * s)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 62, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Double",
+      "Double",
+      "Double",
+      "Double"
+    ],
+    "I_parameters" : [
+      "y",
+      "u",
+      "v",
+      "a"
+    ]
+  },
+  {
+    "A_name" : "hsva",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 73, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "maxValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 74, Column: 5",
+    "H_initialValue" : "max(r, g, b)"
+  },
+  {
+    "A_name" : "minValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 75, Column: 5",
+    "H_initialValue" : "min(r, g, b)"
+  },
+  {
+    "A_name" : "h",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 77, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "s",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 77, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "v",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 77, Column: 5",
+    "H_initialValue" : "maxValue"
+  },
+  {
+    "A_name" : "d",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 79, Column: 5",
+    "H_initialValue" : "maxValue - minValue"
+  },
+  {
+    "A_name" : "yuv",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 96, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "y",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 98, Column: 5",
+    "H_initialValue" : "0.299 * r + 0.587 * g + 0.114 * b"
+  },
+  {
+    "A_name" : "u",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 99, Column: 5",
+    "H_initialValue" : "-0.14713 * r - 0.28886 * g + 0.436 * b"
+  },
+  {
+    "A_name" : "v",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 100, Column: 5",
+    "H_initialValue" : "0.615 * r - 0.51499 * g - 0.10001 * b"
+  },
+  {
+    "A_name" : "CurveVertex",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 108, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "InterpolatableExtensions.swift - Line: 109, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CurveVertex",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> CurveVertex"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 109, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CurveVertex",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> CurveVertex"
+  },
+  {
+    "A_name" : "BezierPath",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 119, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "InterpolatableExtensions.swift - Line: 120, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "newPath",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "InterpolatableExtensions.swift - Line: 121, Column: 5",
+            "H_initialValue" : "BezierPath()"
+          }
+        ],
+        "I_parameterType" : [
+          "BezierPath",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> BezierPath"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 120, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "newPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "InterpolatableExtensions.swift - Line: 121, Column: 5",
+        "H_initialValue" : "BezierPath()"
+      }
+    ],
+    "I_parameterType" : [
+      "BezierPath",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> BezierPath"
+  },
+  {
+    "A_name" : "newPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 121, Column: 5",
+    "H_initialValue" : "BezierPath()"
+  },
+  {
+    "A_name" : "fromVertex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 123, Column: 7",
+    "H_initialValue" : "elements[i].vertex"
+  },
+  {
+    "A_name" : "toVertex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 124, Column: 7",
+    "H_initialValue" : "to.elements[i].vertex"
+  },
+  {
+    "A_name" : "TextDocument",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Interpolatable"
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 133, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "InterpolatableExtensions.swift - Line: 134, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TextDocument",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "to",
+          "amount"
+        ],
+        "J_returnType" : "-> TextDocument"
+      }
+    ]
+  },
+  {
+    "A_name" : "interpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "InterpolatableExtensions.swift - Line: 134, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TextDocument",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "to",
+      "amount"
+    ],
+    "J_returnType" : "-> TextDocument"
+  }
+]

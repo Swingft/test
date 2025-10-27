@@ -1,0 +1,852 @@
+[
+  {
+    "A_name" : "CFGWrappingUtils",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 4, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "wrap0",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 5, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping () -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrap1",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 12, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (A) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrap2",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 20, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (A, B) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrap3",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 29, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (A, B, C) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrap4",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 39, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (A, B, C, D) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrap5",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 50, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (A, B, C, D, E) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrap6",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 62, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (A, B, C, D, E, F) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrap7",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 75, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (A, B, C, D, E, F, G) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrap8",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 89, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (A, B, C, D, E, F, G, H) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrap9",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 104, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (A, B, C, D, E, F, G, H, I) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrap10",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 120, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (A, B, C, D, E, F, G, H, I, J) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrapM0",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 138, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (S) -> () -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrapM1",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 146, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (S) -> (A) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrapM2",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 155, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (S) -> (A, B) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrapM3",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 165, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (S) -> (A, B, C) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrapM4",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 176, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (S) -> (A, B, C, D) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrapM5",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 188, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (S) -> (A, B, C, D, E) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrapM6",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 201, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (S) -> (A, B, C, D, E, F) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrapM7",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 215, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (S) -> (A, B, C, D, E, F, G) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrapM8",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 230, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (S) -> (A, B, C, D, E, F, G, H) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrapM9",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 246, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (S) -> (A, B, C, D, E, F, G, H, I) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      },
+      {
+        "A_name" : "wrapM10",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CFGWrappingUtils.swift - Line: 263, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (S) -> (A, B, C, D, E, F, G, H, I, J) -> R"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ([Any]) throws -> Any"
+      }
+    ]
+  },
+  {
+    "A_name" : "wrap0",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 5, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping () -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrap1",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 12, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (A) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrap2",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 20, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (A, B) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrap3",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 29, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (A, B, C) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrap4",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 39, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (A, B, C, D) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrap5",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 50, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (A, B, C, D, E) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrap6",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 62, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (A, B, C, D, E, F) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrap7",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 75, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (A, B, C, D, E, F, G) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrap8",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 89, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (A, B, C, D, E, F, G, H) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrap9",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 104, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (A, B, C, D, E, F, G, H, I) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrap10",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 120, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (A, B, C, D, E, F, G, H, I, J) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrapM0",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 138, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (S) -> () -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrapM1",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 146, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (S) -> (A) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrapM2",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 155, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (S) -> (A, B) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrapM3",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 165, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (S) -> (A, B, C) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrapM4",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 176, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (S) -> (A, B, C, D) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrapM5",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 188, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (S) -> (A, B, C, D, E) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrapM6",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 201, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (S) -> (A, B, C, D, E, F) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrapM7",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 215, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (S) -> (A, B, C, D, E, F, G) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrapM8",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 230, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (S) -> (A, B, C, D, E, F, G, H) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrapM9",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 246, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (S) -> (A, B, C, D, E, F, G, H, I) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  },
+  {
+    "A_name" : "wrapM10",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CFGWrappingUtils.swift - Line: 263, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (S) -> (A, B, C, D, E, F, G, H, I, J) -> R"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ([Any]) throws -> Any"
+  }
+]

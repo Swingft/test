@@ -1,0 +1,96 @@
+[
+  {
+    "A_name" : "TitleSteperTableViewCell",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UITableViewCell"
+    ],
+    "F_location" : "TitleSteperTableViewCell.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "stepper",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "IBOutlet",
+          "weak"
+        ],
+        "F_location" : "TitleSteperTableViewCell.swift - Line: 13, Column: 4",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "titleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "IBOutlet",
+          "weak"
+        ],
+        "F_location" : "TitleSteperTableViewCell.swift - Line: 14, Column: 4",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TitleSteperTableViewCell.swift - Line: 16, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "title"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "stepper",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "IBOutlet",
+      "weak"
+    ],
+    "F_location" : "TitleSteperTableViewCell.swift - Line: 13, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "titleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "IBOutlet",
+      "weak"
+    ],
+    "F_location" : "TitleSteperTableViewCell.swift - Line: 14, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TitleSteperTableViewCell.swift - Line: 16, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "title"
+    ]
+  }
+]

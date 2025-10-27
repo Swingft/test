@@ -1,0 +1,12 @@
+[
+  {
+    "A_name" : "package",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Package.swift - Line: 4, Column: 1",
+    "H_initialValue" : "Package(\n    name: \"CenteredCollectionView\",\n    platforms: [\n        .iOS(.v9),\n        .tvOS(.v9)\n    ],\n    products: [\n        .library(name: \"CenteredCollectionView\", targets: [\"CenteredCollectionView\"]),\n    ],\n    targets: [\n        .target(name: \"CenteredCollectionView\", path: \"CenteredCollectionView\/Classes\")\n    ],\n    swiftLanguageVersions: [\n        .v5\n    ]\n)"
+  }
+]

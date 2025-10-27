@@ -1,0 +1,360 @@
+[
+  {
+    "A_name" : "FilepathImageProvider",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnimationImageProvider"
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FilepathImageProvider.macOS.swift - Line: 21, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "CALayerContentsGravity"
+        ],
+        "I_parameters" : [
+          "filepath",
+          "contentsGravity"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FilepathImageProvider.macOS.swift - Line: 31, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL",
+          "CALayerContentsGravity"
+        ],
+        "I_parameters" : [
+          "filepath",
+          "contentsGravity"
+        ]
+      },
+      {
+        "A_name" : "imageForAsset",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FilepathImageProvider.macOS.swift - Line: 38, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "directPath",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FilepathImageProvider.macOS.swift - Line: 48, Column: 5",
+            "H_initialValue" : "filepath.appendingPathComponent(asset.name).path"
+          },
+          {
+            "A_name" : "pathWithDirectory",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FilepathImageProvider.macOS.swift - Line: 53, Column: 5",
+            "H_initialValue" : "filepath.appendingPathComponent(asset.directory).appendingPathComponent(asset.name).path"
+          }
+        ],
+        "I_parameterType" : [
+          "ImageAsset"
+        ],
+        "I_parameters" : [
+          "asset"
+        ],
+        "J_returnType" : "-> CGImage?"
+      },
+      {
+        "A_name" : "contentsGravity",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FilepathImageProvider.macOS.swift - Line: 62, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageAsset"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> CALayerContentsGravity"
+      },
+      {
+        "A_name" : "filepath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FilepathImageProvider.macOS.swift - Line: 68, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "contentsGravity",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FilepathImageProvider.macOS.swift - Line: 69, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 21, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "CALayerContentsGravity"
+    ],
+    "I_parameters" : [
+      "filepath",
+      "contentsGravity"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 31, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL",
+      "CALayerContentsGravity"
+    ],
+    "I_parameters" : [
+      "filepath",
+      "contentsGravity"
+    ]
+  },
+  {
+    "A_name" : "imageForAsset",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 38, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "directPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FilepathImageProvider.macOS.swift - Line: 48, Column: 5",
+        "H_initialValue" : "filepath.appendingPathComponent(asset.name).path"
+      },
+      {
+        "A_name" : "pathWithDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FilepathImageProvider.macOS.swift - Line: 53, Column: 5",
+        "H_initialValue" : "filepath.appendingPathComponent(asset.directory).appendingPathComponent(asset.name).path"
+      }
+    ],
+    "I_parameterType" : [
+      "ImageAsset"
+    ],
+    "I_parameters" : [
+      "asset"
+    ],
+    "J_returnType" : "-> CGImage?"
+  },
+  {
+    "A_name" : "directPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 48, Column: 5",
+    "H_initialValue" : "filepath.appendingPathComponent(asset.name).path"
+  },
+  {
+    "A_name" : "pathWithDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 53, Column: 5",
+    "H_initialValue" : "filepath.appendingPathComponent(asset.directory).appendingPathComponent(asset.name).path"
+  },
+  {
+    "A_name" : "contentsGravity",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 62, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageAsset"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> CALayerContentsGravity"
+  },
+  {
+    "A_name" : "filepath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 68, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "contentsGravity",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 69, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "FilepathImageProvider",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Equatable"
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 72, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "FilepathImageProvider.macOS.swift - Line: 73, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FilepathImageProvider",
+          "FilepathImageProvider"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 73, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FilepathImageProvider",
+      "FilepathImageProvider"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "NSImage",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 78, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lottie_CGImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "FilepathImageProvider.macOS.swift - Line: 79, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "lottie_CGImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "FilepathImageProvider.macOS.swift - Line: 79, Column: 3",
+    "H_initialValue" : ""
+  }
+]

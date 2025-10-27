@@ -1,0 +1,2119 @@
+[
+  {
+    "A_name" : "Whitelist",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 60, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tagNames",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 61, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "attributes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 62, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "enforcedAttributes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 63, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "protocols",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 64, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "preserveRelativeLinks",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 65, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "none",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Whitelist.swift - Line: 72, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Whitelist"
+      },
+      {
+        "A_name" : "simpleText",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Whitelist.swift - Line: 82, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "basic",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Whitelist.swift - Line: 101, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "basicWithImages",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Whitelist.swift - Line: 125, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "relaxed",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Whitelist.swift - Line: 143, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 181, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "addTags",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Whitelist.swift - Line: 195, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "removeTags",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Whitelist.swift - Line: 210, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "addAttributes",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Whitelist.swift - Line: 243, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tagName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 248, Column: 9",
+            "H_initialValue" : "TagName.valueOf(tag)"
+          },
+          {
+            "A_name" : "attributeSet",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 252, Column: 9",
+            "H_initialValue" : "Set<AttributeKey>()"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "removeAttributes",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Whitelist.swift - Line: 285, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tagName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 290, Column: 9",
+            "H_initialValue" : "TagName.valueOf(tag)"
+          },
+          {
+            "A_name" : "attributeSet",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 291, Column: 9",
+            "H_initialValue" : "Set<AttributeKey>()"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "addEnforcedAttribute",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Whitelist.swift - Line: 338, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tagName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 344, Column: 9",
+            "H_initialValue" : "TagName.valueOf(tag)"
+          },
+          {
+            "A_name" : "attrKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 348, Column: 9",
+            "H_initialValue" : "AttributeKey.valueOf(key)"
+          },
+          {
+            "A_name" : "attrVal",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 349, Column: 9",
+            "H_initialValue" : "AttributeValue.valueOf(value)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "removeEnforcedAttribute",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Whitelist.swift - Line: 368, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tagName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 373, Column: 9",
+            "H_initialValue" : "TagName.valueOf(tag)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "preserveRelativeLinks",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Whitelist.swift - Line: 402, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Whitelist"
+      },
+      {
+        "A_name" : "addProtocols",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Whitelist.swift - Line: 424, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tagName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 429, Column: 9",
+            "H_initialValue" : "TagName.valueOf(tag)"
+          },
+          {
+            "A_name" : "attrKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 430, Column: 9",
+            "H_initialValue" : "AttributeKey.valueOf(key)"
+          },
+          {
+            "A_name" : "attrMap",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 431, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "protSet",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 432, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "removeProtocols",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Whitelist.swift - Line: 470, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tagName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 475, Column: 9",
+            "H_initialValue" : "TagName.valueOf(tag)"
+          },
+          {
+            "A_name" : "attrKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 476, Column: 9",
+            "H_initialValue" : "AttributeKey.valueOf(key)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Whitelist"
+      },
+      {
+        "A_name" : "isSafeTag",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 507, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "isSafeAttribute",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 518, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tag",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 519, Column: 9",
+            "H_initialValue" : "TagName.valueOf(tagName)"
+          },
+          {
+            "A_name" : "key",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 520, Column: 9",
+            "H_initialValue" : "AttributeKey.valueOf(attr.getKey())"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Element",
+          "Attribute"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "testValidProtocol",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 537, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "value",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 540, Column: 9",
+            "H_initialValue" : "try el.absUrl(attr.getKey())"
+          }
+        ],
+        "I_parameterType" : [
+          "Element",
+          "Attribute",
+          "Set<Protocol>"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Bool"
+      },
+      {
+        "A_name" : "isValidAnchor",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 570, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "getEnforcedAttributes",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 574, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "attrs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 575, Column: 9",
+            "H_initialValue" : "Attributes()"
+          },
+          {
+            "A_name" : "tag",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Whitelist.swift - Line: 576, Column: 9",
+            "H_initialValue" : "TagName.valueOf(tagName)"
+          }
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "->Attributes"
+      }
+    ]
+  },
+  {
+    "A_name" : "tagNames",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 61, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "attributes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 62, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "enforcedAttributes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 63, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "protocols",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 64, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "preserveRelativeLinks",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 65, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "none",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Whitelist.swift - Line: 72, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Whitelist"
+  },
+  {
+    "A_name" : "simpleText",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Whitelist.swift - Line: 82, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "basic",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Whitelist.swift - Line: 101, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "basicWithImages",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Whitelist.swift - Line: 125, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "relaxed",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Whitelist.swift - Line: 143, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 181, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "addTags",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Whitelist.swift - Line: 195, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "removeTags",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Whitelist.swift - Line: 210, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "tagName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 216, Column: 13",
+    "H_initialValue" : "TagName.valueOf(tag)"
+  },
+  {
+    "A_name" : "addAttributes",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Whitelist.swift - Line: 243, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tagName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 248, Column: 9",
+        "H_initialValue" : "TagName.valueOf(tag)"
+      },
+      {
+        "A_name" : "attributeSet",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 252, Column: 9",
+        "H_initialValue" : "Set<AttributeKey>()"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "tagName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 248, Column: 9",
+    "H_initialValue" : "TagName.valueOf(tag)"
+  },
+  {
+    "A_name" : "attributeSet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 252, Column: 9",
+    "H_initialValue" : "Set<AttributeKey>()"
+  },
+  {
+    "A_name" : "removeAttributes",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Whitelist.swift - Line: 285, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tagName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 290, Column: 9",
+        "H_initialValue" : "TagName.valueOf(tag)"
+      },
+      {
+        "A_name" : "attributeSet",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 291, Column: 9",
+        "H_initialValue" : "Set<AttributeKey>()"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "tagName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 290, Column: 9",
+    "H_initialValue" : "TagName.valueOf(tag)"
+  },
+  {
+    "A_name" : "attributeSet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 291, Column: 9",
+    "H_initialValue" : "Set<AttributeKey>()"
+  },
+  {
+    "A_name" : "currentSet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 312, Column: 17",
+    "H_initialValue" : "attributes[name]!"
+  },
+  {
+    "A_name" : "addEnforcedAttribute",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Whitelist.swift - Line: 338, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tagName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 344, Column: 9",
+        "H_initialValue" : "TagName.valueOf(tag)"
+      },
+      {
+        "A_name" : "attrKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 348, Column: 9",
+        "H_initialValue" : "AttributeKey.valueOf(key)"
+      },
+      {
+        "A_name" : "attrVal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 349, Column: 9",
+        "H_initialValue" : "AttributeValue.valueOf(value)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "tagName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 344, Column: 9",
+    "H_initialValue" : "TagName.valueOf(tag)"
+  },
+  {
+    "A_name" : "attrKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 348, Column: 9",
+    "H_initialValue" : "AttributeKey.valueOf(key)"
+  },
+  {
+    "A_name" : "attrVal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 349, Column: 9",
+    "H_initialValue" : "AttributeValue.valueOf(value)"
+  },
+  {
+    "A_name" : "attrMap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 354, Column: 13",
+    "H_initialValue" : "Dictionary<AttributeKey, AttributeValue>()"
+  },
+  {
+    "A_name" : "removeEnforcedAttribute",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Whitelist.swift - Line: 368, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tagName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 373, Column: 9",
+        "H_initialValue" : "TagName.valueOf(tag)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "tagName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 373, Column: 9",
+    "H_initialValue" : "TagName.valueOf(tag)"
+  },
+  {
+    "A_name" : "attrKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 375, Column: 13",
+    "H_initialValue" : "AttributeKey.valueOf(key)"
+  },
+  {
+    "A_name" : "attrMap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 376, Column: 13",
+    "H_initialValue" : "enforcedAttributes[tagName]!"
+  },
+  {
+    "A_name" : "preserveRelativeLinks",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Whitelist.swift - Line: 402, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Whitelist"
+  },
+  {
+    "A_name" : "addProtocols",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Whitelist.swift - Line: 424, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tagName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 429, Column: 9",
+        "H_initialValue" : "TagName.valueOf(tag)"
+      },
+      {
+        "A_name" : "attrKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 430, Column: 9",
+        "H_initialValue" : "AttributeKey.valueOf(key)"
+      },
+      {
+        "A_name" : "attrMap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 431, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "protSet",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 432, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "tagName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 429, Column: 9",
+    "H_initialValue" : "TagName.valueOf(tag)"
+  },
+  {
+    "A_name" : "attrKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 430, Column: 9",
+    "H_initialValue" : "AttributeKey.valueOf(key)"
+  },
+  {
+    "A_name" : "attrMap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 431, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "protSet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 432, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "prot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 450, Column: 13",
+    "H_initialValue" : "Protocol.valueOf(ptl)"
+  },
+  {
+    "A_name" : "removeProtocols",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Whitelist.swift - Line: 470, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tagName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 475, Column: 9",
+        "H_initialValue" : "TagName.valueOf(tag)"
+      },
+      {
+        "A_name" : "attrKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 476, Column: 9",
+        "H_initialValue" : "AttributeKey.valueOf(key)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Whitelist"
+  },
+  {
+    "A_name" : "tagName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 475, Column: 9",
+    "H_initialValue" : "TagName.valueOf(tag)"
+  },
+  {
+    "A_name" : "attrKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 476, Column: 9",
+    "H_initialValue" : "AttributeKey.valueOf(key)"
+  },
+  {
+    "A_name" : "attrMap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 479, Column: 13",
+    "H_initialValue" : "self.protocols[tagName]!"
+  },
+  {
+    "A_name" : "protSet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 481, Column: 17",
+    "H_initialValue" : "attrMap[attrKey]!"
+  },
+  {
+    "A_name" : "prot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 484, Column: 21",
+    "H_initialValue" : "Protocol.valueOf(ptl)"
+  },
+  {
+    "A_name" : "isSafeTag",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 507, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "isSafeAttribute",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 518, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tag",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 519, Column: 9",
+        "H_initialValue" : "TagName.valueOf(tagName)"
+      },
+      {
+        "A_name" : "key",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 520, Column: 9",
+        "H_initialValue" : "AttributeKey.valueOf(attr.getKey())"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Element",
+      "Attribute"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "tag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 519, Column: 9",
+    "H_initialValue" : "TagName.valueOf(tagName)"
+  },
+  {
+    "A_name" : "key",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 520, Column: 9",
+    "H_initialValue" : "AttributeKey.valueOf(attr.getKey())"
+  },
+  {
+    "A_name" : "attrProts",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 525, Column: 21",
+    "H_initialValue" : "protocols[tag]!"
+  },
+  {
+    "A_name" : "testValidProtocol",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 537, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 540, Column: 9",
+        "H_initialValue" : "try el.absUrl(attr.getKey())"
+      }
+    ],
+    "I_parameterType" : [
+      "Element",
+      "Attribute",
+      "Set<Protocol>"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Bool"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 540, Column: 9",
+    "H_initialValue" : "try el.absUrl(attr.getKey())"
+  },
+  {
+    "A_name" : "prot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 549, Column: 13",
+    "H_initialValue" : "ptl.toString()"
+  },
+  {
+    "A_name" : "isValidAnchor",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 570, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "getEnforcedAttributes",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 574, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "attrs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 575, Column: 9",
+        "H_initialValue" : "Attributes()"
+      },
+      {
+        "A_name" : "tag",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 576, Column: 9",
+        "H_initialValue" : "TagName.valueOf(tagName)"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->Attributes"
+  },
+  {
+    "A_name" : "attrs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 575, Column: 9",
+    "H_initialValue" : "Attributes()"
+  },
+  {
+    "A_name" : "tag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 576, Column: 9",
+    "H_initialValue" : "TagName.valueOf(tagName)"
+  },
+  {
+    "A_name" : "TagName",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "TypedValue"
+    ],
+    "F_location" : "Whitelist.swift - Line: 589, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Whitelist.swift - Line: 590, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "valueOf",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Whitelist.swift - Line: 594, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> TagName"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Whitelist.swift - Line: 590, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "valueOf",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Whitelist.swift - Line: 594, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> TagName"
+  },
+  {
+    "A_name" : "AttributeKey",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "TypedValue"
+    ],
+    "F_location" : "Whitelist.swift - Line: 599, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Whitelist.swift - Line: 600, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "valueOf",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Whitelist.swift - Line: 604, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> AttributeKey"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Whitelist.swift - Line: 600, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "valueOf",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Whitelist.swift - Line: 604, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> AttributeKey"
+  },
+  {
+    "A_name" : "AttributeValue",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "TypedValue"
+    ],
+    "F_location" : "Whitelist.swift - Line: 609, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Whitelist.swift - Line: 610, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "valueOf",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Whitelist.swift - Line: 614, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> AttributeValue"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Whitelist.swift - Line: 610, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "valueOf",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Whitelist.swift - Line: 614, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> AttributeValue"
+  },
+  {
+    "A_name" : "Protocol",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "TypedValue"
+    ],
+    "F_location" : "Whitelist.swift - Line: 619, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Whitelist.swift - Line: 620, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "valueOf",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Whitelist.swift - Line: 624, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Protocol"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Whitelist.swift - Line: 620, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "valueOf",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Whitelist.swift - Line: 624, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Protocol"
+  },
+  {
+    "A_name" : "TypedValue",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 629, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 630, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 632, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "toString",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 636, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 630, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 632, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "toString",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 636, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "TypedValue",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable"
+    ],
+    "F_location" : "Whitelist.swift - Line: 641, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "hash",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Whitelist.swift - Line: 642, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "inout Hasher"
+        ],
+        "I_parameters" : [
+          "into"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "hash",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 642, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "inout Hasher"
+    ],
+    "I_parameters" : [
+      "into"
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Whitelist.swift - Line: 647, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TypedValue",
+      "TypedValue"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  }
+]

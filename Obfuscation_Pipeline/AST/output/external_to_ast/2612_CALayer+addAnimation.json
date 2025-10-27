@@ -1,0 +1,1074 @@
+[
+  {
+    "A_name" : "CALayer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 6, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "addAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 12, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LayerProperty<ValueRepresentation>",
+          "KeyframeGroup<KeyframeValue>",
+          "(KeyframeValue) throws -> ValueRepresentation",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "keyframes",
+          "value",
+          "context"
+        ]
+      },
+      {
+        "A_name" : "defaultAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 41, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "keyframes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 49, Column: 5",
+            "H_initialValue" : "keyframeGroup.keyframes"
+          },
+          {
+            "A_name" : "animationSegments",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 86, Column: 5",
+            "H_initialValue" : "keyframes.segmentsSplitByCalculationMode()"
+          }
+        ],
+        "I_parameterType" : [
+          "LayerProperty<ValueRepresentation>",
+          "KeyframeGroup<KeyframeValue>",
+          "(KeyframeValue) throws -> ValueRepresentation",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "keyframes",
+          "value",
+          "context"
+        ],
+        "J_returnType" : "-> CAAnimation?"
+      },
+      {
+        "A_name" : "customizedAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "nonobjc"
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 108, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LayerProperty<ValueRepresentation>",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "context"
+        ],
+        "J_returnType" : "-> CAPropertyAnimation?"
+      },
+      {
+        "A_name" : "singleKeyframeAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 145, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "animation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 171, Column: 5",
+            "H_initialValue" : "CABasicAnimation(keyPath: property.caLayerKeypath)"
+          }
+        ],
+        "I_parameterType" : [
+          "LayerProperty<ValueRepresentation>",
+          "ValueRepresentation",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "for",
+          "keyframeValue",
+          "writeDirectlyToPropertyIfPossible"
+        ],
+        "J_returnType" : "-> CABasicAnimation?"
+      },
+      {
+        "A_name" : "animationGroup",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 179, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "segmentAnimations",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 190, Column: 5",
+            "H_initialValue" : "try animationSegments.indices.map { index in\n      let animationSegment = animationSegments[index]\n      var segmentStartTime = try context.time(forFrame: animationSegment.first!.time)\n      var segmentEndTime = try context.time(forFrame: animationSegment.last!.time)\n\n      \/\/ Every portion of the animation timeline has to be covered by a `CAKeyframeAnimation`,\n      \/\/ so if this is the first or last segment then the start\/end time should be exactly\n      \/\/ the start\/end time of the animation itself.\n      let isFirstSegment = (index == animationSegments.indices.first!)\n      let isLastSegment = (index == animationSegments.indices.last!)\n\n      if isFirstSegment {\n        segmentStartTime = min(\n          try context.time(forFrame: context.animation.startFrame),\n          segmentStartTime)\n      }\n\n      if isLastSegment {\n        segmentEndTime = max(\n          try context.time(forFrame: context.animation.endFrame),\n          segmentEndTime)\n      }\n\n      let segmentDuration = segmentEndTime - segmentStartTime\n\n      \/\/ We're building `CAKeyframeAnimation`s, so the `keyTimes` are expressed\n      \/\/ relative to 0 (`segmentStartTime`) and 1 (`segmentEndTime`). This is different\n      \/\/ from the default behavior of the `keyframeAnimation` method, where times\n      \/\/ are expressed relative to the entire animation duration.\n      let customKeyTimes = try animationSegment.map { keyframeModel -> NSNumber in\n        let keyframeTime = try context.time(forFrame: keyframeModel.time)\n        let segmentProgressTime = ((keyframeTime - segmentStartTime) \/ segmentDuration)\n        return segmentProgressTime as NSNumber\n      }\n\n      let animation = try keyframeAnimation(\n        for: property,\n        keyframes: animationSegment,\n        value: keyframeValueMapping,\n        customKeyTimes: customKeyTimes,\n        context: context)\n\n      animation.duration = segmentDuration\n      animation.beginTime = segmentStartTime\n      return animation\n    }"
+          },
+          {
+            "A_name" : "fullAnimation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 237, Column: 5",
+            "H_initialValue" : "CAAnimationGroup()"
+          }
+        ],
+        "I_parameterType" : [
+          "LayerProperty<ValueRepresentation>",
+          "[[Keyframe<KeyframeValue>]]",
+          "(KeyframeValue) throws -> ValueRepresentation",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "animationSegments",
+          "value",
+          "context"
+        ],
+        "J_returnType" : "-> CAAnimationGroup"
+      },
+      {
+        "A_name" : "keyframeAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 243, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "keyTimes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 254, Column: 5",
+            "H_initialValue" : "try customKeyTimes ?? keyframes.map { keyframeModel -> NSNumber in\n      NSNumber(value: Float(try context.progressTime(for: keyframeModel.time)))\n    }"
+          },
+          {
+            "A_name" : "timingFunctions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 258, Column: 5",
+            "H_initialValue" : "timingFunctions(for: keyframes)"
+          },
+          {
+            "A_name" : "calculationMode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 259, Column: 5",
+            "H_initialValue" : "calculationMode(for: keyframes)"
+          },
+          {
+            "A_name" : "animation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 261, Column: 5",
+            "H_initialValue" : "CAKeyframeAnimation(keyPath: property.caLayerKeypath)"
+          }
+        ],
+        "I_parameterType" : [
+          "LayerProperty<ValueRepresentation>",
+          "[Keyframe<KeyframeValue>]",
+          "(KeyframeValue) throws -> ValueRepresentation",
+          "[NSNumber]?",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "for",
+          "keyframes",
+          "value",
+          "customKeyTimes",
+          "context"
+        ],
+        "J_returnType" : "-> CAKeyframeAnimation"
+      },
+      {
+        "A_name" : "calculationMode",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 300, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[Keyframe<KeyframeValue>]"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> CAAnimationCalculationMode"
+      },
+      {
+        "A_name" : "timingFunctions",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 315, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "timingFunctions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 320, Column: 5",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+          "[Keyframe<KeyframeValue>]"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> [CAMediaTimingFunction]"
+      },
+      {
+        "A_name" : "path",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 343, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "path",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 348, Column: 5",
+            "H_initialValue" : "CGMutablePath()"
+          }
+        ],
+        "I_parameterType" : [
+          "[Keyframe<KeyframeValue>]",
+          "(KeyframeValue) throws -> CGPoint"
+        ],
+        "I_parameters" : [
+          "keyframes",
+          "value"
+        ],
+        "J_returnType" : "-> CGPath"
+      },
+      {
+        "A_name" : "validate",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 380, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "inout [ValueRepresentation]",
+          "inout [NSNumber]",
+          "inout [CAMediaTimingFunction]",
+          "CAAnimationCalculationMode",
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "values",
+          "keyTimes",
+          "timingFunctions",
+          "for",
+          "context"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "addAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 12, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LayerProperty<ValueRepresentation>",
+      "KeyframeGroup<KeyframeValue>",
+      "(KeyframeValue) throws -> ValueRepresentation",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "keyframes",
+      "value",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "timedAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 31, Column: 7",
+    "H_initialValue" : "defaultAnimation.timed(with: context, for: self)"
+  },
+  {
+    "A_name" : "defaultAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 41, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "keyframes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 49, Column: 5",
+        "H_initialValue" : "keyframeGroup.keyframes"
+      },
+      {
+        "A_name" : "animationSegments",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 86, Column: 5",
+        "H_initialValue" : "keyframes.segmentsSplitByCalculationMode()"
+      }
+    ],
+    "I_parameterType" : [
+      "LayerProperty<ValueRepresentation>",
+      "KeyframeGroup<KeyframeValue>",
+      "(KeyframeValue) throws -> ValueRepresentation",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "keyframes",
+      "value",
+      "context"
+    ],
+    "J_returnType" : "-> CAAnimation?"
+  },
+  {
+    "A_name" : "keyframes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 49, Column: 5",
+    "H_initialValue" : "keyframeGroup.keyframes"
+  },
+  {
+    "A_name" : "animationSegments",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 86, Column: 5",
+    "H_initialValue" : "keyframes.segmentsSplitByCalculationMode()"
+  },
+  {
+    "A_name" : "customizedAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "nonobjc"
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 108, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LayerProperty<ValueRepresentation>",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "context"
+    ],
+    "J_returnType" : "-> CAPropertyAnimation?"
+  },
+  {
+    "A_name" : "singleKeyframeAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 145, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "animation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 171, Column: 5",
+        "H_initialValue" : "CABasicAnimation(keyPath: property.caLayerKeypath)"
+      }
+    ],
+    "I_parameterType" : [
+      "LayerProperty<ValueRepresentation>",
+      "ValueRepresentation",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "for",
+      "keyframeValue",
+      "writeDirectlyToPropertyIfPossible"
+    ],
+    "J_returnType" : "-> CABasicAnimation?"
+  },
+  {
+    "A_name" : "currentValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 161, Column: 7",
+    "H_initialValue" : "value(forKey: property.caLayerKeypath) as? ValueRepresentation"
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 171, Column: 5",
+    "H_initialValue" : "CABasicAnimation(keyPath: property.caLayerKeypath)"
+  },
+  {
+    "A_name" : "animationGroup",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 179, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "segmentAnimations",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 190, Column: 5",
+        "H_initialValue" : "try animationSegments.indices.map { index in\n      let animationSegment = animationSegments[index]\n      var segmentStartTime = try context.time(forFrame: animationSegment.first!.time)\n      var segmentEndTime = try context.time(forFrame: animationSegment.last!.time)\n\n      \/\/ Every portion of the animation timeline has to be covered by a `CAKeyframeAnimation`,\n      \/\/ so if this is the first or last segment then the start\/end time should be exactly\n      \/\/ the start\/end time of the animation itself.\n      let isFirstSegment = (index == animationSegments.indices.first!)\n      let isLastSegment = (index == animationSegments.indices.last!)\n\n      if isFirstSegment {\n        segmentStartTime = min(\n          try context.time(forFrame: context.animation.startFrame),\n          segmentStartTime)\n      }\n\n      if isLastSegment {\n        segmentEndTime = max(\n          try context.time(forFrame: context.animation.endFrame),\n          segmentEndTime)\n      }\n\n      let segmentDuration = segmentEndTime - segmentStartTime\n\n      \/\/ We're building `CAKeyframeAnimation`s, so the `keyTimes` are expressed\n      \/\/ relative to 0 (`segmentStartTime`) and 1 (`segmentEndTime`). This is different\n      \/\/ from the default behavior of the `keyframeAnimation` method, where times\n      \/\/ are expressed relative to the entire animation duration.\n      let customKeyTimes = try animationSegment.map { keyframeModel -> NSNumber in\n        let keyframeTime = try context.time(forFrame: keyframeModel.time)\n        let segmentProgressTime = ((keyframeTime - segmentStartTime) \/ segmentDuration)\n        return segmentProgressTime as NSNumber\n      }\n\n      let animation = try keyframeAnimation(\n        for: property,\n        keyframes: animationSegment,\n        value: keyframeValueMapping,\n        customKeyTimes: customKeyTimes,\n        context: context)\n\n      animation.duration = segmentDuration\n      animation.beginTime = segmentStartTime\n      return animation\n    }"
+      },
+      {
+        "A_name" : "fullAnimation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 237, Column: 5",
+        "H_initialValue" : "CAAnimationGroup()"
+      }
+    ],
+    "I_parameterType" : [
+      "LayerProperty<ValueRepresentation>",
+      "[[Keyframe<KeyframeValue>]]",
+      "(KeyframeValue) throws -> ValueRepresentation",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "animationSegments",
+      "value",
+      "context"
+    ],
+    "J_returnType" : "-> CAAnimationGroup"
+  },
+  {
+    "A_name" : "segmentAnimations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 190, Column: 5",
+    "H_initialValue" : "try animationSegments.indices.map { index in\n      let animationSegment = animationSegments[index]\n      var segmentStartTime = try context.time(forFrame: animationSegment.first!.time)\n      var segmentEndTime = try context.time(forFrame: animationSegment.last!.time)\n\n      \/\/ Every portion of the animation timeline has to be covered by a `CAKeyframeAnimation`,\n      \/\/ so if this is the first or last segment then the start\/end time should be exactly\n      \/\/ the start\/end time of the animation itself.\n      let isFirstSegment = (index == animationSegments.indices.first!)\n      let isLastSegment = (index == animationSegments.indices.last!)\n\n      if isFirstSegment {\n        segmentStartTime = min(\n          try context.time(forFrame: context.animation.startFrame),\n          segmentStartTime)\n      }\n\n      if isLastSegment {\n        segmentEndTime = max(\n          try context.time(forFrame: context.animation.endFrame),\n          segmentEndTime)\n      }\n\n      let segmentDuration = segmentEndTime - segmentStartTime\n\n      \/\/ We're building `CAKeyframeAnimation`s, so the `keyTimes` are expressed\n      \/\/ relative to 0 (`segmentStartTime`) and 1 (`segmentEndTime`). This is different\n      \/\/ from the default behavior of the `keyframeAnimation` method, where times\n      \/\/ are expressed relative to the entire animation duration.\n      let customKeyTimes = try animationSegment.map { keyframeModel -> NSNumber in\n        let keyframeTime = try context.time(forFrame: keyframeModel.time)\n        let segmentProgressTime = ((keyframeTime - segmentStartTime) \/ segmentDuration)\n        return segmentProgressTime as NSNumber\n      }\n\n      let animation = try keyframeAnimation(\n        for: property,\n        keyframes: animationSegment,\n        value: keyframeValueMapping,\n        customKeyTimes: customKeyTimes,\n        context: context)\n\n      animation.duration = segmentDuration\n      animation.beginTime = segmentStartTime\n      return animation\n    }"
+  },
+  {
+    "A_name" : "animationSegment",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 191, Column: 7",
+    "H_initialValue" : "animationSegments[index]"
+  },
+  {
+    "A_name" : "segmentStartTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 192, Column: 7",
+    "H_initialValue" : "try context.time(forFrame: animationSegment.first!.time)"
+  },
+  {
+    "A_name" : "segmentEndTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 193, Column: 7",
+    "H_initialValue" : "try context.time(forFrame: animationSegment.last!.time)"
+  },
+  {
+    "A_name" : "isFirstSegment",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 198, Column: 7",
+    "H_initialValue" : "(index == animationSegments.indices.first!)"
+  },
+  {
+    "A_name" : "isLastSegment",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 199, Column: 7",
+    "H_initialValue" : "(index == animationSegments.indices.last!)"
+  },
+  {
+    "A_name" : "segmentDuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 213, Column: 7",
+    "H_initialValue" : "segmentEndTime - segmentStartTime"
+  },
+  {
+    "A_name" : "customKeyTimes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 219, Column: 7",
+    "H_initialValue" : "try animationSegment.map { keyframeModel -> NSNumber in\n        let keyframeTime = try context.time(forFrame: keyframeModel.time)\n        let segmentProgressTime = ((keyframeTime - segmentStartTime) \/ segmentDuration)\n        return segmentProgressTime as NSNumber\n      }"
+  },
+  {
+    "A_name" : "keyframeTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 220, Column: 9",
+    "H_initialValue" : "try context.time(forFrame: keyframeModel.time)"
+  },
+  {
+    "A_name" : "segmentProgressTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 221, Column: 9",
+    "H_initialValue" : "((keyframeTime - segmentStartTime) \/ segmentDuration)"
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 225, Column: 7",
+    "H_initialValue" : "try keyframeAnimation(\n        for: property,\n        keyframes: animationSegment,\n        value: keyframeValueMapping,\n        customKeyTimes: customKeyTimes,\n        context: context)"
+  },
+  {
+    "A_name" : "fullAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 237, Column: 5",
+    "H_initialValue" : "CAAnimationGroup()"
+  },
+  {
+    "A_name" : "keyframeAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 243, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "keyTimes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 254, Column: 5",
+        "H_initialValue" : "try customKeyTimes ?? keyframes.map { keyframeModel -> NSNumber in\n      NSNumber(value: Float(try context.progressTime(for: keyframeModel.time)))\n    }"
+      },
+      {
+        "A_name" : "timingFunctions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 258, Column: 5",
+        "H_initialValue" : "timingFunctions(for: keyframes)"
+      },
+      {
+        "A_name" : "calculationMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 259, Column: 5",
+        "H_initialValue" : "calculationMode(for: keyframes)"
+      },
+      {
+        "A_name" : "animation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 261, Column: 5",
+        "H_initialValue" : "CAKeyframeAnimation(keyPath: property.caLayerKeypath)"
+      }
+    ],
+    "I_parameterType" : [
+      "LayerProperty<ValueRepresentation>",
+      "[Keyframe<KeyframeValue>]",
+      "(KeyframeValue) throws -> ValueRepresentation",
+      "[NSNumber]?",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "for",
+      "keyframes",
+      "value",
+      "customKeyTimes",
+      "context"
+    ],
+    "J_returnType" : "-> CAKeyframeAnimation"
+  },
+  {
+    "A_name" : "keyTimes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 254, Column: 5",
+    "H_initialValue" : "try customKeyTimes ?? keyframes.map { keyframeModel -> NSNumber in\n      NSNumber(value: Float(try context.progressTime(for: keyframeModel.time)))\n    }"
+  },
+  {
+    "A_name" : "timingFunctions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 258, Column: 5",
+    "H_initialValue" : "timingFunctions(for: keyframes)"
+  },
+  {
+    "A_name" : "calculationMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 259, Column: 5",
+    "H_initialValue" : "calculationMode(for: keyframes)"
+  },
+  {
+    "A_name" : "animation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 261, Column: 5",
+    "H_initialValue" : "CAKeyframeAnimation(keyPath: property.caLayerKeypath)"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 278, Column: 7",
+    "H_initialValue" : "try keyframes.map { keyframeModel in\n        try keyframeValueMapping(keyframeModel.value)\n      }"
+  },
+  {
+    "A_name" : "calculationMode",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 300, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Keyframe<KeyframeValue>]"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> CAAnimationCalculationMode"
+  },
+  {
+    "A_name" : "timingFunctions",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 315, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "timingFunctions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 320, Column: 5",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+      "[Keyframe<KeyframeValue>]"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> [CAMediaTimingFunction]"
+  },
+  {
+    "A_name" : "timingFunctions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 320, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "nextKeyframe",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 325, Column: 7",
+    "H_initialValue" : "keyframes[index + 1]"
+  },
+  {
+    "A_name" : "controlPoint1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 327, Column: 7",
+    "H_initialValue" : "keyframe.outTangent?.pointValue ?? .zero"
+  },
+  {
+    "A_name" : "controlPoint2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 328, Column: 7",
+    "H_initialValue" : "nextKeyframe.inTangent?.pointValue ?? CGPoint(x: 1, y: 1)"
+  },
+  {
+    "A_name" : "path",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 343, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "path",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 348, Column: 5",
+        "H_initialValue" : "CGMutablePath()"
+      }
+    ],
+    "I_parameterType" : [
+      "[Keyframe<KeyframeValue>]",
+      "(KeyframeValue) throws -> CGPoint"
+    ],
+    "I_parameters" : [
+      "keyframes",
+      "value"
+    ],
+    "J_returnType" : "-> CGPath"
+  },
+  {
+    "A_name" : "path",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 348, Column: 5",
+    "H_initialValue" : "CGMutablePath()"
+  },
+  {
+    "A_name" : "nextKeyframe",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 356, Column: 9",
+    "H_initialValue" : "positionKeyframes[index + 1]"
+  },
+  {
+    "A_name" : "validate",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 380, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "inout [ValueRepresentation]",
+      "inout [NSNumber]",
+      "inout [CAMediaTimingFunction]",
+      "CAAnimationCalculationMode",
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "values",
+      "keyTimes",
+      "timingFunctions",
+      "for",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "RandomAccessCollection",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 434, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "segmentsSplitByCalculationMode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 439, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "segments",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 442, Column: 5",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "currentSegment",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CALayer+addAnimation.swift - Line: 443, Column: 5",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> [[Element]]"
+      }
+    ]
+  },
+  {
+    "A_name" : "segmentsSplitByCalculationMode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 439, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "segments",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 442, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "currentSegment",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CALayer+addAnimation.swift - Line: 443, Column: 5",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> [[Element]]"
+  },
+  {
+    "A_name" : "segments",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 442, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "currentSegment",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CALayer+addAnimation.swift - Line: 443, Column: 5",
+    "H_initialValue" : "[]"
+  }
+]

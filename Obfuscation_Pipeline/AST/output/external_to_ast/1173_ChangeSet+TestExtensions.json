@@ -1,0 +1,1280 @@
+[
+  {
+    "A_name" : "ItemModelTypeWrapper",
+    "B_kind" : "class",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "item",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 14, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "deleted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 16, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "updated",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 17, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "moved",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 20, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "I"
+        ],
+        "I_parameters" : [
+          "item"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "item",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 14, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "deleted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 16, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "updated",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 17, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "moved",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 20, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "I"
+    ],
+    "I_parameters" : [
+      "item"
+    ]
+  },
+  {
+    "A_name" : "SectionModelTypeWrapper",
+    "B_kind" : "class",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 25, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "updated",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 26, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "deleted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 27, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "moved",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 28, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "items",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 30, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "section",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "S"
+        ],
+        "I_parameters" : [
+          "section"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "updated",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 26, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "deleted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 27, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "moved",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 28, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "items",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 30, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "section",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "S"
+    ],
+    "I_parameters" : [
+      "section"
+    ]
+  },
+  {
+    "A_name" : "Changeset",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 40, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "onlyContains",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 41, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Int",
+          "Int",
+          "Int",
+          "Int",
+          "Int",
+          "Int",
+          "Int"
+        ],
+        "I_parameters" : [
+          "insertedSections",
+          "deletedSections",
+          "movedSections",
+          "updatedSections",
+          "insertedItems",
+          "deletedItems",
+          "movedItems",
+          "updatedItems"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "onlyContains",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 41, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Int",
+      "Int",
+      "Int",
+      "Int",
+      "Int",
+      "Int",
+      "Int"
+    ],
+    "I_parameters" : [
+      "insertedSections",
+      "deletedSections",
+      "movedSections",
+      "updatedSections",
+      "insertedItems",
+      "deletedItems",
+      "movedItems",
+      "updatedItems"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "Changeset",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 87, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "apply",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 89, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "afterDeletesAndUpdates",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 91, Column: 9",
+            "H_initialValue" : "applyDeletesAndUpdates(original: original)"
+          },
+          {
+            "A_name" : "afterSectionMovesAndInserts",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 92, Column: 9",
+            "H_initialValue" : "applySectionMovesAndInserts(original: afterDeletesAndUpdates)"
+          },
+          {
+            "A_name" : "afterItemInsertsAndMoves",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 93, Column: 9",
+            "H_initialValue" : "applyItemInsertsAndMoves(original: afterSectionMovesAndInserts)"
+          }
+        ],
+        "I_parameterType" : [
+          "[Section]"
+        ],
+        "I_parameters" : [
+          "original"
+        ],
+        "J_returnType" : "-> [Section]"
+      },
+      {
+        "A_name" : "applyDeletesAndUpdates",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 98, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "resultAfterDeletesAndUpdates",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 99, Column: 9",
+            "H_initialValue" : "SectionModelTypeWrapper.wrap(original)"
+          }
+        ],
+        "I_parameterType" : [
+          "[Section]"
+        ],
+        "I_parameters" : [
+          "original"
+        ],
+        "J_returnType" : "-> [Section]"
+      },
+      {
+        "A_name" : "applySectionMovesAndInserts",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 125, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sourceSectionIndexes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 130, Column: 9",
+            "H_initialValue" : "Set(movedSections.map { $0.from })"
+          },
+          {
+            "A_name" : "destinationToSourceMapping",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 131, Column: 9",
+            "H_initialValue" : "Dictionary(\n            elements: movedSections,\n            keySelector: { $0.to },\n            valueSelector: { $0.from }\n        )"
+          },
+          {
+            "A_name" : "insertedSectionsIndexes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 136, Column: 9",
+            "H_initialValue" : "Set(insertedSections)"
+          },
+          {
+            "A_name" : "nextUntouchedSourceSectionIndex",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 138, Column: 9",
+            "H_initialValue" : "-1"
+          },
+          {
+            "A_name" : "totalCount",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 148, Column: 9",
+            "H_initialValue" : "original.count + insertedSections.count"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 150, Column: 9",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+          "[Section]"
+        ],
+        "I_parameters" : [
+          "original"
+        ],
+        "J_returnType" : "-> [Section]"
+      },
+      {
+        "A_name" : "applyItemInsertsAndMoves",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 171, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "resultAfterInsertsAndMoves",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 172, Column: 9",
+            "H_initialValue" : "original"
+          },
+          {
+            "A_name" : "sourceIndexesThatShouldBeMoved",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 174, Column: 9",
+            "H_initialValue" : "Set(movedItems.map { $0.from })"
+          },
+          {
+            "A_name" : "destinationToSourceMapping",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 175, Column: 9",
+            "H_initialValue" : "Dictionary(elements: self.movedItems, keySelector: { $0.to }, valueSelector: { $0.from })"
+          },
+          {
+            "A_name" : "insertedItemPaths",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 176, Column: 9",
+            "H_initialValue" : "Set(self.insertedItems)"
+          },
+          {
+            "A_name" : "insertedPerSection",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 178, Column: 9",
+            "H_initialValue" : "Array(repeating: 0, count: original.count)"
+          },
+          {
+            "A_name" : "movedInSection",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 179, Column: 9",
+            "H_initialValue" : "Array(repeating: 0, count: original.count)"
+          },
+          {
+            "A_name" : "movedOutSection",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ChangeSet+TestExtensions.swift - Line: 180, Column: 9",
+            "H_initialValue" : "Array(repeating: 0, count: original.count)"
+          }
+        ],
+        "I_parameterType" : [
+          "[Section]"
+        ],
+        "I_parameters" : [
+          "original"
+        ],
+        "J_returnType" : "-> [Section]"
+      }
+    ]
+  },
+  {
+    "A_name" : "apply",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 89, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "afterDeletesAndUpdates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 91, Column: 9",
+        "H_initialValue" : "applyDeletesAndUpdates(original: original)"
+      },
+      {
+        "A_name" : "afterSectionMovesAndInserts",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 92, Column: 9",
+        "H_initialValue" : "applySectionMovesAndInserts(original: afterDeletesAndUpdates)"
+      },
+      {
+        "A_name" : "afterItemInsertsAndMoves",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 93, Column: 9",
+        "H_initialValue" : "applyItemInsertsAndMoves(original: afterSectionMovesAndInserts)"
+      }
+    ],
+    "I_parameterType" : [
+      "[Section]"
+    ],
+    "I_parameters" : [
+      "original"
+    ],
+    "J_returnType" : "-> [Section]"
+  },
+  {
+    "A_name" : "afterDeletesAndUpdates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 91, Column: 9",
+    "H_initialValue" : "applyDeletesAndUpdates(original: original)"
+  },
+  {
+    "A_name" : "afterSectionMovesAndInserts",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 92, Column: 9",
+    "H_initialValue" : "applySectionMovesAndInserts(original: afterDeletesAndUpdates)"
+  },
+  {
+    "A_name" : "afterItemInsertsAndMoves",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 93, Column: 9",
+    "H_initialValue" : "applyItemInsertsAndMoves(original: afterSectionMovesAndInserts)"
+  },
+  {
+    "A_name" : "applyDeletesAndUpdates",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 98, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "resultAfterDeletesAndUpdates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 99, Column: 9",
+        "H_initialValue" : "SectionModelTypeWrapper.wrap(original)"
+      }
+    ],
+    "I_parameterType" : [
+      "[Section]"
+    ],
+    "I_parameters" : [
+      "original"
+    ],
+    "J_returnType" : "-> [Section]"
+  },
+  {
+    "A_name" : "resultAfterDeletesAndUpdates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 99, Column: 9",
+    "H_initialValue" : "SectionModelTypeWrapper.wrap(original)"
+  },
+  {
+    "A_name" : "applySectionMovesAndInserts",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 125, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sourceSectionIndexes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 130, Column: 9",
+        "H_initialValue" : "Set(movedSections.map { $0.from })"
+      },
+      {
+        "A_name" : "destinationToSourceMapping",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 131, Column: 9",
+        "H_initialValue" : "Dictionary(\n            elements: movedSections,\n            keySelector: { $0.to },\n            valueSelector: { $0.from }\n        )"
+      },
+      {
+        "A_name" : "insertedSectionsIndexes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 136, Column: 9",
+        "H_initialValue" : "Set(insertedSections)"
+      },
+      {
+        "A_name" : "nextUntouchedSourceSectionIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 138, Column: 9",
+        "H_initialValue" : "-1"
+      },
+      {
+        "A_name" : "totalCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 148, Column: 9",
+        "H_initialValue" : "original.count + insertedSections.count"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 150, Column: 9",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+      "[Section]"
+    ],
+    "I_parameters" : [
+      "original"
+    ],
+    "J_returnType" : "-> [Section]"
+  },
+  {
+    "A_name" : "sourceSectionIndexes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 130, Column: 9",
+    "H_initialValue" : "Set(movedSections.map { $0.from })"
+  },
+  {
+    "A_name" : "destinationToSourceMapping",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 131, Column: 9",
+    "H_initialValue" : "Dictionary(\n            elements: movedSections,\n            keySelector: { $0.to },\n            valueSelector: { $0.from }\n        )"
+  },
+  {
+    "A_name" : "insertedSectionsIndexes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 136, Column: 9",
+    "H_initialValue" : "Set(insertedSections)"
+  },
+  {
+    "A_name" : "nextUntouchedSourceSectionIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 138, Column: 9",
+    "H_initialValue" : "-1"
+  },
+  {
+    "A_name" : "findNextUntouchedSourceSection",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 139, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "totalCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 148, Column: 9",
+    "H_initialValue" : "original.count + insertedSections.count"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 150, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "applyItemInsertsAndMoves",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 171, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "resultAfterInsertsAndMoves",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 172, Column: 9",
+        "H_initialValue" : "original"
+      },
+      {
+        "A_name" : "sourceIndexesThatShouldBeMoved",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 174, Column: 9",
+        "H_initialValue" : "Set(movedItems.map { $0.from })"
+      },
+      {
+        "A_name" : "destinationToSourceMapping",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 175, Column: 9",
+        "H_initialValue" : "Dictionary(elements: self.movedItems, keySelector: { $0.to }, valueSelector: { $0.from })"
+      },
+      {
+        "A_name" : "insertedItemPaths",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 176, Column: 9",
+        "H_initialValue" : "Set(self.insertedItems)"
+      },
+      {
+        "A_name" : "insertedPerSection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 178, Column: 9",
+        "H_initialValue" : "Array(repeating: 0, count: original.count)"
+      },
+      {
+        "A_name" : "movedInSection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 179, Column: 9",
+        "H_initialValue" : "Array(repeating: 0, count: original.count)"
+      },
+      {
+        "A_name" : "movedOutSection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 180, Column: 9",
+        "H_initialValue" : "Array(repeating: 0, count: original.count)"
+      }
+    ],
+    "I_parameterType" : [
+      "[Section]"
+    ],
+    "I_parameters" : [
+      "original"
+    ],
+    "J_returnType" : "-> [Section]"
+  },
+  {
+    "A_name" : "resultAfterInsertsAndMoves",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 172, Column: 9",
+    "H_initialValue" : "original"
+  },
+  {
+    "A_name" : "sourceIndexesThatShouldBeMoved",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 174, Column: 9",
+    "H_initialValue" : "Set(movedItems.map { $0.from })"
+  },
+  {
+    "A_name" : "destinationToSourceMapping",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 175, Column: 9",
+    "H_initialValue" : "Dictionary(elements: self.movedItems, keySelector: { $0.to }, valueSelector: { $0.from })"
+  },
+  {
+    "A_name" : "insertedItemPaths",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 176, Column: 9",
+    "H_initialValue" : "Set(self.insertedItems)"
+  },
+  {
+    "A_name" : "insertedPerSection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 178, Column: 9",
+    "H_initialValue" : "Array(repeating: 0, count: original.count)"
+  },
+  {
+    "A_name" : "movedInSection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 179, Column: 9",
+    "H_initialValue" : "Array(repeating: 0, count: original.count)"
+  },
+  {
+    "A_name" : "movedOutSection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 180, Column: 9",
+    "H_initialValue" : "Array(repeating: 0, count: original.count)"
+  },
+  {
+    "A_name" : "originalItems",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 193, Column: 13",
+    "H_initialValue" : "section.items"
+  },
+  {
+    "A_name" : "nextUntouchedSourceItemIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 195, Column: 13",
+    "H_initialValue" : "-1"
+  },
+  {
+    "A_name" : "findNextUntouchedSourceItem",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 196, Column: 13",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "totalCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 206, Column: 13",
+    "H_initialValue" : "section.items.count\n                + insertedPerSection[sectionIndex]\n                + movedInSection[sectionIndex]\n                - movedOutSection[sectionIndex]"
+  },
+  {
+    "A_name" : "resultItems",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 211, Column: 13",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "itemPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 214, Column: 17",
+    "H_initialValue" : "ItemPath(sectionIndex: sectionIndex, itemIndex: index)"
+  },
+  {
+    "A_name" : "SectionModelTypeWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 237, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "wrap",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 238, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[S]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> [SectionModelTypeWrapper<S>]"
+      },
+      {
+        "A_name" : "unwrap",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 242, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[SectionModelTypeWrapper<S>]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> [S]"
+      }
+    ]
+  },
+  {
+    "A_name" : "wrap",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 238, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[S]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> [SectionModelTypeWrapper<S>]"
+  },
+  {
+    "A_name" : "unwrap",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 242, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[SectionModelTypeWrapper<S>]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> [S]"
+  },
+  {
+    "A_name" : "items",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 244, Column: 13",
+    "H_initialValue" : "sectionWrapper.items.map { $0.item }"
+  },
+  {
+    "A_name" : "Array",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 250, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "apply",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ChangeSet+TestExtensions.swift - Line: 252, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[Changeset<Element>]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> [Element]"
+      }
+    ]
+  },
+  {
+    "A_name" : "apply",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 252, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Changeset<Element>]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> [Element]"
+  },
+  {
+    "A_name" : "newSections",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ChangeSet+TestExtensions.swift - Line: 254, Column: 13",
+    "H_initialValue" : "changes.apply(original: sections)"
+  }
+]

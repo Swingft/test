@@ -1,0 +1,128 @@
+[
+  {
+    "A_name" : "ProgrammaticCollectionViewCell",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UICollectionViewCell"
+    ],
+    "F_location" : "ProgrammaticCollectionViewCell.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "titleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ProgrammaticCollectionViewCell.swift - Line: 13, Column: 2",
+        "H_initialValue" : "UILabel()"
+      },
+      {
+        "A_name" : "mainView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ProgrammaticCollectionViewCell.swift - Line: 14, Column: 2",
+        "H_initialValue" : "UIView()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ProgrammaticCollectionViewCell.swift - Line: 16, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "ProgrammaticCollectionViewCell.swift - Line: 42, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "titleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ProgrammaticCollectionViewCell.swift - Line: 13, Column: 2",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "mainView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ProgrammaticCollectionViewCell.swift - Line: 14, Column: 2",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ProgrammaticCollectionViewCell.swift - Line: 16, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "ProgrammaticCollectionViewCell.swift - Line: 42, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  }
+]

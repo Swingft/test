@@ -1,0 +1,450 @@
+[
+  {
+    "A_name" : "KeyframeInterpolator",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ValueProvider"
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 18, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ContiguousArray<Keyframe<ValueType>>"
+        ],
+        "I_parameters" : [
+          "keyframes"
+        ]
+      },
+      {
+        "A_name" : "keyframes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 24, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "valueType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 26, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "storage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 30, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "hasUpdate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 77, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "frame"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "lastUpdatedFrame",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 112, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "leadingIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 114, Column: 3",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "trailingIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 115, Column: 3",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "leadingKeyframe",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 116, Column: 3",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "trailingKeyframe",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 117, Column: 3",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "updateSpanIndices",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 120, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 18, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ContiguousArray<Keyframe<ValueType>>"
+    ],
+    "I_parameters" : [
+      "keyframes"
+    ]
+  },
+  {
+    "A_name" : "keyframes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 24, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "valueType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 26, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "storage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 30, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "progress",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 36, Column: 7",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 37, Column: 7",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hasUpdate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 77, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "frame"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "lastUpdatedFrame",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 112, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "leadingIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 114, Column: 3",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "trailingIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 115, Column: 3",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "leadingKeyframe",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 116, Column: 3",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "trailingKeyframe",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 117, Column: 3",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "updateSpanIndices",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 120, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "newLeading",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 170, Column: 7",
+    "H_initialValue" : "currentTrailing"
+  },
+  {
+    "A_name" : "keyframeFound",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 171, Column: 7",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "newTrailing",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 195, Column: 7",
+    "H_initialValue" : "currentLeading"
+  },
+  {
+    "A_name" : "keyframeFound",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 197, Column: 7",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "Array",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 230, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "validIndex",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 232, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Int?"
+      }
+    ]
+  },
+  {
+    "A_name" : "validIndex",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 232, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Int?"
+  },
+  {
+    "A_name" : "ContiguousArray",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 241, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "validIndex",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KeyframeInterpolator.swift - Line: 243, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Int?"
+      }
+    ]
+  },
+  {
+    "A_name" : "validIndex",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KeyframeInterpolator.swift - Line: 243, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Int?"
+  }
+]

@@ -1,0 +1,752 @@
+[
+  {
+    "A_name" : "MaskMode",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "usableMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 11, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "usableMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 11, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "MaskContainerLayer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CALayer"
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 33, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 37, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "containerLayer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaskContainerLayer.swift - Line: 40, Column: 5",
+            "H_initialValue" : "CALayer()"
+          },
+          {
+            "A_name" : "firstObject",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaskContainerLayer.swift - Line: 41, Column: 5",
+            "H_initialValue" : "true"
+          }
+        ],
+        "I_parameterType" : [
+          "[Mask]"
+        ],
+        "I_parameters" : [
+          "masks"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 60, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 68, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "updateWithFrame",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 74, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "frame",
+          "forceUpdates"
+        ]
+      },
+      {
+        "A_name" : "maskLayers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 82, Column: 3",
+        "H_initialValue" : "[]"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 37, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "containerLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 40, Column: 5",
+        "H_initialValue" : "CALayer()"
+      },
+      {
+        "A_name" : "firstObject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 41, Column: 5",
+        "H_initialValue" : "true"
+      }
+    ],
+    "I_parameterType" : [
+      "[Mask]"
+    ],
+    "I_parameters" : [
+      "masks"
+    ]
+  },
+  {
+    "A_name" : "containerLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 40, Column: 5",
+    "H_initialValue" : "CALayer()"
+  },
+  {
+    "A_name" : "firstObject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 41, Column: 5",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "maskLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 43, Column: 7",
+    "H_initialValue" : "MaskLayer(mask: mask)"
+  },
+  {
+    "A_name" : "newContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 52, Column: 9",
+    "H_initialValue" : "CALayer()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 60, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 68, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "updateWithFrame",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 74, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "frame",
+      "forceUpdates"
+    ]
+  },
+  {
+    "A_name" : "maskLayers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 82, Column: 3",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "CGRect",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 85, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "veryLargeRect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 86, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "veryLargeRect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 86, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "MaskLayer",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CALayer"
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 97, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 101, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Mask"
+        ],
+        "I_parameters" : [
+          "mask"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 115, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 120, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "properties",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 126, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "maskLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 128, Column: 3",
+        "H_initialValue" : "CAShapeLayer()"
+      },
+      {
+        "A_name" : "updateWithFrame",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 130, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "frame",
+          "forceUpdates"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 101, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Mask"
+    ],
+    "I_parameters" : [
+      "mask"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 115, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 120, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "properties",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 126, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "maskLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 128, Column: 3",
+    "H_initialValue" : "CAShapeLayer()"
+  },
+  {
+    "A_name" : "updateWithFrame",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 130, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "frame",
+      "forceUpdates"
+    ]
+  },
+  {
+    "A_name" : "shapePath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 141, Column: 7",
+    "H_initialValue" : "properties.shape.value.cgPath()"
+  },
+  {
+    "A_name" : "path",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 142, Column: 7",
+    "H_initialValue" : "shapePath"
+  },
+  {
+    "A_name" : "newPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 148, Column: 9",
+    "H_initialValue" : "CGMutablePath()"
+  },
+  {
+    "A_name" : "MaskNodeProperties",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "NodePropertyMap"
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 160, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 164, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Mask"
+        ],
+        "I_parameters" : [
+          "mask"
+        ]
+      },
+      {
+        "A_name" : "propertyMap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 180, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "properties",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 182, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "mode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 184, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inverted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 185, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "opacity",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 187, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "shape",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 188, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expansion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaskContainerLayer.swift - Line: 189, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 164, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Mask"
+    ],
+    "I_parameters" : [
+      "mask"
+    ]
+  },
+  {
+    "A_name" : "propertyMap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 180, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "properties",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 182, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 184, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inverted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 185, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "opacity",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 187, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "shape",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 188, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expansion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaskContainerLayer.swift - Line: 189, Column: 3",
+    "H_initialValue" : ""
+  }
+]

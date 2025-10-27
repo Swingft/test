@@ -1,0 +1,928 @@
+[
+  {
+    "A_name" : "CGFloat",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "squared",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 15, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cubed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 19, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cubicRoot",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 23, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isInRangeOrEqual",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 27, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "isInRange",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 31, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "cubicBezierInterpolate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 35, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "t",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 36, Column: 5",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "CGPoint",
+          "CGPoint",
+          "CGPoint",
+          "CGPoint"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> CGFloat"
+      },
+      {
+        "A_name" : "cubicBezier",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 59, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "t_",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 60, Column: 5",
+            "H_initialValue" : "(1.0 - t)"
+          },
+          {
+            "A_name" : "tt_",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 61, Column: 5",
+            "H_initialValue" : "t_ * t_"
+          },
+          {
+            "A_name" : "ttt_",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 62, Column: 5",
+            "H_initialValue" : "t_ * t_ * t_"
+          },
+          {
+            "A_name" : "tt",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 63, Column: 5",
+            "H_initialValue" : "t * t"
+          },
+          {
+            "A_name" : "ttt",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 64, Column: 5",
+            "H_initialValue" : "t * t * t"
+          }
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "CGFloat",
+          "CGFloat",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> CGFloat"
+      },
+      {
+        "A_name" : "SolveQuadratic",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 74, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 75, Column: 5",
+            "H_initialValue" : "(-b + sqrt(b.squared - 4 * a * c)) \/ (2 * a)"
+          }
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "CGFloat",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> CGFloat"
+      },
+      {
+        "A_name" : "SolveCubic",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 88, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "a",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 95, Column: 5",
+            "H_initialValue" : "a"
+          },
+          {
+            "A_name" : "b",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 96, Column: 5",
+            "H_initialValue" : "b"
+          },
+          {
+            "A_name" : "c",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 97, Column: 5",
+            "H_initialValue" : "c"
+          },
+          {
+            "A_name" : "d",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 98, Column: 5",
+            "H_initialValue" : "d"
+          },
+          {
+            "A_name" : "q",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 102, Column: 5",
+            "H_initialValue" : "(3.0 * c - b.squared) \/ 9.0"
+          },
+          {
+            "A_name" : "r",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 103, Column: 5",
+            "H_initialValue" : "(-27.0 * d + b * (9.0 * c - 2.0 * b.squared)) \/ 54.0"
+          },
+          {
+            "A_name" : "disc",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 104, Column: 5",
+            "H_initialValue" : "q.cubed + r.squared"
+          },
+          {
+            "A_name" : "term1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CGFloatExtensions.swift - Line: 105, Column: 5",
+            "H_initialValue" : "b \/ 3.0"
+          }
+        ],
+        "I_parameterType" : [
+          "CGFloat",
+          "CGFloat",
+          "CGFloat",
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> CGFloat"
+      }
+    ]
+  },
+  {
+    "A_name" : "squared",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 15, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cubed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 19, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cubicRoot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 23, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isInRangeOrEqual",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 27, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "isInRange",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 31, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "cubicBezierInterpolate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 35, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "t",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 36, Column: 5",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "CGPoint",
+      "CGPoint",
+      "CGPoint",
+      "CGPoint"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> CGFloat"
+  },
+  {
+    "A_name" : "t",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 36, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "a",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 44, Column: 7",
+    "H_initialValue" : "-P0.x + 3 * P1.x - 3 * P2.x + P3.x"
+  },
+  {
+    "A_name" : "b",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 45, Column: 7",
+    "H_initialValue" : "3 * P0.x - 6 * P1.x + 3 * P2.x"
+  },
+  {
+    "A_name" : "c",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 46, Column: 7",
+    "H_initialValue" : "-3 * P0.x + 3 * P1.x"
+  },
+  {
+    "A_name" : "d",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 47, Column: 7",
+    "H_initialValue" : "P0.x - self"
+  },
+  {
+    "A_name" : "tTemp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 48, Column: 7",
+    "H_initialValue" : "CGFloat.SolveCubic(a, b, c, d)"
+  },
+  {
+    "A_name" : "cubicBezier",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 59, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "t_",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 60, Column: 5",
+        "H_initialValue" : "(1.0 - t)"
+      },
+      {
+        "A_name" : "tt_",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 61, Column: 5",
+        "H_initialValue" : "t_ * t_"
+      },
+      {
+        "A_name" : "ttt_",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 62, Column: 5",
+        "H_initialValue" : "t_ * t_ * t_"
+      },
+      {
+        "A_name" : "tt",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 63, Column: 5",
+        "H_initialValue" : "t * t"
+      },
+      {
+        "A_name" : "ttt",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 64, Column: 5",
+        "H_initialValue" : "t * t * t"
+      }
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat",
+      "CGFloat",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> CGFloat"
+  },
+  {
+    "A_name" : "t_",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 60, Column: 5",
+    "H_initialValue" : "(1.0 - t)"
+  },
+  {
+    "A_name" : "tt_",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 61, Column: 5",
+    "H_initialValue" : "t_ * t_"
+  },
+  {
+    "A_name" : "ttt_",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 62, Column: 5",
+    "H_initialValue" : "t_ * t_ * t_"
+  },
+  {
+    "A_name" : "tt",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 63, Column: 5",
+    "H_initialValue" : "t * t"
+  },
+  {
+    "A_name" : "ttt",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 64, Column: 5",
+    "H_initialValue" : "t * t * t"
+  },
+  {
+    "A_name" : "SolveQuadratic",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 74, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 75, Column: 5",
+        "H_initialValue" : "(-b + sqrt(b.squared - 4 * a * c)) \/ (2 * a)"
+      }
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> CGFloat"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 75, Column: 5",
+    "H_initialValue" : "(-b + sqrt(b.squared - 4 * a * c)) \/ (2 * a)"
+  },
+  {
+    "A_name" : "SolveCubic",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 88, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "a",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 95, Column: 5",
+        "H_initialValue" : "a"
+      },
+      {
+        "A_name" : "b",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 96, Column: 5",
+        "H_initialValue" : "b"
+      },
+      {
+        "A_name" : "c",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 97, Column: 5",
+        "H_initialValue" : "c"
+      },
+      {
+        "A_name" : "d",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 98, Column: 5",
+        "H_initialValue" : "d"
+      },
+      {
+        "A_name" : "q",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 102, Column: 5",
+        "H_initialValue" : "(3.0 * c - b.squared) \/ 9.0"
+      },
+      {
+        "A_name" : "r",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 103, Column: 5",
+        "H_initialValue" : "(-27.0 * d + b * (9.0 * c - 2.0 * b.squared)) \/ 54.0"
+      },
+      {
+        "A_name" : "disc",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 104, Column: 5",
+        "H_initialValue" : "q.cubed + r.squared"
+      },
+      {
+        "A_name" : "term1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CGFloatExtensions.swift - Line: 105, Column: 5",
+        "H_initialValue" : "b \/ 3.0"
+      }
+    ],
+    "I_parameterType" : [
+      "CGFloat",
+      "CGFloat",
+      "CGFloat",
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> CGFloat"
+  },
+  {
+    "A_name" : "a",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 95, Column: 5",
+    "H_initialValue" : "a"
+  },
+  {
+    "A_name" : "b",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 96, Column: 5",
+    "H_initialValue" : "b"
+  },
+  {
+    "A_name" : "c",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 97, Column: 5",
+    "H_initialValue" : "c"
+  },
+  {
+    "A_name" : "d",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 98, Column: 5",
+    "H_initialValue" : "d"
+  },
+  {
+    "A_name" : "q",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 102, Column: 5",
+    "H_initialValue" : "(3.0 * c - b.squared) \/ 9.0"
+  },
+  {
+    "A_name" : "r",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 103, Column: 5",
+    "H_initialValue" : "(-27.0 * d + b * (9.0 * c - 2.0 * b.squared)) \/ 54.0"
+  },
+  {
+    "A_name" : "disc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 104, Column: 5",
+    "H_initialValue" : "q.cubed + r.squared"
+  },
+  {
+    "A_name" : "term1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 105, Column: 5",
+    "H_initialValue" : "b \/ 3.0"
+  },
+  {
+    "A_name" : "s",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 108, Column: 7",
+    "H_initialValue" : "r + sqrt(disc)"
+  },
+  {
+    "A_name" : "t",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 110, Column: 7",
+    "H_initialValue" : "r - sqrt(disc)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 113, Column: 7",
+    "H_initialValue" : "-term1 + s + t"
+  },
+  {
+    "A_name" : "r13",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 118, Column: 7",
+    "H_initialValue" : "(r < 0) ? -((-r).cubicRoot) : r.cubicRoot"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 120, Column: 7",
+    "H_initialValue" : "-term1 + 2.0 * r13"
+  },
+  {
+    "A_name" : "dum1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 132, Column: 7",
+    "H_initialValue" : "q * q * q"
+  },
+  {
+    "A_name" : "r13",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 134, Column: 7",
+    "H_initialValue" : "2.0 * sqrt(q)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CGFloatExtensions.swift - Line: 136, Column: 7",
+    "H_initialValue" : "-term1 + r13 * cos(dum1 \/ 3.0)"
+  }
+]

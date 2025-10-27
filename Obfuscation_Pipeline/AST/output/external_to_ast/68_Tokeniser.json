@@ -1,0 +1,1484 @@
+[
+  {
+    "A_name" : "Tokeniser",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "replacementChar",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tokeniser.swift - Line: 12, Column: 5",
+        "H_initialValue" : "\"\\u{FFFD}\" \/\/ replaces null character"
+      },
+      {
+        "A_name" : "notCharRefCharsSorted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Tokeniser.swift - Line: 13, Column: 5",
+        "H_initialValue" : "[UnicodeScalar.BackslashT, \"\\n\", \"\\r\", UnicodeScalar.BackslashF, \" \", \"<\", UnicodeScalar.Ampersand].sorted()"
+      },
+      {
+        "A_name" : "reader",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 15, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "errors",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 18, Column: 5",
+        "H_initialValue" : "TokeniserState.Data \/\/ current tokenisation state"
+      },
+      {
+        "A_name" : "emitPending",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 19, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isEmitPending",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 20, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "charsString",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 21, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "charsBuilder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 22, Column: 5",
+        "H_initialValue" : "StringBuilder(1024) \/\/ buffers characters to output as one token, if more than one emit per read"
+      },
+      {
+        "A_name" : "dataBuffer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 23, Column: 5",
+        "H_initialValue" : "StringBuilder(1024) \/\/ buffers data looking for <\/script>"
+      },
+      {
+        "A_name" : "tagPending",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 25, Column: 5",
+        "H_initialValue" : "Token.Tag()  \/\/ tag we are building up"
+      },
+      {
+        "A_name" : "startPending",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 26, Column: 5",
+        "H_initialValue" : "Token.StartTag()"
+      },
+      {
+        "A_name" : "endPending",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 27, Column: 5",
+        "H_initialValue" : "Token.EndTag()"
+      },
+      {
+        "A_name" : "charPending",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 28, Column: 5",
+        "H_initialValue" : "Token.Char()"
+      },
+      {
+        "A_name" : "doctypePending",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 29, Column: 5",
+        "H_initialValue" : "Token.Doctype() \/\/ doctype building up"
+      },
+      {
+        "A_name" : "commentPending",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 30, Column: 5",
+        "H_initialValue" : "Token.Comment() \/\/ comment building up"
+      },
+      {
+        "A_name" : "lastStartTag",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 31, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "selfClosingFlagAcknowledged",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 32, Column: 5",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CharacterReader",
+          "ParseErrorList?"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "read",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "->Token"
+      },
+      {
+        "A_name" : "emit",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 65, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Token"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "emit",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 85, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "emit",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 98, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[UnicodeScalar]"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "emit",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 106, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UnicodeScalar"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "getState",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 110, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> TokeniserState"
+      },
+      {
+        "A_name" : "transition",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 114, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TokeniserState"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "advanceTransition",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 118, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TokeniserState"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "acknowledgeSelfClosingFlag",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 123, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "consumeCharacterReference",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 127, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UnicodeScalar?",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->[UnicodeScalar]?"
+      },
+      {
+        "A_name" : "createTagPending",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Tokeniser.swift - Line: 198, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "->Token.Tag"
+      },
+      {
+        "A_name" : "emitTagPending",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 204, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "createCommentPending",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 209, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "emitCommentPending",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 213, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "createDoctypePending",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 217, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "emitDoctypePending",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 221, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "createTempBuffer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 225, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "isAppropriateEndTagToken",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 229, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "->Bool"
+      },
+      {
+        "A_name" : "appropriateEndTagName",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 237, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String?"
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 244, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TokeniserState"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "eofError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 250, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TokeniserState"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "characterReferenceError",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 256, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 262, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "currentNodeInHtmlNS",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 268, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "unescapeEntities",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 280, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "builder",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Tokeniser.swift - Line: 281, Column: 9",
+            "H_initialValue" : "StringBuilder()"
+          }
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "->String"
+      }
+    ]
+  },
+  {
+    "A_name" : "replacementChar",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tokeniser.swift - Line: 12, Column: 5",
+    "H_initialValue" : "\"\\u{FFFD}\" \/\/ replaces null character"
+  },
+  {
+    "A_name" : "notCharRefCharsSorted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Tokeniser.swift - Line: 13, Column: 5",
+    "H_initialValue" : "[UnicodeScalar.BackslashT, \"\\n\", \"\\r\", UnicodeScalar.BackslashF, \" \", \"<\", UnicodeScalar.Ampersand].sorted()"
+  },
+  {
+    "A_name" : "reader",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 15, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "errors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 18, Column: 5",
+    "H_initialValue" : "TokeniserState.Data \/\/ current tokenisation state"
+  },
+  {
+    "A_name" : "emitPending",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 19, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isEmitPending",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 20, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "charsString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 21, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "charsBuilder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 22, Column: 5",
+    "H_initialValue" : "StringBuilder(1024) \/\/ buffers characters to output as one token, if more than one emit per read"
+  },
+  {
+    "A_name" : "dataBuffer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 23, Column: 5",
+    "H_initialValue" : "StringBuilder(1024) \/\/ buffers data looking for <\/script>"
+  },
+  {
+    "A_name" : "tagPending",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 25, Column: 5",
+    "H_initialValue" : "Token.Tag()  \/\/ tag we are building up"
+  },
+  {
+    "A_name" : "startPending",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 26, Column: 5",
+    "H_initialValue" : "Token.StartTag()"
+  },
+  {
+    "A_name" : "endPending",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 27, Column: 5",
+    "H_initialValue" : "Token.EndTag()"
+  },
+  {
+    "A_name" : "charPending",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 28, Column: 5",
+    "H_initialValue" : "Token.Char()"
+  },
+  {
+    "A_name" : "doctypePending",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 29, Column: 5",
+    "H_initialValue" : "Token.Doctype() \/\/ doctype building up"
+  },
+  {
+    "A_name" : "commentPending",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 30, Column: 5",
+    "H_initialValue" : "Token.Comment() \/\/ comment building up"
+  },
+  {
+    "A_name" : "lastStartTag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 31, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "selfClosingFlagAcknowledged",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 32, Column: 5",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CharacterReader",
+      "ParseErrorList?"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "read",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "->Token"
+  },
+  {
+    "A_name" : "str",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 51, Column: 13",
+    "H_initialValue" : "charsBuilder.toString()"
+  },
+  {
+    "A_name" : "token",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 56, Column: 13",
+    "H_initialValue" : "charPending.data(charsString!)"
+  },
+  {
+    "A_name" : "emit",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 65, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Token"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "startTag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 72, Column: 13",
+    "H_initialValue" : "token as! Token.StartTag"
+  },
+  {
+    "A_name" : "endTag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 78, Column: 13",
+    "H_initialValue" : "token as! Token.EndTag"
+  },
+  {
+    "A_name" : "emit",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 85, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "emit",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 98, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[UnicodeScalar]"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "emit",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 106, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UnicodeScalar"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "getState",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 110, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> TokeniserState"
+  },
+  {
+    "A_name" : "transition",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 114, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TokeniserState"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "advanceTransition",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 118, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TokeniserState"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "acknowledgeSelfClosingFlag",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 123, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "consumeCharacterReference",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 127, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UnicodeScalar?",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->[UnicodeScalar]?"
+  },
+  {
+    "A_name" : "isHexMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 140, Column: 13",
+    "H_initialValue" : "reader.matchConsumeIgnoreCase(\"X\")"
+  },
+  {
+    "A_name" : "numRef",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 141, Column: 13",
+    "H_initialValue" : "isHexMode ? reader.consumeHexSequence() : reader.consumeDigitSequence()"
+  },
+  {
+    "A_name" : "charval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 150, Column: 13",
+    "H_initialValue" : "-1"
+  },
+  {
+    "A_name" : "base",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 152, Column: 13",
+    "H_initialValue" : "isHexMode ? 16 : 10"
+  },
+  {
+    "A_name" : "nameRef",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 167, Column: 13",
+    "H_initialValue" : "reader.consumeLetterThenDigitSequence()"
+  },
+  {
+    "A_name" : "looksLegit",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 168, Column: 13",
+    "H_initialValue" : "reader.matches(\";\")"
+  },
+  {
+    "A_name" : "found",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 170, Column: 13",
+    "H_initialValue" : "(Entities.isBaseNamedEntity(nameRef) || (Entities.isNamedEntity(nameRef) && looksLegit))"
+  },
+  {
+    "A_name" : "createTagPending",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Tokeniser.swift - Line: 198, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->Token.Tag"
+  },
+  {
+    "A_name" : "emitTagPending",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 204, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "createCommentPending",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 209, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "emitCommentPending",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 213, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "createDoctypePending",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 217, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "emitDoctypePending",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 221, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "createTempBuffer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 225, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "isAppropriateEndTagToken",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 229, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "->Bool"
+  },
+  {
+    "A_name" : "s",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 231, Column: 13",
+    "H_initialValue" : "try tagPending.name()"
+  },
+  {
+    "A_name" : "appropriateEndTagName",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 237, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 244, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TokeniserState"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "eofError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 250, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TokeniserState"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "characterReferenceError",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 256, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 262, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "currentNodeInHtmlNS",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 268, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "unescapeEntities",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 280, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "builder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Tokeniser.swift - Line: 281, Column: 9",
+        "H_initialValue" : "StringBuilder()"
+      }
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "->String"
+  },
+  {
+    "A_name" : "builder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Tokeniser.swift - Line: 281, Column: 9",
+    "H_initialValue" : "StringBuilder()"
+  }
+]

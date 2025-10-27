@@ -1,0 +1,109 @@
+[
+  {
+    "A_name" : "CompatibleAnimationKeypath",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "NSObject"
+    ],
+    "F_location" : "CompatibleAnimationKeypath.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationKeypath.swift - Line: 18, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "keypath"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CompatibleAnimationKeypath.swift - Line: 24, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String]"
+        ],
+        "I_parameters" : [
+          "keys"
+        ]
+      },
+      {
+        "A_name" : "animationKeypath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CompatibleAnimationKeypath.swift - Line: 31, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationKeypath.swift - Line: 18, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "keypath"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CompatibleAnimationKeypath.swift - Line: 24, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String]"
+    ],
+    "I_parameters" : [
+      "keys"
+    ]
+  },
+  {
+    "A_name" : "animationKeypath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CompatibleAnimationKeypath.swift - Line: 31, Column: 3",
+    "H_initialValue" : ""
+  }
+]

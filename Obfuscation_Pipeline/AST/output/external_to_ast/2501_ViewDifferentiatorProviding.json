@@ -1,0 +1,130 @@
+[
+  {
+    "A_name" : "ViewDifferentiatorProviding",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ViewDifferentiatorProviding.swift - Line: 8, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "viewDifferentiator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ViewDifferentiatorProviding.swift - Line: 10, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "viewDifferentiator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ViewDifferentiatorProviding.swift - Line: 10, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ViewDifferentiator",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable"
+    ],
+    "F_location" : "ViewDifferentiatorProviding.swift - Line: 20, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ViewDifferentiatorProviding.swift - Line: 24, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnyClass",
+          "AnyHashable?"
+        ],
+        "I_parameters" : [
+          "viewType",
+          "styleID"
+        ]
+      },
+      {
+        "A_name" : "viewTypeDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ViewDifferentiatorProviding.swift - Line: 31, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "styleID",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ViewDifferentiatorProviding.swift - Line: 32, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ViewDifferentiatorProviding.swift - Line: 24, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnyClass",
+      "AnyHashable?"
+    ],
+    "I_parameters" : [
+      "viewType",
+      "styleID"
+    ]
+  },
+  {
+    "A_name" : "viewTypeDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ViewDifferentiatorProviding.swift - Line: 31, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "styleID",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ViewDifferentiatorProviding.swift - Line: 32, Column: 3",
+    "H_initialValue" : ""
+  }
+]

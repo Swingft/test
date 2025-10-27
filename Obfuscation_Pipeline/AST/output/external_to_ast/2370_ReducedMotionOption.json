@@ -1,0 +1,396 @@
+[
+  {
+    "A_name" : "ReducedMotionOption",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "specific",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 15, Column: 8",
+        "I_parameterType" : [
+          "ReducedMotionMode"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "dynamic",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 20, Column: 8",
+        "I_parameterType" : [
+          "ReducedMotionOptionProvider",
+          "AnyHashable"
+        ],
+        "I_parameters" : [
+          "_",
+          "dataID"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "ReducedMotionOption",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 23, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "standardMotion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 26, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "reducedMotion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 31, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "systemReducedMotionToggle",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 36, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "standardMotion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 26, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "reducedMotion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 31, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "systemReducedMotionToggle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 36, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ReducedMotionOption",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 41, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "currentReducedMotionMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 43, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "currentReducedMotionMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 43, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ReducedMotionOption",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable"
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 55, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 56, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ReducedMotionOption",
+          "ReducedMotionOption"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "hash",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 67, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "inout Hasher"
+        ],
+        "I_parameters" : [
+          "into"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 56, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ReducedMotionOption",
+      "ReducedMotionOption"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "hash",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 67, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "inout Hasher"
+    ],
+    "I_parameters" : [
+      "into"
+    ]
+  },
+  {
+    "A_name" : "ReducedMotionMode",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable"
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 79, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "standardMotion",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 82, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "reducedMotion",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 86, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "ReducedMotionOptionProvider",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 92, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "currentReducedMotionMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 93, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "currentReducedMotionMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 93, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "SystemReducedMotionOptionProvider",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ReducedMotionOptionProvider"
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 100, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 101, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "currentReducedMotionMode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReducedMotionOption.swift - Line: 103, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 101, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "currentReducedMotionMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReducedMotionOption.swift - Line: 103, Column: 3",
+    "H_initialValue" : ""
+  }
+]

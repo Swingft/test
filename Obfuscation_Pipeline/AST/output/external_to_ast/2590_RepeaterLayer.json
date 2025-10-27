@@ -1,0 +1,476 @@
+[
+  {
+    "A_name" : "RepeaterLayer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseAnimationLayer"
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 13, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Repeater",
+          "CALayer",
+          "Int"
+        ],
+        "I_parameters" : [
+          "repeater",
+          "childLayer",
+          "index"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 19, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 25, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "setupAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 36, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "context"
+        ]
+      },
+      {
+        "A_name" : "repeaterTransform",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 43, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 13, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Repeater",
+      "CALayer",
+      "Int"
+    ],
+    "I_parameters" : [
+      "repeater",
+      "childLayer",
+      "index"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 19, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 25, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "setupAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 36, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "context"
+    ]
+  },
+  {
+    "A_name" : "repeaterTransform",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 43, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "RepeaterTransform",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 50, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 54, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Repeater",
+          "Int"
+        ],
+        "I_parameters" : [
+          "repeater",
+          "index"
+        ]
+      },
+      {
+        "A_name" : "anchorPoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 80, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "position",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 81, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rotationX",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 82, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rotationY",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 83, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rotationZ",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 84, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "scale",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 86, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 54, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Repeater",
+      "Int"
+    ],
+    "I_parameters" : [
+      "repeater",
+      "index"
+    ]
+  },
+  {
+    "A_name" : "anchorPoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 80, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "position",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 81, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rotationX",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 82, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rotationY",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 83, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rotationZ",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 84, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "scale",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 86, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "RepeaterTransform",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "TransformModel"
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 92, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "_position",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 93, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_positionX",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 94, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_positionY",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 95, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_skew",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 96, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_skewAxis",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RepeaterLayer.swift - Line: 97, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "_position",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 93, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_positionX",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 94, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_positionY",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 95, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_skew",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 96, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_skewAxis",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RepeaterLayer.swift - Line: 97, Column: 3",
+    "H_initialValue" : ""
+  }
+]

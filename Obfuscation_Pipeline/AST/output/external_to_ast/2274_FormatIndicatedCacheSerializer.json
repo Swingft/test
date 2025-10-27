@@ -1,0 +1,285 @@
+[
+  {
+    "A_name" : "FormatIndicatedCacheSerializer",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CacheSerializer"
+    ],
+    "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 55, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "png",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 59, Column: 5",
+        "H_initialValue" : "FormatIndicatedCacheSerializer(imageFormat: .PNG, jpegCompressionQuality: nil)"
+      },
+      {
+        "A_name" : "jpeg",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 65, Column: 5",
+        "H_initialValue" : "FormatIndicatedCacheSerializer(imageFormat: .JPEG, jpegCompressionQuality: 1.0)"
+      },
+      {
+        "A_name" : "jpeg",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 71, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "compressionQuality"
+        ],
+        "J_returnType" : "-> FormatIndicatedCacheSerializer"
+      },
+      {
+        "A_name" : "gif",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 77, Column: 5",
+        "H_initialValue" : "FormatIndicatedCacheSerializer(imageFormat: .GIF, jpegCompressionQuality: nil)"
+      },
+      {
+        "A_name" : "imageFormat",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 80, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "jpegCompressionQuality",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 83, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 86, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "originalFormat",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 104, Column: 9",
+            "H_initialValue" : "original?.kf.imageFormat ?? .unknown"
+          }
+        ],
+        "I_parameterType" : [
+          "KFCrossPlatformImage",
+          "Data?"
+        ],
+        "I_parameters" : [
+          "with",
+          "original"
+        ],
+        "J_returnType" : "-> Data?"
+      },
+      {
+        "A_name" : "image",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 115, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data",
+          "KingfisherParsedOptionsInfo"
+        ],
+        "I_parameters" : [
+          "with",
+          "options"
+        ],
+        "J_returnType" : "-> KFCrossPlatformImage?"
+      }
+    ]
+  },
+  {
+    "A_name" : "png",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 59, Column: 5",
+    "H_initialValue" : "FormatIndicatedCacheSerializer(imageFormat: .PNG, jpegCompressionQuality: nil)"
+  },
+  {
+    "A_name" : "jpeg",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 65, Column: 5",
+    "H_initialValue" : "FormatIndicatedCacheSerializer(imageFormat: .JPEG, jpegCompressionQuality: 1.0)"
+  },
+  {
+    "A_name" : "jpeg",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 71, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "compressionQuality"
+    ],
+    "J_returnType" : "-> FormatIndicatedCacheSerializer"
+  },
+  {
+    "A_name" : "gif",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 77, Column: 5",
+    "H_initialValue" : "FormatIndicatedCacheSerializer(imageFormat: .GIF, jpegCompressionQuality: nil)"
+  },
+  {
+    "A_name" : "imageFormat",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 80, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "jpegCompressionQuality",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 83, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 86, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "originalFormat",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 104, Column: 9",
+        "H_initialValue" : "original?.kf.imageFormat ?? .unknown"
+      }
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformImage",
+      "Data?"
+    ],
+    "I_parameters" : [
+      "with",
+      "original"
+    ],
+    "J_returnType" : "-> Data?"
+  },
+  {
+    "A_name" : "imageData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 88, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageFormat"
+    ],
+    "I_parameters" : [
+      "withFormat"
+    ],
+    "J_returnType" : "-> Data?"
+  },
+  {
+    "A_name" : "originalFormat",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 104, Column: 9",
+    "H_initialValue" : "original?.kf.imageFormat ?? .unknown"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FormatIndicatedCacheSerializer.swift - Line: 115, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "KingfisherParsedOptionsInfo"
+    ],
+    "I_parameters" : [
+      "with",
+      "options"
+    ],
+    "J_returnType" : "-> KFCrossPlatformImage?"
+  }
+]

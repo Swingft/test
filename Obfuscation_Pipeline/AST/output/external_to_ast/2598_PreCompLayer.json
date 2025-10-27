@@ -1,0 +1,364 @@
+[
+  {
+    "A_name" : "PreCompLayer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseCompositionLayer"
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayer.swift - Line: 13, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "PreCompLayerModel"
+        ],
+        "I_parameters" : [
+          "preCompLayer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "PreCompLayer.swift - Line: 18, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "PreCompLayer.swift - Line: 24, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "layer"
+        ]
+      },
+      {
+        "A_name" : "preCompLayer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayer.swift - Line: 35, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setup",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayer.swift - Line: 54, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LayerContext"
+        ],
+        "I_parameters" : [
+          "context"
+        ]
+      },
+      {
+        "A_name" : "setupAnimations",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "PreCompLayer.swift - Line: 60, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "context",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompLayer.swift - Line: 61, Column: 5",
+            "H_initialValue" : "context"
+          },
+          {
+            "A_name" : "timeRemappingInterpolator",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompLayer.swift - Line: 65, Column: 5",
+            "H_initialValue" : "preCompLayer.timeRemapping.flatMap { KeyframeInterpolator(keyframes: $0.keyframes) }"
+          },
+          {
+            "A_name" : "contextForChildren",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PreCompLayer.swift - Line: 67, Column: 5",
+            "H_initialValue" : "context\n      \/\/ `timeStretch` and `startTime` are a simple linear function so can be inverted from a\n      \/\/ \"global time to local time\" function into the simpler \"local time to global time\".\n      .withSimpleTimeRemapping { [preCompLayer] layerLocalFrame in\n        (layerLocalFrame * AnimationFrameTime(preCompLayer.timeStretch)) + AnimationFrameTime(preCompLayer.startTime)\n      }\n      \/\/ `timeRemappingInterpolator` is arbitrarily complex and cannot be inverted,\n      \/\/ so can only be applied via `complexTimeRemapping` from global time to local time.\n      .withComplexTimeRemapping(required: preCompLayer.timeRemapping != nil) { [preCompLayer] globalTime in\n        if let timeRemappingInterpolator {\n          let remappedLocalTime = timeRemappingInterpolator.value(frame: globalTime) as! LottieVector1D\n          return remappedLocalTime.cgFloatValue * context.animation.framerate\n        } else {\n          return (globalTime - preCompLayer.startTime) \/ preCompLayer.timeStretch\n        }\n      }"
+          }
+        ],
+        "I_parameterType" : [
+          "LayerAnimationContext"
+        ],
+        "I_parameters" : [
+          "context"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 13, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "PreCompLayerModel"
+    ],
+    "I_parameters" : [
+      "preCompLayer"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 18, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 24, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "layer"
+    ]
+  },
+  {
+    "A_name" : "preCompLayer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 35, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setup",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 54, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LayerContext"
+    ],
+    "I_parameters" : [
+      "context"
+    ]
+  },
+  {
+    "A_name" : "setupAnimations",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 60, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayer.swift - Line: 61, Column: 5",
+        "H_initialValue" : "context"
+      },
+      {
+        "A_name" : "timeRemappingInterpolator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayer.swift - Line: 65, Column: 5",
+        "H_initialValue" : "preCompLayer.timeRemapping.flatMap { KeyframeInterpolator(keyframes: $0.keyframes) }"
+      },
+      {
+        "A_name" : "contextForChildren",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayer.swift - Line: 67, Column: 5",
+        "H_initialValue" : "context\n      \/\/ `timeStretch` and `startTime` are a simple linear function so can be inverted from a\n      \/\/ \"global time to local time\" function into the simpler \"local time to global time\".\n      .withSimpleTimeRemapping { [preCompLayer] layerLocalFrame in\n        (layerLocalFrame * AnimationFrameTime(preCompLayer.timeStretch)) + AnimationFrameTime(preCompLayer.startTime)\n      }\n      \/\/ `timeRemappingInterpolator` is arbitrarily complex and cannot be inverted,\n      \/\/ so can only be applied via `complexTimeRemapping` from global time to local time.\n      .withComplexTimeRemapping(required: preCompLayer.timeRemapping != nil) { [preCompLayer] globalTime in\n        if let timeRemappingInterpolator {\n          let remappedLocalTime = timeRemappingInterpolator.value(frame: globalTime) as! LottieVector1D\n          return remappedLocalTime.cgFloatValue * context.animation.framerate\n        } else {\n          return (globalTime - preCompLayer.startTime) \/ preCompLayer.timeStretch\n        }\n      }"
+      }
+    ],
+    "I_parameterType" : [
+      "LayerAnimationContext"
+    ],
+    "I_parameters" : [
+      "context"
+    ]
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 61, Column: 5",
+    "H_initialValue" : "context"
+  },
+  {
+    "A_name" : "timeRemappingInterpolator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 65, Column: 5",
+    "H_initialValue" : "preCompLayer.timeRemapping.flatMap { KeyframeInterpolator(keyframes: $0.keyframes) }"
+  },
+  {
+    "A_name" : "contextForChildren",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 67, Column: 5",
+    "H_initialValue" : "context\n      \/\/ `timeStretch` and `startTime` are a simple linear function so can be inverted from a\n      \/\/ \"global time to local time\" function into the simpler \"local time to global time\".\n      .withSimpleTimeRemapping { [preCompLayer] layerLocalFrame in\n        (layerLocalFrame * AnimationFrameTime(preCompLayer.timeStretch)) + AnimationFrameTime(preCompLayer.startTime)\n      }\n      \/\/ `timeRemappingInterpolator` is arbitrarily complex and cannot be inverted,\n      \/\/ so can only be applied via `complexTimeRemapping` from global time to local time.\n      .withComplexTimeRemapping(required: preCompLayer.timeRemapping != nil) { [preCompLayer] globalTime in\n        if let timeRemappingInterpolator {\n          let remappedLocalTime = timeRemappingInterpolator.value(frame: globalTime) as! LottieVector1D\n          return remappedLocalTime.cgFloatValue * context.animation.framerate\n        } else {\n          return (globalTime - preCompLayer.startTime) \/ preCompLayer.timeStretch\n        }\n      }"
+  },
+  {
+    "A_name" : "remappedLocalTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 77, Column: 11",
+    "H_initialValue" : "timeRemappingInterpolator.value(frame: globalTime) as! LottieVector1D"
+  },
+  {
+    "A_name" : "PreCompLayer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomLayoutLayer"
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 91, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "layout",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PreCompLayer.swift - Line: 92, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "superlayerBounds"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "layout",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PreCompLayer.swift - Line: 92, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "superlayerBounds"
+    ]
+  }
+]

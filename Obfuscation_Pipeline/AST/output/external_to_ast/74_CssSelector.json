@@ -1,0 +1,506 @@
+[
+  {
+    "A_name" : "CssSelector",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 78, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "evaluator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CssSelector.swift - Line: 79, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "root",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CssSelector.swift - Line: 80, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CssSelector.swift - Line: 82, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "query",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CssSelector.swift - Line: 83, Column: 9",
+            "H_initialValue" : "query.trim()"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CssSelector.swift - Line: 91, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Evaluator",
+          "Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "select",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CssSelector.swift - Line: 104, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Elements"
+      },
+      {
+        "A_name" : "select",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CssSelector.swift - Line: 115, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Evaluator",
+          "Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Elements"
+      },
+      {
+        "A_name" : "select",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CssSelector.swift - Line: 126, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "evaluator",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CssSelector.swift - Line: 128, Column: 9",
+            "H_initialValue" : "try QueryParser.parse(query)"
+          },
+          {
+            "A_name" : "elements",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CssSelector.swift - Line: 129, Column: 9",
+            "H_initialValue" : "Array<Element>()"
+          },
+          {
+            "A_name" : "seenElements",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CssSelector.swift - Line: 130, Column: 9",
+            "H_initialValue" : "Array<Element>()"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Array<Element>"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "->Elements"
+      },
+      {
+        "A_name" : "select",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CssSelector.swift - Line: 145, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "->Elements"
+      },
+      {
+        "A_name" : "filterOut",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CssSelector.swift - Line: 150, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "output",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CssSelector.swift - Line: 151, Column: 9",
+            "H_initialValue" : "Elements()"
+          }
+        ],
+        "I_parameterType" : [
+          "Array<Element>",
+          "Array<Element>"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Elements"
+      }
+    ]
+  },
+  {
+    "A_name" : "evaluator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 79, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "root",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 80, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 82, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "query",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CssSelector.swift - Line: 83, Column: 9",
+        "H_initialValue" : "query.trim()"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "query",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 83, Column: 9",
+    "H_initialValue" : "query.trim()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 91, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Evaluator",
+      "Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "select",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CssSelector.swift - Line: 104, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Elements"
+  },
+  {
+    "A_name" : "select",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CssSelector.swift - Line: 115, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Evaluator",
+      "Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Elements"
+  },
+  {
+    "A_name" : "select",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CssSelector.swift - Line: 126, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "evaluator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CssSelector.swift - Line: 128, Column: 9",
+        "H_initialValue" : "try QueryParser.parse(query)"
+      },
+      {
+        "A_name" : "elements",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CssSelector.swift - Line: 129, Column: 9",
+        "H_initialValue" : "Array<Element>()"
+      },
+      {
+        "A_name" : "seenElements",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CssSelector.swift - Line: 130, Column: 9",
+        "H_initialValue" : "Array<Element>()"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Array<Element>"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "->Elements"
+  },
+  {
+    "A_name" : "evaluator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 128, Column: 9",
+    "H_initialValue" : "try QueryParser.parse(query)"
+  },
+  {
+    "A_name" : "elements",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 129, Column: 9",
+    "H_initialValue" : "Array<Element>()"
+  },
+  {
+    "A_name" : "seenElements",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 130, Column: 9",
+    "H_initialValue" : "Array<Element>()"
+  },
+  {
+    "A_name" : "found",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 134, Column: 13",
+    "H_initialValue" : "try select(evaluator, root)"
+  },
+  {
+    "A_name" : "select",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 145, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "->Elements"
+  },
+  {
+    "A_name" : "filterOut",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CssSelector.swift - Line: 150, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "output",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CssSelector.swift - Line: 151, Column: 9",
+        "H_initialValue" : "Elements()"
+      }
+    ],
+    "I_parameterType" : [
+      "Array<Element>",
+      "Array<Element>"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Elements"
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 151, Column: 9",
+    "H_initialValue" : "Elements()"
+  },
+  {
+    "A_name" : "found",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CssSelector.swift - Line: 153, Column: 13",
+    "H_initialValue" : "false"
+  }
+]

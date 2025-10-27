@@ -1,0 +1,140 @@
+[
+  {
+    "A_name" : "EpoxyIntrinsicContentSizeInvalidator",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "EpoxySwiftUIIntrinsicContentSizeInvalidator.swift - Line: 22, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "invalidate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EpoxySwiftUIIntrinsicContentSizeInvalidator.swift - Line: 23, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "callAsFunction",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EpoxySwiftUIIntrinsicContentSizeInvalidator.swift - Line: 25, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "invalidate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EpoxySwiftUIIntrinsicContentSizeInvalidator.swift - Line: 23, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "callAsFunction",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EpoxySwiftUIIntrinsicContentSizeInvalidator.swift - Line: 25, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "EnvironmentValues",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "EpoxySwiftUIIntrinsicContentSizeInvalidator.swift - Line: 32, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "epoxyIntrinsicContentSizeInvalidator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EpoxySwiftUIIntrinsicContentSizeInvalidator.swift - Line: 34, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "epoxyIntrinsicContentSizeInvalidator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EpoxySwiftUIIntrinsicContentSizeInvalidator.swift - Line: 34, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "EpoxyIntrinsicContentSizeInvalidatorKey",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "EnvironmentKey"
+    ],
+    "F_location" : "EpoxySwiftUIIntrinsicContentSizeInvalidator.swift - Line: 42, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "defaultValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "EpoxySwiftUIIntrinsicContentSizeInvalidator.swift - Line: 43, Column: 3",
+        "H_initialValue" : "EpoxyIntrinsicContentSizeInvalidator(invalidate: { })"
+      }
+    ]
+  },
+  {
+    "A_name" : "defaultValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "EpoxySwiftUIIntrinsicContentSizeInvalidator.swift - Line: 43, Column: 3",
+    "H_initialValue" : "EpoxyIntrinsicContentSizeInvalidator(invalidate: { })"
+  }
+]

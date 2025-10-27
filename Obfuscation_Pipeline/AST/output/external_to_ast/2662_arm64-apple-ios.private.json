@@ -1,0 +1,281 @@
+[
+  {
+    "A_name" : "STAntiCaptureView",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "_inheritsConvenienceInitializers",
+      "_hasMissingDesignatedInitializers",
+      "objc",
+      "IBDesignable",
+      "_Concurrency.MainActor"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIKit.UIView"
+    ],
+    "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "antiCapture",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "_Concurrency.MainActor"
+        ],
+        "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 13, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "customImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "_Concurrency.MainActor"
+        ],
+        "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 17, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "backgroundColorOfCaptured",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "_Concurrency.MainActor"
+        ],
+        "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 21, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "backgroundColorOfAppSwitcherView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "_Concurrency.MainActor"
+        ],
+        "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 25, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "disableAppSwitcherViewOnce",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "_Concurrency.MainActor"
+        ],
+        "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 29, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "backgroundColor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "_Concurrency.MainActor",
+          "objc",
+          "override",
+          "dynamic"
+        ],
+        "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 33, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "_Concurrency.MainActor",
+          "objc",
+          "required",
+          "dynamic"
+        ],
+        "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 37, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Foundation.NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "antiCapture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "_Concurrency.MainActor"
+    ],
+    "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 13, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "customImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "_Concurrency.MainActor"
+    ],
+    "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 17, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "backgroundColorOfCaptured",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "_Concurrency.MainActor"
+    ],
+    "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 21, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "backgroundColorOfAppSwitcherView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "_Concurrency.MainActor"
+    ],
+    "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 25, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "disableAppSwitcherViewOnce",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "_Concurrency.MainActor"
+    ],
+    "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 29, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "backgroundColor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "_Concurrency.MainActor",
+      "objc",
+      "override",
+      "dynamic"
+    ],
+    "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 33, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "_Concurrency.MainActor",
+      "objc",
+      "required",
+      "dynamic"
+    ],
+    "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 37, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Foundation.NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "STAntiCaptureCompatible",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 40, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "STAntiCapture.STAntiCaptureCompatible",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 42, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "antiCapture",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 43, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Bool",
+          "UIKit.UIImage?",
+          "UIKit.UIColor",
+          "UIKit.UIColor",
+          "Swift.Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> some SwiftUI.View"
+      }
+    ]
+  },
+  {
+    "A_name" : "antiCapture",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "arm64-apple-ios.private.swiftinterface - Line: 43, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Bool",
+      "UIKit.UIImage?",
+      "UIKit.UIColor",
+      "UIKit.UIColor",
+      "Swift.Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> some SwiftUI.View"
+  }
+]

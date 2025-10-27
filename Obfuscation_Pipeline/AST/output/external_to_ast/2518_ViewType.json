@@ -1,0 +1,32 @@
+[
+  {
+    "A_name" : "ViewRepresentableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ViewType.swift - Line: 21, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ViewRepresentableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ViewType.swift - Line: 42, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]
