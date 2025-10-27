@@ -9,10 +9,9 @@ cc6d4c4387a097a57a7556491e0d5e9640ca2b0b	not-for-merge	branch 'bump-ptr-allocati
 7361b0dfff393e65d0e1b68731396f3cdb1dd5f9	not-for-merge	branch 'jgrynspan/2400-assertMacroExpansion-fix' of https://github.com/apple/swift-syntax
 8d3266eb89421e1089620cc6375bf65be37dd9a2	not-for-merge	branch 'ks/6.1-bazel-update-for-new-libraries' of https://github.com/apple/swift-syntax
 0ea3566f8dacd10fa3293c5df490c0c0ce033102	not-for-merge	branch 'ktoso-patch-1' of https://github.com/apple/swift-syntax
-bcb9e0041e12e9b525de984c8119e8c9442b33a4	not-for-merge	branch 'main' of https://github.com/apple/swift-syntax
+ef033f4611f44b911592b609e2df015f01086d69	not-for-merge	branch 'main' of https://github.com/apple/swift-syntax
 7bfc614e8e2c72aa12608f1041ceb4957a904574	not-for-merge	branch 'maxd/cross-repo-testing' of https://github.com/apple/swift-syntax
 b81f557007b20b5f7de748146d1b66b7ef628c62	not-for-merge	branch 'mracek/used-and-section-attrs' of https://github.com/apple/swift-syntax
-e07dc82df0d613a3ed5c3b76a91a8d780af466a1	not-for-merge	branch 'object-format-stabilize' of https://github.com/apple/swift-syntax
 64889f0c732f210a935a0ad7cda38f77f876262d	not-for-merge	branch 'package-release/509' of https://github.com/apple/swift-syntax
 cdd571f366a4298bb863a9dcfe1295bb595041d5	not-for-merge	branch 'release/5.10' of https://github.com/apple/swift-syntax
 844574d683f53d0737a9c6d706c3ef31ed2955eb	not-for-merge	branch 'release/5.3' of https://github.com/apple/swift-syntax
@@ -1358,7 +1357,7 @@ ebd8e2e2f6b06ba71bc502da45071d67a813fd2a	not-for-merge	'refs/pull/2379/head' of 
 8abecc44089a28fbfc1bf688aec4f934f015dbcd	not-for-merge	'refs/pull/2380/head' of https://github.com/apple/swift-syntax
 2d348b2380f4f780f08cb7e0ae1a49d75e86a050	not-for-merge	'refs/pull/2381/head' of https://github.com/apple/swift-syntax
 d919134d531613826e93b84e93e9cd537ebc9a73	not-for-merge	'refs/pull/2382/head' of https://github.com/apple/swift-syntax
-68ed3d49ac91973ca55bc5607f0829c587f36c36	not-for-merge	'refs/pull/2382/merge' of https://github.com/apple/swift-syntax
+9f8e04385664d12e8e435874e8fdb248c5ea76c4	not-for-merge	'refs/pull/2382/merge' of https://github.com/apple/swift-syntax
 81d61ee99132a4489918ec7ee9590fe1e4847582	not-for-merge	'refs/pull/2383/head' of https://github.com/apple/swift-syntax
 d4021a7dd9413d9f4d60756d27418e8205668bd8	not-for-merge	'refs/pull/2384/head' of https://github.com/apple/swift-syntax
 d4d7b081baf2cfc52e1e0f1a4eee3516f86a50b4	not-for-merge	'refs/pull/2385/head' of https://github.com/apple/swift-syntax
@@ -1801,7 +1800,7 @@ fd0b6917da5d18ca609717addd5c495a33964ebc	not-for-merge	'refs/pull/2835/head' of 
 7aa2516dd89d53b1ef2ee82a8d932ff7ac8baf5f	not-for-merge	'refs/pull/2839/head' of https://github.com/apple/swift-syntax
 9eda6157fb41cac7e0b10507de7f82a6c4a4372b	not-for-merge	'refs/pull/284/head' of https://github.com/apple/swift-syntax
 740199b17708556f538a2cfd4cc8f3abb9989ae8	not-for-merge	'refs/pull/2840/head' of https://github.com/apple/swift-syntax
-819128b9e33fd10d7494c3f95555902f83f064f4	not-for-merge	'refs/pull/2840/merge' of https://github.com/apple/swift-syntax
+085480528acdaa094abd1f51deee6a908a2afd54	not-for-merge	'refs/pull/2840/merge' of https://github.com/apple/swift-syntax
 f90e0904f3f062c07611f51e5e899494768f7778	not-for-merge	'refs/pull/2841/head' of https://github.com/apple/swift-syntax
 43692ca116b8ababa06e55634e50a2e1283b2fd0	not-for-merge	'refs/pull/2841/merge' of https://github.com/apple/swift-syntax
 a05c783166f79a88dd996eed67dd31afa4100f0e	not-for-merge	'refs/pull/2842/head' of https://github.com/apple/swift-syntax
@@ -2136,16 +2135,13 @@ f537808000a69e5acfa0b42c5de1ae5793e2c0c5	not-for-merge	'refs/pull/3166/head' of 
 6c3d54bf38374aaec7339626c6d61256941ca709	not-for-merge	'refs/pull/3168/head' of https://github.com/apple/swift-syntax
 7e03e766a3093b4e1723284d907e01037a97a610	not-for-merge	'refs/pull/3169/head' of https://github.com/apple/swift-syntax
 9be45039476389d4e7db083306825821ca1cb992	not-for-merge	'refs/pull/317/head' of https://github.com/apple/swift-syntax
-e07dc82df0d613a3ed5c3b76a91a8d780af466a1	not-for-merge	'refs/pull/3170/head' of https://github.com/apple/swift-syntax
-c742d1189eedd252d050c9d5438f2dda871aeb5e	not-for-merge	'refs/pull/3170/merge' of https://github.com/apple/swift-syntax
+42ec79a488788a0e8ae364676752d0c7672fa8da	not-for-merge	'refs/pull/3170/head' of https://github.com/apple/swift-syntax
 efab59f96b9c05f6a335e861ce9967bb652356af	not-for-merge	'refs/pull/3171/head' of https://github.com/apple/swift-syntax
-a4ae2ef91050f70f0f0a541fc0a7a61d16a0bb10	not-for-merge	'refs/pull/3172/head' of https://github.com/apple/swift-syntax
-bde96d512b0515d845f750d61f20bf712eda2529	not-for-merge	'refs/pull/3172/merge' of https://github.com/apple/swift-syntax
+445ef28d7569b00e703be079fc0909968dc03f59	not-for-merge	'refs/pull/3172/head' of https://github.com/apple/swift-syntax
 6087e6b308c5224d905bc5a7b2d0f2161c2a539b	not-for-merge	'refs/pull/3173/head' of https://github.com/apple/swift-syntax
-21ebbbaf9451f25c5ee39b5f503bb1bb34fe143e	not-for-merge	'refs/pull/3174/head' of https://github.com/apple/swift-syntax
-da507114cd65ebb6b85579bc6a3d40e62a4927a4	not-for-merge	'refs/pull/3174/merge' of https://github.com/apple/swift-syntax
+a92c94cc6f25da03f0e619a24a71ac0e992eeb19	not-for-merge	'refs/pull/3174/head' of https://github.com/apple/swift-syntax
+235a3c6f65366a92d8e93579f8d4b2d5ea2025b4	not-for-merge	'refs/pull/3174/merge' of https://github.com/apple/swift-syntax
 b38b9996f98398f0f32ddd73d2c69a357f770947	not-for-merge	'refs/pull/3175/head' of https://github.com/apple/swift-syntax
-efd817421b322d317c9420131cd122f4a626b7cf	not-for-merge	'refs/pull/3175/merge' of https://github.com/apple/swift-syntax
 b0b567a4398abec3f5574060fef44347460fd099	not-for-merge	'refs/pull/318/head' of https://github.com/apple/swift-syntax
 b2f9d97b750ef325cf14ce7e18b3c77f1d7b2b17	not-for-merge	'refs/pull/319/head' of https://github.com/apple/swift-syntax
 b192307c9ed50e648ff826c41086ddad74eda07b	not-for-merge	'refs/pull/32/head' of https://github.com/apple/swift-syntax
@@ -3587,6 +3583,10 @@ fb3fd06f5a79e51cd8eac03ac6b54251acb4d473	not-for-merge	tag 'swift-6.2-DEVELOPMEN
 f2c7aaa93b0eed12bdbc611102011323ff8a9697	not-for-merge	tag 'swift-6.2-DEVELOPMENT-SNAPSHOT-2025-10-01-a' of https://github.com/apple/swift-syntax
 42765aab704da0714f81bede9f681a4b68a54dc5	not-for-merge	tag 'swift-6.2-DEVELOPMENT-SNAPSHOT-2025-10-08-a' of https://github.com/apple/swift-syntax
 d085bbed19f722becdfa8678ab1dc8d0e4b61c08	not-for-merge	tag 'swift-6.2-DEVELOPMENT-SNAPSHOT-2025-10-09-a' of https://github.com/apple/swift-syntax
+0405a2fd321567ea1ac37d7980bef6c7e4ea8377	not-for-merge	tag 'swift-6.2-DEVELOPMENT-SNAPSHOT-2025-10-18-a' of https://github.com/apple/swift-syntax
+412d3fd79ee7de3f7971ced32527a87443ac58ef	not-for-merge	tag 'swift-6.2-DEVELOPMENT-SNAPSHOT-2025-10-20-a' of https://github.com/apple/swift-syntax
+d68b1e128d68ad59593c6434ca04c32cb806ef6b	not-for-merge	tag 'swift-6.2-DEVELOPMENT-SNAPSHOT-2025-10-21-a' of https://github.com/apple/swift-syntax
+63f4ce0b81563be9679962a546ec7017d7646125	not-for-merge	tag 'swift-6.2-DEVELOPMENT-SNAPSHOT-2025-10-22-a' of https://github.com/apple/swift-syntax
 21b3b45635decd1a0b89968f81b6d9a93128f773	not-for-merge	tag 'swift-6.2-RELEASE' of https://github.com/apple/swift-syntax
 5ad4d6a8f43d1a900a98f8487c57f988000f0d56	not-for-merge	tag 'swift-DEVELOPMENT-SNAPSHOT-2018-08-25-a' of https://github.com/apple/swift-syntax
 74f588939f7e350bbc71eb14b9a12fe19ad0cd9c	not-for-merge	tag 'swift-DEVELOPMENT-SNAPSHOT-2019-01-12-a' of https://github.com/apple/swift-syntax
@@ -4356,4 +4356,5 @@ df82b531462f4c0dcdfc94029b8b07f17f4b4fda	not-for-merge	tag 'swift-DEVELOPMENT-SN
 327e26c90df992ba93da5a23ca57ce4b121410f8	not-for-merge	tag 'swift-DEVELOPMENT-SNAPSHOT-2025-09-29-a' of https://github.com/apple/swift-syntax
 6c00e5bec26ef870c68f88430680b0302036025b	not-for-merge	tag 'swift-DEVELOPMENT-SNAPSHOT-2025-10-02-a' of https://github.com/apple/swift-syntax
 991165ff22228fc13fc39cb05d71c2f9d2c33c5d	not-for-merge	tag 'swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a' of https://github.com/apple/swift-syntax
+ef358526fb252b22dc47a4d470118b70ea2a9513	not-for-merge	tag 'swift-DEVELOPMENT-SNAPSHOT-2025-10-17-a' of https://github.com/apple/swift-syntax
 fdcbd4bfea2e833467e16d7962c4110c14382b56	not-for-merge	tag 'xcode11-beta1' of https://github.com/apple/swift-syntax

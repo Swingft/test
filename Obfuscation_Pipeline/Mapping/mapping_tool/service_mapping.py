@@ -394,7 +394,7 @@ def main():
             forbidden.add(_name)
 
     # 매핑 생성
-    rnd = random.Random(args.seed)
+    rnd = random.SystemRandom()
     result = {}
 
     used_repls: Set[str] = set()

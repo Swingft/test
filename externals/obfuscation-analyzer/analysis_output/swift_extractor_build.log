@@ -1,5 +1,5 @@
 == Swift build start ==
-cwd: /Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor
+cwd: /Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor
 cmd: swift build -c release
 
 [1/1] Compiling plugin GenerateManual

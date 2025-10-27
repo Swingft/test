@@ -138,7 +138,6 @@ import json
 import os
 import sys
 import shutil
-import requests
 from datetime import datetime
 
 # --- Helper: write preflight feedback text into obfuscation target folder ---

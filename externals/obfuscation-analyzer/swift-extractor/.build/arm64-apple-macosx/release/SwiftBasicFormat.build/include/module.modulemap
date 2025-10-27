@@ -1,3 +1,3 @@
 module SwiftBasicFormat {
-    header "/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftBasicFormat.build/include/SwiftBasicFormat-Swift.h"
+    header "/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/arm64-apple-macosx/release/SwiftBasicFormat.build/include/SwiftBasicFormat-Swift.h"
 }

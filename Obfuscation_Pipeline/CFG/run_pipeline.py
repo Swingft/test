@@ -20,11 +20,9 @@ ROOT = Path(__file__).resolve().parent
 
 
 def run(cmd: list[str]) -> int:
-    print("[dyn_pipeline] $", " ".join(cmd))
     try:
         return subprocess.call(cmd)
     except FileNotFoundError as e:
-        print(f"[dyn_pipeline] ERROR: command not found: {cmd[0]}", file=sys.stderr)
         return 127
 
 
@@ -85,7 +83,6 @@ def main() -> None:
                 if isinstance(v, (int, float)): return bool(v)
                 return default
             if not _to_bool(val, True):
-                print("[dyn_pipeline] Obfuscation_controlFlow=false → skip CFG pipeline")
                 return
         except Exception:
             pass
@@ -156,7 +153,6 @@ def main() -> None:
     if rc2 != 0:
         sys.exit(rc2)
 
-    print("[dyn_pipeline] pipeline complete")
 
 
 if __name__ == "__main__":

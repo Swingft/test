@@ -1,0 +1,2 @@
+Requirement already satisfied: networkx in ./venv/lib/python3.13/site-packages (3.5)
+Requirement already satisfied: pyyaml in ./venv/lib/python3.13/site-packages (6.0.3)

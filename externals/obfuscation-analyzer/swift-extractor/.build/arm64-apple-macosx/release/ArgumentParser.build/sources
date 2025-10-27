@@ -1,49 +1,49 @@
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentDiscussion.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentVisibility.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/AsyncParsableCommand.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandGroup.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift'
-'/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift'
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputKey.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/DumpHelpGenerator.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/CollectionExtensions.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Mutex.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Platform.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SwiftExtensions.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/CodingKeyValidator.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/NonsenseFlagsValidator.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/ParsableArgumentsValidation.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/PositionalArgumentsValidator.swift
-/Users/lanian/Desktop/last/temp/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/UniqueNamesValidator.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentDiscussion.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentVisibility.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/AsyncParsableCommand.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandGroup.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift'
+'/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift'
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputKey.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/DumpHelpGenerator.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/CollectionExtensions.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Mutex.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Platform.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SwiftExtensions.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/CodingKeyValidator.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/NonsenseFlagsValidator.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/ParsableArgumentsValidation.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/PositionalArgumentsValidator.swift
+/Users/lanian/Desktop/test/externals/obfuscation-analyzer/swift-extractor/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/UniqueNamesValidator.swift
