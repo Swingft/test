@@ -11,22 +11,12 @@ import re
 import sys
 from typing import Dict, List, Optional, Tuple, Set
 
-# ---------- 로깅 유틸리티 ----------
-APP_TAG = "[dyn_obf]"
-
-def log(msg: str) -> None: 
-    print(f"{APP_TAG} {msg}")
-
-def read_text(path: str) -> str:
-    with open(path, "r", encoding="utf-8") as f: 
-        return f.read()
+# Import the utils module for logging and file I/O
+from utils import log, read_text, is_extension_file, DEFAULT_SKIP_DIRS
 
 # ---------- 정규식 패턴 (모듈 스코프) ----------
 TYPE_DECL_RE = re.compile(r"^\s*(?:@[\w:]+\s*)*\s*(?P<mods>(?:\w+\s+)*)(?P<tkind>class|struct|enum|actor|extension|protocol)\s+(?P<type_name>\w+)(?P<generics>\s*<[^>]+>)?", re.MULTILINE)
 FUNC_DECL_RE = re.compile(r"^\s*(?:@[\w:]+\s*)*\s*(?P<mods>(?:\w+\s+)*)func\s+(?P<name>\w+)\s*(?:<[^>]+>)?\s*\((?P<params>[^)]*)\)\s*(?:(?:async|re?throws)\s*)*(?:->\s*(?P<ret>[^\{]+))?")
-
-# ---------- 파일 스캔 유틸리티 ----------
-DEFAULT_SKIP_DIRS = {".git", ".build", "DerivedData", "Pods", "Carthage", ".swiftpm", "__MACOSX", "node_modules", "vendor"}
 
 def is_ui_path(rel_path: str) -> bool:
     p = rel_path.replace("\\", "/").lower()
@@ -35,7 +25,7 @@ def is_ui_path(rel_path: str) -> bool:
     base = os.path.basename(p)
     return base.endswith("view.swift") or base.endswith("viewcontroller.swift")
 
-def iter_swift_files(root: str, skip_ui: bool, debug: bool, exclude_file_globs: Optional[List[str]] = None, include_packages: bool = False) -> List[str]:
+def iter_swift_files(root: str, skip_ui: bool, debug: bool, exclude_file_globs: Optional[List[str]] = None, include_packages: bool = False, skip_extensions: bool = False) -> List[str]:
     """Swift 파일들을 반복하는 함수"""
     from fnmatch import fnmatchcase
     
@@ -72,6 +62,12 @@ def iter_swift_files(root: str, skip_ui: bool, debug: bool, exclude_file_globs: 
             if skip_ui and is_ui_path(rel_path):
                 if debug: 
                     log(f"Skipping UI file: {rel_path}")
+                continue
+                
+            # Skip extension files if requested
+            if skip_extensions and is_extension_file(rel_path):
+                if debug: 
+                    log(f"Skipping extension file: {rel_path}")
                 continue
 
             results.append(abs_path)
@@ -210,6 +206,7 @@ def scan_swift_functions(
     known_global_actor_types: Optional[set] = None,
     local_declared_types: Optional[set] = None,
     local_protocol_reqs: Optional[Dict[str, Set[Tuple[str, int, Tuple[str, ...]]]]] = None,
+    skip_extensions: bool = False
 ) -> List[Dict]:
     """
     Swift 프로젝트에서 함수들을 스캔하는 메인 함수
@@ -228,7 +225,7 @@ def scan_swift_functions(
     Returns:
         스캔된 함수들의 리스트
     """
-    files = iter_swift_files(project_root, skip_ui=skip_ui, debug=debug, exclude_file_globs=exclude_file_globs, include_packages=args_include_packages)
+    files = iter_swift_files(project_root, skip_ui=skip_ui, debug=debug, exclude_file_globs=exclude_file_globs, include_packages=args_include_packages, skip_extensions=skip_extensions)
     # Use precompiled patterns
     type_decl_re = TYPE_DECL_RE
     func_decl_re = FUNC_DECL_RE
