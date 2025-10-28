@@ -2,6 +2,22 @@ import sys, re, json, hashlib, secrets, os
 from pathlib import Path
 from typing import Optional, List, Set, Tuple
 import secrets
+import logging
+
+# local trace / strict helpers
+
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
 
 def hval(s: str) -> int:
     return int(hashlib.sha256(s.encode("utf-8")).hexdigest(), 16)
@@ -598,7 +614,9 @@ def process_file(p: Path, allocator: NameAllocator) -> dict:
     except (OSError, UnicodeError):
         try:
             text = p.read_text(encoding='latin-1', errors='ignore')
-        except Exception as e:
+        except (OSError, UnicodeError) as e:
+            _trace("run_opaque: cannot read %s: %s", p, e)
+            _maybe_raise(e)
             print(f"[ERR] Cannot read {p}: {e}", file=sys.stderr)
             return {"file": str(p), "case_where_edits": 0, "if_edits": 0,
                     "top_funcs_declared": 0, "foundation_imported": False}
@@ -631,7 +649,11 @@ def process_file(p: Path, allocator: NameAllocator) -> dict:
         final_stage = insert_predicate_funcs(final_stage, ctx.top_names)
 
     if final_stage != text:
-        p.write_text(final_stage, encoding='utf-8')
+        try:
+            p.write_text(final_stage, encoding='utf-8')
+        except (OSError, UnicodeError) as e:
+            _trace("run_opaque: write failed %s: %s", p, e)
+            _maybe_raise(e)
 
     return {
         "file": str(p),

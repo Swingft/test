@@ -6,6 +6,23 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 from typing import Optional, List, Dict, Set, Union
 
+import logging
+
+# local trace / strict helpers
+
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
+
 
 HEX_ID_RE = re.compile(r'\b[0-9A-Fa-f]{24}\b')
 
@@ -271,7 +288,9 @@ def _expand_and_dedupe(candidates: List[Path]) -> List[Path]:
                     if pj not in seen:
                         seen.add(pj)
                         out.append(pj)
-            except Exception as e:
+            except (OSError, ET.ParseError, UnicodeError) as e:
+                _trace("workspace scan failed for %s: %s", c, e)
+                _maybe_raise(e)
                 print(f"[warn] workspace scan failed: {e}")
                 continue
         elif c.suffix == ".xcodeproj":
@@ -315,15 +334,27 @@ def main():
 
     merged: Dict[str, Set[str]] = {}
     for proj in projects:
-        pbx = PBXProj(proj)
-        m = pbx.list_target_to_swift_paths()
-        for tname, paths in m.items():
-            merged.setdefault(tname, set()).update(paths)
+        try:
+            pbx = PBXProj(proj)
+            m = pbx.list_target_to_swift_paths()
+            for tname, paths in m.items():
+                merged.setdefault(tname, set()).update(paths)
+        except (OSError, UnicodeError, ValueError, KeyError) as e:
+            _trace("PBX parse failed for %s: %s", proj, e)
+            _maybe_raise(e)
+            print(f"[warn] project parse failed: {proj} -> {e}")
+            continue
 
     out: Dict[str, List[str]] = {k: sorted(v) for k, v in merged.items()}
-    Path("targets_swift_paths.json").write_text(
-        json.dumps(out, indent=2, ensure_ascii=False), encoding='utf-8'
-    )
+    try:
+        Path("targets_swift_paths.json").write_text(
+            json.dumps(out, indent=2, ensure_ascii=False), encoding='utf-8'
+        )
+    except (OSError, UnicodeError, TypeError, ValueError) as e:
+        _trace("write targets_swift_paths.json failed: %s", e)
+        _maybe_raise(e)
+        print(f"[err] cannot write targets_swift_paths.json: {e}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

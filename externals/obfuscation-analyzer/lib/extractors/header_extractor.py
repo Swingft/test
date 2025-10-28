@@ -15,6 +15,22 @@ from collections import defaultdict
 from enum import Enum, auto
 from multiprocessing import Pool, cpu_count
 import time
+import logging
+import os
+ # local trace/strict helpers
+
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
 
 
 class ParseState(Enum):
@@ -187,8 +203,9 @@ class ObjCHeaderParser:
             # 필터링
             all_identifiers = cls._filter_identifiers(all_identifiers)
 
-        except Exception as e:
-            pass
+        except (OSError, re.error) as e:
+            _trace("header_extractor.parse failed for %s: %s", file_path, e)
+            _maybe_raise(e)
 
         return all_identifiers
 
@@ -356,7 +373,9 @@ def process_header_file(args: Tuple[Path, Path]) -> Tuple[str, Set[str], bool]:
 
         return (relative_path, identifiers, True)
 
-    except Exception as e:
+    except (OSError, re.error) as e:
+        _trace("process_header_file failed for %s: %s", header_file, e)
+        _maybe_raise(e)
         return (header_file.name, set(), False)
 
 
