@@ -10,6 +10,22 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Optional, Dict, List, Set
 
+import logging
+
+# local trace / strict helpers
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
+
 try:
     from cryptography.hazmat.primitives.ciphers.aead import ChaCha20Poly1305
 except ImportError:
@@ -110,7 +126,9 @@ def ensure_import(swift_file: str) -> bool:
     p = Path(swift_file)
     try:
         s = p.read_text(encoding='utf-8')
-    except (OSError, UnicodeDecodeError):
+    except (OSError, UnicodeDecodeError) as e:
+        _trace("handled error: %s", e)
+        _maybe_raise(e)
         return False
     if 'import StringSecurity' in s:
         return False
@@ -121,8 +139,9 @@ def ensure_import(swift_file: str) -> bool:
     try:
         p.write_text(''.join(lines), encoding='utf-8')
         return True
-    except Exception as e:
-        print(f"[Warning] {e}")
+    except (OSError, UnicodeError, json.JSONDecodeError, ValueError, TypeError) as e:
+        _trace("handled error: %s", e)
+        _maybe_raise(e)
         return False
 
 def swift_unescape(s: str) -> str:
@@ -207,7 +226,9 @@ def detect_main_entry(files: List[str]):
                 return path, 'swiftui'
             if re.search(r'class\s+\w+\s*:\s*UIResponder\s*,\s*UIApplicationDelegate', content):
                 return path, 'uikit'
-        except (OSError, UnicodeDecodeError):
+        except (OSError, UnicodeError, json.JSONDecodeError, ValueError, TypeError) as e:
+            _trace("handled error: %s", e)
+            _maybe_raise(e)
             continue
     return None, None
 
@@ -452,8 +473,9 @@ def encrypt_and_insert(source_root: str, included_json_path: str,
                 with open(file_path, "w", encoding="utf-8") as f:
                     f.write(new_content)
                 modified_files.add(file_path)
-        except Exception as e:
-            print(f"[Warning] {e}")
+        except (OSError, UnicodeError, json.JSONDecodeError, ValueError, TypeError) as e:
+            _trace("encrypt_and_insert failed on %s: %s", file_path, e)
+            _maybe_raise(e)
 
     if not modified_files:
         print("[WARNING] No resolve() usages found - skipping imports/entry/vendoring.")

@@ -1,7 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import os, sys, json, shutil, subprocess
+import logging
 from pathlib import Path
+
+# local trace / strict helpers
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
 
 ROOT = Path(__file__).resolve().parents[1]  # Obfuscation_Pipeline
 if str(ROOT) not in sys.path:
@@ -12,15 +27,12 @@ from ID_Obf.id_dump import make_dump_file_id
 
 
 def to_bool(v, default=True):
-    try:
-        if isinstance(v, bool):
-            return v
-        if isinstance(v, str):
-            return v.strip().lower() in {"1", "true", "yes", "y", "on"}
-        if isinstance(v, (int, float)):
-            return bool(v)
-    except Exception:
-        pass
+    if isinstance(v, bool):
+        return v
+    if isinstance(v, str):
+        return v.strip().lower() in {"1", "true", "yes", "y", "on"}
+    if isinstance(v, (int, float)):
+        return bool(v)
     return default
 
 
@@ -29,9 +41,15 @@ def load_config(path: Path | None) -> dict:
         return {}
     try:
         if path.exists():
-            return json.loads(path.read_text(encoding="utf-8"))
-    except Exception:
-        pass
+            try:
+                return json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError, UnicodeError) as e:
+                _trace("load_config: failed to read/parse %s: %s", path, e)
+                _maybe_raise(e)
+                return {}
+    except (OSError, UnicodeError) as e:
+        _trace("load_config: path check failed %s: %s", path, e)
+        _maybe_raise(e)
     return {}
 
 
@@ -66,15 +84,30 @@ def main():
     os.chdir(target_project_dir)
     try:
         build_marker_file = Path(".build/build_path.txt")
-        previous = build_marker_file.read_text().strip() if build_marker_file.exists() else ""
+        previous = ""
+        try:
+            if build_marker_file.exists():
+                previous = build_marker_file.read_text(encoding="utf-8").strip()
+        except (OSError, UnicodeError) as e:
+            _trace("build marker read failed %s: %s", build_marker_file, e)
+            _maybe_raise(e)
+            previous = ""
         current = str((target_project_dir / ".build").resolve())
         if previous != current or not previous:
-            subprocess.run(["swift", "package", "clean"], check=True)
-            shutil.rmtree(".build", ignore_errors=True)
-            subprocess.run(["swift", "build"], check=True)
-            build_marker_file.parent.mkdir(parents=True, exist_ok=True)
-            build_marker_file.write_text(current)
-        subprocess.run(["swift", "run", target_name, str(mapping_result), str(swift_list)], check=True)
+            try:
+                subprocess.run(["swift", "package", "clean"], check=True)
+                shutil.rmtree(".build", ignore_errors=True)
+                subprocess.run(["swift", "build"], check=True)
+            except (OSError, subprocess.CalledProcessError) as e:
+                _trace("swift build failed: %s", e)
+                _maybe_raise(e)
+                sys.exit(1)
+        try:
+            subprocess.run(["swift", "run", target_name, str(mapping_result), str(swift_list)], check=True)
+        except (OSError, subprocess.CalledProcessError) as e:
+            _trace("swift run failed: %s", e)
+            _maybe_raise(e)
+            sys.exit(1)
     finally:
         os.chdir(str(ROOT))
 
@@ -84,5 +117,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

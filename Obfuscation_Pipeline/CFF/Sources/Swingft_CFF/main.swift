@@ -440,8 +440,10 @@ private func runAndCapture(_ exe: String, _ args: [String]) -> (Int32, String) {
         return (126, "LAUNCH ERROR (CocoaError): \(error.localizedDescription)")
     } catch let error as NSError {
         return (126, "LAUNCH ERROR (NSError): \(error.domain) (\(error.code)) - \(error.localizedDescription)")
-    } catch {
-        return (126, "LAUNCH ERROR (Unknown): \(error.localizedDescription)")
+    } catch let error as POSIXError {
+        return (126, "LAUNCH ERROR (POSIXError): \(error.code.rawValue) - \(error.localizedDescription)")
+    } catch let error {
+        return (126, "LAUNCH ERROR (Error): \(error.localizedDescription)")
     }
 
     p.waitUntilExit()
@@ -496,8 +498,11 @@ func runSwiftCFF(pyEnvAST: String, diffOutDir: String?) -> Int32 {
     } catch let error as NSError {
         fputs("ERROR: python 실행 실패 (NSError): \(error.domain) (\(error.code)) - \(error.localizedDescription)\n", stderr)
         return 126
-    } catch {
-        fputs("ERROR: python 실행 실패 (Unknown): \(error.localizedDescription)\n", stderr)
+    } catch let error as POSIXError {
+        fputs("ERROR: python 실행 실패 (POSIXError): \(error.code.rawValue) - \(error.localizedDescription)\n", stderr)
+        return 126
+    } catch let error {
+        fputs("ERROR: python 실행 실패 (Error): \(error.localizedDescription)\n", stderr)
         return 126
     }
 
@@ -532,8 +537,12 @@ for fileURL in swiftFiles {
         lc.walk(tree)
         allLoops.append(contentsOf: lc.loops)
 
-    } catch {
-        fputs("Parse error in \(fileURL.path): \(error)\n", stderr)
+    } catch let e as CocoaError {
+        fputs("Parse error (CocoaError) in \(fileURL.path): \(e.localizedDescription)\n", stderr)
+    } catch let e as NSError {
+        fputs("Parse error (NSError) in \(fileURL.path): \(e.domain) (\(e.code)) - \(e.localizedDescription)\n", stderr)
+    } catch let e {
+        fputs("Parse error (Error) in \(fileURL.path): \(e.localizedDescription)\n", stderr)
     }
 }
 
@@ -544,8 +553,17 @@ do {
     enc.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes]
     try enc.encode(bundle).write(to: outURL, options: .atomic)
 
-} catch {
-    fputs("Failed to write ast.json: \(error)\n", stderr)
+} catch let e as EncodingError {
+    fputs("Failed to write ast.json (EncodingError): \(e)\n", stderr)
+    exit(1)
+} catch let e as CocoaError {
+    fputs("Failed to write ast.json (CocoaError): \(e.localizedDescription)\n", stderr)
+    exit(1)
+} catch let e as NSError {
+    fputs("Failed to write ast.json (NSError): \(e.domain) (\(e.code)) - \(e.localizedDescription)\n", stderr)
+    exit(1)
+} catch let e {
+    fputs("Failed to write ast.json (Error): \(e.localizedDescription)\n", stderr)
     exit(1)
 }
 let diffFolder = rootURL.appendingPathComponent("Swingft_CFF_Dump", isDirectory: true).path

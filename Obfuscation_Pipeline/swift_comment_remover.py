@@ -3,6 +3,23 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Optional, List
 
+import logging
+
+# local trace / strict helpers
+
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
+
 
 class ParseState:
     NORMAL = 1
@@ -344,8 +361,12 @@ def strip_comments_in_place(project_dir: str) -> None:
             text = fp.read_text(encoding="utf-8")
             cleaned = remover.remove_comments(text)
             if cleaned != text:
-                fp.write_text(cleaned, encoding="utf-8")
-        except Exception:
+                try:
+                    fp.write_text(cleaned, encoding="utf-8")
+                except (OSError, UnicodeError) as e:
+                    _trace("swift_comment_remover: write failed %s: %s", fp, e)
+                    _maybe_raise(e)
+        except (OSError, UnicodeError) as e:
+            _trace("swift_comment_remover: read failed %s: %s", fp, e)
+            _maybe_raise(e)
             continue
-
-

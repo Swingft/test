@@ -4,6 +4,22 @@ json_cmd.py: Generate an example exclusion configuration JSON in the swingft_con
 
 import json
 import sys
+import logging
+
+# local trace/strict helpers
+
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
 
 def handle_generate_json(json_path: str) -> None:
     """
@@ -64,6 +80,8 @@ def handle_generate_json(json_path: str) -> None:
         with open(json_path, 'w', encoding='utf-8') as f:
             json.dump(example, f, indent=2, ensure_ascii=False)
         print(f"Example exclusion JSON file has been created: {json_path}")
-    except Exception as e:
+    except (OSError, UnicodeError, json.JSONDecodeError, TypeError, ValueError) as e:
+        _trace("json_cmd: failed to write JSON %s: %s", json_path, e)
+        _maybe_raise(e)
         print(f"Error writing JSON to {json_path}: {e}", file=sys.stderr)
         sys.exit(1)
