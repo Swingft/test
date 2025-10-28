@@ -3,12 +3,25 @@ from __future__ import annotations
 import json
 import os
 from typing import Any
+import logging
 
+# strict-mode helper
+try:
+    from ..tui import _maybe_raise, _trace  # type: ignore
+except ImportError as _imp_err:
+    def _trace(msg: str, *args, **kwargs) -> None:
+        try:
+            import logging as _lg
+            _lg.log(10, msg, *args, **kwargs)
+        except Exception:
+            return
 
-def post_complete(payload: dict) -> tuple[bool, str]:
-    """Local LLM processing - no server communication."""
-    # 서버 통신 제거됨 - 로컬 LLM만 사용
-    return False, "Server communication disabled - use local LLM instead"
+    _trace("fallback _maybe_raise due to ImportError: %s", _imp_err)
+
+    def _maybe_raise(e: BaseException) -> None:
+        import os
+        if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
+            raise e
 
 
 def build_structured_input(swift_code: str, symbol_info) -> str:
@@ -18,11 +31,15 @@ def build_structured_input(swift_code: str, symbol_info) -> str:
         elif isinstance(symbol_info, str) and symbol_info.strip():
             try:
                 pretty = json.dumps(json.loads(symbol_info), ensure_ascii=False, indent=2)
-            except Exception:
+            except (json.JSONDecodeError, TypeError, ValueError) as e:
+                _trace("build_structured_input: symbol_info JSON parse failed: %s", e)
+                _maybe_raise(e)
                 pretty = symbol_info
         else:
             pretty = "[]"
-    except Exception:
+    except (TypeError, ValueError) as e:
+        _trace("build_structured_input: pretty build failed: %s", e)
+        _maybe_raise(e)
         pretty = "[]"
     swift = swift_code if isinstance(swift_code, str) else ""
     return (
@@ -33,11 +50,6 @@ def build_structured_input(swift_code: str, symbol_info) -> str:
     )
 
 
-def call_exclude_server_parsed(identifiers, symbol_info=None, swift_code=None):
-    """Local LLM processing - no server communication."""
-    # 서버 통신 제거됨 - 로컬 LLM만 사용
-    print("  - 서버 통신 비활성화됨 - 로컬 LLM 사용")
-    return None
 
 
 
@@ -56,9 +68,13 @@ def find_first_swift_file_with_identifier(project_dir: str, ident: str):
                         text = f.read()
                     if ident in text:
                         return fp, text
-                except Exception:
+                except (OSError, UnicodeError) as e:
+                    _trace("find_first_swift_file_with_identifier: read failed for %s: %s", fp, e)
+                    _maybe_raise(e)
                     continue
-    except Exception:
+    except OSError as e:
+        _trace("find_first_swift_file_with_identifier: walk failed: %s", e)
+        _maybe_raise(e)
         return None
     return None
 
@@ -79,17 +95,15 @@ def make_snippet(text: str, ident: str, ctx_lines: int = 30) -> str:
         if len(snippet) > 8000:
             snippet = snippet[:8000] + "\n... [truncated]"
         return snippet
-    except Exception:
+    except (AttributeError, UnicodeError) as e:
+        _trace("make_snippet failed: %s", e)
+        _maybe_raise(e)
         return text[:8000]
 
 
 def _verbose() -> bool:
-    try:
-        import os as _os
-        v = _os.environ.get("SWINGFT_PREFLIGHT_VERBOSE", "")
-        return str(v).strip().lower() in {"1","true","yes","y","on"}
-    except Exception:
-        return False
+    v = os.environ.get("SWINGFT_PREFLIGHT_VERBOSE", "")
+    return str(v).strip().lower() in {"1","true","yes","y","on"}
 
 
 def _locate_swift_ast_analyzer():
@@ -136,8 +150,9 @@ def _locate_swift_ast_analyzer():
                 if p.exists():
                     _ANALYZER_PATH_CACHE = p
                     return _ANALYZER_PATH_CACHE
-    except Exception:
-        pass
+    except OSError as e:
+        _trace("_locate_swift_ast_analyzer failed: %s", e)
+        _maybe_raise(e)
     _ANALYZER_PATH_CACHE = None
     return None
 
@@ -179,15 +194,18 @@ def run_swift_ast_analyzer(swift_file_path: str):
         try:
             data = _json.loads(json_part)
             return data
-        except Exception:
+        except (json.JSONDecodeError, ValueError) as e:
+            _trace("AST analyzer JSON decode failed: %s", e)
             return None
     except subprocess.TimeoutExpired:
         if _verbose():
             print(f"Warning: AST analysis timed out for {swift_file_path}")
         return None
-    except Exception as e:
+    except (OSError, subprocess.SubprocessError) as e:
         if _verbose():
             print(f"Warning: AST analysis failed for {swift_file_path}: {e}")
+        _trace("AST analysis failed: %s", e)
+        _maybe_raise(e)
         return None
 
 
@@ -206,7 +224,7 @@ def _extract_first_json(text: str):
                 if depth == 0 and start >= 0:
                     try:
                         return _json.loads((text[start:i+1]))
-                    except Exception:
+                    except (json.JSONDecodeError, ValueError):
                         break
         # fenced block fallback
         try:
@@ -214,10 +232,12 @@ def _extract_first_json(text: str):
             m = re.search(r"```json\s*(\{[\s\S]*?\})\s*```", text or "", re.MULTILINE)
             if m:
                 return _json.loads(m.group(1))
-        except Exception:
-            pass
-    except Exception:
-        pass
+        except (re.error, json.JSONDecodeError, ValueError) as e:
+            _trace("extract_first_json fenced parse failed: %s", e)
+            _maybe_raise(e)
+    except (TypeError, ValueError) as e:
+        _trace("extract_first_json failed: %s", e)
+        _maybe_raise(e)
     return None
 
 
@@ -234,9 +254,13 @@ def _build_prompt_for_identifier(swift_code: str, target_identifier: str, ast_sy
         ast_json = "{}"
         try:
             ast_json = _json.dumps(ast, ensure_ascii=False, indent=2)
-        except Exception:
+        except (TypeError, ValueError) as e:
+            _trace("build_prompt_for_identifier: ast dumps failed: %s", e)
+            _maybe_raise(e)
             ast_json = "{}"
-    except Exception:
+    except (TypeError, ValueError) as e:
+        _trace("build_prompt_for_identifier: setup failed: %s", e)
+        _maybe_raise(e)
         ast_json = "{}"
     instr = (
         "Analyze whether the target identifier in the Swift code is security-sensitive. "
@@ -264,7 +288,10 @@ def _load_llm_singleton():
         return _LLM_SINGLETON
     try:
         from llama_cpp import Llama  # type: ignore
-    except Exception:
+        _trace("llama_cpp import 성공")
+    except ImportError as e:
+        _trace("llama_cpp import 실패: %s", e)
+        _maybe_raise(e)
         return None
     import os as _os
     base_model = _os.getenv("BASE_MODEL_PATH", "./models/base_model.gguf")
@@ -284,8 +311,12 @@ def _load_llm_singleton():
     if n_gpu_layers:
         kwargs["n_gpu_layers"] = n_gpu_layers
     try:
+        _trace("LLM 모델 로드 시도: %s", base_model)
         _LLM_SINGLETON = Llama(**kwargs)
-    except Exception:
+        _trace("LLM 모델 로드 성공")
+    except (RuntimeError, OSError, ValueError) as e:
+        _trace("LLM 모델 로드 실패: %s", e)
+        _maybe_raise(e)
         _LLM_SINGLETON = None
     return _LLM_SINGLETON
 
@@ -299,7 +330,7 @@ def run_local_llm_exclude(identifier: str, swift_code: str, ast_symbols) -> list
         return None
     prompt = _build_prompt_for_identifier(swift_code or "", identifier, ast_symbols)
     try:
-        max_tokens = int(os.getenv("MAX_TOKENS", "512"))
+        max_tokens = int(os.getenv("MAX_TOKENS", "1024"))
         temperature = float(os.getenv("TEMPERATURE", "0.0"))
         top_p = float(os.getenv("TOP_P", "1.0"))
         resp = llm(
@@ -315,7 +346,9 @@ def run_local_llm_exclude(identifier: str, swift_code: str, ast_symbols) -> list
             is_sensitive = bool(parsed.get("is_sensitive", True))
             reason = str(parsed.get("reasoning", "") or "")
             return [{"name": identifier, "exclude": is_sensitive, "reason": reason}]
-    except Exception:
+    except (KeyError, TypeError, ValueError, RuntimeError) as e:
+        _trace("run_local_llm_exclude failed: %s", e)
+        _maybe_raise(e)
         return None
     return None
 
@@ -342,7 +375,9 @@ def find_ast_entry_from_pipeline(project_root: str, ident: str):
         # minimal presence check; we don't depend on schema here
         # return a synthesized entry focusing on the target identifier name
         return {"symbolName": ident, "symbolKind": "unknown", "source": "pipeline_ast"}
-    except Exception:
+    except (OSError, json.JSONDecodeError, UnicodeError) as e:
+        _trace("find_ast_entry_from_pipeline failed: %s", e)
+        _maybe_raise(e)
         return None
 
 
@@ -356,8 +391,9 @@ def resolve_ast_symbols(project_root: str, swift_path: str | None, ident: str):
             res = run_swift_ast_analyzer(swift_path)
             if res:
                 return res
-    except Exception:
-        pass
+    except (OSError, RuntimeError) as e:
+        _trace("resolve_ast_symbols analyzer error: %s", e)
+        _maybe_raise(e)
     fb = find_ast_entry_from_pipeline(project_root, ident)
     if fb:
         return [fb]

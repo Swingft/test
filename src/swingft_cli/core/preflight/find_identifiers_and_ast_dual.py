@@ -25,6 +25,7 @@ import sys
 import re
 import json
 import argparse
+import logging
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 
@@ -66,7 +67,7 @@ def _best_ast_name_match(ident: str, ast_list: List[dict]) -> Optional[str]:
 try:
     # When executed as a module within a package
     from .find_identifiers_and_ast import build_report_for_identifiers  # type: ignore
-except Exception:
+except ImportError:
     # Fallback for direct script execution: add repo src root to sys.path
     from pathlib import Path as _P
     import sys as _S
@@ -76,6 +77,17 @@ except Exception:
     if str(_SRC_ROOT) not in _S.path:
         _S.path.insert(0, str(_SRC_ROOT))
     from swingft_cli.core.preflight.find_identifiers_and_ast import build_report_for_identifiers  # type: ignore
+
+# Safe import for _maybe_raise
+try:
+    from ..tui import _maybe_raise  # type: ignore
+except ImportError as _imp_err:  # narrow: only import-related failures
+    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    # Fallback minimal strict-mode handler if TUI import is unavailable
+    def _maybe_raise(e: BaseException) -> None:
+        import os
+        if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
+            raise e
 
 INSTRUCTION = (
     "In the following Swift code, find all identifiers related to sensitive logic. Provide the names and reasoning as a JSON object."
@@ -102,7 +114,9 @@ def _load_lines(file_path: str) -> List[str]:
     try:
         with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
             return f.readlines()
-    except Exception:
+    except (OSError, UnicodeError) as e:
+        logging.debug("_load_lines failed: %s", e)
+        _maybe_raise(e)
         return []
 
 def _is_definition_line(name: str, line: str) -> bool:
@@ -263,8 +277,9 @@ def _augment_report_with_declarations(report: Dict[str, Any]) -> Dict[str, Any]:
             else:
                 # keep at least decl_file for consistency
                 info["decl_file"] = file_path
-        except Exception:
-            # best-effort; do not break pipeline
+        except (OSError, UnicodeError, ValueError, TypeError) as e:
+            logging.debug("declaration augment failed for %s: %s", ident, e)
+            _maybe_raise(e)
             continue
     return report
 
@@ -283,7 +298,9 @@ def write_combined_payload_file(report: dict, out_path: Path, target_ids: List[s
         try:
             with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                 code_block = f.read().rstrip()
-        except Exception:
+        except (OSError, UnicodeError) as e:
+            logging.debug("read code_block failed: %s", e)
+            _maybe_raise(e)
             code_block = ""
 
         # resolve kind
@@ -301,7 +318,9 @@ def write_combined_payload_file(report: dict, out_path: Path, target_ids: List[s
             try:
                 with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                     txt = f.read()
-            except Exception:
+            except (OSError, UnicodeError) as e:
+                logging.debug("read txt for kind inference failed: %s", e)
+                _maybe_raise(e)
                 txt = ""
             if re.search(rf'\bfunc\s+{re.escape(ident)}\b', txt):
                 kind = "method"
@@ -363,7 +382,9 @@ def _write_per_identifier_payload_files_from_report(report: dict, out_dir: Path,
         try:
             with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                 text = f.read()
-        except Exception:
+        except (OSError, UnicodeError) as e:
+            logging.debug("infer_kind_from_text read failed: %s", e)
+            _maybe_raise(e)
             return "unknown"
         if re.search(rf'\bfunc\s+{re.escape(ident)}\b', text):
             return "method"
@@ -389,7 +410,9 @@ def _write_per_identifier_payload_files_from_report(report: dict, out_dir: Path,
         try:
             with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                 code_block = f.read().rstrip()
-        except Exception:
+        except (OSError, UnicodeError) as e:
+            logging.debug("per-id read failed (%s): %s", ident, e)
+            _maybe_raise(e)
             code_block = ""
 
         # resolve kind
@@ -459,7 +482,9 @@ def write_per_identifier_payload_files(project_root: str, identifiers, out_dir: 
             s = str(x).strip()
             if s:
                 ids.append(s)
-        except Exception:
+        except (ValueError, TypeError) as e:
+            logging.debug("identifier normalize failed: %s", e)
+            _maybe_raise(e)
             continue
     # de-duplicate while preserving order
     ids = list(dict.fromkeys(ids))
@@ -488,7 +513,7 @@ def main():
     if args.ids_csv:
         ids.extend([x.strip() for x in args.ids_csv.split(",") if x.strip()])
     if not ids:
-        print("No identifiers provided", file=sys.stderr)
+        logging.error("No identifiers provided")
         sys.exit(2)
     ids = list(dict.fromkeys(ids))
 

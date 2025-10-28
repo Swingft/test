@@ -12,7 +12,8 @@ import threading
 import queue
 import json
 from collections import deque
-from .tui import TUI, progress_bar
+import logging
+from .tui import TUI, progress_bar, _maybe_raise
 
 # shared TUI instance
 tui = TUI()
@@ -32,8 +33,9 @@ def _should_show_preprocessing_ui(working_config_path: str | None) -> bool:
                 return val.strip().lower() in {"1", "true", "yes", "y", "on"}
             else:
                 return bool(val)
-    except (OSError, IOError, json.JSONDecodeError, KeyError):
-        pass
+    except (OSError, IOError, json.JSONDecodeError, KeyError) as e:
+        logging.debug("_should_show_preprocessing_ui: config read failed: %s", e)
+        # non-fatal; default True
     return True
 
 
@@ -80,7 +82,8 @@ def _run_preprocessing_stage(input_path: str, output_path: str, pipeline_path: s
                         expected_total_files += 1
         else:
             expected_total_files = len(milestones)
-    except OSError:
+    except OSError as e:
+        logging.debug("expected_total_files calc failed: %s", e)
         expected_total_files = len(milestones) if preflight_progress_mode != "files" else 0
     
     ast_output_dir = os.path.join(os.getcwd(), "Obfuscation_Pipeline", "AST", "output")
@@ -116,14 +119,17 @@ def _run_preprocessing_stage(input_path: str, output_path: str, pipeline_path: s
         
         rc1 = proc1.wait()
         if rc1 != 0:
-            print(f"[ERROR] 전처리 단계 실패 (종료 코드: {rc1})")
+            logging.error("전처리 단계 실패 (종료 코드: %s)", rc1)
+            _maybe_raise(RuntimeError(f"preprocessing failed rc={rc1}"))
             sys.exit(1)
-            
-    except subprocess.TimeoutExpired:
-        print("[ERROR] 전처리 단계 타임아웃")
+
+    except subprocess.TimeoutExpired as e:
+        logging.error("전처리 단계 타임아웃: %s", e)
+        _maybe_raise(e)
         sys.exit(1)
     except (OSError, subprocess.SubprocessError) as e:
-        print(f"[ERROR] 전처리 단계 실행 실패: {e}")
+        logging.error("전처리 단계 실행 실패: %s", e)
+        _maybe_raise(e)
         sys.exit(1)
 
 
@@ -149,8 +155,9 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
         finally:
             try:
                 line_queue.put(None)
-            except Exception:
-                pass
+            except Exception as e:
+                logging.debug("reader: queue put None failed: %s", e)
+                _maybe_raise(e)
 
     t = threading.Thread(target=_reader, daemon=True)
     t.start()
@@ -172,8 +179,9 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
             try:
                 if os.environ.get("SWINGFT_TUI_ECHO", "") == "1":
                     print(item)
-            except Exception:
-                pass
+            except (OSError, UnicodeEncodeError) as e:
+                logging.debug("echo print failed: %s", e)
+                _maybe_raise(e)
             
             low = item.lower()
             if low.startswith("ast:") or " ast:" in low:
@@ -199,11 +207,13 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
                                 try:
                                     if checker(ast_output_dir):
                                         reached += 1
-                                except Exception:
-                                    pass
+                                except OSError as e:
+                                    logging.debug("milestone check failed: %s", e)
+                                    _maybe_raise(e)
                         current_files_count = max(current_files_count, reached)
-                except Exception:
-                    pass
+                except OSError as e:
+                    logging.debug("progress scan failed: %s", e)
+                    _maybe_raise(e)
         
         sp_idx = (sp_idx + 1) % len(spinner)
         if progress_files and expected_total > 0:
@@ -212,7 +222,11 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
             bar = progress_bar(1 if done_ast else 0, 1)
         
         if show_ui:
-            tui.set_status([f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis", "", *list(tail1)])
+            try:
+                tui.set_status([f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis", "", *list(tail1)])
+            except (OSError, UnicodeEncodeError) as e:
+                logging.debug("tui.set_status failed: %s", e)
+                _maybe_raise(e)
 
         if eof and line_queue.empty():
             break
@@ -231,13 +245,16 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
         if show_ui:
             try:
                 tui.set_status([f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis", "", *list(tail1)])
-            except Exception:
-                pass
-    except Exception:
-        pass
+            except (OSError, UnicodeEncodeError) as e:
+                logging.debug("tui.set_status final failed: %s", e)
+                _maybe_raise(e)
+    except OSError as e:
+        logging.debug("final status update failed: %s", e)
+        _maybe_raise(e)
     
     # 로그 정리
     try:
         tail1.clear()
-    except Exception:
-        pass
+    except Exception as e:
+        logging.debug("tail clear failed: %s", e)
+        _maybe_raise(e)

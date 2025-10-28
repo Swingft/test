@@ -239,7 +239,7 @@ def select_far_clusters(index_dir: Path, kind: str, target: str, k: int,
 
 
 def create_mapping(targets: List[str], pool_dir: Path, index_dir: Path, kind: str,
-                  rnd: secrets.Random, forbidden: Set[str], used_repls: Set[str], 
+                  rnd: secrets.SystemRandom, forbidden: Set[str], used_repls: Set[str], 
                   cluster_threshold: float = DEFAULT_CLUSTER_SIMILARITY_THRESHOLD) -> List[Dict[str, str]]:
     """매핑 생성"""
     # 후보 풀 로드

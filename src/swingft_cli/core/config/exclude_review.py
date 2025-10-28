@@ -6,6 +6,16 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Iterable
 from datetime import datetime
+import logging
+ # strict-mode helper
+try:
+    from ..tui import _maybe_raise  # type: ignore
+except ImportError as _imp_err:
+    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    def _maybe_raise(e: BaseException) -> None:
+        import os
+        if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
+            raise e
 
 from .exclusions import ast_unwrap as _ast_unwrap
 from .exclusions import write_feedback_to_output as _write_feedback_to_output
@@ -14,18 +24,14 @@ from .llm_feedback import (
     find_first_swift_file_with_identifier as _find_swift_file_for_ident,
     make_snippet as _make_snippet,
     run_swift_ast_analyzer as _run_ast_analyzer,
-    call_exclude_server_parsed as _call_llm_exclude,
     run_local_llm_exclude as _run_local_llm_exclude,
     resolve_ast_symbols as _resolve_ast_symbols,
 )
 
 
 def _preflight_verbose() -> bool:
-    try:
-        v = os.environ.get("SWINGFT_PREFLIGHT_VERBOSE", "")
-        return str(v).strip().lower() in {"1", "true", "yes", "y", "on"}
-    except Exception:
-        return False
+    v = os.environ.get("SWINGFT_PREFLIGHT_VERBOSE", "")
+    return str(v).strip().lower() in {"1", "true", "yes", "y", "on"}
 
 
 def _append_terminal_log(config: Dict[str, Any], lines: list[str]) -> None:
@@ -42,15 +48,13 @@ def _append_terminal_log(config: Dict[str, Any], lines: list[str]) -> None:
             for ln in lines:
                 f.write(str(ln) + "\n")
             f.write("\n")
-    except Exception:
-        pass
+    except (OSError, UnicodeError, PermissionError) as e:
+        logging.debug("append_terminal_log failed: %s", e)
+        _maybe_raise(e)
 
 def _has_ui_prompt() -> bool:
-    try:
-        import swingft_cli.core.config as _cfg
-        return getattr(_cfg, "PROMPT_PROVIDER", None) is not None
-    except Exception:
-        return False
+    # LLM 사용을 위해 항상 True 반환
+    return True
 
 
 def save_exclude_review_json(approved_identifiers, project_root: str | None, ast_file_path: str | None) -> str | None:
@@ -75,8 +79,9 @@ def save_exclude_review_json(approved_identifiers, project_root: str | None, ast
         if _preflight_verbose():
             print(f"[preflight] 사용자 승인 대상 JSON 저장: {out_path}")
         return out_path
-    except Exception as e:
-        print(f"[preflight] exclude_review JSON 저장 실패: {e}")
+    except (OSError, UnicodeError, TypeError) as e:
+        logging.error("exclude_review JSON 저장 실패: %s", e)
+        _maybe_raise(e)
         return None
 
 
@@ -102,9 +107,10 @@ def save_exclude_pending_json(project_root: str | None, ast_file_path: str | Non
         if _preflight_verbose():
             print(f"[preflight] 사용자 확인 대상(PENDING) JSON 저장: {out_path}")
         return out_path
-    except Exception as e:
+    except (OSError, UnicodeError, TypeError) as e:
         if _preflight_verbose():
-            print(f"[preflight] exclude_pending JSON 저장 실패: {e}")
+            logging.debug("exclude_pending JSON 저장 실패: %s", e)
+        _maybe_raise(e)
         return None
 
 
@@ -115,14 +121,14 @@ def generate_payloads_for_excludes(project_root: str | None, identifiers: list[s
         out_dir = os.path.join(os.getcwd(), ".swingft", "preflight", "payloads")
         os.makedirs(out_dir, exist_ok=True)
         try:
-            from swingft_cli.core.preflight.find_identifiers_and_ast_dual import write_per_identifier_payload_files  # type: ignore
+            from ..preflight.find_identifiers_and_ast_dual import write_per_identifier_payload_files  # type: ignore
             write_per_identifier_payload_files(project_root or "", identifiers=identifiers, out_dir=out_dir)
             if _preflight_verbose():
                 print(f"[preflight] exclude 대상 {len(identifiers)}개에 대한 payload 생성 완료: {out_dir}")
             return
-        except Exception as e:
+        except (ImportError, OSError, UnicodeError, ValueError, TypeError) as e:
             if _preflight_verbose():
-                print(f"[preflight] preflight payload 생성기 사용 불가, 최소 JSON 생성으로 대체: {e}")
+                logging.debug("preflight payload 생성기 사용 불가, 최소 JSON 생성으로 대체: %s", e)
         ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
         for ident in identifiers:
             name = str(ident).strip()
@@ -140,14 +146,15 @@ def generate_payloads_for_excludes(project_root: str | None, identifiers: list[s
                 json.dump(payload, f, ensure_ascii=False, indent=2)
         if _preflight_verbose():
             print(f"[preflight] 최소 payload 생성 완료: {len(identifiers)}개 → {out_dir}")
-    except Exception as e:
+    except (OSError, UnicodeError, ValueError, TypeError) as e:
         if _preflight_verbose():
-            print(f"[preflight] exclude payload 생성 실패: {e}")
+            logging.debug("exclude payload 생성 실패: %s", e)
+        _maybe_raise(e)
 
 
 def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, Any], ex_names) -> None:
     """Orchestrate exclude candidates check/review and reflect to AST (isException=1)."""
-    from swingft_cli.core.config.rules import scan_swift_identifiers
+    from .rules import scan_swift_identifiers
     project_root = config.get("project", {}).get("input")
     if not project_root or not os.path.isdir(project_root):
         print("[preflight] project.input 경로가 없어 프로젝트 식별자 스캔을 건너뜁니다.")
@@ -244,8 +251,9 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                     for it in obj:
                         _collect_names(it)
             _collect_names(ast_list)
-        except Exception:
-            pass
+        except (OSError, json.JSONDecodeError, UnicodeError) as e:
+            logging.debug("AST load for existing_names failed: %s", e)
+            _maybe_raise(e)
 
     # capture buffer for external session log
     _capture: list[str] = []
@@ -267,13 +275,14 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
     # Persist pending set
     try:
         save_exclude_pending_json(project_root, str(ast_file) if ast_file else None, sorted(list(exclude_candidates)))
-    except Exception as _e:
-        print(f"[preflight] exclude_pending JSON 저장 경고: {_e}")
+    except (OSError, UnicodeError, ValueError, TypeError) as _e:
+        logging.debug("exclude_pending JSON 저장 경고: %s", _e)
+        _maybe_raise(_e)
 
     # Create PENDING payloads before y/N
     if ex_policy != "skip":
         try:
-            from swingft_cli.core.preflight.find_identifiers_and_ast_dual import write_per_identifier_payload_files  # type: ignore
+            from ..preflight.find_identifiers_and_ast_dual import write_per_identifier_payload_files  # type: ignore
             _pending_dir = os.path.join(os.getcwd(), ".swingft", "preflight", "payloads", "pending")
             os.makedirs(_pending_dir, exist_ok=True)
             write_per_identifier_payload_files(
@@ -283,8 +292,9 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             )
             if _preflight_verbose():
                 print(f"[preflight] PENDING payloads 생성 완료: {len(exclude_candidates)}개 → {_pending_dir}")
-        except Exception as _e:
-            print(f"[preflight] PENDING payloads 생성 경고: {_e}")
+        except (ImportError, OSError, UnicodeError, ValueError, TypeError) as _e:
+            logging.debug("PENDING payloads 생성 경고: %s", _e)
+            _maybe_raise(_e)
 
     # Decision gathering (LLM off; use y/N)
     decided_to_exclude = set()
@@ -333,7 +343,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
     else:
         # ask 모드에서 LLM 판정과 사용자 확인을 함께 수행 (환경변수로 온/오프)
         use_llm = str(os.environ.get("SWINGFT_PREFLIGHT_EXCLUDE_USE_LLM", "1")).strip().lower() in {"1","true","yes","y","on"}
-        prefer_local = str(os.environ.get("SWINGFT_EXCLUDE_LLM_LOCAL", "1")).strip().lower() in {"1","true","yes","y","on"}
+        # print(f"[DEBUG] use_llm: {use_llm}, project_root: {project_root}, _has_ui_prompt(): {_has_ui_prompt()}")
         for ident in sorted(list(exclude_candidates)):
             try:
                 if _has_ui_prompt():
@@ -346,12 +356,13 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                         snippet = _make_snippet(swift_text or "", ident) if swift_text else ""
                         ast_info = _resolve_ast_symbols(project_root, swift_path, ident)
                         # LLM 호출
+                        print(f"[DEBUG] LLM 호출 시작: {ident}")
                         try:
-                            if prefer_local:
-                                llm_res = _run_local_llm_exclude(ident, snippet, ast_info)
-                            else:
-                                llm_res = _call_llm_exclude([ident], symbol_info=ast_info, swift_code=snippet)
-                        except Exception as _llm_e:
+                            llm_res = _run_local_llm_exclude(ident, snippet, ast_info)
+                            print(f"[DEBUG] LLM 결과: {llm_res}")
+                        except (RuntimeError, OSError, ValueError, TypeError) as _llm_e:
+                            logging.debug("LLM 에러: %s", _llm_e)
+                            _maybe_raise(_llm_e)
                             llm_res = None
                         # 판정 요약
                         if isinstance(llm_res, list) and llm_res:
@@ -390,19 +401,22 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
         #_capture.append(f"[preflight] 사용자 승인 완료: 제외로 반영 {len(decided_to_exclude)}개")
         try:
             save_exclude_review_json(sorted(list(decided_to_exclude)), project_root, str(ast_file) if ast_file else None)
-        except Exception as _e:
-            print(f"[preflight] exclude_review JSON 저장 경고: {_e}")
+        except (OSError, UnicodeError, ValueError, TypeError) as _e:
+            logging.debug("exclude_review/save payload 경고: %s", _e)
+            _maybe_raise(_e)
         try:
             generate_payloads_for_excludes(project_root, sorted(list(decided_to_exclude)))
-        except Exception as _e:
-            print(f"[preflight] exclude payload 생성 경고: {_e}")
+        except (OSError, UnicodeError, ValueError, TypeError) as _e:
+            logging.debug("exclude_review/save payload 경고: %s", _e)
+            _maybe_raise(_e)
 
     # ask 모드 세션 로그 저장
     try:
         if ex_policy == "ask":
             _write_feedback_to_output(config, "exclude_session", "\n".join(_capture))
-    except Exception:
-        pass
+    except (OSError, UnicodeError, ValueError) as e:
+        logging.debug("exclude_session 저장 실패: %s", e)
+        _maybe_raise(e)
 
     if not ast_file:
         # 조용히 스킵 (Stage 1 스킵 시 정상)
@@ -411,7 +425,8 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
     try:
         _update_ast_node_exceptions(str(ast_file), sorted(list(decided_to_exclude)), is_exception=1, allowed_kinds=None, lock_children=False)
         #print("  - 처리: ast_node.json 반영 완료 (isException=1)")
-    except Exception as e:
-        print(f"  - 처리 실패: ast_node.json 반영 중 오류 ({e})")
+    except (OSError, ValueError, TypeError) as e:
+        logging.warning("ast_node.json 반영 중 오류: %s", e)
+        _maybe_raise(e)
 
 
