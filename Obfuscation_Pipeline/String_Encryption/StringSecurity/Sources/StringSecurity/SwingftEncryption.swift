@@ -43,7 +43,20 @@ public final class SwingftEncryption {
             )
             let decrypted = try ChaChaPoly.open(sealedBox, using: SymmetricKey(data: key))
             return String(data: decrypted, encoding: .utf8) ?? ""
-        } catch {
+        } catch let e as CryptoKitError {
+            assertionFailure("Decryption failed (CryptoKitError): \(e)")
+            return ""
+        } catch let e as CocoaError {
+            assertionFailure("Decryption failed (CocoaError): \(e.localizedDescription)")
+            return ""
+        } catch let e as POSIXError {
+            assertionFailure("Decryption failed (POSIXError): code=\(e.code.rawValue) desc=\(e.localizedDescription)")
+            return ""
+        } catch let e as NSError {
+            assertionFailure("Decryption failed (NSError): domain=\(e.domain) code=\(e.code) desc=\(e.localizedDescription)")
+            return ""
+        } catch let e {
+            assertionFailure("Decryption failed (Error): \(e.localizedDescription)")
             return ""
         }
     }
@@ -62,4 +75,3 @@ public final class EncryptedString: CustomStringConvertible, ExpressibleByString
     public var description: String { decrypted }
     public func asString() -> String { decrypted }
 }
-

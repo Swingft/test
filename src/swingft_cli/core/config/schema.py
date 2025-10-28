@@ -34,13 +34,20 @@ def _print_json_error_and_exit(path: str, err: json.JSONDecodeError) -> None:
     try:
         with open(path, "r", encoding="utf-8", errors="replace") as f:
             lines = f.read().splitlines()
-        idx = err.lineno - 1
-        if 0 <= idx < len(lines):
-            line = lines[idx]
-            pointer = " " * (max(err.colno - 1, 0)) + "^"
+        lineno = getattr(err, "lineno", None)
+        colno = getattr(err, "colno", None)
+        if isinstance(lineno, int) and 1 <= lineno <= len(lines):
+            line = lines[lineno - 1]
+            # caret position bounded within line length
+            caret_pos = 0
+            if isinstance(colno, int) and colno >= 1:
+                caret_pos = min(max(colno - 1, 0), max(len(line) - 1, 0))
+            pointer = " " * caret_pos + "^"
             # 유지: 사용자가 즉시 볼 수 있도록 stderr로 지시선 출력
             print(line, file=sys.stderr)
             print(pointer, file=sys.stderr)
+        else:
+            logging.debug("invalid JSON error lineno: %r (lines=%d)", lineno, len(lines))
     except (OSError, UnicodeError) as e:
         logging.debug("failed to render JSON error pointer: %s", e)
         _maybe_raise(e)

@@ -291,6 +291,12 @@ def write_combined_payload_file(report: dict, out_path: Path, target_ids: List[s
     all_id_map = report.get("identifiers", {}) or {}
     records = []
     for ident in target_ids:
+        # Normalize ident and guard against None/non-str
+        if not isinstance(ident, str):
+            ident = str(ident) if ident is not None else ""
+        ident = ident.strip()
+        if not ident:
+            continue
         info = all_id_map.get(ident, {})
         if not info.get("found"):
             continue
@@ -322,17 +328,17 @@ def write_combined_payload_file(report: dict, out_path: Path, target_ids: List[s
                 logging.debug("read txt for kind inference failed: %s", e)
                 _maybe_raise(e)
                 txt = ""
-            if re.search(rf'\bfunc\s+{re.escape(ident)}\b', txt):
+            if re.search(rf'\bfunc\s+{re.escape(ident)}\b', txt or ""):
                 kind = "method"
-            elif re.search(rf'\b(?:let|var)\s+{re.escape(ident)}\b', txt):
+            elif re.search(rf'\b(?:let|var)\s+{re.escape(ident)}\b', txt or ""):
                 kind = "variable"
-            elif re.search(rf'\bstruct\s+{re.escape(ident)}\b', txt):
+            elif re.search(rf'\bstruct\s+{re.escape(ident)}\b', txt or ""):
                 kind = "struct"
-            elif re.search(rf'\bclass\s+{re.escape(ident)}\b', txt):
+            elif re.search(rf'\bclass\s+{re.escape(ident)}\b', txt or ""):
                 kind = "class"
-            elif re.search(rf'\benum\s+{re.escape(ident)}\b', txt):
+            elif re.search(rf'\benum\s+{re.escape(ident)}\b', txt or ""):
                 kind = "enum"
-            elif re.search(rf'\bextension\s+{re.escape(ident)}\b', txt):
+            elif re.search(rf'\bextension\s+{re.escape(ident)}\b', txt or ""):
                 kind = "extension"
 
         # pick single AST entry for the target identifier
@@ -386,17 +392,23 @@ def _write_per_identifier_payload_files_from_report(report: dict, out_dir: Path,
             logging.debug("infer_kind_from_text read failed: %s", e)
             _maybe_raise(e)
             return "unknown"
-        if re.search(rf'\bfunc\s+{re.escape(ident)}\b', text):
+        # Normalize ident and guard
+        if not isinstance(ident, str):
+            ident = str(ident) if ident is not None else ""
+        ident = ident.strip()
+        if not ident:
+            return "unknown"
+        if re.search(rf'\bfunc\s+{re.escape(ident)}\b', text or ""):
             return "method"
-        if re.search(rf'\b(?:let|var)\s+{re.escape(ident)}\b', text):
+        if re.search(rf'\b(?:let|var)\s+{re.escape(ident)}\b', text or ""):
             return "variable"
-        if re.search(rf'\bstruct\s+{re.escape(ident)}\b', text):
+        if re.search(rf'\bstruct\s+{re.escape(ident)}\b', text or ""):
             return "struct"
-        if re.search(rf'\bclass\s+{re.escape(ident)}\b', text):
+        if re.search(rf'\bclass\s+{re.escape(ident)}\b', text or ""):
             return "class"
-        if re.search(rf'\benum\s+{re.escape(ident)}\b', text):
+        if re.search(rf'\benum\s+{re.escape(ident)}\b', text or ""):
             return "enum"
-        if re.search(rf'\bextension\s+{re.escape(ident)}\b', text):
+        if re.search(rf'\bextension\s+{re.escape(ident)}\b', text or ""):
             return "extension"
         return "unknown"
 

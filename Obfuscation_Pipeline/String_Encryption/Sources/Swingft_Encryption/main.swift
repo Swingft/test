@@ -72,10 +72,16 @@ private func loadConfig(at url: URL) -> SwingftConfig {
         fputs("Failed to decode config: \(url.path) (\(error))\n", stderr)
         exit(1)
     } catch let error as CocoaError {
-        fputs("Failed to read config file: \(url.path) (\(error))\n", stderr)
+        fputs("Failed to read config file: \(url.path) (\(error.localizedDescription))\n", stderr)
         exit(1)
-    } catch {
-        fputs("Unexpected error while loading config: \(url.path) (\(error))\n", stderr)
+    } catch let error as POSIXError {
+        fputs("Failed to read config file (POSIXError): \(url.path) (\(error.code.rawValue)) - \(error.localizedDescription)\n", stderr)
+        exit(1)
+    } catch let error as NSError {
+        fputs("Failed to read config file (NSError): \(url.path) (\(error.domain)) (\(error.code)) - \(error.localizedDescription)\n", stderr)
+        exit(1)
+    } catch let error {
+        fputs("Unexpected error while loading config: \(url.path) (\(error.localizedDescription))\n", stderr)
         exit(1)
     }
 }
@@ -309,11 +315,17 @@ func main() {
     do {
         let data = try encoder.encode(postExcluded)
         try data.write(to: URL(fileURLWithPath: outputPath))
-    } catch let error as CocoaError {
-        fputs("Error writing JSON: \(error.localizedDescription)\n", stderr)
+    } catch let e as CocoaError {
+        fputs("Error writing JSON (CocoaError): \(e.localizedDescription)\n", stderr)
         exit(2)
-    } catch {
-        fputs("Unexpected error while writing JSON: \(error)\n", stderr)
+    } catch let e as POSIXError {
+        fputs("Error writing JSON (POSIXError): \(e.code.rawValue) - \(e.localizedDescription)\n", stderr)
+        exit(2)
+    } catch let e as NSError {
+        fputs("Error writing JSON (NSError): \(e.domain) (\(e.code)) - \(e.localizedDescription)\n", stderr)
+        exit(2)
+    } catch let e {
+        fputs("Unexpected error while writing JSON: \(e.localizedDescription)\n", stderr)
         exit(2)
     }
 }

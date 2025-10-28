@@ -160,7 +160,10 @@ def load_included_from_json(path: str):
         items = json.load(f)
 
     for obj in items:
-        if (obj.get("kind") or "").upper() != "STR":
+        if not isinstance(obj, dict):
+            continue
+        kind = str(obj.get("kind", "") or "").upper()
+        if kind != "STR":
             continue
         file_raw = obj.get("file", "")
         file_raw = re.sub(r"^(?:STR|NUM)\s*:\s*", "", file_raw)
@@ -222,9 +225,9 @@ def detect_main_entry(files: List[str]):
         try:
             with open(path, encoding='utf-8') as f:
                 content = f.read()
-            if re.search(r'@main\s+(struct|class)\s+\w+\s*:\s*App', content):
+            if re.search(r'@main\s+(struct|class)\s+\w+\s*:\s*App', content or ""):
                 return path, 'swiftui'
-            if re.search(r'class\s+\w+\s*:\s*UIResponder\s*,\s*UIApplicationDelegate', content):
+            if re.search(r'class\s+\w+\s*:\s*UIResponder\s*,\s*UIApplicationDelegate', content or ""):
                 return path, 'uikit'
         except (OSError, UnicodeError, json.JSONDecodeError, ValueError, TypeError) as e:
             _trace("handled error: %s", e)
