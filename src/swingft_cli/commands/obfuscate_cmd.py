@@ -7,14 +7,11 @@ import time
 import threading
 import queue
 import re
-from contextlib import redirect_stdout, redirect_stderr
 from collections import deque
-import json
+import logging
 from ..validator import check_permissions
-from ..config import load_config_or_exit, summarize_risks_and_confirm, extract_rule_patterns
-from ..core.config import set_prompt_provider
 
-from ..core.tui import TUI, progress_bar
+from ..core.tui import TUI, progress_bar, _maybe_raise, _trace
 from ..core.stream_proxy import StreamProxy
 from ..core.preprocessing import (
     _should_show_preprocessing_ui,
@@ -29,9 +26,12 @@ from ..core.config_validation import (
 
 # Ensure interactive redraw is visible even under partial buffering
 try:
-    sys.stdout.reconfigure(line_buffering=True)
-except Exception:
-    pass
+    sys.stdout.reconfigure(line_buffering=True)  # type: ignore[attr-defined]
+except AttributeError as e:
+    _trace("stdout has no reconfigure: %s", e)
+except OSError as e:
+    logging.warning("failed to reconfigure stdout: %s", e)
+    _maybe_raise(e)
 
 _BANNER = r"""
 __     ____            _              __ _
@@ -104,8 +104,13 @@ def _run_obfuscation_stage(input_path: str, output_path: str, pipeline_path: str
     """난독화 단계 실행"""
     try:
         tui.set_status(["Obfuscation in progress…", ""])
-    except Exception:
-        tui.set_status(["Obfuscation in progress…"])
+    except (OSError, UnicodeEncodeError) as e:
+        _trace("set_status warmup failed: %s", e)
+        try:
+            tui.set_status(["Obfuscation in progress…"])
+        except (OSError, UnicodeEncodeError) as e2:
+            _trace("set_status fallback failed: %s", e2)
+            _maybe_raise(e2)
     
     try:
         env = os.environ.copy()
@@ -142,7 +147,12 @@ def _run_obfuscation_stage(input_path: str, output_path: str, pipeline_path: str
             sys.exit(1)
         
     except (OSError, subprocess.SubprocessError) as e:
-        tui.set_status([f"Obfuscation failed: {e}"])
+        try:
+            tui.set_status([f"Obfuscation failed: {e}"])
+        except (OSError, UnicodeEncodeError) as e2:
+            _trace("set_status failed: %s", e2)
+            _maybe_raise(e2)
+        _maybe_raise(e)
         sys.exit(1)
 
 
@@ -194,8 +204,9 @@ def _monitor_obfuscation_progress(proc: subprocess.Popen, steps: list, detectors
         finally:
             try:
                 q2.put(None)
-            except Exception:
-                pass
+            except queue.Full as e:
+                _trace("queue sentinel put failed: %s", e)
+                _maybe_raise(e)
     
     thr2 = threading.Thread(target=_reader2, daemon=True)
     thr2.start()
@@ -216,16 +227,14 @@ def _monitor_obfuscation_progress(proc: subprocess.Popen, steps: list, detectors
                 try:
                     if os.environ.get("SWINGFT_TUI_ECHO", "") == "1":
                         print(line)
-                except Exception:
-                    pass
+                except (OSError, UnicodeEncodeError) as e:
+                    _trace("echo print failed: %s", e)
+                    _maybe_raise(e)
             
             low = line.lower()
             
             # 명시적 마커 처리
-            try:
-                m = marker_rx.match(line.strip())
-            except Exception:
-                m = None
+            m = marker_rx.match(line.strip())
             
             if m is not None:
                 _handle_explicit_marker(m, steps, step_keys, seen, step_state, last_current)
@@ -238,8 +247,9 @@ def _monitor_obfuscation_progress(proc: subprocess.Popen, steps: list, detectors
                         "",
                         *list(tail2)
                     ])
-                except Exception:
-                    pass
+                except (OSError, UnicodeEncodeError) as e:
+                    _trace("set_status update failed: %s", e)
+                    _maybe_raise(e)
                 if eof2 and q2.empty():
                     break
                 time.sleep(0.05)
@@ -247,10 +257,7 @@ def _monitor_obfuscation_progress(proc: subprocess.Popen, steps: list, detectors
             
             # 완료/스킵 처리
             if low.startswith("completed:") or low.startswith("skipped:"):
-                try:
-                    last_current = "Finalizing"
-                except Exception:
-                    pass
+                last_current = "Finalizing"
             
             # 정규식 기반 단계 감지
             matched_key = _detect_step_by_regex(line, detectors)
@@ -271,8 +278,9 @@ def _monitor_obfuscation_progress(proc: subprocess.Popen, steps: list, detectors
                 "",
                 *list(tail2)
             ])
-        except Exception:
-            pass
+        except (OSError, UnicodeEncodeError) as e:
+            _trace("set_status periodic update failed: %s", e)
+            _maybe_raise(e)
         
         if eof2 and q2.empty():
             break
@@ -289,8 +297,9 @@ def _handle_explicit_marker(m: re.Match, steps: list, step_keys: list, seen: set
         try:
             idx = step_keys.index(key)
             last_current = steps[idx][1]
-        except Exception:
-            pass
+        except ValueError as e:
+            _trace("unknown step key in explicit marker: %s", e)
+            _maybe_raise(e)
         step_state[key] = "start"
     else:
         if key in step_keys:
@@ -302,11 +311,8 @@ def _handle_explicit_marker(m: re.Match, steps: list, step_keys: list, seen: set
 def _detect_step_by_regex(line: str, detectors: dict) -> str | None:
     """정규식으로 단계 감지"""
     for key, rx in detectors.items():
-        try:
-            if rx.search(line):
-                return key
-        except Exception:
-            pass
+        if rx.search(line):
+            return key
     return None
 
 
@@ -359,8 +365,9 @@ def _advance_to_next_step(key: str, steps: list, step_keys: list, seen: set[str]
                         idx2 = step_keys.index(k2)
                         last_done_label = steps[idx2][1]
                         break
-                    except Exception:
-                        pass
+                    except ValueError as e:
+                        _trace("step index lookup failed: %s", e)
+                        _maybe_raise(e)
             if last_done_label:
                 last_current = last_done_label
             else:
@@ -371,8 +378,9 @@ def _advance_to_next_step(key: str, steps: list, step_keys: list, seen: set[str]
                 if k2 not in seen:
                     last_current = lbl2
                     break
-    except Exception:
-        pass
+    except (ValueError, IndexError) as e:
+        _trace("advance_to_next_step failed: %s", e)
+        _maybe_raise(e)
 
 
 def _update_current_label(key: str, steps: list, step_keys: list, seen: set[str],
@@ -387,8 +395,9 @@ def _update_current_label(key: str, steps: list, step_keys: list, seen: set[str]
                     idx2 = step_keys.index(k2)
                     last_done_label = steps[idx2][1]
                     break
-                except Exception:
-                    pass
+                except ValueError as e:
+                    _trace("update_current_label index failed: %s", e)
+                    _maybe_raise(e)
         last_current = last_done_label or steps[step_keys.index(key)][1]
     else:
         idx = step_keys.index(key)
@@ -403,22 +412,20 @@ def _update_current_label(key: str, steps: list, step_keys: list, seen: set[str]
 def _update_final_label(step_keys: list, seen: set[str], step_state: dict[str, str],
                        steps: list, last_current: str) -> None:
     """최종 라벨 업데이트"""
-    try:
-        primary_keys = [k for k in step_keys if k != "_bootstrap"]
-        if all(k in seen for k in primary_keys):
-            last_done_label = None
-            for k in reversed(step_keys):
-                if k in seen and k != "_bootstrap" and step_state.get(k) == "done":
-                    try:
-                        idx = step_keys.index(k)
-                        last_done_label = steps[idx][1]
-                        break
-                    except Exception:
-                        pass
-            if last_done_label:
-                last_current = last_done_label
-    except Exception:
-        pass
+    primary_keys = [k for k in step_keys if k != "_bootstrap"]
+    if all(k in seen for k in primary_keys):
+        last_done_label = None
+        for k in reversed(step_keys):
+            if k in seen and k != "_bootstrap" and step_state.get(k) == "done":
+                try:
+                    idx = step_keys.index(k)
+                    last_done_label = steps[idx][1]
+                    break
+                except ValueError as e:
+                    _trace("update_final_label index failed: %s", e)
+                    _maybe_raise(e)
+        if last_done_label:
+            last_current = last_done_label
 
 
 def handle_obfuscate(args):
@@ -458,5 +465,10 @@ def handle_obfuscate(args):
     try:
         sys.stdout.write("\nObfuscation completed\n")
         sys.stdout.flush()
-    except Exception:
-        tui.set_status(["Obfuscation completed"])
+    except OSError as e:
+        _trace("stdout completion message failed: %s", e)
+        try:
+            tui.set_status(["Obfuscation completed"])
+        except (OSError, UnicodeEncodeError) as e2:
+            _trace("fallback completion status failed: %s", e2)
+            _maybe_raise(e2)

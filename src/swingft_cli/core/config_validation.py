@@ -12,6 +12,18 @@ import time
 from contextlib import redirect_stdout, redirect_stderr
 from .tui import TUI, progress_bar
 from .stream_proxy import StreamProxy
+import logging
+
+# strict-mode helper
+try:
+    from .tui import _maybe_raise
+except ImportError as _imp_err:
+    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    def _maybe_raise(e: BaseException) -> None:
+        import os
+        if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
+            raise e
+
 def _load_config_or_exit(config_path: str):
     """Config 로드 함수 - 순환 import 방지를 위해 로컬 정의"""
     try:
@@ -21,10 +33,15 @@ def _load_config_or_exit(config_path: str):
         # fallback: 직접 구현
         import json
         if not os.path.exists(config_path):
-            print(f"[ERROR] 설정 파일을 찾을 수 없습니다: {config_path}")
+            logging.error("설정 파일을 찾을 수 없습니다: %s", config_path)
             sys.exit(1)
-        with open(config_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        try:
+            with open(config_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except (OSError, json.JSONDecodeError) as e:
+            logging.error("설정 파일 로드 실패: %s", e)
+            _maybe_raise(e)
+            sys.exit(1)
 
 def _extract_rule_patterns(config):
     """Rule patterns 추출 함수 - 순환 import 방지를 위해 로컬 정의"""
@@ -81,9 +98,10 @@ def _create_working_config(config_path: str) -> str:
         shutil.copy2(abs_src, working_path)
         return working_path
     except (OSError, IOError) as e:
-        print(f"[ERROR] 설정 파일 복사 실패: {e}")
-        print(f"[ERROR] 원본: {abs_src}")
-        print(f"[ERROR] 대상: {working_path}")
+        logging.error("설정 파일 복사 실패: %s", e)
+        logging.error("원본: %s", abs_src)
+        logging.error("대상: %s", working_path)
+        _maybe_raise(e)
         sys.exit(1)
 
 
@@ -123,19 +141,17 @@ def _setup_preflight_echo_holder() -> None:
                             # if a proxy exists, switch current to 'exclude'
                             if _preflight_echo.get("proxy") is not None:
                                 _preflight_echo["current"] = "exclude"
-                        except Exception:
-                            # best-effort: keep include echo's header intact
-                            try:
-                                if _preflight_echo.get("include") is not None:
-                                    _preflight_echo["include"]._tail.clear()
-                                    _preflight_echo["include"]._header = include_header
-                            except Exception:
-                                pass
-                    except Exception:
-                        pass
+                        except (OSError, UnicodeEncodeError) as e:
+                            logging.debug("make_stream_echo failed in prompt_provider: %s", e)
+                            _maybe_raise(e)
+                        # best-effort: keep include echo's header intact
+                    except (AttributeError, OSError) as e:
+                        logging.debug("prompt_provider restore failed: %s", e)
+                        _maybe_raise(e)
                 _preflight_phase["phase"] = "exclude"
-        except Exception:
-            pass
+        except (OSError, UnicodeError) as e:
+            logging.debug("prompt_provider unexpected error: %s", e)
+            _maybe_raise(e)
         return tui.prompt_line(msg)
 
     set_prompt_provider(_prompt_provider)
@@ -154,7 +170,8 @@ def _run_config_validation_and_analysis(working_config_path: str | None, args) -
         from ..core.config.loader import _apply_analyzer_exclusions_to_ast_and_config as _apply_anl
         _apply_anl(analyzer_root, proj_in, ast_path, working_config_path, {})
     except (ImportError, OSError, KeyError) as e:
-        print(f"[WARNING] Analyzer 적용 실패: {e}")
+        logging.warning("Analyzer 적용 실패: %s", e)
+        _maybe_raise(e)
     
     # Config 검증 및 사용자 확인
     try:
@@ -163,8 +180,10 @@ def _run_config_validation_and_analysis(working_config_path: str | None, args) -
             _run_auto_config_validation(working_config_path)
         else:
             _run_interactive_config_validation(working_config_path)
-    except Exception as e:
+    except (RuntimeError, OSError, KeyError) as e:
+        logging.error("설정 검증 실패: %s", e)
         tui.set_status([f"설정 검증 실패: {e}"])
+        _maybe_raise(e)
         sys.exit(1)
 
 
@@ -195,8 +214,10 @@ def _run_interactive_config_validation(working_config_path: str) -> None:
     # TUI echo 설정
     try:
         include_echo = tui.make_stream_echo(header="", tail_len=10)
-    except Exception:
+    except (OSError, UnicodeEncodeError) as e:
+        logging.debug("make_stream_echo failed: %s", e)
         include_echo = None
+        _maybe_raise(e)
     
     _preflight_echo["include"] = include_echo
     _preflight_echo["current"] = "include"
@@ -214,7 +235,13 @@ def _run_interactive_config_validation(working_config_path: str) -> None:
         
         _show_preflight_result(ok)
     else:
-        ok = _summarize_risks_and_confirm(patterns, auto_yes=False)
+        try:
+            ok = _summarize_risks_and_confirm(patterns, auto_yes=False)
+        except (RuntimeError, OSError) as e:
+            logging.error("interactive validation failed: %s", e)
+            tui.set_status([f"설정 검증 실패: {e}"])
+            _maybe_raise(e)
+            sys.exit(1)
 
 
 def _show_preflight_completion_screen() -> None:
@@ -224,15 +251,19 @@ def _show_preflight_completion_screen() -> None:
             "Preflight confirmation received",
             "Proceeding to obfuscation…",
         ])
-    except Exception:
+    except (OSError, UnicodeEncodeError) as e:
+        logging.debug("show_exact_screen failed: %s", e)
         try:
             tui.set_status(["Preflight confirmation received", "Proceeding to obfuscation…"])  
-        except Exception:
-            pass
+        except (OSError, UnicodeEncodeError) as e2:
+            logging.debug("set_status failed: %s", e2)
+            _maybe_raise(e2)
+        _maybe_raise(e)
     try:
         time.sleep(0.2)
-    except Exception:
-        pass
+    except OSError as e:
+        logging.debug("sleep failed: %s", e)
+        _maybe_raise(e)
 
 
 def _show_preflight_result(ok: bool) -> None:
@@ -245,15 +276,19 @@ def _show_preflight_result(ok: bool) -> None:
                 "Preflight confirmation received",
                 "Proceeding to obfuscation…",
             ])
-    except Exception:
+    except (OSError, UnicodeEncodeError) as e:
+        logging.debug("show_exact_screen failed: %s", e)
         try:
             if ok is False:
                 tui.set_status(["Preflight aborted by user"])  
             else:
                 tui.set_status(["Preflight confirmation received", "Proceeding to obfuscation…"])  
-        except Exception:
-            pass
+        except (OSError, UnicodeEncodeError) as e2:
+            logging.debug("set_status failed: %s", e2)
+            _maybe_raise(e2)
+        _maybe_raise(e)
     try:
         time.sleep(0.2)
-    except Exception:
-        pass
+    except OSError as e:
+        logging.debug("sleep failed: %s", e)
+        _maybe_raise(e)

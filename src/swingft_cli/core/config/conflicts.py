@@ -5,6 +5,17 @@ import json
 from pathlib import Path
 from datetime import datetime
 from typing import Any, Dict, Set
+import logging
+
+# strict-mode helper
+try:
+    from ..tui import _maybe_raise  # type: ignore
+except ImportError as _imp_err:
+    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    def _maybe_raise(e: BaseException) -> None:
+        import os
+        if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
+            raise e
 
 from .ast_utils import update_ast_node_exceptions as _update_ast_node_exceptions
 from .exclusions import ast_unwrap as _ast_unwrap
@@ -15,7 +26,11 @@ def _has_ui_prompt() -> bool:
     try:
         import swingft_cli.core.config as _cfg
         return getattr(_cfg, "PROMPT_PROVIDER", None) is not None
-    except Exception:
+    except ImportError:
+        return False
+    except AttributeError as e:
+        logging.debug("_has_ui_prompt attribute error: %s", e)
+        _maybe_raise(e)
         return False
 
 
@@ -25,20 +40,14 @@ def _preflight_print(msg: str) -> None:
 
 
 def _preflight_verbose() -> bool:
-    try:
-        v = os.environ.get("SWINGFT_PREFLIGHT_VERBOSE", "")
-        return str(v).strip().lower() in {"1", "true", "yes", "y", "on"}
-    except Exception:
-        return False
+    v = os.environ.get("SWINGFT_PREFLIGHT_VERBOSE", "")
+    return str(v).strip().lower() in {"1", "true", "yes", "y", "on"}
 
 
 def _append_terminal_log(config: Dict[str, Any], lines: list[str]) -> None:
     try:
         out_dir = str((config.get("project") or {}).get("output") or "").strip()
-        if out_dir:
-            base = os.path.join(out_dir, "Obfuscation_Report", "preflight")
-        else:
-            base = os.path.join(os.getcwd(), "Obfuscation_Report", "preflight")
+        base = os.path.join(out_dir, "Obfuscation_Report", "preflight") if out_dir else os.path.join(os.getcwd(), "Obfuscation_Report", "preflight")
         os.makedirs(base, exist_ok=True)
         path = os.path.join(base, "terminal_preflight.log")
         with open(path, "a", encoding="utf-8") as f:
@@ -46,8 +55,9 @@ def _append_terminal_log(config: Dict[str, Any], lines: list[str]) -> None:
             for ln in lines:
                 f.write(str(ln) + "\n")
             f.write("\n")
-    except Exception:
-        pass
+    except (OSError, UnicodeError, PermissionError) as e:
+        logging.debug("append_terminal_log failed: %s", e)
+        _maybe_raise(e)
 
 
 def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[str]:
@@ -68,26 +78,35 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
     try:
         apply_cfg = str(os.environ.get("SWINGFT_APPLY_CONFIG_TO_AST", "")).strip().lower() in {"1", "true", "yes", "y", "on"}
         if apply_cfg and ast_file and ast_file.exists():
-            items = []
             try:
                 items = config.get("exclude", {}).get("obfuscation", []) or []
-            except Exception:
+            except (AttributeError, TypeError) as e:
+                logging.debug("config exclude.obfuscation access failed: %s", e)
+                _maybe_raise(e)
                 items = []
             if isinstance(items, list) and items:
-                _update_ast_node_exceptions(
-                    str(ast_file), items, is_exception=1, lock_children=True, quiet=True
-                )
-                if _preflight_verbose():
-                    print("[preflight] apply-config → AST: applied exclude.obfuscation to isException=1")
+                try:
+                    _update_ast_node_exceptions(
+                        str(ast_file), items, is_exception=1, lock_children=True, quiet=True
+                    )
+                except (OSError, ValueError, TypeError) as e:
+                    logging.warning("apply-config → AST failed: %s", e)
+                    _maybe_raise(e)
+                else:
+                    if _preflight_verbose():
+                        print("[preflight] apply-config → AST: applied exclude.obfuscation to isException=1")
         elif _preflight_verbose():
             print("[preflight] apply-config DRY-RUN: not applying to AST (set SWINGFT_APPLY_CONFIG_TO_AST=1 to apply)")
-    except Exception:
-        pass
+    except (OSError, RuntimeError, ValueError) as e:
+        logging.debug("apply-config wrapper failed: %s", e)
+        _maybe_raise(e)
 
     try:
         with open(ast_file, 'r', encoding='utf-8') as f:
             ast_list = json.load(f)
-    except Exception:
+    except (OSError, json.JSONDecodeError) as e:
+        logging.debug("AST read failed: %s", e)
+        _maybe_raise(e)
         return set()
 
     ex_names: Set[str] = set()
@@ -216,10 +235,12 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     # session copy
                     try:
                         _write_feedback_to_output(config, "include_session", "\n".join(_capture + ["", *fb]))
-                    except Exception:
-                        pass
-                except Exception:
-                    pass
+                    except (OSError, UnicodeError, ValueError) as e:
+                        logging.debug("include_session write failed: %s", e)
+                        _maybe_raise(e)
+                except (OSError, ValueError, TypeError) as e:
+                    logging.debug("force policy handling failed: %s", e)
+                    _maybe_raise(e)
             elif policy == "skip":
                 # 터미널 출력 없이 파일에만 기록
                 try:
@@ -235,10 +256,12 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     _append_terminal_log(config, fb)
                     try:
                         _write_feedback_to_output(config, "include_session", "\n".join(_capture + ["", *fb]))
-                    except Exception:
-                        pass
-                except Exception:
-                    pass
+                    except (OSError, UnicodeError, ValueError) as e:
+                        logging.debug("include_session write failed: %s", e)
+                        _maybe_raise(e)
+                except (OSError, UnicodeError, ValueError) as e:
+                    logging.debug("skip policy handling failed: %s", e)
+                    _maybe_raise(e)
             else:
                 if _has_ui_prompt():
                     import swingft_cli.core.config as _cfg
@@ -246,7 +269,9 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     try:
                         if sample_all:
                             full_list = "\n  - " + "\n  - ".join(sample_all)
-                    except Exception:
+                    except (UnicodeError, ValueError, TypeError) as e:
+                        logging.debug("full_list build failed: %s", e)
+                        _maybe_raise(e)
                         full_list = ""
                     prompt_msg = (
                         "[preflight] "
@@ -265,7 +290,9 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     try:
                         if sample_all:
                             full_list = "\n  - " + "\n  - ".join(sample_all)
-                    except Exception:
+                    except (UnicodeError, ValueError, TypeError) as e:
+                        logging.debug("full_list build failed: %s", e)
+                        _maybe_raise(e)
                         full_list = ""
                     prompt_msg = (
                         "[preflight]\n"
@@ -283,10 +310,10 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                         quiet=_has_ui_prompt()
                     )
                 try:
-                    # save session for ask mode
                     _write_feedback_to_output(config, "include_session", "\n".join(_capture))
-                except Exception:
-                    pass
+                except (OSError, UnicodeError, ValueError) as e:
+                    logging.debug("include_session write failed: %s", e)
+                    _maybe_raise(e)
                 else:
                     print("[preflight] 사용자가 충돌 항목 제거를 취소했습니다.")
         except (EOFError, KeyboardInterrupt):
@@ -296,5 +323,4 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
         _preflight_print("[preflight] Include 대상과 제외대상 간 충돌 없음")
 
     return ex_names
-
 

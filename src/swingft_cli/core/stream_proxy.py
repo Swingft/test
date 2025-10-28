@@ -7,7 +7,8 @@ a stable proxy while the prompt provider swaps which echo object is the active
 target (include vs exclude) at runtime.
 """
 
-from .tui import TUI, progress_bar
+from .tui import TUI, progress_bar, _maybe_raise
+import logging
 
 # shared TUI instance
 tui = TUI()
@@ -24,69 +25,78 @@ class StreamProxy:
         
     def write(self, data):
         # forward writes to the currently selected echo target
+        # 1) pre-scan output to decide whether to switch to exclude echo
         try:
-            # if the preflight output contains indicators that an exclude phase is
-            # starting (e.g. a candidate list or an explicit exclude-detected line),
-            # create the exclude echo and switch the current proxy target so the
-            # TUI shows the Include header above the Exclude header immediately.
-            try:
-                text = data if isinstance(data, str) else str(data)
-                lowered = text.lower()
-                trigger = False
-                # trigger as early as possible, before the candidates list prints
-                if ("exclude candidates overlap" in lowered or
-                    "candidates:" in lowered or
-                    "exclude candidate detected" in lowered or
-                    "exclude this identifier" in lowered):
-                    trigger = True
-                if trigger:
-                    # guard against repeated creation
-                    if self._holder.get("exclude") is None:
-                        try:
-                            include_header = ""
-                            exclude_header = f"Preflight: {progress_bar(0,1)}  - | Current: Checking Exclude List"
-                            try:
-                                tui.set_status([include_header, exclude_header, ""])
-                            except Exception:
-                                try:
-                                    tui.set_status([exclude_header])
-                                except Exception:
-                                    pass
-                            # create exclude echo then immediately switch current so upcoming lines go to exclude
-                            excl = tui.make_stream_echo(header=exclude_header, tail_len=10)
-                            self._holder["exclude"] = excl
-                            # copy prior include tail for context, but do not duplicate current line to include
-                            try:
-                                inc = self._holder.get("include")
-                                if inc is not None and hasattr(inc, "_tail") and hasattr(excl, "_tail"):
-                                    for line in list(inc._tail):
-                                        try:
-                                            excl._tail.append(line)
-                                        except Exception:
-                                            pass
-                            except Exception:
-                                pass
-                            # switch current before forwarding this write so Candidates go to exclude tail
-                            if self._holder.get("proxy") is not None:
-                                self._holder["current"] = "exclude"
-                        except Exception:
-                            pass
-            except Exception:
-                # non-fatal, continue to forward as usual
-                pass
+            text = data if isinstance(data, str) else str(data)
+        except (UnicodeError, TypeError, ValueError) as e:
+            logging.debug("StreamProxy.write: to-string failed: %s", e)
+            _maybe_raise(e)
+            # if conversion failed, give up early
+            return
 
-            cur = self._holder.get("current", "include")
-            target = self._holder.get(cur)
-            if target is not None:
+        lowered = text.lower()
+        trigger = (
+            ("exclude candidates overlap" in lowered)
+            or ("candidates:" in lowered)
+            or ("exclude candidate detected" in lowered)
+            or ("exclude this identifier" in lowered)
+        )
+
+        if trigger:
+            # guard against repeated creation
+            if self._holder.get("exclude") is None:
+                try:
+                    include_header = ""
+                    exclude_header = f"Preflight: {progress_bar(0,1)}  - | Current: Checking Exclude List"
+                    try:
+                        # best-effort status update for TUI panel
+                        TUI().set_status([include_header, exclude_header, ""])  # isolated call
+                    except (OSError, UnicodeEncodeError) as e:
+                        logging.debug("StreamProxy.write: set_status failed: %s", e)
+                        _maybe_raise(e)
+                    # create exclude echo then immediately switch current so upcoming lines go to exclude
+                    try:
+                        excl = tui.make_stream_echo(header=exclude_header, tail_len=10)
+                        self._holder["exclude"] = excl
+                    except (OSError, UnicodeEncodeError) as e:
+                        logging.warning("StreamProxy.write: make_stream_echo failed: %s", e)
+                        _maybe_raise(e)
+                    # copy prior include tail for context
+                    try:
+                        inc = self._holder.get("include")
+                        if inc is not None and hasattr(inc, "_tail") and hasattr(excl, "_tail"):
+                            for line in list(inc._tail):
+                                try:
+                                    excl._tail.append(line)
+                                except (AttributeError) as e:
+                                    logging.debug("StreamProxy.write: tail append failed: %s", e)
+                                    _maybe_raise(e)
+                    except AttributeError as e:
+                        logging.debug("StreamProxy.write: tail copy failed: %s", e)
+                        _maybe_raise(e)
+                    # switch current before forwarding this write so Candidates go to exclude tail
+                    if self._holder.get("proxy") is not None:
+                        self._holder["current"] = "exclude"
+                except (OSError, UnicodeEncodeError, AttributeError) as e:
+                    logging.debug("StreamProxy.write: exclude-switch block failed: %s", e)
+                    _maybe_raise(e)
+
+        # 2) forward the actual write to the selected target
+        cur = self._holder.get("current", "include")
+        target = self._holder.get(cur)
+        if target is not None:
+            try:
                 target.write(data)
-        except Exception:
-            pass
+            except (OSError, UnicodeEncodeError) as e:
+                logging.warning("StreamProxy.write: target write failed: %s", e)
+                _maybe_raise(e)
             
     def flush(self):
-        try:
-            cur = self._holder.get("current", "include")
-            target = self._holder.get(cur)
-            if target is not None:
+        cur = self._holder.get("current", "include")
+        target = self._holder.get(cur)
+        if target is not None:
+            try:
                 target.flush()
-        except Exception:
-            pass
+            except OSError as e:
+                logging.warning("StreamProxy.flush: target flush failed: %s", e)
+                _maybe_raise(e)

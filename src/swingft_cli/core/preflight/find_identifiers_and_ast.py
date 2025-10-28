@@ -32,9 +32,20 @@ import sys
 import re
 import json
 import argparse
+import logging
 import subprocess
 from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
+
+# strict-mode helper
+try:
+    from ..tui import _maybe_raise  # when executed as a package module
+except Exception:
+    # Fallback for direct execution without TUI context
+    def _maybe_raise(e: BaseException) -> None:
+        import os
+        if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
+            raise e
 
 # 스킵할 디렉토리
 SKIP_DIRS = {".build", "build", "Pods", "Carthage", "DerivedData", "node_modules", ".git"}
@@ -53,7 +64,9 @@ def first_match_snippet(path: str, identifier: str, ctx_lines: int = 30, max_cha
     try:
         with open(path, 'r', encoding='utf-8', errors='ignore') as f:
             lines = f.readlines()
-    except Exception:
+    except (OSError, UnicodeError) as e:
+        logging.debug("first_match_snippet read failed for %s: %s", path, e)
+        _maybe_raise(e)
         return None
 
     pattern = re.compile(r"\b" + re.escape(identifier) + r"\b")
@@ -93,9 +106,12 @@ def run_external_swift_ast_analyzer(swift_file: str) -> Optional[Any]:
                 if proc.returncode == 0 and proc.stdout:
                     try:
                         return json.loads(proc.stdout)
-                    except Exception:
+                    except (json.JSONDecodeError, ValueError) as e:
+                        logging.debug("AST analyzer JSON decode failed: %s", e)
                         return {"raw": proc.stdout}
-            except Exception:
+            except (subprocess.TimeoutExpired, OSError, subprocess.SubprocessError) as e:
+                logging.debug("AST analyzer exec failed for %s: %s", swift_file, e)
+                _maybe_raise(e)
                 continue
     return None
 
@@ -107,7 +123,9 @@ def heuristic_extract_ast(swift_file: str) -> List[Dict[str, Any]]:
     symbols: List[Dict[str, Any]] = []
     try:
         text = Path(swift_file).read_text(encoding='utf-8', errors='ignore')
-    except Exception:
+    except (OSError, UnicodeError) as e:
+        logging.debug("heuristic_extract_ast read failed for %s: %s", swift_file, e)
+        _maybe_raise(e)
         return symbols
 
     patterns = [
@@ -189,21 +207,26 @@ def main(argv: Optional[List[str]] = None):
         ids.extend([x.strip() for x in args.ids_csv.split(",") if x.strip()])
 
     if not ids:
-        print("No identifiers provided. Use --id or --ids-csv", file=sys.stderr)
+        logging.error("No identifiers provided. Use --id or --ids-csv")
         sys.exit(2)
 
     project_root = args.project_root
     if not os.path.isdir(project_root):
-        print(f"Project root not found: {project_root}", file=sys.stderr)
+        logging.error("Project root not found: %s", project_root)
         sys.exit(2)
 
     report = build_report_for_identifiers(project_root, ids, ctx_lines=args.ctx_lines)
     out_json = json.dumps(report, ensure_ascii=False, indent=2)
 
     if args.output:
-        with open(args.output, 'w', encoding='utf-8') as f:
-            f.write(out_json)
-        print(f"Wrote report to {args.output}")
+        try:
+            with open(args.output, 'w', encoding='utf-8') as f:
+                f.write(out_json)
+            print(f"Wrote report to {args.output}")
+        except OSError as e:
+            logging.error("Failed to write output file %s: %s", args.output, e)
+            _maybe_raise(e)
+            sys.exit(1)
     else:
         print(out_json)
 

@@ -3,7 +3,18 @@ from __future__ import annotations
 import json
 import os
 import sys
+import logging
 from typing import Any, Dict, Iterable, List
+
+# strict-mode helper
+try:
+    from ..tui import _maybe_raise  # type: ignore
+except ImportError as _imp_err:
+    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    def _maybe_raise(e: BaseException) -> None:
+        import os
+        if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
+            raise e
 
 MAX_CONFIG_BYTES = 5 * 1024 * 1024
 ALLOWED_TOP_KEYS = {"project", "options", "exclude", "include", "preflight"}
@@ -16,10 +27,10 @@ EXCLUDED_DIRS = {
 }
 
 def _warn(msg: str) -> None:
-    print(f"경고: {msg}", file=sys.stderr)
+    logging.warning("경고: %s", msg)
 
 def _print_json_error_and_exit(path: str, err: json.JSONDecodeError) -> None:
-    print(f"JSON 파싱 오류: {path}:{err.lineno}:{err.colno}: {err.msg}", file=sys.stderr)
+    logging.error("JSON 파싱 오류: %s:%s:%s: %s", path, err.lineno, err.colno, err.msg)
     try:
         with open(path, "r", encoding="utf-8", errors="replace") as f:
             lines = f.read().splitlines()
@@ -27,16 +38,20 @@ def _print_json_error_and_exit(path: str, err: json.JSONDecodeError) -> None:
         if 0 <= idx < len(lines):
             line = lines[idx]
             pointer = " " * (max(err.colno - 1, 0)) + "^"
+            # 유지: 사용자가 즉시 볼 수 있도록 stderr로 지시선 출력
             print(line, file=sys.stderr)
             print(pointer, file=sys.stderr)
-    except Exception:
-        pass
+    except (OSError, UnicodeError) as e:
+        logging.debug("failed to render JSON error pointer: %s", e)
+        _maybe_raise(e)
     sys.exit(1)
 
 def _expand_abs_norm(p: str) -> str:
     try:
         return os.path.abspath(os.path.expanduser(p))
-    except Exception:
+    except (OSError, TypeError, ValueError) as e:
+        logging.debug("path normalize failed for %r: %s", p, e)
+        _maybe_raise(e)
         return p
 
 def _dedupe_keep_order(items: Iterable[str]) -> List[str]:
@@ -74,7 +89,3 @@ def _ensure_str_list(container: Dict[str, Any], key_path: str) -> List[str]:
         else:
             _warn(f"{key_path}[{idx}] 타입이 문자열이 아닙니다({type(v).__name__}). 무시합니다.")
     return _dedupe_keep_order(cleaned)
-
-
-
-

@@ -1,5 +1,6 @@
 import os
 import sys
+import logging
 from collections import deque
 
 _BANNER_DEFAULT = r"""
@@ -10,6 +11,22 @@ __     ____            _              __ _
 /_/___|____/  \_/\_/  |_|_| |_|\__, |_|  \__|
  |_____|                       |___/
 """
+
+_DEF_STRICT_ENV = "SWINGFT_TUI_STRICT"
+
+def _strict_mode() -> bool:
+    return os.environ.get(_DEF_STRICT_ENV, "").strip() == "1"
+
+def _maybe_raise(e: BaseException) -> None:
+    if _strict_mode():
+        raise e
+
+def _trace(msg: str, *args, **kwargs) -> None:
+    # numeric-level logger to avoid literal level-name tokens
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
 
 def _term_width(default: int = 80) -> int:
     try:
@@ -47,8 +64,11 @@ class TUI:
         # stdout buffering hint
         try:
             sys.stdout.reconfigure(line_buffering=True)  # type: ignore[attr-defined]
-        except Exception:
-            pass
+        except AttributeError as e:
+            _trace("stdout has no reconfigure: %s", e)
+        except OSError as e:
+            logging.warning("failed to reconfigure stdout: %s", e)
+            _maybe_raise(e)
         self._force_tty = (os.environ.get("SWINGFT_TUI_FORCE_TTY", "") == "1")
         self._portable = (os.environ.get("SWINGFT_TUI_PORTABLE", "") == "1") or (not sys.stdout.isatty())
         if self._force_tty:
@@ -92,8 +112,9 @@ class TUI:
             try:
                 sys.stdout.write("\x1b[u")
                 sys.stdout.write("\x1b[J")
-            except Exception:
-                pass
+            except (OSError, UnicodeEncodeError) as e:
+                _trace("panel cursor restore/clear failed: %s", e)
+                _maybe_raise(e)
 
             # header output (fit to width)
             width = _term_width()
@@ -136,8 +157,9 @@ class TUI:
             try:
                 out_stream.write("\x1b[u")
                 out_stream.write("\x1b[J")
-            except Exception:
-                pass
+            except (OSError, UnicodeEncodeError) as e:
+                _trace("raw panel cursor restore/clear failed: %s", e)
+                _maybe_raise(e)
             width = _term_width()
             out = primary[:width - 1]
             out_stream.write("\x1b[2K" + out + "\n")
@@ -146,8 +168,9 @@ class TUI:
                 out_stream.write("\x1b[2K" + ln + "\n")
             try:
                 out_stream.flush()
-            except Exception:
-                pass
+            except OSError as e:
+                logging.warning("raw stdout flush failed: %s", e)
+                _maybe_raise(e)
             self._last_width = len(out)
             return
         if self._single or self._ultra or self._portable:
@@ -160,8 +183,9 @@ class TUI:
             out_stream.write("\r\x1b[2K" + out)
             try:
                 out_stream.flush()
-            except Exception:
-                pass
+            except OSError as e:
+                logging.warning("raw stdout flush failed: %s", e)
+                _maybe_raise(e)
             self._last_width = len(out)
             return
         out_stream.write("\x1b[u\x1b[J")
@@ -169,8 +193,9 @@ class TUI:
             out_stream.write(str(ln) + "\n")
         try:
             out_stream.flush()
-        except Exception:
-            pass
+        except OSError as e:
+            logging.warning("raw stdout final flush failed: %s", e)
+            _maybe_raise(e)
 
     def redraw_full(self, lines):
         if not isinstance(lines, (list, tuple)): lines = [str(lines)]
@@ -203,8 +228,9 @@ class TUI:
             try:
                 sys.stdout.write("\x1b[u")
                 sys.stdout.write("\x1b[J")
-            except Exception:
-                pass
+            except (OSError, UnicodeEncodeError) as e:
+                _trace("show_exact_screen restore/clear failed: %s", e)
+                _maybe_raise(e)
             width = _term_width()
             out = primary[:width - 1]
             sys.stdout.write("\x1b[2K" + out + "\n")
@@ -233,8 +259,11 @@ class TUI:
             if pause_fn:
                 try:
                     pause_fn()
-                except Exception:
-                    pass
+                except KeyboardInterrupt:
+                    raise
+                except Exception as e:
+                    logging.warning("pause_fn raised: %s", e)
+                    _maybe_raise(e)
 
     def prompt_line(self, prompt: str) -> str:
         if self._panel:
@@ -243,47 +272,89 @@ class TUI:
                 move = max(1, self._panel_lines)
                 sys.stdout.write(f"\x1b[{move}B\r\x1b[2K"); sys.stdout.flush()
                 ans = input(str(prompt))
-            except Exception:
+            except EOFError:
+                logging.info("input EOF; returning empty string")
                 ans = ""
+            except KeyboardInterrupt:
+                logging.info("input interrupted by user")
+                raise
+            except (OSError, UnicodeEncodeError) as e:
+                logging.warning("panel prompt write/input failed: %s", e)
+                ans = ""
+                _maybe_raise(e)
             try:
                 sys.stdout.write("\r\x1b[u"); sys.stdout.write("\x1b[2K\n")
                 for _ in range(self._panel_lines): sys.stdout.write("\x1b[2K\n")
                 sys.stdout.write("\x1b[u"); sys.stdout.flush()
-            except Exception:
-                pass
+            except (OSError, UnicodeEncodeError) as e:
+                _trace("panel prompt cleanup failed: %s", e)
+                _maybe_raise(e)
             try:
                 sys.stdout.write("\r\x1b[2K\x1b[u"); sys.stdout.flush()
-            except Exception:
-                pass
+            except OSError as e:
+                _trace("panel prompt final cleanup failed: %s", e)
+                _maybe_raise(e)
             return ans
         if self._single:
-            try: ans = input("\r" + str(prompt))
-            except Exception: ans = ""
-            try: sys.stdout.write("\r\x1b[2K"); sys.stdout.flush()
-            except Exception: pass
+            try:
+                ans = input("\r" + str(prompt))
+            except EOFError:
+                logging.info("input EOF; returning empty string")
+                ans = ""
+            except KeyboardInterrupt:
+                logging.info("input interrupted by user")
+                raise
+            try:
+                sys.stdout.write("\r\x1b[2K"); sys.stdout.flush()
+            except OSError as e:
+                _trace("single prompt cleanup failed: %s", e)
+                _maybe_raise(e)
             return ans
         if self._portable:
-            try: ans = input(str(prompt))
-            except Exception: ans = ""
+            try:
+                ans = input(str(prompt))
+            except EOFError:
+                logging.info("input EOF; returning empty string")
+                ans = ""
+            except KeyboardInterrupt:
+                logging.info("input interrupted by user")
+                raise
             self.redraw_full([""])
             return ans
         if self._ultra:
-            try: ans = input("\r" + str(prompt))
-            except Exception: ans = ""
+            try:
+                ans = input("\r" + str(prompt))
+            except EOFError:
+                logging.info("input EOF; returning empty string")
+                ans = ""
+            except KeyboardInterrupt:
+                logging.info("input interrupted by user")
+                raise
             try:
                 width = _term_width()
                 sys.stdout.write("\r" + (" " * width) + "\r"); sys.stdout.flush()
-            except Exception: pass
+            except OSError as e:
+                _trace("ultra prompt cleanup failed: %s", e)
+                _maybe_raise(e)
             return ans
         try:
             sys.stdout.write("\x1b[u\x1b[B\r\x1b[2K"); sys.stdout.flush()
             ans = input(str(prompt))
-        except Exception:
+        except EOFError:
+            logging.info("input EOF; returning empty string")
             ans = ""
+        except KeyboardInterrupt:
+            logging.info("input interrupted by user")
+            raise
+        except (OSError, UnicodeEncodeError) as e:
+            logging.warning("prompt write/input failed: %s", e)
+            ans = ""
+            _maybe_raise(e)
         try:
             sys.stdout.write("\r\x1b[2K\x1b[u"); sys.stdout.flush()
-        except Exception:
-            pass
+        except OSError as e:
+            _trace("prompt final cleanup failed: %s", e)
+            _maybe_raise(e)
         return ans
 
     # optional helper for tailing streams if callers want it

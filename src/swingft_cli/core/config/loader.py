@@ -3,6 +3,8 @@ from __future__ import annotations
 # --- Apply config.exclude.obfuscation directly to AST (no config writes) ---
 from typing import Any as _Any, Dict as _Dict  # ensure types available for helper
 
+import logging
+
 def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]) -> int:
     """Set isException=1 in AST for names listed in config.exclude.obfuscation.
     - Expands wildcards against existing AST names.
@@ -12,7 +14,9 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
     try:
         with open(ast_file_path, 'r', encoding='utf-8') as f:
             ast_list = json.load(f)
-    except Exception:
+    except (OSError, json.JSONDecodeError) as e:
+        logging.debug("AST load failed: %s", e)
+        _maybe_raise(e)
         return 0
 
     CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
@@ -85,7 +89,9 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
              quiet=not _preflight_verbose(),
              only_when_explicit_zero=True,
          )
-    except Exception:
+    except (OSError, ValueError, TypeError) as e:
+        logging.warning("AST update failed: %s", e)
+        _maybe_raise(e)
         return 0
 
     # recount updated nodes
@@ -129,8 +135,20 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
                 for it in o: _count(it)
         _count(ast2)
         return cnt
-    except Exception:
+    except (OSError, json.JSONDecodeError) as e:
+        logging.debug("AST recount failed: %s", e)
+        _maybe_raise(e)
         return 0
+#
+# strict-mode helper
+try:
+    from ..tui import _maybe_raise  # type: ignore
+except ImportError as _imp_err:
+    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    def _maybe_raise(e: BaseException) -> None:
+        import os
+        if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
+            raise e
  
 
 import io
@@ -161,11 +179,8 @@ from .schema import (
 from .conflicts import check_exception_conflicts as _check_exception_conflicts_ref
 
 def _has_ui_prompt() -> bool:
-    try:
-        # 순환 import 방지를 위해 간단한 구현
-        return False
-    except Exception:
-        return False
+    # 순환 import 방지를 위해 간단한 구현
+    return False
 
 def _preflight_print(msg: str) -> None:
     """Print preflight messages only when no UI prompt provider is active."""
@@ -173,12 +188,8 @@ def _preflight_print(msg: str) -> None:
         print(msg)
 
 def _preflight_verbose() -> bool:
-    """Return True if verbose preflight logs should be emitted."""
-    try:
-        v = os.environ.get("SWINGFT_PREFLIGHT_VERBOSE", "")
-        return str(v).strip().lower() in {"1", "true", "yes", "y", "on"}
-    except Exception:
-        return False
+    v = os.environ.get("SWINGFT_PREFLIGHT_VERBOSE", "")
+    return str(v).strip().lower() in {"1", "true", "yes", "y", "on"}
 
 # --- External analyzer integration -----------------------------------------
 from .exclusions import ast_unwrap as _ast_unwrap
@@ -207,16 +218,15 @@ def _apply_analyzer_exclusions_to_ast_and_config(
             run_cmd = os.environ.get("SWINGFT_ANALYZER_CMD", "").strip()
             if run_cmd:
                 cmd = run_cmd.format(project=project_root, root=analyzer_root)
-                #print(f"[preflight] analyzer run: {cmd}")
                 subprocess.run(cmd, shell=True, cwd=analyzer_root)
             else:
                 analyze_py = os.path.join(analyzer_root, "analyze.py")
                 if os.path.isfile(analyze_py):
                     cmd_list = ["python3", "analyze.py", project_root]
-                    #print(f"[preflight] analyzer run (default): {' '.join(cmd_list)}")
                     subprocess.run(cmd_list, cwd=analyzer_root)
-        except Exception as e:
-            print(f"[preflight] analyzer run warning: {e}")
+        except (OSError, FileNotFoundError, subprocess.SubprocessError) as e:
+            logging.warning("preflight analyzer run warning: %s", e)
+            _maybe_raise(e)
 
         # Read exclusion list
         out_file = os.path.join(analyzer_root, "analysis_output", "exclusion_list.txt")
@@ -230,7 +240,9 @@ def _apply_analyzer_exclusions_to_ast_and_config(
                     if not s or s.startswith("#"):
                         continue
                     names.append(s)
-        except Exception:
+        except (OSError, UnicodeError) as e:
+            logging.debug("read exclusion_list failed: %s", e)
+            _maybe_raise(e)
             return
         if not names:
             return
@@ -251,19 +263,15 @@ def _apply_analyzer_exclusions_to_ast_and_config(
                 _comp = _compare_exclusion_list_vs_ast(analyzer_root, ast_path_eff)
                 if isinstance(_comp, dict):
                     zeros_est = int(_comp.get("zero", 0))
-            except Exception:
+            except (OSError, ValueError, KeyError) as e:
+                logging.debug("compare exclusion vs ast failed: %s", e)
+                _maybe_raise(e)
                 zeros_est = None
             # 기본값: 적용(ON). 명시적으로 0/false/no/off일 때만 비적용.
             _flag_raw = str(os.environ.get("SWINGFT_APPLY_ANALYZER_TO_AST", "")).strip().lower()
             apply_flag = _flag_raw not in {"0", "false", "no", "n", "off"}
             if apply_flag:
                 try:
-                    if zeros_est is not None:
-                        #print(f"[preflight] analyzer → AST 적용: ≈{zeros_est} identifiers (explicit 0→1, apply=ON)")
-                        pass
-                    else:
-                        #print(f"[preflight] analyzer → AST 적용: identifiers (explicit 0→1, apply=ON)")
-                        pass
                     _update_ast_node_exceptions(
                         ast_path_eff,
                         names,
@@ -273,37 +281,36 @@ def _apply_analyzer_exclusions_to_ast_and_config(
                         quiet=False,
                         only_when_explicit_zero=True,
                     )
-                except Exception as e:
-                    print(f"[preflight] analyzer → AST 반영 경고: {e}")
+                except (OSError, ValueError, TypeError) as e:
+                    logging.warning("preflight analyzer → AST 반영 경고: %s", e)
+                    _maybe_raise(e)
             else:
                 if zeros_est is not None:
                     print(f"[preflight] analyzer DRY-RUN: would set isException=1 for ≈{zeros_est} identifiers (explicit 0→1). Set SWINGFT_APPLY_ANALYZER_TO_AST=1 to apply")
                 else:
                     print(f"[preflight] analyzer DRY-RUN: would set isException=1 for identifiers (explicit 0→1). Set SWINGFT_APPLY_ANALYZER_TO_AST=1 to apply")
-    except Exception:
-        pass
+    except (OSError, RuntimeError, ValueError) as e:
+        logging.debug("apply analyzer exclusions wrapper failed: %s", e)
+        _maybe_raise(e)
 
 def _is_readable_file(path: str) -> bool:
     try:
         st = os.stat(path)
     except FileNotFoundError:
-        print(f"Cannot find the config file: {path}", file=sys.stderr)
+        logging.error("Cannot find the config file: %s", path)
         return False
     except OSError as e:
-        print(f"Cannot check the config file status: {path}: {e.__class__.__name__}: {e}", file=sys.stderr)
+        logging.error("Cannot check the config file status: %s: %s: %s", path, e.__class__.__name__, e)
         return False
 
     if not os.path.isfile(path):
-        print(f"The path is not a file: {path}", file=sys.stderr)
+        logging.error("The path is not a file: %s", path)
         return False
     if st.st_size <= 0:
-        print(f"The config file is empty: {path}", file=sys.stderr)
+        logging.error("The config file is empty: %s", path)
         return False
     if st.st_size > MAX_CONFIG_BYTES:
-        print(
-            f"The config file is too large ({st.st_size} bytes > {MAX_CONFIG_BYTES} bytes): {path}",
-            file=sys.stderr,
-        )
+        logging.error("The config file is too large (%d > %d): %s", st.st_size, MAX_CONFIG_BYTES, path)
         return False
     return True
 
@@ -312,29 +319,24 @@ def _handle_broken_config(config_path: str, error: json.JSONDecodeError) -> None
     """깨진 config 파일 처리: 백업 생성 + 복구 가이드"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     backup_path = f"{config_path}.broken_{timestamp}"
-    
     try:
-        # 깨진 파일 백업
         shutil.copy2(config_path, backup_path)
-        print(f"\n[복구] 깨진 설정 파일을 백업했습니다: {backup_path}", file=sys.stderr)
-    except Exception as e:
-        print(f"[복구] 백업 생성 실패: {e}", file=sys.stderr)
-    
-    # 샘플 파일 생성 (공용 커맨드 사용)
+        logging.warning("[복구] 깨진 설정 파일을 백업했습니다: %s", backup_path)
+    except (OSError, shutil.Error) as e:
+        logging.error("[복구] 백업 생성 실패: %s", e)
+        _maybe_raise(e)
     sample_path = f"{config_path}.sample"
     try:
         from swingft_cli.commands.json_cmd import handle_generate_json
         handle_generate_json(sample_path)
-        print(f"[복구] 새 샘플 설정 파일을 생성했습니다: {sample_path}", file=sys.stderr)
-    except Exception as e:
-        print(f"[복구] 샘플 파일 생성 실패: {e}", file=sys.stderr)
-    
-    # 오류 정보 표시
+        logging.warning("[복구] 새 샘플 설정 파일을 생성했습니다: %s", sample_path)
+    except (ImportError, OSError) as e:
+        logging.error("[복구] 샘플 파일 생성 실패: %s", e)
+        _maybe_raise(e)
+    # 사용자 가이드는 stderr로 유지
     print(f"\n[JSON 오류] {config_path}:", file=sys.stderr)
     print(f"  - 위치: {error.lineno}번째 줄, {error.colno}번째 문자", file=sys.stderr)
     print(f"  - 내용: {error.msg}", file=sys.stderr)
-    
-    # 복구 가이드
     print(f"\n[복구 가이드]:", file=sys.stderr)
     print(f"1. 백업 파일 확인: {backup_path}", file=sys.stderr)
     print(f"2. 샘플 파일 참고: {sample_path}", file=sys.stderr)
@@ -356,7 +358,6 @@ def _save_exclude_pending_json(project_root: str | None, ast_file_path: str | No
     return __impl(project_root, ast_file_path, candidates)
 
 # --- Helper: POST payload as-is to /complete and get raw output ---
-from .llm_feedback import post_complete as _post_complete
 from .exclude_review import save_exclude_review_json as _save_exclude_review_json
 from .exclude_review import save_exclude_pending_json as _save_exclude_pending_json
 from .exclude_review import generate_payloads_for_excludes as _generate_payloads_for_excludes
@@ -375,13 +376,12 @@ def load_config_or_exit(path: str) -> Dict[str, Any]:
         with io.open(path, "r", encoding="utf-8-sig", errors="strict") as f:
             raw = f.read()
     except UnicodeDecodeError as e:
-        print(
-            f"문자 디코딩 오류: {path}: position={e.start}..{e.end}: {e.reason}",
-            file=sys.stderr,
-        )
+        logging.error("문자 디코딩 오류: %s: position=%s..%s: %s", path, e.start, e.end, e.reason)
+        _maybe_raise(e)
         sys.exit(1)
     except OSError as e:
-        print(f"설정 파일을 열 수 없습니다: {path}: {e.__class__.__name__}: {e}", file=sys.stderr)
+        logging.error("설정 파일을 열 수 없습니다: %s: %s: %s", path, e.__class__.__name__, e)
+        _maybe_raise(e)
         sys.exit(1)
 
     try:
@@ -391,7 +391,7 @@ def load_config_or_exit(path: str) -> Dict[str, Any]:
         sys.exit(1)
 
     if not isinstance(data, dict):
-        print("설정 파일의 최상위 구조는 객체여야 합니다.", file=sys.stderr)
+        logging.error("설정 파일의 최상위 구조는 객체여야 합니다.")
         sys.exit(1)
 
     # 알 수 없는 최상위 키 경고(언더스코어 시작 키는 주석으로 간주)
@@ -428,53 +428,52 @@ def load_config_or_exit(path: str) -> Dict[str, Any]:
             sec_obj[key] = vals
 
     # --- 환경변수 기반 project 경로 오버라이드 및 저장 옵션 ---
-    try:
-        override_in = os.environ.get("SWINGFT_PROJECT_INPUT")
-        override_out = os.environ.get("SWINGFT_PROJECT_OUTPUT")
-        write_back = str(os.environ.get("SWINGFT_WRITE_BACK", "")).strip().lower() in {"1", "true", "yes", "y"}
+    override_in = os.environ.get("SWINGFT_PROJECT_INPUT")
+    override_out = os.environ.get("SWINGFT_PROJECT_OUTPUT")
+    write_back = str(os.environ.get("SWINGFT_WRITE_BACK", "")).strip().lower() in {"1", "true", "yes", "y"}
 
-        if override_in or override_out:
-            # project 섹션 보장
-            proj = data.get("project")
-            if not isinstance(proj, dict):
-                proj = {}
-                data["project"] = proj
+    if override_in or override_out:
+        # project 섹션 보장
+        proj = data.get("project")
+        if not isinstance(proj, dict):
+            proj = {}
+            data["project"] = proj
 
-            changed = False
-            if override_in:
-                new_in = _expand_abs_norm(override_in)
-                proj["input"] = new_in
-                changed = True
-                if not os.path.isdir(new_in):
-                    _warn(f"SWINGFT_PROJECT_INPUT 경로가 디렉터리가 아닙니다: {new_in} (계속 진행)")
+        changed = False
+        if override_in:
+            new_in = _expand_abs_norm(override_in)
+            proj["input"] = new_in
+            changed = True
+            if not os.path.isdir(new_in):
+                _warn(f"SWINGFT_PROJECT_INPUT 경로가 디렉터리가 아닙니다: {new_in} (계속 진행)")
 
-            if override_out:
-                new_out = _expand_abs_norm(override_out)
-                proj["output"] = new_out
-                changed = True
+        if override_out:
+            new_out = _expand_abs_norm(override_out)
+            proj["output"] = new_out
+            changed = True
 
-            if changed:
-                print(
-                    #f"환경변수에 의해 project 경로가 업데이트되었습니다: input={proj.get('input', '')!s}, output={proj.get('output', '')!s}",
-                    file=sys.stderr,
-                )
+        if changed:
+            print(
+                #f"환경변수에 의해 project 경로가 업데이트되었습니다: input={proj.get('input', '')!s}, output={proj.get('output', '')!s}",
+                file=sys.stderr,
+            )
 
-            if write_back:
-                try:
-                    with io.open(path, "w", encoding="utf-8") as wf:
-                        json.dump(data, wf, ensure_ascii=False, indent=2)
-                except Exception as e:
-                    _warn(f"구성 저장 실패: {e.__class__.__name__}: {e}")
-    except Exception as e:
-        _warn(f"환경변수 기반 project 경로 업데이트 처리 중 예외 발생: {e.__class__.__name__}: {e}")
+        if write_back:
+            try:
+                with io.open(path, "w", encoding="utf-8") as wf:
+                    json.dump(data, wf, ensure_ascii=False, indent=2)
+            except OSError as e:
+                _warn(f"구성 저장 실패: {e.__class__.__name__}: {e}")
+                _maybe_raise(e)
 
     # Check for conflicts with exception_list.json (refactored)
     try:
         _check_exception_conflicts(path, data)
     except SystemExit:
         raise
-    except Exception:
-        pass
+    except (OSError, ValueError, KeyError) as e:
+        logging.debug("conflict check skipped due to error: %s", e)
+        _maybe_raise(e)
     
     return data
 
@@ -516,15 +515,17 @@ def _check_exception_conflicts(*args, **kwargs):
             identifiers_on = _to_bool((src or {}).get("Obfuscation_identifiers", True), True)
         if not identifiers_on:
             return set()
-    except Exception:
-        pass
+    except (TypeError, AttributeError, ValueError) as e:
+        logging.debug("_check_exception_conflicts: option parse skipped due to error: %s", e)
+        _maybe_raise(e)
 
     res = _impl(*args, **kwargs)
     try:
         if _config_path is not None and _config is not None:
             _check_exclude_sensitive_identifiers(_config_path, _config, res or set())
-    except Exception:
-        pass
+    except (RuntimeError, ValueError, KeyError) as e:
+        logging.debug("_check_exception_conflicts: exclude-sensitive hook skipped: %s", e)
+        _maybe_raise(e)
 
 
 def _check_exclude_sensitive_identifiers(config_path: str, config, ex_names):
