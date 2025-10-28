@@ -42,9 +42,13 @@ internal class ExternalHandler {
             } catch let encodingError as EncodingError {
                 print("Encoding Error: \(encodingError)")
             } catch let cocoaError as CocoaError {
-                print("Cocoa Error: \(cocoaError)")
-            } catch {
-                print("Other Error: \(error)")
+                print("Cocoa Error: \(cocoaError.localizedDescription)")
+            } catch let posixError as POSIXError {
+                print("POSIX Error: code=\(posixError.code.rawValue) desc=\(posixError.localizedDescription)")
+            } catch let nsError as NSError {
+                print("NSError: domain=\(nsError.domain) code=\(nsError.code) desc=\(nsError.localizedDescription)")
+            } catch let e {
+                print("Other Error: \(e.localizedDescription)")
             }
         }
     }

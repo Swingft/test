@@ -18,15 +18,15 @@ def check_llm_find_id(node):
 
 # 자식 노드가 자식 노드를 가지는 경우
 def repeat_match_node(data):
-    if data is None: 
-            return
+    if not isinstance(data, dict):
+        return
     node = data.get("node", data)
     if not isinstance(node, dict):
         return
-    
-    extensions = data.get("extension", [])
-    children = data.get("children", [])
-    
+
+    extensions = data.get("extension", []) or []
+    children = data.get("children", []) or []
+
     check_llm_find_id(node)
 
     for extension in extensions:
@@ -46,9 +46,8 @@ def merge_llm_and_rule():
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
             
-            if isinstance(data, list):
-                for item in data:
-                    repeat_match_node(item)
+            for item in data if isinstance(data, list) else []:
+                repeat_match_node(item)
             
             with open(file_path, "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)

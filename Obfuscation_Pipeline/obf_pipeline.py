@@ -87,7 +87,9 @@ def stage1_ast_analysis(original_project_dir, obf_project_dir):
                 return bool(v)
             return default
         opt_map = cfg_json.get("options") if isinstance(cfg_json.get("options"), dict) else cfg_json
-        if not _to_bool((opt_map or {}).get("Obfuscation_identifiers", True), True):
+        safe_map = opt_map if isinstance(opt_map, dict) else {}
+        val = safe_map.get("Obfuscation_identifiers", True)
+        if not _to_bool(val, True):
             print("[INFO] Obfuscation_identifiers=false → Stage 1(AST) 스킵")
             return
     except (ValueError, TypeError, AttributeError) as e:

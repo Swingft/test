@@ -45,8 +45,8 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
     try:
         with open(excl_path, "r", encoding="utf-8", errors="ignore") as f:
             for raw in f:
-                s = str(raw).strip()
-                if s and not s.startswith("#"):
+                s = ("" if raw is None else str(raw)).strip()
+                if s and s[:1] != "#":
                     names.append(s)
     except (OSError, UnicodeError) as e:
         _trace("compare: exclusion_list read failed: %s", e)

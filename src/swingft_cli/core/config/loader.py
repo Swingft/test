@@ -236,8 +236,8 @@ def _apply_analyzer_exclusions_to_ast_and_config(
         try:
             with open(out_file, "r", encoding="utf-8", errors="ignore") as f:
                 for raw in f:
-                    s = str(raw).strip()
-                    if not s or s.startswith("#"):
+                    s = ("" if raw is None else str(raw)).strip()
+                    if not s or s[:1] == "#":
                         continue
                     names.append(s)
         except (OSError, UnicodeError) as e:
