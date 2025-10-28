@@ -14,15 +14,33 @@ import os
 import subprocess
 import sys
 import tempfile
+import logging
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
+
+# local trace/strict helpers
+
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
 
 
 def run(cmd: list[str]) -> int:
     try:
         return subprocess.call(cmd)
-    except FileNotFoundError as e:
+    except (FileNotFoundError, PermissionError) as e:
+        _trace("run: cannot execute %s: %s", cmd[0] if cmd else "<empty>", e)
+        _maybe_raise(e)
         return 127
 
 
@@ -78,14 +96,18 @@ def main() -> None:
             src = cfg.get("options") if isinstance(cfg.get("options"), dict) else cfg
             val = src.get("Obfuscation_controlFlow") if isinstance(src, dict) else None
             def _to_bool(v, default=True):
-                if isinstance(v, bool): return v
-                if isinstance(v, str): return v.strip().lower() in {"1","true","yes","y","on"}
-                if isinstance(v, (int, float)): return bool(v)
+                if isinstance(v, bool):
+                    return v
+                if isinstance(v, str):
+                    return v.strip().lower() in {"1","true","yes","y","on"}
+                if isinstance(v, (int, float)):
+                    return bool(v)
                 return default
             if not _to_bool(val, True):
                 return
-        except Exception:
-            pass
+        except (OSError, json.JSONDecodeError, UnicodeError, AttributeError, TypeError) as e:
+            _trace("early cfg gate failed for %s: %s", cfg_path, e)
+            _maybe_raise(e)
 
     gen_py = str(ROOT / "generate_exceptions.py")
     main_py = str(ROOT / "main.py")
@@ -95,7 +117,12 @@ def main() -> None:
         exceptions_file = args.exceptions
     elif args.store_exceptions_in_dst:
         exceptions_file = str(Path(args.dst) / ".obf" / "internal_list.json")
-        os.makedirs(os.path.dirname(exceptions_file), exist_ok=True)
+        try:
+            os.makedirs(os.path.dirname(exceptions_file), exist_ok=True)
+        except OSError as e:
+            _trace("makedirs failed for %s: %s", os.path.dirname(exceptions_file), e)
+            _maybe_raise(e)
+            sys.exit(1)
     else:
         # Use temp file
         with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
@@ -157,4 +184,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

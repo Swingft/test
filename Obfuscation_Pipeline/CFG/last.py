@@ -24,7 +24,24 @@ from code_injector import inject_per_file
 from utils import log, fail, read_text, write_text, dump_json, dump_text, copy_project_tree
 
 # Import OBF constants from code_injector
+
 from code_injector import OBF_BEGIN, OBF_END
+
+import logging
+
+# local trace/strict helpers
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
 
 
 
@@ -83,7 +100,9 @@ def collect_local_declared_types(project_root: str, *, include_packages: bool, d
     for abs_path in files:
         try:
             text = read_text(abs_path)
-        except Exception:
+        except (OSError, UnicodeError) as e:
+            _trace("collect_local_declared_types read failed %s: %s", abs_path, e)
+            _maybe_raise(e)
             continue
         for m in TYPE_DECL_RE.finditer(text):
             kind = m.group('tkind')
@@ -103,11 +122,18 @@ def load_exceptions(paths: Optional[List[str]]) -> List[Dict]:
     for path in paths:
         if not os.path.exists(path): fail(f"exceptions file not found: {path}")
         try:
-            with open(path, "r", encoding="utf-8") as f: data = json.load(f)
-            if isinstance(data, list): all_rules.extend(data)
-            elif isinstance(data, dict) and "rules" in data: all_rules.extend(data["rules"])
-            else: fail(f"exceptions file must be a JSON list or {{'rules': [...]}}: {path}")
-        except Exception as e: fail(f"error reading exceptions file {path}: {e}")
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            if isinstance(data, list):
+                all_rules.extend(data)
+            elif isinstance(data, dict) and "rules" in data:
+                all_rules.extend(data["rules"])
+            else:
+                fail(f"exceptions file must be a JSON list or {{'rules': [...]}}: {path}")
+        except (OSError, json.JSONDecodeError, UnicodeError, TypeError, ValueError) as e:
+            _trace("load_exceptions failed %s: %s", path, e)
+            _maybe_raise(e)
+            fail(f"error reading exceptions file {path}: {e}")
     return all_rules
 
 # --- File exclusion helpers ---
@@ -144,7 +170,9 @@ def collect_local_protocol_requirements(project_root: str, *, include_packages: 
     for abs_path in files:
         try:
             text = read_text(abs_path)
-        except Exception:
+        except (OSError, UnicodeError) as e:
+            _trace("collect_local_protocol_requirements read failed %s: %s", abs_path, e)
+            _maybe_raise(e)
             continue
         scrub = _strip_comments(text)
         for pb in _find_protocol_blocks(scrub):
@@ -177,7 +205,9 @@ def collect_actor_and_global_types(project_root: str, *, include_packages: bool,
     for abs_path in files:
         try:
             text = read_text(abs_path)
-        except Exception:
+        except (OSError, UnicodeError) as e:
+            _trace("collect_actor_and_global_types read failed %s: %s", abs_path, e)
+            _maybe_raise(e)
             continue
         pending_actor_attr = False
         for raw in text.splitlines():
@@ -309,11 +339,13 @@ def copy_StringSecurity_folder(source_root: str) -> None:
     if not os.path.exists(target_path):
         try:
             shutil.copytree(local_path, target_path)
-        except Exception as e:
+        except (OSError, shutil.Error) as e:
+            _trace("StringSecurity copytree failed: %s", e)
+            _maybe_raise(e)
             return 1
     else:
-        pass
         # 이미 존재하는 경우 빌드만 확인
+        ...
     
     # StringSecurity 빌드 (암호화 기능과 동일한 빌드 캐시 방식)
     try:
@@ -327,7 +359,7 @@ def copy_StringSecurity_folder(source_root: str) -> None:
             try:
                 with open(build_marker_file, "r", encoding="utf-8") as f:
                     previous_build_path = f.read().strip()
-            except Exception:
+            except (OSError, UnicodeError):
                 previous_build_path = ""
 
         current_build_path = os.path.abspath(os.path.join(target_path, ".build"))
@@ -349,8 +381,14 @@ def copy_StringSecurity_folder(source_root: str) -> None:
             # 동일 경로를 타깃 기준으로 기록
             with open(build_marker_file, "w", encoding="utf-8") as f:
                 f.write(current_build_path)
-    except Exception as e:
-        os.chdir(script_dir)
+    except (OSError, subprocess.CalledProcessError) as e:
+        _trace("StringSecurity build failed: %s", e)
+        _maybe_raise(e)
+        try:
+            os.chdir(script_dir)
+        except OSError:
+            pass
+        return 1
 
 
 
@@ -362,14 +400,12 @@ def main() -> None:
         src_real = os.path.abspath(args.src)
         dst_real = os.path.abspath(args.dst)
         same_target = os.path.samefile(src_real, dst_real)
-    except Exception:
+    except (OSError, FileNotFoundError):
         src_real = os.path.abspath(args.src)
         dst_real = os.path.abspath(args.dst)
         same_target = (src_real == dst_real)
 
-    if same_target:
-        pass
-    else:
+    if not same_target:
         copy_project_tree(args.src, args.dst, overwrite=args.overwrite)
     
     # 구성 파일을 읽어 CFG 자체 스킵 여부 결정
@@ -400,7 +436,6 @@ def main() -> None:
         known_global_actor_types=global_actor_types,
         local_declared_types=local_declared_types,
         local_protocol_reqs=local_protocol_reqs,
-        skip_extensions=False,  # 기본적으로 extension 파일도 포함
     )
     log(f"discovered {len(funcs)} functions{' (UI files skipped)' if skip_ui else ''}")
 

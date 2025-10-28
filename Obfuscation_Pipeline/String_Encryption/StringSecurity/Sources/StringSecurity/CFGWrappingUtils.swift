@@ -134,6 +134,50 @@ public struct CFGWrappingUtils {
     }
   }
 
+  // Throwing free-function wrappers
+  public static func wrapT0<R>(_ function: @escaping () throws -> R) -> ([Any]) throws -> Any {
+    return { args in
+      precondition(args.isEmpty)
+      return try function()
+    }
+  }
+  public static func wrapT1<A, R>(_ function: @escaping (A) throws -> R) -> ([Any]) throws -> Any {
+    return { args in
+      precondition(args.count == 1)
+      guard let a0 = args[0] as? A else { preconditionFailure("[OBF] cast at 0") }
+      return try function(a0)
+    }
+  }
+  public static func wrapT2<A, B, R>(_ function: @escaping (A, B) throws -> R) -> ([Any]) throws -> Any {
+    return { args in
+      precondition(args.count == 2)
+      guard let a0 = args[0] as? A else { preconditionFailure("[OBF] cast at 0") }
+      guard let a1 = args[1] as? B else { preconditionFailure("[OBF] cast at 1") }
+      return try function(a0, a1)
+    }
+  }
+  public static func wrapT3<A, B, C, R>(_ function: @escaping (A, B, C) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 3); let a0 = args[0] as! A; let a1 = args[1] as! B; let a2 = args[2] as! C; return try function(a0, a1, a2) } }
+  public static func wrapT4<A, B, C, D, R>(_ function: @escaping (A, B, C, D) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 4); let a0 = args[0] as! A; let a1 = args[1] as! B; let a2 = args[2] as! C; let a3 = args[3] as! D; return try function(a0, a1, a2, a3) } }
+  public static func wrapT5<A, B, C, D, E, R>(_ function: @escaping (A, B, C, D, E) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 5); let a0 = args[0] as! A; let a1 = args[1] as! B; let a2 = args[2] as! C; let a3 = args[3] as! D; let a4 = args[4] as! E; return try function(a0, a1, a2, a3, a4) } }
+  public static func wrapT6<A, B, C, D, E, F, R>(_ function: @escaping (A, B, C, D, E, F) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 6); let a0 = args[0] as! A; let a1 = args[1] as! B; let a2 = args[2] as! C; let a3 = args[3] as! D; let a4 = args[4] as! E; let a5 = args[5] as! F; return try function(a0, a1, a2, a3, a4, a5) } }
+  public static func wrapT7<A, B, C, D, E, F, G, R>(_ function: @escaping (A, B, C, D, E, F, G) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 7); let a0 = args[0] as! A; let a1 = args[1] as! B; let a2 = args[2] as! C; let a3 = args[3] as! D; let a4 = args[4] as! E; let a5 = args[5] as! F; let a6 = args[6] as! G; return try function(a0, a1, a2, a3, a4, a5, a6) } }
+  public static func wrapT8<A, B, C, D, E, F, G, H, R>(_ function: @escaping (A, B, C, D, E, F, G, H) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 8); let a0 = args[0] as! A; let a1 = args[1] as! B; let a2 = args[2] as! C; let a3 = args[3] as! D; let a4 = args[4] as! E; let a5 = args[5] as! F; let a6 = args[6] as! G; let a7 = args[7] as! H; return try function(a0, a1, a2, a3, a4, a5, a6, a7) } }
+  public static func wrapT9<A, B, C, D, E, F, G, H, I, R>(_ function: @escaping (A, B, C, D, E, F, G, H, I) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 9); let a0 = args[0] as! A; let a1 = args[1] as! B; let a2 = args[2] as! C; let a3 = args[3] as! D; let a4 = args[4] as! E; let a5 = args[5] as! F; let a6 = args[6] as! G; let a7 = args[7] as! H; let a8 = args[8] as! I; return try function(a0, a1, a2, a3, a4, a5, a6, a7, a8) } }
+  public static func wrapT10<A, B, C, D, E, F, G, H, I, J, R>(_ function: @escaping (A, B, C, D, E, F, G, H, I, J) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 10); let a0 = args[0] as! A; let a1 = args[1] as! B; let a2 = args[2] as! C; let a3 = args[3] as! D; let a4 = args[4] as! E; let a5 = args[5] as! F; let a6 = args[6] as! G; let a7 = args[7] as! H; let a8 = args[8] as! I; let a9 = args[9] as! J; return try function(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) } }
+
+  // Throwing instance-method wrappers
+  public static func wrapMT0<S, R>(_ function: @escaping (S) -> () throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 1); let owner = args[0] as! S; return try function(owner)() } }
+  public static func wrapMT1<S, A, R>(_ function: @escaping (S) -> (A) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 2); let owner = args[0] as! S; let a0 = args[1] as! A; return try function(owner)(a0) } }
+  public static func wrapMT2<S, A, B, R>(_ function: @escaping (S) -> (A, B) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 3); let owner = args[0] as! S; let a0 = args[1] as! A; let a1 = args[2] as! B; return try function(owner)(a0, a1) } }
+  public static func wrapMT3<S, A, B, C, R>(_ function: @escaping (S) -> (A, B, C) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 4); let owner = args[0] as! S; let a0 = args[1] as! A; let a1 = args[2] as! B; let a2 = args[3] as! C; return try function(owner)(a0, a1, a2) } }
+  public static func wrapMT4<S, A, B, C, D, R>(_ function: @escaping (S) -> (A, B, C, D) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 5); let owner = args[0] as! S; let a0 = args[1] as! A; let a1 = args[2] as! B; let a2 = args[3] as! C; let a3 = args[4] as! D; return try function(owner)(a0, a1, a2, a3) } }
+  public static func wrapMT5<S, A, B, C, D, E, R>(_ function: @escaping (S) -> (A, B, C, D, E) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 6); let owner = args[0] as! S; let a0 = args[1] as! A; let a1 = args[2] as! B; let a2 = args[3] as! C; let a3 = args[4] as! D; let a4 = args[5] as! E; return try function(owner)(a0, a1, a2, a3, a4) } }
+  public static func wrapMT6<S, A, B, C, D, E, F, R>(_ function: @escaping (S) -> (A, B, C, D, E, F) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 7); let owner = args[0] as! S; let a0 = args[1] as! A; let a1 = args[2] as! B; let a2 = args[3] as! C; let a3 = args[4] as! D; let a4 = args[5] as! E; let a5 = args[6] as! F; return try function(owner)(a0, a1, a2, a3, a4, a5) } }
+  public static func wrapMT7<S, A, B, C, D, E, F, G, R>(_ function: @escaping (S) -> (A, B, C, D, E, F, G) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 8); let owner = args[0] as! S; let a0 = args[1] as! A; let a1 = args[2] as! B; let a2 = args[3] as! C; let a3 = args[4] as! D; let a4 = args[5] as! E; let a5 = args[6] as! F; let a6 = args[7] as! G; return try function(owner)(a0, a1, a2, a3, a4, a5, a6) } }
+  public static func wrapMT8<S, A, B, C, D, E, F, G, H, R>(_ function: @escaping (S) -> (A, B, C, D, E, F, G, H) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 9); let owner = args[0] as! S; let a0 = args[1] as! A; let a1 = args[2] as! B; let a2 = args[3] as! C; let a3 = args[4] as! D; let a4 = args[5] as! E; let a5 = args[6] as! F; let a6 = args[7] as! G; let a7 = args[8] as! H; return try function(owner)(a0, a1, a2, a3, a4, a5, a6, a7) } }
+  public static func wrapMT9<S, A, B, C, D, E, F, G, H, I, R>(_ function: @escaping (S) -> (A, B, C, D, E, F, G, H, I) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 10); let owner = args[0] as! S; let a0 = args[1] as! A; let a1 = args[2] as! B; let a2 = args[3] as! C; let a3 = args[4] as! D; let a4 = args[5] as! E; let a5 = args[6] as! F; let a6 = args[7] as! G; let a7 = args[8] as! H; let a8 = args[9] as! I; return try function(owner)(a0, a1, a2, a3, a4, a5, a6, a7, a8) } }
+  public static func wrapMT10<S, A, B, C, D, E, F, G, H, I, J, R>(_ function: @escaping (S) -> (A, B, C, D, E, F, G, H, I, J) throws -> R) -> ([Any]) throws -> Any { return { args in precondition(args.count == 11); let owner = args[0] as! S; let a0 = args[1] as! A; let a1 = args[2] as! B; let a2 = args[3] as! C; let a3 = args[4] as! D; let a4 = args[5] as! E; let a5 = args[6] as! F; let a6 = args[7] as! G; let a7 = args[8] as! H; let a8 = args[9] as! I; let a9 = args[10] as! J; return try function(owner)(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) } }
+
   // Instance method wrappers
   public static func wrapM0<S, R>(_ function: @escaping (S) -> () -> R) -> ([Any]) throws -> Any {
     return { args in

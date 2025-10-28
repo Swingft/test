@@ -9,10 +9,26 @@ from __future__ import annotations
 import os
 import re
 import sys
+import logging
 from typing import Dict, List, Optional, Tuple, Set
 
 # Import the utils module for logging and file I/O
-from utils import log, read_text, is_extension_file, DEFAULT_SKIP_DIRS
+from utils import log, read_text, DEFAULT_SKIP_DIRS
+
+# local trace/strict helpers
+
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
 
 # ---------- 정규식 패턴 (모듈 스코프) ----------
 TYPE_DECL_RE = re.compile(r"^\s*(?:@[\w:]+\s*)*\s*(?P<mods>(?:\w+\s+)*)(?P<tkind>class|struct|enum|actor|extension|protocol)\s+(?P<type_name>\w+)(?P<generics>\s*<[^>]+>)?", re.MULTILINE)
@@ -25,7 +41,7 @@ def is_ui_path(rel_path: str) -> bool:
     base = os.path.basename(p)
     return base.endswith("view.swift") or base.endswith("viewcontroller.swift")
 
-def iter_swift_files(root: str, skip_ui: bool, debug: bool, exclude_file_globs: Optional[List[str]] = None, include_packages: bool = False, skip_extensions: bool = False) -> List[str]:
+def iter_swift_files(root: str, skip_ui: bool, debug: bool, exclude_file_globs: Optional[List[str]] = None, include_packages: bool = False) -> List[str]:
     """Swift 파일들을 반복하는 함수"""
     from fnmatch import fnmatchcase
     
@@ -64,11 +80,6 @@ def iter_swift_files(root: str, skip_ui: bool, debug: bool, exclude_file_globs: 
                     log(f"Skipping UI file: {rel_path}")
                 continue
                 
-            # Skip extension files if requested
-            if skip_extensions and is_extension_file(rel_path):
-                if debug: 
-                    log(f"Skipping extension file: {rel_path}")
-                continue
 
             results.append(abs_path)
     return results
@@ -206,7 +217,6 @@ def scan_swift_functions(
     known_global_actor_types: Optional[set] = None,
     local_declared_types: Optional[set] = None,
     local_protocol_reqs: Optional[Dict[str, Set[Tuple[str, int, Tuple[str, ...]]]]] = None,
-    skip_extensions: bool = False
 ) -> List[Dict]:
     """
     Swift 프로젝트에서 함수들을 스캔하는 메인 함수
@@ -225,7 +235,7 @@ def scan_swift_functions(
     Returns:
         스캔된 함수들의 리스트
     """
-    files = iter_swift_files(project_root, skip_ui=skip_ui, debug=debug, exclude_file_globs=exclude_file_globs, include_packages=args_include_packages, skip_extensions=skip_extensions)
+    files = iter_swift_files(project_root, skip_ui=skip_ui, debug=debug, exclude_file_globs=exclude_file_globs, include_packages=args_include_packages)
     # Use precompiled patterns
     type_decl_re = TYPE_DECL_RE
     func_decl_re = FUNC_DECL_RE
@@ -236,7 +246,9 @@ def scan_swift_functions(
         rel_path = os.path.relpath(abs_path, project_root)
         try:
             content = read_text(abs_path)
-        except Exception:
+        except (OSError, UnicodeError) as e:
+            _trace("swift_scanner: read_text failed for %s: %s", abs_path, e)
+            _maybe_raise(e)
             continue
         # Use a comment-stripped view for scanning so any 'func ...' inside comments is ignored.
         # Newlines/positions are preserved to keep brace-depth tracking stable.

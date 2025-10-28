@@ -15,6 +15,22 @@ import argparse
 from pathlib import Path
 from typing import Dict, List, Set
 
+import logging
+
+# local trace + strict-mode helpers (standalone)
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
+
 # --- Precompiled regex patterns (module-scope) ---
 TYPE_DECL_RE = re.compile(r"^\s*(?:public|internal|fileprivate|private)?\s*(?:final|open)?\s*\b(class|struct|enum|actor|protocol|extension)\s+([A-Za-z_][A-Za-z_0-9]*)", re.MULTILINE)
 FUNC_DECL_RE = re.compile(r"^\s*(?P<line>(?:@[\w:]+\s*)*\s*(?P<mods>(?:\w+\s+)*)func\s+(?P<name>\w+)\s*(?:<[^>]+>)?\s*\((?P<params>[^)]*)\).*)", re.MULTILINE)
@@ -236,126 +252,129 @@ def analyze_and_generate_exceptions(
     for file_path in swift_files:
         try:
             content = file_path.read_text(encoding="utf-8")
-
-            # --- Optionally exclude protocol-declared methods ---
-            if exclude_protocol_requirements:
-                try:
-                    scrub = _strip_comments(content)
-                    for pb in _find_protocol_blocks(scrub):
-                        for fname in _extract_protocol_func_names(pb["body"]):
-                            if fname not in potential_rules:
-                                potential_rules[fname] = {"kind": "function", "reason": f"Protocol requirement ({file_path.name})"}
-                except Exception as _e:
-                    # Best-effort only; ignore parsing errors and continue.
-                    pass
-
-            # Optionally exclude actor isolated instance methods (lack 'nonisolated' and 'static')
-            if exclude_actors:
-                try:
-                    scrub2 = _strip_comments(content)
-                    for ab in _find_actor_blocks(scrub2):
-                        for fm in FUNC_DECL_RE.finditer(ab["body"]):
-                            fname = fm.group("name")
-                            mods = (fm.group("mods") or "").strip()
-                            # Skip if explicitly nonisolated or static
-                            if re.search(r"\bnonisolated\b", mods) or re.search(r"\bstatic\b", mods):
-                                continue
-                            if fname not in potential_rules:
-                                potential_rules[fname] = {"kind": "function", "reason": f"Actor isolated instance method ({ab['name']})"}
-                except Exception as _e:
-                    pass
-
-            # Optionally exclude functions annotated with a global actor (e.g., @MainActor)
-            if exclude_global_actors:
-                try:
-                    scrub3 = _strip_comments(content)
-                    for fm in re.finditer(r"@\w+Actor\b\s*(?:\r?\n\s*)*func\s+([A-Za-z_]\w*)\s*\(", scrub3):
-                        fname = fm.group(1)
-                        if fname not in potential_rules:
-                            potential_rules[fname] = {"kind": "function", "reason": f"Global-actor isolated function (@...Actor) ({file_path.name})"}
-                except Exception as _e:
-                    pass
-
-            # Optionally exclude functions declared in `extension` blocks (top-level funcs in the extension body)
-            if exclude_extensions:
-                try:
-                    scrub4 = _strip_comments(content)
-                    for tb in _find_type_like_blocks(scrub4):
-                        if tb.get("kind") == "extension":
-                            for match in _top_level_func_matches(tb["body"], FUNC_DECL_RE):
-                                func_name = match.group("name")
-                                if func_name not in potential_rules:
-                                    potential_rules[func_name] = {"kind": "function", "reason": f"Declared in extension ({file_path.name})"}
-                except Exception as _e:
-                    pass
-
-            # 1단계: 파일 전체가 복잡한지 판단 (UI 탐지 제거)
-            is_complex = False
-            reason = ""
-            if COMPILER_DIRECTIVE_RE.search(content):
-                is_complex, reason = True, f"File with compiler directives ({file_path.name})"
-            elif NESTED_TYPE_RE.search(content):
-                is_complex, reason = True, f"File with nested types ({file_path.name})"
-
-            if is_complex:
-                # 파일 내 모든 타입을 예외 처리
-                for match in TYPE_DECL_RE.finditer(content):
-                    name, kind = match.group(2), match.group(1)
-                    if name not in potential_rules:
-                        potential_rules[name] = {"kind": kind, "reason": reason}
-                continue
-
-            # 2단계: 타입/익스텐션 본문 내부의 *최상위* 함수만 스캔 (지역 함수 제외)
-            scrub_types = _strip_comments(content)
-            for tb in _find_type_like_blocks(scrub_types):
-                for match in _top_level_func_matches(tb["body"], FUNC_DECL_RE):
-                    func_line = match.group("line")
-                    func_name = match.group("name")
-
-                    # init, deinit은 항상 제외
-                    if func_name in ["init", "deinit"]:
-                        potential_rules[func_name] = {"kind": "function", "reason": "Special keyword: Initializer/Deinitializer"}
-                        continue
-
-                    # Return type uses '-> Self' is unsafe at file scope
-                    if re.search(r"->\s*Self\b", func_line):
-                        potential_rules[func_name] = {"kind": "function", "reason": "Unsafe due to return type 'Self'"}
-                        continue
-
-                    # Opaque return type 'some ...' is unsafe in function-type casts
-                    if re.search(r"->\s*some\b", func_line):
-                        potential_rules[func_name] = {"kind": "function", "reason": "Opaque return ('some') not supported"}
-                        continue
-
-                    # Context-associated identifiers (e.g., 'Configuration') without qualification are unsafe
-                    if re.search(r"\bConfiguration\b", func_line):
-                        potential_rules[func_name] = {"kind": "function", "reason": "Context-associated type in signature (e.g., Configuration)"}
-                        continue
-
-                    # 위험한 키워드가 포함되어 있으면 예외 처리
-                    risky_keywords = [ "override", "@objc", "mutating", "inout", "@escaping", "async", "throws", "=" ]
-
-                    params_part = match.group("params")
-
-                    is_risky = False
-                    reason_keyword = ""
-
-                    # 기본 파라미터(default)가 하나라도 있으면 제외
-                    if _has_param_default(params_part):
-                        is_risky, reason_keyword = True, "default parameter value"
-                    else:
-                        # 나머지 키워드는 함수 선언 라인 전체에서 확인
-                        for keyword in risky_keywords:
-                            if keyword in func_line:
-                                is_risky, reason_keyword = True, keyword
-                                break
-
-                    if is_risky:
-                        potential_rules[func_name] = {"kind": "function", "reason": f"Unsafe due to '{reason_keyword}' keyword"}
-
-        except Exception as e:
+        except (OSError, UnicodeError) as e:
             print(f"Warning: Could not process file {file_path}: {e}")
+            _trace("read_text failed for %s: %s", file_path, e)
+            _maybe_raise(e)
             continue
+
+        # --- Optionally exclude protocol-declared methods ---
+        if exclude_protocol_requirements:
+            try:
+                scrub = _strip_comments(content)
+                for pb in _find_protocol_blocks(scrub):
+                    for fname in _extract_protocol_func_names(pb["body"]):
+                        if fname not in potential_rules:
+                            potential_rules[fname] = {"kind": "function", "reason": f"Protocol requirement ({file_path.name})"}
+            except (ValueError, TypeError) as _e:
+                _trace("protocol scan skipped: %s", _e)
+                _maybe_raise(_e)
+
+        # Optionally exclude actor isolated instance methods (lack 'nonisolated' and 'static')
+        if exclude_actors:
+            try:
+                scrub2 = _strip_comments(content)
+                for ab in _find_actor_blocks(scrub2):
+                    for fm in FUNC_DECL_RE.finditer(ab["body"]):
+                        fname = fm.group("name")
+                        mods = (fm.group("mods") or "").strip()
+                        if re.search(r"\bnonisolated\b", mods) or re.search(r"\bstatic\b", mods):
+                            continue
+                        if fname not in potential_rules:
+                            potential_rules[fname] = {"kind": "function", "reason": f"Actor isolated instance method ({ab['name']})"}
+            except (ValueError, TypeError) as _e:
+                _trace("actor scan skipped: %s", _e)
+                _maybe_raise(_e)
+
+        # Optionally exclude functions annotated with a global actor (e.g., @MainActor)
+        if exclude_global_actors:
+            try:
+                scrub3 = _strip_comments(content)
+                for fm in re.finditer(r"@\w+Actor\b\s*(?:\r?\n\s*)*func\s+([A-Za-z_]\w*)\s*\(", scrub3):
+                    fname = fm.group(1)
+                    if fname not in potential_rules:
+                        potential_rules[fname] = {"kind": "function", "reason": f"Global-actor isolated function (@...Actor) ({file_path.name})"}
+            except (ValueError, TypeError) as _e:
+                _trace("global-actor scan skipped: %s", _e)
+                _maybe_raise(_e)
+
+        # Optionally exclude functions declared in `extension` blocks (top-level funcs in the extension body)
+        if exclude_extensions:
+            try:
+                scrub4 = _strip_comments(content)
+                for tb in _find_type_like_blocks(scrub4):
+                    if tb.get("kind") == "extension":
+                        for match in _top_level_func_matches(tb["body"], FUNC_DECL_RE):
+                            func_name = match.group("name")
+                            if func_name not in potential_rules:
+                                potential_rules[func_name] = {"kind": "function", "reason": f"Declared in extension ({file_path.name})"}
+            except (ValueError, TypeError) as _e:
+                _trace("extension scan skipped: %s", _e)
+                _maybe_raise(_e)
+
+        # 1단계: 파일 전체가 복잡한지 판단 (UI 탐지 제거)
+        is_complex = False
+        reason = ""
+        if COMPILER_DIRECTIVE_RE.search(content):
+            is_complex, reason = True, f"File with compiler directives ({file_path.name})"
+        elif NESTED_TYPE_RE.search(content):
+            is_complex, reason = True, f"File with nested types ({file_path.name})"
+
+        if is_complex:
+            # 파일 내 모든 타입을 예외 처리
+            for match in TYPE_DECL_RE.finditer(content):
+                name, kind = match.group(2), match.group(1)
+                if name not in potential_rules:
+                    potential_rules[name] = {"kind": kind, "reason": reason}
+            continue
+
+        # 2단계: 타입/익스텐션 본문 내부의 *최상위* 함수만 스캔 (지역 함수 제외)
+        scrub_types = _strip_comments(content)
+        for tb in _find_type_like_blocks(scrub_types):
+            for match in _top_level_func_matches(tb["body"], FUNC_DECL_RE):
+                func_line = match.group("line")
+                func_name = match.group("name")
+
+                # init, deinit은 항상 제외
+                if func_name in ["init", "deinit"]:
+                    potential_rules[func_name] = {"kind": "function", "reason": "Special keyword: Initializer/Deinitializer"}
+                    continue
+
+                # Return type uses '-> Self' is unsafe at file scope
+                if re.search(r"->\s*Self\b", func_line):
+                    potential_rules[func_name] = {"kind": "function", "reason": "Unsafe due to return type 'Self'"}
+                    continue
+
+                # Opaque return type 'some ...' is unsafe in function-type casts
+                if re.search(r"->\s*some\b", func_line):
+                    potential_rules[func_name] = {"kind": "function", "reason": "Opaque return ('some') not supported"}
+                    continue
+
+                # Context-associated identifiers (e.g., 'Configuration') without qualification are unsafe
+                if re.search(r"\bConfiguration\b", func_line):
+                    potential_rules[func_name] = {"kind": "function", "reason": "Context-associated type in signature (e.g., Configuration)"}
+                    continue
+
+                # 위험한 키워드가 포함되어 있으면 예외 처리
+                risky_keywords = [ "override", "@objc", "mutating", "inout", "@escaping", "async", "throws", "=" ]
+
+                params_part = match.group("params")
+
+                is_risky = False
+                reason_keyword = ""
+
+                # 기본 파라미터(default)가 하나라도 있으면 제외
+                if _has_param_default(params_part):
+                    is_risky, reason_keyword = True, "default parameter value"
+                else:
+                    # 나머지 키워드는 함수 선언 라인 전체에서 확인
+                    for keyword in risky_keywords:
+                        if keyword in func_line:
+                            is_risky, reason_keyword = True, keyword
+                            break
+
+                if is_risky:
+                    potential_rules[func_name] = {"kind": "function", "reason": f"Unsafe due to '{reason_keyword}' keyword"}
             
     # --- 최종 규칙 생성 ---
     rules = [{"name": name, "kind": data["kind"], "comment": data["reason"]} for name, data in potential_rules.items()]
