@@ -9,20 +9,33 @@ from __future__ import annotations
 import os
 import re
 import hashlib
+import logging
 from typing import Dict, List, Optional, Tuple, Set
 
-# Import the utils module for logging and file I/O
 from utils import log, read_text, write_text
+
+# local trace/strict helpers
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
 
 # ---------- 전역 설정 ----------
 OBF_BEGIN, OBF_END = "", ""
 
 # ---------- 유틸리티 함수들 ----------
 def _file_scoped_id(rel_path: str) -> str:
-    # Use SHA-256 to avoid SHA-1 collision concerns for identifier generation.
-    h = hashlib.sha256(rel_path.encode("utf-8")).hexdigest().upper()
-    # Truncate to 12 chars to keep identifier short while reducing collision probability.
-    return h[:12]
+    # Match provided script behavior: SHA-1 uppercased, first 10 chars
+    h = hashlib.sha1(rel_path.encode("utf-8")).hexdigest().upper()
+    return h[:10]
 
 def _swift_type(t: Optional[str]) -> str:
     t = (t or "").strip()
@@ -307,9 +320,14 @@ def inject_per_file(file_abs: str, file_rel: str, targets: List[Dict], *, debug:
     Returns:
         (성공 여부, 래핑된 함수 수) 튜플
     """
-    if not targets: return (False, 0)
-    try: original = read_text(file_abs)
-    except Exception: return (False, 0)
+    if not targets:
+        return (False, 0)
+    try:
+        original = read_text(file_abs)
+    except (OSError, UnicodeError) as e:
+        _trace("inject_per_file: read_text failed for %s: %s", file_abs, e)
+        _maybe_raise(e)
+        return (False, 0)
     file_id, text, routes, wrapped_count = _file_scoped_id(file_rel), original, [], 0
     # --- helpers for conservative skipping of bare nested types (lowest risk) ---
     nested_type_cache: Dict[str, set] = {}
@@ -493,5 +511,11 @@ def inject_per_file(file_abs: str, file_rel: str, targets: List[Dict], *, debug:
         routes.append(f'_ = OBFF{file_id}.register("{t.get("route_key")}", CFGWrappingUtils.{wrapper_name}({fnref}))')
     if wrapped_count == 0: return (False, 0)
     final_text = inject_or_replace_block(text, build_perfile_runtime(file_id, routes, max_params))
-    if not dry_run: write_text(file_abs, final_text)
+    if not dry_run:
+        try:
+            write_text(file_abs, final_text)
+        except (OSError, UnicodeError) as e:
+            _trace("inject_per_file: write_text failed for %s: %s", file_abs, e)
+            _maybe_raise(e)
+            return (False, 0)
     return (True, wrapped_count)

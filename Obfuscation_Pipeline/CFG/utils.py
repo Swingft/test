@@ -72,16 +72,3 @@ def copy_project_tree(src: str, dst: str, overwrite: bool = False) -> None:
     shutil.copytree(abs_src, abs_dst, ignore=ignore_filter)
     log(f"cloning project → {abs_dst}")
 
-# ---------- 파일 경로 유틸리티 ----------
-def is_extension_file(rel_path: str) -> bool:
-    """
-    파일 경로가 extension 파일인지 확인하는 함수
-    
-    Args:
-        rel_path: 상대 경로
-        
-    Returns:
-        extension 파일 여부
-    """
-    p = rel_path.replace("\\", "/").lower()
-    return "/extension/" in p or "/extensions/" in p or "+" in os.path.basename(p)

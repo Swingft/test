@@ -1,6 +1,21 @@
 import os, sys, subprocess, shutil, json
 import time
 import argparse
+import logging
+
+# local strict-mode + trace helpers (no external deps)
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
 
 from remove_files import remove_files
 from AST.run_ast import run_ast
@@ -56,8 +71,13 @@ def stage1_ast_analysis(original_project_dir, obf_project_dir):
             cfg_path = os.path.join(SCRIPT_DIR, "Swingft_config.json")
         cfg_json = {}
         if os.path.exists(cfg_path):
-            with open(cfg_path, "r", encoding="utf-8") as f:
-                cfg_json = json.load(f)
+            try:
+                with open(cfg_path, "r", encoding="utf-8") as f:
+                    cfg_json = json.load(f)
+            except (OSError, json.JSONDecodeError, UnicodeError) as e:
+                _trace("stage1 cfg load failed: %s", e)
+                _maybe_raise(e)
+                cfg_json = {}
         def _to_bool(v, default=True):
             if isinstance(v, bool):
                 return v
@@ -70,8 +90,9 @@ def stage1_ast_analysis(original_project_dir, obf_project_dir):
         if not _to_bool((opt_map or {}).get("Obfuscation_identifiers", True), True):
             print("[INFO] Obfuscation_identifiers=false → Stage 1(AST) 스킵")
             return
-    except Exception:
-        pass
+    except (ValueError, TypeError, AttributeError) as e:
+        _trace("stage1 cfg parse failed: %s", e)
+        _maybe_raise(e)
     
     # 1차 룰베이스 제외 대상 식별 & AST 분석
     run_ast(obf_project_dir)
@@ -99,23 +120,21 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
     start = time.time()
     # minimal TUI markers (default on; set SWINGFT_TUI_MARKERS=0 to disable)
     def _to_bool(v, default=True):
-        try:
-            if isinstance(v, bool):
-                return v
-            if isinstance(v, str):
-                return v.strip().lower() in {"1","true","yes","y","on"}
-            if isinstance(v, (int, float)):
-                return bool(v)
-        except Exception:
-            pass
+        if isinstance(v, bool):
+            return v
+        if isinstance(v, str):
+            return v.strip().lower() in {"1","true","yes","y","on"}
+        if isinstance(v, (int, float)):
+            return bool(v)
         return default
     _markers = _to_bool(os.environ.get("SWINGFT_TUI_MARKERS", "1"), True)
     def _marker(msg: str):
         try:
             if _markers:
                 print(msg)
-        except Exception:
-            pass
+        except (OSError, UnicodeEncodeError) as e:
+            _trace("marker print failed: %s", e)
+            _maybe_raise(e)
     step_status = {}
 
     # 구성 파일 로드 (암호화와 동일한 기본 경로 정책)
@@ -129,22 +148,21 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         if os.path.exists(cfg_path):
             with open(cfg_path, "r", encoding="utf-8") as f:
                 cfg_json = json.load(f)
-    except Exception as e:
+    except (OSError, json.JSONDecodeError, UnicodeError) as e:
+        _trace("stage2 cfg load failed: %s", e)
+        _maybe_raise(e)
         print(f"[WARN] 구성 파일 파싱 실패: {cfg_path} ({e}) → 기본값으로 진행")
 
     # options 블록 우선
     def get_bool(key: str, default: bool) -> bool:
-        try:
-            src = cfg_json.get("options") if isinstance(cfg_json.get("options"), dict) else cfg_json
-            v = (src or {}).get(key)
-            if isinstance(v, bool):
-                return v
-            if isinstance(v, str):
-                return v.strip().lower() in {"1","true","yes","y","on"}
-            if isinstance(v, (int, float)):
-                return bool(v)
-        except Exception:
-            pass
+        src = cfg_json.get("options") if isinstance(cfg_json.get("options"), dict) else cfg_json
+        v = (src or {}).get(key)
+        if isinstance(v, bool):
+            return v
+        if isinstance(v, str):
+            return v.strip().lower() in {"1","true","yes","y","on"}
+        if isinstance(v, (int, float)):
+            return bool(v)
         return default
 
     flag_ident = get_bool("Obfuscation_identifiers", True)
@@ -153,8 +171,9 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
     if flag_dbg:
         try:
             strip_comments_in_place(obf_project_dir)
-        except Exception:
-            pass
+        except (OSError, UnicodeError) as e:
+            _trace("strip_comments_in_place failed: %s", e)
+            _maybe_raise(e)
 
     if flag_ident:
         _marker("mapping: start")
@@ -345,10 +364,7 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
     
     # quiet logger (default: quiet on unless SWINGFT_QUIET=0/false)
     def _p(*args, **kwargs):
-        try:
-            q = str(os.environ.get("SWINGFT_QUIET", "1")).strip().lower() in {"1", "true", "yes", "y"}
-        except Exception:
-            q = True
+        q = str(os.environ.get("SWINGFT_QUIET", "1")).strip().lower() in {"1", "true", "yes", "y"}
         if not q:
             print(*args, **kwargs)
 
@@ -370,7 +386,7 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
             _p(f"AST/output 폴더 정리 시작: {ast_output_dir}")
             shutil.rmtree(ast_output_dir)
             _p("AST/output 폴더 정리 완료")
-        except Exception as e:
+        except OSError as e:
             _p(f"AST/output 폴더 정리 실패: {e}")
     else:
         _p("AST/output 폴더가 존재하지 않습니다")
@@ -390,7 +406,7 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
             if os.path.exists(p):
                 os.remove(p)
                 _p(f"삭제 완료: {p}")
-        except Exception as e:
+        except OSError as e:
             _p(f"삭제 실패: {p} ({e})")
 
     # 루트(Obfuscation_Pipeline) 레벨 매핑 산출물 정리
@@ -404,7 +420,7 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
             if os.path.exists(p):
                 os.remove(p)
                 print(f"삭제 완료: {p}")
-        except Exception as e:
+        except OSError as e:
             print(f"삭제 실패: {p} ({e})")
 
     # Mapping/output 디렉토리 정리 (루트 기준)
@@ -413,7 +429,7 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
         try:
             shutil.rmtree(mapping_output_dir)
             _p(f"삭제 완료: {mapping_output_dir}")
-        except Exception as e:
+        except OSError as e:
             _p(f"삭제 실패: {mapping_output_dir} ({e})")
 
     # 혹시 현재 작업 디렉토리(cwd)에 동일 이름의 파일이 있는 경우도 정리 (실행 위치가 달랐던 경우 대응)
@@ -428,7 +444,7 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
             if os.path.exists(p):
                 os.remove(p)
                 _p(f"삭제 완료(cwd): {p}")
-        except Exception as e:
+        except OSError as e:
             _p(f"삭제 실패(cwd): {p} ({e})")
     
     _p("STAGE 3 완료!")
@@ -475,9 +491,7 @@ def main():
     if should_copy:
         # output 디렉토리 준비 (없으면 생성)
         if not os.path.exists(obf_project_dir):
-            if not os.environ.get("SWINGFT_VERBOSE_COPY"):
-                pass
-            else:
+            if os.environ.get("SWINGFT_VERBOSE_COPY"):
                 print(f"새로운 output 디렉토리를 생성합니다: {obf_project_dir}")
             os.makedirs(obf_project_dir, exist_ok=True)
         else:

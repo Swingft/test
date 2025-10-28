@@ -10,11 +10,18 @@ if src_dir not in sys.path:
 
 import argparse
 import json
+import logging
 from pathlib import Path
 
 from swingft_cli.commands.json_cmd import handle_generate_json
 from swingft_cli.commands.obfuscate_cmd import handle_obfuscate
-# from swingft_cli.commands.debug_report_cmd import handle_debug_report  # 디버깅 심볼 기능 연결 해제
+try:
+    from swingft_cli.core.tui import _maybe_raise  # type: ignore
+except ImportError:
+    def _maybe_raise(e: BaseException) -> None:
+        import os as _os
+        if _os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
+            raise e
 
 # ------------------------------
 # Preflight: ast_node.json vs swingft_config.json overlap check
@@ -53,13 +60,17 @@ def _preflight_check_exceptions(config_path: Path, ast_path: Path, *, fail_on_co
 
     try:
         ast_list = json.loads(ast_path.read_text(encoding="utf-8"))
-    except Exception as e:
+    except (OSError, json.JSONDecodeError, UnicodeError) as e:
+        logging.warning("preflight: malformed AST node file %s: %s", ast_path, e)
+        _maybe_raise(e)
         print(f"[preflight] warning: malformed AST node file ({ast_path}): {e}")
         return
 
     try:
         cfg = json.loads(config_path.read_text(encoding="utf-8"))
-    except Exception as e:
+    except (OSError, json.JSONDecodeError, UnicodeError) as e:
+        logging.warning("preflight: malformed config %s: %s", config_path, e)
+        _maybe_raise(e)
         print(f"[preflight] warning: malformed config ({config_path}): {e}")
         return
 
@@ -111,15 +122,6 @@ def main():
     obfuscate_parser.add_argument('--encryption-only', action='store_true',
                                   help='Show only encryption-related logs')
 
-    # Debug-symbol report command 비활성화: 난독화 파이프라인으로 이관됨
-    # report_parser = subparsers.add_parser('report-debug-symbols', help='디버깅 심볼을 찾아 리포트를 생성합니다.')
-    # report_parser.add_argument('--input', '-i', required=True, help='입력 파일 또는 디렉토리 경로')
-    # report_parser.add_argument('--output', '-o', default='debug_symbols_report.txt',
-    #                            help='리포트 파일 경로 (기본: debug_symbols_report.txt)')
-    # report_parser.add_argument('--remove', action='store_true',
-    #                            help='디버깅 심볼 줄을 삭제하고 .debugbak 백업을 생성합니다.')
-    # report_parser.add_argument('--restore', action='store_true',
-    #                            help='.debugbak 백업으로부터 원본 파일을 복구합니다.')
 
     args = parser.parse_args()
 
@@ -145,8 +147,6 @@ def main():
         # Preflight checks are now handled in obfuscate_cmd.py
 
         handle_obfuscate(args)
-    # elif args.command == 'report-debug-symbols':
-    #     handle_debug_report(args)
     else:
         parser.print_help()
         sys.exit(1)

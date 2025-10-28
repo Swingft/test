@@ -22,7 +22,24 @@ import shutil
 import re
 from pathlib import Path
 from collections import defaultdict
+
 from typing import Dict, List, Set, Tuple, Union
+
+import logging
+
+# local strict-mode + trace helpers (standalone tool)
+def _trace(msg: str, *args, **kwargs) -> None:
+    try:
+        logging.log(10, msg, *args, **kwargs)
+    except Exception:
+        return
+
+def _maybe_raise(e: BaseException) -> None:
+    try:
+        if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
+            raise e
+    except Exception:
+        return
 
 # ========== 상수 정의 ==========
 DEBUG_FUNC_NAMES = [
@@ -138,7 +155,9 @@ def _regex_find_calls(fp: Path, user_defined_names: Set[str], *, fallback: bool)
     """파일에서 디버깅 함수 호출 찾기"""
     try:
         lines = fp.read_text(encoding="utf-8").splitlines()
-    except Exception:
+    except (OSError, UnicodeError) as e:
+        _trace("read_text failed for %s: %s", fp, e)
+        _maybe_raise(e)
         return []
     
     spans: List[Tuple[int, int]] = []
@@ -199,7 +218,9 @@ def _group_entries_for_report(entries: Dict[Path, List[Tuple[int, int]]]) -> Lis
     for fp, spans in entries.items():
         try:
             orig_lines = fp.read_text(encoding="utf-8").splitlines()
-        except Exception:
+        except (OSError, UnicodeError) as e:
+            _trace("read_text for report failed %s: %s", fp, e)
+            _maybe_raise(e)
             continue
         
         # 첫 번째 빈 줄 제거 여부 확인
@@ -250,7 +271,9 @@ def generate_debug_report(project_path: str) -> None:
             for line in fp.read_text(encoding="utf-8").splitlines():
                 if m := DEBUG_FUNC_DEF_RE.match(line):
                     user_defined.add(m.group(1))
-        except Exception:
+        except (OSError, UnicodeError) as e:
+            _trace("user-defined scan failed %s: %s", fp, e)
+            _maybe_raise(e)
             continue
     
     # 디버깅 코드 감지
@@ -279,60 +302,66 @@ def remove_debug_symbols(module_entries: Dict[str, Dict[Path, List[Tuple[int, in
         for fp in entries.keys():
             try:
                 lines = fp.read_text(encoding="utf-8").splitlines()
+            except (OSError, UnicodeError) as e:
+                _trace("read_text failed for %s: %s", fp, e)
+                _maybe_raise(e)
+                continue
 
-                new_lines: List[str] = []
-                i = 0
-                iter_guard = 0
-                max_iter = max(1000, len(lines) * 10)  # safety guard
-                while i < len(lines):
-                    # watchdog / heartbeat
-                    iter_guard += 1
-                    if iter_guard > max_iter:
-                        break
-                    line = lines[i]
-                    # 고차함수 trailing-closure 내부의 디버깅 호출은 예외로 스킵
-                    skip, end_line = _should_skip_debug_inside_trailing_closure(lines, i)
-                    if skip:
-                        for k in range(i, end_line + 1):
-                            new_lines.append(lines[k])
-                        i = end_line + 1
-                        continue
+            new_lines: List[str] = []
+            i = 0
+            iter_guard = 0
+            max_iter = max(1000, len(lines) * 10)  # safety guard
+            while i < len(lines):
+                iter_guard += 1
+                if iter_guard > max_iter:
+                    _trace("iter_guard tripped for %s at %d > %d", fp, iter_guard, max_iter)
+                    break
+                line = lines[i]
+                # 고차함수 trailing-closure 내부의 디버깅 호출은 예외로 스킵
+                skip, end_line = _should_skip_debug_inside_trailing_closure(lines, i)
+                if skip:
+                    for k in range(i, end_line + 1):
+                        new_lines.append(lines[k])
+                    i = end_line + 1
+                    continue
 
-                    # 빠른 패스: 디버그 토큰이 전혀 없으면 그대로
-                    if not _maybe_contains_debug_token(line):
-                        new_lines.append(line)
-                        i += 1
-                        continue
-
-                    # 구조 보존 여부 결정
-                    preserve = _should_preserve_print_structure(line, lines, i)
-
-                    # 시도 1) 동일 라인 내에서 괄호가 닫히는 호출들을 모두 제거/무해화
-                    changed, updated, removed = _strip_inline_debug_calls(line, preserve_structure=preserve)
-                    if changed:
-                        removed_calls += removed
-                        new_lines.append(updated)
-                        i += 1
-                        continue
-
-                    # 시도 2) 멀티라인 호출 시작인지 판단 후, 닫힘까지 병합 처리
-                    ml_result = _strip_multiline_debug_call(lines, i, preserve_structure=preserve)
-                    if ml_result is not None:
-                        updated_line, next_index, removed = ml_result
-                        removed_calls += removed
-                        new_lines.append(updated_line)
-                        i = next_index
-                        continue
-
-                    # 여기까지 왔으면 디버깅 호출로 확정되지 않음 → 원본 유지
+                # 빠른 패스: 디버그 토큰이 전혀 없으면 그대로
+                if not _maybe_contains_debug_token(line):
                     new_lines.append(line)
                     i += 1
+                    continue
 
+                # 구조 보존 여부 결정
+                preserve = _should_preserve_print_structure(line, lines, i)
+
+                # 시도 1) 동일 라인 내에서 괄호가 닫히는 호출들을 모두 제거/무해화
+                changed, updated, removed = _strip_inline_debug_calls(line, preserve_structure=preserve)
+                if changed:
+                    removed_calls += removed
+                    new_lines.append(updated)
+                    i += 1
+                    continue
+
+                # 시도 2) 멀티라인 호출 시작인지 판단 후, 닫힘까지 병합 처리
+                ml_result = _strip_multiline_debug_call(lines, i, preserve_structure=preserve)
+                if ml_result is not None:
+                    updated_line, next_index, removed = ml_result
+                    removed_calls += removed
+                    new_lines.append(updated_line)
+                    i = next_index
+                    continue
+
+                # 여기까지 왔으면 디버깅 호출로 확정되지 않음 → 원본 유지
+                new_lines.append(line)
+                i += 1
+
+            try:
                 with open(fp, 'w', encoding='utf-8') as f:
                     f.write('\n'.join(new_lines))
-
-            except Exception:
-                pass
+            except (OSError, UnicodeError) as e:
+                _trace("write failed for %s: %s", fp, e)
+                _maybe_raise(e)
+                continue
 
 
 # ===== 부분 제거(인라인/멀티라인) 유틸 =====
