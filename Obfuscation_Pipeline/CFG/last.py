@@ -391,7 +391,7 @@ def copy_StringSecurity_folder(source_root: str) -> None:
         _trace("StringSecurity build failed: %s", e)
         _maybe_raise(e)
         try:
-        os.chdir(script_dir)
+            os.chdir(script_dir)
         except OSError:
             pass
         return 1

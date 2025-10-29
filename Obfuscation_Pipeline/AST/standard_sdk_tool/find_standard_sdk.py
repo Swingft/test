@@ -34,7 +34,7 @@ def find_path():
 
 # sdk api - json 추출
 def dump_to_json(digester_path, sdk_path, import_list):
-    output_dir = "./AST/output/sdk-json/"
+    output_dir = os.path.join(".", "AST", "output", "sdk-json")
 
     for name in import_list:
         output_path = os.path.join(output_dir, f"{name}-sdk.json")

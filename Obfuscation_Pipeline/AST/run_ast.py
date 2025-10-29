@@ -100,10 +100,10 @@ def run_ast(code_project_dir):
 
     # 필요한 디렉토리 생성
     try:
-        os.makedirs("./AST/output/source_json/", exist_ok=True) 
-        os.makedirs("./AST/output/typealias_json/", exist_ok=True)
-        os.makedirs("./AST/output/external_to_ast/", exist_ok=True)
-        os.makedirs("./AST/output/sdk-json/", exist_ok=True)
+        os.makedirs(os.path.join(".", "AST", "output", "source_json"), exist_ok=True) 
+        os.makedirs(os.path.join(".", "AST", "output", "typealias_json"), exist_ok=True)
+        os.makedirs(os.path.join(".", "AST", "output", "external_to_ast"), exist_ok=True)
+        os.makedirs(os.path.join(".", "AST", "output", "sdk-json"), exist_ok=True)
     except (OSError, PermissionError) as e:
         _trace("Failed to create output directories: %s", e)
         _maybe_raise(e)
@@ -147,7 +147,7 @@ def run_ast(code_project_dir):
     p_same_name = set()
     # 표준 SDK 정보 추출 & 표준 SDK 요소 식별
     try:
-        path = "./AST/output/import_list.txt"
+        path = os.path.join(".", "AST", "output", "import_list.txt")
         if os.path.exists(path):
             p_same_name = find_standard_sdk()
             match_candidates_sdk()

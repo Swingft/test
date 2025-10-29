@@ -196,7 +196,7 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         target_name = "IDOBF"
 
         os.chdir(target_project_dir)
-        build_marker_file = ".build/build_path.txt"
+        build_marker_file = os.path.join(".build", "build_path.txt")
         previous_build_path = ""
         if os.path.exists(build_marker_file):
             with open(build_marker_file, "r") as f:
@@ -230,7 +230,7 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         _marker("cff: start")
         cff_path = os.path.join(OBFUSCATION_ROOT, "CFF")
         os.chdir(cff_path)
-        build_marker_file = ".build/build_path.txt"
+        build_marker_file = os.path.join(".build", "build_path.txt")
         previous_build_path = ""
         if os.path.exists(build_marker_file):
             with open(build_marker_file, "r") as f:

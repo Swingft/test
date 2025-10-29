@@ -6,7 +6,7 @@ IDENTIFIER = {}
 NOT_OBF = []
 
 def get_library_name():
-    name_path = "./AST/output/external_name.txt"
+    name_path = os.path.join(".", "AST", "output", "external_name.txt")
     if os.path.exists(name_path):
         with open(name_path, "r", encoding="utf-8") as f:
             for name in f:
@@ -85,7 +85,7 @@ def repeat_match_node(data, flag):
         repeat_match_node(child, flag)
 
 def collect_identifiers():
-    file_path = "./AST/output/ast_node.json"
+    file_path = os.path.join(".", "AST", "output", "ast_node.json")
     if os.path.exists(file_path):
         with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
