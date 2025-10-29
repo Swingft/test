@@ -113,6 +113,11 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
     CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
 
     def _walk(obj, visited=None, depth=0):
+        """
+        AST 구조를 안전하게 순회하는 재귀 함수
+        - visited: 이미 방문한 객체들을 추적하여 순환 참조 방지
+        - depth: 재귀 깊이를 제한하여 스택 오버플로우 방지
+        """
         # 무한 재귀 방지를 위한 깊이 제한 (최대 1000단계)
         MAX_DEPTH = 1000
         if depth > MAX_DEPTH:
@@ -122,7 +127,7 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
         if visited is None:
             visited = set()
         
-        # 객체 ID를 기반으로 방문 여부 확인
+        # 객체 ID를 기반으로 방문 여부 확인 (순환 참조 방지)
         obj_id = id(obj)
         if obj_id in visited:
             return
@@ -138,9 +143,9 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     ch = cur.get(key)
                     if isinstance(ch, list):
                         for c in ch:
-                            _walk(c, visited, depth + 1)
+                            _walk(c, visited, depth + 1)  # 안전한 재귀 호출 (visited, depth 전달)
                     elif isinstance(ch, dict):
-                        _walk(ch, visited, depth + 1)
+                        _walk(ch, visited, depth + 1)  # 안전한 재귀 호출 (visited, depth 전달)
                 if obj is not cur:
                     for key in CONTAINER_KEYS:
                         if key == 'node':
@@ -148,21 +153,21 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                         ch = obj.get(key)
                         if isinstance(ch, list):
                             for c in ch:
-                                _walk(c, visited, depth + 1)
+                                _walk(c, visited, depth + 1)  # 안전한 재귀 호출 (visited, depth 전달)
                         elif isinstance(ch, dict):
-                            _walk(ch, visited, depth + 1)
+                            _walk(ch, visited, depth + 1)  # 안전한 재귀 호출 (visited, depth 전달)
                 for v in cur.values():
-                    _walk(v, visited, depth + 1)
+                    _walk(v, visited, depth + 1)  # 안전한 재귀 호출 (visited, depth 전달)
                 if obj is not cur:
                     for k, v in obj.items():
                         if k not in CONTAINER_KEYS:
-                            _walk(v, visited, depth + 1)
+                            _walk(v, visited, depth + 1)  # 안전한 재귀 호출 (visited, depth 전달)
             else:
                 for v in obj.values():
-                    _walk(v, visited, depth + 1)
+                    _walk(v, visited, depth + 1)  # 안전한 재귀 호출 (visited, depth 전달)
         elif isinstance(obj, list):
             for it in obj:
-                _walk(it, visited, depth + 1)
+                _walk(it, visited, depth + 1)  # 안전한 재귀 호출 (visited, depth 전달)
 
     _walk(ast_list)
     if not ex_names:
