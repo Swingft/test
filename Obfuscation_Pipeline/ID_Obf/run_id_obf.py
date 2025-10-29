@@ -85,7 +85,7 @@ def main():
 
     os.chdir(target_project_dir)
     try:
-        build_marker_file = Path(".build/build_path.txt")
+        build_marker_file = Path(".build") / "build_path.txt"
         previous = ""
         try:
             if build_marker_file.exists():
