@@ -52,7 +52,7 @@ class ObfuscationAnalyzer:
             self.logger.debug(msg, *args, **kwargs)
         except (OSError, ValueError, TypeError) as e:
             # 로깅 실패 시에도 프로그램은 계속 진행
-            print(f"[DEBUG] {msg % args if args else msg}")
+            print(f"[TRACE] {msg % args if args else msg}")
 
     def _maybe_raise(self, e: BaseException) -> None:
         """엄격 모드에서 예외 재발생"""
@@ -61,7 +61,7 @@ class ObfuscationAnalyzer:
                 raise e
         except (OSError, ValueError, TypeError) as env_error:
             # 환경변수 읽기 실패 시에는 무시하고 계속 진행
-            print(f"[DEBUG] 환경변수 읽기 실패: {env_error}")
+            print(f"[TRACE] 환경변수 읽기 실패: {env_error}")
 
     def run_header_analysis(self, real_project_name: str = None):
         """헤더 기반 제외 대상 분석"""
