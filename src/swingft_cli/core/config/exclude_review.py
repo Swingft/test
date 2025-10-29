@@ -347,7 +347,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
     else:
         # ask 모드에서 LLM 판정과 사용자 확인을 함께 수행 (환경변수로 온/오프)
         use_llm = str(os.environ.get("SWINGFT_PREFLIGHT_EXCLUDE_USE_LLM", "1")).strip().lower() in {"1","true","yes","y","on"}
-        # print(f"[DEBUG] use_llm: {use_llm}, project_root: {project_root}, _has_ui_prompt(): {_has_ui_prompt()}")
+        # print(f"[TRACE] use_llm: {use_llm}, project_root: {project_root}, _has_ui_prompt(): {_has_ui_prompt()}")
         for ident in sorted(list(exclude_candidates)):
             try:
                 if _has_ui_prompt():
@@ -360,10 +360,10 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                         snippet = _make_snippet(swift_text or "", ident) if swift_text else ""
                         ast_info = _resolve_ast_symbols(project_root, swift_path, ident)
                         # LLM 호출
-                        print(f"[DEBUG] LLM 호출 시작: {ident}")
+                        print(f"[TRACE] LLM 호출 시작: {ident}")
                         try:
                             llm_res = _run_local_llm_exclude(ident, snippet, ast_info)
-                            print(f"[DEBUG] LLM 결과: {llm_res}")
+                            print(f"[TRACE] LLM 결과: {llm_res}")
                         except (RuntimeError, OSError, ValueError, TypeError) as _llm_e:
                             logging.debug("LLM 에러: %s", _llm_e)
                             _maybe_raise(_llm_e)

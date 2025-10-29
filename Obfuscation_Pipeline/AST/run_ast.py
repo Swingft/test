@@ -25,7 +25,7 @@ def _trace(msg: str, *args, **kwargs) -> None:
         logging.log(10, msg, *args, **kwargs)
     except (OSError, ValueError, TypeError) as e:
         # 로깅 실패 시에도 프로그램은 계속 진행
-        print(f"[DEBUG] {msg % args if args else msg}")
+        print(f"[TRACE] {msg % args if args else msg}")
 
 
 def _log_warning(msg: str, *args, **kwargs) -> None:
@@ -55,7 +55,7 @@ def _maybe_raise(e: BaseException) -> None:
             raise e
     except (OSError, ValueError, TypeError) as env_error:
         # 환경변수 읽기 실패 시에는 무시하고 계속 진행
-        print(f"[DEBUG] 환경변수 읽기 실패: {env_error}")
+        print(f"[TRACE] 환경변수 읽기 실패: {env_error}")
 
 def run_ast(code_project_dir):
     # 구성 파일을 읽어 Obfuscation_identifiers 옵션이 꺼져 있으면 스킵
