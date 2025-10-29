@@ -80,17 +80,17 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
         return result
     status_map: dict[str, list[int]] = {}
     dotted_map: dict[str, list[int]] = {}
+    _visited_nodes = set()  # 전역 방문 추적 변수
 
     CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
 
-    def _walk_any(obj, parents: list[str], visited=None, depth=0):
+    def _walk_any(obj, parents: list[str], depth=0):
         """
         AST 구조를 안전하게 순회하는 재귀 함수 (무한 재귀 방지)
         
         Args:
             obj: 순회할 객체
             parents: 부모 경로 리스트
-            visited: 방문한 객체 ID 추적용 set (순환 참조 방지)
             depth: 현재 재귀 깊이 (스택 오버플로우 방지)
         """
         # 무한 재귀 방지를 위한 깊이 제한 (최대 1000단계)
@@ -98,15 +98,11 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
         if depth > MAX_DEPTH:
             return
         
-        # 방문 추적을 위한 visited set (순환 참조 방지)
-        if visited is None:
-            visited = set()
-        
         # 객체 ID를 기반으로 방문 여부 확인 (순환 참조 방지)
         obj_id = id(obj)
-        if obj_id in visited:
+        if obj_id in _visited_nodes:
             return
-        visited.add(obj_id)
+        _visited_nodes.add(obj_id)
         
         # DFS with wrapper unwrapping; visit both unwrapped dict and wrapper siblings
         if isinstance(obj, dict):
@@ -125,9 +121,9 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
                     ch = cur.get(key)
                     if isinstance(ch, list):
                         for c in ch:
-                            _walk_any(c, next_parents, visited, depth + 1)
+                            _walk_any(c, next_parents, depth + 1)
                     elif isinstance(ch, dict):
-                        _walk_any(ch, next_parents, visited, depth + 1)
+                        _walk_any(ch, next_parents, depth + 1)
 
                 # 2) Traverse sibling containers on the wrapper `obj` (excluding the `node` we already handled)
                 if obj is not cur:
@@ -137,26 +133,27 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
                         ch = obj.get(key)
                         if isinstance(ch, list):
                             for c in ch:
-                                _walk_any(c, next_parents, visited, depth + 1)
+                                _walk_any(c, next_parents, depth + 1)
                         elif isinstance(ch, dict):
-                            _walk_any(ch, next_parents, visited, depth + 1)
+                            _walk_any(ch, next_parents, depth + 1)
 
                 # 3) Conservative descent into other values
                 for v in cur.values():
-                    _walk_any(v, next_parents, visited, depth + 1)
+                    _walk_any(v, next_parents, depth + 1)
                 if obj is not cur:
                     for k, v in obj.items():
                         if k not in CONTAINER_KEYS:
-                            _walk_any(v, next_parents, visited, depth + 1)
+                            _walk_any(v, next_parents, depth + 1)
             else:
                 # non-dict after unwrap: still descend values of the wrapper
                 for v in obj.values():
-                    _walk_any(v, parents, visited, depth + 1)
+                    _walk_any(v, parents, depth + 1)
         elif isinstance(obj, list):
             for elem in obj:
-                _walk_any(elem, parents, visited, depth + 1)
+                _walk_any(elem, parents, depth + 1)
 
-    _walk_any(ast_list, [])
+    _visited_nodes.clear()  # 함수 시작 시 전역 변수 초기화
+    _walk_any(ast_list, [], 0)
 
     zeros, missing = [], []
     one = zero = not_found = 0
