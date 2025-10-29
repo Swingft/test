@@ -126,8 +126,12 @@ def load_exceptions(paths: Optional[List[str]]) -> List[Dict]:
                 data = json.load(f)
             if isinstance(data, list):
                 all_rules.extend(data)
-            elif isinstance(data, dict) and "rules" in data:
-                all_rules.extend(data["rules"])
+            elif isinstance(data, dict):
+                rules = data.get("rules")
+                if isinstance(rules, list):
+                    all_rules.extend(rules)
+                else:
+                    fail(f"exceptions file must be a JSON list or {{'rules': [...]}}: {path}")
             else:
                 fail(f"exceptions file must be a JSON list or {{'rules': [...]}}: {path}")
         except (OSError, json.JSONDecodeError, UnicodeError, TypeError, ValueError) as e:

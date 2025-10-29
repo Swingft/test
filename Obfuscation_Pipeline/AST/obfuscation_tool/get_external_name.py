@@ -46,8 +46,7 @@ def get_external_name():
                 with open(path, "r", encoding="utf-8") as f:
                     data = json.load(f)
             
-                if isinstance(data, list):
-                    for item in data:
-                        repeat_match_node(item)
+                for item in data if isinstance(data, list) else []:
+                    repeat_match_node(item)
     
     return P_SAME_NAME

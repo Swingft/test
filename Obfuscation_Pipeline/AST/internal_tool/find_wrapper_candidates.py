@@ -20,24 +20,30 @@ def find_wrapper_candidates():
     wrapper_candidates = []
     remove_candidates = []
     for file_path in SWIFT_FILE_PATH:
-        if not isinstance(file_path, str):
+        if not isinstance(file_path, str) or not file_path:
+            continue
+
+        # Guard against None or invalid path types before checking existence
+        try:
+            if os.path.exists(str(file_path)):
+                with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                    source_code = f.read()
+            else:
+                continue
+        except (OSError, TypeError, ValueError):
             continue
         
-        if os.path.exists(file_path):
-            with open(file_path, "r", encoding="utf-8") as f:
-                source_code = f.read()
-            
-            pattern_wrapper = re.compile(r'_([A-Za-z0-9_]\w*)')
-            matches = pattern_wrapper.findall(source_code)
-            wrapper_candidates.extend(matches)
+        pattern_wrapper = re.compile(r'_([A-Za-z0-9_]\w*)')
+        matches = pattern_wrapper.findall(source_code)
+        wrapper_candidates.extend(matches)
 
-            pattern_let = re.compile(r'\blet\s+_([A-Za-z]\w*)')
-            let_matches = pattern_let.findall(source_code)
-            remove_candidates.extend(let_matches)
+        pattern_let = re.compile(r'\blet\s+_([A-Za-z]\w*)')
+        let_matches = pattern_let.findall(source_code)
+        remove_candidates.extend(let_matches)
 
-            pattern_var = re.compile(r'\bvar\s+_([A-Za-z]\w*)')
-            var_matches = pattern_var.findall(source_code)
-            remove_candidates.extend(var_matches)
+        pattern_var = re.compile(r'\bvar\s+_([A-Za-z]\w*)')
+        var_matches = pattern_var.findall(source_code)
+        remove_candidates.extend(var_matches)
 
     wrapper_candidates = list(set(wrapper_candidates) - set(remove_candidates))
 

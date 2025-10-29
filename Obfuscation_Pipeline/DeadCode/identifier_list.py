@@ -28,12 +28,16 @@ def read_identifier_list():
     if os.path.exists(id_path):
         with open(id_path, "r", encoding="utf-8") as f:
             for line in f:
-                item = line.strip()
-                if len(item) < 5 or "_" in item or item in used_id:
+                item = line
+                if not isinstance(item, str):
                     continue
-                if not item:
+                s = item.strip()
+                if not s:
                     continue
-                if item[0].isupper():
-                    large_identifiers.append(item)
+                if len(s) < 5 or "_" in s or s in used_id:
+                    continue
+                first_char = s[0] if s else ""
+                if first_char.isupper():
+                    large_identifiers.append(s)
                 else:
-                    small_identifiers.append(item)
+                    small_identifiers.append(s)

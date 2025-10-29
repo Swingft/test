@@ -81,7 +81,9 @@ def run_ast(code_project_dir):
             return default
         # 옵션 키는 상위 호환: 루트 혹은 options 아래 둘 다 지원
         opt_map = cfg_json.get("options") if isinstance(cfg_json.get("options"), dict) else cfg_json
-        if not _to_bool((opt_map or {}).get("Obfuscation_identifiers", True), True):
+        safe_map = opt_map if isinstance(opt_map, dict) else {}
+        flag_val = safe_map.get("Obfuscation_identifiers", True)
+        if not _to_bool(flag_val, True):
             print("[AST] Obfuscation_identifiers=false → AST 분석 스킵")
             return
     except (OSError, json.JSONDecodeError, UnicodeDecodeError) as e:

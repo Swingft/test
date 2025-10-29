@@ -101,7 +101,8 @@ def match_ast_name(data, external_ast_dir):
             file_path = os.path.join(external_ast_dir, file)
             with open(file_path, "r", encoding="utf-8") as f:
                 ex_data = json.load(f)
-                compare_node(data, ex_data)
+                if isinstance(data, (list, dict)) and isinstance(ex_data, (list, dict)):
+                    compare_node(data, ex_data)
 
 # 외부라이브러리 AST에서 노드 이름 추출
 def extract_ast_name(ast, file):
@@ -133,7 +134,8 @@ def match_and_save(candidate_path, external_ast_path):
                 if file_name not in EXTERNAL_NAME_TO_FILE[name]:
                     EXTERNAL_NAME_TO_FILE[name].append(file_name)
 
-        match_ast_name(candidates, external_ast_path)
+        if isinstance(candidates, (list, dict)):
+            match_ast_name(candidates, external_ast_path)
 
         matched_output_path = os.path.join(".", "AST", "output", "external_list.json")
         with open(matched_output_path, "w", encoding="utf-8") as f:

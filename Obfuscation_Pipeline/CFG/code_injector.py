@@ -33,8 +33,8 @@ OBF_BEGIN, OBF_END = "", ""
 
 # ---------- 유틸리티 함수들 ----------
 def _file_scoped_id(rel_path: str) -> str:
-    # Match provided script behavior: SHA-1 uppercased, first 10 chars
-    h = hashlib.sha1(rel_path.encode("utf-8")).hexdigest().upper()
+    # Use SHA-256 for better security, uppercased, first 10 chars
+    h = hashlib.sha256(rel_path.encode("utf-8")).hexdigest().upper()
     return h[:10]
 
 def _swift_type(t: Optional[str]) -> str:

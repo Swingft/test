@@ -131,10 +131,11 @@ def sdk_dump_parser(path):
     if not isinstance(data, dict):
         return {}
     abi_root = data.get("ABIRoot", {})
-    children = abi_root.get("children", [])
+    children = abi_root.get("children") or []
 
     for child in children:
-        parse_type(child, sdk_info)
+        if isinstance(child, dict):
+            parse_type(child, sdk_info)
     
     return sdk_info
 
@@ -145,15 +146,17 @@ def import_info_parser(path):
         data = json.load(f)
 
     abi_root = data.get("ABIRoot", {})
-    children = abi_root.get("children", [])
-    root_name = abi_root.get("name")
+    children = abi_root.get("children") or []
+    root_name = abi_root.get("name") or ""
     for child in children:
+        if not isinstance(child, dict):
+            continue
         if child.get("kind") == "Import":
-            name = child.get("name")
-            if name.startswith(f"{root_name}.") or name.startswith("_"):
+            name = child.get("name") or ""
+            if (root_name and name.startswith(f"{root_name}.")) or name.startswith("_"):
                 continue
-
-            re_import_list.add(name)
+            if name:
+                re_import_list.add(name)
 
     return re_import_list
 

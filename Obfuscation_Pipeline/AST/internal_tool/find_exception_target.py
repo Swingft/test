@@ -149,15 +149,23 @@ def find_exception_target(p_same_name):
     output_file_1 = os.path.join(".", "AST", "output", "internal_exception_list.json")
 
     get_storyboard_and_xc_wrapper_info()
+
+    # normalize p_same_name to a set of strings
+    if isinstance(p_same_name, (set, list, tuple)):
+        p_same_name = {str(x) for x in p_same_name if x is not None}
+    else:
+        p_same_name = set()
     
     if os.path.exists(input_file_1):
         with open(input_file_1, "r", encoding="utf-8") as f:
             nodes = json.load(f)
-        find_node(nodes, p_same_name)
+        if isinstance(nodes, (list, dict)):
+            find_node(nodes, p_same_name)
     if os.path.exists(input_file_2):
         with open(input_file_2, "r", encoding="utf-8") as f:
             nodes = json.load(f)
-        find_node(nodes, p_same_name)
+        if isinstance(nodes, (list, dict)):
+            find_node(nodes, p_same_name)
     
     with open(output_file_1, "w", encoding="utf-8") as f:
         json.dump(MATCHED_LIST, f, indent=2, ensure_ascii=False)

@@ -10,6 +10,7 @@
 import Foundation
 import SwiftSyntax
 import SwiftParser
+import Darwin
 
 internal class Extractor {
     private let sourcePath: String
@@ -34,7 +35,12 @@ internal class Extractor {
             close(fd)
         }
         
-        self.sourceText = try String(contentsOf: url)
+        let handle = FileHandle(fileDescriptor: fd, closeOnDealloc: false)
+        let data = handle.readDataToEndOfFile()
+        guard let src = String(data: data, encoding: .utf8) else {
+            fatalError()
+        }
+        self.sourceText = src
         self.syntaxTree = try Parser.parse(source: sourceText)
         self.store = ResultStore()
         self.location = LocationHandler(file: sourcePath, source: sourceText)
