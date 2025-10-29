@@ -83,7 +83,22 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
 
     CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
 
-    def _walk_any(obj, parents: list[str]):
+    def _walk_any(obj, parents: list[str], visited=None, depth=0):
+        # 무한 재귀 방지를 위한 깊이 제한 (최대 1000단계)
+        MAX_DEPTH = 1000
+        if depth > MAX_DEPTH:
+            return
+        
+        # 방문 추적을 위한 visited set
+        if visited is None:
+            visited = set()
+        
+        # 객체 ID를 기반으로 방문 여부 확인
+        obj_id = id(obj)
+        if obj_id in visited:
+            return
+        visited.add(obj_id)
+        
         # DFS with wrapper unwrapping; visit both unwrapped dict and wrapper siblings
         if isinstance(obj, dict):
             cur = _ast_unwrap(obj)
@@ -101,9 +116,9 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
                     ch = cur.get(key)
                     if isinstance(ch, list):
                         for c in ch:
-                            _walk_any(c, next_parents)
+                            _walk_any(c, next_parents, visited, depth + 1)
                     elif isinstance(ch, dict):
-                        _walk_any(ch, next_parents)
+                        _walk_any(ch, next_parents, visited, depth + 1)
 
                 # 2) Traverse sibling containers on the wrapper `obj` (excluding the `node` we already handled)
                 if obj is not cur:
@@ -113,24 +128,24 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
                         ch = obj.get(key)
                         if isinstance(ch, list):
                             for c in ch:
-                                _walk_any(c, next_parents)
+                                _walk_any(c, next_parents, visited, depth + 1)
                         elif isinstance(ch, dict):
-                            _walk_any(ch, next_parents)
+                            _walk_any(ch, next_parents, visited, depth + 1)
 
                 # 3) Conservative descent into other values
                 for v in cur.values():
-                    _walk_any(v, next_parents)
+                    _walk_any(v, next_parents, visited, depth + 1)
                 if obj is not cur:
                     for k, v in obj.items():
                         if k not in CONTAINER_KEYS:
-                            _walk_any(v, next_parents)
+                            _walk_any(v, next_parents, visited, depth + 1)
             else:
                 # non-dict after unwrap: still descend values of the wrapper
                 for v in obj.values():
-                    _walk_any(v, parents)
+                    _walk_any(v, parents, visited, depth + 1)
         elif isinstance(obj, list):
             for elem in obj:
-                _walk_any(elem, parents)
+                _walk_any(elem, parents, visited, depth + 1)
 
     _walk_any(ast_list, [])
 

@@ -561,7 +561,22 @@ def transform_switch_body_cases(body: str, ctx: 'FileCtx') -> Tuple[str,int]:
     parts.append(body[pos:])
     return ''.join(parts), edits
 
-def rewrite_switch_subtree(text: str, node: SwitchNode, allow_transform: bool, ctx: 'FileCtx') -> Tuple[str,int]:
+def rewrite_switch_subtree(text: str, node: SwitchNode, allow_transform: bool, ctx: 'FileCtx', visited=None, depth=0) -> Tuple[str,int]:
+    # 무한 재귀 방지를 위한 깊이 제한 (최대 100단계)
+    MAX_DEPTH = 100
+    if depth > MAX_DEPTH:
+        return text[node.s:node.e], 0
+    
+    # 방문 추적을 위한 visited set
+    if visited is None:
+        visited = set()
+    
+    # 노드 ID를 기반으로 방문 여부 확인
+    node_id = id(node)
+    if node_id in visited:
+        return text[node.s:node.e], 0
+    visited.add(node_id)
+    
     header = text[node.s: node.obr+1]
     body   = text[node.obr+1: node.e-1]
     footer = text[node.e-1: node.e]
@@ -572,7 +587,7 @@ def rewrite_switch_subtree(text: str, node: SwitchNode, allow_transform: bool, c
         re = ch.e - (node.obr+1)
         out.append(body[last:rs])
         child_allow = allow_transform and subtree_all_have_default(ch, text)
-        sub_txt, ed = rewrite_switch_subtree(text, ch, child_allow, ctx)
+        sub_txt, ed = rewrite_switch_subtree(text, ch, child_allow, ctx, visited, depth + 1)
         out.append(sub_txt)
         case_edits_total += ed
         last = re

@@ -23,7 +23,22 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
 
     # collect names present in AST
     names_in_ast = set()
-    def _collect(o):
+    def _collect(o, visited=None, depth=0):
+        # 무한 재귀 방지를 위한 깊이 제한 (최대 1000단계)
+        MAX_DEPTH = 1000
+        if depth > MAX_DEPTH:
+            return
+        
+        # 방문 추적을 위한 visited set
+        if visited is None:
+            visited = set()
+        
+        # 객체 ID를 기반으로 방문 여부 확인
+        obj_id = id(o)
+        if obj_id in visited:
+            return
+        visited.add(obj_id)
+        
         if isinstance(o, dict):
             cur = _ast_unwrap(o)
             if isinstance(cur, dict):
@@ -33,29 +48,29 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
                 for k in CONTAINER_KEYS:
                     ch = cur.get(k)
                     if isinstance(ch, list):
-                        for c in ch: _collect(c)
+                        for c in ch: _collect(c, visited, depth + 1)
                     elif isinstance(ch, dict):
-                        _collect(ch)
+                        _collect(ch, visited, depth + 1)
                 if o is not cur:
                     for k in CONTAINER_KEYS:
                         if k == 'node':
                             continue
                         ch = o.get(k)
                         if isinstance(ch, list):
-                            for c in ch: _collect(c)
+                            for c in ch: _collect(c, visited, depth + 1)
                         elif isinstance(ch, dict):
-                            _collect(ch)
+                            _collect(ch, visited, depth + 1)
                 for v in cur.values():
-                    _collect(v)
+                    _collect(v, visited, depth + 1)
                 if o is not cur:
                     for k,v in o.items():
                         if k not in CONTAINER_KEYS:
-                            _collect(v)
+                            _collect(v, visited, depth + 1)
             else:
                 for v in o.values():
-                    _collect(v)
+                    _collect(v, visited, depth + 1)
         elif isinstance(o, list):
-            for it in o: _collect(it)
+            for it in o: _collect(it, visited, depth + 1)
     _collect(ast_list)
 
     # build targets from config (expand wildcards)
@@ -99,7 +114,22 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
         with open(ast_file_path, 'r', encoding='utf-8') as f:
             ast2 = json.load(f)
         cnt = 0
-        def _count(o):
+        def _count(o, visited=None, depth=0):
+            # 무한 재귀 방지를 위한 깊이 제한 (최대 1000단계)
+            MAX_DEPTH = 1000
+            if depth > MAX_DEPTH:
+                return
+            
+            # 방문 추적을 위한 visited set
+            if visited is None:
+                visited = set()
+            
+            # 객체 ID를 기반으로 방문 여부 확인
+            obj_id = id(o)
+            if obj_id in visited:
+                return
+            visited.add(obj_id)
+            
             nonlocal cnt
             if isinstance(o, dict):
                 cur = _ast_unwrap(o)
@@ -110,29 +140,29 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
                     for k in CONTAINER_KEYS:
                         ch = cur.get(k)
                         if isinstance(ch, list):
-                            for c in ch: _count(c)
+                            for c in ch: _count(c, visited, depth + 1)
                         elif isinstance(ch, dict):
-                            _count(ch)
+                            _count(ch, visited, depth + 1)
                     if o is not cur:
                         for k in CONTAINER_KEYS:
                             if k == 'node':
                                 continue
                             ch = o.get(k)
                             if isinstance(ch, list):
-                                for c in ch: _count(c)
+                                for c in ch: _count(c, visited, depth + 1)
                             elif isinstance(ch, dict):
-                                _count(ch)
+                                _count(ch, visited, depth + 1)
                     for v in cur.values():
-                        _count(v)
+                        _count(v, visited, depth + 1)
                     if o is not cur:
                         for k,v in o.items():
                             if k not in CONTAINER_KEYS:
-                                _count(v)
+                                _count(v, visited, depth + 1)
                 else:
                     for v in o.values():
-                        _count(v)
+                        _count(v, visited, depth + 1)
             elif isinstance(o, list):
-                for it in o: _count(it)
+                for it in o: _count(it, visited, depth + 1)
         _count(ast2)
         return cnt
     except (OSError, json.JSONDecodeError) as e:

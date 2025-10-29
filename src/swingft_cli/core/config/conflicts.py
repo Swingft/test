@@ -112,7 +112,22 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
     ex_names: Set[str] = set()
     CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
 
-    def _walk(obj):
+    def _walk(obj, visited=None, depth=0):
+        # 무한 재귀 방지를 위한 깊이 제한 (최대 1000단계)
+        MAX_DEPTH = 1000
+        if depth > MAX_DEPTH:
+            return
+        
+        # 방문 추적을 위한 visited set
+        if visited is None:
+            visited = set()
+        
+        # 객체 ID를 기반으로 방문 여부 확인
+        obj_id = id(obj)
+        if obj_id in visited:
+            return
+        visited.add(obj_id)
+        
         if isinstance(obj, dict):
             cur = _ast_unwrap(obj)
             if isinstance(cur, dict):
@@ -123,9 +138,9 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     ch = cur.get(key)
                     if isinstance(ch, list):
                         for c in ch:
-                            _walk(c)
+                            _walk(c, visited, depth + 1)
                     elif isinstance(ch, dict):
-                        _walk(ch)
+                        _walk(ch, visited, depth + 1)
                 if obj is not cur:
                     for key in CONTAINER_KEYS:
                         if key == 'node':
@@ -133,21 +148,21 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                         ch = obj.get(key)
                         if isinstance(ch, list):
                             for c in ch:
-                                _walk(c)
+                                _walk(c, visited, depth + 1)
                         elif isinstance(ch, dict):
-                            _walk(ch)
+                            _walk(ch, visited, depth + 1)
                 for v in cur.values():
-                    _walk(v)
+                    _walk(v, visited, depth + 1)
                 if obj is not cur:
                     for k, v in obj.items():
                         if k not in CONTAINER_KEYS:
-                            _walk(v)
+                            _walk(v, visited, depth + 1)
             else:
                 for v in obj.values():
-                    _walk(v)
+                    _walk(v, visited, depth + 1)
         elif isinstance(obj, list):
             for it in obj:
-                _walk(it)
+                _walk(it, visited, depth + 1)
 
     _walk(ast_list)
     if not ex_names:
