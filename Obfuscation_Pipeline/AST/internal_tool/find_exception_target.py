@@ -45,12 +45,17 @@ def get_storyboard_and_xc_wrapper_info():
                 if name:
                     STORYBOARD_AND_XC_WRAP_NAME.append(name)
 
-def check_attribute(node, p_same_name):
-    def check_member():
-        members = node.get("G_members", [])
-        for member in members:
-            check_attribute(member, p_same_name)
-
+def check_attribute(node, p_same_name, visited=None):
+    # 무한 재귀 방지를 위한 visited set 추가
+    if visited is None:
+        visited = set()
+    
+    # 노드 ID를 기반으로 방문 여부 확인
+    node_id = id(node)
+    if node_id in visited:
+        return
+    visited.add(node_id)
+    
     if not isinstance(node, dict):
         return
     
@@ -72,6 +77,11 @@ def check_attribute(node, p_same_name):
                 in_matched_list(member)
             if member.get("B_kind") == "function" and member.get("A_name") == "main":
                 in_matched_list(member)
+    
+    # members 재귀 처리 (무한 재귀 방지)
+    for member in members:
+        if isinstance(member, dict):
+            check_attribute(member, p_same_name, visited)
 
     # ui
     skip_attrs = {"IBOutlet", "IBAction", "IBInspectable", "IBDesignable",  "State", "StateObject"}
@@ -109,7 +119,6 @@ def check_attribute(node, p_same_name):
     if name in p_same_name:
         in_matched_list(node)
 
-    check_member()
 
 # 자식 노드가 자식 노드를 가지는 경우
 def repeat_match_member(data, p_same_name):

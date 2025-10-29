@@ -214,7 +214,22 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             with open(ast_file, 'r', encoding='utf-8') as f:
                 ast_list = json.load(f)
             CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
-            def _collect_names(obj):
+            def _collect_names(obj, visited=None, depth=0):
+                # 무한 재귀 방지를 위한 깊이 제한 (최대 1000단계)
+                MAX_DEPTH = 1000
+                if depth > MAX_DEPTH:
+                    return
+                
+                # 방문 추적을 위한 visited set
+                if visited is None:
+                    visited = set()
+                
+                # 객체 ID를 기반으로 방문 여부 확인
+                obj_id = id(obj)
+                if obj_id in visited:
+                    return
+                visited.add(obj_id)
+                
                 if isinstance(obj, dict):
                     cur = _ast_unwrap(obj)
                     if isinstance(cur, dict):
@@ -225,9 +240,9 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                             ch = cur.get(key)
                             if isinstance(ch, list):
                                 for c in ch:
-                                    _collect_names(c)
+                                    _collect_names(c, visited, depth + 1)
                             elif isinstance(ch, dict):
-                                _collect_names(ch)
+                                _collect_names(ch, visited, depth + 1)
                         if obj is not cur:
                             for key in CONTAINER_KEYS:
                                 if key == 'node':
@@ -235,21 +250,23 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                                 ch = obj.get(key)
                                 if isinstance(ch, list):
                                     for c in ch:
-                                        _collect_names(c)
+                                        _collect_names(c, visited, depth + 1)
                                 elif isinstance(ch, dict):
-                                    _collect_names(ch)
+                                    _collect_names(ch, visited, depth + 1)
                         for v in cur.values():
-                            _collect_names(v)
+                            _collect_names(v, visited, depth + 1)
                         if obj is not cur:
                             for k, v in obj.items():
                                 if k not in CONTAINER_KEYS:
-                                    _collect_names(v)
+                                    _collect_names(v, visited, depth + 1)
                     else:
-                        for v in obj.values():
-                            _collect_names(v)
+                        # cur이 dict가 아닌 경우, obj가 dict라면 obj의 값들을 순회
+                        if isinstance(obj, dict):
+                            for v in obj.values():
+                                _collect_names(v, visited, depth + 1)
                 elif isinstance(obj, list):
                     for it in obj:
-                        _collect_names(it)
+                        _collect_names(it, visited, depth + 1)
             _collect_names(ast_list)
         except (OSError, json.JSONDecodeError, UnicodeError) as e:
             logging.trace("AST load for existing_names failed: %s", e)
