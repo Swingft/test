@@ -389,18 +389,31 @@ def _expand_and_dedupe(candidates: List[Path]) -> List[Path]:
             continue
         if c.suffix == ".xcworkspace":
             try:
-                for pj in find_projects_in_workspace(c):
+                # 안전한 함수 호출 및 결과 검증
+                workspace_projects = find_projects_in_workspace(c)
+                if not isinstance(workspace_projects, list):
+                    continue
+                
+                for pj in workspace_projects:
                     # 추가 검증
                     if not isinstance(pj, (str, Path)):
                         continue
+                    # 경로 정제 및 검증
                     try:
-                        pj = Path(os.path.abspath(pj))
-                        if pj not in seen and pj.exists():
-                            seen.add(pj)
-                            out.append(pj)
-                    except (OSError, ValueError, TypeError):
+                        pj_str = str(pj)
+                        if not pj_str or not isinstance(pj_str, str):
+                            continue
+                        # 안전한 Path 변환
+                        pj_path = Path(os.path.abspath(pj_str))
+                        if not isinstance(pj_path, Path):
+                            continue
+                        # 존재 여부 및 중복 검사
+                        if pj_path not in seen and pj_path.exists():
+                            seen.add(pj_path)
+                            out.append(pj_path)
+                    except (OSError, ValueError, TypeError, AttributeError):
                         continue
-            except (OSError, ET.ParseError, UnicodeError) as e:
+            except (OSError, ET.ParseError, UnicodeError, TypeError, ValueError) as e:
                 _trace("workspace scan failed for %s: %s", c, e)
                 _maybe_raise(e)
                 print(f"[warn] workspace scan failed: {e}")
