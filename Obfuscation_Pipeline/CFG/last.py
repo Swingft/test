@@ -392,8 +392,9 @@ def copy_StringSecurity_folder(source_root: str) -> None:
         _maybe_raise(e)
         try:
             os.chdir(script_dir)
-        except OSError:
-            pass
+        except OSError as e:
+            _trace("Failed to change directory to script_dir: %s", e)
+            # 디렉토리 변경 실패는 치명적이지 않으므로 로깅만 하고 계속 진행
         return 1
 
 

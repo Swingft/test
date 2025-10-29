@@ -165,84 +165,84 @@ func processFile(_ url: URL) -> ([StringLiteralRecord], [LocKey:String], [String
         }
     }
 
-{
+do {
     let v = DebugStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "debug", locs: v.debugStrings.map { $0.0 })
 }
-{
+do {
     let v = AttributeStringLineCollector(filePath: url.path, source: src)
     v.walk(tree)
     let locs = v.lines.map { "\(url.path):\($0)" }
     exclude(v, reason: "attribute", locs: locs)
 }
 
-{
+do {
     let v = EntryPointStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "entrypoint", locs: v.entryPointStrings.map { $0.0 })
 }
 
-{
+do {
     let v = GlobalStringCollector(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "global", locs: v.globalStrings.map { $0.0 })
 }
 
-{
+do {
     let v = IdentifierStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "identifier", locs: v.identifierStrings.map { $0.0 })
 }
 
-{
+do {
     let v = LocalizedStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "localized", locs: v.localizedStrings.map { $0.0 })
 }
 
-{
+do {
     let v = UIKeyLikeStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "ui_keylike", locs: v.uiKeyStrings.map { $0.0 })
 }
 
-{
+do {
     let v = InterpolatedStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "interpolated", locs: v.interpolatedStrings.map { $0.0 })
 }
-{
+do {
     let v = ImageLiteralStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "image_literal", locs: Array(v.locations))
 }
 
-{
+do {
     let v = ResourceLikeExcluder(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "resource_like", locs: Array(v.locations))
 }
 
-{
+do {
     let v = ViewContainerStringExcluder(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "view_container", locs: Array(v.locations))
 }
 
-{
+do {
     let v = ShortOrBlankStringExcluder(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "short_or_blank", locs: Array(v.locations))
 }
 
-{
+do {
     let v = DataSourceConformanceExcluder(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "datasource_conformance", locs: Array(v.locations))
 }
 
-{
+do {
     let v = EnumRawValueCaseStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
     v.walk(tree)
     exclude(v, reason: "enum_rawvalue", locs: Array(v.locations))
@@ -253,8 +253,9 @@ func processFile(_ url: URL) -> ([StringLiteralRecord], [LocKey:String], [String
         let key = "\(rec.file):\(rec.line)"
         return !excludedLocations.contains(key)
     }
-
-    return (filtered, exclusionReasons, allRecords)
+    else {
+        return (filtered, exclusionReasons, allRecords)
+    }
 }
 
 func main() {
