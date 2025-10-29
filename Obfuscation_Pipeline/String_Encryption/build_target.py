@@ -388,36 +388,49 @@ def _expand_and_dedupe(candidates: List[Path]) -> List[Path]:
         if not isinstance(c.suffix, str):
             continue
         if c.suffix == ".xcworkspace":
+            # 네트워크/URL/UNC 경로 차단 및 심볼릭 링크 거부로 DNS/원격 의존 분기 제거
+            try:
+                cs = str(c)
+            except Exception:
+                continue
+            if ("://" in cs) or cs.startswith("//") or cs.startswith("\\\\"):
+                continue
+            try:
+                if getattr(c, "is_symlink", None) and c.is_symlink():
+                    continue
+            except Exception:
+                # symlink 확인 실패 시 보수적으로 건너뜀
+                continue
             try:
                 # 안전한 함수 호출 및 결과 검증
                 workspace_projects = find_projects_in_workspace(c)
                 if not isinstance(workspace_projects, list):
                     continue
-                
-                for pj in workspace_projects:
-                    # 추가 검증
-                    if not isinstance(pj, (str, Path)):
-                        continue
-                    # 경로 정제 및 검증
-                    try:
-                        pj_str = str(pj)
-                        if not pj_str or not isinstance(pj_str, str):
-                            continue
-                        # 안전한 Path 변환
-                        pj_path = Path(os.path.abspath(pj_str))
-                        if not isinstance(pj_path, Path):
-                            continue
-                        # 존재 여부 및 중복 검사
-                        if pj_path not in seen and pj_path.exists():
-                            seen.add(pj_path)
-                            out.append(pj_path)
-                    except (OSError, ValueError, TypeError, AttributeError):
-                        continue
             except (OSError, ET.ParseError, UnicodeError, TypeError, ValueError) as e:
                 _trace("workspace scan failed for %s: %s", c, e)
                 _maybe_raise(e)
                 print(f"[warn] workspace scan failed: {e}")
                 continue
+            
+            for pj in workspace_projects:
+                # 추가 검증
+                if not isinstance(pj, (str, Path)):
+                    continue
+                # 경로 정제 및 검증
+                try:
+                    pj_str = str(pj)
+                    if not pj_str or not isinstance(pj_str, str):
+                        continue
+                    # 안전한 Path 변환
+                    pj_path = Path(os.path.abspath(pj_str))
+                    if not isinstance(pj_path, Path):
+                        continue
+                    # 존재 여부 및 중복 검사
+                    if pj_path not in seen and pj_path.exists():
+                        seen.add(pj_path)
+                        out.append(pj_path)
+                except (OSError, ValueError, TypeError, AttributeError):
+                    continue
         elif c.suffix == ".xcodeproj":
             try:
                 pj = Path(os.path.abspath(c))
