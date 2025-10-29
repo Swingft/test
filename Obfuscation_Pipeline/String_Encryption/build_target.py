@@ -118,25 +118,77 @@ class PBXProj:
 
     def _parse_native_targets(self) -> Dict[str, Dict[str, object]]:
         out: Dict[str, Dict[str, object]] = {}
-        for blk in parse_blocks(self.sec_native_target):
-            ids = HEX_ID_RE.findall(blk)
-            if not ids:
+        # 입력 검증
+        if not hasattr(self, 'sec_native_target') or not self.sec_native_target:
+            return out
+        try:
+            blocks = parse_blocks(self.sec_native_target)
+            if not isinstance(blocks, (list, tuple)):
+                return out
+        except (TypeError, ValueError, AttributeError):
+            return out
+        
+        for blk in blocks:
+            # 블록 검증
+            if not isinstance(blk, str):
                 continue
-            oid = ids[0]
-            out[oid] = {
-                "name": sstr(kv(blk, 'name')),
-                "buildPhases": parse_list(kv(blk, 'buildPhases')),
-            }
+            # 안전한 정규식 매칭
+            try:
+                ids = HEX_ID_RE.findall(blk)
+                if not ids or not isinstance(ids, list):
+                    continue
+                # ID 검증
+                oid = ids[0]
+                if not isinstance(oid, str) or not oid.strip():
+                    continue
+                # 안전한 파싱
+                try:
+                    name = sstr(kv(blk, 'name'))
+                    build_phases = parse_list(kv(blk, 'buildPhases'))
+                    out[oid] = {
+                        "name": name,
+                        "buildPhases": build_phases if isinstance(build_phases, list) else [],
+                    }
+                except (TypeError, ValueError, AttributeError):
+                    continue
+            except (TypeError, ValueError, AttributeError):
+                continue
         return out
 
     def _parse_sources_phases(self) -> Dict[str, Dict[str, List[str]]]:
         out: Dict[str, Dict[str, List[str]]] = {}
-        for blk in parse_blocks(self.sec_sources_phase):
-            ids = HEX_ID_RE.findall(blk)
-            if not ids:
+        # 입력 검증
+        if not hasattr(self, 'sec_sources_phase') or not self.sec_sources_phase:
+            return out
+        try:
+            blocks = parse_blocks(self.sec_sources_phase)
+            if not isinstance(blocks, (list, tuple)):
+                return out
+        except (TypeError, ValueError, AttributeError):
+            return out
+        
+        for blk in blocks:
+            # 블록 검증
+            if not isinstance(blk, str):
                 continue
-            oid = ids[0]
-            out[oid] = {"files": parse_list(kv(blk, 'files'))}
+            # 안전한 정규식 매칭
+            try:
+                ids = HEX_ID_RE.findall(blk)
+                if not ids or not isinstance(ids, list):
+                    continue
+                # ID 검증
+                oid = ids[0]
+                if not isinstance(oid, str) or not oid.strip():
+                    continue
+                # 안전한 파싱
+                try:
+                    files = parse_list(kv(blk, 'files'))
+                    if isinstance(files, list):
+                        out[oid] = {"files": files}
+                except (TypeError, ValueError, AttributeError):
+                    continue
+            except (TypeError, ValueError, AttributeError):
+                continue
         return out
 
     def _parse_build_files(self) -> Dict[str, Dict[str, Optional[str]]]:
@@ -152,19 +204,43 @@ class PBXProj:
 
     def _parse_file_refs(self) -> Dict[str, Dict[str, Optional[str]]]:
         out: Dict[str, Dict[str, Optional[str]]] = {}
-        for blk in parse_blocks(self.sec_file_ref):
-            ids = HEX_ID_RE.findall(blk)
-            if not ids:
+        # 입력 검증
+        if not hasattr(self, 'sec_file_ref') or not self.sec_file_ref:
+            return out
+        try:
+            blocks = parse_blocks(self.sec_file_ref)
+            if not isinstance(blocks, (list, tuple)):
+                return out
+        except (TypeError, ValueError, AttributeError):
+            return out
+        
+        for blk in blocks:
+            # 블록 검증
+            if not isinstance(blk, str):
                 continue
-            oid = ids[0]
-            out[oid] = {
-                "id": oid,
-                "name": sstr(kv(blk, 'name')),
-                "path": sstr(kv(blk, 'path')),
-                "sourceTree": sstr(kv(blk, 'sourceTree')),
-                "lastKnownFileType": sstr(kv(blk, 'lastKnownFileType')),
-                "explicitFileType": sstr(kv(blk, 'explicitFileType')),
-            }
+            # 안전한 정규식 매칭
+            try:
+                ids = HEX_ID_RE.findall(blk)
+                if not ids or not isinstance(ids, list):
+                    continue
+                # ID 검증
+                oid = ids[0]
+                if not isinstance(oid, str) or not oid.strip():
+                    continue
+                # 안전한 파싱
+                try:
+                    out[oid] = {
+                        "id": oid,
+                        "name": sstr(kv(blk, 'name')),
+                        "path": sstr(kv(blk, 'path')),
+                        "sourceTree": sstr(kv(blk, 'sourceTree')),
+                        "lastKnownFileType": sstr(kv(blk, 'lastKnownFileType')),
+                        "explicitFileType": sstr(kv(blk, 'explicitFileType')),
+                    }
+                except (TypeError, ValueError, AttributeError):
+                    continue
+            except (TypeError, ValueError, AttributeError):
+                continue
         return out
 
     def _parse_groups_and_main(self):
@@ -269,12 +345,28 @@ def find_projects_in_workspace(xcworkspace: Path) -> List[Path]:
     projects: List[Path] = []
     for fr in root.findall(".//FileRef"):
         loc = fr.get("location") or ""
+        # 입력 검증 및 정제
+        if not isinstance(loc, str):
+            continue
+        # 안전한 경로 분리
         p = loc.split(":", 1)[1] if ":" in loc else loc
         p = p.strip()
-        if p.endswith(".xcodeproj"):
+        # 경로 검증: 상대 경로만 허용하고 위험한 패턴 차단
+        if not p or ".." in p or p.startswith("/") or "\\" in p:
+            continue
+        # 확장자 검증
+        if not p.endswith(".xcodeproj"):
+            continue
+        # 경로 길이 제한
+        if len(p) > 500:
+            continue
+        try:
             proj_path = Path(os.path.abspath(xcworkspace.parent / p))
-            if proj_path.exists():
+            if proj_path.exists() and proj_path.is_file():
                 projects.append(proj_path)
+        except (OSError, ValueError):
+            # 잘못된 경로는 무시
+            continue
     return projects
 
 
@@ -282,24 +374,45 @@ def _expand_and_dedupe(candidates: List[Path]) -> List[Path]:
     out: List[Path] = []
     seen = set()
     for c in candidates:
-        c = Path(c)
+        # 입력 검증
+        if not isinstance(c, (str, Path)):
+            continue
+        try:
+            c = Path(c)
+        except (OSError, ValueError, TypeError):
+            continue
+        # 경로 정제 및 검증
+        if not c.exists():
+            continue
+        # 안전한 확장자 검증
+        if not isinstance(c.suffix, str):
+            continue
         if c.suffix == ".xcworkspace":
             try:
                 for pj in find_projects_in_workspace(c):
-                    pj = Path(os.path.abspath(pj))
-                    if pj not in seen:
-                        seen.add(pj)
-                        out.append(pj)
+                    # 추가 검증
+                    if not isinstance(pj, (str, Path)):
+                        continue
+                    try:
+                        pj = Path(os.path.abspath(pj))
+                        if pj not in seen and pj.exists():
+                            seen.add(pj)
+                            out.append(pj)
+                    except (OSError, ValueError, TypeError):
+                        continue
             except (OSError, ET.ParseError, UnicodeError) as e:
                 _trace("workspace scan failed for %s: %s", c, e)
                 _maybe_raise(e)
                 print(f"[warn] workspace scan failed: {e}")
                 continue
         elif c.suffix == ".xcodeproj":
-            pj = Path(os.path.abspath(c))
-            if pj not in seen:
-                seen.add(pj)
-                out.append(pj)
+            try:
+                pj = Path(os.path.abspath(c))
+                if pj not in seen and pj.exists():
+                    seen.add(pj)
+                    out.append(pj)
+            except (OSError, ValueError, TypeError):
+                continue
     return out
 
 
