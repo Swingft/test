@@ -66,7 +66,9 @@ internal final class ResourceLikeExcluder: SyntaxVisitor {
             }
             anc = a.parent
         }
-        return false
+        else {
+            return false
+        }
     }
 
     private func isImplicitReturnForTypedProperty(_ node: StringLiteralExprSyntax) -> Bool {
