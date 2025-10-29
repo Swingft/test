@@ -103,22 +103,18 @@ internal final class ResourceLikeExcluder: SyntaxVisitor {
         guard let element = dictElement else { return false }
 
         var up: Syntax? = element.parent
-        var matched = false
         while let a = up {
             if let binding = a.as(PatternBindingSyntax.self) {
                 if let dict = binding.typeAnnotation?.type.as(DictionaryTypeSyntax.self) {
-                    matched = matchesTarget(dict.value.trimmedDescription)
-                    if matched { break }
+                    if matchesTarget(dict.value.trimmedDescription) { return true }
                 }
                 if let ty = binding.typeAnnotation?.type.trimmedDescription,
-                   let val = ty.split(separator: ":").last.map({ String($0).trimmingCharacters(in: .whitespacesAndNewlines).trimmingCharacters(in: CharacterSet(charactersIn: "[]")) }) {
-                    matched = matchesTarget(val)
-                    if matched { break }
-                }
+                   let val = ty.split(separator: ":").last.map({ String($0).trimmingCharacters(in: .whitespacesAndNewlines).trimmingCharacters(in: CharacterSet(charactersIn: "[]")) }),
+                   matchesTarget(val) { return true }
             }
             up = a.parent
         }
-        return matched
+        return false
     }
 
     private func isInTargetDictValueViaAsCast(_ node: StringLiteralExprSyntax) -> Bool {

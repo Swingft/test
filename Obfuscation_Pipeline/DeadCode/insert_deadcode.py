@@ -74,8 +74,12 @@ def insert_deadcode(swift_file_path):
 
             if not in_comment and not in_string and level == 1:
                 if "func " in line and "static " not in line and "->" not in line and "{" in line and "}" not in line:
-                    prev_line = tmp_lines[idx - 1].strip() if idx > 0 else ""
-                    if not prev_line.startswith("@") and not prev_line.startswith("//") and not prev_line.startswith("/*") and not prev_line.endswith("*/"):
+                    prev_line = tmp_lines[idx - 1] if idx > 0 else ""
+                    prev_line = "" if prev_line is None else str(prev_line).strip()
+                    # append only when there is a real previous line and it is not an attribute/comment terminator
+                    if idx > 0 and not (
+                        prev_line.startswith("@") or prev_line.startswith("//") or prev_line.startswith("/*") or prev_line.endswith("*/")
+                    ):
                         func_line.append(idx - 1)
                     call_line.append(idx + 1)
 

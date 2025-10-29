@@ -72,8 +72,7 @@ struct EnumInfoExtractorTest {
                 memberList.append(InitInfoExtractor.extract(from: initDecl, locationHandler: locationHandler))
             }
         }
-        
-        let result = memberList
-        return result
+        else {
+        return memberList
     }
 }
