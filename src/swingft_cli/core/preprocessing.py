@@ -155,8 +155,8 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
         finally:
             try:
                 line_queue.put(None)
-            except Exception as e:
-                logging.debug("reader: queue put None failed: %s", e)
+            except (OSError, ValueError, TypeError, RuntimeError, UnicodeError) as e:
+                logging.debug("unhandled exception caught: %s", e)
                 _maybe_raise(e)
 
     t = threading.Thread(target=_reader, daemon=True)
@@ -255,6 +255,6 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
     # 로그 정리
     try:
         tail1.clear()
-    except Exception as e:
+    except (AttributeError, RuntimeError, TypeError) as e:
         logging.debug("tail clear failed: %s", e)
         _maybe_raise(e)

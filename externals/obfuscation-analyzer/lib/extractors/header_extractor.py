@@ -22,14 +22,16 @@ import os
 def _trace(msg: str, *args, **kwargs) -> None:
     try:
         logging.log(10, msg, *args, **kwargs)
-    except Exception:
+    except (OSError, ValueError, TypeError, AttributeError) as e:
+        # 로깅 실패 시에도 프로그램은 계속 진행
         return
 
 def _maybe_raise(e: BaseException) -> None:
     try:
         if str(os.environ.get("SWINGFT_TUI_STRICT", "")).strip() == "1":
             raise e
-    except Exception:
+    except (OSError, ValueError, TypeError, AttributeError) as e:
+        # 환경변수 읽기 실패 시에는 무시하고 계속 진행
         return
 
 

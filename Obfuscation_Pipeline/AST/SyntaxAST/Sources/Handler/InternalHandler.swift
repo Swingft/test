@@ -79,7 +79,15 @@ internal class InternalHandler {
         let importResult = allImports.flatMap { $0 }
         if !allImports.isEmpty {
             let importOutputDir = URL(fileURLWithPath: "../output/")
-            do { try FileManager.default.createDirectory(at: importOutputDir, withIntermediateDirectories: true) } catch {}
+            do {
+                try FileManager.default.createDirectory(at: importOutputDir, withIntermediateDirectories: true)
+            } catch let e as CocoaError {
+                fputs("[ERROR] Failed to create ../output directory (CocoaError): \(e.localizedDescription)\n", stderr)
+            } catch let e as POSIXError {
+                fputs("[ERROR] Failed to create ../output directory (POSIX): code=\(e.code.rawValue) desc=\(e.localizedDescription)\n", stderr)
+            } catch let e as NSError {
+                fputs("[ERROR] Failed to create ../output directory (NSError): \(e.domain)/\(e.code) \(e.localizedDescription)\n", stderr)
+            }
             let importOutputFile = importOutputDir.appendingPathComponent("import_list.txt")
             do {
                 let jsonData = try encoder.encode(importResult)
@@ -116,4 +124,3 @@ internal class InternalHandler {
         }
     }
 }
-

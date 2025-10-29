@@ -108,7 +108,7 @@ class ObfuscationAnalyzer:
             self._trace("HeaderScanner initialization failed: %s", e)
             self._maybe_raise(e)
             print(f"⚠️  경고: 헤더 스캔 실패 - {e}")
-        except Exception as e:
+        except (RuntimeError, MemoryError, SystemError) as e:
             self._trace("Unexpected error in header scanning: %s", e)
             self._maybe_raise(e)
             print(f"❌ 오류: 헤더 스캔 중 예상치 못한 오류 - {e}")
@@ -124,7 +124,7 @@ class ObfuscationAnalyzer:
             self._trace("Failed to save external identifiers: %s", e)
             self._maybe_raise(e)
             print(f"⚠️  경고: 식별자 저장 실패 - {e}")
-        except Exception as e:
+        except (RuntimeError, MemoryError, SystemError) as e:
             self._trace("Unexpected error saving identifiers: %s", e)
             self._maybe_raise(e)
             print(f"❌ 오류: 식별자 저장 중 예상치 못한 오류 - {e}")
@@ -148,7 +148,7 @@ class ObfuscationAnalyzer:
             self._trace("Failed to save exclusion list: %s", e)
             self._maybe_raise(e)
             print(f"⚠️  경고: 제외 리스트 저장 실패 - {e}")
-        except Exception as e:
+        except (RuntimeError, MemoryError, SystemError) as e:
             self._trace("Unexpected error saving exclusion list: %s", e)
             self._maybe_raise(e)
             print(f"❌ 오류: 제외 리스트 저장 중 예상치 못한 오류 - {e}")
@@ -192,7 +192,7 @@ class ObfuscationAnalyzer:
                     self._trace("Failed to read Package.swift: %s", e)
                     self._maybe_raise(e)
                     print(f"⚠️  경고: Package.swift 읽기 실패 - {e}")
-                except Exception as e:
+                except (RuntimeError, MemoryError, SystemError) as e:
                     self._trace("Unexpected error reading Package.swift: %s", e)
                     self._maybe_raise(e)
                     print(f"❌ 오류: Package.swift 읽기 중 예상치 못한 오류 - {e}")
@@ -267,7 +267,7 @@ def main():
     except (OSError, PermissionError) as e:
         print(f"❌ 파일 시스템 오류: {e}")
         sys.exit(1)
-    except Exception as e:
+    except (RuntimeError, MemoryError, SystemError) as e:
         print(f"❌ 예상치 못한 오류: {e}")
         if args.debug:
             import traceback

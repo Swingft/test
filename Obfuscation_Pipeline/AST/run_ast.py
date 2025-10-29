@@ -91,7 +91,7 @@ def run_ast(code_project_dir):
         _maybe_raise(e)
         _log_warning("설정 파일 로드 실패 - %s", e)
         # 설정 로드 실패 시에는 기존 동작 유지
-    except Exception as e:
+    except (RuntimeError, MemoryError, SystemError) as e:
         _trace("Unexpected error loading config: %s", e)
         _maybe_raise(e)
         _log_error("설정 로드 중 예상치 못한 오류 - %s", e)
@@ -109,7 +109,7 @@ def run_ast(code_project_dir):
         _maybe_raise(e)
         _log_error("출력 디렉토리 생성 실패 - %s", e)
         return
-    except Exception as e:
+    except (RuntimeError, MemoryError, SystemError) as e:
         _trace("Unexpected error creating directories: %s", e)
         _maybe_raise(e)
         _log_error("디렉토리 생성 중 예상치 못한 오류 - %s", e)
@@ -119,7 +119,7 @@ def run_ast(code_project_dir):
     try:
         find_internal_files(code_project_dir)
         find_external_files(code_project_dir)
-    except Exception as e:
+    except (RuntimeError, MemoryError, SystemError) as e:
         _trace("Failed to find files: %s", e)
         _maybe_raise(e)
         _log_warning("파일 수집 실패 - %s", e)
@@ -129,7 +129,7 @@ def run_ast(code_project_dir):
         run_swift_syntax()
         os.chdir(original_dir)
         integration_ast()
-    except Exception as e:
+    except (RuntimeError, MemoryError, SystemError) as e:
         _trace("Failed to run Swift syntax analysis: %s", e)
         _maybe_raise(e)
         _log_error("Swift 구문 분석 실패 - %s", e)
@@ -139,7 +139,7 @@ def run_ast(code_project_dir):
     try:
         find_external_candidates()
         match_candidates_external()
-    except Exception as e:
+    except (RuntimeError, MemoryError, SystemError) as e:
         _trace("Failed to process external candidates: %s", e)
         _maybe_raise(e)
         _log_warning("외부 후보 처리 실패 - %s", e)
@@ -151,7 +151,7 @@ def run_ast(code_project_dir):
         if os.path.exists(path):
             p_same_name = find_standard_sdk()
             match_candidates_sdk()
-    except Exception as e:
+    except (RuntimeError, MemoryError, SystemError) as e:
         _trace("Failed to process standard SDK: %s", e)
         _maybe_raise(e)
         _log_warning("표준 SDK 처리 실패 - %s", e)
@@ -162,7 +162,7 @@ def run_ast(code_project_dir):
         find_keyword()
         p_same_name.update(get_external_name())
         find_exception_target(p_same_name)
-    except Exception as e:
+    except (RuntimeError, MemoryError, SystemError) as e:
         _trace("Failed to process wrapper candidates and exceptions: %s", e)
         _maybe_raise(e)
         _log_warning("래퍼 후보 및 예외 처리 실패 - %s", e)
@@ -171,7 +171,7 @@ def run_ast(code_project_dir):
     try:
         merge_exception_list()
         exception_tagging()
-    except Exception as e:
+    except (RuntimeError, MemoryError, SystemError) as e:
         _trace("Failed to merge exception list and tagging: %s", e)
         _maybe_raise(e)
         _log_error("예외 리스트 병합 및 태깅 실패 - %s", e)

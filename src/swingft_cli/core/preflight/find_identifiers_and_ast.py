@@ -40,7 +40,7 @@ from typing import List, Dict, Any, Optional, Tuple
 # strict-mode helper
 try:
     from ..tui import _maybe_raise  # when executed as a package module
-except Exception:
+except ImportError:
     # Fallback for direct execution without TUI context
     def _maybe_raise(e: BaseException) -> None:
         import os

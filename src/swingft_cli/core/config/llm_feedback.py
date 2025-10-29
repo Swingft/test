@@ -13,7 +13,7 @@ except ImportError as _imp_err:
         try:
             import logging as _lg
             _lg.log(10, msg, *args, **kwargs)
-        except Exception:
+        except (ValueError, TypeError, OSError, UnicodeError, AttributeError) as e:
             return
 
     _trace("fallback _maybe_raise due to ImportError: %s", _imp_err)

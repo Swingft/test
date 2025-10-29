@@ -16,7 +16,7 @@ def run_streamed(cmd, tag):
     except OSError as e:
         print(f"[ERROR] OS error while launching ({tag}): {e}", flush=True)
         return 126
-    except Exception as e:
+    except (RuntimeError, MemoryError, SystemError) as e:
         print(f"[ERROR] Unexpected error while starting ({tag}): {e}", flush=True)
         return 126
 
@@ -104,7 +104,7 @@ def main():
         except OSError as e:
             print(f"[WARN] Failed to read source file {f}: {e}", flush=True)
             continue
-        except Exception as e:
+        except (RuntimeError, MemoryError, SystemError) as e:
             print(f"[WARN] Unexpected error reading {f}: {e}", flush=True)
             continue
 
@@ -134,7 +134,7 @@ def main():
         except OSError as e:
             print(f"[WARN] Failed to reread {f}: {e}", flush=True)
             continue
-        except Exception as e:
+        except (RuntimeError, MemoryError, SystemError) as e:
             print(f"[WARN] Unexpected error rereading {f}: {e}", flush=True)
             continue
 
@@ -156,7 +156,7 @@ def main():
                 changed += 1
             except OSError as e:
                 print(f"[WARN] Failed to write diff for {f}: {e}", flush=True)
-            except Exception as e:
+            except (RuntimeError, MemoryError, SystemError) as e:
                 print(f"[WARN] Unexpected error writing diff for {f}: {e}", flush=True)
 
     print(f"Swingft_CFF completed. Changed files: {changed}", flush=True)
@@ -167,7 +167,7 @@ def main():
             ast_json_path.unlink()
     except OSError as e:
         print(f"[WARN] Failed to delete ast.json: {e}", flush=True)
-    except Exception as e:
+    except (RuntimeError, MemoryError, SystemError) as e:
         print(f"[WARN] Unexpected error deleting ast.json: {e}", flush=True)
 
 

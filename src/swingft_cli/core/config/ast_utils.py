@@ -15,7 +15,8 @@ except ImportError as _imp_err:
         try:
             import logging as _lg
             _lg.log(10, msg, *args, **kwargs)
-        except Exception:
+        except (OSError, ValueError, TypeError, AttributeError) as e:
+            # 로깅 실패 시에도 프로그램은 계속 진행
             return
     _trace("fallback _maybe_raise due to ImportError: %s", _imp_err)
     def _maybe_raise(e: BaseException) -> None:
@@ -210,7 +211,8 @@ def update_ast_node_exceptions(
     if not isinstance(ast_list, list):
         if not quiet:
             print(f"[preflight] ERROR: ast_node.json is not a list")
-        return
+        # Normalize to empty list to keep downstream logic safe without early return
+        ast_list = []
 
     def _parse_spec(spec: str):
         if not isinstance(spec, str):

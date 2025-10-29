@@ -25,7 +25,7 @@ def _trace(msg: str, *args, **kwargs) -> None:
     # numeric-level logger to avoid literal level-name tokens
     try:
         logging.log(10, msg, *args, **kwargs)
-    except Exception:
+    except (ValueError, TypeError, OSError, UnicodeError):
         return
 
 def _term_width(default: int = 80) -> int:
@@ -33,7 +33,7 @@ def _term_width(default: int = 80) -> int:
         import shutil as _shutil
         size = _shutil.get_terminal_size((default, 24))
         return max(20, int(size.columns))
-    except Exception:
+    except (OSError, ValueError, ImportError):
         return default
 
 def progress_bar(completed: int, total: int, width: int = 30) -> str:
@@ -261,7 +261,7 @@ class TUI:
                     pause_fn()
                 except KeyboardInterrupt:
                     raise
-                except Exception as e:
+                except (OSError, ValueError, TypeError, UnicodeError, RuntimeError) as e:
                     logging.warning("pause_fn raised: %s", e)
                     _maybe_raise(e)
 
