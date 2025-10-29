@@ -363,7 +363,7 @@ def main():
     # 타겟 로드
     try:
         targets_by_kind = load_targets_from_json(targets_path)
-    except Exception as e:
+    except (OSError, json.JSONDecodeError, UnicodeError, ValueError, TypeError) as e:
         print(f"타겟 파일 로드 실패: {e}", file=sys.stderr)
         sys.exit(1)
     
@@ -385,7 +385,7 @@ def main():
             sys.exit(1)
         try:
             forbidden.update(load_exclude_names(exclude_path))
-        except Exception as e:
+        except (OSError, json.JSONDecodeError, UnicodeError, ValueError, TypeError) as e:
             print(f"제외 JSON 로드 실패: {e}", file=sys.stderr)
             sys.exit(1)
 
@@ -404,7 +404,7 @@ def main():
             mapping = create_mapping(targets, pool_dir, index_dir, kind, rnd, forbidden, used_repls, args.cluster_threshold)
             result[kind] = mapping
             print(f"[{kind}] {len(mapping)}/{len(targets)} 매핑 생성 (누적 사용된 대체명: {len(used_repls)})")
-        except Exception as e:
+        except (OSError, ValueError, TypeError, RuntimeError, MemoryError) as e:
             print(f"[{kind}] 매핑 실패: {e}", file=sys.stderr)
             result[kind] = []
     

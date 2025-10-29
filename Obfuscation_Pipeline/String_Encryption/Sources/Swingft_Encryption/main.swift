@@ -136,7 +136,17 @@ func processFile(_ url: URL) -> ([StringLiteralRecord], [LocKey:String], [String
             return ([], [:], [])
         }
         src = s
-    } catch {
+    } catch let e as CocoaError {
+        fputs("File read failed (CocoaError): \(e.localizedDescription)\n", stderr)
+        return ([], [:], [])
+    } catch let e as POSIXError {
+        fputs("File read failed (POSIXError): code=\(e.code.rawValue) desc=\(e.localizedDescription)\n", stderr)
+        return ([], [:], [])
+    } catch let e as NSError {
+        fputs("File read failed (NSError): domain=\(e.domain) code=\(e.code) desc=\(e.localizedDescription)\n", stderr)
+        return ([], [:], [])
+    } catch let e {
+        fputs("File read failed (Error): \(e.localizedDescription)\n", stderr)
         return ([], [:], [])
     }
     let tree = Parser.parse(source: src)

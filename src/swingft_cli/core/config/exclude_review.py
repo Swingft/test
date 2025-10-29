@@ -314,10 +314,12 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             # 세션 로그로도 남김
             try:
                 _write_feedback_to_output(config, "exclude_session", "\n".join(_capture + ["", *fb]))
-            except Exception:
-                pass
-        except Exception:
-            pass
+            except (OSError, UnicodeError, ValueError, TypeError, AttributeError) as e:
+                logging.debug("exclude_session 저장 실패: %s", e)
+                _maybe_raise(e)
+        except (OSError, UnicodeError, ValueError, TypeError, AttributeError) as e:
+            logging.debug("exclude_candidates_skipped 처리 실패: %s", e)
+            _maybe_raise(e)
         return
     elif ex_policy == "force":
         decided_to_exclude = set(exclude_candidates)
@@ -336,10 +338,12 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             _append_terminal_log(config, fb)
             try:
                 _write_feedback_to_output(config, "exclude_session", "\n".join(_capture + ["", *fb]))
-            except Exception:
-                pass
-        except Exception:
-            pass
+            except (OSError, UnicodeError, ValueError, TypeError, AttributeError) as e:
+                logging.debug("exclude_session 저장 실패: %s", e)
+                _maybe_raise(e)
+        except (OSError, UnicodeError, ValueError, TypeError, AttributeError) as e:
+            logging.debug("exclude_candidates_forced 처리 실패: %s", e)
+            _maybe_raise(e)
     else:
         # ask 모드에서 LLM 판정과 사용자 확인을 함께 수행 (환경변수로 온/오프)
         use_llm = str(os.environ.get("SWINGFT_PREFLIGHT_EXCLUDE_USE_LLM", "1")).strip().lower() in {"1","true","yes","y","on"}
