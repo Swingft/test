@@ -46,7 +46,9 @@ internal final class LocalizedStringExtractor: SyntaxVisitor {
         if let member = node.calledExpression.as(MemberAccessExprSyntax.self) {
             if member.declName.baseName.text == "localized" { return true }
         }
-        return false
+        else {
+            return false
+        }
     }
 
   private func collectStrings(from expr: ExprSyntax) {

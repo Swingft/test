@@ -39,7 +39,9 @@ internal class Visitor: SyntaxVisitor {
             }
         }
         store.typealiasAppend(TypealiasInfo(aliasName: aliasName, protocols: protocols))
-        return .visitChildren
+        else {
+            return .visitChildren
+        }
     }
     
     override func visit(_ node: ProtocolDeclSyntax) -> SyntaxVisitorContinueKind {

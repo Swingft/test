@@ -52,8 +52,10 @@ internal final class UIKeyLikeStringExtractor: SyntaxVisitor {
             collectStrings(in: node.arguments)
             return .visitChildren
         }
-
-        return .visitChildren
+        
+        else {
+            return .visitChildren
+        }
     }
 
 
