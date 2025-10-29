@@ -82,7 +82,7 @@ except ImportError:
 try:
     from ..tui import _maybe_raise  # type: ignore
 except ImportError as _imp_err:  # narrow: only import-related failures
-    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    logging.trace("fallback _maybe_raise due to ImportError: %s", _imp_err)
     # Fallback minimal strict-mode handler if TUI import is unavailable
     def _maybe_raise(e: BaseException) -> None:
         import os
@@ -115,7 +115,7 @@ def _load_lines(file_path: str) -> List[str]:
         with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
             return f.readlines()
     except (OSError, UnicodeError) as e:
-        logging.debug("_load_lines failed: %s", e)
+        logging.trace("_load_lines failed: %s", e)
         _maybe_raise(e)
         return []
 
@@ -278,7 +278,7 @@ def _augment_report_with_declarations(report: Dict[str, Any]) -> Dict[str, Any]:
                 # keep at least decl_file for consistency
                 info["decl_file"] = file_path
         except (OSError, UnicodeError, ValueError, TypeError) as e:
-            logging.debug("declaration augment failed for %s: %s", ident, e)
+            logging.trace("declaration augment failed for %s: %s", ident, e)
             _maybe_raise(e)
             continue
     return report
@@ -305,7 +305,7 @@ def write_combined_payload_file(report: dict, out_path: Path, target_ids: List[s
             with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                 code_block = f.read().rstrip()
         except (OSError, UnicodeError) as e:
-            logging.debug("read code_block failed: %s", e)
+            logging.trace("read code_block failed: %s", e)
             _maybe_raise(e)
             code_block = ""
 
@@ -325,7 +325,7 @@ def write_combined_payload_file(report: dict, out_path: Path, target_ids: List[s
                 with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                     txt = f.read()
             except (OSError, UnicodeError) as e:
-                logging.debug("read txt for kind inference failed: %s", e)
+                logging.trace("read txt for kind inference failed: %s", e)
                 _maybe_raise(e)
                 txt = ""
             if re.search(rf'\bfunc\s+{re.escape(ident)}\b', txt or ""):
@@ -389,7 +389,7 @@ def _write_per_identifier_payload_files_from_report(report: dict, out_dir: Path,
             with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                 text = f.read()
         except (OSError, UnicodeError) as e:
-            logging.debug("infer_kind_from_text read failed: %s", e)
+            logging.trace("infer_kind_from_text read failed: %s", e)
             _maybe_raise(e)
             return "unknown"
         # Normalize ident and guard
@@ -423,7 +423,7 @@ def _write_per_identifier_payload_files_from_report(report: dict, out_dir: Path,
             with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                 code_block = f.read().rstrip()
         except (OSError, UnicodeError) as e:
-            logging.debug("per-id read failed (%s): %s", ident, e)
+            logging.trace("per-id read failed (%s): %s", ident, e)
             _maybe_raise(e)
             code_block = ""
 
@@ -495,7 +495,7 @@ def write_per_identifier_payload_files(project_root: str, identifiers, out_dir: 
             if s:
                 ids.append(s)
         except (ValueError, TypeError) as e:
-            logging.debug("identifier normalize failed: %s", e)
+            logging.trace("identifier normalize failed: %s", e)
             _maybe_raise(e)
             continue
     # de-duplicate while preserving order

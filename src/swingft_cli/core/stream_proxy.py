@@ -29,7 +29,7 @@ class StreamProxy:
         try:
             text = data if isinstance(data, str) else str(data)
         except (UnicodeError, TypeError, ValueError) as e:
-            logging.debug("StreamProxy.write: to-string failed: %s", e)
+            logging.trace("StreamProxy.write: to-string failed: %s", e)
             _maybe_raise(e)
             # if conversion failed, give up early
             return
@@ -52,7 +52,7 @@ class StreamProxy:
                         # best-effort status update for TUI panel
                         TUI().set_status([include_header, exclude_header, ""])  # isolated call
                     except (OSError, UnicodeEncodeError) as e:
-                        logging.debug("StreamProxy.write: set_status failed: %s", e)
+                        logging.trace("StreamProxy.write: set_status failed: %s", e)
                         _maybe_raise(e)
                     # create exclude echo then immediately switch current so upcoming lines go to exclude
                     try:
@@ -69,16 +69,16 @@ class StreamProxy:
                                 try:
                                     excl._tail.append(line)
                                 except (AttributeError) as e:
-                                    logging.debug("StreamProxy.write: tail append failed: %s", e)
+                                    logging.trace("StreamProxy.write: tail append failed: %s", e)
                                     _maybe_raise(e)
                     except AttributeError as e:
-                        logging.debug("StreamProxy.write: tail copy failed: %s", e)
+                        logging.trace("StreamProxy.write: tail copy failed: %s", e)
                         _maybe_raise(e)
                     # switch current before forwarding this write so Candidates go to exclude tail
                     if self._holder.get("proxy") is not None:
                         self._holder["current"] = "exclude"
                 except (OSError, UnicodeEncodeError, AttributeError) as e:
-                    logging.debug("StreamProxy.write: exclude-switch block failed: %s", e)
+                    logging.trace("StreamProxy.write: exclude-switch block failed: %s", e)
                     _maybe_raise(e)
 
         # 2) forward the actual write to the selected target

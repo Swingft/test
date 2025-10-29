@@ -65,7 +65,7 @@ def first_match_snippet(path: str, identifier: str, ctx_lines: int = 30, max_cha
         with open(path, 'r', encoding='utf-8', errors='ignore') as f:
             lines = f.readlines()
     except (OSError, UnicodeError) as e:
-        logging.debug("first_match_snippet read failed for %s: %s", path, e)
+        logging.trace("first_match_snippet read failed for %s: %s", path, e)
         _maybe_raise(e)
         return None
 
@@ -107,10 +107,10 @@ def run_external_swift_ast_analyzer(swift_file: str) -> Optional[Any]:
                     try:
                         return json.loads(proc.stdout)
                     except (json.JSONDecodeError, ValueError) as e:
-                        logging.debug("AST analyzer JSON decode failed: %s", e)
+                        logging.trace("AST analyzer JSON decode failed: %s", e)
                         return {"raw": proc.stdout}
             except (subprocess.TimeoutExpired, OSError, subprocess.SubprocessError) as e:
-                logging.debug("AST analyzer exec failed for %s: %s", swift_file, e)
+                logging.trace("AST analyzer exec failed for %s: %s", swift_file, e)
                 _maybe_raise(e)
                 continue
     return None
@@ -124,7 +124,7 @@ def heuristic_extract_ast(swift_file: str) -> List[Dict[str, Any]]:
     try:
         text = Path(swift_file).read_text(encoding='utf-8', errors='ignore')
     except (OSError, UnicodeError) as e:
-        logging.debug("heuristic_extract_ast read failed for %s: %s", swift_file, e)
+        logging.trace("heuristic_extract_ast read failed for %s: %s", swift_file, e)
         _maybe_raise(e)
         return symbols
 
