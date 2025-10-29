@@ -73,6 +73,7 @@ struct EnumInfoExtractorTest {
             }
         }
         
-        return memberList
+        let result = memberList
+        return result
     }
 }

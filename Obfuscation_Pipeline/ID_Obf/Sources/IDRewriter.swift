@@ -230,7 +230,9 @@ internal class IDRewriter: SyntaxRewriter {
             }
         )
         
-        return super.visit(node.with(\.bindings, newBindings))
+        else {
+            return super.visit(node.with(\.bindings, newBindings))
+        }
     }
     override func visit(_ node: AttributeListSyntax) -> AttributeListSyntax {
         return super.visit(node)

@@ -102,28 +102,25 @@ internal final class ResourceLikeExcluder: SyntaxVisitor {
         }
         guard let element = dictElement else { return false }
 
-        let nStart = node.positionAfterSkippingLeadingTrivia
-        let nEnd   = node.endPositionBeforeTrailingTrivia
-        let vStart = element.value.positionAfterSkippingLeadingTrivia
-        let vEnd   = element.value.endPositionBeforeTrailingTrivia
-        guard vStart <= nStart && nEnd <= vEnd else { return false }
-
         var up: Syntax? = element.parent
+        var matched = false
         while let a = up {
             if let binding = a.as(PatternBindingSyntax.self) {
                 if let dict = binding.typeAnnotation?.type.as(DictionaryTypeSyntax.self) {
-                    return matchesTarget(dict.value.trimmedDescription)
+                    matched = matchesTarget(dict.value.trimmedDescription)
+                    if matched { break }
                 }
                 if let ty = binding.typeAnnotation?.type.trimmedDescription,
-                   let val = ty.split(separator: ":").last.map({ String($0).trimmingCharacters(in: .whitespacesAndNewlines).trimmingCharacters(in: CharacterSet(charactersIn: "[]")) }),
-                   matchesTarget(val) { return true }
+                   let val = ty.split(separator: ":").last.map({ String($0).trimmingCharacters(in: .whitespacesAndNewlines).trimmingCharacters(in: CharacterSet(charactersIn: "[]")) }) {
+                    matched = matchesTarget(val)
+                    if matched { break }
+                }
             }
             up = a.parent
         }
-        return false
+        return matched
     }
 
-  
     private func isInTargetDictValueViaAsCast(_ node: StringLiteralExprSyntax) -> Bool {
         var anc: Syntax? = node.parent
         var sawDictElement = false
