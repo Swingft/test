@@ -165,96 +165,83 @@ func processFile(_ url: URL) -> ([StringLiteralRecord], [LocKey:String], [String
         }
     }
 
-do {
-    let v = DebugStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "debug", locs: v.debugStrings.map { $0.0 })
-}
-do {
-    let v = AttributeStringLineCollector(filePath: url.path, source: src)
-    v.walk(tree)
-    let locs = v.lines.map { "\(url.path):\($0)" }
-    exclude(v, reason: "attribute", locs: locs)
-}
+// Debug string extraction
+let v1 = DebugStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
+v1.walk(tree)
+exclude(v1, reason: "debug", locs: v1.debugStrings.map { $0.0 })
 
-do {
-    let v = EntryPointStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "entrypoint", locs: v.entryPointStrings.map { $0.0 })
-}
+// Attribute string line collection
+let v2 = AttributeStringLineCollector(filePath: url.path, source: src)
+v2.walk(tree)
+let locs2 = v2.lines.map { "\(url.path):\($0)" }
+exclude(v2, reason: "attribute", locs: locs2)
 
-do {
-    let v = GlobalStringCollector(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "global", locs: v.globalStrings.map { $0.0 })
-}
+// Entry point string extraction
+let v3 = EntryPointStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
+v3.walk(tree)
+exclude(v3, reason: "entrypoint", locs: v3.entryPointStrings.map { $0.0 })
 
-do {
-    let v = IdentifierStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "identifier", locs: v.identifierStrings.map { $0.0 })
-}
+// Global string collection
+let v4 = GlobalStringCollector(viewMode: .sourceAccurate, filePath: url.path)
+v4.walk(tree)
+exclude(v4, reason: "global", locs: v4.globalStrings.map { $0.0 })
 
-do {
-    let v = LocalizedStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "localized", locs: v.localizedStrings.map { $0.0 })
-}
+// Identifier string extraction
+let v5 = IdentifierStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
+v5.walk(tree)
+exclude(v5, reason: "identifier", locs: v5.identifierStrings.map { $0.0 })
 
-do {
-    let v = UIKeyLikeStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "ui_keylike", locs: v.uiKeyStrings.map { $0.0 })
-}
+// Localized string extraction
+let v6 = LocalizedStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
+v6.walk(tree)
+exclude(v6, reason: "localized", locs: v6.localizedStrings.map { $0.0 })
 
-do {
-    let v = InterpolatedStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "interpolated", locs: v.interpolatedStrings.map { $0.0 })
-}
-do {
-    let v = ImageLiteralStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "image_literal", locs: Array(v.locations))
-}
+// UI key-like string extraction
+let v7 = UIKeyLikeStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
+v7.walk(tree)
+exclude(v7, reason: "ui_keylike", locs: v7.uiKeyStrings.map { $0.0 })
 
-do {
-    let v = ResourceLikeExcluder(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "resource_like", locs: Array(v.locations))
-}
+// Interpolated string extraction
+let v8 = InterpolatedStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
+v8.walk(tree)
+exclude(v8, reason: "interpolated", locs: v8.interpolatedStrings.map { $0.0 })
 
-do {
-    let v = ViewContainerStringExcluder(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "view_container", locs: Array(v.locations))
-}
+// Image literal string extraction
+let v9 = ImageLiteralStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
+v9.walk(tree)
+exclude(v9, reason: "image_literal", locs: Array(v9.locations))
 
-do {
-    let v = ShortOrBlankStringExcluder(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "short_or_blank", locs: Array(v.locations))
-}
+// Resource-like string exclusion
+let v10 = ResourceLikeExcluder(viewMode: .sourceAccurate, filePath: url.path)
+v10.walk(tree)
+exclude(v10, reason: "resource_like", locs: Array(v10.locations))
 
-do {
-    let v = DataSourceConformanceExcluder(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "datasource_conformance", locs: Array(v.locations))
-}
+// View container string exclusion
+let v11 = ViewContainerStringExcluder(viewMode: .sourceAccurate, filePath: url.path)
+v11.walk(tree)
+exclude(v11, reason: "view_container", locs: Array(v11.locations))
 
-do {
-    let v = EnumRawValueCaseStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
-    v.walk(tree)
-    exclude(v, reason: "enum_rawvalue", locs: Array(v.locations))
+// Short or blank string exclusion
+let v12 = ShortOrBlankStringExcluder(viewMode: .sourceAccurate, filePath: url.path)
+v12.walk(tree)
+exclude(v12, reason: "short_or_blank", locs: Array(v12.locations))
+
+// Data source conformance exclusion
+let v13 = DataSourceConformanceExcluder(viewMode: .sourceAccurate, filePath: url.path)
+v13.walk(tree)
+exclude(v13, reason: "datasource_conformance", locs: Array(v13.locations))
+
+// Enum raw value case string extraction
+let v14 = EnumRawValueCaseStringExtractor(viewMode: .sourceAccurate, filePath: url.path)
+v14.walk(tree)
+exclude(v14, reason: "enum_rawvalue", locs: Array(v14.locations))
+
+let filtered = allRecords.filter { rec in
+    let key = "\(rec.file):\(rec.line)"
+    return !excludedLocations.contains(key)
 }
 
-
-    let filtered = allRecords.filter { rec in
-        let key = "\(rec.file):\(rec.line)"
-        return !excludedLocations.contains(key)
-    }
-
-    return (filtered, exclusionReasons, allRecords)
+return (filtered, exclusionReasons, allRecords)
 }
 
 func main() {
