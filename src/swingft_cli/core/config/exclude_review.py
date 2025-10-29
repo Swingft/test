@@ -11,7 +11,7 @@ import logging
 try:
     from ..tui import _maybe_raise  # type: ignore
 except ImportError as _imp_err:
-    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    logging.trace("fallback _maybe_raise due to ImportError: %s", _imp_err)
     def _maybe_raise(e: BaseException) -> None:
         import os
         if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
@@ -49,7 +49,7 @@ def _append_terminal_log(config: Dict[str, Any], lines: list[str]) -> None:
                 f.write(str(ln) + "\n")
             f.write("\n")
     except (OSError, UnicodeError, PermissionError) as e:
-        logging.debug("append_terminal_log failed: %s", e)
+        logging.trace("append_terminal_log failed: %s", e)
         _maybe_raise(e)
 
 def _has_ui_prompt() -> bool:
@@ -109,7 +109,7 @@ def save_exclude_pending_json(project_root: str | None, ast_file_path: str | Non
         return out_path
     except (OSError, UnicodeError, TypeError) as e:
         if _preflight_verbose():
-            logging.debug("exclude_pending JSON 저장 실패: %s", e)
+            logging.trace("exclude_pending JSON 저장 실패: %s", e)
         _maybe_raise(e)
         return None
 
@@ -128,7 +128,7 @@ def generate_payloads_for_excludes(project_root: str | None, identifiers: list[s
             return
         except (ImportError, OSError, UnicodeError, ValueError, TypeError) as e:
             if _preflight_verbose():
-                logging.debug("preflight payload 생성기 사용 불가, 최소 JSON 생성으로 대체: %s", e)
+                logging.trace("preflight payload 생성기 사용 불가, 최소 JSON 생성으로 대체: %s", e)
         ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
         for ident in identifiers:
             name = str(ident).strip()
@@ -148,7 +148,7 @@ def generate_payloads_for_excludes(project_root: str | None, identifiers: list[s
             print(f"[preflight] 최소 payload 생성 완료: {len(identifiers)}개 → {out_dir}")
     except (OSError, UnicodeError, ValueError, TypeError) as e:
         if _preflight_verbose():
-            logging.debug("exclude payload 생성 실패: %s", e)
+            logging.trace("exclude payload 생성 실패: %s", e)
         _maybe_raise(e)
 
 
@@ -252,7 +252,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                         _collect_names(it)
             _collect_names(ast_list)
         except (OSError, json.JSONDecodeError, UnicodeError) as e:
-            logging.debug("AST load for existing_names failed: %s", e)
+            logging.trace("AST load for existing_names failed: %s", e)
             _maybe_raise(e)
 
     # capture buffer for external session log
@@ -276,7 +276,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
     try:
         save_exclude_pending_json(project_root, str(ast_file) if ast_file else None, sorted(list(exclude_candidates)))
     except (OSError, UnicodeError, ValueError, TypeError) as _e:
-        logging.debug("exclude_pending JSON 저장 경고: %s", _e)
+        logging.trace("exclude_pending JSON 저장 경고: %s", _e)
         _maybe_raise(_e)
 
     # Create PENDING payloads before y/N
@@ -293,7 +293,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             if _preflight_verbose():
                 print(f"[preflight] PENDING payloads 생성 완료: {len(exclude_candidates)}개 → {_pending_dir}")
         except (ImportError, OSError, UnicodeError, ValueError, TypeError) as _e:
-            logging.debug("PENDING payloads 생성 경고: %s", _e)
+            logging.trace("PENDING payloads 생성 경고: %s", _e)
             _maybe_raise(_e)
 
     # Decision gathering (LLM off; use y/N)
@@ -315,10 +315,10 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             try:
                 _write_feedback_to_output(config, "exclude_session", "\n".join(_capture + ["", *fb]))
             except (OSError, UnicodeError, ValueError, TypeError, AttributeError) as e:
-                logging.debug("exclude_session 저장 실패: %s", e)
+                logging.trace("exclude_session 저장 실패: %s", e)
                 _maybe_raise(e)
         except (OSError, UnicodeError, ValueError, TypeError, AttributeError) as e:
-            logging.debug("exclude_candidates_skipped 처리 실패: %s", e)
+            logging.trace("exclude_candidates_skipped 처리 실패: %s", e)
             _maybe_raise(e)
         return
     elif ex_policy == "force":
@@ -339,10 +339,10 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             try:
                 _write_feedback_to_output(config, "exclude_session", "\n".join(_capture + ["", *fb]))
             except (OSError, UnicodeError, ValueError, TypeError, AttributeError) as e:
-                logging.debug("exclude_session 저장 실패: %s", e)
+                logging.trace("exclude_session 저장 실패: %s", e)
                 _maybe_raise(e)
         except (OSError, UnicodeError, ValueError, TypeError, AttributeError) as e:
-            logging.debug("exclude_candidates_forced 처리 실패: %s", e)
+            logging.trace("exclude_candidates_forced 처리 실패: %s", e)
             _maybe_raise(e)
     else:
         # ask 모드에서 LLM 판정과 사용자 확인을 함께 수행 (환경변수로 온/오프)
@@ -365,7 +365,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                             llm_res = _run_local_llm_exclude(ident, snippet, ast_info)
                             print(f"[TRACE] LLM 결과: {llm_res}")
                         except (RuntimeError, OSError, ValueError, TypeError) as _llm_e:
-                            logging.debug("LLM 에러: %s", _llm_e)
+                            logging.trace("LLM 이슈: %s", _llm_e)
                             _maybe_raise(_llm_e)
                             llm_res = None
                         # 판정 요약
@@ -406,12 +406,12 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
         try:
             save_exclude_review_json(sorted(list(decided_to_exclude)), project_root, str(ast_file) if ast_file else None)
         except (OSError, UnicodeError, ValueError, TypeError) as _e:
-            logging.debug("exclude_review/save payload 경고: %s", _e)
+            logging.trace("exclude_review/save payload 경고: %s", _e)
             _maybe_raise(_e)
         try:
             generate_payloads_for_excludes(project_root, sorted(list(decided_to_exclude)))
         except (OSError, UnicodeError, ValueError, TypeError) as _e:
-            logging.debug("exclude_review/save payload 경고: %s", _e)
+            logging.trace("exclude_review/save payload 경고: %s", _e)
             _maybe_raise(_e)
 
     # ask 모드 세션 로그 저장
@@ -419,7 +419,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
         if ex_policy == "ask":
             _write_feedback_to_output(config, "exclude_session", "\n".join(_capture))
     except (OSError, UnicodeError, ValueError) as e:
-        logging.debug("exclude_session 저장 실패: %s", e)
+        logging.trace("exclude_session 저장 실패: %s", e)
         _maybe_raise(e)
 
     if not ast_file:

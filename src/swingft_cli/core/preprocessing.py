@@ -34,7 +34,7 @@ def _should_show_preprocessing_ui(working_config_path: str | None) -> bool:
             else:
                 return bool(val)
     except (OSError, IOError, json.JSONDecodeError, KeyError) as e:
-        logging.debug("_should_show_preprocessing_ui: config read failed: %s", e)
+        logging.trace("_should_show_preprocessing_ui: config read failed: %s", e)
         # non-fatal; default True
     return True
 
@@ -83,7 +83,7 @@ def _run_preprocessing_stage(input_path: str, output_path: str, pipeline_path: s
         else:
             expected_total_files = len(milestones)
     except OSError as e:
-        logging.debug("expected_total_files calc failed: %s", e)
+        logging.trace("expected_total_files calc failed: %s", e)
         expected_total_files = len(milestones) if preflight_progress_mode != "files" else 0
     
     ast_output_dir = os.path.join(os.getcwd(), "Obfuscation_Pipeline", "AST", "output")
@@ -156,7 +156,7 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
             try:
                 line_queue.put(None)
             except (OSError, ValueError, TypeError, RuntimeError, UnicodeError) as e:
-                logging.debug("unhandled exception caught: %s", e)
+                logging.trace("unhandled exception caught: %s", e)
                 _maybe_raise(e)
 
     t = threading.Thread(target=_reader, daemon=True)
@@ -180,7 +180,7 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
                 if os.environ.get("SWINGFT_TUI_ECHO", "") == "1":
                     print(item)
             except (OSError, UnicodeEncodeError) as e:
-                logging.debug("echo print failed: %s", e)
+                logging.trace("echo print failed: %s", e)
                 _maybe_raise(e)
             
             low = item.lower()
@@ -208,11 +208,11 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
                                     if checker(ast_output_dir):
                                         reached += 1
                                 except OSError as e:
-                                    logging.debug("milestone check failed: %s", e)
+                                    logging.trace("milestone check failed: %s", e)
                                     _maybe_raise(e)
                         current_files_count = max(current_files_count, reached)
                 except OSError as e:
-                    logging.debug("progress scan failed: %s", e)
+                    logging.trace("progress scan failed: %s", e)
                     _maybe_raise(e)
         
         sp_idx = (sp_idx + 1) % len(spinner)
@@ -225,7 +225,7 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
             try:
                 tui.set_status([f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis", "", *list(tail1)])
             except (OSError, UnicodeEncodeError) as e:
-                logging.debug("tui.set_status failed: %s", e)
+                logging.trace("tui.set_status failed: %s", e)
                 _maybe_raise(e)
 
         if eof and line_queue.empty():
@@ -246,15 +246,15 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
             try:
                 tui.set_status([f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis", "", *list(tail1)])
             except (OSError, UnicodeEncodeError) as e:
-                logging.debug("tui.set_status final failed: %s", e)
+                logging.trace("tui.set_status final failed: %s", e)
                 _maybe_raise(e)
     except OSError as e:
-        logging.debug("final status update failed: %s", e)
+        logging.trace("final status update failed: %s", e)
         _maybe_raise(e)
     
     # 로그 정리
     try:
         tail1.clear()
     except (AttributeError, RuntimeError, TypeError) as e:
-        logging.debug("tail clear failed: %s", e)
+        logging.trace("tail clear failed: %s", e)
         _maybe_raise(e)

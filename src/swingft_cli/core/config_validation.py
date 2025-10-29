@@ -18,7 +18,7 @@ import logging
 try:
     from .tui import _maybe_raise
 except ImportError as _imp_err:
-    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    logging.trace("fallback _maybe_raise due to ImportError: %s", _imp_err)
     def _maybe_raise(e: BaseException) -> None:
         import os
         if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
@@ -142,15 +142,15 @@ def _setup_preflight_echo_holder() -> None:
                             if _preflight_echo.get("proxy") is not None:
                                 _preflight_echo["current"] = "exclude"
                         except (OSError, UnicodeEncodeError) as e:
-                            logging.debug("make_stream_echo failed in prompt_provider: %s", e)
+                            logging.trace("make_stream_echo failed in prompt_provider: %s", e)
                             _maybe_raise(e)
                         # best-effort: keep include echo's header intact
                     except (AttributeError, OSError) as e:
-                        logging.debug("prompt_provider restore failed: %s", e)
+                        logging.trace("prompt_provider restore failed: %s", e)
                         _maybe_raise(e)
                 _preflight_phase["phase"] = "exclude"
         except (OSError, UnicodeError) as e:
-            logging.debug("prompt_provider unexpected error: %s", e)
+            logging.trace("prompt_provider unexpected error: %s", e)
             _maybe_raise(e)
         return tui.prompt_line(msg)
 
@@ -215,7 +215,7 @@ def _run_interactive_config_validation(working_config_path: str) -> None:
     try:
         include_echo = tui.make_stream_echo(header="", tail_len=10)
     except (OSError, UnicodeEncodeError) as e:
-        logging.debug("make_stream_echo failed: %s", e)
+        logging.trace("make_stream_echo failed: %s", e)
         include_echo = None
         _maybe_raise(e)
     
@@ -252,17 +252,17 @@ def _show_preflight_completion_screen() -> None:
             "Proceeding to obfuscation…",
         ])
     except (OSError, UnicodeEncodeError) as e:
-        logging.debug("show_exact_screen failed: %s", e)
+        logging.trace("show_exact_screen failed: %s", e)
         try:
             tui.set_status(["Preflight confirmation received", "Proceeding to obfuscation…"])  
         except (OSError, UnicodeEncodeError) as e2:
-            logging.debug("set_status failed: %s", e2)
+            logging.trace("set_status failed: %s", e2)
             _maybe_raise(e2)
         _maybe_raise(e)
     try:
         time.sleep(0.2)
     except OSError as e:
-        logging.debug("sleep failed: %s", e)
+        logging.trace("sleep failed: %s", e)
         _maybe_raise(e)
 
 
@@ -277,18 +277,18 @@ def _show_preflight_result(ok: bool) -> None:
                 "Proceeding to obfuscation…",
             ])
     except (OSError, UnicodeEncodeError) as e:
-        logging.debug("show_exact_screen failed: %s", e)
+        logging.trace("show_exact_screen failed: %s", e)
         try:
             if ok is False:
                 tui.set_status(["Preflight aborted by user"])  
             else:
                 tui.set_status(["Preflight confirmation received", "Proceeding to obfuscation…"])  
         except (OSError, UnicodeEncodeError) as e2:
-            logging.debug("set_status failed: %s", e2)
+            logging.trace("set_status failed: %s", e2)
             _maybe_raise(e2)
         _maybe_raise(e)
     try:
         time.sleep(0.2)
     except OSError as e:
-        logging.debug("sleep failed: %s", e)
+        logging.trace("sleep failed: %s", e)
         _maybe_raise(e)

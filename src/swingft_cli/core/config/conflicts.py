@@ -11,7 +11,7 @@ import logging
 try:
     from ..tui import _maybe_raise  # type: ignore
 except ImportError as _imp_err:
-    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    logging.trace("fallback _maybe_raise due to ImportError: %s", _imp_err)
     def _maybe_raise(e: BaseException) -> None:
         import os
         if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
@@ -29,7 +29,7 @@ def _has_ui_prompt() -> bool:
     except ImportError:
         return False
     except AttributeError as e:
-        logging.debug("_has_ui_prompt attribute error: %s", e)
+        logging.trace("_has_ui_prompt attribute error: %s", e)
         _maybe_raise(e)
         return False
 
@@ -56,7 +56,7 @@ def _append_terminal_log(config: Dict[str, Any], lines: list[str]) -> None:
                 f.write(str(ln) + "\n")
             f.write("\n")
     except (OSError, UnicodeError, PermissionError) as e:
-        logging.debug("append_terminal_log failed: %s", e)
+        logging.trace("append_terminal_log failed: %s", e)
         _maybe_raise(e)
 
 
@@ -81,7 +81,7 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
             try:
                 items = config.get("exclude", {}).get("obfuscation", []) or []
             except (AttributeError, TypeError) as e:
-                logging.debug("config exclude.obfuscation access failed: %s", e)
+                logging.trace("config exclude.obfuscation access failed: %s", e)
                 _maybe_raise(e)
                 items = []
             if isinstance(items, list) and items:
@@ -98,14 +98,14 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
         elif _preflight_verbose():
             print("[preflight] apply-config DRY-RUN: not applying to AST (set SWINGFT_APPLY_CONFIG_TO_AST=1 to apply)")
     except (OSError, RuntimeError, ValueError) as e:
-        logging.debug("apply-config wrapper failed: %s", e)
+        logging.trace("apply-config wrapper failed: %s", e)
         _maybe_raise(e)
 
     try:
         with open(ast_file, 'r', encoding='utf-8') as f:
             ast_list = json.load(f)
     except (OSError, json.JSONDecodeError) as e:
-        logging.debug("AST read failed: %s", e)
+        logging.trace("AST read failed: %s", e)
         _maybe_raise(e)
         return set()
 
@@ -236,10 +236,10 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     try:
                         _write_feedback_to_output(config, "include_session", "\n".join(_capture + ["", *fb]))
                     except (OSError, UnicodeError, ValueError) as e:
-                        logging.debug("include_session write failed: %s", e)
+                        logging.trace("include_session write failed: %s", e)
                         _maybe_raise(e)
                 except (OSError, ValueError, TypeError) as e:
-                    logging.debug("force policy handling failed: %s", e)
+                    logging.trace("force policy handling failed: %s", e)
                     _maybe_raise(e)
             elif policy == "skip":
                 # 터미널 출력 없이 파일에만 기록
@@ -257,10 +257,10 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     try:
                         _write_feedback_to_output(config, "include_session", "\n".join(_capture + ["", *fb]))
                     except (OSError, UnicodeError, ValueError) as e:
-                        logging.debug("include_session write failed: %s", e)
+                        logging.trace("include_session write failed: %s", e)
                         _maybe_raise(e)
                 except (OSError, UnicodeError, ValueError) as e:
-                    logging.debug("skip policy handling failed: %s", e)
+                    logging.trace("skip policy handling failed: %s", e)
                     _maybe_raise(e)
             else:
                 if _has_ui_prompt():
@@ -270,7 +270,7 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                         if sample_all:
                             full_list = "\n  - " + "\n  - ".join(sample_all)
                     except (UnicodeError, ValueError, TypeError) as e:
-                        logging.debug("full_list build failed: %s", e)
+                        logging.trace("full_list build failed: %s", e)
                         _maybe_raise(e)
                         full_list = ""
                     prompt_msg = (
@@ -291,7 +291,7 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                         if sample_all:
                             full_list = "\n  - " + "\n  - ".join(sample_all)
                     except (UnicodeError, ValueError, TypeError) as e:
-                        logging.debug("full_list build failed: %s", e)
+                        logging.trace("full_list build failed: %s", e)
                         _maybe_raise(e)
                         full_list = ""
                     prompt_msg = (
@@ -312,7 +312,7 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                 try:
                     _write_feedback_to_output(config, "include_session", "\n".join(_capture))
                 except (OSError, UnicodeError, ValueError) as e:
-                    logging.debug("include_session write failed: %s", e)
+                    logging.trace("include_session write failed: %s", e)
                     _maybe_raise(e)
                 else:
                     print("[preflight] 사용자가 충돌 항목 제거를 취소했습니다.")

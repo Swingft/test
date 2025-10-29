@@ -10,7 +10,7 @@ import logging
 try:
     from ..tui import _maybe_raise  # type: ignore
 except ImportError as _imp_err:
-    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    logging.trace("fallback _maybe_raise due to ImportError: %s", _imp_err)
     def _maybe_raise(e: BaseException) -> None:
         import os
         if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
@@ -29,7 +29,7 @@ def write_feedback_to_output(config: Dict[str, Any], filename: str, content: str
             f.write(content)
         return path
     except (OSError, UnicodeError, PermissionError, ValueError) as e:
-        logging.debug("write_feedback_to_output failed: %s", e)
+        logging.trace("write_feedback_to_output failed: %s", e)
         _maybe_raise(e)
         return None
 
@@ -38,6 +38,6 @@ def ast_unwrap(node):
         if isinstance(node, dict) and isinstance(node.get("node"), dict):
             return node["node"]
     except (TypeError, AttributeError, KeyError) as e:
-        logging.debug("ast_unwrap failed: %s", e)
+        logging.trace("ast_unwrap failed: %s", e)
         _maybe_raise(e)
     return node

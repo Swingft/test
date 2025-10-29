@@ -15,7 +15,7 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
         with open(ast_file_path, 'r', encoding='utf-8') as f:
             ast_list = json.load(f)
     except (OSError, json.JSONDecodeError) as e:
-        logging.debug("AST load failed: %s", e)
+        logging.trace("AST load failed: %s", e)
         _maybe_raise(e)
         return 0
 
@@ -136,7 +136,7 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
         _count(ast2)
         return cnt
     except (OSError, json.JSONDecodeError) as e:
-        logging.debug("AST recount failed: %s", e)
+        logging.trace("AST recount failed: %s", e)
         _maybe_raise(e)
         return 0
 #
@@ -144,7 +144,7 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
 try:
     from ..tui import _maybe_raise  # type: ignore
 except ImportError as _imp_err:
-    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    logging.trace("fallback _maybe_raise due to ImportError: %s", _imp_err)
     def _maybe_raise(e: BaseException) -> None:
         import os
         if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
@@ -241,7 +241,7 @@ def _apply_analyzer_exclusions_to_ast_and_config(
                         continue
                     names.append(s)
         except (OSError, UnicodeError) as e:
-            logging.debug("read exclusion_list failed: %s", e)
+            logging.trace("read exclusion_list failed: %s", e)
             _maybe_raise(e)
             return
         if not names:
@@ -264,7 +264,7 @@ def _apply_analyzer_exclusions_to_ast_and_config(
                 if isinstance(_comp, dict):
                     zeros_est = int(_comp.get("zero", 0))
             except (OSError, ValueError, KeyError) as e:
-                logging.debug("compare exclusion vs ast failed: %s", e)
+                logging.trace("compare exclusion vs ast failed: %s", e)
                 _maybe_raise(e)
                 zeros_est = None
             # 기본값: 적용(ON). 명시적으로 0/false/no/off일 때만 비적용.
@@ -290,7 +290,7 @@ def _apply_analyzer_exclusions_to_ast_and_config(
                 else:
                     print(f"[preflight] analyzer DRY-RUN: would set isException=1 for identifiers (explicit 0→1). Set SWINGFT_APPLY_ANALYZER_TO_AST=1 to apply")
     except (OSError, RuntimeError, ValueError) as e:
-        logging.debug("apply analyzer exclusions wrapper failed: %s", e)
+        logging.trace("apply analyzer exclusions wrapper failed: %s", e)
         _maybe_raise(e)
 
 def _is_readable_file(path: str) -> bool:
@@ -472,7 +472,7 @@ def load_config_or_exit(path: str) -> Dict[str, Any]:
     except SystemExit:
         raise
     except (OSError, ValueError, KeyError) as e:
-        logging.debug("conflict check skipped due to error: %s", e)
+        logging.trace("conflict check skipped due to issue: %s", e)
         _maybe_raise(e)
     
     return data
@@ -516,7 +516,7 @@ def _check_exception_conflicts(*args, **kwargs):
         if not identifiers_on:
             return set()
     except (TypeError, AttributeError, ValueError) as e:
-        logging.debug("_check_exception_conflicts: option parse skipped due to error: %s", e)
+        logging.trace("_check_exception_conflicts: option parse skipped due to issue: %s", e)
         _maybe_raise(e)
 
     res = _impl(*args, **kwargs)
@@ -524,7 +524,7 @@ def _check_exception_conflicts(*args, **kwargs):
         if _config_path is not None and _config is not None:
             _check_exclude_sensitive_identifiers(_config_path, _config, res or set())
     except (RuntimeError, ValueError, KeyError) as e:
-        logging.debug("_check_exception_conflicts: exclude-sensitive hook skipped: %s", e)
+        logging.trace("_check_exception_conflicts: exclude-sensitive hook skipped: %s", e)
         _maybe_raise(e)
 
 

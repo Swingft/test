@@ -10,7 +10,7 @@ from typing import Any, Dict, Iterable, List
 try:
     from ..tui import _maybe_raise  # type: ignore
 except ImportError as _imp_err:
-    logging.debug("fallback _maybe_raise due to ImportError: %s", _imp_err)
+    logging.trace("fallback _maybe_raise due to ImportError: %s", _imp_err)
     def _maybe_raise(e: BaseException) -> None:
         import os
         if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
@@ -47,9 +47,9 @@ def _print_json_error_and_exit(path: str, err: json.JSONDecodeError) -> None:
             print(line, file=sys.stderr)
             print(pointer, file=sys.stderr)
         else:
-            logging.debug("invalid JSON error lineno: %r (lines=%d)", lineno, len(lines))
+            logging.trace("invalid JSON issue lineno: %r (lines=%d)", lineno, len(lines))
     except (OSError, UnicodeError) as e:
-        logging.debug("failed to render JSON error pointer: %s", e)
+        logging.trace("failed to render JSON error pointer: %s", e)
         _maybe_raise(e)
     sys.exit(1)
 
@@ -57,7 +57,7 @@ def _expand_abs_norm(p: str) -> str:
     try:
         return os.path.abspath(os.path.expanduser(p))
     except (OSError, TypeError, ValueError) as e:
-        logging.debug("path normalize failed for %r: %s", p, e)
+        logging.trace("path normalize failed for %r: %s", p, e)
         _maybe_raise(e)
         return p
 
