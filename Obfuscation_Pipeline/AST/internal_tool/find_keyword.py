@@ -50,11 +50,13 @@ def find_keyword():
     if os.path.exists(input_file_1):
         with open(input_file_1, "r", encoding="utf-8") as f:
             nodes = json.load(f)
-        find_node(nodes)
+        if isinstance(nodes, (list, dict)):
+            find_node(nodes)
     if os.path.exists(input_file_2):
         with open(input_file_2, "r", encoding="utf-8") as f:
             nodes = json.load(f)
-        find_node(nodes)
+        if isinstance(nodes, (list, dict)):
+            find_node(nodes)
     
     with open(output_file, "w", encoding="utf-8") as f:
         for candidate in KEYWORD:

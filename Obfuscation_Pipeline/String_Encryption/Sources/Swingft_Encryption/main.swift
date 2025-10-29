@@ -1,6 +1,7 @@
 import Foundation
 import SwiftSyntax
 import SwiftParser
+import Darwin
 
 struct StringLiteralRecord: Codable {
     let file: String
@@ -116,7 +117,28 @@ final class AllStringLiteralCollector: SyntaxVisitor {
 }
 
 func processFile(_ url: URL) -> ([StringLiteralRecord], [LocKey:String], [StringLiteralRecord]) {
-    guard let src = try? String(contentsOf: url, encoding: .utf8) else { return ([], [:], []) }
+    var src: String
+    do {
+        let fh = try FileHandle(forReadingFrom: url)
+        let fd = fh.fileDescriptor
+        // acquire shared lock for reading
+        if flock(fd, LOCK_SH) != 0 {
+            try? fh.close()
+            return ([], [:], [])
+        }
+        defer {
+            // release lock and close
+            flock(fd, LOCK_UN)
+            try? fh.close()
+        }
+        let data = fh.readDataToEndOfFile()
+        guard let s = String(data: data, encoding: .utf8) else {
+            return ([], [:], [])
+        }
+        src = s
+    } catch {
+        return ([], [:], [])
+    }
     let tree = Parser.parse(source: src)
 
     let allCollector = AllStringLiteralCollector(filePath: url.path, source: src)

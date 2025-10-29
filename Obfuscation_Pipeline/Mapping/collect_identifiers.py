@@ -90,7 +90,7 @@ def collect_identifiers():
         with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         
-        if isinstance(data, list):
+        if isinstance(data, list) and data is not None:
             for item in data:
                 repeat_match_node(item, 1)
             for item in data:

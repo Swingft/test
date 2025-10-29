@@ -165,7 +165,8 @@ def match_and_save(candidate_path, sdk_file_path):
             except json.JSONDecodeError:
                 print("SDK 읽기 실패")
 
-        match_sdk_name(candidates)
+        if isinstance(candidates, (list, dict)):
+            match_sdk_name(candidates)
         matched_output_path = os.path.join(".", "AST", "output", "standard_list.json")
         with open(matched_output_path, "w", encoding="utf-8") as f:
             json.dump(MATCHED_LIST, f, indent=2, ensure_ascii=False)

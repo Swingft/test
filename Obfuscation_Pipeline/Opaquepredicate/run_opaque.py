@@ -312,7 +312,11 @@ def body_has_top_level_default(text: str, body_start: int, body_end: int) -> boo
     return False
 
 def subtree_all_have_default(node: SwitchNode, text: str) -> bool:
-    if not body_has_top_level_default(text, node.obr+1, node.e-1):
+    obr = getattr(node, "obr", None)
+    end = getattr(node, "e", None)
+    if not isinstance(obr, int) or not isinstance(end, int) or (obr + 1) >= end:
+        return False
+    if not body_has_top_level_default(text, obr + 1, end - 1):
         return False
     return all(subtree_all_have_default(ch, text) for ch in node.children)
 
@@ -673,7 +677,8 @@ def run_opaque(root):
     try:
         with open(names_path, "r", encoding="utf-8") as f:
             pool = json.load(f)
-        if not isinstance(pool, list) or not all(isinstance(x, str) for x in pool):
+        is_list = isinstance(pool, list)
+        if (not is_list) or (not all(isinstance(x, str) for x in (pool if is_list else []))):
             raise ValueError("names JSON must be a JSON array of strings")
     except (OSError, json.JSONDecodeError, ValueError) as e:
         print(f"[ERR] failed to load names JSON: {e}", file=sys.stderr)
