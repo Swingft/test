@@ -215,16 +215,24 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                 ast_list = json.load(f)
             CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
             def _collect_names(obj, visited=None, depth=0):
+                """
+                AST 구조에서 이름을 수집하는 안전한 재귀 함수 (무한 재귀 방지)
+                
+                Args:
+                    obj: 순회할 객체
+                    visited: 방문한 객체 ID 추적용 set (순환 참조 방지)
+                    depth: 현재 재귀 깊이 (스택 오버플로우 방지)
+                """
                 # 무한 재귀 방지를 위한 깊이 제한 (최대 1000단계)
                 MAX_DEPTH = 1000
                 if depth > MAX_DEPTH:
                     return
                 
-                # 방문 추적을 위한 visited set
+                # 방문 추적을 위한 visited set (순환 참조 방지)
                 if visited is None:
                     visited = set()
                 
-                # 객체 ID를 기반으로 방문 여부 확인
+                # 객체 ID를 기반으로 방문 여부 확인 (순환 참조 방지)
                 obj_id = id(obj)
                 if obj_id in visited:
                     return
