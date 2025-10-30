@@ -7,11 +7,11 @@ a stable proxy while the prompt provider swaps which echo object is the active
 target (include vs exclude) at runtime.
 """
 
-from .tui import TUI, progress_bar, _maybe_raise
+from .tui import get_tui, progress_bar, _maybe_raise
 import logging
 
-# shared TUI instance
-tui = TUI()
+# shared TUI instance (singleton)
+tui = get_tui()
 
 
 class StreamProxy:
@@ -49,8 +49,8 @@ class StreamProxy:
                     include_header = ""
                     exclude_header = f"Preflight: {progress_bar(0,1)}  - | Current: Checking Exclude List"
                     try:
-                        # best-effort status update for TUI panel
-                        TUI().set_status([include_header, exclude_header, ""])  # isolated call
+                        # best-effort status update for TUI panel using shared instance
+                        tui.set_status([include_header, exclude_header, ""])  # isolated call
                     except (OSError, UnicodeEncodeError) as e:
                         logging.trace("StreamProxy.write: set_status failed: %s", e)
                         _maybe_raise(e)

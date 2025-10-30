@@ -43,7 +43,7 @@ def _maybe_raise(e: BaseException) -> None:
         # 환경변수 읽기 실패 시에는 무시하고 계속 진행
         return
 
-# ========== 상수 정의 ==========
+# ========== 제거 대상 상수 정의 ==========
 DEBUG_FUNC_NAMES = [
     "print",
     "debugPrint", 

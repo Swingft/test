@@ -1,0 +1,10 @@
+{
+  "swift_code": "//\n//  LoadRemoteUrlPresetDataUseCase.swift\n//  StealPlateSwift\n//\n//  Created by 심재빈 on 2023/09/19.\n//\n\nimport Foundation\n\nclass LoadRemoteUrlPresetDataUseCase {\n    let remoteUrlPresetRepository: RemoteUrlPresetRepository\n    \n    init(remoteUrlPresetRepository: RemoteUrlPresetRepository) {\n        self.remoteUrlPresetRepository = remoteUrlPresetRepository\n    }\n    \n    func call() -> [URL] {\n        return remoteUrlPresetRepository.getPresetData()\n    }\n    \n    func add(url: URL) {\n        return remoteUrlPresetRepository.addPresetData(url: url)\n    }\n    \n    func save(remoteUrlPresetData: [URL]) {\n        return remoteUrlPresetRepository.savePresetData(remoteUrlPresetData: remoteUrlPresetData)\n    }\n}",
+  "ast_symbols": [
+    {
+      "symbolName": "savePresetData",
+      "symbolKind": "unknown"
+    }
+  ],
+  "target_identifier": "savePresetData"
+}

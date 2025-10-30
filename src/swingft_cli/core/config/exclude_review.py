@@ -3,6 +3,10 @@ from __future__ import annotations
 import os
 import json
 from datetime import datetime
+import threading
+import time
+import textwrap
+import sys
 from pathlib import Path
 from typing import Any, Dict, Iterable
 from datetime import datetime
@@ -10,6 +14,7 @@ import logging
  # strict-mode helper
 try:
     from ..tui import _maybe_raise  # type: ignore
+    from ..tui import get_tui
 except ImportError as _imp_err:
     logging.trace("fallback _maybe_raise due to ImportError: %s", _imp_err)
     def _maybe_raise(e: BaseException) -> None:
@@ -27,6 +32,7 @@ from .llm_feedback import (
     run_local_llm_exclude as _run_local_llm_exclude,
     resolve_ast_symbols as _resolve_ast_symbols,
 )
+from .ui_utils import supports_color as _supports_color, blue as _blue, yellow as _yellow, gray as _gray, bold as _bold, print_warning_block as _print_warning_block
 
 
 def _preflight_verbose() -> bool:
@@ -55,6 +61,40 @@ def _append_terminal_log(config: Dict[str, Any], lines: list[str]) -> None:
 def _has_ui_prompt() -> bool:
     # LLM 사용을 위해 항상 True 반환
     return True
+
+
+def _supports_color() -> bool:
+    try:
+        v = os.environ.get("SWINGFT_TUI_COLOR", "1")
+        if str(v).strip().lower() in {"0", "false", "no", "off"}:
+            return False
+        return sys.stdout.isatty()
+    except Exception:
+        return False
+
+
+def _blue(s: str) -> str:
+    return f"\x1b[34m{s}\x1b[0m"
+
+
+def _yellow(s: str) -> str:
+    return f"\x1b[33m{s}\x1b[0m"
+
+
+def _gray(s: str) -> str:
+    return f"\x1b[90m{s}\x1b[0m"
+
+
+def _bold(s: str) -> str:
+    return f"\x1b[1m{s}\x1b[0m"
+
+# deferred stdout buffer (for background phase)
+_DEFERRED_STDOUT: list[str] = []
+
+
+def _llm_exclude_via_subprocess(identifier: str, snippet: str, ast_symbols):
+    # Deprecated: 서브프로세스 경로 비활성화 (호환용 더미)
+    return _run_local_llm_exclude(identifier, snippet, ast_symbols)
 
 
 def save_exclude_review_json(approved_identifiers, project_root: str | None, ast_file_path: str | None) -> str | None:
@@ -261,16 +301,15 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
     duplicates = exclude_candidates & existing_names
     if duplicates:
         _list = sorted(list(duplicates))
-        _capture.append("[preflight] Exclude candidates overlap with existing AST identifiers. It may cause conflicts.")
-        _capture.append(f"Candidates: {len(_list)} items")
+        _capture.append("[Warning] Exclude candidates may cause security issues.")
         for nm in _list:
             _capture.append(f"  - {nm}")
-        # 터미널 출력은 ask 모드에서만 노출
         if (ex_policy == "ask"):
-            print("[preflight] Exclude candidates overlap with existing AST identifiers. It may cause conflicts.")
-            print(f"Candidates: {len(_list)} items")
-            for nm in _list:
-                print(f"  - {nm}")
+            _print_warning_block("Exclude candidates may cause security issues.", _list)
+            try:
+                print("")
+            except Exception:
+                pass
 
     # Persist pending set
     try:
@@ -303,7 +342,6 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
         try:
             fb = [
                 "[preflight] Exclude candidates skipped by policy",
-                f"Candidates: {len(exclude_candidates)}",
                 f"Sample: {', '.join(sorted(list(exclude_candidates))[:20])}",
                 f"Policy: {ex_policy}",
                 f"Target output: {str((config.get('project') or {}).get('output') or '').strip()}",
@@ -328,7 +366,6 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
         try:
             fb = [
                 "[preflight] Exclude candidates forced",
-                f"Candidates: {len(exclude_candidates)}",
                 f"Sample: {', '.join(sorted(list(exclude_candidates))[:20])}",
                 f"Policy: {ex_policy}",
                 f"Target output: {str((config.get('project') or {}).get('output') or '').strip()}",
@@ -345,8 +382,10 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             logging.trace("exclude_candidates_forced 처리 실패: %s", e)
             _maybe_raise(e)
     else:
-        # ask 모드에서 LLM 판정과 사용자 확인을 함께 수행 (환경변수로 온/오프)
+        # ask 모드에서 LLM 판정과 사용자 확인을 함께 수행
         use_llm = str(os.environ.get("SWINGFT_PREFLIGHT_EXCLUDE_USE_LLM", "1")).strip().lower() in {"1","true","yes","y","on"}
+        pending_confirm: list[tuple[str, str]] = []  # (identifier, llm_note)
+        _defer_prompt = False
         # print(f"[TRACE] use_llm: {use_llm}, project_root: {project_root}, _has_ui_prompt(): {_has_ui_prompt()}")
         for ident in sorted(list(exclude_candidates)):
             try:
@@ -359,15 +398,57 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                         swift_path, swift_text = (found or (None, None)) if isinstance(found, tuple) else (None, None)
                         snippet = _make_snippet(swift_text or "", ident) if swift_text else ""
                         ast_info = _resolve_ast_symbols(project_root, swift_path, ident)
-                        # LLM 호출
-                        print(f"[TRACE] LLM 호출 시작: {ident}")
+                        # LLM 호출 (스피너 표시)
+                        _tui = None
+                        stop_flag = {"stop": False}
+                        _defer_prompt_flag = False
+                        try:
+                            _tui = get_tui()
+                        except Exception:
+                            _tui = None
+
+                        def _spin():
+                            spinner = ["|", "/", "-", "\\"]
+                            idx = 0
+                            while not stop_flag["stop"]:
+                                try:
+                                    # 단일 라인 스피너: 줄바꿈 없이 동일 라인 덮어쓰기
+                                    sys.stdout.write("\r\x1b[2K" + f"LLM Analysis: {ident}  {spinner[idx]}")
+                                    sys.stdout.flush()
+                                except Exception:
+                                    pass
+                                idx = (idx + 1) % len(spinner)
+                                time.sleep(0.1)
+
+                        th = None
+                        try:
+                            if _tui is not None:
+                                th = threading.Thread(target=_spin, daemon=True)
+                                th.start()
+                        except Exception:
+                            th = None
+
+                        # 백그라운드(동일 프로세스)에서 직접 LLM 실행
                         try:
                             llm_res = _run_local_llm_exclude(ident, snippet, ast_info)
-                            print(f"[TRACE] LLM 결과: {llm_res}")
                         except (RuntimeError, OSError, ValueError, TypeError) as _llm_e:
                             logging.trace("LLM 이슈: %s", _llm_e)
                             _maybe_raise(_llm_e)
                             llm_res = None
+                        finally:
+                            try:
+                                stop_flag["stop"] = True
+                                if th is not None:
+                                    th.join()  # 스피너 완전 종료 대기
+                            except Exception:
+                                pass
+                            try:
+                                # 스피너 라인 지우기
+                                sys.stdout.write("\r\x1b[2K")
+                                sys.stdout.flush()
+                                time.sleep(0.02)
+                            except Exception:
+                                pass
                         # 판정 요약
                         if isinstance(llm_res, list) and llm_res:
                             first = llm_res[0]
@@ -377,21 +458,25 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                             if not is_ex:
                                 _capture.append(f"[preflight] LLM auto-skip (keep): {ident}")
                                 if reason:
-                                    _capture.append(f"  - reason: {reason[:200]}")
+                                    _capture.append(f"  - reason: {reason}")
                                 # 이 항목은 제외하지 않음 → 다음 식별자로 진행
                                 continue
-                            llm_note = f"\n  - LLM suggests: {'exclude' if is_ex else 'keep'}\n    reason: {reason[:200]}"
-                    prompt = (
-                        f"[preflight]\n"
-                        f"Exclude candidate detected.\n"
-                        f"  - identifier: {ident}{llm_note}\n\n"
-                        f"Exclude this identifier from obfuscation? [y/N]: "
-                    )
+                            # 이유를 한 줄로 붙여 출력 (개행/과도한 공백 제거)
+                            if isinstance(reason, str) and reason.strip():
+                                reason_block = " ".join(reason.split())
+                            else:
+                                reason_block = ""
+                            llm_note = (
+                                f"\n  - LLM suggests: {'include obfuscation' if is_ex else 'keep'}\n"
+                                f"  - reason: {reason_block}"
+                            )
+                    # 즉시 묻지 않고 일괄 확인을 위해 수집 (포그라운드에서도 일괄 확인)
                     _capture.append("[preflight]")
-                    _capture.append(f"Exclude candidate detected.\n  - identifier: {ident}")
+                    _capture.append(f"Security issue detected.\n  - identifier: {ident}")
                     if llm_note:
                         _capture.append(llm_note.strip())
-                    ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
+                    pending_confirm.append((ident, llm_note))
+                    ans = ""
                 else:
                     ans = input(f"식별자 '{ident}'를 난독화에서 제외할까요? [y/N]: ").strip().lower()
             except (EOFError, KeyboardInterrupt):
@@ -399,6 +484,51 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                 raise SystemExit(1)
             if ans in ("y", "yes"):
                 decided_to_exclude.add(ident)
+
+        # 모든 분석이 끝난 뒤, 제외 후보에 대해 일괄 y/n 확인
+        if _DEFERRED_STDOUT:
+            try:
+                for ln in _DEFERRED_STDOUT:
+                    print(ln)
+            finally:
+                _DEFERRED_STDOUT.clear()
+
+        if pending_confirm:
+            import swingft_cli.core.config as _cfg
+            for ident, llm_note in pending_confirm:
+                try:
+                    if _supports_color():
+                        head = _blue("[Warning]") + _yellow(" Exclude candidate detected.\n")
+                        # labels bold only, gray '-' bullet
+                        lab_ident = "  " + _gray("-") + " " + _bold("identifier") + ": " + str(ident)
+                        llm_block = llm_note or ""
+                        if llm_block:
+                            llm_block = llm_block.replace(
+                                "  - LLM suggests:",
+                                "  " + _gray("-") + " " + _bold("LLM suggests") + ":",
+                            )
+                            llm_block = llm_block.replace(
+                                "  - reason:",
+                                "  " + _gray("-") + " " + _bold("reason") + ":",
+                            )
+                        prompt = (
+                            head + lab_ident + (llm_block if llm_block else "") + "\n\n" +
+                            "Continue excluding? [y/n]: "
+                        )
+                    else:
+                        prompt = (
+                            f"[Warning]\n"
+                            f"Security issue detected.\n"
+                            f"  - identifier: {ident}{llm_note}\n\n"
+                            f"Continue excluding? [y/n]: "
+                        )
+                    ans2 = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
+                    if ans2 in ("y", "yes"):
+                        decided_to_exclude.add(ident)
+                except (EOFError, KeyboardInterrupt):
+                    print("\n사용자에 의해 취소되었습니다.")
+                    raise SystemExit(1)
+        # 포그라운드 모드: 계속 진행
 
     if decided_to_exclude:
         #print(f"\n[preflight] 사용자 승인 완료: 제외로 반영 {len(decided_to_exclude)}개")

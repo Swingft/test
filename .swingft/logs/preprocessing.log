@@ -1,0 +1,20 @@
+==================================================
+STAGE 1: AST 분석 및 파일 목록 생성 (AST Analysis)
+==================================================
+Traceback (most recent call last):
+  File "/Users/lanian/Desktop/spr/test/Obfuscation_Pipeline/obf_pipeline.py", line 527, in <module>
+    main()
+    ~~~~^^
+  File "/Users/lanian/Desktop/spr/test/Obfuscation_Pipeline/obf_pipeline.py", line 515, in main
+    stage1_ast_analysis(original_project_dir, obf_project_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lanian/Desktop/spr/test/Obfuscation_Pipeline/obf_pipeline.py", line 102, in stage1_ast_analysis
+    run_ast(obf_project_dir)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/lanian/Desktop/spr/test/Obfuscation_Pipeline/AST/run_ast.py", line 121, in run_ast
+    find_internal_files(code_project_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/lanian/Desktop/spr/test/Obfuscation_Pipeline/AST/internal_tool/find_internal_files.py", line 50, in find_internal_files
+    with open(output_path, "w", encoding="utf-8") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/lanian/Desktop/spr/test/Obfuscation_Pipeline/.swingft/meta/swift_file_list.txt'

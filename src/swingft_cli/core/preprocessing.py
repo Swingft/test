@@ -13,10 +13,10 @@ import queue
 import json
 from collections import deque
 import logging
-from .tui import TUI, progress_bar, _maybe_raise
+from .tui import get_tui, progress_bar, _maybe_raise
 
-# shared TUI instance
-tui = TUI()
+# shared TUI instance (singleton)
+tui = get_tui()
 
 
 
@@ -91,7 +91,7 @@ def _run_preprocessing_stage(input_path: str, output_path: str, pipeline_path: s
     current_files_count = 0
     
     if show_pre_ui:
-        tui.set_status(["Preprocessing…", progress_bar(0, max(1, expected_total_files)), "AST analysis"])
+        tui.set_status([f"Preprocessing: {progress_bar(0, max(1, expected_total_files))}"])
     
     try:
         # 환경변수 설정
@@ -223,7 +223,7 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
         
         if show_ui:
             try:
-                tui.set_status([f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis", "", *list(tail1)])
+                tui.set_status([f"Preprocessing: {bar}  {spinner[sp_idx]}"])
             except (OSError, UnicodeEncodeError) as e:
                 logging.trace("tui.set_status failed: %s", e)
                 _maybe_raise(e)
@@ -244,7 +244,7 @@ def _monitor_preprocessing_progress(proc: subprocess.Popen, ast_output_dir: str,
         sp_idx = (sp_idx + 1) % len(spinner)
         if show_ui:
             try:
-                tui.set_status([f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis", "", *list(tail1)])
+                tui.set_status([f"Preprocessing: {bar}  {spinner[sp_idx]}"])
             except (OSError, UnicodeEncodeError) as e:
                 logging.trace("tui.set_status final failed: %s", e)
                 _maybe_raise(e)

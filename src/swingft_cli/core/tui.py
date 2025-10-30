@@ -383,3 +383,12 @@ class TUI:
     def make_stream_echo(self, header: str = "", tail_len: int = 10):
         # use raw setter to avoid recursion when stdout is redirected into echo stream
         return TUI.StreamEcho(self._set_status_raw, header=header, tail_len=tail_len)
+
+# Singleton accessor for shared TUI instance
+_SHARED_TUI = None
+
+def get_tui():
+    global _SHARED_TUI
+    if _SHARED_TUI is None:
+        _SHARED_TUI = TUI()
+    return _SHARED_TUI

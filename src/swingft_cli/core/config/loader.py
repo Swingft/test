@@ -194,6 +194,30 @@ def _preflight_verbose() -> bool:
 # --- External analyzer integration -----------------------------------------
 from .exclusions import ast_unwrap as _ast_unwrap
 from .ast_utils import update_ast_node_exceptions as _update_ast_node_exceptions
+import threading
+
+_EXCLUDE_REVIEW_STARTED = False
+
+def _start_exclude_review_async(config_path: str | None, config: dict | None) -> None:
+    global _EXCLUDE_REVIEW_STARTED
+    try:
+        if _EXCLUDE_REVIEW_STARTED:
+            return
+        if not isinstance(config_path, str) or not isinstance(config, dict):
+            return
+        _EXCLUDE_REVIEW_STARTED = True
+        def _runner():
+            try:
+                # 백그라운드에서는 출력/프롬프트 억제
+                os.environ["SWINGFT_EXCLUDE_SUPPRESS_STDOUT"] = "1"
+                os.environ["SWINGFT_EXCLUDE_DEFER_PROMPT"] = "1"
+                _check_exclude_sensitive_identifiers(config_path, config, set())
+            except Exception as e:  # best-effort; do not crash caller
+                logging.trace("exclude review async failed: %s", e)
+        t = threading.Thread(target=_runner, daemon=True)
+        t.start()
+    except Exception as e:
+        logging.trace("exclude review async start skipped: %s", e)
 from .ast_utils import compare_exclusion_list_vs_ast as _compare_exclusion_list_vs_ast
 
 # removed: compare_exclusion_list_vs_ast is now provided by ast_utils.compare_exclusion_list_vs_ast
@@ -467,13 +491,19 @@ def load_config_or_exit(path: str) -> Dict[str, Any]:
                 _maybe_raise(e)
 
     # Check for conflicts with exception_list.json (refactored)
+    # Allow early config loads to defer preflight entirely (e.g., path resolution phase)
     try:
-        _check_exception_conflicts(path, data)
-    except SystemExit:
-        raise
-    except (OSError, ValueError, KeyError) as e:
-        logging.trace("conflict check skipped due to issue: %s", e)
-        _maybe_raise(e)
+        _defer = str(os.environ.get("SWINGFT_DEFER_PREFLIGHT", "")).strip().lower() in {"1","true","yes","y","on"}
+    except Exception:
+        _defer = False
+    if not _defer:
+        try:
+            _check_exception_conflicts(path, data)
+        except SystemExit:
+            raise
+        except (OSError, ValueError, KeyError) as e:
+            logging.trace("conflict check skipped due to issue: %s", e)
+            _maybe_raise(e)
     
     return data
 
@@ -522,6 +552,7 @@ def _check_exception_conflicts(*args, **kwargs):
     res = _impl(*args, **kwargs)
     try:
         if _config_path is not None and _config is not None:
+            # Foreground only: run exclude review synchronously after include handling
             _check_exclude_sensitive_identifiers(_config_path, _config, res or set())
     except (RuntimeError, ValueError, KeyError) as e:
         logging.trace("_check_exception_conflicts: exclude-sensitive hook skipped: %s", e)

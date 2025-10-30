@@ -1,0 +1,10 @@
+{
+  "swift_code": "//\n//  LoadRestaurantUseCase.swift\n//  StealPlateSwift\n//\n//  Created by 심재빈 on 2022/09/26.\n//\n\nimport Foundation\nimport RxRelay\n\nclass LoadRestaurantUseCase {\n    let restaurantRepository: RestaurantRepository\n    \n    init(restaurantRepository: RestaurantRepository) {\n        self.restaurantRepository = restaurantRepository\n    }\n    \n    func call(remoteJsonUrl: URL?, needRefresh: Bool = false, downloadCompletion: @escaping() -> Void, refreshedCompletion: @escaping() -> Void) -> Restaurant {\n        return restaurantRepository.getRestaurantsData(\n            remoteJsonUrl: remoteJsonUrl,\n            needRefresh: needRefresh,\n            downloadCompletion: downloadCompletion,\n            refreshedCompletion: refreshedCompletion)\n    }\n}",
+  "ast_symbols": [
+    {
+      "symbolName": "getRestaurantsData",
+      "symbolKind": "unknown"
+    }
+  ],
+  "target_identifier": "getRestaurantsData"
+}
