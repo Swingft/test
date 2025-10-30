@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import os
 import sys
 # Ensure 'src' is on sys.path so `-m swingft_cli.cli` works without installation
 script_dir = os.path.dirname(__file__)
 project_root = os.path.abspath(os.path.join(script_dir, os.pardir, os.pardir))
-src_dir = os.path.join(project_root, 'src')
+src_dir = os.path.join(project_root, "src")
 if src_dir not in sys.path:
     sys.path.insert(0, src_dir)
 
@@ -12,22 +14,47 @@ import argparse
 import json
 import logging
 from pathlib import Path
+import textwrap
 
 from swingft_cli.commands.json_cmd import handle_generate_json
 from swingft_cli.commands.obfuscate_cmd import handle_obfuscate
+
+# Optional: pretty help with rich-argparse. Falls back gracefully.
 try:
-    from swingft_cli.core.tui import _maybe_raise  # type: ignore
-except ImportError:
-    def _maybe_raise(e: BaseException) -> None:
-        import os as _os
-        if _os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
-            raise e
+    from rich_argparse import RichHelpFormatter  # type: ignore
+
+    class _NoNoneRichHelp(RichHelpFormatter):
+        """Hide '(default: None)' but show real defaults, preserve newlines."""
+        def _get_help_string(self, action):
+            help_str = action.help or ""
+            if "%(default)" in help_str:
+                return help_str
+            default = getattr(action, "default", None)
+            if default is None or default is argparse.SUPPRESS:
+                return help_str
+            return f"{help_str} (default: {default})"
+
+    def _HelpFmt(prog: str):
+        return _NoNoneRichHelp(prog=prog, max_help_position=28, width=100)
+
+except Exception:
+    class _NoNoneRawHelp(argparse.RawTextHelpFormatter):
+        """Hide '(default: None)' but show real defaults, preserve newlines."""
+        def _get_help_string(self, action):
+            help_str = action.help or ""
+            if "%(default)" in help_str:
+                return help_str
+            default = getattr(action, "default", None)
+            if default is None or default is argparse.SUPPRESS:
+                return help_str
+            return f"{help_str} (default: {default})"
+
+    def _HelpFmt(prog: str):
+        return _NoNoneRawHelp(prog, max_help_position=28, width=100)
 
 # ------------------------------
 # Preflight: ast_node.json vs swingft_config.json overlap check
 # ------------------------------
-
-
 
 def _collect_config_sets(cfg: dict):
     """Pick include/exclude sets from swingft_config.json structure.
@@ -62,7 +89,6 @@ def _preflight_check_exceptions(config_path: Path, ast_path: Path, *, fail_on_co
         ast_list = json.loads(ast_path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError, UnicodeError) as e:
         logging.warning("preflight: malformed AST node file %s: %s", ast_path, e)
-        _maybe_raise(e)
         print(f"[preflight] warning: malformed AST node file ({ast_path}): {e}")
         return
 
@@ -70,7 +96,6 @@ def _preflight_check_exceptions(config_path: Path, ast_path: Path, *, fail_on_co
         cfg = json.loads(config_path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError, UnicodeError) as e:
         logging.warning("preflight: malformed config %s: %s", config_path, e)
-        _maybe_raise(e)
         print(f"[preflight] warning: malformed config ({config_path}): {e}")
         return
 
@@ -95,7 +120,6 @@ def _preflight_check_exceptions(config_path: Path, ast_path: Path, *, fail_on_co
 
     any_conflict = any(conflicts[k] for k in conflicts)
     if any_conflict:
-        print("\n[preflight] ⚠️  제외 대상과 config 겹침 발견")
         for key, vals in conflicts.items():
             if vals:
                 sample = ", ".join(sorted(list(vals))[:10])
@@ -105,51 +129,86 @@ def _preflight_check_exceptions(config_path: Path, ast_path: Path, *, fail_on_co
     else:
         print("[preflight] 제외 대상과 config 충돌 없음 ✅")
 
-def main():
-    parser = argparse.ArgumentParser(description="Swingft CLI")
-    parser.add_argument('--json', nargs='?', const='swingft_config.json', metavar='JSON_PATH',
-                        help='Generate an example exclusion config JSON file and exit (default: swingft_config.json)')
-    subparsers = parser.add_subparsers(dest='command')
 
-    # Obfuscate command
-    obfuscate_parser = subparsers.add_parser('obfuscate', help='Obfuscate Swift files')
-    obfuscate_parser.add_argument('--input', '-i', required=True, help='Path to the input file or directory')
-    obfuscate_parser.add_argument('--output', '-o', required=True, help='Path to the output file or directory')
-    obfuscate_parser.add_argument('--config', '-c', nargs='?', const='swingft_config.json',
-                                  help='Path to config JSON (default when flag present: swingft_config.json)')
-    obfuscate_parser.add_argument('--check-rules', action='store_true',
-                                  help='Scan project and print which identifiers from config are present')
-    obfuscate_parser.add_argument('--encryption-only', action='store_true',
-                                  help='Show only encryption-related logs')
+def _build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="swingft",
+        description="Swingft CLI",
+        formatter_class=_HelpFmt,
+        add_help=True,
+    )
+
+    parser.add_argument("--version", action="version", version="Swingft CLI 1.0")
+
+    # top-level --json (generate example config and exit)
+    parser.add_argument(
+        "--json",
+        nargs="?",
+        const="swingft_config.json",
+        metavar="JSON_PATH",
+        help="Generate an example exclusion config JSON and exit (default: swingft_config.json)",
+    )
+
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    # run command (config-driven I/O)
+    obf = sub.add_parser(
+        "run",
+        help="Obfuscate Swift files",
+        formatter_class=_HelpFmt,
+        description=(
+            "Run obfuscation based on the config file. Input/output are read from\n"
+            "project.input/project.output in the config. Provide config path via\n"
+            "-i/--input or -c/--config (defaults to swingft_config.json)."
+        ),
+    )
+    obf.add_argument(
+        "--input", "-i", dest="config", nargs="?", const="swingft_config.json",
+        help="Path to config JSON (default when flag present: swingft_config.json)",
+    )
+    obf.add_argument(
+        "--config", "-c", dest="config", nargs="?", const="swingft_config.json",
+        help="Alias to specify config JSON (default when flag present: swingft_config.json)",
+    )
+    obf.add_argument(
+        "--check-rules", action="store_true",
+        help="Scan project and print which identifiers from config are present",
+    )
+    obf.add_argument(
+        "--encryption-only", action="store_true",
+        help="Show only encryption-related logs",
+    )
+
+    return parser
 
 
-    args = parser.parse_args()
+def main(argv: list[str] | None = None) -> int:
+    parser = _build_parser()
+    args = parser.parse_args(argv)
 
-    if args.json is not None:
+    # top-level: generate example config and exit
+    if getattr(args, "json", None) is not None:
         handle_generate_json(args.json)
-        sys.exit(0)
+        return 0
 
-    if args.command == 'obfuscate':
-        # --- Sync CLI paths into config via env; config.py will write back to JSON ---
-        inp = getattr(args, 'input', None)
-        out = getattr(args, 'output', None)
-        if inp:
-            os.environ["SWINGFT_PROJECT_INPUT"] = inp
-        if out:
-            os.environ["SWINGFT_PROJECT_OUTPUT"] = out
+    if args.command == "run":
+        # Sync CLI paths into config via env; config.py will write back to JSON
+        # ensure a default config path when none is provided
+        if not getattr(args, "config", None):
+            setattr(args, "config", "swingft_config.json")
         # Ensure JSON gets updated for future runs
         os.environ.setdefault("SWINGFT_WRITE_BACK", "1")
 
         # 규칙 검사 출력 비활성화: 프리플라이트만 유지
-        if hasattr(args, 'check_rules') and args.check_rules:
+        if hasattr(args, "check_rules") and args.check_rules:
             args.check_rules = False
 
-        # Preflight checks are now handled in obfuscate_cmd.py
-
         handle_obfuscate(args)
-    else:
-        parser.print_help()
-        sys.exit(1)
+        return 0
+
+    parser.print_help()
+    return 1
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

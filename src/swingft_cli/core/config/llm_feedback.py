@@ -287,13 +287,18 @@ def _load_llm_singleton():
     if _LLM_SINGLETON is not None:
         return _LLM_SINGLETON
     try:
+        # llama.cpp 로그 소음을 줄이기 위해 기본 로그 레벨을 오류로 설정
+        import os as _os
+        if not _os.environ.get("LLAMA_LOG_LEVEL"):
+            # ERROR 레벨로 설정 (낮을수록 출력 감소)
+            _os.environ["LLAMA_LOG_LEVEL"] = "40"
+        # Metal 초기화 등에서 찍히는 stderr 로그를 최대한 억제하기 위해 import 이후에도 제어
         from llama_cpp import Llama  # type: ignore
         _trace("llama_cpp import 성공")
     except ImportError as e:
         _trace("llama_cpp import 실패: %s", e)
         _maybe_raise(e)
         return None
-    import os as _os
     base_model = _os.getenv("BASE_MODEL_PATH", "./models/base_model.gguf")
     lora_path = _os.getenv("LORA_PATH", _os.path.join("./models", "lora_sensitive_single.gguf"))
     n_ctx = int(_os.getenv("N_CTX", "8192"))
@@ -312,7 +317,15 @@ def _load_llm_singleton():
         kwargs["n_gpu_layers"] = n_gpu_layers
     try:
         _trace("LLM 모델 로드 시도: %s", base_model)
-        _LLM_SINGLETON = Llama(**kwargs)
+        # 모델 로드 시 발생하는 Metal 초기화 stderr 로그를 억제
+        import contextlib as _ct
+        import sys as _sys
+        try:
+            with open(_os.devnull, 'w') as _devnull, _ct.redirect_stderr(_devnull):
+                _LLM_SINGLETON = Llama(**kwargs)
+        except Exception:
+            # 일부 환경에서는 redirect가 적용되지 않을 수 있으므로 재시도
+            _LLM_SINGLETON = Llama(**kwargs)
         _trace("LLM 모델 로드 성공")
     except (RuntimeError, OSError, ValueError) as e:
         _trace("LLM 모델 로드 실패: %s", e)
@@ -330,7 +343,7 @@ def run_local_llm_exclude(identifier: str, swift_code: str, ast_symbols) -> list
         return None
     prompt = _build_prompt_for_identifier(swift_code or "", identifier, ast_symbols)
     try:
-        max_tokens = int(os.getenv("MAX_TOKENS", "1024"))
+        max_tokens = int(os.getenv("MAX_TOKENS", "256"))
         temperature = float(os.getenv("TEMPERATURE", "0.0"))
         top_p = float(os.getenv("TOP_P", "1.0"))
         resp = llm(

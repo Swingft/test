@@ -10,7 +10,7 @@ import shutil
 import io
 import time
 from contextlib import redirect_stdout, redirect_stderr
-from .tui import TUI, progress_bar
+from .tui import get_tui, progress_bar
 from .stream_proxy import StreamProxy
 import logging
 
@@ -62,8 +62,8 @@ def _summarize_risks_and_confirm(patterns, auto_yes=False):
         return True
 from .config import set_prompt_provider
 
-# shared TUI instance
-tui = TUI()
+# shared TUI instance (singleton)
+tui = get_tui()
 
 # global preflight echo holder
 _preflight_echo = {}
@@ -213,7 +213,13 @@ def _run_interactive_config_validation(working_config_path: str) -> None:
     
     # TUI echo 설정
     try:
-        include_echo = tui.make_stream_echo(header="", tail_len=10)
+        # LLM 분석 단계 진입: 배너는 유지하고 헤더만 LLM 분석으로 설정
+        try:
+            tui.set_status(["LLM analysis in progress…", ""])  # banner below header only
+        except (OSError, UnicodeEncodeError) as _e:
+            logging.trace("set_status LLM header failed: %s", _e)
+            _maybe_raise(_e)
+        include_echo = tui.make_stream_echo(header="LLM analysis", tail_len=10)
     except (OSError, UnicodeEncodeError) as e:
         logging.trace("make_stream_echo failed: %s", e)
         include_echo = None

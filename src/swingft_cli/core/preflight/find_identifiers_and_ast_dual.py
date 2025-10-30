@@ -26,6 +26,7 @@ import re
 import json
 import argparse
 import logging
+from contextlib import redirect_stdout, redirect_stderr
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 
@@ -81,6 +82,7 @@ except ImportError:
 # Safe import for _maybe_raise
 try:
     from ..tui import _maybe_raise  # type: ignore
+    from ..tui import get_tui, progress_bar  # type: ignore
 except ImportError as _imp_err:  # narrow: only import-related failures
     logging.trace("fallback _maybe_raise due to ImportError: %s", _imp_err)
     # Fallback minimal strict-mode handler if TUI import is unavailable
@@ -88,6 +90,20 @@ except ImportError as _imp_err:  # narrow: only import-related failures
         import os
         if os.environ.get("SWINGFT_TUI_STRICT", "").strip() == "1":
             raise e
+    # shim for optional calls
+    def get_tui():  # type: ignore
+        return None
+    def progress_bar(a,b,c=30):  # type: ignore
+        return f"{a}/{b}"
+
+def _make_tui_echo(header: str):
+    try:
+        _tui = get_tui()
+        if _tui is None:
+            return None
+        return _tui.make_stream_echo(header=header, tail_len=10)
+    except Exception:
+        return None
 
 INSTRUCTION = (
     "In the following Swift code, find all identifiers related to sensitive logic. Provide the names and reasoning as a JSON object."
@@ -372,7 +388,12 @@ def write_combined_payload_file(report: dict, out_path: Path, target_ids: List[s
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump({"records": records}, f, ensure_ascii=False, indent=2)
-    print(f"  ↳ wrote combined payload: {out_path}")
+    _echo = _make_tui_echo("LLM analysis")
+    if _echo is not None:
+        with redirect_stdout(_echo), redirect_stderr(_echo):
+            print(f"  ↳ wrote combined payload: {out_path}")
+    else:
+        print(f"  ↳ wrote combined payload: {out_path}")
 
 def _write_per_identifier_payload_files_from_report(report: dict, out_dir: Path, target_ids: List[str], ctx_lines: int):
     """
@@ -458,7 +479,6 @@ def _write_per_identifier_payload_files_from_report(report: dict, out_dir: Path,
             if ast_entry is None:
                 best = _best_ast_name_match(ident, [x for x in ast_any if isinstance(x, dict)])
                 if best and best != ident:
-                    print(f"[notice] target_identifier '{ident}' not found in AST. Using closest match '{best}' for kind inference.", file=sys.stderr)
                     for x in ast_any:
                         if isinstance(x, dict) and x.get("symbolName") == best:
                             ast_entry = _sanitize_ast_entry(x)
@@ -529,17 +549,34 @@ def main():
         sys.exit(2)
     ids = list(dict.fromkeys(ids))
 
+    # header: show LLM analysis header + simple overall progress
+    try:
+        _tui = get_tui()
+        if _tui is not None:
+            _tui.set_status(["LLM analysis in progress…", ""])
+    except Exception:
+        pass
+
     report = build_report_for_identifiers(args.project_root, ids, ctx_lines=args.ctx_lines)
     report = _augment_report_with_declarations(report)
 
     # 전체 리포트 파일
     with open(args.output, "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
-    print(f"✅ wrote main report: {args.output}")
+    _echo = _make_tui_echo("LLM analysis")
+    if _echo is not None:
+        with redirect_stdout(_echo), redirect_stderr(_echo):
+            print(f"✅ wrote main report: {args.output}")
+    else:
+        print(f"✅ wrote main report: {args.output}")
 
     # 전체를 하나의 payload.json으로 생성 (occurrences 포함)
     write_combined_payload_file(report, Path(args.payload_out), ids)
-    print("✅ combined payload generation complete.")
+    if _echo is not None:
+        with redirect_stdout(_echo), redirect_stderr(_echo):
+            print("✅ combined payload generation complete.")
+    else:
+        print("✅ combined payload generation complete.")
 
     # 각 식별자별 payload 파일도 생성
     _write_per_identifier_payload_files_from_report(report, Path(args.per_id_dir), ids, args.ctx_lines)

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-10-30T19:56:13.006640Z",
+  "kind": "exclude_pending",
+  "project_input": "/Users/lanian/Desktop/UIKit+SPM_2",
+  "ast_node_path": "",
+  "candidates": [
+    "detailViewModel",
+    "loadSelectedRestaurantUseCase",
+    "setupBind"
+  ],
+  "source": "exclude_review"
+}

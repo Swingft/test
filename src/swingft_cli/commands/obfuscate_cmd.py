@@ -10,8 +10,10 @@ import re
 from collections import deque
 import logging
 from ..validator import check_permissions
+from ..core.config_validation import _get_config_path
+from ..core.config.io_reader import read_io_paths as _read_io
 
-from ..core.tui import TUI, progress_bar, _maybe_raise, _trace
+from ..core.tui import get_tui, progress_bar, _maybe_raise, _trace
 from ..core.stream_proxy import StreamProxy
 from ..core.preprocessing import (
     _should_show_preprocessing_ui,
@@ -42,8 +44,9 @@ __     ____            _              __ _
  |_____|                       |___/
 """
 
-# shared TUI instance
-tui = TUI(banner=_BANNER)
+# shared TUI instance (singleton)
+tui = get_tui()
+tui.banner = _BANNER
 
 # global preflight echo holder
 _preflight_echo = {}
@@ -288,7 +291,7 @@ def _monitor_obfuscation_progress(proc: subprocess.Popen, steps: list, detectors
 
 
 def _handle_explicit_marker(m: re.Match, steps: list, step_keys: list, seen: set[str],
-                          step_state: dict[str, str], last_current: str) -> None:
+                         step_state: dict[str, str], last_current: str) -> str:
     """명시적 마커 처리"""
     key = m.group(1).lower()
     action = m.group(2).lower()
@@ -305,7 +308,8 @@ def _handle_explicit_marker(m: re.Match, steps: list, step_keys: list, seen: set
         if key in step_keys:
             seen.add(key)
         step_state[key] = action
-        _advance_to_next_step(key, steps, step_keys, seen, step_state, last_current)
+        last_current = _advance_to_next_step(key, steps, step_keys, seen, step_state, last_current)
+    return last_current
 
 
 def _detect_step_by_regex(line: str, detectors: dict) -> str | None:
@@ -317,17 +321,18 @@ def _detect_step_by_regex(line: str, detectors: dict) -> str | None:
 
 
 def _handle_detected_step(matched_key: str, steps: list, step_keys: list, seen: set[str],
-                        step_state: dict[str, str], last_current: str) -> None:
+                       step_state: dict[str, str], last_current: str) -> str:
     """감지된 단계 처리"""
     for k, lbl in steps:
         if k == matched_key:
             seen.add(k)
-            _update_current_label(k, steps, step_keys, seen, step_state, last_current)
+            last_current = _update_current_label(k, steps, step_keys, seen, step_state, last_current)
             break
+    return last_current
 
 
 def _handle_encryption_step(line: str, low: str, steps: list, seen: set[str],
-                          step_state: dict[str, str], last_current: str) -> None:
+                          step_state: dict[str, str], last_current: str) -> str:
     """암호화 단계 특별 처리"""
     for key, label in steps:
         if key == "encryption":
@@ -339,21 +344,23 @@ def _handle_encryption_step(line: str, low: str, steps: list, seen: set[str],
                 seen.add(key)
                 step_state[key] = "done"
                 last_current = label
+    return last_current
 
 
 def _handle_generic_steps(line: str, low: str, steps: list, step_keys: list, seen: set[str],
-                        step_state: dict[str, str], last_current: str) -> None:
+                        step_state: dict[str, str], last_current: str) -> str:
     """일반적인 단계 처리"""
     for key, label in steps:
         if key != "encryption":
             if (low.startswith(f"{key}:") or f" {key}:" in low or
                 f"[{key}]" in low or low.startswith(f"{key} start")):
                 seen.add(key)
-                _update_current_label(key, steps, step_keys, seen, step_state, last_current)
+                last_current = _update_current_label(key, steps, step_keys, seen, step_state, last_current)
+    return last_current
 
 
 def _advance_to_next_step(key: str, steps: list, step_keys: list, seen: set[str],
-                         step_state: dict[str, str], last_current: str) -> None:
+                         step_state: dict[str, str], last_current: str) -> str:
     """다음 단계로 진행"""
     try:
         primary_keys = [k for k in step_keys if k != "_bootstrap"]
@@ -381,10 +388,11 @@ def _advance_to_next_step(key: str, steps: list, step_keys: list, seen: set[str]
     except (ValueError, IndexError) as e:
         _trace("advance_to_next_step failed: %s", e)
         _maybe_raise(e)
+    return last_current
 
 
 def _update_current_label(key: str, steps: list, step_keys: list, seen: set[str],
-                        step_state: dict[str, str], last_current: str) -> None:
+                        step_state: dict[str, str], last_current: str) -> str:
     """현재 라벨 업데이트"""
     primary_keys = [kk for kk in step_keys if kk != "_bootstrap"]
     if all(kk in seen for kk in primary_keys):
@@ -407,10 +415,11 @@ def _update_current_label(key: str, steps: list, step_keys: list, seen: set[str]
                 mv = steps[j][1]
                 break
         last_current = mv or steps[idx][1]
+    return last_current
 
 
 def _update_final_label(step_keys: list, seen: set[str], step_state: dict[str, str],
-                       steps: list, last_current: str) -> None:
+                       steps: list, last_current: str) -> str:
     """최종 라벨 업데이트"""
     primary_keys = [k for k in step_keys if k != "_bootstrap"]
     if all(k in seen for k in primary_keys):
@@ -426,14 +435,34 @@ def _update_final_label(step_keys: list, seen: set[str], step_state: dict[str, s
                     _maybe_raise(e)
         if last_done_label:
             last_current = last_done_label
+    return last_current
 
 
 def handle_obfuscate(args):
     """난독화 프로세스 실행"""
-    check_permissions(args.input, args.output)
-    
+    # Load I/O from config file only (no CLI I/O)
+    cfg_path = _get_config_path(args) or 'swingft_config.json'
+    try:
+        effective_in, effective_out = _read_io(cfg_path)
+    except SystemExit:
+        raise
+    except Exception as e:
+        print(f"[ERROR] Failed to read config I/O: {cfg_path}: {e}")
+        sys.exit(1)
+
+    if not effective_in or not effective_out:
+        print("[ERROR] Missing project.input/project.output in config. Set them in the config JSON (use swingft --json to generate a template).")
+        sys.exit(1)
+
+    # permissions check uses resolved paths
+    check_permissions(effective_in, effective_out)
+
     # 경로 검증 및 절대 경로 변환
-    input_path, output_path = _validate_paths(args.input, args.output)
+    input_path, output_path = _validate_paths(effective_in, effective_out)
+
+    # propagate resolved values back to args for downstream stages
+    args.input = input_path
+    args.output = output_path
     
     # TUI 초기화
     _setup_tui_initialization(input_path, output_path)
@@ -455,10 +484,10 @@ def handle_obfuscate(args):
     show_pre_ui = _should_show_preprocessing_ui(working_config_path)
     _run_preprocessing_stage(input_path, output_path, pipeline_path, working_config_path, show_pre_ui)
 
-    # Config 검증 및 LLM 분석
+    # 1단계: Config 검증 및 LLM 분석 (난독화 이전에 수행)
     _run_config_validation_and_analysis(working_config_path, args)
 
-    # 2단계: 최종 난독화 실행
+    # 2단계: 최종 난독화 실행 (배너는 초기 1회만 출력, 이후 헤더만 갱신)
     _run_obfuscation_stage(input_path, output_path, pipeline_path, working_config_path)
 
     # 완료 메시지

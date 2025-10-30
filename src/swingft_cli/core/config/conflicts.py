@@ -6,6 +6,9 @@ from pathlib import Path
 from datetime import datetime
 from typing import Any, Dict, Set
 import logging
+import sys
+import re
+from .ui_utils import supports_color as _supports_color, blue as _blue, yellow as _yellow
 
 # strict-mode helper
 try:
@@ -34,9 +37,40 @@ def _has_ui_prompt() -> bool:
         return False
 
 
+# NOTE: color helpers are imported from ui_utils as
+# _supports_color, _blue, _yellow. Do NOT re-wrap them here to avoid recursion.
+
+
+def _colorize_preflight_line(msg: str) -> str:
+    try:
+        s = str(msg)
+        # Allow both legacy [preflight] and new [Warning]
+        m = re.match(r"^\[(preflight|Warning)\](.*)$", s)
+        if not m:
+            return msg
+        rest = m.group(2) or ""
+        # 표시는 [Warning]으로 통일
+        return _blue("[Warning]") + _yellow(rest)
+    except Exception:
+        return msg
+
+def _gray(s: str) -> str:
+    return f"\x1b[90m{s}\x1b[0m"
+
+
+def _bold(s: str) -> str:
+    return f"\x1b[1m{s}\x1b[0m"
+
+
 def _preflight_print(msg: str) -> None:
     if not _has_ui_prompt():
-        print(msg)
+        if _supports_color():
+            print(_colorize_preflight_line(msg))
+        else:
+            s = str(msg)
+            if s.startswith("[preflight]"):
+                s = "[Warning]" + s[len("[preflight]"):]
+            print(s)
 
 
 def _preflight_verbose() -> bool:
@@ -208,7 +242,7 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
             or _pf.get("include_conflict_policy")
             or "ask"
         ).strip().lower()
-        _preflight_print(f"\n[preflight] ⚠️  The provided include entries conflict with exclude rules; including them may cause conflicts:")
+        _preflight_print(f"\n[Warning] ⚠️  The provided include entries conflict with exclude rules; including them may cause conflicts:")
         sample_all = sorted(list(conflicts))
         sample = sample_all[:10]
         _preflight_print(f"  - Collision identifiers: {len(conflicts)} items (example: {', '.join(sample)})")
@@ -268,39 +302,49 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     full_list = ""
                     try:
                         if sample_all:
-                            full_list = "\n  - " + "\n  - ".join(sample_all)
+                            if _supports_color():
+                                colored = ["  " + _gray("-") + " " + _bold(_yellow(s)) for s in sample_all]
+                                full_list = "\n" + "\n".join(colored)
+                            else:
+                                full_list = "\n  - " + "\n  - ".join(sample_all)
                     except (UnicodeError, ValueError, TypeError) as e:
                         logging.trace("full_list build failed: %s", e)
                         _maybe_raise(e)
                         full_list = ""
                     prompt_msg = (
-                        "[preflight] "
-                        "The provided include entries conflict with exclude rules. It may cause conflicts.\n"
-                        f"Collision identifiers: {len(conflicts)} items"
-                        f"{'' if sample_all else ''}"
-                        f"{full_list}\n\n"
-                        "Do you really want to include these identifiers in obfuscation? [y/N]: "
+                        ( _colorize_preflight_line("[Warning] The provided include list may cause conflicts.")
+                          if _supports_color() else
+                          "[preflight] The provided include list may cause conflicts." )
+                        + "\n"
+                        + (full_list or "")
+                        + "\n\nContinue including? [y/n]: "
                     )
                     ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt_msg)).strip().lower()
-                    _capture.append("[preflight] The provided include entries conflict with exclude rules. It may cause conflicts.")
-                    _capture.append(f"Collision identifiers: {len(conflicts)} items")
+                    _capture.append("[Warning] The provided include list may cause conflicts.")
+
                     _capture.extend(["  - " + s for s in sample_all])
                 else:
                     full_list = ""
                     try:
                         if sample_all:
-                            full_list = "\n  - " + "\n  - ".join(sample_all)
+                            if _supports_color():
+                                colored = ["  " + _gray("-") + " " + _bold(_yellow(s)) for s in sample_all]
+                                full_list = "\n" + "\n".join(colored)
+                            else:
+                                full_list = "\n  - " + "\n  - ".join(sample_all)
                     except (UnicodeError, ValueError, TypeError) as e:
                         logging.trace("full_list build failed: %s", e)
                         _maybe_raise(e)
                         full_list = ""
+                    head = "[preflight] The provided include entries conflict with exclude rules.\n"
+                    if _supports_color():
+                        head = _blue("[preflight]") + _yellow(" The provided include entries conflict with exclude rules.\n")
                     prompt_msg = (
-                        "[preflight]\n"
-                        "The provided include entries conflict with exclude rules.\n"
-                        f"  - Collision identifiers: {len(conflicts)} items"
-                        f"{':' if sample_all else ''}"
-                        f"{full_list}\n\n"
-                        "Do you really want to include these identifiers in obfuscation? [y/N]: "
+                        head
+                        + f"  - Collision identifiers: {len(conflicts)} items"
+                        + (":" if sample_all else "")
+                        + (full_list or "")
+                        + "\n\nContinue including? [y/n]: "
                     )
                     ans = input(prompt_msg).strip().lower()
                 if ans in ("y", "yes"):
@@ -314,7 +358,7 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                 except (OSError, UnicodeError, ValueError) as e:
                     logging.trace("include_session write failed: %s", e)
                     _maybe_raise(e)
-                else:
+                if ans not in ("y", "yes"):
                     print("[preflight] 사용자가 충돌 항목 제거를 취소했습니다.")
         except (EOFError, KeyboardInterrupt):
             print("\n사용자에 의해 취소되었습니다.")

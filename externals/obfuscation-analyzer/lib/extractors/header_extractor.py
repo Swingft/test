@@ -19,6 +19,9 @@ import logging
 import os
  # local trace/strict helpers
 
+# Per-file verbose output toggle (set True to print each file summary)
+VERBOSE_PER_FILE = False
+
 def _trace(msg: str, *args, **kwargs) -> None:
     try:
         logging.log(10, msg, *args, **kwargs)
@@ -408,7 +411,6 @@ class HeaderScanner:
 
     def find_project_headers(self) -> List[Path]:
         """프로젝트 디렉토리 내의 모든 .h 파일 찾기"""
-        print(f"📂 프로젝트 내부 헤더 검색 중: {self.project_path}")
 
         headers = []
 
@@ -419,7 +421,6 @@ class HeaderScanner:
 
             headers.append(header_file)
 
-        print(f"   ✅ {len(headers)}개의 프로젝트 헤더 발견")
         return headers
 
     def find_derived_data_headers(self) -> List[Path]:
@@ -434,7 +435,6 @@ class HeaderScanner:
             print(f"   ⚠️  DerivedData 디렉토리를 찾을 수 없습니다: {derived_data_base}")
             return []
 
-        print(f"\n📦 DerivedData 헤더 검색 중: {self.target_name}")
 
         # 타겟 이름으로 시작하는 디렉토리 찾기
         matching_dirs = []
@@ -448,32 +448,25 @@ class HeaderScanner:
             return []
 
         # 여러 개 발견 시 가장 최신 것만 사용
-        if len(matching_dirs) > 1:
-            print(f"   → {len(matching_dirs)}개의 매칭 디렉토리 발견 (가장 최신 것만 사용)")
+        if len(matching_dirs) > 0:
             # 수정 시간 기준으로 정렬하여 가장 최신 것 선택
             matching_dirs.sort(key=lambda x: x.stat().st_mtime, reverse=True)
             selected_dir = matching_dirs[0]
-            print(f"   ✅ 선택됨: {selected_dir.name}")
             matching_dirs = [selected_dir]
         else:
-            print(f"   → 1개의 매칭 디렉토리 발견")
+            print(f"'{self.target_name}'에 해당하는 DerivedData 디렉토리를 찾을 수 없습니다.")
+            return []
 
         headers = []
         for derived_dir in matching_dirs:
-            print(f"   → 스캔: {derived_dir.name}")
 
             # DerivedData 내의 모든 .h 파일 찾기
             for header_file in derived_dir.rglob("*.h"):
                 headers.append(header_file)
-
-        print(f"   ✅ {len(headers)}개의 DerivedData 헤더 발견")
         return headers
 
     def scan_all(self) -> Set[str]:
         """모든 헤더 파일 스캔 (병렬 처리)"""
-        print("🚀 Swift 난독화용 헤더 식별자 추출기 (병렬 처리)")
-        print("=" * 60)
-        print()
 
         # 1. 프로젝트 내부 헤더
         project_headers = self.find_project_headers()
@@ -491,12 +484,6 @@ class HeaderScanner:
             print("❌ 헤더 파일을 찾을 수 없습니다.")
             return set()
 
-        print(f"\n✓ 총 {len(all_headers)}개의 헤더 파일 발견")
-        print(f"  - 프로젝트 내부: {len(project_headers)}개")
-        print(f"  - DerivedData: {len(derived_headers)}개")
-        print(f"\n⚡ {self.num_workers}개의 워커로 병렬 처리 시작...")
-        print("-" * 60)
-
         # 시작 시간 기록
         start_time = time.time()
 
@@ -511,10 +498,11 @@ class HeaderScanner:
             if success and identifiers:
                 self.all_identifiers.update(identifiers)
                 self.stats['success'] += 1
-                print(f"✓ {relative_path}: {len(identifiers)}개")
+                if VERBOSE_PER_FILE:
+                    print(f"✓ {relative_path}: {len(identifiers)}개")
             else:
                 self.stats['failed'] += 1
-                if not success:
+                if not success and VERBOSE_PER_FILE:
                     print(f"✗ {relative_path}: 오류")
 
         # 처리 시간 기록

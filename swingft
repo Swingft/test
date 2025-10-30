@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import os
+import sys
+
+
+def _main() -> int:
+    # ensure local src/ is importable even when this script is symlinked (e.g., venv/bin/swingft)
+    resolved = os.path.realpath(os.path.abspath(__file__))
+    base = os.path.dirname(resolved)
+    candidates = [
+        base,
+        os.path.dirname(base),
+        os.path.dirname(os.path.dirname(base)),
+    ]
+    added = False
+    for root in candidates:
+        src = os.path.join(root, "src")
+        if os.path.isdir(src):
+            if src not in sys.path:
+                sys.path.insert(0, src)
+            added = True
+            break
+    if not added:
+        # last resort: walk up to find src/swingft_cli
+        try:
+            cur = base
+            for _ in range(5):
+                test = os.path.join(cur, "src", "swingft_cli")
+                if os.path.isdir(test):
+                    s = os.path.join(cur, "src")
+                    if s not in sys.path:
+                        sys.path.insert(0, s)
+                    break
+                nxt = os.path.dirname(cur)
+                if nxt == cur:
+                    break
+                cur = nxt
+        except Exception:
+            pass
+    try:
+        from swingft_cli.cli import main as _cli_main  # type: ignore
+    except Exception as e:
+        sys.stderr.write(f"swingft: failed to import runner: {e}\n")
+        return 1
+    return int(_cli_main())
+
+
+if __name__ == "__main__":
+    sys.exit(_main())
+
+
