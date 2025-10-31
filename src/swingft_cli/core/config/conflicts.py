@@ -148,44 +148,58 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
     ex_names: Set[str] = set()
     CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
 
-    def _walk(obj):
-        if isinstance(obj, dict):
-            cur = _ast_unwrap(obj)
-            if isinstance(cur, dict):
-                nm = str(cur.get("A_name", "")).strip()
-                if nm and int(cur.get("isException", 0)) == 1:
-                    ex_names.add(nm)
-                for key in CONTAINER_KEYS:
-                    ch = cur.get(key)
-                    if isinstance(ch, list):
-                        for c in ch:
-                            _walk(c)
-                    elif isinstance(ch, dict):
-                        _walk(ch)
-                if obj is not cur:
-                    for key in CONTAINER_KEYS:
-                        if key == 'node':
-                            continue
-                        ch = obj.get(key)
-                        if isinstance(ch, list):
-                            for c in ch:
-                                _walk(c)
-                        elif isinstance(ch, dict):
-                            _walk(ch)
-                for v in cur.values():
-                    _walk(v)
-                if obj is not cur:
-                    for k, v in obj.items():
-                        if k not in CONTAINER_KEYS:
-                            _walk(v)
-            else:
-                for v in obj.values():
-                    _walk(v)
-        elif isinstance(obj, list):
-            for it in obj:
-                _walk(it)
+    def _walk_iter(root):
+        from collections import deque
+        dq = deque([root])
+        seen = set()
+        while dq:
+            o = dq.pop()
+            oid = id(o)
+            if oid in seen:
+                continue
+            seen.add(oid)
 
-    _walk(ast_list)
+            if isinstance(o, dict):
+                cur = _ast_unwrap(o)
+                if isinstance(cur, dict):
+                    nm = str(cur.get("A_name", "")).strip()
+                    if nm and int(cur.get("isException", 0)) == 1:
+                        ex_names.add(nm)
+
+                    # enqueue container children from unwrapped dict
+                    for key in CONTAINER_KEYS:
+                        ch = cur.get(key)
+                        if isinstance(ch, list):
+                            dq.extend(ch)
+                        elif isinstance(ch, dict):
+                            dq.append(ch)
+
+                    # if wrapped, also enqueue container children from original, except 'node'
+                    if o is not cur:
+                        for key in CONTAINER_KEYS:
+                            if key == 'node':
+                                continue
+                            ch = o.get(key)
+                            if isinstance(ch, list):
+                                dq.extend(ch)
+                            elif isinstance(ch, dict):
+                                dq.append(ch)
+
+                    # enqueue remaining values
+                    for v in cur.values():
+                        dq.append(v)
+                    if o is not cur:
+                        for k, v in o.items():
+                            if k not in CONTAINER_KEYS:
+                                dq.append(v)
+                else:
+                    for v in o.values():
+                        dq.append(v)
+
+            elif isinstance(o, list):
+                dq.extend(o)
+
+    _walk_iter(ast_list)
     if not ex_names:
         return set()
 
