@@ -255,43 +255,58 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             with open(ast_file, 'r', encoding='utf-8') as f:
                 ast_list = json.load(f)
             CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
-            def _collect_names(obj):
-                if isinstance(obj, dict):
-                    cur = _ast_unwrap(obj)
-                    if isinstance(cur, dict):
-                        nm = str(cur.get("A_name", "")).strip()
-                        if nm:
-                            existing_names.add(nm)
-                        for key in CONTAINER_KEYS:
-                            ch = cur.get(key)
-                            if isinstance(ch, list):
-                                for c in ch:
-                                    _collect_names(c)
-                            elif isinstance(ch, dict):
-                                _collect_names(ch)
-                        if obj is not cur:
+
+            def _collect_names_iter(root):
+                from collections import deque
+                dq = deque([root])
+                seen = set()
+                while dq:
+                    obj = dq.pop()  # DFS; use popleft() for BFS
+                    oid = id(obj)
+                    if oid in seen:
+                        continue
+                    seen.add(oid)
+
+                    if isinstance(obj, dict):
+                        cur = _ast_unwrap(obj)
+                        if isinstance(cur, dict):
+                            nm = str(cur.get("A_name", "")).strip()
+                            if nm:
+                                existing_names.add(nm)
+
+                            # children from unwrapped dict
                             for key in CONTAINER_KEYS:
-                                if key == 'node':
-                                    continue
-                                ch = obj.get(key)
+                                ch = cur.get(key)
                                 if isinstance(ch, list):
-                                    for c in ch:
-                                        _collect_names(c)
+                                    dq.extend(ch)
                                 elif isinstance(ch, dict):
-                                    _collect_names(ch)
-                        for v in cur.values():
-                            _collect_names(v)
-                        if obj is not cur:
-                            for k, v in obj.items():
-                                if k not in CONTAINER_KEYS:
-                                    _collect_names(v)
-                    else:
-                        for v in obj.values():
-                            _collect_names(v)
-                elif isinstance(obj, list):
-                    for it in obj:
-                        _collect_names(it)
-            _collect_names(ast_list)
+                                    dq.append(ch)
+
+                            # if wrapped, also check original dict but skip 'node'
+                            if obj is not cur:
+                                for key in CONTAINER_KEYS:
+                                    if key == 'node':
+                                        continue
+                                    ch = obj.get(key)
+                                    if isinstance(ch, list):
+                                        dq.extend(ch)
+                                    elif isinstance(ch, dict):
+                                        dq.append(ch)
+
+                            # other values
+                            for v in cur.values():
+                                dq.append(v)
+                            if obj is not cur:
+                                for k, v in obj.items():
+                                    if k not in CONTAINER_KEYS:
+                                        dq.append(v)
+                        else:
+                            for v in obj.values():
+                                dq.append(v)
+                    elif isinstance(obj, list):
+                        dq.extend(obj)
+
+            _collect_names_iter(ast_list)
         except (OSError, json.JSONDecodeError, UnicodeError) as e:
             logging.trace("AST load for existing_names failed: %s", e)
             _maybe_raise(e)
