@@ -242,7 +242,7 @@ def _monitor_obfuscation_progress(proc: subprocess.Popen, steps: list, detectors
             m = marker_rx.match(line.strip())
             
             if m is not None:
-                _handle_explicit_marker(m, steps, step_keys, seen, step_state, last_current)
+                last_current = _handle_explicit_marker(m, steps, step_keys, seen, step_state, last_current)
                 sp2 = (sp2 + 1) % len(spinner)
                 bar = progress_bar(len([k for k in seen if k in step_keys]), total_steps)
                 try:
@@ -267,10 +267,10 @@ def _monitor_obfuscation_progress(proc: subprocess.Popen, steps: list, detectors
             # 정규식 기반 단계 감지
             matched_key = _detect_step_by_regex(line, detectors)
             if matched_key is not None:
-                _handle_detected_step(matched_key, steps, step_keys, seen, step_state, last_current)
+                last_current = _handle_detected_step(matched_key, steps, step_keys, seen, step_state, last_current)
             else:
-                _handle_encryption_step(line, low, steps, seen, step_state, last_current)
-                _handle_generic_steps(line, low, steps, step_keys, seen, step_state, last_current)
+                last_current = _handle_encryption_step(line, low, steps, seen, step_state, last_current)
+                last_current = _handle_generic_steps(line, low, steps, step_keys, seen, step_state, last_current)
         
         # 주기적 리드로우
         sp2 = (sp2 + 1) % len(spinner)

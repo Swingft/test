@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-10-31T03:26:27.857678Z",
+  "kind": "exclude_pending",
+  "project_input": "/Users/lanian/Desktop/UIKit+SPM_2",
+  "ast_node_path": "/Users/lanian/Desktop/spr/test/Obfuscation_Pipeline/AST/output/ast_node.json",
+  "candidates": [
+    "detailViewModel",
+    "loadSelectedRestaurantUseCase",
+    "setupBind"
+  ],
+  "source": "exclude_review"
+}
