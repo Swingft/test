@@ -83,56 +83,67 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
 
     CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
 
-    def _walk_any(obj, parents: list[str]):
-        # DFS with wrapper unwrapping; visit both unwrapped dict and wrapper siblings
-        if isinstance(obj, dict):
-            cur = _ast_unwrap(obj)
-            if isinstance(cur, dict):
-                nm = str(cur.get('A_name', '')).strip()
-                if nm:
-                    status_map.setdefault(nm, []).append(int(cur.get('isException', 0)))
-                    if parents:
-                        dotted = '.'.join(parents + [nm])
-                        dotted_map.setdefault(dotted, []).append(int(cur.get('isException', 0)))
-                next_parents = parents + ([nm] if nm else [])
+    def _walk_any_iter(root):
+        from collections import deque
+        # stack holds tuples of (object_to_visit, parents_path_list)
+        dq = deque([(root, [])])
+        seen = set()
+        while dq:
+            obj, parents = dq.pop()  # DFS; use popleft() for BFS
+            oid = id(obj)
+            if oid in seen:
+                continue
+            seen.add(oid)
 
-                # 1) Traverse known containers on the unwrapped dict
-                for key in CONTAINER_KEYS:
-                    ch = cur.get(key)
-                    if isinstance(ch, list):
-                        for c in ch:
-                            _walk_any(c, next_parents)
-                    elif isinstance(ch, dict):
-                        _walk_any(ch, next_parents)
+            if isinstance(obj, dict):
+                cur = _ast_unwrap(obj)
+                if isinstance(cur, dict):
+                    nm = str(cur.get('A_name', '')).strip()
+                    if nm:
+                        status_map.setdefault(nm, []).append(int(cur.get('isException', 0)))
+                        if parents:
+                            dotted = '.'.join(parents + [nm])
+                            dotted_map.setdefault(dotted, []).append(int(cur.get('isException', 0)))
+                    next_parents = parents + ([nm] if nm else [])
 
-                # 2) Traverse sibling containers on the wrapper `obj` (excluding the `node` we already handled)
-                if obj is not cur:
+                    # 1) enqueue known containers on the unwrapped dict
                     for key in CONTAINER_KEYS:
-                        if key == 'node':
-                            continue
-                        ch = obj.get(key)
+                        ch = cur.get(key)
                         if isinstance(ch, list):
                             for c in ch:
-                                _walk_any(c, next_parents)
+                                dq.append((c, next_parents))
                         elif isinstance(ch, dict):
-                            _walk_any(ch, next_parents)
+                            dq.append((ch, next_parents))
 
-                # 3) Conservative descent into other values
-                for v in cur.values():
-                    _walk_any(v, next_parents)
-                if obj is not cur:
-                    for k, v in obj.items():
-                        if k not in CONTAINER_KEYS:
-                            _walk_any(v, next_parents)
-            else:
-                # non-dict after unwrap: still descend values of the wrapper
-                for v in obj.values():
-                    _walk_any(v, parents)
-        elif isinstance(obj, list):
-            for elem in obj:
-                _walk_any(elem, parents)
+                    # 2) enqueue sibling containers on the wrapper `obj` (excluding `node`)
+                    if obj is not cur:
+                        for key in CONTAINER_KEYS:
+                            if key == 'node':
+                                continue
+                            ch = obj.get(key)
+                            if isinstance(ch, list):
+                                for c in ch:
+                                    dq.append((c, next_parents))
+                            elif isinstance(ch, dict):
+                                dq.append((ch, next_parents))
 
-    _walk_any(ast_list, [])
+                    # 3) conservative descent into other values
+                    for v in cur.values():
+                        dq.append((v, next_parents))
+                    if obj is not cur:
+                        for k, v in obj.items():
+                            if k not in CONTAINER_KEYS:
+                                dq.append((v, next_parents))
+                else:
+                    # non-dict after unwrap: still descend values of the wrapper
+                    for v in obj.values():
+                        dq.append((v, parents))
+
+            elif isinstance(obj, list):
+                for elem in obj:
+                    dq.append((elem, parents))
+
+    _walk_any_iter(ast_list)
 
     zeros, missing = [], []
     one = zero = not_found = 0

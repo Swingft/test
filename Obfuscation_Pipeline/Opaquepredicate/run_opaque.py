@@ -562,30 +562,55 @@ def transform_switch_body_cases(body: str, ctx: 'FileCtx') -> Tuple[str,int]:
     return ''.join(parts), edits
 
 def rewrite_switch_subtree(text: str, node: SwitchNode, allow_transform: bool, ctx: 'FileCtx') -> Tuple[str,int]:
-    header = text[node.s: node.obr+1]
-    body   = text[node.obr+1: node.e-1]
-    footer = text[node.e-1: node.e]
+    """Iterative post-order DFS rewrite for a switch subtree.
+    Preserves original semantics and per-node allow logic.
+    """
+    # results map each node -> (rewritten_text, edits_count)
+    results: dict[SwitchNode, Tuple[str, int]] = {}
 
-    out=[]; last=0; case_edits_total=0
-    for ch in node.children:
-        rs = ch.s - (node.obr+1)
-        re = ch.e - (node.obr+1)
-        out.append(body[last:rs])
-        child_allow = allow_transform and subtree_all_have_default(ch, text)
-        sub_txt, ed = rewrite_switch_subtree(text, ch, child_allow, ctx)
-        out.append(sub_txt)
-        case_edits_total += ed
-        last = re
-    out.append(body[last:])
-    mid = ''.join(out)
+    # stack items: (current_node, allow_flag, visited_flag)
+    stack: list[Tuple[SwitchNode, bool, bool]] = [(node, allow_transform, False)]
 
-    if allow_transform:
-        new_body, ed = transform_switch_body_cases(mid, ctx)
-        case_edits_total += ed
-    else:
-        new_body = mid
+    while stack:
+        cur, allow, visited = stack.pop()
+        if not visited:
+            # post-order: visit children first
+            stack.append((cur, allow, True))
+            # push children in reverse to preserve left-to-right processing
+            for ch in reversed(cur.children):
+                child_allow = allow and subtree_all_have_default(ch, text)
+                stack.append((ch, child_allow, False))
+            continue
 
-    return header + new_body + footer, case_edits_total
+        # assemble from children results
+        header = text[cur.s: cur.obr+1]
+        body   = text[cur.obr+1: cur.e-1]
+        footer = text[cur.e-1: cur.e]
+
+        out: list[str] = []
+        last = 0
+        case_edits_total = 0
+
+        for ch in cur.children:
+            rs = ch.s - (cur.obr+1)
+            re = ch.e - (cur.obr+1)
+            out.append(body[last:rs])
+            sub_txt, ed = results[ch]
+            out.append(sub_txt)
+            case_edits_total += ed
+            last = re
+        out.append(body[last:])
+        mid = ''.join(out)
+
+        if allow:
+            new_body, ed = transform_switch_body_cases(mid, ctx)
+            case_edits_total += ed
+        else:
+            new_body = mid
+
+        results[cur] = (header + new_body + footer, case_edits_total)
+
+    return results[node]
 
 class FileCtx:
     __slots__ = ("allocator","top_names","rng","first_flag","need_foundation")

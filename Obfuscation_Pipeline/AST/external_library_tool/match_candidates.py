@@ -1,6 +1,7 @@
 import json
 import re
 import os
+import logging
 from collections import defaultdict
 
 MATCHED_LIST = []
@@ -13,31 +14,47 @@ def in_matched_list(node):
         MATCHED_LIST.append(node)
 
 def match_member(node, ex_node):
-    members = node.get("G_members", [])
-    ex_members = ex_node.get("G_members", [])
+    # defensive: ensure node and ex_node are dicts
+    if not isinstance(node, dict) or not isinstance(ex_node, dict):
+        return
+    members = node.get("G_members", []) if isinstance(node.get("G_members", []), list) else []
+    ex_members = ex_node.get("G_members", []) if isinstance(ex_node.get("G_members", []), list) else []
+
     for member in members:
+        if not isinstance(member, dict):
+            continue
         member_name = member.get("A_name")
         member_kind = member.get("B_kind")
         for ex in ex_members:
+            if not isinstance(ex, dict):
+                continue
             ex_name = ex.get("A_name")
             ex_kind = ex.get("B_kind")
             if member_name == ex_name and member_kind == ex_kind:
-                if ex_node.get("B_kind") == "protocol":
+                ex_kind_container = ex_node.get("B_kind")
+                if ex_kind_container == "protocol":
                     in_matched_list(member)
-                elif ex_node.get("B_kind") == "class":
-                    attributes = member.get("D_attributes", [])
+                elif ex_kind_container == "class":
+                    attributes = member.get("D_attributes", []) if isinstance(member.get("D_attributes", []), list) else []
                     if "override" in attributes:
                         in_matched_list(member)
 
 # 자식 노드가 자식 노드를 가지는 경우
 def repeat_match_member(in_node, ex_node):
-    if in_node is None: 
+    if in_node is None:
         return
-    node = in_node.get("node", in_node)
-    extensions = in_node.get("extension", [])
-    children = in_node.get("children", [])
-    
-    match_member(node, ex_node)
+    # normalize container -> dict
+    if isinstance(in_node, dict):
+        node = in_node.get("node") or in_node
+        extensions = in_node.get("extension", []) if isinstance(in_node.get("extension", []), list) else []
+        children = in_node.get("children", []) if isinstance(in_node.get("children", []), list) else []
+    else:
+        # non-dict container cannot be traversed
+        return
+
+    # defensive: only proceed if node is dict
+    if isinstance(node, dict):
+        match_member(node, ex_node)
 
     for extension in extensions:
         repeat_match_member(extension, ex_node)
@@ -46,37 +63,53 @@ def repeat_match_member(in_node, ex_node):
 
 # extension 이름 확인
 def repeat_extension(in_node, name):
+    if not isinstance(in_node, dict):
+        return
     node = in_node.get("node") or in_node
+    if not isinstance(node, dict):
+        return
 
-    c_name = node.get("A_name")
-    c_name = c_name.split(".")[-1]
+    c_name = node.get("A_name") or ""
+    c_name = str(c_name).split(".")[-1]
     if c_name == name:
         in_matched_list(node)
-        extensions = in_node.get("extension", [])
+        extensions = in_node.get("extension", []) if isinstance(in_node.get("extension", []), list) else []
         for extension in extensions:
             repeat_extension(extension, name)
 
 # 외부 요소와 노드 비교
 def compare_node(in_node, ex_node):
+    # handle list container for in_node
+    if isinstance(in_node, list):
+        for item in in_node:
+            compare_node(item, ex_node)
+        return
+
     if isinstance(ex_node, list):
         for n in ex_node:
             compare_node(in_node, n)
+        return
 
-    elif isinstance(ex_node, dict):
-        node = in_node.get("node") or in_node
-        
-        name = node.get("A_name")
-        name = name.split(".")[-1]
-        # extension x {}
-        if (name == ex_node.get("A_name")) and (node.get("B_kind") == "extension"):
-            repeat_extension(in_node, node.get("A_name"))
+    if not isinstance(in_node, dict) or not isinstance(ex_node, dict):
+        return
+
+    node = in_node.get("node") or in_node
+    if not isinstance(node, dict):
+        return
+
+    name = node.get("A_name") or ""
+    name = str(name).split(".")[-1]
+
+    # extension x {}
+    if (name == ex_node.get("A_name")) and (node.get("B_kind") == "extension"):
+        repeat_extension(in_node, node.get("A_name"))
+        repeat_match_member(in_node, ex_node)
+
+    # 클래스 상속, 프로토콜 채택, extension x: y {}
+    adopted = node.get("E_adoptedClassProtocols", []) if isinstance(node.get("E_adoptedClassProtocols", []), list) else []
+    for ad in adopted:
+        if ex_node.get("A_name") == ad:
             repeat_match_member(in_node, ex_node)
-
-        # 클래스 상속, 프로토콜 채택, extension x: y {}
-        adopted = node.get("E_adoptedClassProtocols", [])
-        for ad in adopted:
-            if ex_node.get("A_name") == ad:
-                repeat_match_member(in_node, ex_node)
 
 # 외부 요소와 이름이 같은지 확인
 def match_ast_name(data, external_ast_dir):
@@ -100,9 +133,21 @@ def match_ast_name(data, external_ast_dir):
         for file in candidate_files:
             file_path = os.path.join(external_ast_dir, file)
             with open(file_path, "r", encoding="utf-8") as f:
-                ex_data = json.load(f)
-                if isinstance(data, (list, dict)) and isinstance(ex_data, (list, dict)):
+                try:
+                    ex_data = json.load(f)
+                except (json.JSONDecodeError, UnicodeError) as e:
+                    logging.warning("skipping external AST file %s: load failed: %s", file_path, e)
+                    continue
+
+                if not isinstance(data, (list, dict)) or not isinstance(ex_data, (list, dict)):
+                    logging.warning("skipping compare for %s: unexpected types data=%s ex_data=%s", file_path, type(data).__name__, type(ex_data).__name__)
+                    continue
+
+                try:
                     compare_node(data, ex_data)
+                except Exception as e:
+                    logging.exception("compare_node failed for %s: %s", file_path, e)
+                    continue
 
 # 외부라이브러리 AST에서 노드 이름 추출
 def extract_ast_name(ast, file):

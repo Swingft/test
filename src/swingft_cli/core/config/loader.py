@@ -21,42 +21,58 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
 
     CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
 
-    # collect names present in AST
+    # collect names present in AST (iterative to avoid recursion)
     names_in_ast = set()
-    def _collect(o):
-        if isinstance(o, dict):
-            cur = _ast_unwrap(o)
-            if isinstance(cur, dict):
-                nm = str(cur.get("A_name", "")).strip()
-                if nm:
-                    names_in_ast.add(nm)
-                for k in CONTAINER_KEYS:
-                    ch = cur.get(k)
-                    if isinstance(ch, list):
-                        for c in ch: _collect(c)
-                    elif isinstance(ch, dict):
-                        _collect(ch)
-                if o is not cur:
+
+    def _collect_iter(root):
+        from collections import deque
+        dq = deque([root])
+        seen = set()
+        while dq:
+            o = dq.pop()
+            oid = id(o)
+            if oid in seen:
+                continue
+            seen.add(oid)
+
+            if isinstance(o, dict):
+                cur = _ast_unwrap(o)
+                if isinstance(cur, dict):
+                    nm = str(cur.get("A_name", "")).strip()
+                    if nm:
+                        names_in_ast.add(nm)
+
                     for k in CONTAINER_KEYS:
-                        if k == 'node':
-                            continue
-                        ch = o.get(k)
+                        ch = cur.get(k)
                         if isinstance(ch, list):
-                            for c in ch: _collect(c)
+                            dq.extend(ch)
                         elif isinstance(ch, dict):
-                            _collect(ch)
-                for v in cur.values():
-                    _collect(v)
-                if o is not cur:
-                    for k,v in o.items():
-                        if k not in CONTAINER_KEYS:
-                            _collect(v)
-            else:
-                for v in o.values():
-                    _collect(v)
-        elif isinstance(o, list):
-            for it in o: _collect(it)
-    _collect(ast_list)
+                            dq.append(ch)
+
+                    if o is not cur:
+                        for k in CONTAINER_KEYS:
+                            if k == 'node':
+                                continue
+                            ch = o.get(k)
+                            if isinstance(ch, list):
+                                dq.extend(ch)
+                            elif isinstance(ch, dict):
+                                dq.append(ch)
+
+                    for v in cur.values():
+                        dq.append(v)
+                    if o is not cur:
+                        for k, v in o.items():
+                            if k not in CONTAINER_KEYS:
+                                dq.append(v)
+                else:
+                    for v in o.values():
+                        dq.append(v)
+
+            elif isinstance(o, list):
+                dq.extend(o)
+
+    _collect_iter(ast_list)
 
     # build targets from config (expand wildcards)
     import fnmatch
@@ -99,41 +115,56 @@ def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]
         with open(ast_file_path, 'r', encoding='utf-8') as f:
             ast2 = json.load(f)
         cnt = 0
-        def _count(o):
+
+        def _count_iter(root):
+            from collections import deque
             nonlocal cnt
-            if isinstance(o, dict):
-                cur = _ast_unwrap(o)
-                if isinstance(cur, dict):
-                    nm = str(cur.get("A_name", "")).strip()
-                    if nm in targets and int(cur.get("isException", 0)) == 1:
-                        cnt += 1
-                    for k in CONTAINER_KEYS:
-                        ch = cur.get(k)
-                        if isinstance(ch, list):
-                            for c in ch: _count(c)
-                        elif isinstance(ch, dict):
-                            _count(ch)
-                    if o is not cur:
+            dq = deque([root])
+            seen = set()
+            while dq:
+                o = dq.pop()
+                oid = id(o)
+                if oid in seen:
+                    continue
+                seen.add(oid)
+
+                if isinstance(o, dict):
+                    cur = _ast_unwrap(o)
+                    if isinstance(cur, dict):
+                        nm = str(cur.get("A_name", "")).strip()
+                        if nm in targets and int(cur.get("isException", 0)) == 1:
+                            cnt += 1
+
                         for k in CONTAINER_KEYS:
-                            if k == 'node':
-                                continue
-                            ch = o.get(k)
+                            ch = cur.get(k)
                             if isinstance(ch, list):
-                                for c in ch: _count(c)
+                                dq.extend(ch)
                             elif isinstance(ch, dict):
-                                _count(ch)
-                    for v in cur.values():
-                        _count(v)
-                    if o is not cur:
-                        for k,v in o.items():
-                            if k not in CONTAINER_KEYS:
-                                _count(v)
-                else:
-                    for v in o.values():
-                        _count(v)
-            elif isinstance(o, list):
-                for it in o: _count(it)
-        _count(ast2)
+                                dq.append(ch)
+
+                        if o is not cur:
+                            for k in CONTAINER_KEYS:
+                                if k == 'node':
+                                    continue
+                                ch = o.get(k)
+                                if isinstance(ch, list):
+                                    dq.extend(ch)
+                                elif isinstance(ch, dict):
+                                    dq.append(ch)
+
+                        for v in cur.values():
+                            dq.append(v)
+                        if o is not cur:
+                            for k, v in o.items():
+                                if k not in CONTAINER_KEYS:
+                                    dq.append(v)
+                    else:
+                        for v in o.values():
+                            dq.append(v)
+                elif isinstance(o, list):
+                    dq.extend(o)
+
+        _count_iter(ast2)
         return cnt
     except (OSError, json.JSONDecodeError) as e:
         logging.trace("AST recount failed: %s", e)

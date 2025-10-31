@@ -46,14 +46,12 @@ def get_storyboard_and_xc_wrapper_info():
                     STORYBOARD_AND_XC_WRAP_NAME.append(name)
 
 def check_attribute(node, p_same_name):
-    def check_member():
-        members = node.get("G_members", [])
-        for member in members:
-            check_attribute(member, p_same_name)
-
+    """Apply attribute-based matching on a single node.
+    Returns a list of member nodes that should be visited next.
+    """
     if not isinstance(node, dict):
-        return
-    
+        return []
+
     attributes = node.get("D_attributes", [])
     adopted = node.get("E_adoptedClassProtocols", [])
     members = node.get("G_members", [])
@@ -65,7 +63,9 @@ def check_attribute(node, p_same_name):
         in_matched_list(node)
 
     # 앱 진입점
-    if "main" in attributes or "UIApplicationMain" in attributes or "UIApplicationDelegate" in adopted or "UIWindowSceneDelegate" in adopted or "App" in adopted:
+    if ("main" in attributes or "UIApplicationMain" in attributes or
+        "UIApplicationDelegate" in adopted or "UIWindowSceneDelegate" in adopted or
+        "App" in adopted):
         in_matched_list(node)
         for member in members:
             if member.get("B_kind") == "variable" and member.get("A_name") == "body":
@@ -100,48 +100,63 @@ def check_attribute(node, p_same_name):
         for member in members:
             if member.get("A_name") == "shared" and member.get("B_kind") == "variable":
                 in_matched_list(member)
-    
+
     if name in ["get", "set", "willSet", "didSet", "init"]:
         in_matched_list(node)
 
-    if name.startswith("`") and name.endswith("`"):
+    if isinstance(name, str) and name.startswith("`") and name.endswith("`"):
         name = name[1:-1]
     if name in p_same_name:
         in_matched_list(node)
 
-    check_member()
+    return members
 
-# 자식 노드가 자식 노드를 가지는 경우
-def repeat_match_member(data, p_same_name):
-    if data is None: 
-        return
-    node = data.get("node") or data
-    if not node:
-        return
-    
-    node_id = id(node)
-    if node_id in VISITED_NODE:
-        return
-    VISITED_NODE.add(node_id)
-
-    extensions = data.get("extension", [])
-    children = data.get("children", [])
-
-    check_attribute(node, p_same_name)
-    for extension in extensions:
-        repeat_match_member(extension, p_same_name)
-    for child in children:
-        repeat_match_member(child, p_same_name)
-
-# node 처리
+# Iterative DFS over AST containers; avoids recursion depth limits
 def find_node(data, p_same_name):
-    if isinstance(data, list):
-        for item in data:
-            repeat_match_member(item, p_same_name)
+    from collections import deque
+    stack = deque()
 
+    # seed
+    if isinstance(data, list):
+        stack.extend(data)
     elif isinstance(data, dict):
-        for _, node in data.items():
-            check_attribute(node, p_same_name)
+        # when a dict mapping name->node is provided, walk its values
+        if "node" in data or "children" in data or "extension" in data:
+            stack.append(data)
+        else:
+            stack.extend(data.values())
+    else:
+        return
+
+    while stack:
+        cur = stack.pop()
+        if cur is None:
+            continue
+
+        # normalize container vs node
+        container = cur if isinstance(cur, dict) else {}
+        node = container.get("node") or container
+        if not isinstance(node, dict):
+            continue
+
+        nid = id(node)
+        if nid in VISITED_NODE:
+            continue
+        VISITED_NODE.add(nid)
+
+        # apply attribute checks and enqueue members for further checks
+        members = check_attribute(node, p_same_name) or []
+        for m in members:
+            if isinstance(m, dict):
+                stack.append(m)
+
+        # traverse structural containers if present
+        extensions = container.get("extension", [])
+        children = container.get("children", [])
+        if isinstance(extensions, list):
+            stack.extend(extensions)
+        if isinstance(children, list):
+            stack.extend(children)
 
 def find_exception_target(p_same_name):
     input_file_1 = os.path.join(".", "AST", "output", "inheritance_node.json")
