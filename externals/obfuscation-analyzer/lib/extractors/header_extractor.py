@@ -24,7 +24,7 @@ VERBOSE_PER_FILE = False
 
 def _trace(msg: str, *args, **kwargs) -> None:
     try:
-        logging.log(10, msg, *args, **kwargs)
+        logging.trace(msg, *args, **kwargs)
     except (OSError, ValueError, TypeError, AttributeError) as e:
         # 로깅 실패 시에도 프로그램은 계속 진행
         return

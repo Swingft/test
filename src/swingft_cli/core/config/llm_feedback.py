@@ -323,7 +323,7 @@ def _load_llm_singleton():
         try:
             with open(_os.devnull, 'w') as _devnull, _ct.redirect_stderr(_devnull):
                 _LLM_SINGLETON = Llama(**kwargs)
-        except Exception as e:
+        except (OSError, RuntimeError, ValueError) as e:
             _trace("LLM model load with stderr redirect failed, retrying without redirect: %s", e)
             # 일부 환경에서는 redirect가 적용되지 않을 수 있으므로 재시도
             _LLM_SINGLETON = Llama(**kwargs)

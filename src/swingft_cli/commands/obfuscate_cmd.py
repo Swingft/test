@@ -448,7 +448,7 @@ def handle_obfuscate(args):
         effective_in, effective_out = _read_io(cfg_path)
     except SystemExit:
         raise
-    except Exception as e:
+    except (OSError, ValueError, TypeError, KeyError) as e:
         logging.error("Failed to read config I/O: %s: %s", cfg_path, e)
         print(f"[ERROR] Failed to read config I/O: {cfg_path}: {e}")
         sys.exit(1)

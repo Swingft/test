@@ -13,20 +13,22 @@
   },
   "_comment_exclude": "The following section is optional and can be customized as needed.",
   "exclude": {
-    "obfuscation": [],
+    "obfuscation": [
+    ],
     "encryption": [
       "chooseViewModel"
     ]
   },
   "_comment_include": "You can explicitly include items to always obfuscate/encrypt, regardless of global settings.",
   "include": {
-    "obfuscation": [],
+    "obfuscation": [
+    ],
     "encryption": [
       "chooseViewModel"
     ]
   },
   "_comment_conflict_policy": "ask | force | skip for include conflict policy",
   "preflight": {
-    "conflict_policy": "skip"
+    "conflict_policy": "skip" 
   }
 }

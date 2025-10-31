@@ -52,7 +52,7 @@ def _colorize_preflight_line(msg: str) -> str:
         rest = m.group(2) or ""
         # 표시는 [Warning]으로 통일
         return _blue("[Warning]") + _yellow(rest)
-    except Exception as e:
+    except (AttributeError, TypeError, ValueError) as e:
         logging.trace("format_warning failed: %s", e)
         return msg
 

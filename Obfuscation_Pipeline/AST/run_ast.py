@@ -22,7 +22,7 @@ from .obfuscation_tool.exception_tagging import exception_tagging
 def _trace(msg: str, *args, **kwargs) -> None:
     """디버그 추적 로그"""
     try:
-        logging.log(10, msg, *args, **kwargs)
+        logging.trace(msg, *args, **kwargs)
     except (OSError, ValueError, TypeError) as e:
         # 로깅 실패 시에도 프로그램은 계속 진행
         print(f"[TRACE] {msg % args if args else msg}")
