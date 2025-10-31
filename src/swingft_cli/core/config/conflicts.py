@@ -29,7 +29,8 @@ def _has_ui_prompt() -> bool:
     try:
         import swingft_cli.core.config as _cfg
         return getattr(_cfg, "PROMPT_PROVIDER", None) is not None
-    except ImportError:
+    except ImportError as e:
+        logging.trace("ImportError in _has_ui_prompt: %s", e)
         return False
     except AttributeError as e:
         logging.trace("_has_ui_prompt attribute error: %s", e)
@@ -51,7 +52,8 @@ def _colorize_preflight_line(msg: str) -> str:
         rest = m.group(2) or ""
         # 표시는 [Warning]으로 통일
         return _blue("[Warning]") + _yellow(rest)
-    except Exception:
+    except Exception as e:
+        logging.trace("format_warning failed: %s", e)
         return msg
 
 def _gray(s: str) -> str:

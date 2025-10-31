@@ -365,7 +365,8 @@ def copy_StringSecurity_folder(source_root: str) -> None:
             try:
                 with open(build_marker_file, "r", encoding="utf-8") as f:
                     previous_build_path = f.read().strip()
-            except (OSError, UnicodeError):
+            except (OSError, UnicodeError) as e:
+                _trace("build_marker_file read failed: %s", e)
                 previous_build_path = ""
 
         current_build_path = os.path.abspath(os.path.join(target_path, ".build"))
@@ -392,8 +393,8 @@ def copy_StringSecurity_folder(source_root: str) -> None:
         _maybe_raise(e)
         try:
             os.chdir(script_dir)
-        except OSError:
-            pass
+        except OSError as e:
+            _trace("os.chdir(script_dir) failed: %s", e)
         return 1
 
 

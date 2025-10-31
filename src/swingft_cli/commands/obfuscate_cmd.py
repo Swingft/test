@@ -83,7 +83,8 @@ def _parse_bool_env(env_var: str, default: bool = False) -> bool:
     try:
         value = os.environ.get(env_var, str(default)).strip().lower()
         return value in {"1", "true", "yes", "y", "on"}
-    except (AttributeError, TypeError):
+    except (AttributeError, TypeError) as e:
+        logging.trace("_env_bool failed for %s: %s", env_var, e)
         return default
 
 
@@ -218,7 +219,8 @@ def _monitor_obfuscation_progress(proc: subprocess.Popen, steps: list, detectors
     while True:
         try:
             item = q2.get(timeout=0.1)
-        except queue.Empty:
+        except queue.Empty as e:
+            logging.trace("queue.Empty in stream processing: %s", e)
             item = ""
         
         if item is None:
@@ -447,6 +449,7 @@ def handle_obfuscate(args):
     except SystemExit:
         raise
     except Exception as e:
+        logging.error("Failed to read config I/O: %s: %s", cfg_path, e)
         print(f"[ERROR] Failed to read config I/O: {cfg_path}: {e}")
         sys.exit(1)
 
