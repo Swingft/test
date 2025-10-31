@@ -23,11 +23,10 @@ from lib.extractors.header_extractor import HeaderScanner
 class ObfuscationAnalyzer:
     """난독화 분석 오케스트레이터"""
 
-    def __init__(self, project_path: Path, output_dir: Path = None, debug: bool = False):
+    def __init__(self, project_path: Path, output_dir: Path = None):
         self.project_path = Path(project_path)
         self.output_dir = output_dir or Path("./analysis_output")
         self.output_dir.mkdir(parents=True, exist_ok=True)
-        self.debug = debug
         
         # 로깅 설정
         self.logger = self._setup_logging()
@@ -38,18 +37,13 @@ class ObfuscationAnalyzer:
     def _setup_logging(self) -> logging.Logger:
         """로깅 설정"""
         logger = logging.getLogger(__name__)
-        if self.debug:
-            logger.setLevel(logging.DEBUG)
-            handler = logging.StreamHandler()
-            formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-            handler.setFormatter(formatter)
-            logger.addHandler(handler)
         return logger
 
     def _trace(self, msg: str, *args, **kwargs) -> None:
-        """디버그 추적 로그"""
+        """추적 로그"""
         try:
-            self.logger.debug(msg, *args, **kwargs)
+            # 로깅 레벨 10 사용 (trace level)
+            self.logger.log(10, msg, *args, **kwargs)
         except (OSError, ValueError, TypeError) as e:
             # 로깅 실패 시에도 프로그램은 계속 진행
             print(f"[TRACE] {msg % args if args else msg}")
@@ -217,9 +211,6 @@ def main():
 
   # 프로젝트 이름 명시 (DerivedData 검색용)
   python analyze.py /path/to/project -p "MyRealProjectName"
-
-  # 디버그 모드 (중간 파일 보존)
-  python analyze.py /path/to/project --debug
         """
     )
 
@@ -242,12 +233,6 @@ def main():
         help="DerivedData 검색용 프로젝트 이름 (미지정시 자동 추출)"
     )
 
-    parser.add_argument(
-        "--debug",
-        action="store_true",
-        help="디버그 모드: 중간 파일 보존"
-    )
-
     args = parser.parse_args()
 
     # 프로젝트 존재 확인
@@ -259,8 +244,7 @@ def main():
     try:
         analyzer = ObfuscationAnalyzer(
             project_path=args.project_path,
-            output_dir=args.output,
-            debug=args.debug
+            output_dir=args.output
         )
 
         analyzer.run_header_analysis(real_project_name=args.project_name)
@@ -269,9 +253,6 @@ def main():
         sys.exit(1)
     except (RuntimeError, MemoryError, SystemError) as e:
         print(f"❌ 예상치 못한 오류: {e}")
-        if args.debug:
-            import traceback
-            traceback.print_exc()
         sys.exit(1)
 
 

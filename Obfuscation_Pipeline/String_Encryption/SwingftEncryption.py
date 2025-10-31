@@ -161,7 +161,10 @@ def load_included_from_json(path: str):
     with open(path, encoding='utf-8') as f:
         items = json.load(f)
 
+
     for obj in items:
+        if obj is None:
+            return in_strings, in_lines
         if not isinstance(obj, dict):
             continue
         kind = str(obj.get("kind", "") or "").upper()
@@ -173,6 +176,8 @@ def load_included_from_json(path: str):
         line = obj.get("line")
         value = obj.get("value")
         if not abs_file or value is None:
+            continue
+        if line is None:
             continue
         if isinstance(line, int) and line > 0:
             in_lines[abs_file].add(line)

@@ -18,6 +18,8 @@ def check_llm_find_id(node):
 
 # 자식 노드가 자식 노드를 가지는 경우
 def repeat_match_node(data):
+    if data is None:
+        return 1;
     if not isinstance(data, dict):
         return
     node = data.get("node", data)
