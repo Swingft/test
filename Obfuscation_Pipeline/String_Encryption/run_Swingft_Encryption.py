@@ -1,5 +1,6 @@
 import argparse
 import json
+import logging
 import os
 import re
 import shutil
@@ -113,7 +114,8 @@ def main():
     if build_marker_file.exists():
         try:
             previous_build_path = build_marker_file.read_text(encoding="utf-8").strip()
-        except OSError:
+        except OSError as e:
+            logging.trace("read_text() failed for build_marker_file: %s", e)
             previous_build_path = ""
 
     current_build_path = Path(".build").resolve()

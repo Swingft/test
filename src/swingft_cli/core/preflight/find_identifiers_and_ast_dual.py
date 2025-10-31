@@ -68,7 +68,8 @@ def _best_ast_name_match(ident: str, ast_list: List[dict]) -> Optional[str]:
 try:
     # When executed as a module within a package
     from .find_identifiers_and_ast import build_report_for_identifiers  # type: ignore
-except ImportError:
+except ImportError as e:
+    logging.trace("ImportError in find_identifiers_and_ast_dual: %s", e)
     # Fallback for direct script execution: add repo src root to sys.path
     from pathlib import Path as _P
     import sys as _S
@@ -102,7 +103,8 @@ def _make_tui_echo(header: str):
         if _tui is None:
             return None
         return _tui.make_stream_echo(header=header, tail_len=10)
-    except Exception:
+    except Exception as e:
+        logging.trace("make_stream_echo failed: %s", e)
         return None
 
 INSTRUCTION = (
@@ -554,8 +556,8 @@ def main():
         _tui = get_tui()
         if _tui is not None:
             _tui.set_status(["LLM analysis in progress…", ""])
-    except Exception:
-        pass
+    except Exception as e:
+        logging.trace("set_status failed in find_identifiers_and_ast_dual: %s", e)
 
     report = build_report_for_identifiers(args.project_root, ids, ctx_lines=args.ctx_lines)
     report = _augment_report_with_declarations(report)

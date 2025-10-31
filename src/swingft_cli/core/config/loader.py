@@ -494,7 +494,8 @@ def load_config_or_exit(path: str) -> Dict[str, Any]:
     # Allow early config loads to defer preflight entirely (e.g., path resolution phase)
     try:
         _defer = str(os.environ.get("SWINGFT_DEFER_PREFLIGHT", "")).strip().lower() in {"1","true","yes","y","on"}
-    except Exception:
+    except Exception as e:
+        logging.trace("SWINGFT_DEFER_PREFLIGHT env var read failed: %s", e)
         _defer = False
     if not _defer:
         try:

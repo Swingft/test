@@ -20,8 +20,9 @@ def read_io_paths(config_path: str) -> Tuple[str | None, str | None]:
         if prev is None:
             try:
                 del os.environ["SWINGFT_DEFER_PREFLIGHT"]
-            except KeyError:
-                pass
+            except KeyError as e:
+                import logging
+                logging.trace("SWINGFT_DEFER_PREFLIGHT env var deletion failed (not set): %s", e)
         else:
             os.environ["SWINGFT_DEFER_PREFLIGHT"] = prev
 

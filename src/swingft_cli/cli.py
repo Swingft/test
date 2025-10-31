@@ -37,7 +37,8 @@ try:
     def _HelpFmt(prog: str):
         return _NoNoneRichHelp(prog=prog, max_help_position=28, width=100)
 
-except Exception:
+except Exception as e:
+    logging.trace("rich_argparse import failed, using fallback: %s", e)
     class _NoNoneRawHelp(argparse.RawTextHelpFormatter):
         """Hide '(default: None)' but show real defaults, preserve newlines."""
         def _get_help_string(self, action):

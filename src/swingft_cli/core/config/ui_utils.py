@@ -10,7 +10,9 @@ def supports_color() -> bool:
         if str(v).strip().lower() in {"0", "false", "no", "off"}:
             return False
         return sys.stdout.isatty()
-    except Exception:
+    except Exception as e:
+        import logging
+        logging.trace("supports_color check failed: %s", e)
         return False
 
 
@@ -44,7 +46,9 @@ def print_warning_block(header: str, items: list[str]) -> None:
             for it in items:
                 sys.stdout.write(f"  - {it}\n")
         sys.stdout.flush()
-    except Exception:
+    except Exception as e:
+        import logging
+        logging.trace("print_warning_block stdout write failed: %s", e)
         # Fallback to simple prints if direct writes fail
         if supports_color():
             print(blue("[Warning]") + yellow(f" {header}"))
