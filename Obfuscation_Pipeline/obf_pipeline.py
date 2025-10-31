@@ -6,7 +6,7 @@ import logging
 # local strict-mode + trace helpers (no external deps)
 def _trace(msg: str, *args, **kwargs) -> None:
     try:
-        logging.log(10, msg, *args, **kwargs)
+        logging.trace(msg, *args, **kwargs)
     except (OSError, ValueError, TypeError, AttributeError) as e:
         # 로깅 실패 시에도 프로그램은 계속 진행
         return
@@ -391,6 +391,7 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
             shutil.rmtree(ast_output_dir)
             _p("AST/output 폴더 정리 완료")
         except OSError as e:
+            _trace("AST/output 폴더 정리 실패: %s", e)
             _p(f"AST/output 폴더 정리 실패: {e}")
     else:
         _p("AST/output 폴더가 존재하지 않습니다")
@@ -411,6 +412,7 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
                 os.remove(p)
                 _p(f"삭제 완료: {p}")
         except OSError as e:
+            _trace("파일 삭제 실패 %s: %s", p, e)
             _p(f"삭제 실패: {p} ({e})")
 
     # 루트(Obfuscation_Pipeline) 레벨 매핑 산출물 정리
@@ -425,7 +427,7 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
                 os.remove(p)
                 print(f"삭제 완료: {p}")
         except OSError as e:
-            print(f"삭제 실패: {p} ({e})")
+            _trace("파일 삭제 실패 %s: %s", p, e)
 
     # Mapping/output 디렉토리 정리 (루트 기준)
     mapping_output_dir = os.path.join(script_dir, "Mapping", "output")

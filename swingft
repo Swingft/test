@@ -5,6 +5,17 @@ import os
 import sys
 import logging
 
+# Add TRACE level and trace() method to logging
+TRACE = 5
+logging.addLevelName(TRACE, "TRACE")
+
+def _trace(self, message, *args, **kwargs):
+    if self.isEnabledFor(TRACE):
+        self._log(TRACE, message, args, **kwargs)
+
+logging.Logger.trace = _trace
+logging.trace = lambda msg, *args, **kwargs: logging.log(TRACE, msg, *args, **kwargs)
+
 
 def _main() -> int:
     # ensure local src/ is importable even when this script is symlinked (e.g., venv/bin/swingft)
@@ -38,11 +49,11 @@ def _main() -> int:
                 if nxt == cur:
                     break
                 cur = nxt
-        except Exception as e:
+        except (OSError, AttributeError) as e:
             logging.trace("swingft: sys.path setup failed: %s", e)
     try:
         from swingft_cli.cli import main as _cli_main  # type: ignore
-    except Exception as e:
+    except (ImportError, AttributeError, OSError) as e:
         logging.error("swingft: failed to import runner: %s", e)
         sys.stderr.write(f"swingft: failed to import runner: {e}\n")
         return 1

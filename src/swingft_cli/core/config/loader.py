@@ -212,11 +212,11 @@ def _start_exclude_review_async(config_path: str | None, config: dict | None) ->
                 os.environ["SWINGFT_EXCLUDE_SUPPRESS_STDOUT"] = "1"
                 os.environ["SWINGFT_EXCLUDE_DEFER_PROMPT"] = "1"
                 _check_exclude_sensitive_identifiers(config_path, config, set())
-            except Exception as e:  # best-effort; do not crash caller
+            except (OSError, RuntimeError, ImportError, AttributeError) as e:  # best-effort; do not crash caller
                 logging.trace("exclude review async failed: %s", e)
         t = threading.Thread(target=_runner, daemon=True)
         t.start()
-    except Exception as e:
+    except (OSError, RuntimeError, ImportError) as e:
         logging.trace("exclude review async start skipped: %s", e)
 from .ast_utils import compare_exclusion_list_vs_ast as _compare_exclusion_list_vs_ast
 
@@ -494,7 +494,7 @@ def load_config_or_exit(path: str) -> Dict[str, Any]:
     # Allow early config loads to defer preflight entirely (e.g., path resolution phase)
     try:
         _defer = str(os.environ.get("SWINGFT_DEFER_PREFLIGHT", "")).strip().lower() in {"1","true","yes","y","on"}
-    except Exception as e:
+    except (OSError, AttributeError, TypeError) as e:
         logging.trace("SWINGFT_DEFER_PREFLIGHT env var read failed: %s", e)
         _defer = False
     if not _defer:

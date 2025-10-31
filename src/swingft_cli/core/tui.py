@@ -24,7 +24,7 @@ def _maybe_raise(e: BaseException) -> None:
 def _trace(msg: str, *args, **kwargs) -> None:
     # numeric-level logger to avoid literal level-name tokens
     try:
-        logging.log(10, msg, *args, **kwargs)
+        logging.trace(msg, *args, **kwargs)
     except (ValueError, TypeError, OSError, UnicodeError):
         return
 

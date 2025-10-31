@@ -103,7 +103,7 @@ def _make_tui_echo(header: str):
         if _tui is None:
             return None
         return _tui.make_stream_echo(header=header, tail_len=10)
-    except Exception as e:
+    except (ImportError, AttributeError, RuntimeError, OSError) as e:
         logging.trace("make_stream_echo failed: %s", e)
         return None
 
@@ -556,7 +556,7 @@ def main():
         _tui = get_tui()
         if _tui is not None:
             _tui.set_status(["LLM analysis in progress…", ""])
-    except Exception as e:
+    except (ImportError, AttributeError, RuntimeError, OSError) as e:
         logging.trace("set_status failed in find_identifiers_and_ast_dual: %s", e)
 
     report = build_report_for_identifiers(args.project_root, ids, ctx_lines=args.ctx_lines)

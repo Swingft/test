@@ -69,7 +69,7 @@ def _supports_color() -> bool:
         if str(v).strip().lower() in {"0", "false", "no", "off"}:
             return False
         return sys.stdout.isatty()
-    except Exception as e:
+    except (OSError, AttributeError) as e:
         logging.trace("supports_color check failed: %s", e)
         return False
 
@@ -309,7 +309,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             _print_warning_block("Exclude candidates may cause security issues.", _list)
             try:
                 print("")
-            except Exception as e:
+            except (OSError, UnicodeEncodeError) as e:
                 logging.trace("print empty line failed in exclude review: %s", e)
 
     # Persist pending set
@@ -405,7 +405,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                         _defer_prompt_flag = False
                         try:
                             _tui = get_tui()
-                        except Exception as e:
+                        except (ImportError, AttributeError, RuntimeError) as e:
                             logging.trace("get_tui() failed in exclude review: %s", e)
                             _tui = None
 
@@ -417,7 +417,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                                     # 단일 라인 스피너: 줄바꿈 없이 동일 라인 덮어쓰기
                                     sys.stdout.write("\r\x1b[2K" + f"LLM Analysis: {ident}  {spinner[idx]}")
                                     sys.stdout.flush()
-                                except Exception as e:
+                                except (OSError, UnicodeEncodeError, BrokenPipeError) as e:
                                     logging.trace("spinner stdout write failed: %s", e)
                                 idx = (idx + 1) % len(spinner)
                                 time.sleep(0.1)
@@ -427,7 +427,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                             if _tui is not None:
                                 th = threading.Thread(target=_spin, daemon=True)
                                 th.start()
-                        except Exception as e:
+                        except (RuntimeError, OSError) as e:
                             logging.trace("spinner thread start failed: %s", e)
                             th = None
 
@@ -443,14 +443,14 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                                 stop_flag["stop"] = True
                                 if th is not None:
                                     th.join()  # 스피너 완전 종료 대기
-                            except Exception as e:
+                            except (RuntimeError, OSError) as e:
                                 logging.trace("spinner thread join failed: %s", e)
                             try:
                                 # 스피너 라인 지우기
                                 sys.stdout.write("\r\x1b[2K")
                                 sys.stdout.flush()
                                 time.sleep(0.02)
-                            except Exception as e:
+                            except (OSError, UnicodeEncodeError, BrokenPipeError) as e:
                                 logging.trace("spinner cleanup failed: %s", e)
                         # 판정 요약
                         if isinstance(llm_res, list) and llm_res:

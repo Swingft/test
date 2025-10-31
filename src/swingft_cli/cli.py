@@ -16,6 +16,18 @@ import logging
 from pathlib import Path
 import textwrap
 
+# Add TRACE level and trace() method to logging
+if not hasattr(logging, 'trace'):
+    TRACE = 5
+    logging.addLevelName(TRACE, "TRACE")
+    
+    def _trace(self, message, *args, **kwargs):
+        if self.isEnabledFor(TRACE):
+            self._log(TRACE, message, args, **kwargs)
+    
+    logging.Logger.trace = _trace
+    logging.trace = lambda msg, *args, **kwargs: logging.log(TRACE, msg, *args, **kwargs)
+
 from swingft_cli.commands.json_cmd import handle_generate_json
 from swingft_cli.commands.obfuscate_cmd import handle_obfuscate
 
@@ -37,7 +49,7 @@ try:
     def _HelpFmt(prog: str):
         return _NoNoneRichHelp(prog=prog, max_help_position=28, width=100)
 
-except Exception as e:
+except (ImportError, AttributeError) as e:
     logging.trace("rich_argparse import failed, using fallback: %s", e)
     class _NoNoneRawHelp(argparse.RawTextHelpFormatter):
         """Hide '(default: None)' but show real defaults, preserve newlines."""

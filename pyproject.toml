@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swingft-cli"
+version = "1.0.0"
+description = "Swingft CLI tool"
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.31.0",
+    "Flask>=3.0.0",
+    "cryptography>=41.0.0",
+    "networkx>=2.8",
+    "pyyaml>=6.0",
+    "llama-cpp-python>=0.2.83",
+]
+
+[project.scripts]
+swingft = "swingft_cli.cli:main"
+
+[tool.setuptools]
+packages = ["swingft_cli"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
