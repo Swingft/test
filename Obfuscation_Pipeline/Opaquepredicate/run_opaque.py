@@ -301,6 +301,8 @@ def body_has_top_level_default(text: str, body_start: int, body_end: int) -> boo
                     if left_ok:
                         j = right
                         while j < body_end:
+                            if text[j] is None:
+                                break
                             if text[j] in " \t": j += 1; continue
                             if text.startswith("/*", j):
                                 k = text.find("*/", j+2, body_end)
