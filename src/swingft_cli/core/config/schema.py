@@ -36,6 +36,9 @@ def _print_json_error_and_exit(path: str, err: json.JSONDecodeError) -> None:
             lines = f.read().splitlines()
         lineno = getattr(err, "lineno", None)
         colno = getattr(err, "colno", None)
+        if lines is None:
+            logging.trace("failed to read file: %s", path)
+            _maybe_raise(OSError(f"failed to read file: {path}"))
         if isinstance(lineno, int) and 1 <= lineno <= len(lines):
             line = lines[lineno - 1]
             # caret position bounded within line length

@@ -65,6 +65,15 @@ def _bold(s: str) -> str:
 
 
 def _preflight_print(msg: str) -> None:
+    # TUI 상태와 겹치지 않도록 새 줄로 시작 (단, 메시지가 빈 줄로 시작하지 않는 경우만)
+    s = str(msg).strip()
+    if s and not s.startswith("\n"):
+        try:
+            sys.stdout.write("\n")
+            sys.stdout.flush()
+        except OSError as e:
+            logging.trace("_preflight_print newline write failed: %s", e)
+    
     if not _has_ui_prompt():
         if _supports_color():
             print(_colorize_preflight_line(msg))
@@ -327,6 +336,13 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                         logging.trace("full_list build failed: %s", e)
                         _maybe_raise(e)
                         full_list = ""
+                    # TUI 상태와 겹치지 않도록 한 줄만 추가
+                    try:
+                        sys.stdout.write("\n")
+                        sys.stdout.flush()
+                    except OSError as e:
+                        logging.trace("prompt newline write failed: %s", e)
+                    
                     prompt_msg = (
                         ( _colorize_preflight_line("[Warning] The provided include list may cause conflicts.")
                           if _supports_color() else

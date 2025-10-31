@@ -515,6 +515,13 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             import swingft_cli.core.config as _cfg
             for ident, llm_note in pending_confirm:
                 try:
+                    # TUI 상태와 겹치지 않도록 새 줄로 시작
+                    try:
+                        sys.stdout.write("\n")
+                        sys.stdout.flush()
+                    except OSError as e:
+                        logging.trace("exclude review prompt newline failed: %s", e)
+                    
                     if _supports_color():
                         head = _blue("[Warning]") + _yellow(" Exclude candidate detected.\n")
                         # labels bold only, gray '-' bullet
