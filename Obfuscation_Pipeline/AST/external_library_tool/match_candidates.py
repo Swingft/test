@@ -141,7 +141,7 @@ def match_sdk_name(data):
         if not isinstance(name, str):
             try:
                 name = str(name)
-            except Exception:
+            except (TypeError, ValueError):
                 name = ""
         name = name.split(".")[-1]
 
