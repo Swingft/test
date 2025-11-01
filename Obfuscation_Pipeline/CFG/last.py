@@ -446,23 +446,8 @@ def main() -> None:
     )
     log(f"discovered {len(funcs)} functions{' (UI files skipped)' if skip_ui else ''}")
 
-    default_dump_dir = os.path.join(args.dst, "_dyn_obf_scan_dumps")
-    os.makedirs(default_dump_dir, exist_ok=True)
-
-    dump_json(args.dump_funcs_json or os.path.join(default_dump_dir, "all_funcs.json"), funcs)
-    dump_text(args.dump_funcs_txt or os.path.join(default_dump_dir, "all_funcs.txt"), [f['route_key'] for f in funcs])
-
     included, excluded = partition_by_exceptions(funcs, exceptions)
-    dump_json(args.dump_funcs_json_clean or os.path.join(default_dump_dir, "clean_funcs.json"), included)
-    dump_text(args.dump_funcs_txt_clean or os.path.join(default_dump_dir, "clean_funcs.txt"), [f['route_key'] for f in included])
-    dump_json(args.dump_funcs_json_excluded or os.path.join(default_dump_dir, "excluded_funcs.json"), excluded)
-    dump_text(args.dump_funcs_txt_excluded or os.path.join(default_dump_dir, "excluded_funcs.txt"), [f['route_key'] for f in excluded])
-
     safe, risky = partition_risky(included, skip_overrides=not args.risk_keep_overrides)
-    dump_json(args.dump_funcs_json_safe or os.path.join(default_dump_dir, "safe_funcs.json"), safe)
-    dump_text(args.dump_funcs_txt_safe or os.path.join(default_dump_dir, "safe_funcs.txt"), [f['route_key'] for f in safe])
-    dump_json(args.dump_funcs_json_risky or os.path.join(default_dump_dir, "risky_funcs.json"), risky)
-    dump_text(args.dump_funcs_txt_risky or os.path.join(default_dump_dir, "risky_funcs.txt"), [f['route_key'] for f in risky])
 
     log(f"found {len(safe)} safe functions to obfuscate")
 

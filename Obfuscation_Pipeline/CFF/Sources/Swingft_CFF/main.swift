@@ -566,7 +566,7 @@ do {
     fputs("Failed to write ast.json (Error): \(e.localizedDescription)\n", stderr)
     exit(1)
 }
-let diffFolder = rootURL.appendingPathComponent("Swingft_CFF_Dump", isDirectory: true).path
+let diffFolder = rootURL.appendingPathComponent("swingft_output").appendingPathComponent("Swingft_CFF_Dump", isDirectory: true).path
 let rc = runSwiftCFF(pyEnvAST: outURL.path, diffOutDir: diffFolder)
 if rc != 0 { exit(rc) }
 

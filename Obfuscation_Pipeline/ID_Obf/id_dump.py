@@ -33,7 +33,11 @@ def make_dump_file_id(original_project_dir, obf_project_dir):
             replacement = mapping_info.get(target)
             if replacement:
                 result[category][target] = replacement
-    dump_path = os.path.join(obf_project_dir, "Swingft_ID_Obfuscation_Dump.json")
+    
+    # 결과 파일들을 swingft_output 디렉토리에 저장
+    output_dir = os.path.join(obf_project_dir, "swingft_output")
+    os.makedirs(output_dir, exist_ok=True)
+    dump_path = os.path.join(output_dir, "Swingft_ID_Obfuscation_Dump.json")
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     json_data = {
         "original_file_path": original_project_dir,

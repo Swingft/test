@@ -98,11 +98,15 @@ def _llm_exclude_via_subprocess(identifier: str, snippet: str, ast_symbols):
     return _run_local_llm_exclude(identifier, snippet, ast_symbols)
 
 
-def save_exclude_review_json(approved_identifiers, project_root: str | None, ast_file_path: str | None) -> str | None:
+def save_exclude_review_json(approved_identifiers, project_root: str | None, ast_file_path: str | None, output_dir: str | None = None) -> str | None:
     try:
         if not approved_identifiers:
             return None
-        out_dir = os.path.join(os.getcwd(), ".swingft", "preflight")
+        # output_dir이 제공되면 swingft_output/preflight에 저장, 아니면 기존대로 .swingft/preflight
+        if output_dir:
+            out_dir = os.path.join(output_dir, "swingft_output", "preflight")
+        else:
+            out_dir = os.path.join(os.getcwd(), ".swingft", "preflight")
         os.makedirs(out_dir, exist_ok=True)
         ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
         out_path = os.path.join(out_dir, f"exclude_review_{ts}.json")
@@ -126,12 +130,16 @@ def save_exclude_review_json(approved_identifiers, project_root: str | None, ast
         return None
 
 
-def save_exclude_pending_json(project_root: str | None, ast_file_path: str | None, candidates) -> str | None:
+def save_exclude_pending_json(project_root: str | None, ast_file_path: str | None, candidates, output_dir: str | None = None) -> str | None:
     try:
         names = sorted(list({str(x).strip() for x in (candidates or []) if isinstance(x, str) and x.strip()}))
         if not names:
             return None
-        out_dir = os.path.join(os.getcwd(), ".swingft", "preflight")
+        # output_dir이 제공되면 swingft_output/preflight에 저장, 아니면 기존대로 .swingft/preflight
+        if output_dir:
+            out_dir = os.path.join(output_dir, "swingft_output", "preflight")
+        else:
+            out_dir = os.path.join(os.getcwd(), ".swingft", "preflight")
         os.makedirs(out_dir, exist_ok=True)
         ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
         out_path = os.path.join(out_dir, f"exclude_pending_{ts}.json")
@@ -155,11 +163,15 @@ def save_exclude_pending_json(project_root: str | None, ast_file_path: str | Non
         return None
 
 
-def generate_payloads_for_excludes(project_root: str | None, identifiers: list[str]) -> None:
+def generate_payloads_for_excludes(project_root: str | None, identifiers: list[str], output_dir: str | None = None) -> None:
     try:
         if not identifiers:
             return
-        out_dir = os.path.join(os.getcwd(), ".swingft", "preflight", "payloads")
+        # output_dir이 제공되면 swingft_output/preflight/payloads에 저장, 아니면 기존대로 .swingft/preflight/payloads
+        if output_dir:
+            out_dir = os.path.join(output_dir, "swingft_output", "preflight", "payloads")
+        else:
+            out_dir = os.path.join(os.getcwd(), ".swingft", "preflight", "payloads")
         os.makedirs(out_dir, exist_ok=True)
         try:
             from ..preflight.find_identifiers_and_ast_dual import write_per_identifier_payload_files  # type: ignore
@@ -328,8 +340,9 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                 logging.trace("print empty line failed in exclude review: %s", e)
 
     # Persist pending set
+    output_dir = config.get("project", {}).get("output")
     try:
-        save_exclude_pending_json(project_root, str(ast_file) if ast_file else None, sorted(list(exclude_candidates)))
+        save_exclude_pending_json(project_root, str(ast_file) if ast_file else None, sorted(list(exclude_candidates)), output_dir)
     except (OSError, UnicodeError, ValueError, TypeError) as _e:
         logging.trace("exclude_pending JSON 저장 경고: %s", _e)
         _maybe_raise(_e)
@@ -338,7 +351,11 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
     if ex_policy != "skip":
         try:
             from ..preflight.find_identifiers_and_ast_dual import write_per_identifier_payload_files  # type: ignore
-            _pending_dir = os.path.join(os.getcwd(), ".swingft", "preflight", "payloads", "pending")
+            # output_dir이 제공되면 swingft_output/preflight/payloads/pending에 저장, 아니면 기존대로
+            if output_dir:
+                _pending_dir = os.path.join(output_dir, "swingft_output", "preflight", "payloads", "pending")
+            else:
+                _pending_dir = os.path.join(os.getcwd(), ".swingft", "preflight", "payloads", "pending")
             os.makedirs(_pending_dir, exist_ok=True)
             write_per_identifier_payload_files(
                 project_root or "",
@@ -558,13 +575,14 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
     if decided_to_exclude:
         #print(f"\n[preflight] 사용자 승인 완료: 제외로 반영 {len(decided_to_exclude)}개")
         #_capture.append(f"[preflight] 사용자 승인 완료: 제외로 반영 {len(decided_to_exclude)}개")
+        output_dir = config.get("project", {}).get("output")
         try:
-            save_exclude_review_json(sorted(list(decided_to_exclude)), project_root, str(ast_file) if ast_file else None)
+            save_exclude_review_json(sorted(list(decided_to_exclude)), project_root, str(ast_file) if ast_file else None, output_dir)
         except (OSError, UnicodeError, ValueError, TypeError) as _e:
             logging.trace("exclude_review/save payload 경고: %s", _e)
             _maybe_raise(_e)
         try:
-            generate_payloads_for_excludes(project_root, sorted(list(decided_to_exclude)))
+            generate_payloads_for_excludes(project_root, sorted(list(decided_to_exclude)), output_dir)
         except (OSError, UnicodeError, ValueError, TypeError) as _e:
             logging.trace("exclude_review/save payload 경고: %s", _e)
             _maybe_raise(_e)

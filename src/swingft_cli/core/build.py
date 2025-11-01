@@ -199,10 +199,13 @@ def run_build_script_after_obfuscation(obf_project_dir: str) -> None:
         # build.sh는 실행 권한이 필요
         os.chmod(build_script_sh, 0o755)
         
-        # 빌드 로그 파일 경로 생성
+        # 빌드 로그 파일 경로 생성 (난독화 대상 디렉토리의 swingft_output에 저장)
         timestamp = time.strftime("%Y%m%d_%H%M%S")
         project_name = os.path.basename(xcode_project_path).replace(".xcodeproj", "").replace(".xcworkspace", "")
-        log_dir = os.path.join(os.path.dirname(xcode_project_path), "build_logs")
+        # obf_project_dir의 swingft_output 디렉토리에 build_logs 하위 디렉토리 생성
+        output_dir = os.path.join(obf_project_dir, "swingft_output")
+        os.makedirs(output_dir, exist_ok=True)
+        log_dir = os.path.join(output_dir, "build_logs")
         os.makedirs(log_dir, exist_ok=True)
         log_file_path = os.path.join(log_dir, f"build_{project_name}_{timestamp}.log")
         
