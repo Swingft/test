@@ -23,15 +23,14 @@ from remove_files import remove_files
 from AST.run_ast import run_ast
 from Mapping.run_mapping import mapping
 from ID_Obf.id_dump import make_dump_file_id
-from merge_list import merge_llm_and_rule
 from Opaquepredicate.run_opaque import run_opaque
 from DeadCode.deadcode import deadcode
 from remove_debug_symbol import remove_debug_symbol
 from swift_comment_remover import strip_comments_in_place
 from find_project import find_xcode_project
 
-def run_command(cmd, show_logs=False):
-    result = subprocess.run(cmd, capture_output=True, text=True)
+def run_command(cmd, show_logs=False, env=None):
+    result = subprocess.run(cmd, capture_output=True, text=True, env=env)
     if result.returncode != 0:
         print(f"명령어 실행 실패: {' '.join(cmd)}")
         print(f"오류 코드: {result.returncode}")
@@ -107,9 +106,6 @@ def stage1_ast_analysis(original_project_dir, obf_project_dir):
     
     ast_end = time.time()
     # print("ast: Done")
-    
-    # Rule & LLM 결과 병합
-    merge_llm_and_rule()
     
     if os.environ.get("SWINGFT_VERBOSE_STAGE"):
         print("STAGE 1 완료! (AST 분석)")
@@ -246,8 +242,15 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
             run_command(["swift", "build"])
             with open(build_marker_file, "w") as f:
                 f.write(current_build_path)
+        # CFF diff 디렉토리를 swingft_output에 생성하도록 설정
+        cff_output_dir = os.path.join(obf_project_dir, "swingft_output")
+        os.makedirs(cff_output_dir, exist_ok=True)
+        cff_dump_dir = os.path.join(cff_output_dir, "Swingft_CFF_Dump")
+        os.makedirs(cff_dump_dir, exist_ok=True)
+        env = os.environ.copy()
+        env["CFF_DIFF_DIR"] = cff_dump_dir
         cmd = ["swift", "run", "Swingft_CFF", obf_project_dir]
-        run_command(cmd)
+        run_command(cmd, env=env)
         os.chdir(original_dir)
 
         cff_end = time.time()

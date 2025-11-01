@@ -7,6 +7,7 @@ import time
 import threading
 import queue
 import re
+import importlib.util
 from collections import deque
 import logging
 from ..validator import check_permissions
@@ -26,6 +27,7 @@ from ..core.config_validation import (
     _run_config_validation_and_analysis
 )
 from ..core.build import run_build_script_after_obfuscation
+from ..core.cleanup import cleanup_before_obfuscation
 
 # Ensure interactive redraw is visible even under partial buffering
 try:
@@ -469,6 +471,15 @@ def handle_obfuscate(args):
     # propagate resolved values back to args for downstream stages
     args.input = input_path
     args.output = output_path
+    
+    # Output 디렉토리 존재 여부 확인
+    if os.path.exists(output_path) and os.path.isdir(output_path):
+        print(f"[ERROR] Output directory already exists: {output_path}")
+        print("[ERROR] Please remove the existing output directory or use a different output path.")
+        sys.exit(1)
+    
+    # 난독화 시작 전 임시 파일 정리
+    cleanup_before_obfuscation(output_path)
     
     # TUI 초기화
     _setup_tui_initialization(input_path, output_path)
