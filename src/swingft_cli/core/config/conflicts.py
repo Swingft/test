@@ -391,12 +391,15 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     logging.trace("include_session write failed: %s", e)
                     _maybe_raise(e)
                 if ans not in ("y", "yes"):
-                    print("[preflight] 사용자가 충돌 항목 제거를 취소했습니다.")
+                    if _supports_color():
+                        print(_colorize_preflight_line("[Warning] User cancelled the include removal."))
+                    else:
+                        print("[Warning] User cancelled the include removal.")
         except (EOFError, KeyboardInterrupt):
             print("\n사용자에 의해 취소되었습니다.")
             raise SystemExit(1)
     else:
-        _preflight_print("[preflight] Include 대상과 제외대상 간 충돌 없음")
+        _preflight_print("")
 
     return ex_names
 
