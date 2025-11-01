@@ -28,6 +28,7 @@ from Opaquepredicate.run_opaque import run_opaque
 from DeadCode.deadcode import deadcode
 from remove_debug_symbol import remove_debug_symbol
 from swift_comment_remover import strip_comments_in_place
+from find_project import find_xcode_project
 
 def run_command(cmd, show_logs=False):
     result = subprocess.run(cmd, capture_output=True, text=True)
@@ -472,7 +473,7 @@ def obf_pipeline(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, skip_c
     # STAGE 3 실행
     obf_project_dir_cfg = os.path.join(os.path.dirname(obf_project_dir), "cfg")
     stage3_cleanup(obf_project_dir, obf_project_dir_cfg)
-
+    
 def main():
     parser = argparse.ArgumentParser(description="Swingft 난독화 파이프라인")
     parser.add_argument("input", help="입력 프로젝트 경로")
@@ -524,6 +525,9 @@ def main():
         # Stage 2 이후에도 정리(Stage 3) 실행되도록 추가
         obf_project_dir_cfg = os.path.join(os.path.dirname(obf_project_dir), "cfg")
         stage3_cleanup(obf_project_dir, obf_project_dir_cfg)
+
+
+
     elif args.stage == 'full':
         print("전체 파이프라인을 실행합니다...")
         obf_pipeline(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, skip_cfg)

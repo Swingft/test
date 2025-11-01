@@ -25,6 +25,7 @@ from ..core.config_validation import (
     _setup_preflight_echo_holder,
     _run_config_validation_and_analysis
 )
+from ..core.build import run_build_script_after_obfuscation
 
 # Ensure interactive redraw is visible even under partial buffering
 try:
@@ -440,6 +441,8 @@ def _update_final_label(step_keys: list, seen: set[str], step_state: dict[str, s
     return last_current
 
 
+
+
 def handle_obfuscate(args):
     """난독화 프로세스 실행"""
     # Load I/O from config file only (no CLI I/O)
@@ -504,3 +507,6 @@ def handle_obfuscate(args):
         except (OSError, UnicodeEncodeError) as e2:
             _trace("fallback completion status failed: %s", e2)
             _maybe_raise(e2)
+    
+    # 난독화 완료 후 빌드 스크립트 자동 실행
+    run_build_script_after_obfuscation(output_path)
