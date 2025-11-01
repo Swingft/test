@@ -2,7 +2,7 @@ import Foundation
 import SwiftSyntax
 
 
-final public class ShortOrBlankStringExcluder: SyntaxVisitor {
+final class ShortOrBlankStringExcluder: SyntaxVisitor {
     private let filePath: String
     private(set) var locations: Set<String> = []
 
